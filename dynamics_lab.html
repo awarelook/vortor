@@ -267,6 +267,48 @@
     </div>
   </section>
 
+  <!-- CH-04  VACUUM BEAT SPECTRUM -->
+  <section class="rack">
+    <div class="rackHead">
+      <span class="ch">CH-04</span>
+      <span class="nm">Vacuum beat spectrum &mdash; ZPF &omega;&sup3; comb to &omega;_&Omega; &amp; K_PV refraction</span>
+      <span class="led"><i></i> solver: RK4 &middot; N beat-mode phases</span>
+    </div>
+    <div class="rackBody">
+      <div class="screenWrap">
+        <div class="screen" style="aspect-ratio:16/11">
+          <canvas id="c4"></canvas>
+          <div class="scan"></div>
+          <div class="screenTag">ZPF &rho;&#8320; &sim; &omega;&sup3; &middot; live beat comb to &omega;_&Omega;</div>
+        </div>
+      </div>
+      <div class="console">
+        <div class="fader"><label for="s4k">K_PV refraction</label><input type="range" id="s4k" min="0" max="100" step="1" value="18"><output id="s4kO">18</output></div>
+        <div class="fader"><label for="s4n">n_&Omega; cut-off</label><input type="range" id="s4n" min="4" max="28" step="1" value="16"><output id="s4nO">16</output></div>
+        <div class="meter">
+          <div class="row"><span class="k">K_PV</span><span class="v a" id="s4K">1.24</span></div>
+          <div class="row"><span class="k">c_eff</span><span class="v g" id="s4C">0.898 c</span></div>
+          <div class="row"><span class="k">band energy</span><span class="v c" id="s4E">1.00</span><span class="v" style="color:var(--muted)">&prop; &omega;_&Omega;&#8308;</span></div>
+        </div>
+        <div class="status" id="s4status">The polarizable vacuum: matter band-limits the &omega;&sup3; zero-point spectrum into a beat comb terminating at &omega;_&Omega;. Raise K_PV and the band refracts (c_eff drops); the comb modes shimmer as their phases integrate.</div>
+      </div>
+    </div>
+    <div class="plate">
+      <p class="eq"><span class="w">&rho;&#8320;</span>(&omega;) = &#8463;<span class="c">&omega;</span>&sup3;/(2&pi;&sup2;c&sup3;) &nbsp; <span class="a">K_PV</span> = e<sup>2GM/rc&sup2;</sup> &nbsp; c_eff = c/&radic;K_PV <span class="sm">&nbsp; (a method, not a theory)</span></p>
+      <dl class="sym">
+        <dt>&rho;&#8320;</dt><dd>zero-point spectral energy density &mdash; the &omega;&sup3; envelope (SED; Sakharov, Haisch&ndash;Rueda&ndash;Puthoff)</dd>
+        <dt>&omega;_&Omega;, n_&Omega;</dt><dd>Storti&rsquo;s harmonic cut-off frequency / mode &mdash; the beat comb is band-limited here</dd>
+        <dt>K_PV</dt><dd>Puthoff&rsquo;s vacuum refractive index; gravity as a dielectric gradient (also Reed QWM)</dd>
+      </dl>
+      <p class="trans">Storti&rsquo;s EGM represents a mass&rsquo;s field as this band-limited beat comb; Ginzburg reads the same comb as toryx (matter) and helyx (radiation). Folded as a calculation method and imagery only &mdash; no particle radii, H&#8320;, or &alpha; is derived here, and the e<sup>&minus;2/3</sup> screening factor stays out.</p>
+      <div class="tiers">
+        <span class="tier c">[credited] polarizable vacuum (Puthoff); ZPF &omega;&sup3; (SED)</span>
+        <span class="tier s">[EGM / spiral framework] beat-comb &amp; toryx/helyx &mdash; method/analogy only</span>
+        <span class="tier o">[excised] e<sup>&minus;2/3</sup> screening &mdash; kept out</span>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer><div class="wrap">
@@ -538,6 +580,50 @@
   }
 
   // ==========================================================
+  // CH-04  Vacuum beat spectrum : ZPF omega^3 comb + K_PV refraction
+  //   live beat-mode phases th_n integrated at rate ~ n (the beat modes)
+  // ==========================================================
+  var S4={th:[], K:0.18, n:16};
+  for(var s4i=0;s4i<32;s4i++) S4.th.push(0);
+  function s4step(dt){ for(var i=0;i<S4.n;i++){ S4.th[i] += (0.25 + 0.10*(i+1))*dt; } }
+  var s4k=document.getElementById("s4k"), s4n=document.getElementById("s4n");
+  function s4vals(){ var f=(+s4k.value)/100*0.6, K=Math.exp(2*f); return {K:K, ceff:1/Math.sqrt(K)}; }
+  function s4params(){
+    S4.K=(+s4k.value)/100; S4.n=Math.round(+s4n.value);
+    document.getElementById("s4kO").textContent=(+s4k.value|0);
+    document.getElementById("s4nO").textContent=S4.n;
+    var v=s4vals();
+    document.getElementById("s4K").textContent=v.K.toFixed(2);
+    document.getElementById("s4C").textContent=v.ceff.toFixed(3)+" c";
+    document.getElementById("s4E").textContent=Math.pow(S4.n/16,4).toFixed(2);
+  }
+  s4k.addEventListener("input",s4params); s4n.addEventListener("input",s4params);
+  function s4draw(){
+    var g=fit(document.getElementById("c4")),x=g.x,W=g.w,H=g.h;
+    graticule(x,W,H,10,6);
+    var phos=cvar("--phos"),amber=cvar("--amber"),cyan=cvar("--cyan"),muted=cvar("--muted");
+    var v=s4vals(), ceff=v.ceff, nO=S4.n;
+    var pad=26, base=H-20, top=18, x0=pad, x1=pad+(W-2*pad)*ceff;
+    function envH(fr){ return (base-top)*Math.pow(fr,3)*0.92; }
+    // omega^3 ZPF envelope (amber)
+    x.strokeStyle=amber;x.globalAlpha=.55;x.lineWidth=1.3;x.beginPath();
+    for(var i=0;i<=60;i++){var fr=i/60,px=x0+(x1-x0)*fr;if(i===0)x.moveTo(px,base-envH(fr));else x.lineTo(px,base-envH(fr));}
+    x.stroke();x.globalAlpha=1;
+    // baseline
+    x.strokeStyle=cvar("--grid");x.globalAlpha=.9;x.beginPath();x.moveTo(pad,base);x.lineTo(W-pad,base);x.stroke();x.globalAlpha=1;
+    // live beat comb (phosphor teeth, heights modulated by integrated phase)
+    for(var n=1;n<=nO;n++){var fr=n/nO,px=x0+(x1-x0)*fr,
+      sh=0.66+0.34*(0.5+0.5*Math.sin(S4.th[n-1])), yt=base-envH(fr)*sh;
+      x.strokeStyle=phos;x.globalAlpha=.9;x.lineWidth=2;x.beginPath();x.moveTo(px,base);x.lineTo(px,yt);x.stroke();
+      x.fillStyle=phos;x.shadowColor=phos;x.shadowBlur=6;x.beginPath();x.arc(px,yt,2.1,0,7);x.fill();x.shadowBlur=0;}
+    x.globalAlpha=1;
+    // cut-off omega_Omega
+    x.strokeStyle=cyan;x.globalAlpha=.85;x.setLineDash([5,4]);x.lineWidth=1.3;x.beginPath();x.moveTo(x1,top);x.lineTo(x1,base);x.stroke();x.setLineDash([]);x.globalAlpha=1;
+    x.fillStyle=muted;x.font="10px "+cvar("--mono");x.textAlign="left";x.fillText("rho0 ~ omega^3", 12, 15);
+    x.fillStyle=cyan;x.textAlign=(x1>W-70)?"right":"left";x.fillText("omega_Omega", (x1>W-70)?x1-3:x1+4, top+8);
+  }
+
+  // ==========================================================
   // master loop : fixed dt, sub-stepped (stable, frame-rate independent)
   // ==========================================================
   function stepAll(){
@@ -547,10 +633,11 @@
     s2push();
     for(i=0;i<4;i++) s3step(0.02);
     s3push();
+    for(i=0;i<6;i++) s4step(0.02);
   }
-  function drawAll(){ try{s1draw();}catch(e){} try{s2draw();}catch(e){} try{s3draw();}catch(e){} }
+  function drawAll(){ try{s1draw();}catch(e){} try{s2draw();}catch(e){} try{s3draw();}catch(e){} try{s4draw();}catch(e){} }
 
-  s1params(); s2params(); s3params();
+  s1params(); s2params(); s3params(); s4params();
 
   if(reduced){
     // warm up to attractors, then draw a single static frame

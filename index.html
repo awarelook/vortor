@@ -131,6 +131,7 @@
   <a class="railBtn" href="#s2"><span class="railNum">2</span> Resonator</a>
   <a class="railBtn" href="#s3"><span class="railNum">3</span> Toroidal soliton</a>
   <a class="railBtn" href="#s4"><span class="railNum">4</span> Dynamics</a>
+  <a class="railBtn" href="#s5"><span class="railNum">5</span> Vacuum</a>
   <a class="railBtn" href="#iso">Crystal synthesis</a>
   <button class="themeToggle" id="tt">theme</button>
 </div></nav>
@@ -268,6 +269,33 @@
   </div>
 </div></section>
 
+<!-- STAGE 5 : VACUUM MEDIUM -->
+<section class="stage" id="s5"><div class="wrap">
+  <div class="stageHead"><span class="n">05</span><h2>Vacuum &mdash; the polarizable medium</h2></div>
+  <p class="sub">Every stage above sits in a medium, not a void. In the polarizable-vacuum reading (Puthoff; Storti EGM; Reed QWM) matter makes the surrounding zero-point field <em>refractive</em>: its &omega;&sup3; energy density is band-limited into a beat comb up to the object&rsquo;s cut-off &omega;_&Omega;, and the refractive index K_PV is what we feel as gravity.</p>
+  <div class="split">
+    <div class="vizCard">
+      <div class="vizCanvas"><canvas id="vacC"></canvas></div>
+      <div class="ctrls">
+        <div class="ctrl"><label for="vkpv">refraction K_PV</label><input type="range" id="vkpv" min="0" max="100" step="1" value="16"><output id="vkO">16</output></div>
+      </div>
+      <div class="readout"><span>K_PV <b id="vKout">1.21</b></span><span>c_eff = c/&radic;K_PV <b id="vCout">0.906 c</b></span><span>&omega;&sup3; ZPF (SED)</span></div>
+    </div>
+    <div class="mathCard">
+      <p class="eq">&rho;&#8320;(<span class="c">&omega;</span>) = &#8463;<span class="c">&omega;</span>&sup3;/(2&pi;&sup2;c&sup3;) &nbsp;&nbsp; <span class="w">K_PV</span> = e<sup>2GM/rc&sup2;</sup></p>
+      <dl class="sym">
+        <dt>&rho;&#8320;</dt><dd>zero-point spectral energy density &mdash; the &omega;&sup3; envelope (SED)</dd>
+        <dt>&omega;_&Omega;</dt><dd>the harmonic cut-off &mdash; the object&rsquo;s beat comb terminates here (Storti EGM)</dd>
+        <dt>K_PV</dt><dd>vacuum refractive index; gravity as a dielectric gradient, c_eff = c/&radic;K_PV</dd>
+      </dl>
+      <p class="trans">This is the substrate the point, string, resonator, torus, and dynamics all live in &mdash; and where Ginzburg&rsquo;s toryx (matter) and helyx (radiation) are two readings of the same comb. Folded as method and imagery only: no particle radii, H&#8320;, or &alpha; is derived here, and the e<sup>&minus;2/3</sup> screening factor stays out.</p>
+      <span class="tier tA">[credited] polarizable vacuum (Puthoff); ZPF &omega;&sup3; (SED)</span>
+      <span class="tier tS">[EGM / spiral framework] the beat-comb &amp; toryx/helyx reading &mdash; method/analogy only</span>
+      <span class="tier tO">[excised] e<sup>&minus;2/3</sup> screening &mdash; kept out</span>
+    </div>
+  </div>
+</div></section>
+
 <!-- ISOMORPHISM -->
 <section class="stage" id="iso"><div class="wrap">
   <div class="stageHead"><span class="n">&#9670;</span><h2>The crystal synthesis</h2></div>
@@ -279,6 +307,8 @@
     <div class="isoCard"><h4>Skyrme / chiral-EFT</h4><div class="role">the nucleon</div><div class="expr">baryon B = &pi;&#8323;(S&sup3;); B=4 alpha cube; mass = spin-precession energy</div></div>
     <div class="isoCard"><h4>Nielsen TUFT <span style="color:var(--tS)">[tiered]</span></h4><div class="role">the mass tower</div><div class="expr">m&#8345; &prop; (n+1)&middot;exp(a&middot;n &minus; &zeta;(3)n&sup2;); leptons to 0.0/&minus;0.4/&minus;2%</div></div>
     <div class="isoCard"><h4>Stuart&ndash;Landau / Kuramoto</h4><div class="role">the living dynamics</div><div class="expr">&#380; = (&mu;+i&omega;&minus;|z|&sup2;)z; Adler/Arnold locking of the comb</div></div>
+    <div class="isoCard"><h4>Storti EGM <span style="color:var(--tS)">[framework]</span></h4><div class="role">the polarizable vacuum</div><div class="expr">K_PV refractive index; &omega;&sup3; ZPF beat comb to &omega;_&Omega; &mdash; method only, e^(&minus;2/3) excised</div></div>
+    <div class="isoCard"><h4>Ginzburg spiral <span style="color:var(--tS)">[framework]</span></h4><div class="role">toryx / helyx</div><div class="expr">matter = self-inverting torus, radiation = double helix; discrete matter&harr;radiation ladder</div></div>
   </div>
   <div class="legend">
     <span><span class="swatch" style="border-color:var(--tV);color:var(--tV)"></span> [V] verified / proven here</span>
@@ -429,6 +459,39 @@
     // closure line S=0
     x.strokeStyle=tV;x.setLineDash([5,5]);x.globalAlpha=.7;x.beginPath();x.moveTo(0,cy-0.4*H*0.5+cy-cy);x.lineTo(W, cy-0.4*H*0.5 +0);x.stroke();x.setLineDash([]);x.globalAlpha=1;
     x.fillStyle=cvar("--muted");x.font="11px ui-monospace,monospace";x.fillText("S = 0  (closure)",W*0.72,cy-0.4*H*0.5-6);
+  });
+
+  // 5 : vacuum medium — ZPF omega^3 spectrum + beat comb to omega_Omega + K_PV refraction
+  var vkEl=document.getElementById("vkpv");
+  function vacParams(){var f=(+vkEl.value)/100*0.6,K=Math.exp(2*f);
+    document.getElementById("vkO").textContent=(+vkEl.value|0);
+    document.getElementById("vKout").textContent=K.toFixed(2);
+    document.getElementById("vCout").textContent=(1/Math.sqrt(K)).toFixed(3)+" c";}
+  vkEl.addEventListener("input",vacParams);vacParams();
+  reg("vacC",function(c,t){var g=fit(c),x=g.x,W=g.w,H=g.h;x.clearRect(0,0,W,H);
+    var warm=cvar("--warm"),cool=cvar("--cool"),line=cvar("--line"),mut=cvar("--muted");
+    var f=(+vkEl.value)/100*0.6,K=Math.exp(2*f),ceff=1/Math.sqrt(K);
+    var pad=30,base=H-24,top=22,x0=pad,x1=pad+(W-2*pad)*ceff;
+    function envH(fr){return (base-top)*Math.pow(fr,3)*0.94;}
+    // filled omega^3 ZPF envelope
+    x.beginPath();x.moveTo(x0,base);
+    for(var i=0;i<=60;i++){var fr=i/60;x.lineTo(x0+(x1-x0)*fr,base-envH(fr));}
+    x.lineTo(x1,base);x.closePath();x.fillStyle=warm;x.globalAlpha=.12;x.fill();x.globalAlpha=1;
+    x.strokeStyle=warm;x.globalAlpha=.55;x.lineWidth=1.3;x.beginPath();
+    for(var j=0;j<=60;j++){var fq=j/60,px=x0+(x1-x0)*fq;if(j===0)x.moveTo(px,base-envH(fq));else x.lineTo(px,base-envH(fq));}
+    x.stroke();x.globalAlpha=1;
+    // baseline
+    x.strokeStyle=line;x.lineWidth=1;x.beginPath();x.moveTo(pad,base);x.lineTo(W-pad,base);x.stroke();
+    // beat comb (populated modes shimmer)
+    var nO=16;
+    for(var n=1;n<=nO;n++){var fr=n/nO,px=x0+(x1-x0)*fr,
+      sh=reduced?1:(0.78+0.22*(Math.sin(t*1.6+n*0.6)*0.5+0.5)),yt=base-envH(fr)*sh;
+      x.strokeStyle=cool;x.globalAlpha=.9;x.lineWidth=2;x.beginPath();x.moveTo(px,base);x.lineTo(px,yt);x.stroke();
+      x.fillStyle=cool;x.globalAlpha=1;x.beginPath();x.arc(px,yt,2.2,0,7);x.fill();}
+    // cut-off
+    x.strokeStyle=cool;x.globalAlpha=.8;x.setLineDash([4,4]);x.beginPath();x.moveTo(x1,top);x.lineTo(x1,base);x.stroke();x.setLineDash([]);x.globalAlpha=1;
+    x.fillStyle=mut;x.font="10px "+cvar("--mono");x.textAlign="left";x.fillText("rho0 ~ omega^3",pad,top+2);
+    x.textAlign=(x1>W-84)?"right":"left";x.fillText("omega_Omega",(x1>W-84)?x1-3:x1+4,top+2);
   });
 
   // master loop

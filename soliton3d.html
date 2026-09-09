@@ -160,6 +160,8 @@
           <span class="lbl">amplitude A(t)</span><span class="val" id="ampOut">1.414</span>
           <span class="lbl">whirl phase</span><span class="val t" id="phOut">0.00 rad</span>
           <span class="lbl">view elevation</span><span class="val t" id="elOut">28&deg;</span>
+          <span class="lbl">vacuum K_PV</span><span class="val t" id="kpvOut">1.00</span>
+          <span class="lbl">c_eff = c/&radic;K_PV</span><span class="val t" id="ceffOut">1.000 c</span>
           <span class="lbl">carrier f&#8321; (fundamental)</span><span class="val t">121 kHz</span>
         </div>
       </div>
@@ -170,7 +172,8 @@
     <div class="ctrl"><label for="whirl">whirl rate</label><input type="range" id="whirl" min="0" max="3" step="0.01" value="1.1"><output id="whirlO">1.10</output></div>
     <div class="ctrl"><label for="breath">breathing depth</label><input type="range" id="breath" min="0" max="1" step="0.01" value="0.45"><output id="breathO">0.45</output></div>
     <div class="ctrl"><label for="elev">view elevation</label><input type="range" id="elev" min="-6" max="72" step="1" value="28"><output id="elevO">28&deg;</output></div>
-    <p class="hint">Whirl advances the phase along each field line (the object&rsquo;s internal clock); breathing modulates the tube on its Stuart&ndash;Landau envelope toward r* = &radic;2; elevation tilts the view. The slow orbit runs on its own.</p>
+    <div class="ctrl"><label for="kpv">vacuum K_PV</label><input type="range" id="kpv" min="0" max="100" step="1" value="34"><output id="kpvO">34</output></div>
+    <p class="hint">Whirl advances the phase along each field line (the object&rsquo;s internal clock); breathing modulates the tube on its Stuart&ndash;Landau envelope toward r* = &radic;2; elevation tilts the view. <b>Vacuum K_PV</b> raises the refractive index the object casts on the surrounding vacuum &mdash; the iso-index halo (gravity as refraction). The slow orbit runs on its own.</p>
   </div>
 </div>
 
@@ -225,6 +228,18 @@
       <p class="trans">Mass is how fast the internal clock turns: heavier means a faster whirl. One calibrated ladder threads the family &mdash; the macroscopic EVO at ~10&#8309; rad/s (the 121 kHz carrier) up to the proton at ~10&sup2;&#8308;.</p>
       <span class="tier cV">[V] identity recovers m_e; &nu; rung &rarr; 0.05 eV (calibrated map)</span>
       <span class="tier cS">[S] one object across all scales &mdash; a synthesis hypothesis</span>
+    </div>
+
+    <div class="eqcard">
+      <p class="eq"><span class="r">K_PV</span> = e<sup>2GM/rc&sup2;</sup>,&nbsp;&nbsp; c_eff = c/&radic;<span class="t">K_PV</span></p>
+      <dl class="sym">
+        <dt>K_PV</dt><dd>the vacuum refractive index the object casts &mdash; gravity as a dielectric gradient, not curvature</dd>
+        <dt>c_eff</dt><dd>local light speed; light slows and bends toward the object (the iso-index halo you see)</dd>
+        <dt>&omega;&sup3;</dt><dd>the zero-point energy density the gradient rides &mdash; the SED cubic spectrum</dd>
+      </dl>
+      <p class="trans">The halo around the torus is the <em>polarizable vacuum</em> (Storti EGM / Reed QWM, on Puthoff&rsquo;s PV model): matter makes the surrounding vacuum refractive, its iso-index shells bunching near the object; a passing ray refracts &mdash; the same deflection GR calls curvature. Raise <span class="m">K_PV</span> and the shells crowd in, c_eff drops. Method and imagery only: no radii, H&#8320;, or &alpha; is derived, and the e<sup>&minus;2/3</sup> factor stays out.</p>
+      <span class="tier cC">[credited] polarizable vacuum (Puthoff); ZPF &omega;&sup3; (SED)</span>
+      <span class="tier cS">[EGM/QWM framework] refractive reading &mdash; method/analogy only</span>
     </div>
 
     <div class="eqcard" style="grid-column:1/-1">
@@ -313,14 +328,18 @@
   var whirlEl = document.getElementById("whirl");
   var breathEl = document.getElementById("breath");
   var elevEl = document.getElementById("elev");
+  var kpvEl = document.getElementById("kpv");
+  function kpvVals(){ var f=(+kpvEl.value)/100*0.6, K=Math.exp(2*f); return { K:K, ceff:1/Math.sqrt(K) }; }
   function ctrlText(){
     document.getElementById("whirlO").textContent  = (+whirlEl.value).toFixed(2);
     document.getElementById("breathO").textContent = (+breathEl.value).toFixed(2);
     document.getElementById("elevO").textContent   = (+elevEl.value|0) + String.fromCharCode(176);
+    document.getElementById("kpvO").textContent     = (+kpvEl.value|0);
   }
   whirlEl.addEventListener("input", ctrlText);
   breathEl.addEventListener("input", ctrlText);
   elevEl.addEventListener("input", ctrlText);
+  kpvEl.addEventListener("input", ctrlText);
   ctrlText();
 
   // ---- shared simulation state ----
@@ -351,6 +370,9 @@
     document.getElementById("ampOut").textContent = sim.A.toFixed(3);
     document.getElementById("phOut").textContent  = (sim.whirl % (2*Math.PI)).toFixed(2) + " rad";
     document.getElementById("elOut").textContent  = (+elevEl.value|0) + String.fromCharCode(176);
+    var kv = kpvVals();
+    document.getElementById("kpvOut").textContent  = kv.K.toFixed(2);
+    document.getElementById("ceffOut").textContent = kv.ceff.toFixed(3) + " c";
   }
 
   // ---- 3D torus with Hopf-winding field lines ----
@@ -374,6 +396,26 @@
     var focal = 5.2;
     var scale = Math.min(W,H) * 0.235;
     var rr = r0 * (sim.A / SQRT2);      // breathing tube radius
+
+    // ---- EGM: polarizable-vacuum K_PV refractive halo (gravity as refraction), drawn behind the torus ----
+    var kpS = (+kpvEl.value)/100;
+    if(kpS > 0.01){
+      var goldH = hexRgb(cvar("--gold")), tealH = hexRgb(cvar("--teal"));
+      var Rt = scale*0.95;
+      var grd = x.createRadialGradient(cx,cy,Rt*0.35,cx,cy,Rt*3.4);
+      grd.addColorStop(0,   rgba(goldH, 0.14*kpS));
+      grd.addColorStop(0.55,rgba(goldH, 0.05*kpS));
+      grd.addColorStop(1,   rgba(goldH, 0));
+      x.fillStyle = grd; x.fillRect(0,0,W,H);
+      for(var ir=1; ir<=8; ir++){                       // iso-K_PV shells, bunched near the object
+        var frac = ir/8;
+        var baseR = Rt*(0.7 + frac*2.7);
+        var comp = 1 - kpS*0.55*Math.exp(-Math.pow((baseR-Rt*1.15)/(Rt*1.15),2));
+        var al = (0.30*(1-frac*0.6))*Math.min(1,kpS*1.6);
+        x.strokeStyle = rgba(mix(tealH,goldH,frac), al); x.lineWidth = 1;
+        x.beginPath(); x.arc(cx,cy, baseR*comp, 0, 7); x.stroke();
+      }
+    }
 
     function proj(X,Y,Z){
       var x1 =  X*ca + Z*sa;
