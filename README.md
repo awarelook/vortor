@@ -43,8 +43,9 @@ given when they were published).
 | `dynamics_lab.html` | live fixed-step integration of the three governing nonlinear equations |
 | `FTGB_GRAND_SYNTHESIS.{md,pdf}` | the full tiered synthesis manuscript (Parts A–G, ~16.8k words) — **the large text with all the math** |
 | `FTGB_CURRENTLEG_TRILOGY.{md,pdf}` | the standalone lead result (a self-contained plasma / topological-fluid theorem) |
-| `TOOLKIT_HANDBOOK.md` | plain-language + math handbook tying the five method modules together |
-| `toolkit/` | the five method modules: Buckingham-Π (M7), QWM conversion (M8), coupled-oscillator substrate (M9), topological-soliton methods (M10), EGM / polarizable-vacuum spectral methods (M11) |
+| `TOOLKIT_HANDBOOK.md` | plain-language + math handbook tying the six method modules together |
+| `toolkit/` | the six method modules: Buckingham-Π (M7), QWM conversion (M8), coupled-oscillator substrate (M9), topological-soliton methods (M10), EGM / polarizable-vacuum spectral methods (M11), Ginzburg spiral-field theory (M12) |
+| `GLOSSARY.md`, `REFERENCES.md` | consolidated, tiered knowledge base: shared vocabulary + citations across FTGB and the four convergence frameworks (Reed, Storti, Ginzburg, Nielsen) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations |
 | `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, + `verify/` scripts (incl. EGM sense-checks) |
 

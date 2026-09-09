@@ -1,12 +1,12 @@
 ---
-title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M11)"
+title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M12)"
 author: Nathaniel Hanks
 date: 2026-09-09
 status: "Consolidated reference handbook. Assembled from the four canonical method modules TOOLKIT_ADV_07..10; those modules remain the source of record. This is a clean, shareable single-file reference; no new claims are introduced here."
 anchors: "Four measured anchors {B, n_i, m_i, R}; zero free structural parameters."
 ---
 
-# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M11)
+# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M12)
 
 **Nathaniel Hanks -- 2026-09-09**
 
@@ -27,7 +27,7 @@ configuration and as a Madelung / quantum-hydrodynamic matter wave, resting on f
 `{B, n_i, m_i, R}` with zero free structural parameters. But each method below is written to be
 lifted out and re-applied to a fresh problem without re-deriving it. That is the point of a toolkit.
 
-The five modules are:
+The six modules are:
 
 | Module | Subject | What it gives you |
 |---|---|---|
@@ -36,6 +36,11 @@ The five modules are:
 | **M9** | Coupled-oscillator substrate | where FTGB *is* (vs merely *shares*) established cross-domain mathematics |
 | **M10** | Topological-soliton + conserved-current methods | conserved currents, no-go templates, moduli-geodesic amplitudes, seesaw / RG readings |
 | **M11** | EGM / polarizable-vacuum spectral methods | Storti's PV-refractive-index + ZPF harmonic-beat *representation* mapped onto M7/M9, with its numerology quarantined (method-only, no claim adopted) |
+| **M12** | Ginzburg spiral-field theory (toryx / helyx) | a toroidal-spiral *structural analogy* (matter = self-inverting torus, radiation = double helix, discrete matter<->radiation ladder) mapped onto the Beltrami-Hopf object; analogy-only, no claim adopted |
+
+Two consolidated knowledge-base files accompany the modules: **`GLOSSARY.md`** (shared vocabulary across FTGB
+and the four convergence frameworks, tiered) and **`REFERENCES.md`** (the credited literature + the four
+framework primaries, with the do-not-cite / excision notes).
 
 Every module carries a scope limit at its head, stated before any result is used. Nothing here is
 fabricated; every quoted number traces to a named reproducible script in its source module. No
@@ -928,10 +933,36 @@ mislabel of Storti's 5th sense-check.
 
 ---
 
-## 8. Consolidated reference list
+## 8. Module M12 -- Ginzburg spiral-field theory (toryx / helyx) as structural analogy
+
+Full module: `toolkit/TOOLKIT_ADV_12_GINZBURG_SPIRAL_FIELD_2026-09-09.md`.
+
+**The one limit.** Ginzburg's spiral-field theory is an **ontological/geometric picture**, not a predictive
+calculation like M7-M11. It is folded **[fringe framework, analogy-only]** -- a vocabulary and imagery for the
+FTGB torus, its resonance ladder, and the field<->matter duality -- with **no physical claim adopted** (no
+particle spectrum, no "Unified Spacetime Multiverse," no cosmology).
+
+**The two prime elements, mapped.** The **toryx** (a self-inverting 4D *double-toroidal* spiral element =
+prime element of *matter*) maps to the Beltrami-Hopf soliton read as matter and the torus inversion of
+`soliton3d.html`; the **helyx** (a *double-helical* element = prime element of *radiation*) maps to the same
+object read as a field / photon-helicoid (cf. Reed M8). Ginzburg's **discrete energy levels** map to the
+resonator eigenmode ladder (M7-2 carrier comb), and his **matter<->radiation transformation** to the
+`m = hbar omega / c^2` field<->matter duality (M8-2).
+
+**The four-framework convergence.** Ginzburg joins Reed (QWM, M8), Storti (EGM, M11), and Nielsen (TUFT --
+Hopf-fibration `S1->S9->CP4` curl-eigenmode knot spectrum; Beltrami-Higgs on `S3`) as a fourth independent
+fringe framework, each folded method/analogy-only, all converging on the **same toroidal, Beltrami/Hopf,
+resonance-quantized object**. The shared invariants (toroidal/Hopf topology; Beltrami/curl eigenmodes; a
+polarizable-vacuum reading; `m = hbar omega/c^2`; an `alpha ~ 137` winding number) are collected in
+`GLOSSARY.md` and `REFERENCES.md`, each thread `[credited]` where established, `[framework]` where a reading.
+
+---
+
+## 9. Consolidated reference list
 
 Established, credited literature underpinning the toolkit (per module). Primary load-bearing references
-are named in full; tiers are as used above.
+are named in full; tiers are as used above. See `REFERENCES.md` for the full project-wide citation base,
+including the four convergence-framework primaries (Reed, Storti, Ginzburg, Nielsen).
 
 **Dimensional method (M7).**
 - E. Buckingham, *Phys. Rev.* **4**, 345 (1914) -- the Pi theorem. [credited]
@@ -994,7 +1025,7 @@ are named in full; tiers are as used above.
 
 ---
 
-## 9. Do-not-cite note
+## 10. Do-not-cite note
 
 The following are named so they are never cited as established, and never resurrected:
 
