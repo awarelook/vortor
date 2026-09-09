@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The electron — a torsion defect (FTGB)</title>
+<meta name="author" content="Nathaniel Hanks">
+<meta name="description" content="The electron as a topologically-confined photon (Hopf ring) whose loop-closure-failure precession — the torsion defect — is the origin of charge; whirl q = 1/alpha, chirality gives electron/positron, and a defect-free ring gives the neutrino. Honest tiers throughout.">
+</head><body>
+<style>
+  :root{
+    --ground:#080b10;--panel:#111823;--panel2:#0c121b;--line:#223142;--ink:#e8eef7;--muted:#8493a8;
+    --el:#4bcadf;--po:#ff6a97;--nu:#e7c24b;
+    --tV:#6ac47b;--tC:#6fa8dd;--tS:#e0a94a;--tO:#c98a8a;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --serif:Georgia,"Iowan Old Style",serif;--sans:-apple-system,"Segoe UI",system-ui,Roboto,sans-serif;
+    --maxw:1120px;
+  }
+  @media (prefers-color-scheme:light){:root{--ground:#eef1f6;--panel:#fff;--panel2:#f3f6fb;--line:#d3dbe6;
+    --ink:#131a24;--muted:#5a6678;--el:#0f8ba0;--po:#d02d63;--nu:#a8811a;
+    --tV:#2e8f47;--tC:#2f6bb0;--tS:#a9791a;--tO:#b0524f;}}
+  :root[data-theme="dark"]{--ground:#080b10;--panel:#111823;--panel2:#0c121b;--line:#223142;--ink:#e8eef7;--muted:#8493a8;
+    --el:#4bcadf;--po:#ff6a97;--nu:#e7c24b;--tV:#6ac47b;--tC:#6fa8dd;--tS:#e0a94a;--tO:#c98a8a;}
+  :root[data-theme="light"]{--ground:#eef1f6;--panel:#fff;--panel2:#f3f6fb;--line:#d3dbe6;--ink:#131a24;--muted:#5a6678;
+    --el:#0f8ba0;--po:#d02d63;--nu:#a8811a;--tV:#2e8f47;--tC:#2f6bb0;--tS:#a9791a;--tO:#b0524f;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  h1,h2,h3{margin:0;line-height:1.12;text-wrap:balance}
+  .mono{font-family:var(--mono)}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  header{border-bottom:1px solid var(--line);padding:44px 0 30px}
+  .themeToggle{float:right;font-family:var(--mono);font-size:.72rem;color:var(--muted);background:none;border:1px solid var(--line);border-radius:8px;padding:6px 11px;cursor:pointer}
+  .themeToggle:hover{color:var(--ink)}
+  header h1{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800;letter-spacing:-.02em;margin-top:12px}
+  header h1 em{font-style:normal;background:linear-gradient(90deg,var(--el),var(--nu),var(--po));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-family:var(--serif);font-size:1.1rem;max-width:64ch;margin-top:14px;opacity:.92}
+  .stage{margin:26px 0 8px;display:grid;grid-template-columns:1.5fr 1fr;gap:18px;align-items:stretch}
+  .viewport{border:1px solid var(--line);border-radius:16px;position:relative;background:radial-gradient(120% 120% at 50% 42%, color-mix(in srgb,var(--el) 7%,transparent), transparent 62%),var(--panel2)}
+  .viewport canvas{display:block;width:100%;height:100%;border-radius:16px}
+  .vpInner{aspect-ratio:5/4}
+  .tag{position:absolute;top:12px;left:14px;font-family:var(--mono);font-size:.66rem;color:var(--muted);pointer-events:none}
+  .instr{display:flex;flex-direction:column;gap:12px}
+  .card{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:14px 15px}
+  .card h4{margin:0 0 10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .seg{display:flex;gap:6px}
+  .seg button{flex:1;font-family:var(--mono);font-size:.8rem;padding:7px 4px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--muted);cursor:pointer}
+  .seg button.on{color:var(--ink);font-weight:700}
+  .seg button[data-m="e"].on{border-color:var(--el);color:var(--el)}
+  .seg button[data-m="p"].on{border-color:var(--po);color:var(--po)}
+  .seg button[data-m="n"].on{border-color:var(--nu);color:var(--nu)}
+  .ctrl{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:center;font-family:var(--mono);font-size:.78rem;margin-top:12px}
+  .ctrl label{color:var(--muted)} .ctrl output{color:var(--el);min-width:4ch;text-align:right}
+  input[type=range]{width:100%;accent-color:var(--el)}
+  .live{font-family:var(--mono);font-size:.78rem;display:grid;grid-template-columns:1fr auto;gap:6px 10px}
+  .live .lbl{color:var(--muted)} .live .val{color:var(--ink);font-variant-numeric:tabular-nums;text-align:right}
+  .live .val.hi{color:var(--el);font-weight:700}
+  section{padding:34px 0;border-top:1px solid var(--line)}
+  section h2{font-size:clamp(1.3rem,2.4vw,1.8rem);font-weight:750}
+  .sub{color:var(--muted);max-width:72ch;margin:6px 0 20px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .eq{font-family:var(--mono);font-size:1rem;background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:12px 14px;margin:0 0 12px;overflow-x:auto}
+  .eq b{color:var(--el)} .eq i{font-style:normal;color:var(--po)}
+  .sym{display:grid;grid-template-columns:auto 1fr;gap:6px 13px;font-size:.85rem;margin:12px 0}
+  .sym dt{font-family:var(--mono);color:var(--po)} .sym dd{margin:0;color:var(--muted)}
+  .trans{font-family:var(--serif);border-left:2px solid var(--el);padding-left:14px;opacity:.94}
+  .tier{display:inline-block;font-family:var(--mono);font-size:.67rem;padding:2px 8px;border-radius:6px;border:1px solid;margin-top:12px;margin-right:6px}
+  .cV{color:var(--tV);border-color:var(--tV)} .cC{color:var(--tC);border-color:var(--tC)}
+  .cS{color:var(--tS);border-color:var(--tS)} .cO{color:var(--tO);border-color:var(--tO)}
+  footer{padding:30px 0 60px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+  footer p{max-width:78ch}
+  :focus-visible{outline:2px solid var(--el);outline-offset:2px}
+  @media (max-width:860px){.stage,.two{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header><div class="wrap">
+  <button class="themeToggle" id="tt">theme</button>
+  <div class="eyebrow">FTGB &mdash; the electron rung, read as topology</div>
+  <h1>The electron is a <em>wobble</em></h1>
+  <p class="lede">A high-energy photon bent into a closed ring that chases its own tail &mdash; a Hopf knot. It cannot quite close, so it <em>precesses</em>: a permanent, built-in wobble. That wobble is the <strong>torsion defect</strong>, and it is where charge comes from. Flip its handedness and you have the positron; remove it entirely and you have the neutrino. Drag the wobble; watch charge, whirl, and identity follow.</p>
+</div></header>
+
+<div class="wrap">
+  <div class="stage">
+    <div class="viewport"><div class="vpInner"><canvas id="e"></canvas></div>
+      <div class="tag" id="vtag">electron &middot; prograde torsion defect</div></div>
+    <div class="instr">
+      <div class="card">
+        <h4>what it is</h4>
+        <div class="seg" id="seg">
+          <button data-m="e" class="on">electron e&#8315;</button>
+          <button data-m="p">positron e&#8314;</button>
+          <button data-m="n">neutrino &nu;</button>
+        </div>
+        <div class="ctrl"><label for="prec">precession (defect)</label><input type="range" id="prec" min="0" max="1.6" step="0.01" value="0.9"><output id="precO">0.90</output></div>
+        <div class="ctrl"><label for="elev">view</label><input type="range" id="elev" min="-4" max="70" step="1" value="26"><output id="elevO">26&deg;</output></div>
+      </div>
+      <div class="card">
+        <h4>live readout</h4>
+        <div class="live">
+          <span class="lbl">object</span><span class="val hi" id="who">electron</span>
+          <span class="lbl">charge = sign(precession)</span><span class="val" id="chg">&minus;1</span>
+          <span class="lbl">|q| whirl = 1/&alpha;</span><span class="val" id="whirl">137.04</span>
+          <span class="lbl">precession / rev = &alpha;/2&pi;</span><span class="val" id="pang">1.16e&minus;3 rad</span>
+          <span class="lbl">mass = &#8463;&omega;/c&sup2;</span><span class="val" id="mass">0.511 MeV</span>
+          <span class="lbl">spin</span><span class="val" id="spin">&frac12; (pol + tor)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section><div class="wrap">
+  <h2>Charge is the wobble &mdash; term by term</h2>
+  <p class="sub">The ring&rsquo;s loop-closure failure is a spin precession; its <em>rate</em> is the charge magnitude, its <em>handedness</em> the charge sign. Every motion here is one of these terms.</p>
+  <div class="two">
+    <div>
+      <p class="eq"><i>q</i> &prop; d&theta;_prec/dt&nbsp; [<b>kg&middot;rad/s</b>]&nbsp;&nbsp;<span style="color:var(--muted)">charge = spin precession</span></p>
+      <p class="eq">whirl <i>N</i>_w = 1/<b>&alpha;</b> &asymp; 137,&nbsp;&nbsp; precession/rev = <b>&alpha;</b>/2&pi;</p>
+      <p class="eq"><i>m</i> = &#8463;<b>&omega;</b>/c&sup2;&nbsp;&nbsp;<span style="color:var(--muted)">mass = the trapped whirl (equal for e&#8315;/e&#8314;)</span></p>
+      <dl class="sym">
+        <dt>torsion defect</dt><dd>the precession &mdash; a prograde/retrograde loop-closure failure; its existence is the origin of charge</dd>
+        <dt>chirality</dt><dd>which way the defect winds: prograde = e&#8315;, retrograde = e&#8314;; C (charge conjugation) reverses it</dd>
+        <dt>neutrino</dt><dd>the defect-free ring: no precession &rArr; chargeless, ~massless, moves at c (a Helmholtz smoke-ring)</dd>
+      </dl>
+    </div>
+    <div>
+      <p class="trans">Charge, mass, and &alpha; share one origin: a photon-ring that precesses. The <em>sign</em> of charge is the handedness of the wobble (electron vs positron) &mdash; so their masses and spins are equal for free (CPT). Kill the wobble and you get the neutrino: neutral, light, non-precessing. The whirl count is 1/&alpha; &asymp; 137; expressing charge in mechanical units gives kg&middot;rad/s &mdash; spin angular momentum &mdash; dissolving the &ldquo;fake&rdquo; charge dimension.</p>
+      <span class="tier cS">[QWM framework] charge = spin precession (kg&middot;rad/s) &mdash; Reed reading, folded as method (M8)</span>
+      <span class="tier cV">[V-dim] m = &#8463;&omega;/c&sup2;; e&#8315;/e&#8314; mass &amp; spin degeneracy is CPT-consistent</span>
+      <span class="tier cO">[flag] &alpha; VALUE: winding ~140.2 vs 137.036 (2.3%) &mdash; a dynamical running/IR-fixed-point question, not derived here; e&#8315;&#178;/&#179; excised</span>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p>A live reading of the electron rung of the FTGB coherent object (see <span class="mono">ELECTRON_TORSION_DEFECT_EXPLANATION</span> and <span class="mono">ALPHA_DYNAMICAL_REFRAME</span>). The topology and <span class="mono">m = &#8463;&omega;/c&sup2;</span> are load-bearing; the charge-as-precession reading is the QWM/Reed framework (folded as method, not asserted as QED); the exact value of &alpha; is an open, honestly-flagged frontier, and the e&#8315;&#178;/&#179; screening factor is excised. No over-unity is claimed. &mdash; Nathaniel Hanks</p>
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  document.getElementById("tt").addEventListener("click",function(){
+    var c=document.documentElement.getAttribute("data-theme");
+    document.documentElement.setAttribute("data-theme", c==="dark"?"light":(c==="light"?"dark":(matchMedia("(prefers-color-scheme:dark)").matches?"light":"dark")));});
+  function cvar(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+  function hexRgb(h){h=h.replace("#","");if(h.length===3)h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];return [parseInt(h.substr(0,2),16),parseInt(h.substr(2,2),16),parseInt(h.substr(4,2),16)];}
+  function mix(a,b,t){return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t];}
+  function rgba(c,a){return "rgba("+(c[0]|0)+","+(c[1]|0)+","+(c[2]|0)+","+a.toFixed(3)+")";}
+  function fit(c){var r=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);
+    c.width=Math.max(2,Math.round(r.width*d));c.height=Math.max(2,Math.round(r.height*d));
+    var x=c.getContext("2d");x.setTransform(d,0,0,d,0,0);return {x:x,w:r.width,h:r.height};}
+
+  var MODE="e";           // e / p / n
+  var seg=document.getElementById("seg");
+  var precEl=document.getElementById("prec"), elevEl=document.getElementById("elev");
+  var ALPHA=7.2973525693e-3, INVA=1/ALPHA;   // 137.036
+  function setMode(m){MODE=m;
+    [].forEach.call(seg.children,function(b){b.className=(b.getAttribute("data-m")===m)?"on":"";});
+    var who=m==="e"?"electron":(m==="p"?"positron":"neutrino");
+    document.getElementById("who").textContent=who;
+    document.getElementById("who").style.color = m==="e"?cvar("--el"):(m==="p"?cvar("--po"):cvar("--nu"));
+    document.getElementById("vtag").innerHTML = m==="e"?"electron &middot; prograde torsion defect"
+      : (m==="p"?"positron &middot; retrograde torsion defect":"neutrino &middot; defect-free smoke-ring");
+    readout();
+  }
+  [].forEach.call(seg.children,function(b){b.addEventListener("click",function(){setMode(b.getAttribute("data-m"));});});
+  function readout(){
+    document.getElementById("precO").textContent=(+precEl.value).toFixed(2);
+    document.getElementById("elevO").textContent=(+elevEl.value|0)+String.fromCharCode(176);
+    var neutrino=(MODE==="n");
+    var sign = MODE==="e"?"−1" : (MODE==="p"?"+1":"0");
+    document.getElementById("chg").textContent = sign;
+    document.getElementById("chg").style.color = MODE==="e"?cvar("--el"):(MODE==="p"?cvar("--po"):cvar("--nu"));
+    document.getElementById("whirl").textContent = neutrino? "— (no whirl defect)" : INVA.toFixed(2);
+    document.getElementById("pang").textContent = neutrino? "0 (no precession)" : (ALPHA/(2*Math.PI)).toExponential(2)+" rad";
+    document.getElementById("mass").textContent = neutrino? "~0.05 eV" : "0.511 MeV";
+    document.getElementById("spin").textContent = neutrino? "½ (helicity only)" : "½ (pol + tor)";
+  }
+  precEl.addEventListener("input",readout); elevEl.addEventListener("input",readout);
+
+  var sim={whirl:0, prec:0, az:0, t:(reduced?2:0)};
+  var R0=1.0, r0=0.42, P=2, Q=3, NLINE=6, STEPS=96;
+  function drawE(){
+    var g=fit(document.getElementById("e")),x=g.x,W=g.w,H=g.h; x.clearRect(0,0,W,H);
+    var el=cvar("--el"),po=cvar("--po"),nu=cvar("--nu"),line=cvar("--line"),mut=cvar("--muted");
+    var neutrino=(MODE==="n");
+    var chir = MODE==="p"? -1 : 1;                      // retrograde for positron
+    var base = neutrino? el2rgb(nu) : (MODE==="p"? el2rgb(po) : el2rgb(el));
+    var cx=W/2, cy=H/2, scale=Math.min(W,H)*0.24;
+    var elev=(+elevEl.value)*Math.PI/180, ca=Math.cos(sim.az),sa=Math.sin(sim.az),ce=Math.cos(elev),se=Math.sin(elev);
+    var focal=5.2;
+    // precession (torsion defect): coning tilt of the torus axis, handed by chirality
+    var beta = neutrino? 0 : (+precEl.value)*0.22;      // tilt amplitude
+    var pcos=Math.cos(sim.prec), psin=Math.sin(sim.prec);
+    function coneTilt(p){                               // small coning about X then Z, phase = sim.prec
+      var bx=beta*psin*chir, bz=beta*pcos;
+      var y1=p[1]*Math.cos(bx)-p[2]*Math.sin(bx), z1=p[1]*Math.sin(bx)+p[2]*Math.cos(bx);
+      var x2=p[0]*Math.cos(bz)-y1*Math.sin(bz), y2=p[0]*Math.sin(bz)+y1*Math.cos(bz);
+      return [x2,y2,z1];
+    }
+    function proj(P3){var X=P3[0],Y=P3[1],Z=P3[2];
+      var x1=X*ca+Z*sa, z1=-X*sa+Z*ca, y1=Y, y2=y1*ce-z1*se, z2=y1*se+z1*ce, pp=focal/(focal-z2);
+      return {x:cx+x1*pp*scale, y:cy-y2*pp*scale, z:z2};}
+    var segs=[];
+    // Hopf winding field lines
+    for(var i=0;i<NLINE;i++){var ph=i/NLINE*2*Math.PI, hm=NLINE>1?i/(NLINE-1):0, prev=null;
+      for(var s2=0;s2<=STEPS;s2++){var s=s2/STEPS*2*Math.PI, u=P*s+ph, w=Q*s+ph, rad=R0+r0*Math.cos(w);
+        var pt=proj(coneTilt([rad*Math.cos(u), rad*Math.sin(u), r0*Math.sin(w)]));
+        var br=0.30+0.70*Math.pow(0.5+0.5*Math.sin(2*s - sim.whirl*2.0),1.6);
+        if(prev)segs.push({a:prev,b:pt,z:(prev.z+pt.z)/2,hm:hm,br:br}); prev=pt;}}
+    segs.sort(function(a,b){return a.z-b.z;});
+    x.lineCap="round";
+    for(var q2=0;q2<segs.length;q2++){var sg=segs[q2], dt=(sg.z+1.6)/3.2; if(dt<0)dt=0; if(dt>1)dt=1;
+      var col=mix(base, [255,255,255], 0.18*sg.hm), a=(0.20+0.80*dt)*sg.br;
+      x.strokeStyle=rgba(col,a); x.lineWidth=(0.9+2.0*dt)*sg.br+0.4;
+      x.beginPath();x.moveTo(sg.a.x,sg.a.y);x.lineTo(sg.b.x,sg.b.y);x.stroke();}
+    // the DEFECT marker: a bright node that advances by the precession (loop-closure failure)
+    if(!neutrino){var sd=(sim.prec*chir)%(2*Math.PI), u=P*sd, w=Q*sd, rad=R0+r0*Math.cos(w);
+      var pd=proj(coneTilt([rad*Math.cos(u), rad*Math.sin(u), r0*Math.sin(w)]));
+      x.fillStyle=rgba(el2rgb(cvar(MODE==="p"?"--po":"--el")),1); x.shadowColor=x.fillStyle; x.shadowBlur=16;
+      x.beginPath();x.arc(pd.x,pd.y,4.5,0,7);x.fill();x.shadowBlur=0;
+      x.fillStyle=mut;x.font="10px "+cvar("--mono");x.textAlign="center";
+      x.fillText(chir>0?"defect ↻ (e−)":"defect ↺ (e+)", pd.x, pd.y-10);
+    } else {
+      x.fillStyle=mut;x.font="10px "+cvar("--mono");x.textAlign="center";x.fillText("no defect — chargeless ring", cx, cy+scale*1.7);
+    }
+  }
+  function el2rgb(v){return hexRgb(v.charAt(0)==="#"?v:cvar(v));}
+
+  function frame(){
+    sim.whirl += 0.05; sim.prec += (reduced?0:0.02) + (+precEl.value)*0.03; sim.az = sim.t*0.24; sim.t += 0.016;
+    drawE(); if(!reduced)requestAnimationFrame(frame);
+  }
+  setMode("e"); readout(); drawE();
+  if(!reduced)requestAnimationFrame(frame);
+  addEventListener("resize",drawE);
+})();
+</script>
+</body></html>
