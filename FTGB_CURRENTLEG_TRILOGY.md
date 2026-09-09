@@ -169,7 +169,10 @@ enstrophy/`H^1` (Beale-Kato-Majda) bound `integral ||Omega||_inf dt < inf` (OPEN
 category-identical to open large-data 3D Navier-Stokes / Hall-MHD global regularity
 (Chae, Degond & Liu 2014; Beale, Kato & Majda 1984) -- a recognized external problem, not
 a defect of the construction. Numerically the driven system is stable to `T = 6000`
-(~2196 cycles) with `|S| <= 2.2e-16` and bounded drive.
+(~2196 cycles) with `|S| <= 2.2e-16` and bounded drive -- but this horizon is a LOW-MODE
+reduced ODE that cannot exhibit the small-scale enstrophy blow-up by construction, and the
+object is high-Lundquist / super-critical, so it is weak evidence, NOT sub-criticality;
+R2 stays [S] hard-open.
 
 ## 9. Result
 
@@ -193,7 +196,9 @@ Beale, Kato & Majda 1984, Commun. Math. Phys. 94, 61. Chae, Degond & Liu 2014, A
 Moffatt 1969, JFM 35, 117. Moffatt & Ricca 1992, Proc. R. Soc. A 439, 411. Steinhauer &
 Ishida 1997, PRL 79, 3423. Taylor 1974, PRL 33, 1139. Woltjer 1958, PNAS 44, 489.
 
-*Note: a fourth source for the canonical-helicity Casimir (Bae-Kang-Shin 2025,
-arXiv:2504.07629) states the same proposition but its identifier was not independently
-verified; it is deliberately NOT cited as load-bearing -- the result rests on Steinhauer-
-Ishida 1997 and Mahajan-Yoshida 1998. No number in this paper is fabricated; ASCII-clean.*
+*Note: a fourth source for the canonical-helicity Casimir -- Bae, Kang & Shin 2025,
+"On the double Beltrami states in Hall magnetohydrodynamics," arXiv:2504.07629 -- is now
+VERIFIED as a real, on-topic paper (double-Beltrami states as energy minimizers under
+conservation of two helicities) and corroborates the claim; the primary load-bearing pair
+remains Steinhauer-Ishida 1997 and Mahajan-Yoshida 1998 (confirm exact Prop. label at
+lock). No number in this paper is fabricated; ASCII-clean.*

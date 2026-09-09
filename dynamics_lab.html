@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FTGB Dynamics Lab — live nonlinear integration</title>
+<meta name="author" content="Nathaniel Hanks">
+<meta name="description" content="Three of the theory's governing equations integrated live with a real fixed-step solver: the Stuart-Landau heartbeat, Kuramoto/Adler comb-pull entrainment, and the driven-dissipative current-leg scalar S(t).">
+</head>
+<body>
+<style>
+  :root{
+    --scope:#050b08; --scope2:#07120d; --grid:#123c2b; --grid2:#0d2a1f;
+    --bezel1:#171e1b; --bezel2:#0e1512; --plate:#101815; --line:#22302a;
+    --ink:#dff3e6; --muted:#7c9488;
+    --phos:#43f59b; --amber:#ffb347; --cyan:#49d6e6; --red:#e77d7d;
+    --tV:#43f59b; --tC:#49d6e6; --tS:#ffb347; --tO:#e77d7d;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:-apple-system,"Segoe UI",system-ui,Roboto,sans-serif;
+    --maxw:1120px;
+  }
+  @media (prefers-color-scheme:light){
+    :root{--scope:#eef4ef;--scope2:#f6faf6;--grid:#c2ddcd;--grid2:#d8ebe0;
+      --bezel1:#e3e9e4;--bezel2:#d3ddd6;--plate:#ffffff;--line:#c7d3cb;
+      --ink:#111a15;--muted:#54685c;
+      --phos:#0f8a4f;--amber:#b5741a;--cyan:#12798c;--red:#b0524f;
+      --tV:#0f8a4f;--tC:#12798c;--tS:#b5741a;--tO:#b0524f;}
+  }
+  :root[data-theme="dark"]{--scope:#050b08;--scope2:#07120d;--grid:#123c2b;--grid2:#0d2a1f;
+    --bezel1:#171e1b;--bezel2:#0e1512;--plate:#101815;--line:#22302a;
+    --ink:#dff3e6;--muted:#7c9488;--phos:#43f59b;--amber:#ffb347;--cyan:#49d6e6;--red:#e77d7d;
+    --tV:#43f59b;--tC:#49d6e6;--tS:#ffb347;--tO:#e77d7d;}
+  :root[data-theme="light"]{--scope:#eef4ef;--scope2:#f6faf6;--grid:#c2ddcd;--grid2:#d8ebe0;
+    --bezel1:#e3e9e4;--bezel2:#d3ddd6;--plate:#ffffff;--line:#c7d3cb;
+    --ink:#111a15;--muted:#54685c;--phos:#0f8a4f;--amber:#b5741a;--cyan:#12798c;--red:#b0524f;
+    --tV:#0f8a4f;--tC:#12798c;--tS:#b5741a;--tO:#b0524f;}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:
+    radial-gradient(120% 90% at 50% -10%, color-mix(in srgb,var(--phos) 6%,transparent), transparent 55%),
+    var(--bezel2);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  code,.m{font-family:var(--mono)}
+  .plain{font-family:var(--serif)}
+  a{color:var(--cyan)}
+
+  /* faceplate header */
+  header.face{border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,var(--bezel1),var(--bezel2));position:relative}
+  .face .wrap{padding:30px 20px 26px}
+  .brandline{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .pwr{width:9px;height:9px;border-radius:50%;background:var(--phos);box-shadow:0 0 10px var(--phos)}
+  .model{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  h1.title{font-family:var(--mono);font-weight:700;letter-spacing:.02em;margin:12px 0 0;
+    font-size:clamp(1.5rem,3.4vw,2.4rem);color:var(--ink)}
+  h1.title .hl{color:var(--phos);text-shadow:0 0 18px color-mix(in srgb,var(--phos) 45%,transparent)}
+  .lede{font-family:var(--serif);font-size:1.06rem;max-width:64ch;margin-top:12px;opacity:.92}
+  .tierbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px;font-family:var(--mono);font-size:.68rem}
+  .tk{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:6px;padding:4px 9px;color:var(--muted)}
+  .tk i{width:8px;height:8px;border-radius:2px;display:inline-block}
+  .themeToggle{position:absolute;top:22px;right:20px;font-family:var(--mono);font-size:.7rem;color:var(--muted);
+    background:var(--plate);border:1px solid var(--line);border-radius:7px;padding:6px 11px;cursor:pointer}
+  .themeToggle:hover{color:var(--ink);border-color:var(--phos)}
+
+  /* rack instrument */
+  main{padding:26px 0 10px}
+  .rack{border:1px solid var(--line);border-radius:14px;margin:0 0 26px;overflow:hidden;
+    background:linear-gradient(180deg,var(--bezel1),var(--bezel2));
+    box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 8%,transparent) inset, 0 18px 40px -30px #000}
+  .rackHead{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);
+    font-family:var(--mono);flex-wrap:wrap}
+  .ch{font-size:.72rem;letter-spacing:.14em;color:var(--scope2);background:var(--phos);
+    padding:3px 8px;border-radius:5px;font-weight:700}
+  .rackHead .nm{font-size:.94rem;color:var(--ink);font-weight:600}
+  .rackHead .led{margin-left:auto;display:inline-flex;align-items:center;gap:7px;font-size:.66rem;color:var(--muted)}
+  .rackHead .led i{width:8px;height:8px;border-radius:50%;background:var(--tV);box-shadow:0 0 8px var(--tV)}
+
+  .rackBody{display:grid;grid-template-columns:1.55fr 1fr;gap:0}
+  .screenWrap{position:relative;border-right:1px solid var(--line);padding:14px;background:var(--bezel2)}
+  .screen{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--scope);
+    box-shadow:0 0 0 1px color-mix(in srgb,var(--phos) 8%,transparent) inset}
+  .screen canvas{display:block;width:100%;height:100%}
+  .screen .scan{position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(0deg,transparent 0 2px, color-mix(in srgb,#000 22%,transparent) 2px 3px);
+    opacity:.30;mix-blend-mode:overlay}
+  @media (prefers-color-scheme:light){.screen .scan{opacity:.10}}
+  :root[data-theme="light"] .screen .scan{opacity:.10}
+  :root[data-theme="dark"] .screen .scan{opacity:.30}
+  .screenTag{position:absolute;top:20px;left:22px;font-family:var(--mono);font-size:.64rem;
+    letter-spacing:.12em;color:var(--muted);text-transform:uppercase;pointer-events:none}
+
+  .console{padding:16px 16px 14px;display:flex;flex-direction:column;gap:14px}
+  .fader{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:center;font-family:var(--mono);font-size:.78rem}
+  .fader label{color:var(--muted)}
+  .fader output{color:var(--phos);font-variant-numeric:tabular-nums;min-width:5ch;text-align:right}
+  input[type=range]{width:100%;accent-color:var(--phos);cursor:pointer}
+  .meter{border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:8px}
+  .row{display:flex;align-items:baseline;gap:8px;font-family:var(--mono);font-size:.76rem}
+  .row .k{color:var(--muted);min-width:9.5ch}
+  .row .v{color:var(--ink);font-variant-numeric:tabular-nums}
+  .row .v.g{color:var(--phos)} .row .v.a{color:var(--amber)} .row .v.c{color:var(--cyan)}
+  .dled{width:8px;height:8px;border-radius:50%;background:var(--line);display:inline-block}
+  .dled.on{background:var(--phos);box-shadow:0 0 8px var(--phos)}
+  .dled.amber.on{background:var(--amber);box-shadow:0 0 8px var(--amber)}
+  .status{font-family:var(--mono);font-size:.72rem;color:var(--muted);border-top:1px solid var(--line);
+    padding-top:11px;line-height:1.5}
+
+  /* spec plate under screen */
+  .plate{border-top:1px solid var(--line);background:var(--plate);padding:16px 16px 18px}
+  .eq{font-family:var(--mono);font-size:1rem;background:var(--scope2);border:1px solid var(--line);
+    border-radius:8px;padding:12px 14px;margin:0 0 12px;overflow-x:auto;color:var(--ink)}
+  .eq .w{color:var(--phos)} .eq .a{color:var(--amber)} .eq .c{color:var(--cyan)}
+  .eq .sm{color:var(--muted);font-size:.82rem}
+  .sym{display:grid;grid-template-columns:auto 1fr;gap:6px 13px;font-size:.83rem;margin:0 0 12px}
+  .sym dt{font-family:var(--mono);color:var(--amber)} .sym dd{margin:0;color:var(--muted)}
+  .trans{font-family:var(--serif);font-size:1.02rem;border-left:2px solid var(--phos);padding-left:13px;opacity:.95;margin:0}
+  .tiers{margin-top:13px;display:flex;flex-wrap:wrap;gap:7px}
+  .tier{display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.03em;padding:3px 8px;border-radius:6px;border:1px solid}
+  .tier.v{color:var(--tV);border-color:var(--tV)} .tier.c{color:var(--tC);border-color:var(--tC)}
+  .tier.s{color:var(--tS);border-color:var(--tS)} .tier.o{color:var(--tO);border-color:var(--tO)}
+
+  footer{padding:26px 0 60px;color:var(--muted);font-size:.82rem}
+  footer .wrap{display:flex;flex-direction:column;gap:9px}
+  footer p{max-width:76ch;margin:0}
+  footer .plain{opacity:.95}
+
+  :focus-visible{outline:2px solid var(--phos);outline-offset:2px}
+  @media (max-width:840px){.rackBody{grid-template-columns:1fr}.screenWrap{border-right:none;border-bottom:1px solid var(--line)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="face">
+  <div class="wrap">
+    <button class="themeToggle" id="tt">theme</button>
+    <div class="brandline">
+      <span class="pwr"></span>
+      <span class="model">FTGB-DYN &middot; Model 3 &middot; live numerical integration</span>
+    </div>
+    <h1 class="title">Nonlinear Dynamics <span class="hl">Lab</span></h1>
+    <p class="lede">Three of the theory&rsquo;s governing equations, integrated live on your machine &mdash; not looped animation. Each bench instrument runs a real fixed-step solver: the self-limiting heartbeat, the entrainment of the inharmonic carrier comb, and the driven-dissipative current-leg scalar whose closure the object <em>fails</em> to select on its own.</p>
+    <div class="tierbar">
+      <span class="tk"><i style="background:var(--tV)"></i> [V] proven / verified here</span>
+      <span class="tk"><i style="background:var(--tC)"></i> [credited] established result</span>
+      <span class="tk"><i style="background:var(--tS)"></i> [S] structural / contingent</span>
+      <span class="tk"><i style="background:var(--tO)"></i> open &mdash; named external problem</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- CH-01  STUART-LANDAU -->
+  <section class="rack">
+    <div class="rackHead">
+      <span class="ch">CH-01</span>
+      <span class="nm">Stuart&ndash;Landau heartbeat &mdash; supercritical Hopf limit cycle</span>
+      <span class="led"><i></i> solver: RK4 &middot; complex amplitude</span>
+    </div>
+    <div class="rackBody">
+      <div class="screenWrap">
+        <div class="screen" style="aspect-ratio:16/11">
+          <canvas id="c1"></canvas>
+          <div class="scan"></div>
+          <div class="screenTag">phase portrait &mdash; Re z / Im z</div>
+        </div>
+      </div>
+      <div class="console">
+        <div class="fader"><label for="s1mu">&mu; drive</label><input type="range" id="s1mu" min="-0.5" max="3" step="0.01" value="2"><output id="s1muO">2.00</output></div>
+        <div class="fader"><label for="s1om">&omega; spin</label><input type="range" id="s1om" min="0.2" max="3" step="0.01" value="1.20"><output id="s1omO">1.20</output></div>
+        <div class="meter">
+          <div class="row"><span class="k">r* = &radic;&mu;</span><span class="v g" id="s1r">1.414</span></div>
+          <div class="row"><span class="k">|z| now</span><span class="v" id="s1z">&mdash;</span></div>
+          <div class="row"><span class="k">state</span><span class="v" id="s1st">on cycle</span></div>
+        </div>
+        <div class="status" id="s1status">Tune &mu; and the trace re-launches from near the origin and spirals onto the ring of radius &radic;&mu;. At &mu;=2 the ring is r* = &radic;2 &mdash; the canonical heartbeat amplitude.</div>
+      </div>
+    </div>
+    <div class="plate">
+      <p class="eq">d<span class="w">z</span>/dt = ( <span class="w">&mu;</span> + i<span class="c">&omega;</span> &minus; |<span class="w">z</span>|&sup2; ) <span class="w">z</span> <span class="sm">&nbsp; z &isin; &#8450;, integrated as (Re z, Im z)</span></p>
+      <dl class="sym">
+        <dt>z</dt><dd>complex amplitude &mdash; the oscillator&rsquo;s size and phase</dd>
+        <dt>&mu;</dt><dd>drive past onset; below 0 the state decays to rest, above 0 it settles at r* = &radic;&mu;</dd>
+        <dt>&omega;</dt><dd>rotation / carrier rate &mdash; the angular speed around the ring</dd>
+        <dt>|z|&sup2;</dt><dd>the saturating nonlinearity that caps the growth</dd>
+      </dl>
+      <p class="trans">Alive, self-limiting &mdash; not a flywheel. Push energy in and the amplitude grows only until its own nonlinearity holds it on a fixed ring, spinning at &omega;: a sustained beat, neither a decaying ring-down nor a runaway. This is the exact normal form of a supercritical Hopf bifurcation.</p>
+      <div class="tiers"><span class="tier v">[V] identity &mdash; Stuart&ndash;Landau normal form; r* = &radic;2 at &mu;=2</span></div>
+    </div>
+  </section>
+
+  <!-- CH-02  KURAMOTO / ADLER COMB -->
+  <section class="rack">
+    <div class="rackHead">
+      <span class="ch">CH-02</span>
+      <span class="nm">Comb entrainment &mdash; Adler / Arnold-tongue capture of the carrier comb</span>
+      <span class="led"><i></i> solver: RK4 &middot; 3 phase oscillators</span>
+    </div>
+    <div class="rackBody">
+      <div class="screenWrap">
+        <div class="screen" style="aspect-ratio:16/11">
+          <canvas id="c2"></canvas>
+          <div class="scan"></div>
+          <div class="screenTag">phases (top) &middot; lock detunings &psi; (below)</div>
+        </div>
+      </div>
+      <div class="console">
+        <div class="fader"><label for="s2k">K coupling</label><input type="range" id="s2k" min="0" max="1" step="0.005" value="0"><output id="s2kO">0.00</output></div>
+        <div class="meter">
+          <div class="row"><span class="k">f&#8322;/f&#8321;</span><span class="v c" id="s2r2">1.719</span><span class="v" style="color:var(--muted)" id="s2t2">&rarr; 7/4 = 1.750</span></div>
+          <div class="row"><span class="k">f&#8323;/f&#8321;</span><span class="v a" id="s2r3">2.430</span><span class="v" style="color:var(--muted)" id="s2t3">&rarr; 5/2 = 2.500</span></div>
+          <div class="row"><span class="k">lock 7:4</span><span class="dled" id="s2la"></span><span class="k" style="min-width:0">lock 5:2</span><span class="dled amber" id="s2lb"></span></div>
+        </div>
+        <div class="status" id="s2status">Natural comb {121, 208, 294} kHz &rarr; 1 : 1.719 : 2.430. Sub-critical coupling: the three tones drift on a KAM 3-torus (quasiperiodic, unlocked).</div>
+      </div>
+    </div>
+    <div class="plate">
+      <p class="eq">d<span class="w">&theta;</span>&#8342;/dt = <span class="a">&omega;</span>&#8342; + <span class="c">K</span>&middot;sin(<span class="w">&psi;</span>&#8342;) <span class="sm">&nbsp; &psi;&#8322;=7&theta;&#8321;&minus;4&theta;&#8322; (7:4), &nbsp;&psi;&#8323;=5&theta;&#8321;&minus;2&theta;&#8323; (5:2)</span></p>
+      <dl class="sym">
+        <dt>&omega;&#8342;</dt><dd>the three carrier tones, ratios fixed by geometry: 1 : 1.719 : 2.430 (the whirl = the fundamental)</dd>
+        <dt>K</dt><dd>inter-tone coupling; raise it to drive the tones through their Arnold tongues</dd>
+        <dt>&psi;&#8342;</dt><dd>resonant phase combinations; when a &psi; stops drifting, that pair is mode-locked</dd>
+      </dl>
+      <p class="trans">The comb is inharmonic, so weak coupling leaves it drifting. Turn coupling up and the tones snap into low-order lock &mdash; and in doing so the <em>observed</em> ratios are pulled off geometry toward 7/4 and 5/2. That 1&ndash;3% pull is the falsifiable prediction: a measured lock at 12/7 = 1.714 would refute it.</p>
+      <div class="tiers"><span class="tier s">[S] / characterized &mdash; multi-channel entrainment; the 7/4 &amp; 5/2 pull is a testable discriminator</span></div>
+    </div>
+  </section>
+
+  <!-- CH-03  CURRENT-LEG S(t) -->
+  <section class="rack">
+    <div class="rackHead">
+      <span class="ch">CH-03</span>
+      <span class="nm">Current-leg S(t) &mdash; driven-dissipative closure scalar (reduced illustration)</span>
+      <span class="led"><i></i> solver: RK4 &middot; scalar strip-chart</span>
+    </div>
+    <div class="rackBody">
+      <div class="screenWrap">
+        <div class="screen" style="aspect-ratio:16/11">
+          <canvas id="c3"></canvas>
+          <div class="scan"></div>
+          <div class="screenTag">strip chart &mdash; S vs time</div>
+        </div>
+      </div>
+      <div class="console">
+        <div class="fader"><label for="s3d">drive E&middot;B</label><input type="range" id="s3d" min="0" max="1" step="0.005" value="0"><output id="s3dO">0.00</output></div>
+        <div class="meter">
+          <div class="row"><span class="k">S* (steady)</span><span class="v" id="s3ss">1.00</span></div>
+          <div class="row"><span class="k">rides</span><span class="v" id="s3ride">&mu;=const no-go</span></div>
+        </div>
+        <div class="status" id="s3status">Undriven: S relaxes onto the &mu;=const no-go surface (S &ne; 0). The object&rsquo;s own dynamics select the no-go &mdash; a proven, honest NEGATIVE. Matter is the flow of the knot only when the knot is externally driven.</div>
+      </div>
+    </div>
+    <div class="plate">
+      <p class="eq">&part;<sub>&mu;</sub>K<sup>&mu;</sup> = 0 &nbsp;&hArr;&nbsp; <span class="w">S</span> = <span class="a">&mu;&#772;</span> &minus; <span class="c">P&middot;v</span> = 0 &nbsp;&nbsp;<span class="sm">closure condition (exact)</span></p>
+      <p class="eq"><span class="sm">reduced illustration:</span> d<span class="w">S</span>/dt = &minus;&gamma;(<span class="w">S</span> &minus; S<sub>no-go</sub>) &minus; <span class="c">(E&middot;B)</span>&middot;<span class="w">S</span></p>
+      <dl class="sym">
+        <dt>S</dt><dd>the closure scalar; helicity 4-current closes (matter carries the whole flow) iff S = 0</dd>
+        <dt>&mu;&#772;, P&middot;v</dt><dd>the Bernoulli head and the canonical-momentum flux; their mismatch is S</dd>
+        <dt>&gamma;, E&middot;B</dt><dd>relaxation toward the no-go vs. the external drive that pulls S toward closure</dd>
+      </dl>
+      <p class="trans">Left alone, every natural selection flow &mdash; energy-minimisation and the driven-dissipative attractor alike &mdash; lands on the &mu;=const no-go, with S sitting a finite distance from zero. Only a sustained external drive (E&middot;B &ne; 0) tunes S to 0. Closure is realisable but never self-selected: the object selects the no-go.</p>
+      <div class="tiers">
+        <span class="tier v">[V] static &amp; aligned no-go &mdash; adversarially verified</span>
+        <span class="tier s">[S leaning V] driven closure realisable by external drive</span>
+        <span class="tier o">selection = NEGATIVE &middot; full [V] gated on 3D enstrophy/BKM bound (external)</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer><div class="wrap">
+  <p class="m" style="letter-spacing:.16em;text-transform:uppercase;font-size:.68rem;color:var(--muted)">bench notes</p>
+  <p>Every trace is the equation beside it, integrated live with a fixed-step RK4 solver (stable dt, sub-stepped per frame). CH-01 and the comb ratios of CH-02 are exact from the theory: r* = &radic;&mu; (&radic;2 at &mu;=2) and the carrier comb {121, 208, 294} kHz. CH-03 is an <strong>illustrative reduced model</strong> of the closure scalar S &mdash; a one-line caricature that reproduces the proven behaviour (free dynamics relax to the &mu;=const no-go; an external drive tunes S&rarr;0), <em>not</em> the full Hall two-fluid PDE from which the no-go and driven-closure results are actually derived.</p>
+  <p>No over-unity is claimed anywhere. The current-leg selection result is a NEGATIVE: the object&rsquo;s own dynamics select the no-go, and closure is achievable only by an external drive. Load-bearing pieces rest on peer-reviewed physics (Hopf/Stuart&ndash;Landau normal form; Adler/Arnold mode-locking; Woltjer&ndash;Taylor, Mahajan&ndash;Yoshida canonical-helicity relaxation).</p>
+  <p class="plain">Nathaniel Hanks &middot; self-contained instrument &mdash; canvas 2D only, no external scripts, fonts, or network calls.</p>
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+  // ---- theme toggle ----
+  var tt=document.getElementById("tt");
+  tt.addEventListener("click",function(){
+    var cur=document.documentElement.getAttribute("data-theme");
+    var next = cur==="dark" ? "light" : (cur==="light" ? "dark" :
+      (matchMedia("(prefers-color-scheme:dark)").matches?"light":"dark"));
+    document.documentElement.setAttribute("data-theme",next);
+  });
+
+  function cvar(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+  function fit(c){
+    var r=c.getBoundingClientRect(), d=Math.min(devicePixelRatio||1,2);
+    var w=Math.max(2,Math.round(r.width)), h=Math.max(2,Math.round(r.height));
+    if(c.width!==w*d||c.height!==h*d){c.width=w*d;c.height=h*d;}
+    var x=c.getContext("2d"); x.setTransform(d,0,0,d,0,0);
+    return {x:x,w:w,h:h};
+  }
+  function graticule(x,W,H,nx,ny){
+    x.fillStyle=cvar("--scope"); x.fillRect(0,0,W,H);
+    x.strokeStyle=cvar("--grid2"); x.lineWidth=1; x.globalAlpha=.7;
+    var i;
+    for(i=1;i<nx;i++){var px=W*i/nx;x.beginPath();x.moveTo(px,0);x.lineTo(px,H);x.stroke();}
+    for(i=1;i<ny;i++){var py=H*i/ny;x.beginPath();x.moveTo(0,py);x.lineTo(W,py);x.stroke();}
+    x.globalAlpha=1;
+    x.strokeStyle=cvar("--line"); x.strokeRect(.5,.5,W-1,H-1);
+  }
+
+  // ==========================================================
+  // CH-01  Stuart-Landau : dz/dt = (mu + i om - |z|^2) z
+  // ==========================================================
+  var S1={x:0.05,y:0.0,trail:[],mu:2,om:1.2};
+  function s1deriv(x,y,mu,om){var r2=x*x+y*y;return [ (mu-r2)*x - om*y, (mu-r2)*y + om*x ];}
+  function s1step(dt){
+    var mu=S1.mu, om=S1.om, x=S1.x, y=S1.y;
+    var k1=s1deriv(x,y,mu,om);
+    var k2=s1deriv(x+0.5*dt*k1[0], y+0.5*dt*k1[1], mu,om);
+    var k3=s1deriv(x+0.5*dt*k2[0], y+0.5*dt*k2[1], mu,om);
+    var k4=s1deriv(x+dt*k3[0], y+dt*k3[1], mu,om);
+    S1.x = x + dt/6*(k1[0]+2*k2[0]+2*k3[0]+k4[0]);
+    S1.y = y + dt/6*(k1[1]+2*k2[1]+2*k3[1]+k4[1]);
+    S1.trail.push([S1.x,S1.y]);
+    if(S1.trail.length>720) S1.trail.shift();
+  }
+  function s1reset(){S1.x=0.05;S1.y=0.0;S1.trail.length=0;}
+  var s1mu=document.getElementById("s1mu"), s1om=document.getElementById("s1om");
+  function s1params(){
+    S1.mu=+s1mu.value; S1.om=+s1om.value;
+    document.getElementById("s1muO").textContent=S1.mu.toFixed(2);
+    document.getElementById("s1omO").textContent=S1.om.toFixed(2);
+    var rs=Math.sqrt(Math.max(S1.mu,0));
+    document.getElementById("s1r").textContent=rs.toFixed(3);
+    document.getElementById("s1st").textContent=S1.mu<=0?"decays to rest":"on cycle";
+    s1reset();
+  }
+  s1mu.addEventListener("input",s1params); s1om.addEventListener("input",s1params);
+  function s1draw(){
+    var g=fit(document.getElementById("c1")),x=g.x,W=g.w,H=g.h;
+    graticule(x,W,H,8,8);
+    var cx=W/2, cy=H/2, unit=Math.min(W,H)*0.40/2.0;
+    var phos=cvar("--phos"), amber=cvar("--amber"), muted=cvar("--muted");
+    // axes
+    x.strokeStyle=cvar("--grid"); x.globalAlpha=.9; x.lineWidth=1;
+    x.beginPath();x.moveTo(cx,8);x.lineTo(cx,H-8);x.moveTo(8,cy);x.lineTo(W-8,cy);x.stroke();x.globalAlpha=1;
+    // target limit cycle r* = sqrt(mu)
+    var rs=Math.sqrt(Math.max(S1.mu,0));
+    if(rs>0){x.strokeStyle=amber;x.globalAlpha=.55;x.setLineDash([5,4]);x.lineWidth=1.4;
+      x.beginPath();x.arc(cx,cy,rs*unit,0,7);x.stroke();x.setLineDash([]);x.globalAlpha=1;}
+    // trajectory trail (phosphor, fading)
+    var tr=S1.trail, n=tr.length;
+    x.lineWidth=1.7; x.lineJoin="round";
+    for(var i=1;i<n;i++){
+      var a=i/n; x.globalAlpha=0.06+0.9*a;
+      x.strokeStyle=phos;
+      x.beginPath();
+      x.moveTo(cx+tr[i-1][0]*unit, cy-tr[i-1][1]*unit);
+      x.lineTo(cx+tr[i][0]*unit,   cy-tr[i][1]*unit);
+      x.stroke();
+    }
+    x.globalAlpha=1;
+    // head
+    if(n){var hx=cx+tr[n-1][0]*unit, hy=cy-tr[n-1][1]*unit;
+      x.fillStyle=phos; x.shadowColor=phos; x.shadowBlur=14;
+      x.beginPath();x.arc(hx,hy,4,0,7);x.fill(); x.shadowBlur=0;}
+    // live |z|
+    document.getElementById("s1z").textContent = Math.sqrt(S1.x*S1.x+S1.y*S1.y).toFixed(3);
+    // labels
+    x.fillStyle=muted; x.font="10px "+cvar("--mono");
+    x.fillText("r* = sqrt(mu) = "+rs.toFixed(3), 12, H-12);
+  }
+
+  // ==========================================================
+  // CH-02  Kuramoto/Adler comb : 3 oscillators, {121,208,294}
+  // ==========================================================
+  var F=[121,208,294];
+  var OM=[F[0]/F[0], F[1]/F[0], F[2]/F[0]];  // 1, 1.71901, 2.42975
+  var Da=7*OM[0]-4*OM[1];   // 7:4 detuning
+  var Db=5*OM[0]-2*OM[2];   // 5:2 detuning
+  var S2={th:[0,0,0], fbar:[OM[0],OM[1],OM[2]], pa:[], pb:[], K:0};
+  function wrapPi(a){a=(a+Math.PI)%(2*Math.PI); if(a<0)a+=2*Math.PI; return a-Math.PI;}
+  function s2rates(th,g){
+    var pa=7*th[0]-4*th[1], pb=5*th[0]-2*th[2];
+    return [ OM[0], OM[1]+g*Math.sin(pa), OM[2]+g*Math.sin(pb) ];
+  }
+  function s2step(dt){
+    var g=0.15*S2.K, th=S2.th;
+    var k1=s2rates(th,g);
+    var t2=[th[0]+0.5*dt*k1[0],th[1]+0.5*dt*k1[1],th[2]+0.5*dt*k1[2]];
+    var k2=s2rates(t2,g);
+    var t3=[th[0]+0.5*dt*k2[0],th[1]+0.5*dt*k2[1],th[2]+0.5*dt*k2[2]];
+    var k3=s2rates(t3,g);
+    var t4=[th[0]+dt*k3[0],th[1]+dt*k3[1],th[2]+dt*k3[2]];
+    var k4=s2rates(t4,g);
+    for(var i=0;i<3;i++){
+      th[i]+= dt/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]);
+      S2.fbar[i]+= 0.02*(k1[i]-S2.fbar[i]);   // smoothed instantaneous frequency
+    }
+  }
+  var s2k=document.getElementById("s2k");
+  function s2params(){S2.K=+s2k.value; document.getElementById("s2kO").textContent=S2.K.toFixed(2);}
+  s2k.addEventListener("input",s2params);
+  function s2push(){
+    S2.pa.push(wrapPi(7*S2.th[0]-4*S2.th[1]));
+    S2.pb.push(wrapPi(5*S2.th[0]-2*S2.th[2]));
+    if(S2.pa.length>200){S2.pa.shift();S2.pb.shift();}
+  }
+  function s2readout(){
+    var g=0.15*S2.K;
+    var aLock = 4*g >= Math.abs(Da);
+    var bLock = 2*g >= Math.abs(Db);
+    var r2 = S2.fbar[1]/S2.fbar[0], r3 = S2.fbar[2]/S2.fbar[0];
+    document.getElementById("s2r2").textContent=r2.toFixed(3);
+    document.getElementById("s2r3").textContent=r3.toFixed(3);
+    document.getElementById("s2la").className="dled"+(aLock?" on":"");
+    document.getElementById("s2lb").className="dled amber"+(bLock?" on":"");
+    var st;
+    if(!aLock&&!bLock) st="Sub-critical coupling: all three tones drift on a KAM 3-torus (quasiperiodic, unlocked).";
+    else if(aLock&&!bLock) st="Partial capture: f2 locked to 7/4 = 1.750; f3 still drifting. The 5:2 tongue needs stronger coupling.";
+    else st="Strong-coupling lock: ratios pulled off geometry to 7/4 = 1.750 and 5/2 = 2.500 -- the falsifiable comb-pull (12/7 = 1.714 would refute).";
+    document.getElementById("s2status").textContent=st;
+    return {aLock:aLock,bLock:bLock};
+  }
+  function s2draw(){
+    var g=fit(document.getElementById("c2")),x=g.x,W=g.w,H=g.h;
+    graticule(x,W,H,10,8);
+    var lk=s2readout();
+    var phos=cvar("--phos"),amber=cvar("--amber"),cyan=cvar("--cyan"),muted=cvar("--muted"),line=cvar("--line");
+    var cols=[phos,cyan,amber];
+    // upper region: phase circle
+    var topH=H*0.55, cx=W/2, cy=topH/2+4, rad=Math.min(W,topH)*0.34;
+    x.strokeStyle=cvar("--grid"); x.globalAlpha=.9; x.lineWidth=1;
+    x.beginPath();x.arc(cx,cy,rad,0,7);x.stroke(); x.globalAlpha=1;
+    var nm=["f1","f2","f3"];
+    for(var i=0;i<3;i++){
+      var a=S2.th[i];
+      var px=cx+rad*Math.cos(a), py=cy-rad*Math.sin(a);
+      x.strokeStyle=cols[i];x.globalAlpha=.35;x.lineWidth=1.2;
+      x.beginPath();x.moveTo(cx,cy);x.lineTo(px,py);x.stroke();x.globalAlpha=1;
+      x.fillStyle=cols[i];x.shadowColor=cols[i];x.shadowBlur=10;
+      x.beginPath();x.arc(px,py,4.5,0,7);x.fill();x.shadowBlur=0;
+    }
+    x.fillStyle=muted;x.font="10px "+cvar("--mono");
+    x.fillText("phase oscillators  f1:f2:f3 = 1 : 1.719 : 2.430", 12, 16);
+    // divider
+    x.strokeStyle=line;x.beginPath();x.moveTo(0,topH);x.lineTo(W,topH);x.stroke();
+    // lower region: psi_a, psi_b strip charts
+    function strip(buf,y0,h,col,lock,lbl){
+      var mid=y0+h/2;
+      x.strokeStyle=cvar("--grid");x.globalAlpha=.7;x.beginPath();x.moveTo(0,mid);x.lineTo(W,mid);x.stroke();x.globalAlpha=1;
+      var n=buf.length; if(n>1){
+        x.strokeStyle=col;x.lineWidth=1.6;x.beginPath();
+        for(var i=0;i<n;i++){
+          var px=W*i/199;
+          var py=mid - (buf[i]/Math.PI)*(h*0.42);
+          if(i===0)x.moveTo(px,py); else {
+            if(Math.abs(buf[i]-buf[i-1])>Math.PI) x.moveTo(px,py); else x.lineTo(px,py);
+          }
+        }
+        x.stroke();
+      }
+      x.fillStyle=muted;x.font="10px "+cvar("--mono");
+      x.fillText(lbl+(lock?"  LOCKED (pinned)":"  drifting"), 10, y0+13);
+    }
+    var lh=(H-topH)/2;
+    strip(S2.pa, topH, lh, cyan, lk.aLock, "psi_a = 7t1-4t2  (7:4)");
+    strip(S2.pb, topH+lh, lh, amber, lk.bLock, "psi_b = 5t1-2t3  (5:2)");
+  }
+
+  // ==========================================================
+  // CH-03  Current-leg S(t) : reduced driven-dissipative model
+  //   dS/dt = -gamma (S - Snogo) - (E.B) S      [illustrative]
+  // ==========================================================
+  var GAM=0.6, SNOGO=1.0, DMAX=15.0;
+  var S3={S:0.0, t:0, buf:[], D:0};
+  function s3rate(S,t,D){ return -GAM*(S-SNOGO) - D*S + 0.03*Math.sin(2.2*t); }
+  function s3step(dt){
+    var D=DMAX*S3.D, S=S3.S, t=S3.t;
+    var k1=s3rate(S,t,D);
+    var k2=s3rate(S+0.5*dt*k1, t+0.5*dt, D);
+    var k3=s3rate(S+0.5*dt*k2, t+0.5*dt, D);
+    var k4=s3rate(S+dt*k3, t+dt, D);
+    S3.S = S + dt/6*(k1+2*k2+2*k3+k4);
+    S3.t += dt;
+  }
+  function s3push(){ S3.buf.push(S3.S); if(S3.buf.length>260) S3.buf.shift(); }
+  var s3d=document.getElementById("s3d");
+  function s3params(){S3.D=+s3d.value; document.getElementById("s3dO").textContent=S3.D.toFixed(2);}
+  s3d.addEventListener("input",s3params);
+  function lerpHex(c1,c2,t){
+    function h(c){c=c.replace('#','');if(c.length===3)c=c[0]+c[0]+c[1]+c[1]+c[2]+c[2];
+      return [parseInt(c.substr(0,2),16),parseInt(c.substr(2,2),16),parseInt(c.substr(4,2),16)];}
+    var a=h(c1),b=h(c2);
+    return "rgb("+Math.round(a[0]+(b[0]-a[0])*t)+","+Math.round(a[1]+(b[1]-a[1])*t)+","+Math.round(a[2]+(b[2]-a[2])*t)+")";
+  }
+  function s3draw(){
+    var g=fit(document.getElementById("c3")),x=g.x,W=g.w,H=g.h;
+    graticule(x,W,H,10,6);
+    var phos=cvar("--phos"),amber=cvar("--amber"),muted=cvar("--muted");
+    var Smin=-0.2, Smax=1.3;
+    function Y(S){return H - (S-Smin)/(Smax-Smin)*H;}
+    // reference lines
+    x.strokeStyle=phos;x.globalAlpha=.7;x.setLineDash([6,4]);x.lineWidth=1.3;
+    x.beginPath();x.moveTo(0,Y(0));x.lineTo(W,Y(0));x.stroke();x.setLineDash([]);x.globalAlpha=1;
+    x.strokeStyle=amber;x.globalAlpha=.55;x.setLineDash([2,4]);x.lineWidth=1.3;
+    x.beginPath();x.moveTo(0,Y(SNOGO));x.lineTo(W,Y(SNOGO));x.stroke();x.setLineDash([]);x.globalAlpha=1;
+    x.fillStyle=phos;x.font="10px "+cvar("--mono");x.fillText("S = 0  (closure)", 10, Y(0)-6);
+    x.fillStyle=amber;x.fillText("S = S_no-go  (mu=const)", 10, Y(SNOGO)+13);
+    // trace, colored by proximity to closure (amber no-go -> phosphor closure)
+    var buf=S3.buf,n=buf.length;
+    if(n>1){
+      x.lineWidth=1.9;x.lineJoin="round";
+      for(var i=1;i<n;i++){
+        var s=Math.max(0,Math.min(1,buf[i]));
+        x.strokeStyle=lerpHex(phos,amber,s);
+        x.beginPath();
+        x.moveTo(W*(i-1)/259, Y(buf[i-1]));
+        x.lineTo(W*i/259, Y(buf[i]));
+        x.stroke();
+      }
+      // head glow
+      var hs=Math.max(0,Math.min(1,buf[n-1])), hc=lerpHex(phos,amber,hs);
+      x.fillStyle=hc;x.shadowColor=hc;x.shadowBlur=12;
+      x.beginPath();x.arc(W*(n-1)/259, Y(buf[n-1]),3.5,0,7);x.fill();x.shadowBlur=0;
+    }
+    // steady-state readout
+    var D=DMAX*S3.D; var ss=GAM*SNOGO/(GAM+D);
+    document.getElementById("s3ss").textContent=ss.toFixed(3);
+    var rideEl=document.getElementById("s3ride"), stEl=document.getElementById("s3status");
+    if(S3.D<0.08){ rideEl.textContent="mu=const no-go"; rideEl.style.color=amber;
+      stEl.textContent="Undriven: S relaxes onto the mu=const no-go surface (S != 0). The object's own dynamics select the no-go -- a proven, honest NEGATIVE.";
+    } else if(S3.D<0.6){ rideEl.textContent="driving toward closure"; rideEl.style.color=cvar("--ink");
+      stEl.textContent="Driving: the external E.B term pulls S down off the no-go, toward the S = 0 closure line.";
+    } else { rideEl.textContent="S -> 0 closure"; rideEl.style.color=phos;
+      stEl.textContent="Strongly driven: S -> 0, closure realisable -- but externally driven, never self-selected. Matter is the flow of the knot only when the knot is driven.";
+    }
+  }
+
+  // ==========================================================
+  // master loop : fixed dt, sub-stepped (stable, frame-rate independent)
+  // ==========================================================
+  function stepAll(){
+    var i;
+    for(i=0;i<4;i++) s1step(0.02);
+    for(i=0;i<8;i++) s2step(0.010);
+    s2push();
+    for(i=0;i<4;i++) s3step(0.02);
+    s3push();
+  }
+  function drawAll(){ try{s1draw();}catch(e){} try{s2draw();}catch(e){} try{s3draw();}catch(e){} }
+
+  s1params(); s2params(); s3params();
+
+  if(reduced){
+    // warm up to attractors, then draw a single static frame
+    for(var w=0; w<1600; w++) stepAll();
+    drawAll();
+    addEventListener("resize", drawAll);
+  } else {
+    function frame(){ stepAll(); drawAll(); requestAnimationFrame(frame); }
+    requestAnimationFrame(frame);
+  }
+})();
+</script>
+
+</body>
+</html>

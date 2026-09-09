@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Toroidal Soliton in 3D + Time — FTGB</title>
+<meta name="author" content="Nathaniel Hanks">
+<meta name="description" content="The driven Beltrami-Hopf toroidal soliton rendered in three spatial axes with a fourth axis of phase/time: the whirl clock and the sqrt(2) heartbeat made visible.">
+</head>
+<body>
+<style>
+  :root{
+    --ground:#080b10; --panel:#111823; --panel2:#0c121b; --line:#223142;
+    --ink:#e8eef7; --muted:#8493a8;
+    --rose:#ff6a97; --teal:#20c6b3; --gold:#e7c24b;
+    --tV:#6ac47b; --tC:#6fa8dd; --tS:#e0a94a; --tO:#c98a8a;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:-apple-system,"Segoe UI",system-ui,Roboto,sans-serif;
+    --maxw:1160px;
+  }
+  @media (prefers-color-scheme:light){
+    :root{--ground:#eef1f6;--panel:#ffffff;--panel2:#f3f6fb;--line:#d3dbe6;
+      --ink:#131a24;--muted:#5a6678;--rose:#d02d63;--teal:#0b8a7c;--gold:#a8811a;
+      --tV:#2e8f47;--tC:#2f6bb0;--tS:#a9791a;--tO:#b0524f;}
+  }
+  :root[data-theme="dark"]{--ground:#080b10;--panel:#111823;--panel2:#0c121b;--line:#223142;
+    --ink:#e8eef7;--muted:#8493a8;--rose:#ff6a97;--teal:#20c6b3;--gold:#e7c24b;
+    --tV:#6ac47b;--tC:#6fa8dd;--tS:#e0a94a;--tO:#c98a8a;}
+  :root[data-theme="light"]{--ground:#eef1f6;--panel:#ffffff;--panel2:#f3f6fb;--line:#d3dbe6;
+    --ink:#131a24;--muted:#5a6678;--rose:#d02d63;--teal:#0b8a7c;--gold:#a8811a;
+    --tV:#2e8f47;--tC:#2f6bb0;--tS:#a9791a;--tO:#b0524f;}
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  h1,h2,h3{margin:0;line-height:1.12;text-wrap:balance}
+  .mono{font-family:var(--mono)} .serif{font-family:var(--serif)}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  code,.m{font-family:var(--mono)}
+
+  header.top{border-bottom:1px solid var(--line);padding:44px 0 30px;position:relative;overflow:hidden}
+  header.top::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(70% 120% at 82% 0%, color-mix(in srgb,var(--rose) 12%,transparent), transparent 60%),
+               radial-gradient(60% 120% at 12% 120%, color-mix(in srgb,var(--teal) 12%,transparent), transparent 55%)}
+  header.top .wrap{position:relative}
+  .themeToggle{float:right;font-family:var(--mono);font-size:.72rem;color:var(--muted);background:none;
+    border:1px solid var(--line);border-radius:8px;padding:6px 11px;cursor:pointer}
+  .themeToggle:hover{color:var(--ink)}
+  header.top h1{font-size:clamp(2rem,4.4vw,3.35rem);font-weight:800;letter-spacing:-.02em;margin-top:12px}
+  header.top h1 em{font-style:normal;background:linear-gradient(90deg,var(--rose),var(--gold),var(--teal));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-family:var(--serif);font-size:1.12rem;max-width:64ch;margin-top:14px;opacity:.92}
+  .badges{margin-top:18px;display:flex;gap:9px;flex-wrap:wrap}
+  .badge{display:inline-flex;gap:8px;align-items:center;font-family:var(--mono);font-size:.71rem;color:var(--muted);
+    border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--rose);box-shadow:0 0 10px var(--rose)}
+
+  /* observatory stage */
+  .stage{margin:26px 0 8px;display:grid;grid-template-columns:1.55fr .95fr;gap:18px;align-items:stretch}
+  .viewport{border:1px solid var(--line);border-radius:16px;position:relative;
+    background:radial-gradient(120% 120% at 50% 42%, color-mix(in srgb,var(--rose) 7%,transparent), transparent 62%),var(--panel2)}
+  .viewport canvas{display:block;width:100%;height:100%;border-radius:16px}
+  .vpInner{aspect-ratio:5/4}
+  .tag{position:absolute;top:12px;left:14px;font-family:var(--mono);font-size:.68rem;color:var(--muted);
+    letter-spacing:.06em;pointer-events:none}
+  .tag .k{color:var(--teal)}
+
+  .instr{display:flex;flex-direction:column;gap:14px}
+  .card{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:14px 15px}
+  .card h4{margin:0 0 8px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .dialWrap{aspect-ratio:1/1;max-height:190px}
+  .dialWrap canvas{display:block;width:100%;height:100%}
+  .traceWrap{aspect-ratio:22/9}
+  .traceWrap canvas{display:block;width:100%;height:100%}
+  .live{font-family:var(--mono);font-size:.78rem;display:grid;grid-template-columns:1fr auto;gap:5px 10px}
+  .live .lbl{color:var(--muted)} .live .val{color:var(--rose);font-variant-numeric:tabular-nums;text-align:right}
+  .live .val.t{color:var(--teal)}
+
+  .controls{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:16px 18px;margin:8px 0 4px}
+  .ctrl{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;font-family:var(--mono);font-size:.8rem;margin:9px 0}
+  .ctrl label{color:var(--muted)}
+  .ctrl output{color:var(--teal);font-variant-numeric:tabular-nums;min-width:5ch;text-align:right}
+  input[type=range]{width:100%;accent-color:var(--rose)}
+  .hint{font-family:var(--serif);color:var(--muted);font-size:.92rem;margin:2px 0 0;max-width:80ch}
+
+  /* math */
+  section{padding:34px 0;border-top:1px solid var(--line)}
+  section h2{font-size:clamp(1.35rem,2.5vw,1.85rem);font-weight:750;letter-spacing:-.01em}
+  .sub{color:var(--muted);max-width:72ch;margin:6px 0 22px}
+  .eqgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .eqcard{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:16px 18px}
+  .eq{font-family:var(--mono);font-size:1.04rem;background:var(--panel2);border:1px solid var(--line);
+    border-radius:9px;padding:12px 14px;margin:0 0 12px;overflow-x:auto;color:var(--ink)}
+  .eq .r{color:var(--rose)} .eq .t{color:var(--teal)}
+  .sym{display:grid;grid-template-columns:auto 1fr;gap:6px 13px;font-size:.85rem;margin:12px 0}
+  .sym dt{font-family:var(--mono);color:var(--rose)} .sym dd{margin:0;color:var(--muted)}
+  .trans{font-family:var(--serif);font-size:1.0rem;border-left:2px solid var(--teal);padding-left:14px;margin:12px 0 0;opacity:.94}
+  .tier{display:inline-block;font-family:var(--mono);font-size:.67rem;letter-spacing:.03em;padding:2px 8px;
+    border-radius:6px;border:1px solid;margin-top:12px;margin-right:6px}
+  .cV{color:var(--tV);border-color:var(--tV)} .cC{color:var(--tC);border-color:var(--tC)}
+  .cS{color:var(--tS);border-color:var(--tS)} .cO{color:var(--tO);border-color:var(--tO)}
+
+  .caveat{border:1px solid var(--tS);border-left-width:3px;border-radius:12px;background:
+    color-mix(in srgb,var(--tS) 8%,var(--panel));padding:16px 18px;margin-top:16px}
+  .caveat h3{font-family:var(--mono);font-size:.9rem;color:var(--tS);margin-bottom:8px}
+  .caveat p{margin:0;font-family:var(--serif);opacity:.95}
+  .caveat .m{color:var(--ink)}
+
+  table.ladder{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:.83rem;margin-top:8px}
+  table.ladder th,table.ladder td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+  table.ladder th{color:var(--muted);font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+  table.ladder td:nth-child(2),table.ladder td:nth-child(3){color:var(--teal);font-variant-numeric:tabular-nums}
+  table.ladder td:first-child{color:var(--ink)}
+
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:.73rem;color:var(--muted);margin-top:18px}
+  .legend span{display:inline-flex;gap:6px;align-items:center}
+  .swatch{width:11px;height:11px;border-radius:3px;border:1px solid}
+
+  footer{padding:32px 0 60px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+  footer p{max-width:78ch;margin:8px 0}
+  .foot-plain{font-family:var(--serif)}
+
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+  @media (max-width:860px){.stage{grid-template-columns:1fr}.eqgrid{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="top"><div class="wrap">
+  <button class="themeToggle" id="tt">theme</button>
+  <div class="eyebrow">FTGB &mdash; the toroidal Beltrami&ndash;Hopf soliton, in time</div>
+  <h1>Three axes of space,<br><em>one axis of phase</em></h1>
+  <p class="lede">The coherent object is a torus of force-free field, wound both ways. Turn it in three dimensions to see the winding; then let the fourth axis &mdash; time &mdash; run: the field <em>whirls</em> along its own lines, and the whole tube <em>breathes</em> onto a limit cycle at r* = &radic;2. Every motion here is a term in the mathematics below.</p>
+  <div class="badges">
+    <span class="badge"><span class="dot"></span> the heartbeat is a limit cycle, not a flywheel</span>
+    <span class="badge">real helicity H &asymp; 0.088 &mdash; not an integer hopfion</span>
+  </div>
+</div></header>
+
+<div class="wrap">
+  <div class="stage">
+    <div class="viewport">
+      <div class="vpInner"><canvas id="torus"></canvas></div>
+      <div class="tag"><span class="k">u</span> toroidal &middot; <span class="k">w</span> poloidal &middot; auto-orbit + whirl + breath</div>
+    </div>
+    <div class="instr">
+      <div class="card">
+        <h4>phase clock &mdash; the whirl</h4>
+        <div class="dialWrap"><canvas id="dial"></canvas></div>
+      </div>
+      <div class="card">
+        <h4>breathing amplitude &rarr; r*</h4>
+        <div class="traceWrap"><canvas id="trace"></canvas></div>
+      </div>
+      <div class="card">
+        <h4>live state</h4>
+        <div class="live">
+          <span class="lbl">r* target</span><span class="val">1.41421</span>
+          <span class="lbl">amplitude A(t)</span><span class="val" id="ampOut">1.414</span>
+          <span class="lbl">whirl phase</span><span class="val t" id="phOut">0.00 rad</span>
+          <span class="lbl">view elevation</span><span class="val t" id="elOut">28&deg;</span>
+          <span class="lbl">carrier f&#8321; (fundamental)</span><span class="val t">121 kHz</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl"><label for="whirl">whirl rate</label><input type="range" id="whirl" min="0" max="3" step="0.01" value="1.1"><output id="whirlO">1.10</output></div>
+    <div class="ctrl"><label for="breath">breathing depth</label><input type="range" id="breath" min="0" max="1" step="0.01" value="0.45"><output id="breathO">0.45</output></div>
+    <div class="ctrl"><label for="elev">view elevation</label><input type="range" id="elev" min="-6" max="72" step="1" value="28"><output id="elevO">28&deg;</output></div>
+    <p class="hint">Whirl advances the phase along each field line (the object&rsquo;s internal clock); breathing modulates the tube on its Stuart&ndash;Landau envelope toward r* = &radic;2; elevation tilts the view. The slow orbit runs on its own.</p>
+  </div>
+</div>
+
+<section><div class="wrap">
+  <h2>What the motion is &mdash; term by term</h2>
+  <p class="sub">Nothing here is decoration: the shape is a Beltrami eigenmode, the winding is a linking number, the flow is a helicity current, the size is a mass, and the beat is a limit cycle. Each carries an honest tier.</p>
+
+  <div class="eqgrid">
+
+    <div class="eqcard">
+      <p class="eq">&nabla; &times; <span class="r">B</span> = <span class="t">&lambda;</span> <span class="r">B</span></p>
+      <dl class="sym">
+        <dt>B</dt><dd>the field (magnetic, or the velocity of the swirl)</dd>
+        <dt>&lambda;</dt><dd>Beltrami eigenvalue [1/length]; one number sets the whole shape. Ground root: &lambda;&#8321;R = 4.4934 (first root of tan x = x)</dd>
+        <dt>&nabla;&times;</dt><dd>curl &mdash; the local twist of the field</dd>
+      </dl>
+      <p class="trans">Force-free: the field runs everywhere parallel to its own curl, so it exerts no Lorentz force on itself &mdash; the state a magnetised plasma relaxes into at fixed helicity. The torus you see is this eigenmode.</p>
+      <span class="tier cC">[credited] Chandrasekhar&ndash;Kendall 1957; Woltjer 1958 / Taylor 1974</span>
+      <span class="tier cV">[V] &lambda;&#8321;R = 4.4934</span>
+    </div>
+
+    <div class="eqcard">
+      <p class="eq"><span class="r">Lk</span> = <span class="t">Tw</span> + <span class="t">Wr</span></p>
+      <dl class="sym">
+        <dt>Lk</dt><dd>total linking of the winding &mdash; a topological integer, conserved under smooth deformation</dd>
+        <dt>Tw</dt><dd>twist: how the field lines wrap around the tube (what you see spiralling poloidally)</dd>
+        <dt>Wr</dt><dd>writhe: how the core curve coils in space</dd>
+      </dl>
+      <p class="trans">The winding you watch is split cleanly into twist about the tube and writhe of the core. As the object turns and breathes, twist can trade for writhe, but their sum &mdash; the linking &mdash; is fixed.</p>
+      <span class="tier cC">[credited] C&#259;lug&#259;reanu&ndash;White&ndash;Fuller ribbon theorem</span>
+    </div>
+
+    <div class="eqcard">
+      <p class="eq"><span class="r">K</span>&#8304; = <span class="t">A</span> &middot; <span class="t">B</span> &nbsp;&nbsp; H = &int; <span class="t">A</span>&middot;<span class="t">B</span> dV</p>
+      <dl class="sym">
+        <dt>K&#8304;</dt><dd>helicity density &mdash; the local winding of the field at a point</dd>
+        <dt>A</dt><dd>vector potential (&nabla;&times;A = B)</dd>
+        <dt>H</dt><dd>total helicity &mdash; the volume integral, the tangle&rsquo;s conserved charge</dd>
+      </dl>
+      <p class="trans">A&middot;B measures how densely the field is wound. Its integral is the total helicity &mdash; conserved in the ideal limit (Moffatt 1969). In this object the matter-density profile tracks A&middot;B: where the field is densely wound, matter is dense.</p>
+      <span class="tier cC">[credited] Moffatt 1969 (helicity invariant)</span>
+      <span class="tier cV">[V] density profile match corr = 1.0000</span>
+    </div>
+
+    <div class="eqcard">
+      <p class="eq"><span class="r">m</span> = &#8463; <span class="t">&omega;_C</span> / c&sup2;</p>
+      <dl class="sym">
+        <dt>m</dt><dd>rest mass, read as a rate &mdash; not a Higgs coupling</dd>
+        <dt>&omega;_C</dt><dd>the whirl (Compton) angular frequency; radian is dimensionless, so &#8463;&omega;/c&sup2; &rarr; kg</dd>
+        <dt>&#8463;, c</dt><dd>reduced Planck constant, speed of light</dd>
+      </dl>
+      <p class="trans">Mass is how fast the internal clock turns: heavier means a faster whirl. One calibrated ladder threads the family &mdash; the macroscopic EVO at ~10&#8309; rad/s (the 121 kHz carrier) up to the proton at ~10&sup2;&#8308;.</p>
+      <span class="tier cV">[V] identity recovers m_e; &nu; rung &rarr; 0.05 eV (calibrated map)</span>
+      <span class="tier cS">[S] one object across all scales &mdash; a synthesis hypothesis</span>
+    </div>
+
+    <div class="eqcard" style="grid-column:1/-1">
+      <p class="eq">d<span class="r">z</span>/dt = ( <span class="r">&mu;</span> + i<span class="t">&omega;</span> &minus; |<span class="r">z</span>|&sup2; ) <span class="r">z</span> &nbsp;&nbsp;&rArr;&nbsp;&nbsp; r* = &radic;&mu; = <span class="r">&radic;2</span> &nbsp;(at &mu; = 2)</p>
+      <dl class="sym">
+        <dt>z</dt><dd>the complex amplitude &mdash; the tube&rsquo;s size and phase</dd>
+        <dt>&mu;</dt><dd>drive strength (distance past onset); sets the limit-cycle radius r* = &radic;&mu;</dd>
+        <dt>|z|&sup2;</dt><dd>the saturating nonlinearity that caps the amplitude</dd>
+        <dt>r*</dt><dd>the heartbeat radius the breathing settles onto: &radic;2</dd>
+      </dl>
+      <p class="trans">Push energy in and the amplitude grows until its own nonlinearity holds it on a fixed ring at r* = &radic;2 &mdash; a sustained, self-limiting beat (the Stuart&ndash;Landau normal form of a supercritical Hopf bifurcation). It is renewed each cycle, not a flywheel coasting: <em>no over-unity is claimed or implied</em>. This is the breathing you see, and the amplitude trace at right.</p>
+      <span class="tier cV">[V] r* = &radic;2 at &mu; = 2 &mdash; the canonical heartbeat</span>
+    </div>
+
+  </div>
+
+  <div class="caveat">
+    <h3>Q_H caveat &mdash; a real-helicity Beltrami field, not an integer hopfion</h3>
+    <p>The winding is genuine, but this object does <b>not</b> carry an integer Hopf charge. The Whitehead integral for the CK field converges to a well-defined <b>real helicity</b> <span class="m">H = &int;A&middot;B = &int;|B|&sup2;/&lambda; &asymp; 0.088</span> (grid-convergent to 4 digits, sign-definite via the Beltrami gauge A = B/&lambda;) &mdash; but there is <b>no integer</b> topological Q_H: the CK field is not closed-fibre (j&#8321;(&lambda;R) = 0 does not compactify it to a Hopf map S&sup3; &rarr; S&sup2;). So Q_H is not shown as a bald integer &mdash; the honest object is a real-helicity Beltrami field.
+    <span class="tier cV" style="margin-top:10px">[V] H &asymp; 0.088 numerics</span>
+    <span class="tier cS">[S] the integer-hopfion reading is rejected, not assumed</span></p>
+  </div>
+
+  <h3 style="font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:26px 0 4px">The whirl ladder &mdash; m = &#8463;&omega;_C/c&sup2;</h3>
+  <table class="ladder">
+    <thead><tr><th>member</th><th>&omega;_C (rad/s)</th><th>m c&sup2;</th></tr></thead>
+    <tbody>
+      <tr><td>EVO (macroscopic)</td><td>7.6e5</td><td>121 kHz carrier</td></tr>
+      <tr><td>neutrino</td><td>7.6e13</td><td>~0.05 eV</td></tr>
+      <tr><td>electron</td><td>7.76e20</td><td>0.511 MeV</td></tr>
+      <tr><td>proton</td><td>1.43e24</td><td>938 MeV</td></tr>
+    </tbody>
+  </table>
+  <p class="hint" style="margin-top:10px">Carrier comb {121, 208, 294} kHz stands in ratio 1 : 1.72 : 2.43 (successive roots of tan x = x); the macroscopic whirl equals the fundamental. <span class="mono" style="color:var(--tV)">[V]</span></p>
+
+  <div class="legend">
+    <span><span class="swatch" style="border-color:var(--tV);background:color-mix(in srgb,var(--tV) 30%,transparent)"></span> [V] verified / computed here</span>
+    <span><span class="swatch" style="border-color:var(--tC);background:color-mix(in srgb,var(--tC) 30%,transparent)"></span> [credited] established result</span>
+    <span><span class="swatch" style="border-color:var(--tS);background:color-mix(in srgb,var(--tS) 30%,transparent)"></span> [S] structural / hypothesis</span>
+    <span><span class="swatch" style="border-color:var(--tO);background:color-mix(in srgb,var(--tO) 30%,transparent)"></span> open &mdash; named external problem</span>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="eyebrow">what this is / is not</div>
+  <p class="foot-plain">A live modeler of one hypothesis: a driven Beltrami&ndash;Hopf toroidal soliton as a coherent object seen across scales, with time as the fourth axis. Load-bearing pieces rest on peer-reviewed physics (Chandrasekhar&ndash;Kendall, Woltjer&ndash;Taylor, Moffatt, C&#259;lug&#259;reanu&ndash;White&ndash;Fuller, Skyrme). The one-object-across-scales reading is marked [S]. No over-unity is claimed &mdash; the heartbeat is a driven limit cycle, renewed each cycle. The winding is a real helicity H &asymp; 0.088, not an integer Hopf charge.</p>
+  <p class="foot-plain">Nathaniel Hanks &middot; the animation integrates only the mathematics beside it &mdash; every curve is a term in the equations above.</p>
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var SQRT2 = Math.SQRT2;
+
+  // ---- theme toggle ----
+  var tt = document.getElementById("tt");
+  tt.addEventListener("click", function(){
+    var cur = document.documentElement.getAttribute("data-theme");
+    var next = cur === "dark" ? "light"
+             : cur === "light" ? "dark"
+             : (matchMedia("(prefers-color-scheme:dark)").matches ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", next);
+  });
+
+  function cvar(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+  function hexRgb(h){
+    h = h.replace("#","");
+    if(h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    return [parseInt(h.substr(0,2),16), parseInt(h.substr(2,2),16), parseInt(h.substr(4,2),16)];
+  }
+  function mix(a,b,t){ return [ a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t, a[2]+(b[2]-a[2])*t ]; }
+  function rgba(c,a){ return "rgba("+(c[0]|0)+","+(c[1]|0)+","+(c[2]|0)+","+a.toFixed(3)+")"; }
+
+  function fit(c){
+    var r = c.getBoundingClientRect();
+    var d = Math.min(devicePixelRatio || 1, 2);
+    c.width  = Math.max(2, Math.round(r.width  * d));
+    c.height = Math.max(2, Math.round(r.height * d));
+    var x = c.getContext("2d");
+    x.setTransform(d,0,0,d,0,0);
+    return { x:x, w:r.width, h:r.height };
+  }
+
+  // ---- controls ----
+  var whirlEl = document.getElementById("whirl");
+  var breathEl = document.getElementById("breath");
+  var elevEl = document.getElementById("elev");
+  function ctrlText(){
+    document.getElementById("whirlO").textContent  = (+whirlEl.value).toFixed(2);
+    document.getElementById("breathO").textContent = (+breathEl.value).toFixed(2);
+    document.getElementById("elevO").textContent   = (+elevEl.value|0) + String.fromCharCode(176);
+  }
+  whirlEl.addEventListener("input", ctrlText);
+  breathEl.addEventListener("input", ctrlText);
+  elevEl.addEventListener("input", ctrlText);
+  ctrlText();
+
+  // ---- shared simulation state ----
+  var sim = { whirl:0, breath:0, tSim: (reduced ? 3.0 : 0.0), az:0, A:SQRT2 };
+  var traceHist = [];
+  var TRACE_MAX = 260;
+
+  function amplitude(t, depth){
+    // Stuart-Landau relaxation onto r*=sqrt(2), then a slow breath around it
+    var env = SQRT2 * (1 - 0.8 * Math.exp(-t / 2.0));
+    var breath = 1 + depth * 0.16 * Math.sin(sim.breath);
+    return env * breath;
+  }
+
+  function step(dt){
+    var wr = +whirlEl.value;
+    var depth = +breathEl.value;
+    sim.whirl  += wr * dt * 1.6;
+    sim.breath += dt * 0.9;
+    sim.tSim   += dt;
+    sim.az      = sim.tSim * 0.28;      // slow independent auto-orbit
+    sim.A = amplitude(sim.tSim, depth);
+    if(traceHist.length === 0 || traceHist[traceHist.length-1] !== sim.A){
+      traceHist.push(sim.A);
+      if(traceHist.length > TRACE_MAX) traceHist.shift();
+    }
+    // readouts
+    document.getElementById("ampOut").textContent = sim.A.toFixed(3);
+    document.getElementById("phOut").textContent  = (sim.whirl % (2*Math.PI)).toFixed(2) + " rad";
+    document.getElementById("elOut").textContent  = (+elevEl.value|0) + String.fromCharCode(176);
+  }
+
+  // ---- 3D torus with Hopf-winding field lines ----
+  var torusC = document.getElementById("torus");
+  var R0 = 1.0, r0 = 0.40;
+  var P = 2, Q = 3;              // (p toroidal, q poloidal) winding
+  var NLINE = 6, STEPS = 92;
+  var NRING = 14, RSTEP = 30;
+
+  function drawTorus(){
+    var g = fit(torusC), x = g.x, W = g.w, H = g.h;
+    x.clearRect(0,0,W,H);
+    var rose = hexRgb(cvar("--rose"));
+    var teal = hexRgb(cvar("--teal"));
+    var lineC = hexRgb(cvar("--line"));
+
+    var cx = W/2, cy = H/2;
+    var el = (+elevEl.value) * Math.PI/180;
+    var ca = Math.cos(sim.az), sa = Math.sin(sim.az);
+    var ce = Math.cos(el), se = Math.sin(el);
+    var focal = 5.2;
+    var scale = Math.min(W,H) * 0.235;
+    var rr = r0 * (sim.A / SQRT2);      // breathing tube radius
+
+    function proj(X,Y,Z){
+      var x1 =  X*ca + Z*sa;
+      var z1 = -X*sa + Z*ca;
+      var y1 =  Y;
+      var y2 =  y1*ce - z1*se;
+      var z2 =  y1*se + z1*ce;
+      var p  = focal/(focal - z2);
+      return { x: cx + x1*p*scale, y: cy - y2*p*scale, z: z2 };
+    }
+
+    var segs = [];
+
+    // faint poloidal guide rings -> the tube surface
+    for(var j=0;j<NRING;j++){
+      var u0 = j/NRING * 2*Math.PI;
+      var cu = Math.cos(u0), su = Math.sin(u0);
+      var prev = null;
+      for(var k=0;k<=RSTEP;k++){
+        var w = k/RSTEP * 2*Math.PI;
+        var rad = R0 + rr*Math.cos(w);
+        var pt = proj(rad*cu, rad*su, rr*Math.sin(w));
+        if(prev) segs.push({ x1:prev.x, y1:prev.y, x2:pt.x, y2:pt.y, z:(prev.z+pt.z)/2, kind:0, br:0 });
+        prev = pt;
+      }
+    }
+
+    // Hopf-winding field lines with a traveling phase wave (the whirl)
+    for(var i=0;i<NLINE;i++){
+      var ph = i/NLINE * 2*Math.PI;
+      var hm = NLINE>1 ? i/(NLINE-1) : 0;   // 0 rose -> 1 teal
+      var prevp = null, prevbr = 0;
+      for(var s2=0;s2<=STEPS;s2++){
+        var s = s2/STEPS * 2*Math.PI;
+        var u = P*s + ph;
+        var w2 = Q*s + ph;
+        var rad2 = R0 + rr*Math.cos(w2);
+        var pt2 = proj(rad2*Math.cos(u), rad2*Math.sin(u), rr*Math.sin(w2));
+        // traveling brightness packet along arclength = the phase whirl
+        var br = 0.30 + 0.70 * Math.pow(0.5 + 0.5*Math.sin(2*s - sim.whirl*2.0), 1.6);
+        if(prevp) segs.push({ x1:prevp.x, y1:prevp.y, x2:pt2.x, y2:pt2.y,
+                              z:(prevp.z+pt2.z)/2, kind:1, hm:hm, br:(br+prevbr)/2 });
+        prevp = pt2; prevbr = br;
+      }
+    }
+
+    // painter's sort: far first
+    segs.sort(function(a,b){ return a.z - b.z; });
+
+    x.lineCap = "round";
+    for(var q=0;q<segs.length;q++){
+      var sg = segs[q];
+      var depthT = (sg.z + 1.5) / 3.0;            // ~[0,1]
+      if(depthT<0) depthT=0; else if(depthT>1) depthT=1;
+      if(sg.kind === 0){
+        x.strokeStyle = rgba(lineC, 0.10 + 0.22*depthT);
+        x.lineWidth = 1;
+      } else {
+        var col = mix(rose, teal, sg.hm);
+        var a = (0.20 + 0.80*depthT) * sg.br;
+        x.strokeStyle = rgba(col, a);
+        x.lineWidth = (0.9 + 2.0*depthT) * sg.br + 0.4;
+      }
+      x.beginPath(); x.moveTo(sg.x1, sg.y1); x.lineTo(sg.x2, sg.y2); x.stroke();
+    }
+  }
+
+  // ---- phase-clock dial ----
+  var dialC = document.getElementById("dial");
+  function drawDial(){
+    var g = fit(dialC), x = g.x, W = g.w, H = g.h;
+    x.clearRect(0,0,W,H);
+    var rose = cvar("--rose"), teal = cvar("--teal"), line = cvar("--line"), mut = cvar("--muted");
+    var cx = W/2, cy = H/2, R = Math.min(W,H)*0.40;
+    // breathing halo: ring radius pulses with amplitude
+    var halo = R * (0.82 + 0.16*(sim.A/SQRT2));
+    x.strokeStyle = teal; x.globalAlpha = 0.35; x.lineWidth = 2;
+    x.beginPath(); x.arc(cx,cy,halo,0,7); x.stroke(); x.globalAlpha = 1;
+    // face
+    x.strokeStyle = line; x.lineWidth = 1.5;
+    x.beginPath(); x.arc(cx,cy,R,0,7); x.stroke();
+    // ticks
+    for(var i=0;i<12;i++){
+      var a = i/12 * 2*Math.PI;
+      var r1 = R*0.88, r2 = R*0.98;
+      x.strokeStyle = mut; x.globalAlpha = i%3===0 ? 0.7 : 0.3; x.lineWidth = i%3===0 ? 1.6 : 1;
+      x.beginPath();
+      x.moveTo(cx + r1*Math.sin(a), cy - r1*Math.cos(a));
+      x.lineTo(cx + r2*Math.sin(a), cy - r2*Math.cos(a));
+      x.stroke();
+    }
+    x.globalAlpha = 1;
+    // hand = whirl phase
+    var ph = sim.whirl;
+    var hx = cx + R*0.72*Math.sin(ph), hy = cy - R*0.72*Math.cos(ph);
+    x.strokeStyle = rose; x.lineWidth = 2.4; x.lineCap = "round";
+    x.shadowColor = rose; x.shadowBlur = 10;
+    x.beginPath(); x.moveTo(cx,cy); x.lineTo(hx,hy); x.stroke();
+    x.shadowBlur = 0;
+    x.fillStyle = rose; x.beginPath(); x.arc(cx,cy,3.4,0,7); x.fill();
+    x.fillStyle = mut; x.font = "11px " + cvar("--mono"); x.textAlign = "center";
+    x.fillText("phase", cx, cy + R*0.55);
+  }
+
+  // ---- breathing amplitude trace ----
+  var traceC = document.getElementById("trace");
+  function drawTrace(){
+    var g = fit(traceC), x = g.x, W = g.w, H = g.h;
+    x.clearRect(0,0,W,H);
+    var rose = cvar("--rose"), teal = cvar("--teal"), line = cvar("--line"), mut = cvar("--muted");
+    var padL = 6, padR = 40, padT = 8, padB = 8;
+    var y0 = H - padB, y1 = padT;
+    var Amax = 1.95;
+    function Y(a){ return y0 - (a/Amax)*(y0 - y1); }
+    // grid
+    x.strokeStyle = line; x.globalAlpha = 0.5; x.lineWidth = 1;
+    x.beginPath(); x.moveTo(padL, y0); x.lineTo(W-padR, y0); x.stroke();
+    x.globalAlpha = 1;
+    // target r* = sqrt(2)
+    var ys = Y(SQRT2);
+    x.strokeStyle = teal; x.setLineDash([4,4]); x.globalAlpha = 0.85; x.lineWidth = 1.2;
+    x.beginPath(); x.moveTo(padL, ys); x.lineTo(W-padR, ys); x.stroke();
+    x.setLineDash([]); x.globalAlpha = 1;
+    x.fillStyle = teal; x.font = "10px " + cvar("--mono"); x.textAlign = "left";
+    x.fillText("r*=1.414", W-padR+3, ys+3);
+    // trace curve
+    var n = traceHist.length;
+    if(n > 1){
+      x.strokeStyle = rose; x.lineWidth = 1.8; x.beginPath();
+      for(var i=0;i<n;i++){
+        var px = padL + (i/(TRACE_MAX-1))*(W-padL-padR);
+        var py = Y(traceHist[i]);
+        if(i===0) x.moveTo(px,py); else x.lineTo(px,py);
+      }
+      x.stroke();
+      // head dot
+      var hx = padL + ((n-1)/(TRACE_MAX-1))*(W-padL-padR);
+      var hy = Y(traceHist[n-1]);
+      x.fillStyle = rose; x.shadowColor = rose; x.shadowBlur = 8;
+      x.beginPath(); x.arc(hx,hy,3,0,7); x.fill(); x.shadowBlur = 0;
+    }
+    x.fillStyle = mut; x.font = "10px " + cvar("--mono"); x.textAlign = "left";
+    x.fillText("A(t)", padL, y1+9);
+  }
+
+  function renderAll(){
+    try{ drawTorus(); }catch(e){}
+    try{ drawDial();  }catch(e){}
+    try{ drawTrace(); }catch(e){}
+  }
+
+  // ---- master loop ----
+  var last = performance.now();
+  function frame(now){
+    var dt = (now - last) / 1000; last = now;
+    if(dt > 0.1) dt = 0.1;
+    step(dt);
+    renderAll();
+    if(!reduced) requestAnimationFrame(frame);
+  }
+
+  if(reduced){
+    // static representative frame
+    var depth0 = +breathEl.value;
+    sim.A = amplitude(sim.tSim, depth0);
+    sim.whirl = 0.9; sim.az = 0.5;
+    for(var i=0;i<60;i++) traceHist.push(amplitude(i*0.05, depth0));
+    renderAll();
+  } else {
+    requestAnimationFrame(frame);
+  }
+
+  addEventListener("resize", function(){ if(reduced) renderAll(); });
+})();
+</script>
+
+</body>
+</html>

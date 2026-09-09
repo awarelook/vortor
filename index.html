@@ -209,7 +209,7 @@
         <dt>&nabla;&times;</dt><dd>curl &mdash; the local twist of the field</dd>
       </dl>
       <p class="trans">&ldquo;Force-free&rdquo;: the field carries no Lorentz force on itself, so it is the state a magnetised plasma relaxes into at fixed helicity (Woltjer 1958; Taylor 1974). The heatmap is a mode cross-section; raise n to climb the eigenvalue ladder that set the comb above. Crucially, for such a field the Lamb vector v&times;&omega; vanishes &mdash; the nonlinearity becomes a pure gradient, which is why the object stays coherent rather than turbulent.</p>
-      <span class="tier tA">[A] credited &mdash; Chandrasekhar&ndash;Kendall / Woltjer&ndash;Taylor</span>
+      <span class="tier tA">[credited] &mdash; Chandrasekhar&ndash;Kendall / Woltjer&ndash;Taylor</span>
     </div>
   </div>
 </div></section>
@@ -224,7 +224,7 @@
       <div class="ctrls">
         <div class="ctrl"><label for="spin">whirl</label><input type="range" id="spin" min="0" max="2" step="0.01" value="1"><output id="spinO">1.00</output></div>
       </div>
-      <div class="readout"><span>K&#8304; = <b>A&middot;B</b> (helicity density)</span><span>Q_H = 1 (Hopf)</span></div>
+      <div class="readout"><span>K&#8304; = <b>A&middot;B</b> (helicity density)</span><span>H &asymp; 0.088 (real helicity; Q_H = 1 is the idealized closed-fibre label)</span></div>
     </div>
     <div class="mathCard">
       <p class="eq"><span class="w">m</span> = &#8463; <span class="c">&omega;_C</span> / c&sup2; &nbsp;&nbsp;&nbsp; K&#8304; = <span class="w">A</span>&middot;<span class="w">B</span></p>
@@ -232,7 +232,7 @@
         <dt>m</dt><dd>rest mass &mdash; read as a rate, not a Higgs coupling</dd>
         <dt>&omega;_C</dt><dd>the whirl (Compton) angular frequency; rad is dimensionless, so &#8463;&omega;/c&sup2; &rarr; kg</dd>
         <dt>K&#8304; = A&middot;B</dt><dd>magnetic helicity density &mdash; the local winding of the field</dd>
-        <dt>Q_H</dt><dd>the integer Hopf invariant &mdash; how the field lines link</dd>
+        <dt>Q_H</dt><dd>integer Hopf invariant of the idealized closed-fibre field; the actual CK object carries a real helicity H &asymp; 0.088 (grid-convergent, sign-definite), not an integer Q_H &mdash; the CK field is not closed-fibre (j&#8321;(&lambda;R)=0 does not compactify)</dd>
       </dl>
       <p class="trans">Mass is how fast the object&rsquo;s internal clock turns: heavier means faster whirl. The knotted winding density A&middot;B is what the matter density tracks &mdash; &ldquo;where matter is dense, the field is densely wound.&rdquo; One Lagrangian, many windings: the lepton/neutrino sector reads through the Hopf number &pi;&#8323;(S&sup2;), the nuclear sector through the Skyrme baryon &pi;&#8323;(S&sup3;) &mdash; shared substrate, two matched methods (not one algorithm for all).</p>
       <span class="tier tV">[V] m = &#8463;&omega;/c&sup2; recovers m_e; helicity density [V]</span>
@@ -277,12 +277,12 @@
     <div class="isoCard"><h4>MHD / Beltrami</h4><div class="role">the field</div><div class="expr">&nabla;&times;B = &lambda;B; helicity &int;A&middot;B; Woltjer&ndash;Taylor min-energy</div></div>
     <div class="isoCard"><h4>Madelung / QWM</h4><div class="role">the matter wave</div><div class="expr">&psi; = &radic;&rho; e^{iS/&#8463;}; p = &nabla;S &mdash; the flow reading of the same field</div></div>
     <div class="isoCard"><h4>Skyrme / chiral-EFT</h4><div class="role">the nucleon</div><div class="expr">baryon B = &pi;&#8323;(S&sup3;); B=4 alpha cube; mass = spin-precession energy</div></div>
-    <div class="isoCard"><h4>Nielsen TUFT <span style="color:var(--tS)">[tiered]</span></h4><div class="role">the mass tower</div><div class="expr">m&#8345; &prop; (n+1)&middot;exp(a&middot;n &minus; &zeta;(3)n&sup2;); leptons to 0.4%</div></div>
+    <div class="isoCard"><h4>Nielsen TUFT <span style="color:var(--tS)">[tiered]</span></h4><div class="role">the mass tower</div><div class="expr">m&#8345; &prop; (n+1)&middot;exp(a&middot;n &minus; &zeta;(3)n&sup2;); leptons to 0.0/&minus;0.4/&minus;2%</div></div>
     <div class="isoCard"><h4>Stuart&ndash;Landau / Kuramoto</h4><div class="role">the living dynamics</div><div class="expr">&#380; = (&mu;+i&omega;&minus;|z|&sup2;)z; Adler/Arnold locking of the comb</div></div>
   </div>
   <div class="legend">
     <span><span class="swatch" style="border-color:var(--tV);color:var(--tV)"></span> [V] verified / proven here</span>
-    <span><span class="swatch" style="border-color:var(--tA);color:var(--tA)"></span> [A] credited established result</span>
+    <span><span class="swatch" style="border-color:var(--tA);color:var(--tA)"></span> [credited] established result</span>
     <span><span class="swatch" style="border-color:var(--tS);color:var(--tS)"></span> [S] structural / contingent</span>
     <span><span class="swatch" style="border-color:var(--tO);color:var(--tO)"></span> open &mdash; named external problem</span>
   </div>

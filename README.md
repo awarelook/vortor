@@ -12,20 +12,38 @@ manuscripts + the method toolkit + two execute-ready hand-off packages.
 
 ## Open it (no install, any OS)
 
-- **`index.html`** — double-click it. It runs in any modern browser on **Windows, macOS,
-  Linux, iOS, or Android** with no server and no dependencies (all CSS/JS inlined). The five
-  stages animate the mathematics live; drag the sliders to drive the oscillator, tune the
-  comb coupling, climb the eigenmode ladder, spin the torus, and raise the E·B drive.
-- Prefer a hosted view? The same modeler is a shareable web artifact (see the link you were
-  given when it was published).
+Every model is a single self-contained HTML file — **double-click it**. Each runs in any
+modern browser on **Windows, macOS, Linux, iOS, or Android** with no server and no
+dependencies (all CSS/JS inlined, all animation hand-rolled on `<canvas>`). Start with
+`index.html`; the other three go deeper on one facet each.
+
+- **`index.html`** — the coherent-object modeler. Five stages (point → string → resonator →
+  knotted field → driven dynamics) animate the mathematics live; drag the sliders to drive
+  the oscillator, tune the comb coupling, climb the eigenmode ladder, spin the torus, and
+  raise the E·B drive.
+- **`resonator_family.html`** — one driven resonator, the whole family. Sweep the drive
+  frequency and watch the *same* object become vacuum, neutrino, electron, EVO, and nucleon,
+  with the mass following live from `m = ħω/c²`.
+- **`soliton3d.html`** — the Beltrami–Hopf soliton in three spatial axes plus a fourth axis
+  of phase/time: the whirl clock and the √2 heartbeat made visible on the torus.
+- **`dynamics_lab.html`** — a live nonlinear-dynamics bench: three of the theory's governing
+  equations integrated in real time (Stuart–Landau heartbeat, Kuramoto/Adler comb-pull, and
+  the driven current-leg scalar `S(t)` whose closure the object fails to select on its own).
+
+Prefer a hosted view? Each model is also a shareable web artifact (see the links you were
+given when they were published).
 
 ## What's in the bundle
 
 | File | What it is |
 |---|---|
-| `index.html` | the interactive modeler (native-open, cross-OS) |
-| `FTGB_GRAND_SYNTHESIS.{md,pdf}` | the full tiered synthesis manuscript (Parts A–G, ~16.7k words) — **the large text with all the math** |
+| `index.html` | **the interactive modeler** — point → string → resonator → knotted field → dynamics (native-open, cross-OS) |
+| `resonator_family.html` | the unified object at five resonance conditions (vacuum / neutrino / electron / EVO / nucleon) |
+| `soliton3d.html` | the toroidal soliton in 3D + a phase/time axis |
+| `dynamics_lab.html` | live fixed-step integration of the three governing nonlinear equations |
+| `FTGB_GRAND_SYNTHESIS.{md,pdf}` | the full tiered synthesis manuscript (Parts A–G, ~16.8k words) — **the large text with all the math** |
 | `FTGB_CURRENTLEG_TRILOGY.{md,pdf}` | the standalone lead result (a self-contained plasma / topological-fluid theorem) |
+| `TOOLKIT_HANDBOOK.md` | plain-language + math handbook tying the four method modules together |
 | `toolkit/` | the four method modules: Buckingham-Π (M7), QWM conversion (M8), coupled-oscillator substrate (M9), topological-soliton methods (M10) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations |
 
@@ -34,11 +52,12 @@ manuscripts + the method toolkit + two execute-ready hand-off packages.
 This is a synthesis *hypothesis*, and its value is not "a finished theory of everything." It
 is a set of concrete, field-useful deliverables, each at a stated tier:
 
-1. **A proven result you can cite today `[V]`.** The current-leg trilogy (`FTGB_CURRENTLEG_TRILOGY`)
-   is a self-contained theorem about when a topological helicity current can equal a matter
-   current in force-free / two-fluid plasmas — with an adversarially-verified no-go, a
-   constructive driven realizability, and a clean reduction of its one gate to a recognised
-   external regularity problem. It stands without the wider synthesis: a plasma /
+1. **A rigorously-tiered result you can cite today: a `[V]` no-go core (static + aligned), a
+   driven-realizability `[S]` leg, and one external open (R2).** The current-leg trilogy
+   (`FTGB_CURRENTLEG_TRILOGY`) is a self-contained theorem about when a topological helicity
+   current can equal a matter current in force-free / two-fluid plasmas — with an
+   adversarially-verified no-go, a constructive driven realizability, and a clean reduction of
+   its one gate to a recognised external regularity problem. It stands without the wider synthesis: a plasma /
    topological-fluid contribution ready for a journal.
 2. **A reusable analysis toolkit.** M7–M10 give a coherent, dimensionally-audited machinery
    for driven toroidal plasmoids and coupled-oscillator systems — canonical-helicity
@@ -63,7 +82,7 @@ and a Skyrme-HPC group (the Δ relaxation).
 
 ## Honest tier legend
 
-`[V]` verified / proven here · `[A]` credited established result · `[S]` structural /
+`[V]` verified / proven here · `[credited]` established result · `[S]` structural /
 contingent-open · `open` a named external problem. Load-bearing claims rest on peer-reviewed
 physics; the Nielsen TUFT preprint and quantum-wave-mechanics readings are marked tiered and
 are not presented as established.

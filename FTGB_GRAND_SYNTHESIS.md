@@ -2,10 +2,16 @@
 title: "A Driven Beltrami-Hopf Plasmoid as One Coherent Object Across Scales: A Tiered Synthesis"
 author: Nathaniel Hanks
 date: 2026-09-09
-status: "Grand synthesis manuscript (draft), assembled Parts A-G; positive-core focus, exploratory not-found trails omitted per publication discipline; final coherence-stitch pending."
+status: "GRAND SYNTHESIS - Section-writer 1 deliverable: Front matter (F.1-F.4) + Part A (A.1-A.2)"
+provenance: >
+  Front matter and the foregrounded established-physics foundation for the grand-synthesis
+  manuscript, written per GRAND_SYNTHESIS_ARCHITECTURE_2026-09-08.md. Refreshed and lifted
+  from FTGB_SOLITON_TUFT_PREVIEW_2026-09-08.md (Abstract, Glossary, Introduction, Sections
+  1.1-1.2, 2.1, 3.1, 3.3), FTGB_ARC_SEED_LOCKED_2026-09-08.md, with tiers from
+  reference_locked_knowledge_base.md and citations from SESSION_2026-09-08_CITATIONS.md.
+  Established physics is FOREGROUNDED as peer-reviewed bedrock before any FTGB-specific claim.
 anchors: "Four anchors {B, n_i, m_i, R}; zero free structural parameters."
 ---
-
 
 # A Driven Beltrami-Hopf Plasmoid as One Coherent Object Across Scales: A Tiered Synthesis
 
@@ -96,7 +102,8 @@ The legend is the paper's honesty instrument; it is stated once here and never r
   to its source. Load-bearing machinery is always credited.
 - **[S]** -- *structural*: worked on our side but not closed; a construction whose scaffolding is
   in place but whose final value or proof is outstanding.
-- **[A]** -- *asserted / open*: a stated position or an internal quantity that remains open.
+- **open** -- a named, still-open problem or an internal quantity not yet closed; where
+  deepest, reduced to a named external computation. (Retires the former bare `[A]` tag.)
 - **[postulate]** -- a consistent defining assumption, declared as such.
 - **[QWM framework]** -- a refinement in the Reed / quantum-wave-mechanics reading. It is
   *corroborating and never load-bearing*: the four anchors, not the QWM picture, set every number.
@@ -247,14 +254,14 @@ section first; the rest of the paper leans on it.
   pressure-flow work density. Closure of the current leg holds if and only if `S = 0` on a
   non-empty, index-1, bounded surface.
 - **The two static inputs `{Delta, U_s}`.** The two numbers the LENR boundary reduces to, with
-  *different owners*: **`Delta`**, the internal branching amplitude (FTGB-internal, open [A]); and
+  *different owners*: **`Delta`**, the internal branching amplitude (FTGB-internal, open [S]); and
   **`U_s`**, the inherited metallic electron-screening potential, `U_s ~ 300-800 eV`, taken from
   the literature (accepted-not-adjudicated), not derived from the object.
 
 ### Claim tiers
 
-Every nontrivial statement carries one tier tag per the legend of Section F.3
-([V] / [credited] / [S] / [A] / [postulate] / [QWM framework] / [TUFT-preprint] / [analogy] /
+Every nontrivial statement carries one tier tag per the Tier legend above
+([V] / [credited] / [S] / open / [postulate] / [QWM framework] / [TUFT-preprint] / [analogy] /
 [clue] / NEGATIVE / [do-not-cite]).
 
 ---
@@ -294,7 +301,7 @@ prefactor (`kappa` first, others later) is a constant the Pi theorem cannot fix 
 pinned by mechanism or data.
 
 **The discipline.** Everything traces to four anchors `{B, n_i, m_i, R}` with **zero free
-structural parameters**. Claims are tiered inline (Section F.3). `mu_0` is a universal constant,
+structural parameters**. Claims are tiered inline (see the Tier legend). `mu_0` is a universal constant,
 not an anchor.
 
 **What we build on, and what is ours.** It is worth stating the division of labor plainly, because
@@ -516,7 +523,7 @@ Ledger, Part F, as either derived-with-residual or [S] tautology-not-excluded.)
   "smoke-ring" (`pi_3(S^2)` helicity sector). It is naturally its own antiparticle: with
   no charge to conjugate, the Dirac/Majorana distinction maps onto the FTGB
   charged/chargeless split, and the smoke-ring is the *self-dual* (Majorana-like) member
-  [A]. Neutrinoless double-beta decay is the external falsifier of that reading, not an
+  [S]. Neutrinoless double-beta decay is the external falsifier of that reading, not an
   FTGB prediction.
 - **EVO.** A *charged*, non-relativistic electron cluster (micro-ball-lightning), needing
   the non-force-free charged sheath; distinct from the chargeless smoke-ring, and scoped
@@ -568,13 +575,16 @@ its own dimensional bookkeeping.
 
 ## C.2 Topology and the mass tower
 
-**Topology.** The object carries Hopf invariant `Q_H = 1` [V/A] and, in its
-photon/band structure, Chern number `+/-2` [A] / band `+/-1` [V-model]. The helicity
-density `K^0 = A.B` is a *real* number (`H = 0.088` for the CK field), not an integer
-Hopf charge -- the CK field is not closed-fibre (resolved: the Whitehead pull-back is
-54% non-solenoidal), so `Q_H = B^2`-type identifications are excluded. Four distinct
-torsions (Cartan/Burgers, ribbon twist, Frenet, Ray-Singer) are kept separate;
-Einstein-Cartan torsion is excluded.
+**Topology.** The *idealized closed-fibre reference field* carries integer Hopf invariant
+`Q_H = 1` (a credited property of the base Hopf map, used here only as an idealization
+label); the *actual CK object* carries a *real* helicity `H = 0.088` [V] (grid-convergent,
+sign-definite), NOT an integer Hopf charge -- the CK field is not closed-fibre (the
+Whitehead pull-back is 54% non-solenoidal; `j_1(lambda R) = 0` does not compactify). So
+`Q_H = 1` is only the idealized-reference label, not the object's integer, and
+`Q_H = B^2`-type identifications are excluded. In its photon/band structure the object
+carries Chern number `+/-2` [credited] / band `+/-1` [V-model]. Four distinct torsions
+(Cartan/Burgers, ribbon twist, Frenet, Ray-Singer) are kept separate; Einstein-Cartan
+torsion is excluded.
 
 **The mass tower [TUFT-preprint, tiered].** Nielsen's Toroidal Unified Field Theory
 preprint supplies a spectral mass tower, `m_n ~ (n+1) exp(a n - zeta(3) n^2)`, with
@@ -612,16 +622,6 @@ Nielsen TUFT and QWM (Reed) marked tiered throughout; no over-unity; no number
 fabricated; ASCII-clean.*
 
 
----
-
----
-title: "Grand Synthesis Manuscript - Part D: The Living Dynamics and the Current-Leg Trilogy"
-author: Nathaniel Hanks
-date: 2026-09-09
-status: "SECTION DRAFT (Writer 3). Publication-grade prose for Part D of the grand-synthesis manuscript. Not a locked file."
-part: "D (D.1 living dynamics; D.2 the medium-to-matter current-leg trilogy - this session's crown [V] result)"
-tiers: "[V] verified | [credited] established physics built on | [S] structural worked-not-closed | [A] asserted/open | [postulate] | [analogy] | [clue] held not promoted | [characterized] honestly-bounded partial | NEGATIVE (specific, computed, tested)"
-anchors: "Four anchors {B, n_i, m_i, R}; zero free structural parameters."
 ---
 
 # Part D. The living dynamics and the current-leg trilogy
@@ -684,30 +684,34 @@ paper: the eigen-comb (D.1.4, Part C.3), the torque harmonics (Part C.3), and th
 distinct objects, not three readings of one number. A toroidal Beltrami resonator does not have a single
 clean eigenfrequency; toroidicity splits neighbouring modes and opens a gap -- exactly the
 toroidicity-induced Alfven eigenmode (TAE) gap of tokamak physics. The beat frequency is that gap,
-scaling with the *square* of the inverse aspect ratio.
+scaling *linearly* with the inverse aspect ratio to leading order in toroidicity.
 
 ```
   REAL-UNIT (beat frequency)               |  Pi-GROUP (gap ratio)
   -----------------------------------------|--------------------------------------
-  f_b = 0.15 * eps^2 * f_c                 |  Delta_omega/omega = f_b/f_c
-      = 0.15 * eps^2 * v_A/(2 pi R)        |     ~= 0.15 * eps^2
-  f_c = v_A/(2 pi R)   (carrier/transit)   |     = 0.15*(1/phi)^2 = 0.0573 (5.7%)
-  eps = a/R_0 = 1/phi = 0.618              |  FreeFEM torus split:
-  (most-irrational aspect ratio)           |     Delta_lambda/lambda_1 = 0.0625
+  f_b = c_CK * eps * f_c                   |  Delta_omega/omega = f_b/f_c
+      = c_CK * eps * v_A/(2 pi R)          |     ~= c_CK * eps   (LINEAR in eps)
+  f_c = v_A/(2 pi R)   (carrier/transit)   |  invariant gap (2D-axisym, eps->0):
+  eps = a/R_0 = 1/phi = 0.618 (canonical)  |     Delta_lambda = 0.208 * eps
+  eps_a = 0.697 (FreeFEM fatness)          |  FreeFEM 3D torus split at eps_a:
+  c_CK ~ 0.208 (near-universal 0.21-0.23)  |     Delta_lambda/lambda_1 = 0.0625 (~6%)
   -----------------------------------------|--------------------------------------
   Pi-group / tier: Delta_omega/omega with aspect eps; [S] (TAE Cheng-Chen-Chance 1985).
-  Both the TAE law (0.0573) and the FreeFEM torus split (0.0625) land in the ~6% band.
+  The gap is LINEAR in aspect ratio -- invariant gap Delta_lambda = 0.208*eps; the earlier
+  ~eps^2 form was a carrier-normalization artifact (retracted, B8b). The FreeFEM 3D torus
+  split (0.0625, at FEM fatness eps_a = 0.697) is the higher-fidelity datum, in the ~6% band.
 ```
 
 Two quantities must not be conflated with this gap ratio. First, the *observable modulation depth* is a
 separate, drive-set quantity of order 6-8% -- set by how hard the object is driven, not by the geometry
 [S]. Second, an alternative "golden-rung" readout `f_b = f_2 - phi*f_1 ~ 0.102 f_1` gives `0.102`,
-differing by 78% from the derived TAE value; it is a *different mechanism* and is carried strictly as a
-documented clue, never promoted [clue].
+differing by more than half from the derived toroidicity-gap value (~6%); it is a *different mechanism*
+and is carried strictly as a documented clue, never promoted [clue].
 
 **CLAIM -> Pi -> FALSIFIER.** Claim: the beat is a toroidicity gap. Pi: `Delta_omega/omega` scales
-*quadratically* in inverse aspect ratio (`~ eps^2`), vanishing as `eps -> 0`. Falsifier: a beat whose
-ratio is independent of `eps`, or scales linearly, falsifies the doublet-splitting (TAE) origin.
+*linearly* in inverse aspect ratio (`~ eps`), vanishing as `eps -> 0`. Falsifier: a beat whose
+ratio is independent of `eps`, or scales nonlinearly (e.g. quadratically) in `eps`, falsifies the
+doublet-splitting (TAE) origin.
 
 ### D.1.3 The Aizawa chaotic edge: a boundary, not a mechanism
 
@@ -760,7 +764,8 @@ conditional picture (`K` is order-of-magnitude only, so every specific `P` is il
 | Deuteron seed (quantum) | control `n*lambda^3` vs Bose onset 2.612 | `~0.01` warm; `1-4` cold seed | ABOVE at onset | [credited/S] |
 
 Two consequences are worth surfacing. The **electron internal whirl never locks, but the collective
-heartbeat does**: the zitterbewegung clock at `omega_e = 7.76e20 rad/s` gives `P ~ 1e-9`, but the slow
+heartbeat does**: the whirl / Compton clock at `omega_C = 7.76e20 rad/s` (the zitterbewegung rate is
+`omega_zbw = 2 omega_C = 1.55e21 rad/s`) gives `P ~ 1e-9`, but the slow
 macroscopic collective whirl locks, closing a striking internal-consistency identity,
 
 ```
@@ -933,10 +938,12 @@ The prerequisite ("have your own conserved current first") is thus MET.
 
 *Tier and attribution.* [V] / credited. The canonical-helicity-as-two-fluid-Casimir physics is carried
 by **Steinhauer & Ishida 1997** (PRL 79, 3423) and **Mahajan & Yoshida 1998** -- these are the
-load-bearing citations. A third source (Bae-Kang-Shin 2025, arXiv:2504.07629, Prop. 2.1) states the same
-proposition but its identifier could not be independently web-verified this pass; it is carried only with
-an explicit FLAG and **must not be shipped as a load-bearing citation** until located. No physics claim
-in this section hangs on that single identifier. [Source: `DRIVEN_CANONICAL_HELICITY_4CURRENT`.]
+load-bearing citations. A third source -- Bae, Kang & Shin, "On the double Beltrami states in Hall
+magnetohydrodynamics," arXiv:2504.07629 (2025) -- independently classifies double-Beltrami states as
+energy minimizers under conservation of two helicities (a Casimir/variational result), corroborating the
+canonical-helicity Casimir. It is now **VERIFIED** as a real, on-topic paper; the primary load-bearing
+pair remains Steinhauer-Ishida 1997 + Mahajan-Yoshida 1998 (confirm exact Prop. label at lock). No
+physics claim in this section hangs on that single identifier. [Source: `DRIVEN_CANONICAL_HELICITY_4CURRENT`.]
 
 ### D.2.3 (b) The aligned/steady no-go: the (A'B'C')^2 >= 0 obstruction -- [V], adversarially verified
 
@@ -1064,8 +1071,10 @@ reduced to **[S] CONDITIONAL:** R2 holds provided three ingredients, and R2 <=> 
 X3 is category-IDENTICAL to open large-data 3D Navier-Stokes / Hall-MHD global regularity (**Chae-Degond-
 Liu 2014**, Ann. IHP C 31, 555; Beale-Kato-Majda 1984, CMP 94, 61) -- a recognized *external* open PDE
 problem, NOT an FTGB-specific gap. Numerically the driven system is stable to horizon `T = 6000` (about
-2196 heartbeat periods): `|S| <= 2.2e-16`, drive bounded throughout. [Source:
-`CURRENTLEG_R2_GLOBAL_EXISTENCE`.]
+2196 heartbeat periods): `|S| <= 2.2e-16`, drive bounded throughout -- but this horizon is a LOW-MODE
+reduced ODE that cannot exhibit the small-scale enstrophy blow-up by construction, and the object is
+high-Lundquist (`S ~ 1e2-1e6`), hence super-critical; the result is therefore weak evidence, NOT
+sub-criticality. R2 stays [S] hard-open. [Source: `CURRENTLEG_R2_GLOBAL_EXISTENCE`.]
 
 ### D.2.7 The current leg, resolved (honest tier)
 
@@ -1099,21 +1108,11 @@ architecture's venue note).
 ---
 
 *End of Part D. No locked file edited; no number fabricated; canonical-helicity load-bearing citations =
-Steinhauer-Ishida 1997 + Mahajan-Yoshida 1998 (Bae-Kang-Shin 2025 carried FLAGGED only); the 3D-BKM
+Steinhauer-Ishida 1997 + Mahajan-Yoshida 1998 (Bae-Kang-Shin 2025 now VERIFIED real, corroborating); the 3D-BKM
 reduction cites Chae-Degond-Liu 2014 + Beale-Kato-Majda 1984. No over-unity: the heartbeat is a
 Prigogine dissipative structure, energy in equals energy dissipated each cycle. ASCII-clean throughout.*
 
 
----
-
----
-title: "Grand Synthesis -- Part E: Domain of Validity and the Nuclear Boundary"
-author: Nathaniel Hanks
-date: 2026-09-09
-status: "SECTION DRAFT (Writer 4) -- Part E for the grand-synthesis manuscript. Not a locked file."
-part: "E (E.1 domain of validity; E.2 LENR = scaffold-not-reaction)"
-tiers: "[V] verified | [credited] established physics built on | [S] structural worked-not-closed | [A] asserted/open | [postulate] | NEGATIVE (specific, computed, tested) | [do-not-cite]"
-anchors: "Four anchors {B, n_i, m_i, R}; zero free structural parameters."
 ---
 
 # Part E -- The nuclear boundary
@@ -1351,7 +1350,7 @@ The branching amplitude factorizes cleanly by channel `alpha` (partial-wave / mu
 - `A_alpha` -- angular-momentum coupling (Clebsch-Gordan / Wigner-Eckart). **SETTLED [V].**
 - `S_alpha` -- spin / isospin / spectroscopic / antisymmetrization / many-body structure. **[S]**,
   on the published B=4 collective-mode basis.
-- `R_alpha` -- the radial / reduced overlap integrals with their relative phases. **OPEN [A]** -- the
+- `R_alpha` -- the radial / reduced overlap integrals with their relative phases. **OPEN [S]** -- the
   ab-initio NCSMC / RGM piece, the deciding number.
 
 A from-scratch `O_h` character table (self-checked against Tinkham / Koster) settled `C_alpha` and
@@ -1368,11 +1367,11 @@ Quantitative LENR closure requires **two static inputs, with different owners.**
 is the sharpest statement of scaffold-not-reaction, and both are stated here without fabricating any
 value.
 
-**Input 1 -- Delta (branching): FTGB-internal, open [A].** `Delta` is the off-diagonal `B=4`
+**Input 1 -- Delta (branching): FTGB-internal, open [S].** `Delta` is the off-diagonal `B=4`
 two-diabatic-surface reactive Landau-Zener gap -- the amplitude between the bound `B=4` cube and the
 `B=3 + B=1` breakup surface, meeting at a crossing, with suppression `S = exp(delta)`,
 `delta = pi Delta^2 / (2 hbar v |dF|)`, exponentially sensitive to `Delta`. This is the aneutronic-
-branching / anomaly number, and it is FTGB's own to compute. It is not pinned in-band [A]. The blocker
+branching / anomaly number, and it is FTGB's own to compute. It is not pinned in-band [S]. The blocker
 is diagnosed and priced rather than hand-waved: both tractable ansaetze fail at the crossing (the
 product ansatz hits the repulsive core wall; naive field-blending breaks topology, `B -> 2.4`), and a
 genuine 3D Skyrme relaxation of the *massless* energy unwinds the topology (`|B| -> 0`) at every
@@ -1416,7 +1415,7 @@ Three cautions are load-bearing and stated explicitly:
 2. The diagonal quantum is **not the branching gap**: setting `Delta := hbar omega_merger` in
    `S = exp(delta)` gives `log10 S ~ 9600`, the freeze-both-channels pathology -- positive proof that
    the diagonal is the wrong object. The branching amplitude is the *off-diagonal* `Delta` of E.2.6,
-   which remains open [A].
+   which remains open [S].
 3. The diagonal ~20-30+ MeV also reproduces the measured `4He 0+_2` level at 20.21 MeV (Bacca 2015),
    but this is a **soft, not a clean, cross-check**: the `0+_2` is a `p+t` breakup Feshbach resonance
    (`Gamma ~ 270-500 keV`), not a clean bound state, so it is an order-consistency check only, not
@@ -1438,13 +1437,13 @@ selection rule, and a dynamical Landau-Zener step, with no frequency mechanism r
 derived.
 
 Quantitative closure reduces to two static inputs with two owners: `Delta`, the off-diagonal `B=4`
-reactive Landau-Zener gap (FTGB-internal, open [A], its blocker priced as a named external Skyrme
+reactive Landau-Zener gap (FTGB-internal, open [S], its blocker priced as a named external Skyrme
 computation), and `U_s`, the sub-barrier screening energy (host-lattice inherited, accepted-not-
 adjudicated; FTGB's own density gives only ~18-39 eV, and the anomaly appears in plain metal
 lattices). Its selection skeleton `{C_alpha, A_alpha}` is settled [V]; its collective structure
 `S_alpha` is [S] on a published basis; its diagonal energy scale is executed [S-model, ~20-30+ MeV]
 and cross-checks against BBT. The 1.33 MeV static ratio is refuted as the gap; the true branching
-`Delta` is not pinned in-band [A]. Scaffold-not-reaction is a measured boundary, not a dismissal: FTGB
+`Delta` is not pinned in-band [S]. Scaffold-not-reaction is a measured boundary, not a dismissal: FTGB
 supplies the scaffold, inherits one contested screening number from the host lattice, and leaves one
 well-posed branching amplitude as its own named external computation. No over-unity is claimed; no
 rate, cross-section, or gap magnitude is fabricated; baryon number is conserved throughout.
@@ -1482,7 +1481,7 @@ contradiction; each reduces to a *specific, named, external* computation or ingr
 which is the honest shape of the theory's present boundary.
 
 - **The LENR branching amplitude `Delta`** (off-diagonal `B=4` two-diabatic-surface
-  Landau-Zener gap) is `[A]`/open. It is a static nuclear-structure matrix element,
+  Landau-Zener gap) is `[S]`/open. It is a static nuclear-structure matrix element,
   decoupled from the frequency desert; its computation is a named external task -- a
   topology-preserving, pion-massive, fine-grid Skyrme relaxation (the reduced ansaetze
   provably fail in the crossing region; the blocker is diagnosed and priced, not
@@ -1568,7 +1567,7 @@ Five methods, tiered:
    `S = exp(delta)` freeze-both gate proves it); executing the off-diagonal amplitude
    requires real relaxation, not a reduced ansatz. Do not dress a static energy ratio as a
    geodesic amplitude.
-4. **Seesaw frequency-downconversion** [A] / [V-dim]. Via `m = hbar omega / c^2`, the
+4. **Seesaw frequency-downconversion** [S] / [V-dim]. Via `m = hbar omega / c^2`, the
    seesaw `m_light ~ m_D^2 / M_R` reads as `omega_light ~ omega_D^2 / omega_R`, a
    parametric-beat downconversion; the whirl ladder is a calibrated mass<->frequency map
    (`omega_nu -> 0.05` eV, 0.04%), and a genuine seesaw requires an off-ladder scale.
@@ -1591,10 +1590,12 @@ Woltjer 1958, PNAS 44, 489; Taylor 1974, PRL 33, 1139; Moffatt 1969, JFM 35, 117
 Calugareanu-White-Fuller (`Lk = Tw + Wr`).
 
 **Two-fluid canonical helicity (driven current-leg, [V/credited]).** Steinhauer & Ishida
-1997, PRL 79, 3423; Mahajan & Yoshida 1998, PRL 81, 4863. *FLAG:* Bae-Kang-Shin 2025
-(arXiv:2504.07629, "Prop. 2.1") could not be verified as an arXiv identifier -- **not to
-be cited externally until located**; the claim rests entirely on the two verified
-references above.
+1997, PRL 79, 3423; Mahajan & Yoshida 1998, PRL 81, 4863. Bae, Kang & Shin 2025, "On the
+double Beltrami states in Hall magnetohydrodynamics," arXiv:2504.07629 -- **VERIFIED real
+and on-topic** (double-Beltrami states classified as energy minimizers under conservation
+of two helicities, a Casimir/variational result); corroborates the canonical-helicity
+Casimir. The primary load-bearing pair remains the two references above (confirm exact
+Prop. label at lock).
 
 **Hydrodynamic / matter-wave QM.** Madelung 1927, Z. Phys. 40, 322; Bohm 1952, Phys. Rev.
 85, 166; de Broglie 1924; Hestenes 1990, Found. Phys. 20, 1213.
@@ -1640,5 +1641,5 @@ multi-channel entrainment (Cell Systems, 2023).
 torsion/oscillator physics and are unrelated to "biological transmutation."
 
 *End of Part G. Every citation real and verified; flags binding at lock (Bae-Kang-Shin
-not shipped; Bacca caveat; Navratil-Quaglioni-2011 = A=6; Kishimoto bound re-verify);
+now verified real; Bacca caveat; Navratil-Quaglioni-2011 = A=6; Kishimoto bound re-verify);
 established vs FTGB-novel labelled; ASCII-clean.*

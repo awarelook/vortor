@@ -92,17 +92,19 @@ helicity is the conserved charge to reason with. (2) The flux decomposition `K =
 (4) The dimensional audit uses the M8 charge convention (`e ~ kg.rad/s`): `P ~ m/rad`, `Omega ~ 1/rad`,
 `h = P.Omega ~ m/rad^2` = the magnetic-helicity-density dimension (identical to static `K0 = A.B`, D2 [V]).
 
-**Validity / tier.** **[V] / [credited].** `dH_can/dt = 0` ideal is a proven Casimir (Bae-Kang-Shin 2025
-Prop. 2.1 magneto-vorticity helicity [FLAG: arXiv:2504.07629 ID NOT web-verified; do not cite externally until
-located -- the claim is independently carried by Steinhauer-Ishida + Mahajan-Yoshida]; Steinhauer-Ishida 1997;
+**Validity / tier.** **[V] / [credited].** `dH_can/dt = 0` ideal is a proven Casimir (Bae-Kang-Shin 2025,
+"On the double Beltrami states in Hall magnetohydrodynamics," arXiv:2504.07629, VERIFIED real and on-topic;
+corroborates the canonical-helicity Casimir -- confirm exact Prop. label at lock; claim independently carried
+by Steinhauer-Ishida + Mahajan-Yoshida; Steinhauer-Ishida 1997;
 Mahajan-Yoshida 1998); the local
 `d_mu K^mu = -2 eps.Omega = 0` is verified in-project (residuals `~1e-16` on genuine equilibria,
 `driven_canonical_aligned_2026-09-08.py`). The `f_ext perp Omega` conservation condition is [V]
 (`DRIVEN_NONALIGNED_CLOSURE` Sec.1).
 
 **Source.** `DRIVEN_CANONICAL_HELICITY_4CURRENT_2026-09-08` (Secs.1-2); `DRIVEN_NONALIGNED_CLOSURE_2026-09-08`
-(Sec.1). Cite Bae-Kang-Shin (2025) arXiv:2504.07629 [FLAG: ID NOT web-verified; do not cite externally until
-located -- claim carried by Steinhauer-Ishida + Mahajan-Yoshida]; Steinhauer-Ishida PRL 79, 3423 (1997);
+(Sec.1). Cite Bae-Kang-Shin (2025) arXiv:2504.07629, "On the double Beltrami states in Hall
+magnetohydrodynamics" (VERIFIED real; corroborates the Casimir -- confirm exact Prop. label at lock; claim
+independently carried by Steinhauer-Ishida + Mahajan-Yoshida); Steinhauer-Ishida PRL 79, 3423 (1997);
 Mahajan-Yoshida PRL 81, 4863 (1998); Woltjer PNAS 44, 489 (1958); Berger-Field JFM 147, 133 (1984).
 
 ---
@@ -414,7 +416,7 @@ B=0). Always run the `S = exp(delta)` freeze-both sanity check.
 ## Per-claim index (M10)
 | # | Claim | Tier | Repro / trace |
 |---|---|---|---|
-| M10-1 | Canonical helicity `d_mu K^mu=0` ideal even when `d_mu K^mu_mag=-2E.B`; `f_ext perp Omega` conserves it | [V]/[credited] | `eps.Omega=0` Casimir; residual ~1e-16; Bae-Kang-Shin Prop.2.1 [FLAG arXiv:2504.07629 unverified; carried by Steinhauer-Ishida + Mahajan-Yoshida] |
+| M10-1 | Canonical helicity `d_mu K^mu=0` ideal even when `d_mu K^mu_mag=-2E.B`; `f_ext perp Omega` conserves it | [V]/[credited] | `eps.Omega=0` Casimir; residual ~1e-16; Bae-Kang-Shin arXiv:2504.07629 VERIFIED real (confirm Prop. label at lock; carried by Steinhauer-Ishida + Mahajan-Yoshida) |
 | M10-2 | Closure-iff-magnitude-const no-go template; `(A'B'C')^2>=0`; measure-zero vs finite-volume | [V] (+[S] corner) | static 0.605; `P.v` band 0.46-0.66; const-`|P|` closes ~1e-16; R1 codim-3 benign |
 | M10-3 | Moduli-geodesic `(mu,V)` VALIDATED (kink 1.4e-6, force 0.99, breather p=1.93 vs 2.0, ceiling ~2.2) | [S-model VALIDATED] | `self_unified_skyrme_multibody_..py`; diagonal 66-95 MeV = BBT |
 | M10-3-warn | Diagonal quantum != off-diagonal `Delta`; needs real relaxation; freeze-both gate | [V]/[label BLOCKED] | `log10 S ~ 9600`; product/blend/coarse all fail; `dx<=0.06-0.10 fm` |
@@ -436,7 +438,7 @@ B=0). Always run the `S = exp(delta)` freeze-both sanity check.
   cross-section, branching magnitude, mass, or scale is fabricated; `E_fm=2.5 MeV` retracted; baryon conserved.
 
 **Citations.** Woltjer PNAS 44, 489 (1958); Steinhauer-Ishida PRL 79, 3423 (1997); Mahajan-Yoshida PRL 81,
-4863 (1998); Yoshida-Mahajan PRL 88, 095001 (2002); Bae, Kang & Shin (2025) arXiv:2504.07629; Berger-Field
+4863 (1998); Yoshida-Mahajan PRL 88, 095001 (2002); Bae, Kang & Shin, "On the double Beltrami states in Hall magnetohydrodynamics" (2025) arXiv:2504.07629; Berger-Field
 JFM 147, 133 (1984); Dombre et al. JFM 167, 353 (1986); Arnold-Khesin, *Topological Methods in
 Hydrodynamics*; Skyrme *Nucl. Phys.* 31, 556 (1962); Manton *Phys. Lett. B* 110, 54 (1982); Manton-Sutcliffe,
 *Topological Solitons* (CUP 2004); Battye-Sutcliffe PRL 79, 363 (1997); Barnes-Baskerville-Turok PRL 79, 367
