@@ -61,6 +61,41 @@ near `140.2` vs the observed `137.036` — a **2.3% gap** carried as `[flag]` / 
 `e^(-2/3)` "screening" that would force the match **excised** as unjustified. So: *the mechanism is
 beautiful and the units close; the last 2.3% of `α` is honest open frontier, not a finished derivation.*
 
+## 2b. The antiparticle — anti-ness as the *chirality* of the torsion defect   `[framework]` + `[S]`
+
+The source already gives the key: precession is a loop-closure failure "**whether prograde or retrograde**."
+That handedness *is* antimatter.
+
+- **Positron = the retrograde torsion defect.** Same toroidal ring, same whirl, **opposite precession sense**.
+  Since **charge = precession** (`kg·rad/s`), the **sign of charge is the sign of the precession** (`±`), and
+  its **magnitude** is the precession rate `α/2π`. So `e⁺` is `e⁻` with the wobble running the other way —
+  charge-conjugation `C` is simply **reversing the precession**, equivalently **conjugating the matter wave**
+  `z → z̄` (the complex-amplitude reading, M8). `[framework]`
+- **Equal mass, equal |spin| — CPT for free.** Mass is `m = ħ|ω|/c²`: it depends on the whirl *magnitude*, not
+  its sign, so `m(e⁺) = m(e⁻)` **exactly**; `|spin| = ½` is preserved (poloidal+toroidal both flip together).
+  The matter-wave reading gives the particle/antiparticle mass and spin degeneracy **structurally**
+  (CPT-consistent) — a genuine consistency feature, not an input. `[S]`
+- **Neutrino / antineutrino = opposite-helicity smoke rings.** The neutrino is a *chargeless* Helmholtz
+  smoke-ring with **no torsion defect** (no precession ⇒ no charge, ~massless, moves at `c`). With charge
+  gone, the **only** distinguishing handedness is the ring's **helicity**: `ν` = one helicity, `ν̄` = the
+  mirror. This is exactly why the neutrino sector is the *cleanest chirality object* — and why **Majorana vs
+  Dirac** is the open question: if the smoke-ring is its own mirror image, `ν = ν̄` (Majorana), tested by
+  `0νββ`. `[framework]` / `[S]`
+- **The duality "angle."** Particle ↔ antiparticle is a **chiral rotation** by the precession phase: `e⁻` at
+  torsion phase `θ`, `e⁺` at `θ + π` (opposite handedness); the continuous "duality angle" is the precession
+  phase itself, and `C` is the `π`-flip / conjugation. Chirality (which way the defect winds) is the
+  fundamental label; charge sign, and the particle/antiparticle distinction, are its readout. `[framework]`
+
+| Object | torsion defect | charge | mass / \|spin\| |
+|---|---|---|---|
+| `e⁻` | prograde precession | `−` (precession sign) | `m_e` / ½ |
+| `e⁺` | retrograde precession | `+` | `m_e` / ½ (CPT-equal) |
+| `ν` | none; left-helical ring | `0` | ~0 / ½ |
+| `ν̄` | none; right-helical ring | `0` | ~0 / ½ |
+
+*(Honest boundary: this is the QWM/Reed chirality reading, `[framework]`; the mass/spin degeneracy is a real
+CPT-consistent feature of the matter-wave picture, but no mass **value** or mixing angle is derived here.)*
+
 ## 3. Why this is genuinely coherent with the object
 
 The picture is not a bolt-on — it is the **electron rung of the same driven Beltrami–Hopf soliton** the whole
@@ -82,7 +117,11 @@ threads this electron picture pulls together.
 - **Framework, not QED.** This is the QWM/Reed topological *reading*, folded method/analogy-only. It does not
   replace the Standard Model; it offers a mechanical *interpretation* of what SM/QED leave undefined (what
   charge *is*). That interpretive gap is real and fairly stated in the passage — but the reading is `[framework]`.
-- **`α` value is open.** Fold the mechanism, flag the number (2.3%), keep `e^(-2/3)` out.
+- **`α` value is open — reframed dynamically.** Fold the mechanism, flag the number (2.3%), keep `e^(-2/3)`
+  out. The 2.3% is now treated as a **running / IR-fixed-point** effect, not a static factor: standard QED
+  running goes the *wrong way* (137.036 is the IR ceiling), so the honest reframe is a **magnetic-vacuum
+  anti-screening flow** to a `137.036` fixed point — principled but not parameter-free (still `[flag]`). See
+  `results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`.
 - **"Future technology implications" stay tiered.** Any application claim inherits the project's rule: **no
   over-unity**, no fabricated rate or device performance. The vacuum is a medium, not a source. The genuine,
   disciplined implications are the *testable* ones — the EVO carrier comb, the aneutronic He-4/heat signature
