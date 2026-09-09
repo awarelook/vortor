@@ -1,7 +1,11 @@
 # Hand-off package: R2 -- global regularity / enstrophy bound for the driven near-Beltrami heartbeat
 
 **For:** a mathematical-fluid-dynamics / numerical-PDE collaborator or an HPC spectral run.
-**Status:** `[S]` hard-open. This package turns the open item into a ready-to-execute problem.
+**Status:** `[S]` hard-open -> **analytic route PARTIALLY EXECUTED, 2026-09-09.** See
+`results/R2_NEAR_BELTRAMI_ENSTROPHY_THEOREM_2026-09-09.md`: a **conditional `[V]`** enstrophy bound
+now exists for the NSE first model (a-priori bounded `Z`, hence BKM-regular, provided the drive holds
+the time-averaged Beltrami deviation below an explicit `O(1/Re)` threshold `<eta^2> < nu^2 lambda_1`).
+The two routes below remain the way to make it UNCONDITIONAL / at-Reynolds and to lift it to Hall-MHD.
 **One-line:** prove (or numerically evidence at the object's Reynolds) that the driven-dissipative
 near-Beltrami limit cycle has an a-priori bounded enstrophy, upgrading the FTGB current-leg
 trilogy's R2 from `[S] conditional` to `[V]` -- *without* requiring general 3D Navier-Stokes.

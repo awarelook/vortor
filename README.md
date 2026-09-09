@@ -43,9 +43,10 @@ given when they were published).
 | `dynamics_lab.html` | live fixed-step integration of the three governing nonlinear equations |
 | `FTGB_GRAND_SYNTHESIS.{md,pdf}` | the full tiered synthesis manuscript (Parts A–G, ~16.8k words) — **the large text with all the math** |
 | `FTGB_CURRENTLEG_TRILOGY.{md,pdf}` | the standalone lead result (a self-contained plasma / topological-fluid theorem) |
-| `TOOLKIT_HANDBOOK.md` | plain-language + math handbook tying the four method modules together |
-| `toolkit/` | the four method modules: Buckingham-Π (M7), QWM conversion (M8), coupled-oscillator substrate (M9), topological-soliton methods (M10) |
+| `TOOLKIT_HANDBOOK.md` | plain-language + math handbook tying the five method modules together |
+| `toolkit/` | the five method modules: Buckingham-Π (M7), QWM conversion (M8), coupled-oscillator substrate (M9), topological-soliton methods (M10), EGM / polarizable-vacuum spectral methods (M11) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations |
+| `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, + `verify/` scripts (incl. EGM sense-checks) |
 
 ## Where this credibly stands — the practical, positive value
 
@@ -79,6 +80,19 @@ is a set of concrete, field-useful deliverables, each at a stated tier:
 The open problems are stated as **named external computations**, not internal cracks — the
 `handoffs/` packages make them execute-ready for a PDE/analysis collaborator (R2 regularity)
 and a Skyrme-HPC group (the Δ relaxation).
+
+**Progress (2026-09-09):** the *analytic route* of the R2 hand-off has been partially executed —
+see [`results/`](results/). For the Navier–Stokes first model, the driven near-Beltrami heartbeat
+now has a **conditional `[V]` enstrophy bound** (a-priori bounded `Z`, hence Beale–Kato–Majda
+global regularity) *provided* the drive keeps the time-averaged Beltrami deviation below an
+explicit `⟨η²⟩ < ν²λ₁` (≈ RMS deviation `≲ 1/Re`) threshold — proven via an exact vortex-stretching
+= Lamb-vector identity and reproduced numerically (`results/verify/`). This is a conditional
+advance, not unconditional closure (the `1/Re` condition is stringent at the object's Lundquist
+number and unproven). The **Hall two-fluid lift** onto the object's own canonical vorticity is now
+also executed (`results/R3_HALLMHD_CANONICAL_ENSTROPHY_2026-09-09.md`): the identity ports verbatim
+(the Hall term is frozen-in transport, not an extra flux) and the bound carries over at magnetic
+Prandtl number `Pm = 1`, with an explicit `(η−ν)²` dissipation obstruction pinning down exactly what
+blocks the general `Pm ≠ 1` case.
 
 ## Honest tier legend
 

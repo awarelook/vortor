@@ -174,6 +174,19 @@ reduced ODE that cannot exhibit the small-scale enstrophy blow-up by constructio
 object is high-Lundquist / super-critical, so it is weak evidence, NOT sub-criticality;
 R2 stays [S] hard-open.
 
+**Update (2026-09-09): the analytic route now yields a conditional [V].** For the NSE first
+model, the vortex-stretching integral is shown to equal an *exact* Lamb-vector flux `P =
+integral (curl omega).(v x omega)` (Lemma), which vanishes on the force-free state; this
+converts the enstrophy balance from the supercritical `Z^3` inequality into a *linear* one and
+gives an a-priori enstrophy bound -- hence BKM-global-regularity of the heartbeat -- *provided*
+the drive holds the time-averaged Beltrami deviation below an explicit threshold `<eta^2> <
+nu^2 lambda_1`, i.e. RMS deviation `<~ 1/Re`. So R2 (=X3) moves from `[S]` hard-open to **`[V]`
+conditional** on an explicit, falsifiable drive-quality hypothesis (proven + numerically
+reproduced; identity to ~9 sig figs, threshold sharp and time-integrated). It is NOT
+unconditional closure -- at `S ~ 1e2-1e6` the `1/Re` condition is stringent and unproven -- and
+the Hall two-fluid (canonical-vorticity `Omega`) lift remains open. See
+`results/R2_NEAR_BELTRAMI_ENSTROPHY_THEOREM_2026-09-09.md`.
+
 ## 9. Result
 
 > **The matter-to-helicity current identification is a [V] no-go / well-founded postulate

@@ -1,12 +1,12 @@
 ---
-title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M10)"
+title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M11)"
 author: Nathaniel Hanks
 date: 2026-09-09
 status: "Consolidated reference handbook. Assembled from the four canonical method modules TOOLKIT_ADV_07..10; those modules remain the source of record. This is a clean, shareable single-file reference; no new claims are introduced here."
 anchors: "Four measured anchors {B, n_i, m_i, R}; zero free structural parameters."
 ---
 
-# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M10)
+# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M11)
 
 **Nathaniel Hanks -- 2026-09-09**
 
@@ -27,7 +27,7 @@ configuration and as a Madelung / quantum-hydrodynamic matter wave, resting on f
 `{B, n_i, m_i, R}` with zero free structural parameters. But each method below is written to be
 lifted out and re-applied to a fresh problem without re-deriving it. That is the point of a toolkit.
 
-The four modules are:
+The five modules are:
 
 | Module | Subject | What it gives you |
 |---|---|---|
@@ -35,6 +35,7 @@ The four modules are:
 | **M8** | QWM (Reed) math conversion + dimensional audit | a units referee for mass / charge / helicity readings, with the fake charge dimension dissolved |
 | **M9** | Coupled-oscillator substrate | where FTGB *is* (vs merely *shares*) established cross-domain mathematics |
 | **M10** | Topological-soliton + conserved-current methods | conserved currents, no-go templates, moduli-geodesic amplitudes, seesaw / RG readings |
+| **M11** | EGM / polarizable-vacuum spectral methods | Storti's PV-refractive-index + ZPF harmonic-beat *representation* mapped onto M7/M9, with its numerology quarantined (method-only, no claim adopted) |
 
 Every module carries a scope limit at its head, stated before any result is used. Nothing here is
 fabricated; every quoted number traces to a named reproducible script in its source module. No
@@ -895,7 +896,39 @@ cross-section, branching magnitude, mass, or scale.
 
 ---
 
-## 7. Consolidated reference list
+## 7. Module M11 -- EGM / polarizable-vacuum spectral methods (representation-map, not theory)
+
+Full module: `toolkit/TOOLKIT_ADV_11_EGM_POLARIZABLE_VACUUM_2026-09-09.md`. Verification:
+`results/verify/egm_sense_checks.py`.
+
+**The one limit (Storti's own framing).** EGM is -- Part 2 §7.2.24 -- *"a method of calculation (not a
+theory) based upon energy density."* M11 folds in its **mathematical representation** and **credits its
+foundations**, while **adopting none of its numerical predictions**. This extends the M7 Storti tier
+`[UNASSESSED/fringe, method-only]` and keeps the standing **excision** of the `e^(-2/3)` factor.
+
+**What is credited.** The polarizable-vacuum refractive index `K_PV`, `c_eff = c/sqrt(K_PV)` (Puthoff 1999);
+the ZPF cubic spectral energy density `rho_0(omega) = hbar omega^3 / (2 pi^2 c^3)` (SED; Sakharov;
+Haisch-Rueda-Puthoff) -- **[V]** its Planck-cutoff integral returns a Planck-scale energy density.
+
+**The four maps into the toolkit** (why it is worth folding in -- each pillar is math a module already carries):
+1. EGM's band-limited harmonic-beat spectrum (fundamental `omega_PV(1,r,M)` -> cut-off `omega_Omega`/`n_Omega`)
+   <-> **M9** coupled-oscillator comb + the {121,208,294} kHz carrier comb + the **M10-4** seesaw down-conversion.
+2. `K_PV` vacuum dielectric / refractive index <-> the **M10-5** RG dielectric-flow method (with its
+   anti-numerology control) and the resonator `m = hbar omega / c^2` (M8-2) mass-from-frequency reading.
+3. ZPF cubic spectrum <-> the "field = matter-wave" vacuum-energy backdrop (credited, accounting only).
+4. Storti "sense checks" `St_beta...St_theta` <-> **M7** Buckingham-Pi claim-audit (the M7 ONE LIMIT applies).
+
+**What is quarantined [flag]/[excised], per `egm_sense_checks.py`.** The "2:1 harmonic"
+`omega_Omega(e)=2 omega_Omega(p)` is definitional (ratio = 2.000 by construction), not a prediction; the
+proton-radius 0.01% match does not follow from the clean closed-forms (they miss 0.84 fm by 1e3-1e4x); the
+energy-equilibrium radius is Compton-scale only (`r_eq = 0.42 lambda_C`); H0 = 67.08 needs an unmotivated
+large factor over `sqrt(GM/R^3)`; and `e^(-2/3)` (=0.513, maps 140.2->72, not 137) stays excised with the
+2.3% alpha gap carried as an open problem. Also corrected here: the secondary note's `St_eta = m_p/m_e` is a
+mislabel of Storti's 5th sense-check.
+
+---
+
+## 8. Consolidated reference list
 
 Established, credited literature underpinning the toolkit (per module). Primary load-bearing references
 are named in full; tiers are as used above.
@@ -961,7 +994,7 @@ are named in full; tiers are as used above.
 
 ---
 
-## 8. Do-not-cite note
+## 9. Do-not-cite note
 
 The following are named so they are never cited as established, and never resurrected:
 
