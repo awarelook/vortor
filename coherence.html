@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FTGB coherence stack — the 7 layers of one object</title>
+<meta name="author" content="Nathaniel Hanks">
+<meta name="description" content="Interactive map of the FTGB coherence stack: eight layers from the dimensional skeleton to experiment, each framework (Buckingham-Pi, Beltrami, Nielsen TUFT, Reed QWM, Storti EGM, Ginzburg) placed in the layer it addresses, threaded by five shared invariants of the one toroidal whirl-spin-torsion soliton. Honest tiers throughout.">
+</head><body>
+<style>
+  :root{
+    --ground:#0a0d13;--panel:#141a26;--panel2:#0f141e;--line:#243044;--ink:#e9edf6;--muted:#8794ad;
+    --warm:#f4a63c;--cool:#48d6e6;
+    --i1:#48d6e6;--i2:#f4a63c;--i3:#7be0a0;--i4:#c98af0;--i5:#f07b9b;
+    --tV:#6ac47b;--tS:#e0a94a;--tA:#6fa8dd;--tO:#c98a8a;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --serif:Georgia,"Iowan Old Style",serif;--sans:-apple-system,"Segoe UI",system-ui,Roboto,sans-serif;
+    --maxw:1180px;
+  }
+  @media (prefers-color-scheme:light){:root{--ground:#eef1f7;--panel:#fff;--panel2:#f3f6fb;--line:#d3dae7;
+    --ink:#12151c;--muted:#5b6780;--warm:#c9791a;--cool:#127e91;
+    --tV:#2e8f47;--tS:#a9791a;--tA:#2f6bb0;--tO:#b0524f;}}
+  :root[data-theme="dark"]{--ground:#0a0d13;--panel:#141a26;--panel2:#0f141e;--line:#243044;--ink:#e9edf6;--muted:#8794ad;--warm:#f4a63c;--cool:#48d6e6;--tV:#6ac47b;--tS:#e0a94a;--tA:#6fa8dd;--tO:#c98a8a;}
+  :root[data-theme="light"]{--ground:#eef1f7;--panel:#fff;--panel2:#f3f6fb;--line:#d3dae7;--ink:#12151c;--muted:#5b6780;--warm:#c9791a;--cool:#127e91;--tV:#2e8f47;--tS:#a9791a;--tA:#2f6bb0;--tO:#b0524f;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  h1,h2,h3{margin:0;line-height:1.12;text-wrap:balance}
+  .mono{font-family:var(--mono)}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  header{border-bottom:1px solid var(--line);padding:40px 0 26px}
+  .themeToggle{float:right;font-family:var(--mono);font-size:.72rem;color:var(--muted);background:none;border:1px solid var(--line);border-radius:8px;padding:6px 11px;cursor:pointer}
+  .themeToggle:hover{color:var(--ink)}
+  header h1{font-size:clamp(1.9rem,4vw,3rem);font-weight:800;letter-spacing:-.02em;margin-top:12px}
+  header h1 em{font-style:normal;background:linear-gradient(90deg,var(--warm),var(--cool));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-family:var(--serif);font-size:1.08rem;max-width:66ch;margin-top:12px;opacity:.92}
+
+  .invbar{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 6px}
+  .invchip{font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer;color:var(--muted);display:inline-flex;gap:7px;align-items:center;user-select:none}
+  .invchip .sw{width:9px;height:9px;border-radius:50%}
+  .invchip.on{color:var(--ink);border-color:currentColor}
+  .invhint{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin:2px 0 14px}
+
+  .layout{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start;margin-bottom:30px}
+  .stack{display:flex;flex-direction:column;gap:8px}
+  .layer{position:relative;border:1px solid var(--line);border-left-width:4px;border-radius:11px;background:var(--panel);
+    padding:12px 14px 12px 16px;cursor:pointer;transition:transform .12s,border-color .12s,background .12s}
+  .layer:hover{transform:translateX(3px)}
+  .layer.sel{background:color-mix(in srgb,var(--cool) 8%,var(--panel));border-color:var(--cool)}
+  .layer.dim{opacity:.32}
+  .layer.hl{border-left-color:var(--warm)}
+  .layer .top{display:flex;align-items:center;gap:10px}
+  .layer .num{font-family:var(--mono);font-size:.8rem;color:var(--warm);font-weight:700;min-width:1.4ch}
+  .layer .nm{font-weight:700;font-size:.98rem}
+  .layer .fixes{color:var(--muted);font-size:.82rem;margin-top:3px}
+  .layer .meta{display:flex;gap:8px;align-items:center;margin-top:6px;flex-wrap:wrap}
+  .layer .fw{font-family:var(--mono);font-size:.71rem;color:var(--cool)}
+  .layer .dots{margin-left:auto;display:flex;gap:4px}
+  .layer .dots i{width:8px;height:8px;border-radius:50%;opacity:.85}
+  .chip{font-family:var(--mono);font-size:.64rem;padding:1px 7px;border-radius:5px;border:1px solid}
+  .cV{color:var(--tV);border-color:var(--tV)} .cS{color:var(--tS);border-color:var(--tS)}
+  .cA{color:var(--tA);border-color:var(--tA)} .cO{color:var(--tO);border-color:var(--tO)}
+  .arrow{text-align:center;font-family:var(--mono);font-size:.68rem;color:var(--muted);letter-spacing:.1em;padding:2px 0}
+
+  .detail{position:sticky;top:16px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);padding:18px 20px;min-height:340px}
+  .detail h3{font-size:1.15rem}
+  .detail .dfw{font-family:var(--mono);font-size:.75rem;color:var(--cool);margin:4px 0 12px}
+  .detail .eq{font-family:var(--mono);font-size:.92rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 10px;overflow-x:auto}
+  .detail p{font-family:var(--serif);opacity:.94;margin:10px 0 0}
+  .detail .invrow{margin-top:14px;display:flex;gap:6px;flex-wrap:wrap}
+  .detail .invrow span{font-family:var(--mono);font-size:.68rem;border:1px solid var(--line);border-radius:6px;padding:2px 7px;color:var(--muted);display:inline-flex;gap:6px;align-items:center}
+  .detail .invrow i{width:8px;height:8px;border-radius:50%}
+  .detail .tierline{margin-top:14px}
+
+  footer{padding:26px 0 60px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+  footer p{max-width:80ch}
+  :focus-visible{outline:2px solid var(--cool);outline-offset:2px}
+  @media (max-width:820px){.layout{grid-template-columns:1fr}.detail{position:static}}
+</style>
+
+<header><div class="wrap">
+  <button class="themeToggle" id="tt">theme</button>
+  <div class="eyebrow">FTGB — the coherence stack</div>
+  <h1>One object, <em>eight layers</em>, five threads</h1>
+  <p class="lede">The whole edifice, ordered. Each framework — Buckingham-Π, Beltrami, Nielsen TUFT, Reed QWM, Storti EGM, Ginzburg — describes one <em>layer</em> of the same driven Beltrami–Hopf soliton, from the dimensional skeleton down to the bench. Click a layer to open it; hover a thread to see which layers it ties together.</p>
+  <div class="invbar" id="invbar"></div>
+  <div class="invhint" id="invhint">hover a thread to trace it through the stack · the threads are the shared invariants that make this a coherence, not a coincidence</div>
+</div></header>
+
+<div class="wrap"><div class="layout">
+  <div>
+    <div class="arrow">▲ abstract · theory</div>
+    <div class="stack" id="stack"></div>
+    <div class="arrow">▼ concrete · experiment</div>
+  </div>
+  <div class="detail" id="detail"></div>
+</div></div>
+
+<footer><div class="wrap">
+  <p>A navigation map over <span class="mono">FTGB_COHERENCE_MAP</span>. The plasma/topological-fluid core (layers 1,2,5) is a citable result whose regularity gate is conditionally closed; the matter-wave (3), vacuum (4) and interaction (6) layers are folded readings, honestly tiered. No value is promoted — α stays framed, Δ stays open, e<sup>−2/3</sup> is excised, no over-unity. — Nathaniel Hanks</p>
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+  document.getElementById("tt").addEventListener("click",function(){
+    var c=document.documentElement.getAttribute("data-theme");
+    document.documentElement.setAttribute("data-theme", c==="dark"?"light":(c==="light"?"dark":(matchMedia("(prefers-color-scheme:dark)").matches?"light":"dark")));});
+
+  var INV=[
+    {id:0,name:"Hopf / toroidal topology", v:"--i1", layers:[1,2,3,4]},
+    {id:1,name:"Beltrami / curl eigenmodes", v:"--i2", layers:[1,2,5]},
+    {id:2,name:"m = ħω/c²", v:"--i3", layers:[3,6,7]},
+    {id:3,name:"charge = torsion / precession", v:"--i4", layers:[0,3]},
+    {id:4,name:"α ≈ 137 winding", v:"--i5", layers:[0,3,7]}
+  ];
+  var L=[
+    {n:0,nm:"Dimensional skeleton",fw:"Buckingham-Π (M7)",tier:["cV","credited/V"],
+     fixes:"which knobs any law may depend on — the falsifier set",
+     eqs:["N_Π = n − r   (Π-groups = a basis of ker D)"],
+     text:"The floor: dimensional analysis fixes only the ALLOWED scaling — never the mechanism, the O(1) constant, or permission to extrapolate. Used as a claim-audit; 4.4934 is a geometry-specific eigenvalue, not universal. Storti's 'sense checks' fold in here."},
+    {n:1,nm:"The field",fw:"Beltrami · Woltjer–Taylor",tier:["cA","credited"],
+     fixes:"the shape; the Chandrasekhar–Kendall roots → the carrier comb",
+     eqs:["∇×B = λB","λ₁R = 4.4934  (first root of tan x = x)"],
+     text:"The force-free eigenmode is the object's shape — the state a magnetised plasma relaxes into at fixed helicity. Its discrete roots set the inharmonic carrier comb {121,208,294} kHz. For a Beltrami field the Lamb vector v×ω vanishes: the crux of both coherence and the R2 regularity result."},
+    {n:2,nm:"The topology",fw:"Hopf / Skyrme · Nielsen TUFT",tier:["cA","credited/framework"],
+     fixes:"the invariants + the discrete knot / mass lattice",
+     eqs:["π₃(S²) Hopf (lepton) · π₃(S³) Skyrme (baryon)","Lk = Tw + Wr · H = ∫ A·B ≈ 0.088"],
+     text:"The invariants — linking, helicity, baryon number — and the discrete knot lattice the object's states live on. Nielsen's TUFT reads the mass spectrum as stable eigenmodes of the 9D curl operator (unknot, Hopf, trefoil, figure-8): the lattice transmutation hops on."},
+    {n:3,nm:"The matter wave",fw:"Reed QWM (M8) · electron.html",tier:["cS","framework/V-dim"],
+     fixes:"mass=whirl, charge=torsion, whirl=1/α, chirality→antiparticle",
+     eqs:["ψ = √ρ e^{iθ} · m = ħω/c²","charge = spin precession ~ kg·rad/s · whirl = 1/α"],
+     text:"The particle reading: mass is the trapped whirl, charge is the loop-closure-failure precession (the torsion defect), and the antiparticle is the opposite chirality — so e⁻/e⁺ share mass and spin for free (CPT). The neutrino is the defect-free ring. α's VALUE is open (2.3% flag), reframed as a running/IR-fixed-point question."},
+    {n:4,nm:"The vacuum medium",fw:"Storti EGM (M11) · Ginzburg (M12) · Puthoff",tier:["cA","credited/framework"],
+     fixes:"the substrate; gravity as refraction",
+     eqs:["K_PV = e^{2GM/rc²} · c_eff = c/√K_PV","ρ₀(ω) = ħω³/(2π²c³) → comb to ω_Ω"],
+     text:"The medium the object lives in: a polarizable vacuum with a refractive index (gravity as refraction, not curvature) and a ZPF ω³ energy density band-limited into a beat comb. Ginzburg's toryx/helyx read the same comb as matter and radiation. Method/imagery only; e^(−2/3) excised."},
+    {n:5,nm:"The dynamics",fw:"Stuart–Landau/Kuramoto · trilogy · R2/R3",tier:["cV","V / S / open"],
+     fixes:"the living beat, the no-gos, closure, regularity",
+     eqs:["ż = (μ+iω−|z|²)z ⇒ r* = √2","S = μ − P·v = 0 · P = ∫(∇×ω)·(v×ω)"],
+     text:"The living object: the √2 heartbeat, the comb entrainment, and the current-leg trilogy — proven no-gos (frozen |B|=const, aligned P·v=const), a driven-closure S=0, and the selection NEGATIVE. R2/R3 close the enstrophy/BKM gate conditionally (⟨η²⟩<ν²λ₁; Pm=1 for the Hall lift)."},
+    {n:6,nm:"The interactions",fw:"matter-wave LENR model",tier:["cV","V / S / open"],
+     fixes:"transmutation on the lattice; the LENR anomalies",
+     eqs:["Γ = (2π/ħ)|M_fi|² ρ_f","M_fi = Σ C_α A_α R_α S_α  (skeleton settled; R_α = Δ open)"],
+     text:"Interactions as matter-wave beats: a golden-rule kernel whose amplitude factorizes into a settled selection skeleton × the open radial overlap Δ, on the knot lattice, with a conserved energy–mass ledger (2ω_d = ω_He4 + ω_Q). Explains aneutronic heat, He-4/heat=24MeV; the two rate inputs Δ (open) and U_s (inherited) are named, not fabricated."},
+    {n:7,nm:"Experiment",fw:"the falsifiers",tier:["cS","mixed — testable"],
+     fixes:"what a measurement can confirm or kill",
+     eqs:["comb {121,208,294} kHz → 7/4, 5/2 · He-4/heat = 24 MeV/⁴He","Δ ∈ 1.4–1.9 MeV · 0νββ (Majorana) · A ≈ 9.0"],
+     text:"Reality's edge: each layer casts a falsifier. A lock at 12/7 kills the comb pull; neutron flux scaling with heat kills the aneutronic channel; a Skyrme Δ outside 1.4–1.9 MeV kills the neutron suppression; a 0νββ null tests the neutrino rung; off-lattice ash refutes the transmutation picture."}
+  ];
+
+  function cvar(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+  var stack=document.getElementById("stack"), invbar=document.getElementById("invbar"),
+      detail=document.getElementById("detail"), invhint=document.getElementById("invhint");
+  var sel=5, activeInv=-1;
+
+  // invariant chips
+  INV.forEach(function(iv){
+    var c=document.createElement("div"); c.className="invchip"; c.dataset.i=iv.id;
+    c.innerHTML='<span class="sw" style="background:var('+iv.v+')"></span>'+iv.name;
+    c.addEventListener("mouseenter",function(){setInv(iv.id);});
+    c.addEventListener("mouseleave",function(){setInv(-1);});
+    c.addEventListener("click",function(){setInv(activeInv===iv.id?-1:iv.id,true);});
+    invbar.appendChild(c);
+  });
+  function invsFor(n){return INV.filter(function(iv){return iv.layers.indexOf(n)>=0;});}
+
+  // layer bars
+  L.forEach(function(l){
+    var d=document.createElement("div"); d.className="layer"; d.dataset.n=l.n;
+    var dots=invsFor(l.n).map(function(iv){return '<i style="background:var('+iv.v+')"></i>';}).join("");
+    d.innerHTML='<div class="top"><span class="num">'+l.n+'</span><span class="nm">'+l.nm+'</span>'+
+      '<span class="dots">'+dots+'</span></div>'+
+      '<div class="fixes">'+l.fixes+'</div>'+
+      '<div class="meta"><span class="fw">'+l.fw+'</span><span class="chip '+l.tier[0]+'">'+l.tier[1]+'</span></div>';
+    d.addEventListener("click",function(){select(l.n);});
+    stack.appendChild(d);
+  });
+
+  function setInv(id,sticky){
+    if(!sticky && activeInv>=0 && id<0){ id=activeInv; } // keep sticky selection
+    var showId = (id<0? activeInv : id);
+    if(sticky) activeInv = (id<0? -1 : id);
+    [].forEach.call(invbar.children,function(c){c.classList.toggle("on", +c.dataset.i===(sticky?activeInv:showId) && (sticky?activeInv:showId)>=0);});
+    var iv = showId>=0? INV[showId] : null;
+    [].forEach.call(stack.children,function(bar){
+      var n=+bar.dataset.n;
+      if(iv){ bar.classList.toggle("hl", iv.layers.indexOf(n)>=0); bar.classList.toggle("dim", iv.layers.indexOf(n)<0); }
+      else { bar.classList.remove("hl"); bar.classList.remove("dim"); }
+    });
+    invhint.textContent = iv? ("“"+iv.name+"” threads layers "+iv.layers.join(", ")+" — one invariant, seen at each layer.")
+      : "hover a thread to trace it through the stack · the threads are the shared invariants that make this a coherence, not a coincidence";
+  }
+
+  function select(n){
+    sel=n;
+    [].forEach.call(stack.children,function(bar){bar.classList.toggle("sel", +bar.dataset.n===n);});
+    var l=L[n];
+    var invrow=invsFor(n).map(function(iv){return '<span><i style="background:var('+iv.v+')"></i>'+iv.name+'</span>';}).join("");
+    detail.innerHTML='<h3><span class="mono" style="color:var(--warm)">'+n+' · </span>'+l.nm+'</h3>'+
+      '<div class="dfw">'+l.fw+'</div>'+
+      l.eqs.map(function(e){return '<p class="eq">'+e+'</p>';}).join("")+
+      '<p>'+l.text+'</p>'+
+      '<div class="tierline"><span class="chip '+l.tier[0]+'">tier: '+l.tier[1]+'</span></div>'+
+      '<div class="invrow">'+invrow+'</div>';
+  }
+  select(5);
+})();
+</script>
+</body></html>

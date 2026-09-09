@@ -42,6 +42,7 @@ given when they were published).
 | `soliton3d.html` | the toroidal soliton in 3D + a phase/time axis |
 | `dynamics_lab.html` | live fixed-step integration of the governing nonlinear equations (now incl. CH-04 vacuum beat spectrum) |
 | `electron.html` | the electron rung as a torsion defect — precession = charge, whirl = 1/α, chirality → electron / positron / neutrino |
+| `coherence.html` | the interactive coherence stack — the 8 layers and 5 shared-invariant threads of the one object, click-to-open |
 | `FTGB_GRAND_SYNTHESIS.{md,pdf}` | the full tiered synthesis manuscript (Parts A–G, ~16.8k words) — **the large text with all the math** |
 | `FTGB_CURRENTLEG_TRILOGY.{md,pdf}` | the standalone lead result (a self-contained plasma / topological-fluid theorem) |
 | `FTGB_COHERENCE_MAP_2026-09-09.md` | the capstone: the 7-layer stack ordering all frameworks (Buckingham-Π, EGM, TUFT, Reed, Ginzburg) theory → reality → experiment |
