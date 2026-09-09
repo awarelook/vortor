@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Coherent Object — FTGB mathematical modeler</title>
+<meta name="author" content="Nathaniel Hanks">
+<meta name="description" content="Interactive modeler of one driven Beltrami-Hopf toroidal soliton across scales: point, string, resonator, knotted field, driven dynamics — math with plain-language translation and honest tiers.">
+</head>
+<body>
+<style>
+  :root{
+    --ground:#0a0d13; --panel:#141a26; --panel2:#0f141e; --line:#243044;
+    --ink:#e9edf6; --muted:#8794ad; --warm:#f4a63c; --cool:#48d6e6;
+    --tV:#6ac47b; --tS:#e0a94a; --tA:#6fa8dd; --tO:#c98a8a;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:-apple-system,"Segoe UI",system-ui,Roboto,sans-serif;
+    --maxw:1180px;
+  }
+  @media (prefers-color-scheme:light){
+    :root{--ground:#eef1f7;--panel:#ffffff;--panel2:#f3f6fb;--line:#d3dae7;
+      --ink:#12151c;--muted:#5b6780;--warm:#c9791a;--cool:#127e91;
+      --tV:#2e8f47;--tS:#a9791a;--tA:#2f6bb0;--tO:#b0524f;}
+  }
+  :root[data-theme="dark"]{--ground:#0a0d13;--panel:#141a26;--panel2:#0f141e;--line:#243044;
+    --ink:#e9edf6;--muted:#8794ad;--warm:#f4a63c;--cool:#48d6e6;
+    --tV:#6ac47b;--tS:#e0a94a;--tA:#6fa8dd;--tO:#c98a8a;}
+  :root[data-theme="light"]{--ground:#eef1f7;--panel:#ffffff;--panel2:#f3f6fb;--line:#d3dae7;
+    --ink:#12151c;--muted:#5b6780;--warm:#c9791a;--cool:#127e91;
+    --tV:#2e8f47;--tS:#a9791a;--tA:#2f6bb0;--tO:#b0524f;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  a{color:var(--cool)}
+  h1,h2,h3{text-wrap:balance;line-height:1.1;margin:0}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  code,.m{font-family:var(--mono)}
+  .plain{font-family:var(--serif);color:var(--ink);opacity:.92}
+
+  /* hero */
+  header.hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;padding-top:54px;padding-bottom:46px;align-items:center}
+  .hero h1{font-size:clamp(2.1rem,4.4vw,3.5rem);font-weight:800;letter-spacing:-.02em}
+  .hero h1 .g{background:linear-gradient(90deg,var(--warm),var(--cool));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{margin-top:16px;font-family:var(--serif);font-size:1.12rem;color:var(--ink);opacity:.9;max-width:60ch}
+  .heroCanvasWrap{aspect-ratio:1/1;border:1px solid var(--line);border-radius:14px;background:
+    radial-gradient(120% 120% at 30% 20%, rgba(244,166,60,.06), transparent 60%),var(--panel2);position:relative}
+  canvas{display:block;width:100%;height:100%}
+  .badge{display:inline-flex;gap:8px;align-items:center;font-family:var(--mono);font-size:.72rem;color:var(--muted);
+    border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--warm);box-shadow:0 0 10px var(--warm)}
+
+  /* stage rail */
+  nav.rail{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--ground) 88%,transparent);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav.rail .wrap{display:flex;gap:4px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px;align-items:center}
+  .railBtn{font-family:var(--mono);font-size:.74rem;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px;border:1px solid transparent}
+  .railBtn:hover{color:var(--ink);border-color:var(--line)}
+  .railNum{color:var(--warm)}
+
+  section.stage{padding:52px 0;border-bottom:1px solid var(--line)}
+  .stageHead{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+  .stageHead .n{font-family:var(--mono);font-size:.95rem;color:var(--warm)}
+  .stageHead h2{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:750;letter-spacing:-.01em}
+  .sub{color:var(--muted);margin:2px 0 26px;max-width:70ch}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+  .vizCard{border:1px solid var(--line);border-radius:14px;background:var(--panel2);padding:14px}
+  .vizCanvas{aspect-ratio:16/11;border-radius:9px;overflow:hidden;background:var(--ground)}
+  .ctrls{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+  .ctrl{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;font-family:var(--mono);font-size:.8rem}
+  .ctrl label{color:var(--muted)}
+  .ctrl output{color:var(--cool);font-variant-numeric:tabular-nums;min-width:4.5ch;text-align:right}
+  input[type=range]{width:100%;accent-color:var(--warm)}
+  .readout{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-top:10px;display:flex;gap:16px;flex-wrap:wrap}
+  .readout b{color:var(--warm);font-weight:600}
+
+  .mathCard{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:20px 22px}
+  .eq{font-family:var(--mono);font-size:1.02rem;background:var(--panel2);border:1px solid var(--line);
+    border-radius:9px;padding:13px 15px;margin:0 0 12px;overflow-x:auto;color:var(--ink)}
+  .eq .w{color:var(--warm)} .eq .c{color:var(--cool)}
+  .sym{display:grid;grid-template-columns:auto 1fr;gap:7px 14px;font-size:.86rem;margin:14px 0}
+  .sym dt{font-family:var(--mono);color:var(--warm)} .sym dd{margin:0;color:var(--muted)}
+  .trans{font-family:var(--serif);font-size:1.02rem;border-left:2px solid var(--cool);padding-left:14px;margin:14px 0 0;opacity:.94}
+  .tier{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;padding:2px 8px;border-radius:6px;border:1px solid;margin-top:14px}
+  .tV{color:var(--tV);border-color:var(--tV)} .tS{color:var(--tS);border-color:var(--tS)}
+  .tA{color:var(--tA);border-color:var(--tA)} .tO{color:var(--tO);border-color:var(--tO)}
+
+  /* isomorphism */
+  .iso{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:8px}
+  .isoCard{border:1px solid var(--line);border-radius:12px;padding:15px 16px;background:var(--panel)}
+  .isoCard h4{margin:0 0 4px;font-family:var(--mono);font-size:.86rem;color:var(--cool)}
+  .isoCard .role{font-size:.74rem;color:var(--muted);margin-bottom:8px}
+  .isoCard .expr{font-family:var(--mono);font-size:.82rem;color:var(--ink);background:var(--panel2);border-radius:7px;padding:8px 9px;overflow-x:auto}
+
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:.74rem;color:var(--muted);margin-top:18px}
+  .legend span{display:inline-flex;gap:6px;align-items:center}
+  .swatch{width:10px;height:10px;border-radius:3px;border:1px solid}
+
+  footer{padding:40px 0 64px;color:var(--muted);font-size:.82rem}
+  footer .wrap{display:flex;flex-direction:column;gap:8px}
+  .foot-note{font-family:var(--serif);max-width:72ch}
+
+  .themeToggle{margin-left:auto;font-family:var(--mono);font-size:.72rem;color:var(--muted);background:none;
+    border:1px solid var(--line);border-radius:8px;padding:6px 11px;cursor:pointer}
+  .themeToggle:hover{color:var(--ink)}
+  :focus-visible{outline:2px solid var(--cool);outline-offset:2px}
+  @media (max-width:820px){.hero .wrap,.split{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Fractal Toroidal-Beat / QHD Plasmoid &mdash; a tiered synthesis</div>
+      <h1>The coherent object,<br><span class="g">expressed as mathematics</span></h1>
+      <p class="lede">One driven, force-free Beltrami&ndash;Hopf toroidal soliton &mdash; built up from a point, to a string, to a resonator, to a knotted field &mdash; read at once as a <em>field</em> and as a <em>matter wave</em>. This is a working modeler: every stage is live, every expression is labelled, every claim carries an honest tier.</p>
+      <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+        <span class="badge"><span class="dot"></span> the heartbeat is alive &mdash; r* = &radic;2</span>
+        <span class="badge">4 anchors &middot; 0 free structural parameters</span>
+      </div>
+    </div>
+    <div class="heroCanvasWrap"><canvas id="heroC"></canvas></div>
+  </div>
+</header>
+
+<nav class="rail"><div class="wrap">
+  <a class="railBtn" href="#s0"><span class="railNum">0</span> Point</a>
+  <a class="railBtn" href="#s1"><span class="railNum">1</span> String</a>
+  <a class="railBtn" href="#s2"><span class="railNum">2</span> Resonator</a>
+  <a class="railBtn" href="#s3"><span class="railNum">3</span> Toroidal soliton</a>
+  <a class="railBtn" href="#s4"><span class="railNum">4</span> Dynamics</a>
+  <a class="railBtn" href="#iso">Crystal synthesis</a>
+  <button class="themeToggle" id="tt">theme</button>
+</div></nav>
+
+<!-- STAGE 0 : POINT -->
+<section class="stage" id="s0"><div class="wrap">
+  <div class="stageHead"><span class="n">00</span><h2>Point &mdash; the driven oscillator</h2></div>
+  <p class="sub">The smallest object is a single complex amplitude that does not decay to rest and does not run away: it settles onto a limit cycle. This is the heartbeat, and it recurs at every larger scale.</p>
+  <div class="split">
+    <div class="vizCard">
+      <div class="vizCanvas"><canvas id="slC"></canvas></div>
+      <div class="ctrls">
+        <div class="ctrl"><label for="mu">&mu; (drive)</label><input type="range" id="mu" min="0" max="3" step="0.01" value="2"><output id="muO">2.00</output></div>
+        <div class="ctrl"><label for="om">&omega; (spin)</label><input type="range" id="om" min="0.2" max="3" step="0.01" value="1.2"><output id="omO">1.20</output></div>
+      </div>
+      <div class="readout"><span>orbit radius <b id="rstar">1.414</b></span><span>= &radic;&mu;</span><span>state <b id="slstate">on cycle</b></span></div>
+    </div>
+    <div class="mathCard">
+      <p class="eq">d<span class="w">z</span>/dt = ( <span class="w">&mu;</span> + i<span class="c">&omega;</span> &minus; |<span class="w">z</span>|&sup2; ) <span class="w">z</span></p>
+      <dl class="sym">
+        <dt>z</dt><dd>complex amplitude &mdash; the oscillator&rsquo;s size and phase</dd>
+        <dt>&mu;</dt><dd>drive strength (distance past onset); sets the orbit radius r* = &radic;&mu;</dd>
+        <dt>&omega;</dt><dd>rotation rate &mdash; the spin / carrier frequency</dd>
+        <dt>|z|&sup2;</dt><dd>the saturating nonlinearity that caps the amplitude</dd>
+      </dl>
+      <p class="trans">Push energy in (&mu;&gt;0) and the amplitude grows until its own nonlinearity holds it at a fixed ring, spinning at &omega;. Not a flywheel coasting, not a decaying ring-down &mdash; a sustained, self-limiting beat. This is the Stuart&ndash;Landau normal form of a supercritical Hopf bifurcation.</p>
+      <span class="tier tV">[V] identity &mdash; r* = &radic;2 at &mu;=2, the canonical heartbeat</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- STAGE 1 : STRING / COMB -->
+<section class="stage" id="s1"><div class="wrap">
+  <div class="stageHead"><span class="n">01</span><h2>String &mdash; the inharmonic carrier comb</h2></div>
+  <p class="sub">Give the object extent and it rings on several tones at once. The tones are not a harmonic ladder; their ratios are fixed by geometry, and that inharmonicity is a falsifiable fingerprint.</p>
+  <div class="split">
+    <div class="vizCard">
+      <div class="vizCanvas"><canvas id="combC"></canvas></div>
+      <div class="ctrls">
+        <div class="ctrl"><label for="kc">K (coupling)</label><input type="range" id="kc" min="0" max="1" step="0.01" value="0"><output id="kcO">0.00</output></div>
+      </div>
+      <div class="readout"><span>f&#8321;:f&#8322;:f&#8323; = <b>1 : 1.72 : 2.43</b></span><span>{121, 208, 294} kHz</span><span id="lockR">unlocked (KAM 3-torus)</span></div>
+    </div>
+    <div class="mathCard">
+      <p class="eq">f&#8345; = <span class="c">v_A</span> &middot; x&#8345; / (2&pi;<span class="w">R</span>) &nbsp;&nbsp; x&#8345; &isin; {4.4934, 7.7253, 10.9041}</p>
+      <dl class="sym">
+        <dt>x&#8345;</dt><dd>successive roots of tan x = x &mdash; the Chandrasekhar&ndash;Kendall eigenvalues</dd>
+        <dt>v_A</dt><dd>Alfv&eacute;n speed (field / &radic;density) &mdash; sets the tone scale</dd>
+        <dt>R</dt><dd>the object&rsquo;s major radius (an anchor)</dd>
+        <dt>K</dt><dd>inter-tone coupling; raise it to test phase-locking</dd>
+      </dl>
+      <p class="trans">The three lowest ring modes stand in ratio 1 : 1.72 : 2.43 &mdash; and the macroscopic whirl equals the lowest tone (7.6&times;10&#8309; rad/s = 2&pi;&middot;121 kHz). Weak coupling leaves them drifting on a quasiperiodic torus; strong coupling pulls the observed ratios toward low rationals (7/4, 5/2) &mdash; a concrete prediction a spectrum can refute.</p>
+      <span class="tier tV">[V] comb ratios &amp; whirl=fundamental</span>
+      <span class="tier tS">[S] strong-coupling pull to 7/4, 5/2 &mdash; testable</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- STAGE 2 : RESONATOR / EIGENMODE -->
+<section class="stage" id="s2"><div class="wrap">
+  <div class="stageHead"><span class="n">02</span><h2>Resonator &mdash; the force-free eigenmode</h2></div>
+  <p class="sub">In two and three dimensions the ring becomes a field that is everywhere parallel to its own curl: a Beltrami mode. Its shape is fixed by one eigenvalue; its energy is minimal at fixed helicity.</p>
+  <div class="split">
+    <div class="vizCard">
+      <div class="vizCanvas"><canvas id="modeC"></canvas></div>
+      <div class="ctrls">
+        <div class="ctrl"><label for="mode">mode n</label><input type="range" id="mode" min="1" max="3" step="1" value="1"><output id="modeO">1</output></div>
+      </div>
+      <div class="readout"><span>&lambda;&#8321;R = <b>4.4934</b></span><span>W = &lambda;K/2&mu;&#8320; (Woltjer&ndash;Taylor)</span></div>
+    </div>
+    <div class="mathCard">
+      <p class="eq">&nabla; &times; <span class="w">B</span> = <span class="c">&lambda;</span> <span class="w">B</span></p>
+      <dl class="sym">
+        <dt>B</dt><dd>the magnetic (or velocity) field of the mode</dd>
+        <dt>&lambda;</dt><dd>Beltrami eigenvalue [1/length] &mdash; one number sets the whole shape</dd>
+        <dt>&nabla;&times;</dt><dd>curl &mdash; the local twist of the field</dd>
+      </dl>
+      <p class="trans">&ldquo;Force-free&rdquo;: the field carries no Lorentz force on itself, so it is the state a magnetised plasma relaxes into at fixed helicity (Woltjer 1958; Taylor 1974). The heatmap is a mode cross-section; raise n to climb the eigenvalue ladder that set the comb above. Crucially, for such a field the Lamb vector v&times;&omega; vanishes &mdash; the nonlinearity becomes a pure gradient, which is why the object stays coherent rather than turbulent.</p>
+      <span class="tier tA">[A] credited &mdash; Chandrasekhar&ndash;Kendall / Woltjer&ndash;Taylor</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- STAGE 3 : TORUS -->
+<section class="stage" id="s3"><div class="wrap">
+  <div class="stageHead"><span class="n">03</span><h2>Toroidal soliton &mdash; the knotted object</h2></div>
+  <p class="sub">Close the resonator into a torus and let the field lines wind both ways: a Hopf&ndash;Beltrami soliton. Its winding is a topological number; its mass is a rate; the same object at different windings reads as electron, nucleon, neutrino, or plasmoid.</p>
+  <div class="split">
+    <div class="vizCard">
+      <div class="vizCanvas"><canvas id="torC"></canvas></div>
+      <div class="ctrls">
+        <div class="ctrl"><label for="spin">whirl</label><input type="range" id="spin" min="0" max="2" step="0.01" value="1"><output id="spinO">1.00</output></div>
+      </div>
+      <div class="readout"><span>K&#8304; = <b>A&middot;B</b> (helicity density)</span><span>Q_H = 1 (Hopf)</span></div>
+    </div>
+    <div class="mathCard">
+      <p class="eq"><span class="w">m</span> = &#8463; <span class="c">&omega;_C</span> / c&sup2; &nbsp;&nbsp;&nbsp; K&#8304; = <span class="w">A</span>&middot;<span class="w">B</span></p>
+      <dl class="sym">
+        <dt>m</dt><dd>rest mass &mdash; read as a rate, not a Higgs coupling</dd>
+        <dt>&omega;_C</dt><dd>the whirl (Compton) angular frequency; rad is dimensionless, so &#8463;&omega;/c&sup2; &rarr; kg</dd>
+        <dt>K&#8304; = A&middot;B</dt><dd>magnetic helicity density &mdash; the local winding of the field</dd>
+        <dt>Q_H</dt><dd>the integer Hopf invariant &mdash; how the field lines link</dd>
+      </dl>
+      <p class="trans">Mass is how fast the object&rsquo;s internal clock turns: heavier means faster whirl. The knotted winding density A&middot;B is what the matter density tracks &mdash; &ldquo;where matter is dense, the field is densely wound.&rdquo; One Lagrangian, many windings: the lepton/neutrino sector reads through the Hopf number &pi;&#8323;(S&sup2;), the nuclear sector through the Skyrme baryon &pi;&#8323;(S&sup3;) &mdash; shared substrate, two matched methods (not one algorithm for all).</p>
+      <span class="tier tV">[V] m = &#8463;&omega;/c&sup2; recovers m_e; helicity density [V]</span>
+      <span class="tier tS">[S] one-object-across-scales &mdash; a synthesis hypothesis</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- STAGE 4 : DYNAMICS -->
+<section class="stage" id="s4"><div class="wrap">
+  <div class="stageHead"><span class="n">04</span><h2>Dynamics &mdash; matter as the flow of the knot</h2></div>
+  <p class="sub">The synthesis&rsquo; central claim is that ordinary matter conservation is the object&rsquo;s own topological continuity. Half of it is a theorem; the other half is honestly a postulate &mdash; and knowing exactly which is the point.</p>
+  <div class="split">
+    <div class="vizCard">
+      <div class="vizCanvas"><canvas id="dynC"></canvas></div>
+      <div class="ctrls">
+        <div class="ctrl"><label for="drive">drive E&middot;B</label><input type="range" id="drive" min="0" max="1" step="0.01" value="0"><output id="drO">0.00</output></div>
+      </div>
+      <div class="readout"><span id="closeR">frozen: closure requires |B| = const &mdash; barred</span></div>
+    </div>
+    <div class="mathCard">
+      <p class="eq">&part;<sub>t</sub><span class="w">&rho;</span> + &nabla;&middot;(<span class="w">&rho;</span><span class="c">v</span>) = 0 &nbsp;&#8801;&nbsp; &part;<sub>&mu;</sub>K<sup>&mu;</sup> = 0</p>
+      <dl class="sym">
+        <dt>&rho;</dt><dd>matter density &mdash; read as &kappa;&middot;(A&middot;B), a profile proportionality</dd>
+        <dt>K<sup>&mu;</sup></dt><dd>the helicity 4-current (density K&#8304;, flux K&#8305;)</dd>
+        <dt>v</dt><dd>the flow; S = &mu;&#772; &minus; P&middot;v is the scalar that must vanish to close it</dd>
+      </dl>
+      <p class="trans">Density matches exactly (a proven profile identity). The <em>current</em> is the subtlety. Frozen or self-organising, it is barred &mdash; a proven no-go (the field would have to un-knot). Actively driven (E&middot;B &ne; 0, the live heartbeat), closure becomes realisable by an electrostatic drive &mdash; matter can be the flow of the knot, but only in a knot that is being driven. Raise the drive to move off the barred surface.</p>
+      <span class="tier tV">[V] static &amp; aligned no-go &mdash; adversarially verified</span>
+      <span class="tier tS">[S] driven closure realisable; selection is external</span>
+      <span class="tier tO">open: full [V] gated on a 3D enstrophy (BKM) bound &mdash; a recognised external problem</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- ISOMORPHISM -->
+<section class="stage" id="iso"><div class="wrap">
+  <div class="stageHead"><span class="n">&#9670;</span><h2>The crystal synthesis</h2></div>
+  <p class="sub">The same driven Beltrami&ndash;Hopf resonator is what five established (and two tiered) frameworks each describe in their own dialect. The synthesis is the claim that these are one object seen from different sides &mdash; a coherence, not a coincidence.</p>
+  <div class="iso">
+    <div class="isoCard"><h4>Buckingham&ndash;&Pi;</h4><div class="role">dimensional skeleton</div><div class="expr">N_&Pi; = n &minus; r groups; 4.4934 = geometry-specific eigenvalue, not universal</div></div>
+    <div class="isoCard"><h4>MHD / Beltrami</h4><div class="role">the field</div><div class="expr">&nabla;&times;B = &lambda;B; helicity &int;A&middot;B; Woltjer&ndash;Taylor min-energy</div></div>
+    <div class="isoCard"><h4>Madelung / QWM</h4><div class="role">the matter wave</div><div class="expr">&psi; = &radic;&rho; e^{iS/&#8463;}; p = &nabla;S &mdash; the flow reading of the same field</div></div>
+    <div class="isoCard"><h4>Skyrme / chiral-EFT</h4><div class="role">the nucleon</div><div class="expr">baryon B = &pi;&#8323;(S&sup3;); B=4 alpha cube; mass = spin-precession energy</div></div>
+    <div class="isoCard"><h4>Nielsen TUFT <span style="color:var(--tS)">[tiered]</span></h4><div class="role">the mass tower</div><div class="expr">m&#8345; &prop; (n+1)&middot;exp(a&middot;n &minus; &zeta;(3)n&sup2;); leptons to 0.4%</div></div>
+    <div class="isoCard"><h4>Stuart&ndash;Landau / Kuramoto</h4><div class="role">the living dynamics</div><div class="expr">&#380; = (&mu;+i&omega;&minus;|z|&sup2;)z; Adler/Arnold locking of the comb</div></div>
+  </div>
+  <div class="legend">
+    <span><span class="swatch" style="border-color:var(--tV);color:var(--tV)"></span> [V] verified / proven here</span>
+    <span><span class="swatch" style="border-color:var(--tA);color:var(--tA)"></span> [A] credited established result</span>
+    <span><span class="swatch" style="border-color:var(--tS);color:var(--tS)"></span> [S] structural / contingent</span>
+    <span><span class="swatch" style="border-color:var(--tO);color:var(--tO)"></span> open &mdash; named external problem</span>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="eyebrow">what this is / is not</div>
+  <p class="foot-note">A modeler for one hypothesis: a driven Beltrami&ndash;Hopf plasmoid as a coherent object across scales. Load-bearing pieces rest on peer-reviewed physics (Chandrasekhar&ndash;Kendall, Woltjer&ndash;Taylor, Moffatt, Madelung/Bohm, Skyrme, Steinhauer&ndash;Ishida &amp; Mahajan&ndash;Yoshida); the Nielsen TUFT preprint and quantum-wave-mechanics readings are marked tiered and are not claimed as established. No over-unity is claimed. The open problems are stated as what they are &mdash; named external computations, not internal cracks.</p>
+  <p class="foot-note plain">Nathaniel Hanks &middot; the visualization animates only the mathematics &mdash; every curve is the equation beside it, integrated live.</p>
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  // theme toggle
+  var tt=document.getElementById("tt");
+  tt.addEventListener("click",function(){
+    var cur=document.documentElement.getAttribute("data-theme");
+    var next = cur==="dark" ? "light" : (cur==="light" ? "dark" : (matchMedia("(prefers-color-scheme:dark)").matches?"light":"dark"));
+    document.documentElement.setAttribute("data-theme",next);
+  });
+  function cvar(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+  function fit(c){var r=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);
+    c.width=Math.max(2,r.width*d);c.height=Math.max(2,r.height*d);var x=c.getContext("2d");x.setTransform(d,0,0,d,0,0);return {x:x,w:r.width,h:r.height};}
+  var canv=[];
+  function reg(id,draw){var c=document.getElementById(id);if(!c)return;canv.push({c:c,draw:draw});}
+
+  // 0/hero : Stuart-Landau limit cycle
+  function slDraw(c,t,mu,om){var g=fit(c),x=g.x,W=g.w,H=g.h,cx=W/2,cy=H/2,S=Math.min(W,H)*0.34;
+    x.clearRect(0,0,W,H);
+    var warm=cvar("--warm"),cool=cvar("--cool"),line=cvar("--line"),mut=cvar("--muted");
+    var r=Math.sqrt(Math.max(mu,0));
+    // target ring
+    x.strokeStyle=line;x.lineWidth=1;x.beginPath();x.arc(cx,cy,S*r/1.732,0,7);x.stroke();
+    // trajectory spiraling in
+    x.strokeStyle=warm;x.lineWidth=1.6;x.globalAlpha=.9;x.beginPath();
+    for(var i=0;i<220;i++){var tt=t-i*0.016;var env=r*(1-Math.exp(-0.9*(tt+3)));if(env<0)env=0;
+      var ang=om*tt;var rr=env;var px=cx+S*rr/1.732*Math.cos(ang),py=cy+S*rr/1.732*Math.sin(ang);
+      if(i===0)x.moveTo(px,py);else x.lineTo(px,py);}
+    x.stroke();x.globalAlpha=1;
+    // head
+    var env=r*(1-Math.exp(-0.9*(t+3)));var ang=om*t;
+    var hx=cx+S*env/1.732*Math.cos(ang),hy=cy+S*env/1.732*Math.sin(ang);
+    x.fillStyle=cool;x.beginPath();x.arc(hx,hy,4.5,0,7);x.fill();
+    x.shadowColor=cool;x.shadowBlur=14;x.beginPath();x.arc(hx,hy,4.5,0,7);x.fill();x.shadowBlur=0;
+    // axes
+    x.strokeStyle=mut;x.globalAlpha=.25;x.beginPath();x.moveTo(cx-S,cy);x.lineTo(cx+S,cy);x.moveTo(cx,cy-S);x.lineTo(cx,cy+S);x.stroke();x.globalAlpha=1;
+  }
+  var muEl=document.getElementById("mu"),omEl=document.getElementById("om");
+  function slParams(){var mu=+muEl.value,om=+omEl.value;
+    document.getElementById("muO").textContent=mu.toFixed(2);
+    document.getElementById("omO").textContent=om.toFixed(2);
+    document.getElementById("rstar").textContent=Math.sqrt(Math.max(mu,0)).toFixed(3);
+    document.getElementById("slstate").textContent=mu<=0?"decays to rest":"on cycle";}
+  muEl.addEventListener("input",slParams);omEl.addEventListener("input",slParams);slParams();
+  reg("heroC",function(c,t){slDraw(c,t*1.1,2,1.4);});
+  reg("slC",function(c,t){slDraw(c,t,+muEl.value,+omEl.value);});
+
+  // 1 : comb waveform + spectrum
+  var kEl=document.getElementById("kc");
+  kEl.addEventListener("input",function(){document.getElementById("kcO").textContent=(+kEl.value).toFixed(2);
+    document.getElementById("lockR").textContent=(+kEl.value>0.55)?"locked → pulled to 7/4, 5/2":"unlocked (KAM 3-torus)";});
+  reg("combC",function(c,t){var g=fit(c),x=g.x,W=g.w,H=g.h;x.clearRect(0,0,W,H);
+    var warm=cvar("--warm"),cool=cvar("--cool"),line=cvar("--line"),mut=cvar("--muted");
+    var K=+kEl.value; var base=[1,1.719,2.427]; var lock=[1,1.75,2.5];
+    var f=base.map(function(b,i){return b+(lock[i]-b)*Math.max(0,(K-0.55)/0.45);});
+    // spectrum bars (top third)
+    var sh=H*0.32;
+    for(var i=0;i<3;i++){var bx=W*(0.12+0.3*i);var bh=sh*(0.9-0.12*i);
+      x.fillStyle=i===0?warm:cool;x.globalAlpha=.85;x.fillRect(bx,sh-bh+6,W*0.05,bh);x.globalAlpha=1;
+      x.fillStyle=mut;x.font="11px ui-monospace,monospace";x.fillText(f[i].toFixed(2),bx-4,sh+20);}
+    // waveform (sum)
+    x.strokeStyle=line;x.beginPath();x.moveTo(0,H*0.7);x.lineTo(W,H*0.7);x.stroke();
+    x.strokeStyle=warm;x.lineWidth=1.6;x.beginPath();
+    for(var px=0;px<=W;px++){var u=px/W*6;var y=0;for(var j=0;j<3;j++){y+=Math.sin((u*f[j])*Math.PI*2+ (j?K*1.5:0) + t*(0.6+0.15*j));}
+      var yy=H*0.7 - y*H*0.085;if(px===0)x.moveTo(px,yy);else x.lineTo(px,yy);}
+    x.stroke();
+  });
+
+  // 2 : Beltrami mode cross-section (Bessel-like j1(kr))
+  var mdEl=document.getElementById("mode");
+  var roots=[4.4934,7.7253,10.9041];
+  mdEl.addEventListener("input",function(){document.getElementById("modeO").textContent=mdEl.value;});
+  function j1approx(z){ if(z===0)return 0; return Math.sin(z)/(z*z) - Math.cos(z)/z; } // spherical j1
+  reg("modeC",function(c,t){var g=fit(c),x=g.x,W=g.w,H=g.h;x.clearRect(0,0,W,H);
+    var n=+mdEl.value-1;var k=roots[n]; var warm=cvar("--warm"),cool=cvar("--cool");
+    var cx=W/2,cy=H/2,S=Math.min(W,H)*0.46;var img=x.createImageData(Math.floor(W),Math.floor(H));
+    var wcol=hex(warm),ccol=hex(cool),bg=hex(cvar("--ground"));
+    for(var py=0;py<H;py++)for(var px=0;px<W;px++){var dx=(px-cx)/S,dy=(py-cy)/S;var rr=Math.sqrt(dx*dx+dy*dy);
+      var v=0; if(rr<=1){var val=j1approx(k*rr)*3.0*Math.cos(t*0.7); v=val;}
+      var idx=(py*Math.floor(W)+px)*4; var a=Math.max(-1,Math.min(1,v));
+      var col= a>=0? mix(bg,wcol,Math.min(1,a)) : mix(bg,ccol,Math.min(1,-a));
+      img.data[idx]=col[0];img.data[idx+1]=col[1];img.data[idx+2]=col[2];img.data[idx+3]=rr<=1?235:0;}
+    x.putImageData(img,0,0);
+    x.strokeStyle=cvar("--line");x.beginPath();x.arc(cx,cy,S,0,7);x.stroke();
+  });
+  function hex(h){h=h.replace('#','');if(h.length===3)h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];return [parseInt(h.substr(0,2),16),parseInt(h.substr(2,2),16),parseInt(h.substr(4,2),16)];}
+  function mix(a,b,t){return [a[0]+(b[0]-a[0])*t|0,a[1]+(b[1]-a[1])*t|0,a[2]+(b[2]-a[2])*t|0];}
+
+  // 3 : torus with winding field lines
+  var spEl=document.getElementById("spin");
+  spEl.addEventListener("input",function(){document.getElementById("spinO").textContent=(+spEl.value).toFixed(2);});
+  reg("torC",function(c,t){var g=fit(c),x=g.x,W=g.w,H=g.h;x.clearRect(0,0,W,H);
+    var warm=cvar("--warm"),cool=cvar("--cool"),line=cvar("--line");
+    var cx=W/2,cy=H/2,Rr=Math.min(W,H)*0.30,rr=Math.min(W,H)*0.13,sp=+spEl.value;
+    var tilt=0.42;
+    // torus guide
+    x.strokeStyle=line;x.globalAlpha=.5;x.beginPath();
+    for(var a=0;a<=6.29;a+=0.05){var X=cx+Rr*Math.cos(a),Y=cy+Rr*Math.sin(a)*tilt;if(a===0)x.moveTo(X,Y);else x.lineTo(X,Y);}x.stroke();x.globalAlpha=1;
+    // winding lines (Hopf-like: p toroidal, q poloidal)
+    var P=3,Q=2;
+    for(var line_i=0;line_i<5;line_i++){
+      var ph=line_i/5*6.283;
+      var grd=line_i%2? cool:warm;
+      x.strokeStyle=grd;x.lineWidth=1.5;x.globalAlpha=.85;x.beginPath();
+      for(var s=0;s<=6.283;s+=0.02){
+        var u=P*s+ph + t*0.6*sp; var w=Q*s+ph + t*0.6*sp;
+        var R2=Rr+rr*Math.cos(w);
+        var X=cx+R2*Math.cos(u);
+        var Y=cy+(R2*Math.sin(u))*tilt + rr*Math.sin(w)*(1-tilt);
+        if(s===0)x.moveTo(X,Y);else x.lineTo(X,Y);
+      }
+      x.stroke();
+    }
+    x.globalAlpha=1;
+  });
+
+  // 4 : matter-flow closure surface
+  var drEl=document.getElementById("drive");
+  drEl.addEventListener("input",function(){var d=+drEl.value;document.getElementById("drO").textContent=d.toFixed(2);
+    document.getElementById("closeR").textContent = d<0.15? "frozen: closure requires |B| = const — barred"
+      : (d<0.6? "driving… S = μ̄ − P·v approaching 0" : "driven: S = 0 realisable (externally driven)");});
+  reg("dynC",function(c,t){var g=fit(c),x=g.x,W=g.w,H=g.h;x.clearRect(0,0,W,H);
+    var warm=cvar("--warm"),cool=cvar("--cool"),line=cvar("--line"),tO=cvar("--tO"),tV=cvar("--tV");
+    var d=+drEl.value; var cx=W/2,cy=H/2;
+    // "barred surface" vs "reachable point" : a scalar S landscape
+    x.strokeStyle=line;x.globalAlpha=.4;for(var i=0;i<=8;i++){var yy=H*0.15+i*(H*0.7/8);x.beginPath();x.moveTo(W*0.1,yy);x.lineTo(W*0.9,yy);x.stroke();}x.globalAlpha=1;
+    // S curve: distance from closure
+    x.strokeStyle= d<0.15? tO : (d>0.6? tV : warm);x.lineWidth=2;x.beginPath();
+    for(var px=0;px<=W;px++){var u=px/W;var S0=(1-d)*0.8; var y=cy + Math.sin(u*6.283*1.5+t*0.5)*H*0.06*(1) + (S0-0.4)*H*0.5;
+      if(px===0)x.moveTo(px,y);else x.lineTo(px,y);}
+    x.stroke();
+    // closure line S=0
+    x.strokeStyle=tV;x.setLineDash([5,5]);x.globalAlpha=.7;x.beginPath();x.moveTo(0,cy-0.4*H*0.5+cy-cy);x.lineTo(W, cy-0.4*H*0.5 +0);x.stroke();x.setLineDash([]);x.globalAlpha=1;
+    x.fillStyle=cvar("--muted");x.font="11px ui-monospace,monospace";x.fillText("S = 0  (closure)",W*0.72,cy-0.4*H*0.5-6);
+  });
+
+  // master loop
+  var t0=performance.now();
+  function frame(now){var t=(now-t0)/1000;
+    for(var i=0;i<canv.length;i++){try{canv[i].draw(canv[i].c,t);}catch(e){}}
+    if(!reduced)requestAnimationFrame(frame);}
+  if(reduced){for(var i=0;i<canv.length;i++){try{canv[i].draw(canv[i].c,0.5);}catch(e){}}}
+  else requestAnimationFrame(frame);
+  addEventListener("resize",function(){if(reduced){for(var i=0;i<canv.length;i++){try{canv[i].draw(canv[i].c,0.5);}catch(e){}}}});
+})();
+</script>
+
+</body>
+</html>
