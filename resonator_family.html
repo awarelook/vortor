@@ -40,6 +40,8 @@
   .lede{font-family:var(--serif);font-size:1.12rem;max-width:62ch;margin-top:14px;opacity:.92}
   .themeToggle{float:right;font-family:var(--mono);font-size:.72rem;color:var(--muted);background:none;border:1px solid var(--line);border-radius:8px;padding:6px 11px;cursor:pointer}
   .themeToggle:hover{color:var(--ink)}
+  .pill{font-family:var(--mono);font-size:.74rem;color:var(--el);background:var(--panel);border:1px solid var(--el);border-radius:999px;padding:3px 12px;cursor:pointer;font-weight:700}
+  .pill:hover{filter:brightness(1.15)}
 
   /* resonance chamber */
   .chamber{border:1px solid var(--line);border-radius:16px;background:
@@ -165,6 +167,49 @@
   </p>
 </div></section>
 
+<section><div class="wrap">
+  <h2>The polarizable vacuum &amp; its beat spectrum</h2>
+  <p class="sub">Now read the same object as an energy-density gradient in the vacuum. EGM (Storti) represents a mass&rsquo;s field as a band-limited Fourier <em>comb</em> of zero-point beat modes riding the &omega;&sup3; spectrum, terminating at the harmonic cut-off &omega;_&Omega;; the vacuum&rsquo;s refractive index K_PV bends light exactly as gravity does (c_eff = c/&radic;K_PV). Ginzburg&rsquo;s two prime elements &mdash; matter (<em>toryx</em>) and radiation (<em>helyx</em>) &mdash; are two readings of that one comb. The method and imagery are folded in; the numerology is not.</p>
+  <div class="chamber">
+    <canvas class="chamberCanvas" id="egm"></canvas>
+    <div class="tuner">
+      <label for="kpv">refraction K_PV</label>
+      <input type="range" id="kpv" min="0" max="100" step="1" value="18">
+      <span class="mono" id="kpvV" style="color:var(--muted);min-width:13ch;text-align:right"></span>
+    </div>
+    <div class="tuner">
+      <label for="nom">cut-off mode n_&Omega;</label>
+      <input type="range" id="nom" min="3" max="40" step="1" value="16">
+      <span class="mono" id="nomV" style="color:var(--muted);min-width:13ch;text-align:right"></span>
+    </div>
+    <div class="live">
+      <span>reading <button class="pill" id="egmToggle">matter (toryx)</button></span>
+      <span>K_PV = <b id="kOut"></b></span>
+      <span>c_eff = <b id="cOut"></b></span>
+      <span>modes to &omega;_&Omega; <b id="nOut"></b></span>
+    </div>
+  </div>
+  <div class="two">
+    <div>
+      <p class="eq">&rho;&#8320;(<b>&omega;</b>) = &#8463;<b>&omega;</b>&sup3; / (2&pi;&sup2;c&sup3;) &nbsp;<i>&mdash; the ZPF cubic spectrum</i></p>
+      <p class="eq">K_PV = e<sup>&#8202;2GM/rc&sup2;</sup> &asymp; 1 + 2GM/rc&sup2;,&nbsp;&nbsp; c_eff = c / &radic;K_PV</p>
+      <p class="eq">field &asymp; &Sigma;<sub>&#8202;n=1..n_&Omega;</sub> A_n at <b>&omega;</b> = n&middot;<i>&omega;_PV</i> &nbsp;<i>&mdash; the beat comb, band-limited at &omega;_&Omega;</i></p>
+      <dl class="sym">
+        <dt>&rho;&#8320;</dt><dd>zero-point spectral energy density &mdash; the &omega;&sup3; envelope the comb rides</dd>
+        <dt>K_PV</dt><dd>vacuum refractive index; gravity as a dielectric gradient, not curvature</dd>
+        <dt>&omega;_&Omega;, n_&Omega;</dt><dd>the terminating (cut-off) frequency and mode of the band-limited representation</dd>
+        <dt>toryx / helyx</dt><dd>Ginzburg&rsquo;s matter (self-inverting double torus) vs radiation (double helix) reading</dd>
+      </dl>
+    </div>
+    <div>
+      <p class="trans">In the <em>matter</em> reading the comb is symmetric about a 0<sup>th</sup> mode &mdash; Storti&rsquo;s conjugate-pair &ldquo;gravitons&rdquo;, Ginzburg&rsquo;s self-inverting toryx &mdash; a standing double structure. In the <em>radiation</em> reading it is one-sided and travelling: the helyx, a propagating double helix. One band-limited beat spectrum, two readings &mdash; the same duality the whirl ladder shows as m = &#8463;&omega;/c&sup2;. Raise K_PV and the comb refracts (c_eff drops, the band compresses); slide n_&Omega; and the representation gains or loses modes.</p>
+      <span class="tier tA">[credited] polarizable vacuum (Puthoff) &amp; the ZPF &omega;&sup3; spectrum (SED)</span>
+      <span class="tier tS">[EGM / spiral framework] the comb representation &amp; the toryx/helyx reading &mdash; method &amp; analogy only</span>
+      <span class="tier tO">[excised] no particle-radii, H&#8320;, or &alpha; &ldquo;derivation&rdquo; is shown; the e<sup>&minus;2/3</sup> factor stays out</span>
+    </div>
+  </div>
+</div></section>
+
 <footer><div class="wrap">
   <p class="serif">A companion visual to the FTGB synthesis: one driven Beltrami&ndash;Hopf resonator, five resonance conditions. The mass law m = &#8463;&omega;/c&sup2; and the whirl ladder are verified; the claim that all five are the same object is a synthesis hypothesis, marked as such. The vacuum is the polarizable-medium ground, the neutrino a chargeless self-dual ring, the electron and EVO charged windings, the nucleon a Skyrme knot. No over-unity; load-bearing physics rests on peer-reviewed work. &mdash; Nathaniel Hanks</p>
 </div></footer>
@@ -247,10 +292,73 @@
     document.getElementById("sweepHz").textContent = "10^"+Ld.toFixed(2)+" rad/s";
   }
   sweep.addEventListener("input",draw);
-  var t=0;
-  function loop(){ if(!reduced){ /* gentle idle shimmer via redraw */ } draw(); if(!reduced)requestAnimationFrame(loop); }
-  draw(); if(!reduced)requestAnimationFrame(function f(){draw();requestAnimationFrame(f);});
-  addEventListener("resize",draw);
+
+  // ---- EGM panel: polarizable-vacuum K_PV + ZPF omega^3 beat comb + toryx/helyx reading ----
+  var kpv=document.getElementById("kpv"), nom=document.getElementById("nom");
+  var egmBtn=document.getElementById("egmToggle"), egmMode="matter", phase=0;
+  egmBtn.addEventListener("click",function(){egmMode=(egmMode==="matter"?"radiation":"matter");
+    egmBtn.textContent=(egmMode==="matter"?"matter (toryx)":"radiation (helyx)");drawEGM();});
+  function drawEGM(){
+    var c=document.getElementById("egm");if(!c)return;
+    var r=c.getBoundingClientRect(),dp=Math.min(devicePixelRatio||1,2);
+    c.width=Math.max(2,r.width*dp);c.height=Math.max(2,r.height*dp);
+    var x=c.getContext("2d");x.setTransform(dp,0,0,dp,0,0);
+    var W=r.width,H=r.height,pad=40,base=H-24,top=32;
+    x.clearRect(0,0,W,H);
+    var line=cvar("--line"),mut=cvar("--muted"),env=cvar("--evo");
+    var col=egmMode==="matter"?cvar("--nuc"):cvar("--el");
+    var f=(+kpv.value)/100*0.6, K=Math.exp(2*f), ceff=1/Math.sqrt(K), nO=Math.round(+nom.value);
+    var span=W-2*pad, x0=pad, x1=pad+span*ceff;
+    function envH(fr){return (base-top)*Math.pow(fr,3)*0.96;}
+    function cubic(cx,reach){x.beginPath();x.moveTo(cx,base);
+      for(var i=0;i<=48;i++){var fr=i/48;x.lineTo(cx+reach*fr,base-envH(fr));}
+      x.lineTo(cx+reach,base);x.closePath();}
+    // baseline
+    x.strokeStyle=line;x.lineWidth=1;x.beginPath();x.moveTo(pad,base);x.lineTo(W-pad,base);x.stroke();
+    if(egmMode==="matter"){
+      var cxc=(x0+x1)/2, hm=(x1-x0)/2;
+      // symmetric ZPF |omega|^3 envelope about the 0th mode
+      x.fillStyle=env;x.globalAlpha=.10;cubic(cxc,hm);x.fill();cubic(cxc,-hm);x.fill();x.globalAlpha=1;
+      x.strokeStyle=env;x.globalAlpha=.5;x.lineWidth=1.2;cubic(cxc,hm);x.stroke();cubic(cxc,-hm);x.stroke();x.globalAlpha=1;
+      // 0th-mode axis
+      x.strokeStyle=mut;x.globalAlpha=.45;x.setLineDash([2,3]);x.beginPath();x.moveTo(cxc,top-4);x.lineTo(cxc,base);x.stroke();x.setLineDash([]);x.globalAlpha=1;
+      x.fillStyle=mut;x.font="10px "+cvar("--mono");x.textAlign="center";x.fillText("0th",cxc,base+14);
+      // conjugate-pair comb (Storti graviton symmetry / Ginzburg self-inverting toryx)
+      for(var n=1;n<=nO;n++){var fr=n/nO,half=hm*fr,yt=base-envH(fr);
+        [cxc-half,cxc+half].forEach(function(px){
+          x.strokeStyle=col;x.lineWidth=2;x.globalAlpha=.9;x.beginPath();x.moveTo(px,base);x.lineTo(px,yt);x.stroke();
+          x.fillStyle=col;x.globalAlpha=1;x.beginPath();x.arc(px,yt,2.3,0,7);x.fill();});}
+    }else{
+      // one-sided ZPF omega^3 envelope
+      x.fillStyle=env;x.globalAlpha=.10;cubic(x0,x1-x0);x.fill();x.globalAlpha=1;
+      x.strokeStyle=env;x.globalAlpha=.5;x.lineWidth=1.2;cubic(x0,x1-x0);x.stroke();x.globalAlpha=1;
+      // travelling comb + helix (the helyx, a propagating double helix)
+      for(var m=1;m<=nO;m++){var frm=m/nO,pxm=x0+(x1-x0)*frm,
+        sh=reduced?1:(0.72+0.28*(Math.sin(phase*2+m*0.5)*0.5+0.5)),ytm=base-envH(frm)*sh;
+        x.strokeStyle=col;x.lineWidth=2;x.globalAlpha=.9;x.beginPath();x.moveTo(pxm,base);x.lineTo(pxm,ytm);x.stroke();
+        x.fillStyle=col;x.globalAlpha=1;x.beginPath();x.arc(pxm,ytm,2.3,0,7);x.fill();}
+      x.strokeStyle=col;x.globalAlpha=.32;x.lineWidth=1.4;x.beginPath();
+      for(var pk=x0;pk<=x1;pk++){var frp=(pk-x0)/(x1-x0),yh=top+16+Math.sin(frp*16-phase*3)*9;if(pk===x0)x.moveTo(pk,yh);else x.lineTo(pk,yh);}
+      x.stroke();x.globalAlpha=1;
+    }
+    // cut-off marker at omega_Omega
+    x.strokeStyle=col;x.globalAlpha=.8;x.setLineDash([4,4]);x.beginPath();x.moveTo(x1,top-6);x.lineTo(x1,base);x.stroke();x.setLineDash([]);x.globalAlpha=1;
+    var right=(x1>W-92);
+    x.fillStyle=col;x.font="600 11px "+cvar("--mono");x.textAlign=right?"right":"left";x.fillText("omega_Omega",right?x1-4:x1+5,top+2);
+    x.fillStyle=mut;x.font="10px "+cvar("--mono");x.textAlign="left";x.fillText("rho0 ~ omega^3",pad+2,top+2);x.fillText("omega →",pad,base+14);
+    // readouts
+    document.getElementById("kpvV").textContent="K_PV = "+K.toFixed(2);
+    document.getElementById("nomV").textContent=nO+" modes";
+    document.getElementById("kOut").textContent=K.toFixed(3);
+    document.getElementById("cOut").textContent=ceff.toFixed(3)+" c";
+    document.getElementById("nOut").textContent=nO;
+  }
+  kpv.addEventListener("input",drawEGM);nom.addEventListener("input",drawEGM);
+
+  function frame(){phase+=0.03;draw();drawEGM();if(!reduced)requestAnimationFrame(frame);}
+  draw();drawEGM();
+  if(!reduced)requestAnimationFrame(frame);
+  addEventListener("resize",function(){draw();drawEGM();});
 })();
 </script>
 
