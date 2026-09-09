@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One resonator, the whole family — FTGB unified object at resonance</title>
+<meta name="author" content="Nathaniel Hanks">
+<meta name="description" content="The FTGB unified object at resonance: one driven Beltrami-Hopf resonator shown as vacuum, neutrino, electron, EVO, nucleon on the whirl ladder (mass = hbar*omega/c^2), with a live resonance sweep and honest tiers.">
+</head><body>
+<style>
+  :root{
+    --ground:#0c0a18; --panel:#151327; --panel2:#100e20; --line:#2a2647;
+    --ink:#ecebf6; --muted:#9a94bd;
+    --vac:#6b6f86; --evo:#f0913c; --nu:#5fce8e; --el:#4bcadf; --nuc:#8e7bf0;
+    --tV:#63c47c; --tS:#e0a94a; --tA:#6fa8dd; --tO:#c98a8a;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --serif:Georgia,"Iowan Old Style",serif;
+    --sans:-apple-system,"Segoe UI",system-ui,Roboto,sans-serif;
+    --maxw:1150px;
+  }
+  @media (prefers-color-scheme:light){
+    :root{--ground:#eef0f7;--panel:#fff;--panel2:#f4f5fb;--line:#d6d9ea;
+      --ink:#161428;--muted:#5d5880;--vac:#6b6f86;--evo:#c46a12;--nu:#1f9a5a;--el:#0f8ba0;--nuc:#5a45c0;
+      --tV:#2e8f47;--tS:#a9791a;--tA:#2f6bb0;--tO:#b0524f;}
+  }
+  :root[data-theme="dark"]{--ground:#0c0a18;--panel:#151327;--panel2:#100e20;--line:#2a2647;
+    --ink:#ecebf6;--muted:#9a94bd;--evo:#f0913c;--nu:#5fce8e;--el:#4bcadf;--nuc:#8e7bf0;
+    --tV:#63c47c;--tS:#e0a94a;--tA:#6fa8dd;--tO:#c98a8a;}
+  :root[data-theme="light"]{--ground:#eef0f7;--panel:#fff;--panel2:#f4f5fb;--line:#d6d9ea;
+    --ink:#161428;--muted:#5d5880;--evo:#c46a12;--nu:#1f9a5a;--el:#0f8ba0;--nuc:#5a45c0;
+    --tV:#2e8f47;--tS:#a9791a;--tA:#2f6bb0;--tO:#b0524f;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  h1,h2,h3{margin:0;line-height:1.12;text-wrap:balance}
+  .mono{font-family:var(--mono)} .serif{font-family:var(--serif)}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+
+  header{border-bottom:1px solid var(--line);padding:46px 0 34px}
+  header h1{font-size:clamp(2rem,4.3vw,3.3rem);font-weight:800;letter-spacing:-.02em;margin-top:12px}
+  header h1 em{font-style:normal;background:linear-gradient(90deg,var(--evo),var(--nu),var(--el),var(--nuc));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-family:var(--serif);font-size:1.12rem;max-width:62ch;margin-top:14px;opacity:.92}
+  .themeToggle{float:right;font-family:var(--mono);font-size:.72rem;color:var(--muted);background:none;border:1px solid var(--line);border-radius:8px;padding:6px 11px;cursor:pointer}
+  .themeToggle:hover{color:var(--ink)}
+
+  /* resonance chamber */
+  .chamber{border:1px solid var(--line);border-radius:16px;background:
+    radial-gradient(130% 100% at 50% 0%, rgba(142,123,240,.08), transparent 55%),var(--panel2);
+    padding:20px 20px 8px;margin:26px 0}
+  .chamberCanvas{width:100%;aspect-ratio:24/9}
+  canvas{display:block;width:100%;height:100%}
+  .tuner{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:8px 4px 14px;font-family:var(--mono);font-size:.82rem}
+  .tuner label{color:var(--muted)}
+  input[type=range]{width:100%;accent-color:var(--el)}
+  .live{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--mono);font-size:.84rem;padding:4px 2px 12px;border-top:1px solid var(--line)}
+  .live b{color:var(--el);font-variant-numeric:tabular-nums}
+  .live .who{color:var(--ink);font-weight:700}
+
+  /* family grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin:8px 0 6px}
+  .card{border:1px solid var(--line);border-left-width:3px;border-radius:12px;background:var(--panel);padding:15px 16px}
+  .card h3{font-size:1.02rem;display:flex;align-items:center;gap:8px}
+  .card .role{font-size:.75rem;color:var(--muted);margin:3px 0 10px}
+  .card .row{font-family:var(--mono);font-size:.78rem;color:var(--ink);display:flex;justify-content:space-between;gap:10px;padding:3px 0;border-top:1px dashed var(--line)}
+  .card .row span:last-child{color:var(--muted);text-align:right}
+  .chip{font-family:var(--mono);font-size:.64rem;padding:2px 7px;border-radius:5px;border:1px solid;letter-spacing:.03em}
+
+  section{padding:36px 0;border-top:1px solid var(--line)}
+  section h2{font-size:clamp(1.35rem,2.5vw,1.85rem);font-weight:750;letter-spacing:-.01em}
+  .sub{color:var(--muted);max-width:70ch;margin:6px 0 20px}
+  .eq{font-family:var(--mono);font-size:1.02rem;background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:13px 15px;margin:0 0 12px;overflow-x:auto}
+  .eq b{color:var(--el)} .eq i{font-style:normal;color:var(--evo)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+  .trans{font-family:var(--serif);border-left:2px solid var(--nu);padding-left:14px;opacity:.94}
+  .sym{display:grid;grid-template-columns:auto 1fr;gap:6px 13px;font-size:.85rem;margin:12px 0}
+  .sym dt{font-family:var(--mono);color:var(--evo)} .sym dd{margin:0;color:var(--muted)}
+  .tier{display:inline-block;font-family:var(--mono);font-size:.67rem;padding:2px 8px;border-radius:6px;border:1px solid;margin-top:12px;margin-right:6px}
+  .tV{color:var(--tV);border-color:var(--tV)} .tS{color:var(--tS);border-color:var(--tS)}
+  .tA{color:var(--tA);border-color:var(--tA)} .tO{color:var(--tO);border-color:var(--tO)}
+  .legend{display:flex;gap:15px;flex-wrap:wrap;font-family:var(--mono);font-size:.73rem;color:var(--muted);margin-top:16px}
+  .legend span{display:inline-flex;gap:6px;align-items:center}
+  .sw{width:11px;height:11px;border-radius:3px}
+  footer{padding:34px 0 60px;color:var(--muted);font-size:.82rem}
+  footer p{max-width:74ch}
+  :focus-visible{outline:2px solid var(--el);outline-offset:2px}
+  @media (max-width:800px){.two{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header><div class="wrap">
+  <button class="themeToggle" id="tt">theme</button>
+  <div class="eyebrow">FTGB &mdash; the unified object at resonance</div>
+  <h1>One resonator,<br><em>the whole family</em></h1>
+  <p class="lede">Vacuum, neutrino, electron, the Greenyer EVO, the nucleon &mdash; in this synthesis they are not five things but one driven Beltrami&ndash;Hopf resonator held at five resonance conditions. Tune its whirl frequency and its mass follows by m = &#8463;&omega;/c&sup2;; change its charge and topology and its identity follows. Sweep the cursor below and watch the object become each one.</p>
+</div></header>
+
+<div class="wrap">
+  <div class="chamber">
+    <canvas class="chamberCanvas" id="chamber"></canvas>
+    <div class="tuner">
+      <label for="sweep">drive &omega;_drive</label>
+      <input type="range" id="sweep" min="5" max="24.6" step="0.001" value="20.89">
+      <span class="mono" id="sweepHz" style="color:var(--muted);min-width:12ch;text-align:right"></span>
+    </div>
+    <div class="live">
+      <span>resonating as <b class="who" id="who">electron</b></span>
+      <span>&omega;_C = <b id="omV"></b> rad/s</span>
+      <span>m c&sup2; = &#8463;&omega; = <b id="mV"></b></span>
+      <span>response <b id="ampV"></b></span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="grid" id="cards"></div>
+  <div class="legend">
+    <span><span class="sw" style="background:var(--vac)"></span>vacuum</span>
+    <span><span class="sw" style="background:var(--evo)"></span>EVO</span>
+    <span><span class="sw" style="background:var(--nu)"></span>neutrino</span>
+    <span><span class="sw" style="background:var(--el)"></span>electron</span>
+    <span><span class="sw" style="background:var(--nuc)"></span>nucleon</span>
+  </div>
+</div>
+
+<section><div class="wrap">
+  <h2>The resonance condition</h2>
+  <p class="sub">A driven, damped resonator responds sharply only when the drive meets its own natural frequency. In this framework that natural frequency <em>is</em> the whirl &mdash; the object&rsquo;s internal clock &mdash; and the mass is that clock&rsquo;s energy.</p>
+  <div class="two">
+    <div>
+      <p class="eq">A(<b>&omega;</b>) = F / &radic;( (<i>&omega;_C</i>&sup2; &minus; <b>&omega;</b>&sup2;)&sup2; + (&gamma;<b>&omega;</b>)&sup2; ) &nbsp;&nbsp;&rarr;&nbsp; peak at <b>&omega;</b> = <i>&omega;_C</i></p>
+      <p class="eq">m = &#8463; <i>&omega;_C</i> / c&sup2;</p>
+      <dl class="sym">
+        <dt>&omega;_C</dt><dd>the whirl (Compton) angular frequency &mdash; the resonance / eigenfrequency</dd>
+        <dt>&gamma;</dt><dd>damping &mdash; sets the resonance width (coherence / lifetime)</dd>
+        <dt>m</dt><dd>rest mass, read as the energy of the internal clock (&#8463;&omega; is dimensionless-rad &rarr; kg)</dd>
+      </dl>
+    </div>
+    <div>
+      <p class="trans">Every member sits at the same relation: heavier means a faster internal whirl. The neutrino&rsquo;s clock turns at ~10&sup1;&sup3; rad/s (a few hundredths of an eV), the electron&rsquo;s at ~10&sup2;&sup0; (half an MeV), the nucleon&rsquo;s at ~10&sup2;&#8308; (a GeV) &mdash; and the macroscopic EVO rings at ~10&#8309; rad/s, the 121 kHz carrier. One law, m = &#8463;&omega;/c&sup2;, threads the entire ladder; the resonance simply selects which rung.</p>
+      <span class="tier tV">[V] the ladder is a calibrated m&harr;&omega; map (&nu; rung &rarr; 0.05 eV to 0.04%; e/p/d &le;0.3%)</span>
+      <span class="tier tS">[S] that all five are one object &mdash; a synthesis hypothesis, not proven</span>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>What distinguishes the members</h2>
+  <p class="sub">Frequency sets the mass; two further switches &mdash; charge and topological sector &mdash; set the identity. The same resonator, differently wound and differently charged, reads as a different particle.</p>
+  <div class="two">
+    <div>
+      <dl class="sym">
+        <dt>charge</dt><dd>chargeless &rArr; a real, self-conjugate field (Majorana-like smoke-ring: vacuum, neutrino); charged &rArr; a complex, distinct particle/antiparticle (electron, EVO)</dd>
+        <dt>sector</dt><dd>&pi;&#8323;(S&sup2;) Hopf/helicity (lepton, neutrino, EVO) vs &pi;&#8323;(S&sup3;) Skyrme baryon (nucleon) &mdash; shared substrate, two matched methods, not one algorithm</dd>
+        <dt>vacuum</dt><dd>the polarizable-medium ground state (K_PV) the resonances live in &mdash; the &omega;&rarr;0 reference, not a particle</dd>
+      </dl>
+    </div>
+    <div>
+      <p class="trans">The neutral members are their own antiparticles because there is no charge to conjugate &mdash; which is why 0&nu;&beta;&beta; decay is the honest external test of the neutrino reading. The charged members carry a winding count (the electron&rsquo;s q = &alpha;&#8315;&sup1; &asymp; 137 whirls per revolution). The nucleon is the same object closed into a Skyrme knot; the alpha particle is its B = 4 cube. None of this is claimed as derived from nothing &mdash; it is one object, honestly tiered, seen at different resonance conditions.</p>
+      <span class="tier tA">[A] neutrino = chargeless self-dual smoke-ring (Majorana-like); 0&nu;&beta;&beta; = external test</span>
+      <span class="tier tS">[S] charge / sector switches across the family</span>
+    </div>
+  </div>
+  <p class="legend" style="margin-top:22px"><span style="color:var(--muted)">tiers &mdash;</span>
+    <span><span class="sw" style="background:var(--tV)"></span>[V] verified here</span>
+    <span><span class="sw" style="background:var(--tA)"></span>[A] credited</span>
+    <span><span class="sw" style="background:var(--tS)"></span>[S] structural / hypothesis</span>
+  </p>
+</div></section>
+
+<footer><div class="wrap">
+  <p class="serif">A companion visual to the FTGB synthesis: one driven Beltrami&ndash;Hopf resonator, five resonance conditions. The mass law m = &#8463;&omega;/c&sup2; and the whirl ladder are verified; the claim that all five are the same object is a synthesis hypothesis, marked as such. The vacuum is the polarizable-medium ground, the neutrino a chargeless self-dual ring, the electron and EVO charged windings, the nucleon a Skyrme knot. No over-unity; load-bearing physics rests on peer-reviewed work. &mdash; Nathaniel Hanks</p>
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  document.getElementById("tt").addEventListener("click",function(){
+    var c=document.documentElement.getAttribute("data-theme");
+    var n=c==="dark"?"light":(c==="light"?"dark":(matchMedia("(prefers-color-scheme:dark)").matches?"light":"dark"));
+    document.documentElement.setAttribute("data-theme",n);});
+  function cvar(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+  var HBAR=1.0546e-34, C2=8.988e16, EV=1.602e-19;
+  // family: log10(omega_C), color var, label, charge, sector
+  var FAM=[
+    {L:5.88, key:"evo", c:"--evo", name:"EVO",      charge:"charged cluster", sector:"macroscopic carrier", note:"121 kHz whirl = comb fundamental"},
+    {L:13.88,key:"nu",  c:"--nu",  name:"neutrino",  charge:"chargeless",      sector:"pi3(S2) Hopf",       note:"self-dual smoke-ring (Majorana-like)"},
+    {L:20.89,key:"el",  c:"--el",  name:"electron",  charge:"charged",         sector:"pi3(S2) Hopf+winding",note:"q = 1/alpha ~ 137"},
+    {L:24.16,key:"nuc", c:"--nuc", name:"nucleon",   charge:"charged",         sector:"pi3(S3) Skyrme B=1", note:"4He = B=4 cube"},
+    {L:24.45,key:"d",   c:"--nuc", name:"deuteron",  charge:"charged",         sector:"pi3(S3) Skyrme B=2", note:"d+d -> 4He channel"}
+  ];
+  function massStr(w){var E=HBAR*w; var eV=E/EV;
+    if(eV<1)return (eV*1000).toPrecision(3)+" meV";
+    if(eV<1e3)return eV.toPrecision(3)+" eV";
+    if(eV<1e6)return (eV/1e3).toPrecision(3)+" keV";
+    if(eV<1e9)return (eV/1e6).toPrecision(3)+" MeV";
+    return (eV/1e9).toPrecision(3)+" GeV";}
+  function eng(w){var e=Math.floor(Math.log10(w));var m=w/Math.pow(10,e);return m.toFixed(2)+"e"+e;}
+  // build cards
+  var cardsEl=document.getElementById("cards");
+  FAM.forEach(function(f){
+    var w=Math.pow(10,f.L);var col=cvar(f.c);
+    var d=document.createElement("div");d.className="card";d.style.borderLeftColor=col;
+    d.innerHTML='<h3><span style="width:9px;height:9px;border-radius:50%;background:'+col+';display:inline-block"></span>'+f.name+'</h3>'+
+      '<div class="role">'+f.charge+' &middot; '+f.sector+'</div>'+
+      '<div class="row"><span>&omega;_C</span><span>'+eng(w)+' rad/s</span></div>'+
+      '<div class="row"><span>m c&sup2;</span><span>'+massStr(w)+'</span></div>'+
+      '<div class="row"><span></span><span>'+f.note+'</span></div>';
+    cardsEl.appendChild(d);
+  });
+  // chamber: log-frequency ladder + resonance peaks + sweep cursor
+  var sweep=document.getElementById("sweep");
+  var lastAmp=0;
+  function nearest(L){var best=FAM[0],bd=9;FAM.forEach(function(f){var dd=Math.abs(f.L-L);if(dd<bd){bd=dd;best=f;}});return {f:best,d:bd};}
+  function draw(){
+    var c=document.getElementById("chamber");var r=c.getBoundingClientRect(),dp=Math.min(devicePixelRatio||1,2);
+    c.width=Math.max(2,r.width*dp);c.height=Math.max(2,r.height*dp);var x=c.getContext("2d");x.setTransform(dp,0,0,dp,0,0);
+    var W=r.width,H=r.height,pad=34,base=H-30;
+    x.clearRect(0,0,W,H);
+    var line=cvar("--line"),mut=cvar("--muted"),ink=cvar("--ink");
+    var Lmin=5,Lmax=25;
+    function X(L){return pad+(L-Lmin)/(Lmax-Lmin)*(W-2*pad);}
+    // axis
+    x.strokeStyle=line;x.lineWidth=1;x.beginPath();x.moveTo(pad,base);x.lineTo(W-pad,base);x.stroke();
+    for(var L=6;L<=24;L+=2){var px=X(L);x.strokeStyle=line;x.globalAlpha=.4;x.beginPath();x.moveTo(px,base);x.lineTo(px,base+5);x.stroke();x.globalAlpha=1;
+      x.fillStyle=mut;x.font="10px "+cvar("--mono");x.textAlign="center";x.fillText("10^"+L,px,base+18);}
+    // family resonance peaks (Lorentzian bumps)
+    FAM.forEach(function(f){var col=cvar(f.c);var cx=X(f.L);var ph=base-(H-70);
+      x.strokeStyle=col;x.globalAlpha=.85;x.lineWidth=1.6;x.beginPath();
+      for(var px=pad;px<=W-pad;px++){var Lp=Lmin+(px-pad)/(W-2*pad)*(Lmax-Lmin);
+        var g=0.16;var amp=(g*g)/((Lp-f.L)*(Lp-f.L)+g*g);var y=base-amp*(base-ph-8);
+        if(px===pad)x.moveTo(px,y);else x.lineTo(px,y);}
+      x.stroke();x.globalAlpha=1;
+      x.fillStyle=col;x.font="600 11px "+cvar("--mono");x.textAlign="center";x.fillText(f.name,cx,ph-4);
+    });
+    // sweep cursor + live resonance
+    var Ld=+sweep.value; var nr=nearest(Ld);var g=0.16;var amp=(g*g)/((Ld-nr.f.L)*(Ld-nr.f.L)+g*g);
+    lastAmp=amp; var cx=X(Ld);var col=cvar(nr.f.c);
+    x.strokeStyle=col;x.setLineDash([4,4]);x.globalAlpha=.9;x.beginPath();x.moveTo(cx,44);x.lineTo(cx,base);x.stroke();x.setLineDash([]);x.globalAlpha=1;
+    var cy=base-amp*(base-(base-(H-70))-8);
+    x.fillStyle=col;x.shadowColor=col;x.shadowBlur=amp>0.6?16:4;x.beginPath();x.arc(cx,cy,5,0,7);x.fill();x.shadowBlur=0;
+    // readouts
+    var w=Math.pow(10,Ld);
+    document.getElementById("who").textContent = amp>0.35? nr.f.name : "(off resonance)";
+    document.getElementById("who").style.color = amp>0.35? col : mut;
+    document.getElementById("omV").textContent = eng(w);
+    document.getElementById("mV").textContent = massStr(w);
+    document.getElementById("ampV").textContent = (amp*100).toFixed(0)+"%";
+    document.getElementById("sweepHz").textContent = "10^"+Ld.toFixed(2)+" rad/s";
+  }
+  sweep.addEventListener("input",draw);
+  var t=0;
+  function loop(){ if(!reduced){ /* gentle idle shimmer via redraw */ } draw(); if(!reduced)requestAnimationFrame(loop); }
+  draw(); if(!reduced)requestAnimationFrame(function f(){draw();requestAnimationFrame(f);});
+  addEventListener("resize",draw);
+})();
+</script>
+
+</body></html>
