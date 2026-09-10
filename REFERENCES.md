@@ -51,11 +51,16 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   mod `N`, with vortex/mode mixing in steps of `N` (mathematically exactly `l → l ± N`).
 - Konishi, K. et al. (2014), *PRL* 112, 135502 — OAM/polarization selection rule set by C₃ discrete symmetry
   in nonlinear nanophotonics; Chen, S. et al. (2014), *PRL* 113, 033901 (arXiv:1403.1604) — same rule across
-  metacrystal symmetry orders. The **mechanism** is now computed in-repo — `results/verify/
+  metacrystal symmetry orders. The **mechanism** is computed in-repo — `results/verify/
   octahedral_oam_ladder_check.py` (`[V]`): the ladder step is *exactly* `N`, and the `SO(3)→O` subduction
-  forces `l ∈ {0,4,6,8,9,10,…}`, `Δl=4`, reproducing the credited B=4 Skyrmion spectrum. The *application to a
-  driven Beltrami–Hopf plasmoid's electromagnetically carried OAM* remains `[claimed synthesis]` (the rule is
-  proven; its EM-emission application is not). *(Not
+  forces `l ∈ {0,4,6,8,9,10,…}`, `Δl=4`, reproducing the credited B=4 Skyrmion spectrum. **But `N` is
+  rung-dependent** — `results/verify/oam_stage0_pointgroup_check.py` (Stage 0) computes the *plasma* Beltrami
+  field's point group (force-free ⇒ `J ∥ B`, so it selects the radiated OAM) to be a **3-fold body-diagonal
+  axis, NOT octahedral**: `N = 4` holds only at the B=4 *nuclear* rung; the **EM-carried OAM ladders by
+  `N = 3`** (azimuthal content on `m≡0 mod 3`; the order-24 cubic symmetry is a space-group roto-translation
+  that does not act on a localized radiator). `N=3` matches the theory's native triad (3 CK comb lines, 3-6-9).
+  The far-field *realization* of the `N=3` ladder (radiation multipoles + OAM/SAM split) stays `[claimed
+  synthesis]` (Stages 1–3); Stage 0 fixes `N`. *(Not
   folding Mancini/Ren/Maier, Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication
   switched in a ~3% band — but its knob is continuous dispersion, NOT a discrete-symmetry order, so it is an
   analogous-but-distinct existence proof of switchable OAM, not mechanism support; flagged, not cited as such.)*

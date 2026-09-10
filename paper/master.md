@@ -742,18 +742,25 @@ CK Bessel roots (`4.4934 / 7.7253 / 10.9041`): frequencies `{121, 208, 294}` kHz
 collective mode). The inharmonicity is a discriminating prediction: a uniform or harmonic
 comb would falsify it. Its multibody phase-locking behaviour, and the sharpened
 comb-pull prediction (`f2/f1 -> 7/4`, `f3/f1 -> 5/2` under strong coupling), are treated
-in Part D. Orbital angular momentum steps by the octahedral order (`l -> l +/- N`),
-protected by the sheath winding -- the discrete-symmetry selection rule itself (a point
-group of order `N` steps angular momentum by `N`) is now `[V]`, computed in-repo
-(`results/verify/octahedral_oam_ladder_check.py`: the ladder step is *exactly* `N`, and
-the full `SO(3) -> O` subduction forces the octahedral OAM ladder `l in {0,4,6,8,9,10,...}`
-with fundamental step `Delta l = 4`, reproducing the credited B=4 Skyrmion spectrum) /
-`[credited]` (Finkelstein-Rubinstein 1968 and Braaten-Townsend-Carson 1990 for the *same*
-B=4 octahedral soliton; Ferrando 2005, Konishi 2014, Chen 2014 for electromagnetic OAM).
-Its *application to this driven Beltrami-Hopf plasmoid's electromagnetically carried OAM*
-remains `[claimed synthesis -- the selection rule is proven, its application to the
-EM-emission channel is not]`. The QED-vacuum contribution to the effective refractive
-index is negligible.
+in Part D. Orbital angular momentum steps by a discrete-symmetry order (`l -> l +/- N`),
+protected by the sheath winding. The selection rule itself (a point group of order `N`
+steps angular momentum by `N`) is `[V]`, computed in-repo, and `[credited]`
+(Finkelstein-Rubinstein 1968; Braaten-Townsend-Carson 1990; Ferrando 2005, Konishi 2014,
+Chen 2014). But `N` is *rung-dependent*, and computation now pins it: at the **B=4 nuclear
+rung** the object is octahedral, so `N = 4` and the invariant ladder is `l in {0,4,6,8,9,
+10,...}`, `Delta l = 4`, reproducing the credited B=4 Skyrmion spectrum
+(`results/verify/octahedral_oam_ladder_check.py`). The **plasma object's electromagnetically
+carried OAM**, however, is governed by the *plasma* Beltrami field's own point group -- and
+Stage 0 computes that to be a **3-fold body-diagonal axis, NOT octahedral**, so `N = 3` for
+the EM channel (`results/verify/oam_stage0_pointgroup_check.py`: since force-free `J = (lam/
+mu0) B`, the radiated-current point group is the field's; its azimuthal OAM content lives on
+`m = 0 (mod 3)`, and the order-24 cubic symmetry lives in the space group's *roto-translations*,
+which do not act on a localized radiator). `N = 3` coincides with the theory's native triad
+(the three CK comb lines; `3-6-9`). The earlier "octahedral order" for the EM channel was a
+symmetry **borrowed from the nucleus** -- corrected here. What remains `[claimed synthesis]`,
+not promoted: that the driven plasmoid's far-field EM emission actually *realizes* this `N=3`
+OAM ladder (Stages 1-3 -- radiation multipoles + the OAM/SAM split -- build on this fixed `N`).
+The QED-vacuum contribution to the effective refractive index is negligible.
 
 *End of Parts B-C. Load-bearing claims foregrounded on peer-reviewed work
 (Chandrasekhar-Kendall, Skyrme, Witten, Battye-Sutcliffe, Barnes-Baskerville-Turok);
@@ -3328,11 +3335,16 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   mod `N`, with vortex/mode mixing in steps of `N` (mathematically exactly `l → l ± N`).
 - Konishi, K. et al. (2014), *PRL* 112, 135502 — OAM/polarization selection rule set by C₃ discrete symmetry
   in nonlinear nanophotonics; Chen, S. et al. (2014), *PRL* 113, 033901 (arXiv:1403.1604) — same rule across
-  metacrystal symmetry orders. The **mechanism** is now computed in-repo — `results/verify/
+  metacrystal symmetry orders. The **mechanism** is computed in-repo — `results/verify/
   octahedral_oam_ladder_check.py` (`[V]`): the ladder step is *exactly* `N`, and the `SO(3)→O` subduction
-  forces `l ∈ {0,4,6,8,9,10,…}`, `Δl=4`, reproducing the credited B=4 Skyrmion spectrum. The *application to a
-  driven Beltrami–Hopf plasmoid's electromagnetically carried OAM* remains `[claimed synthesis]` (the rule is
-  proven; its EM-emission application is not). *(Not
+  forces `l ∈ {0,4,6,8,9,10,…}`, `Δl=4`, reproducing the credited B=4 Skyrmion spectrum. **But `N` is
+  rung-dependent** — `results/verify/oam_stage0_pointgroup_check.py` (Stage 0) computes the *plasma* Beltrami
+  field's point group (force-free ⇒ `J ∥ B`, so it selects the radiated OAM) to be a **3-fold body-diagonal
+  axis, NOT octahedral**: `N = 4` holds only at the B=4 *nuclear* rung; the **EM-carried OAM ladders by
+  `N = 3`** (azimuthal content on `m≡0 mod 3`; the order-24 cubic symmetry is a space-group roto-translation
+  that does not act on a localized radiator). `N=3` matches the theory's native triad (3 CK comb lines, 3-6-9).
+  The far-field *realization* of the `N=3` ladder (radiation multipoles + OAM/SAM split) stays `[claimed
+  synthesis]` (Stages 1–3); Stage 0 fixes `N`. *(Not
   folding Mancini/Ren/Maier, Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication
   switched in a ~3% band — but its knob is continuous dispersion, NOT a discrete-symmetry order, so it is an
   analogous-but-distinct existence proof of switchable OAM, not mechanism support; flagged, not cited as such.)*
