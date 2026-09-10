@@ -106,7 +106,12 @@ For an EVO-catalyzed multibody event:
   *computable/tunable control parameter*, not an opaque unknown (`delta_detuning_beat_check.py`; toolkit M14-1).
 - **Aneutronic partition** — the `⁴He` forms through a **collective E0 mode**; E0 (`0⁺→0⁺`) forbids single
   real-photon emission, so the γ channel is suppressed and the `Q = 23.85 MeV` sheds into **lattice + comb
-  phonons as heat** `[S-mechanism]` (mechanism credited; partition fraction not derived).
+  phonons as heat** `[S-mechanism]` (mechanism credited; partition fraction not derived). The named academic
+  precedent for this phonon-coupled disposal channel is **Hagelstein (2018)**, *J. Condensed Matter Nucl.
+  Sci.* 27, 97–142 — off-resonant, M1, phonon-mediated nuclear excitation transfer with cooperative (Dicke)
+  enhancements, treating exactly the `D₂/⁴He` transition shedding a large quantum without prompt γ. Cited as
+  prior-art **mechanism only**: Hagelstein finds the effect as computed "insufficient to account for" his
+  lab's results, so it grounds the *channel*, not the *rate* — the Δ / partition fraction stays `[open]`.
 
 ## 5. The three players, placed honestly
 

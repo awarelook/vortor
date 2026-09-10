@@ -40,10 +40,24 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   & Wereszczyński (2010) — BPS/near-BPS Skyrme. Eto & Nitta (2025), *PRL* — knot solitons.
 - Ab-initio: Hupin, Quaglioni & Navratil (2019), *Nat. Commun.* 10, 351; Quaglioni & Navratil (2008).
 
+**LENR disposal-channel mechanism (phonon-nuclear prior art, contested field).**
+- Hagelstein, P.L. (2018), "Phonon-mediated Nuclear Excitation Transfer," *J. Condensed Matter Nucl. Sci.*
+  27, 97–142 (MIT) — off-resonant, M1, phonon-coupled nuclear excitation transfer with cooperative (Dicke)
+  enhancements and up/down-conversion; explicitly treats the `D₂/⁴He` transition shedding a large nuclear
+  quantum *without prompt γ*. The named academic precedent for the FTGB **open-Δ disposal channel** (the
+  23.847 MeV of `d+d→⁴He` partitioned into the coherent collective/lattice-phonon mode rather than fast
+  neutrons or hard γ; `results/LENR_MATTERWAVE_INTERACTION_MODEL_2026-09-09.md` §4). Cited as prior-art
+  **mechanism only** — Hagelstein states the effect as computed is "insufficient to account for" his lab's
+  excitation-transfer results; FTGB's rate/Δ stays open. `[credited: CMNS-theory — contested field]`.
+
 **Dimensional method & misc.**
 - Buckingham, E. (1914), *Phys. Rev.* 4, 345 — the Π theorem (M7).
 - Church & Weneser (1956) — E0 transitions (LENR selection). Scheeler et al. (2017) — helicity conservation
   (ΔH < 5%). Bostick (1956) — plasmoid experiments.
+- Samtaney, R., Loureiro, N.F., Uzdensky, D.A., Schekochihin, A.A. & Cowley, S.C. (2009), *PRL* 103, 105004
+  (arXiv:0903.0542) — plasmoid-chain formation in high-Lundquist-number reconnection (`N ∝ S^{3/8}`); credited
+  plasma grounding for the multibody beat-*chain* / EVO self-similar cascade picture. Grounds an existing
+  claim; adds no new one.
 
 **Chirality, charge conjugation & the Majorana neutrino.**
 - Majorana, E. (1937), *Nuovo Cimento* 14, 171 — the self-conjugate (`ν = ν̄`) neutrino.
@@ -52,6 +66,11 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   in-repo** — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
   (`results/verify/{chirality_helicity, charge_conjugation, majorana_selfdual}_check.py`). `0νββ` is the
   external falsifier of the Majorana reading.
+- Peng, C.-J. & Baym, G. (2022), "Inverse Tritium Beta Decay with Relic Neutrinos, Solar Neutrinos, and a
+  ⁵¹Cr Source," arXiv:2205.02363 — inverse-tritium-β-decay (ITBD/PTOLEMY) capture cross-section sensitive to
+  neutrino **helicity** and explicitly to the **Dirac-vs-Majorana** nature; a *second* experimental handle
+  (beyond `0νββ`) on the chirality-layer neutrino reading. Enriches the falsifier section; not load-bearing.
+  `[credited]`.
 
 **Spin-statistics of solitons, `g = 2`, & the Dirac structure (§9f).**
 - Finkelstein, D. & Rubinstein, J. (1968), *J. Math. Phys.* 9, 1762 — "Connection between spin, statistics,
