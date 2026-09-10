@@ -976,6 +976,32 @@ test). The tier is `[characterized]`: the geometric falloff and the low-rational
 robust; *which* of the two regimes obtains depends on the order-of-magnitude near-field coupling `k1`,
 so the prediction is a pinned two-branch band rather than a single ratio.
 
+#### D.1.6 The phase-dynamics engine, and the GML / FIT / Rodin convergence [credited]/[V]/[S]
+
+The heartbeat, the comb-lock, and the Arnold tongues above are one thing: a **coupled-oscillator
+phase-locking system on the N-torus**. That machinery is now internalized as a general, reusable module
+(`results/verify/phase_dynamics_gml_check.py`) that **generalizes `engine.comb_lock`** — arbitrary `N`,
+arbitrary `m:n` resonant locks, Adler tongue thresholds `K* = Δ/(m+n)` — with the **Phase-Pattern Metric
+(PPM)**, the settled *lock combinations* `Ψ = mθ_i − nθ_j`, as the object's phase-identity (bounded, while
+the raw phases advance). This is `[credited]` nonlinear dynamics (Kuramoto 1975; Adler 1946); the `[V]`
+result is the **harmonic-vs-inharmonic discriminator**: a commensurate cascade (e.g. `1:3:9`) locks
+trivially at any coupling, while the *inharmonic* CK comb is tongue-gated — the same inharmonicity that
+protects the KAM 3-torus (D.1.4).
+
+Two independent frameworks converge on exactly this phase-dynamics core, each **computed first** and tiered:
+**Bandyopadhyay's GML / FIT** (nested phase-clocks; the PPM on `Tⁿ`) is *literally* this module; **Rodin's
+Vortex-Based Mathematics** reduces to it too — its `1-2-4-8-7-5` circuit is just *powers of the primitive
+root 2 mod 9* (exact but standard `Z₉` ring theory, `rodin_vbm_check.py`), and its `3-6-9` dynamical
+surrogate is the **three-wave resonance triad** `Ψ = θ_a+θ_b−θ_c` — the same object as the M14 triad.
+The genuine bridge `[V]/[S]`: that triad **phase-matches uniquely at the golden ratio** (`1+φ−φ² = 0`),
+which *is* the M14 triad-dichotomy result — so Rodin's 3-6-9 lands on FTGB's own golden `φ`. Their broader
+claims (GML's SOMU / "reality is nested phase-math," Rodin's vortex/interdimensional reading) are
+`[speculative frontier]`, **recorded not adopted**. A tested frontier prediction, kept honest: published
+microtubule resonances (Sahu/Bandyopadhyay) do **not** form the CK comb *or* the `φ/4` cascade (their base
+is integer `N=3`, which M14 says cannot self-phase-match) — a *non-confirming, redirected* result
+(`SPECULATIVE_FRONTIER_MICROTUBULE_HOLOGRAPHY`), firewalled from the `[V]` core. Every such coincidence and
+convergence is computed and logged in `results/COINCIDENCE_LEDGER.md` — check-record-learn, nothing promoted.
+
 ---
 
 ### D.2 The medium-to-matter current-leg trilogy (this session's crown [V] result)
@@ -3183,8 +3209,23 @@ Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
   shape-independent ladder `f_b(L)/f_b(0) = N^L` whose triad dichotomy silences integer cascades and resonates
   the golden ratio `φ`; two Fibonacci Manley–Rowe invariants, anapole `N⁴`, exact `9/8 μ_B`. Maps to the
   object's resonator/EVO eigenmode ladder read as a driven beat hierarchy. `[framework: Greenyer]` (M14)
+- **GML / FIT / PPM (Bandyopadhyay)** — Geometric Musical Language / Fractal Information Theory: nested
+  coupled-oscillator phase-clocks with a **Phase-Pattern Metric** on `Tⁿ`. Its physics core *is* FTGB's
+  phase-dynamics layer (coupled oscillators, phase-locking, three-wave triad); the microtubule
+  "triplet-of-triplet" is base-`N=3` (integer → M14: cannot self-phase-match). Method `[credited/S]`; the
+  SOMU / consciousness claims `[speculative frontier]`, recorded not adopted. (`phase_dynamics_gml_check`,
+  `microtubule_ck_comb_test`)
+- **Rodin VBM (3-6-9)** — the `1-2-4-8-7-5` doubling circuit = powers of the primitive root 2 mod 9 (exact,
+  standard `Z₉` ring theory; `{3,6}` = zero-divisors, `9` = 0); its `3-6-9` dynamical surrogate is the
+  three-wave triad `Ψ=θ_a+θ_b−θ_c`, phase-matching **uniquely at golden `φ`** (= M14). Method `[credited/V]`;
+  vortex/interdimensional reading `[speculative]`. (`rodin_vbm_check`)
 
 ### 6. Current-leg dynamics (the lead result)
+- **Phase-dynamics engine / PPM** — the general coupled-oscillator + Adler/Arnold phase-locking module that
+  **generalizes `engine.comb_lock`** (arbitrary `N`, `m:n` locks, tongue width `K* = Δ/(m+n)`). The
+  **Phase-Pattern Metric** (the settled lock combinations `Ψ = mθ_i − nθ_j`) is the object's phase-identity.
+  Harmonic cascades lock trivially; the inharmonic CK comb is tongue-gated (protecting the KAM torus).
+  `[credited]/[V]` (`phase_dynamics_gml_check.py`)
 - **Density leg** — `ρ ∝ A·B` (helicity density); holds as a profile identity. `[V]`
 - **Current leg** — whether `ρv ∝ K` (helicity flux); the tiered no-go/realizability result. `[V]`/`[S]`
 - **`S = μ − P·v`** — the scalar closure condition; driven closure ⇔ `S = 0`. `[S leaning V]`

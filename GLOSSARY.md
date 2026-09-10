@@ -130,8 +130,23 @@ Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
   shape-independent ladder `f_b(L)/f_b(0) = N^L` whose triad dichotomy silences integer cascades and resonates
   the golden ratio `φ`; two Fibonacci Manley–Rowe invariants, anapole `N⁴`, exact `9/8 μ_B`. Maps to the
   object's resonator/EVO eigenmode ladder read as a driven beat hierarchy. `[framework: Greenyer]` (M14)
+- **GML / FIT / PPM (Bandyopadhyay)** — Geometric Musical Language / Fractal Information Theory: nested
+  coupled-oscillator phase-clocks with a **Phase-Pattern Metric** on `Tⁿ`. Its physics core *is* FTGB's
+  phase-dynamics layer (coupled oscillators, phase-locking, three-wave triad); the microtubule
+  "triplet-of-triplet" is base-`N=3` (integer → M14: cannot self-phase-match). Method `[credited/S]`; the
+  SOMU / consciousness claims `[speculative frontier]`, recorded not adopted. (`phase_dynamics_gml_check`,
+  `microtubule_ck_comb_test`)
+- **Rodin VBM (3-6-9)** — the `1-2-4-8-7-5` doubling circuit = powers of the primitive root 2 mod 9 (exact,
+  standard `Z₉` ring theory; `{3,6}` = zero-divisors, `9` = 0); its `3-6-9` dynamical surrogate is the
+  three-wave triad `Ψ=θ_a+θ_b−θ_c`, phase-matching **uniquely at golden `φ`** (= M14). Method `[credited/V]`;
+  vortex/interdimensional reading `[speculative]`. (`rodin_vbm_check`)
 
 ## 6. Current-leg dynamics (the lead result)
+- **Phase-dynamics engine / PPM** — the general coupled-oscillator + Adler/Arnold phase-locking module that
+  **generalizes `engine.comb_lock`** (arbitrary `N`, `m:n` locks, tongue width `K* = Δ/(m+n)`). The
+  **Phase-Pattern Metric** (the settled lock combinations `Ψ = mθ_i − nθ_j`) is the object's phase-identity.
+  Harmonic cascades lock trivially; the inharmonic CK comb is tongue-gated (protecting the KAM torus).
+  `[credited]/[V]` (`phase_dynamics_gml_check.py`)
 - **Density leg** — `ρ ∝ A·B` (helicity density); holds as a profile identity. `[V]`
 - **Current leg** — whether `ρv ∝ K` (helicity flux); the tiered no-go/realizability result. `[V]`/`[S]`
 - **`S = μ − P·v`** — the scalar closure condition; driven closure ⇔ `S = 0`. `[S leaning V]`
