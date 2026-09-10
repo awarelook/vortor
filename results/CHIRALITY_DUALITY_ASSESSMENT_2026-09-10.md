@@ -60,6 +60,21 @@ So the "duality/yin–yang angle" is the **helicity-content mixing angle** of on
 as its `0°`/`90°` endpoints — a computed quantity `[V-def]`, no longer imagery. (What it is *not*: a
 derivation of the electroweak mixing angle — that would need the field's coupling, not just its helicity.)
 
+## 3b. The neutrino = the self-dual θ_χ = 45° state ⇒ Majorana — computed
+
+If the chirality flip is C (§2b), then a field that is *its own mirror* is **C-self-conjugate — its own
+antiparticle — Majorana**. That state is the equal-parts superposition `u = (u₊ + u₋)/√2`, computed
+(`results/verify/majorana_selfdual_check.py`):
+
+- **`H = 0`** (zero net chirality/charge — neutral), with `E` unchanged (same mass scale as the `±` partners);
+- **`mirror(u) = u` to `0.0e+00`** — exactly C-invariant (`ν = ν̄`);
+- **`θ_χ = 45.0°`** — the exact midpoint of the electron (`0°`) / positron (`90°`) duality angle.
+
+So the **chirality-geometry layer commits to a Majorana neutrino** `[S, computed]` — a concrete, falsifiable
+prediction (`0νββ` decides it). This **resolves the repo's neutrino tension** (`EXPERIMENTAL_CONFRONTATION` §7:
+synthesis said Majorana, TUFT-preprint said Dirac): the credited/computed chirality layer predicts
+**Majorana**; the TUFT `[preprint-claim]` Dirac is the lower-tier disagreement `0νββ` will settle.
+
 ## 4. Reed's torsion — a frame-closure holonomy, **NOT** Einstein–Cartan (correction)
 
 Kept distinct, explicitly. Reed's "charge/chirality = torsion loop-closure defect" is a **frame-closure

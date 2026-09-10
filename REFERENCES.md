@@ -43,12 +43,26 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
 - Church & Weneser (1956) — E0 transitions (LENR selection). Scheeler et al. (2017) — helicity conservation
   (ΔH < 5%). Bostick (1956) — plasmoid experiments.
 
+**Chirality, charge conjugation & the Majorana neutrino.**
+- Majorana, E. (1937), *Nuovo Cimento* 14, 171 — the self-conjugate (`ν = ν̄`) neutrino.
+- Chirality = `sign λ` = `sign H` rests on Moffatt helicity (above); antiparticle = `−λ`, chirality flip =
+  charge conjugation C, the duality angle `θ_χ`, and neutrino = self-dual `θ_χ = 45°` Majorana are **computed
+  in-repo** — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
+  (`results/verify/{chirality_helicity, charge_conjugation, majorana_selfdual}_check.py`). `0νββ` is the
+  external falsifier of the Majorana reading.
+
 ## 2. The five convergence frameworks (method/analogy-only)
 
 **Reed — Quantum Wave Mechanics (QWM)** — `[QWM framework]` (M8). Photon-helicoid electron on a Hopf-link
-torus; polarizable-vacuum `K_PV = √(1+ρ_EM/ρ_vac)`; whirl number `N_W = α⁻¹ ≈ 137`; inertia = trapped EM
-energy; phase-conjugate propulsion (**speculative, not adopted**). In-repo primaries: `Larry_Reed_QWM_
-Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Module_10_Reed_Electron_Model`.
+torus; polarizable-vacuum `K_PV = √(1+ρ_EM/ρ_vac)`; whirl number `N_W = α⁻¹ ≈ 137` — the winding-*count*
+`1/α = 137` is now **settled-negative** (computed continuous winding-to-spin ratio `ι ≈ 1`, a Hopf ring, not
+137; 137 prime; near-misses generic), surviving only as a *suggestive analogy*, α's value `[flag]`
+(`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`); inertia = trapped EM energy; phase-conjugate propulsion
+(**speculative, not adopted**). Reed's charge/chirality = **torsion-defect** is a **frame-closure (Frenet
+torsion) holonomy** `O(0.1 rad)` — **not** Einstein–Cartan spacetime torsion; the chirality cluster (chirality
+= `sign λ` = `sign H`; antiparticle = `−λ`; chirality flip = charge conjugation C; neutrino = self-dual
+Majorana) is computed in `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`. In-repo primaries: `Larry_Reed_
+QWM_Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Module_10_Reed_Electron_Model`.
 
 **Storti — EGM / Quinta Essentia** — `[EGM method]` (M11). "A method of calculation (not a theory)."
 - Storti, R.C. (2007), *Quinta Essentia — Part 2 (US Letter)*, Delta Group Engineering / Lulu, 328 pp.
@@ -70,7 +84,12 @@ Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Module
   Topological Physics (preprint lineage 2019 → Oct 2025; **Round 2 peer review, Int. J. Topology**). SM gauge
   groups + gravity + mass spectrum from the Hopf bundle; knot eigenmodes of the 9D curl operator; Beltrami–
   Higgs on `S³`. In-repo primary: `TUFT Jenny Nielsen.pdf` (180 pp.). Used where its topology is load-bearing;
-  its full unification claims are carried at preprint tier, not asserted as established.
+  its full unification claims are carried at preprint tier, not asserted as established. **On the neutrino,**
+  the TUFT preprint predicts **Dirac** (`S⁹` spinor decomposition forbids a Majorana mass ⇒ `0νββ` null) — a
+  `[preprint-claim]` that **disagrees** with the repo's higher-tier computed chirality-geometry layer, which
+  predicts a **Majorana** neutrino (the self-dual `θ_χ = 45°`, C-invariant `ν = ν̄` state;
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md` §3b). `0νββ` decides between them; the credited/computed
+  layer is the higher tier.
 
 **Greenyer — Beat Law & EVO cascade (fractal-toroidal beat dynamics)** — `[V]` on the beat-dynamics layer /
 `[framework: Greenyer/MFMP]` on the geometry & nuclear channel (M14).
@@ -85,10 +104,15 @@ Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Module
 
 ## 3. Do-not-cite / excision notes (standing discipline)
 - **`e^(-2/3)` screening factor — [excised].** Unjustified numerology; removed per `excision-protocol-storti-
-  factor.md`. The `~137` / 140.2 winding gap (2.3%) is carried as an **open problem**, not a derivation.
+  factor.md`. The `~137` / 140.2 winding gap (2.3%) is now **settled-negative** — the winding-*count* `1/α = 137`
+  is an analogy, not a derivation (computed winding-to-spin ratio `ι ≈ 1`, 137 prime, near-misses generic; the
+  running / IR-fixed-point reframe is quantitatively insufficient), α's value stays `[flag]`
+  (`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`; the superseded running attempt is
+  `results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`).
 - **Storti H₀ = 67.08, particle radii, α — [flag].** Not reproduced by clean closed-forms (M11-4); do not cite
   as FTGB-derived.
-- **Ginzburg particle spectrum / "USM" cosmology — not adopted.** Analogy/vocabulary only (M12-3).
+- **Ginzburg particle spectrum / "USM" cosmology — not load-bearing.** The specific spectrum and cosmology are
+  not derived or reproduced from the geometry (M12-3); folded for vocabulary and convergence only, not asserted.
 - **LENR: do-not-cite Rossi / Mills / bio-transmutation.** Keep baryon-conserving `d+d→⁴He` distinct from
   baryon decay; no fabricated rate/cross-section; `E_fm = 2.5 MeV` stays retracted; COP not derived.
 

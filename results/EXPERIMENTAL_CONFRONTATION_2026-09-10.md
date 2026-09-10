@@ -134,20 +134,22 @@ the repo contradicts itself on whether the neutrino is Majorana or Dirac.
 
 ## 7. Two internal contradictions the confrontation surfaced
 
-These are honesty flags, not data verdicts — the confrontation exposed them and they should be resolved.
+These are honesty flags, not data verdicts — the confrontation exposed them; **both are now resolved (2026-09-10)**.
 
 - **The `A ≈ 9.0` aspect-ratio row is inconsistent with the theory's own geometry.** `A = 9.0 ± 1` traces
   to the *toroidal-electron winding* estimate feeding the α exercise (`results/ALPHA_DYNAMICAL_REFRAME`,
   `results/verify/alpha_running.py`), which is itself `[flag]`ged and 2.3% off. The core cabled-nesting result
-  gives `ε = 1/φ`, i.e. `A = φ ≈ 1.618`. Real spheromaks sit at `A ≈ 1.1–1.4`. **Recommendation:** the
-  coherence-map §4 "aspect ratio" row should cite the theory's own `A ≈ φ` (a genuine, favorable near-miss to
-  SSPX), not the flagged electron-winding `A ≈ 9.0`, which does not belong in a plasmoid-geometry row.
+  gives `ε = 1/φ`, i.e. `A = φ ≈ 1.618`. Real spheromaks sit at `A ≈ 1.1–1.4`. **Resolved (2026-09-10):** the
+  coherence-map §4 "aspect ratio" row now cites the theory's own `A ≈ φ` (a genuine, favorable near-miss to
+  SSPX), and the flagged electron-winding `A ≈ 9.0` is removed from the plasmoid-geometry row.
 - **The repo holds two contradictory neutrino readings.** `FTGB_GRAND_SYNTHESIS.md` (≈L522–527): neutrino is
   "self-dual (Majorana-like)", 0νββ is "the external falsifier … *not* an FTGB prediction." `TOOLKIT_ADV_13`
   (M13, ≈L287–295): "Framework prediction: **Dirac** neutrinos (S⁹ spinor decomposition forbids a Majorana
-  mass ⇒ 0νββ **null**), normal ordering." These predict **opposite** 0νββ outcomes. **Recommendation:**
-  resolve to one reading (or state explicitly that the two layers disagree and 0νββ discriminates *between the
-  FTGB layers themselves*) before fingerprint 6 is promoted.
+  mass ⇒ 0νββ **null**), normal ordering." These predict **opposite** 0νββ outcomes. **Resolved (2026-09-10):**
+  the credited/computed **chirality-geometry layer commits to Majorana** — the neutrino is the self-dual
+  `θ_χ=45°`, `H=0`, C-invariant state (`majorana_selfdual_check.py`, `CHIRALITY_DUALITY_ASSESSMENT` §3b). The
+  TUFT `[preprint-claim]` Dirac reading is the lower-tier disagreement `0νββ` will decide; the theory's
+  load-bearing prediction is **Majorana**.
 
 ---
 

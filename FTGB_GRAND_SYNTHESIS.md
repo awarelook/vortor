@@ -32,7 +32,9 @@ dimensional constant and `A.B` is a helicity density. The defining device of the
 every key law is written in two columns -- REAL-UNIT (dimensional) beside DIMENSIONLESS
 (Buckingham-Pi group) -- each carrying a claim -> Pi-group -> falsifier. Mass is a rate,
 `m = hbar omega_C / c^2`, dimensionally exact; the whirl *number* `q = 1/alpha ~ 137` is
-dimensionless and kept strictly separate. The topology carries a *real* helicity `H ~ 0.088`,
+dimensionless and kept strictly separate -- and is carried only as a *suggestive analogy*, not a
+derivation, since the object's computed winding-to-spin ratio is `~1` (a Hopf ring), not 137 (a
+settled negative; `alpha`'s value stays flagged). The topology carries a *real* helicity `H ~ 0.088`,
 not an integer Hopf charge. The object is *alive*: a Stuart-Landau limit cycle whose family
 self-organizes by Kuramoto/Adler/Arnold dynamics, breathing through a twist-writhe heartbeat
 that conserves the Calugareanu-White linking `Lk = Tw + Wr`.
@@ -194,14 +196,25 @@ section first; the rest of the paper leans on it.
 - **Zitterbewegung `omega_zbw = 2 m c^2 / hbar`.** The "trembling" clock of the localized matter
   wave. The mass axis rides at exactly half this rate (`omega_C = omega_zbw/2`), which is why
   spin-1/2 appears as a clean 2:1 rotary octave.
-- **Whirl number `q = 1/alpha = 137.036`.** A *dimensionless* count: spin revolutions per closed
-  orbital whirl. For the electron this is about 137, and the electromagnetic fine-structure
-  constant is read as its inverse. The whirl number is a separate quantity from the mass; no
-  equation slides between a mass in kilograms and a pure ratio.
+- **Whirl number `q = 1/alpha = 137.036`.** A *dimensionless* count -- spin revolutions per
+  closed orbital whirl -- whose *idealized* value would be `1/alpha ~ 137`. This is a
+  **suggestive analogy, not a derivation** `[flag]`: the object's *computed* continuous
+  winding-to-spin ratio is `iota ~ 1` (a Hopf ring, `= Q_H`), NOT 137; 137 is prime and the
+  object's real topological levels are `Q_H = 1` and Chern `+/-2`; and near-misses to `137.036`
+  from the object's own constants are generic (anti-numerology denominator). So `alpha`'s value
+  stays flagged -- a settled negative documented in
+  `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`. The whirl number is a separate quantity
+  from the mass; no equation slides between a mass in kilograms and a pure ratio.
 - **Charge as spin angular momentum, `e ~ [kg . rad/s]`.** Electric charge read as an intrinsic,
   Lorentz-invariant mechanical angular momentum, so the Coulomb becomes a *count* of electrons
-  rather than a distinct kind of stuff. Geometrically, charge is a *loop-closure torsion defect*:
-  the precessing spin winding fails to close and re-synchronizes about every 137 turns.
+  rather than a distinct kind of stuff. Geometrically, charge is a *frame-closure holonomy
+  defect* -- the computed Frenet torsion holonomy `integral tau ds ~ O(0.1 rad)` of the whirl
+  loop (a geometric phase, explicitly NOT Einstein-Cartan spacetime torsion). Under the
+  chirality mirror this defect flips sign together with helicity, so the chirality flip *is*
+  charge conjugation C (computed). The specific "re-sync every 137 turns" (`d_theta = 2 pi
+  alpha`) value is inserted, not derived (the computed holonomy is `O(0.1)` and the winding
+  ratio `iota ~ 1`), so it survives only as a suggestive analogy; see
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`.
 
 ### Topology and spectral geometry
 
@@ -215,11 +228,16 @@ section first; the rest of the paper leans on it.
 - **Baryon number `B` (Skyrme degree).** The integer `pi_3(S^3)` winding of a soliton's flux
   field -- a *different* topological reading on a *different* target space from helicity. Mass and
   baryon number are two independent readings of the same object, never slid between.
-- **The four torsions.** Four genuinely distinct objects that share the word "torsion," kept
-  rigidly apart: (a) Cartan/Burgers loop-closure torsion (behind charge), (b) ribbon twist `Tw`
-  (the reconnection heartbeat), (c) Frenet-Serret torsion (a chirality signature), (d) Ray-Singer
-  analytic torsion (the mass-tower torsion coefficient). Einstein-Cartan spacetime torsion sits
-  ~15 orders below the Compton scale and is excluded as dynamically irrelevant.
+- **The torsions.** Genuinely distinct objects that share the word "torsion," kept rigidly
+  apart: (a) the **frame-closure (Frenet) torsion holonomy** `integral tau ds ~ O(0.1 rad)`
+  (computed) -- the loop-closure defect behind *both* charge and chirality, which flip together
+  under charge conjugation C (so the earlier separate "Cartan/Burgers charge torsion" and
+  "Frenet chirality torsion" are one computed holonomy read two ways); (b) ribbon twist `Tw`
+  (the reconnection heartbeat); (c) Ray-Singer analytic torsion (the mass-tower torsion
+  coefficient). This frame-closure holonomy is a geometric phase, NOT a Cartan/Burgers
+  *connection* torsion; Einstein-Cartan spacetime torsion is a different object again, sits
+  ~15 orders below the Compton scale, and is excluded as dynamically irrelevant. (See
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`.)
 - **Mass tower / spectral geometry.** The particle mass ladder read as the eigenvalue spectrum of
   a geometric operator (`*d`, Hodge-star composed with exterior derivative) on nested Hopf shells
   `S^3, S^5, S^7, S^9`. The tower's quadratic Casimir sector is pi-free; its torsion sector
@@ -520,11 +538,15 @@ Ledger, Part F, as either derived-with-residual or [S] tautology-not-excluded.)
   baryon number is the topological winding. These are distinct, and conflating them was
   a specific corrected error (mass-not-baryon).
 - **Neutrino.** The pure force-free vortical ring -- a chargeless, near-luminal
-  "smoke-ring" (`pi_3(S^2)` helicity sector). It is naturally its own antiparticle: with
-  no charge to conjugate, the Dirac/Majorana distinction maps onto the FTGB
-  charged/chargeless split, and the smoke-ring is the *self-dual* (Majorana-like) member
-  [S]. Neutrinoless double-beta decay is the external falsifier of that reading, not an
-  FTGB prediction.
+  "smoke-ring" (`pi_3(S^2)` helicity sector). It is naturally its own antiparticle, and this
+  is now a *computed* chirality-geometry result, not a slogan: chirality is exactly
+  `sign(lambda) = sign(H)` for a Beltrami field (an exact identity `[credited]`); the
+  antiparticle is the `-lambda` mirror `[S]`; and the neutrino is the **self-dual** member
+  (chiral mixing angle `theta_chi = 45 deg`, helicity `H = 0`, C-invariant), which forces
+  **Majorana** `nu = nu-bar` `[S, computed]`. Neutrinoless double-beta decay is the external
+  falsifier of that reading, not an FTGB prediction; any lower-tier `[TUFT-preprint]` "Dirac"
+  reading would be a disagreement that `0nu-beta-beta` decides. See
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`.
 - **EVO.** A *charged*, non-relativistic electron cluster (micro-ball-lightning), needing
   the non-force-free charged sheath; distinct from the chargeless smoke-ring, and scoped
   to the Greenyer EVO specifically, not to universal ball lightning.
@@ -557,9 +579,12 @@ This honest split is what keeps the synthesis a hypothesis rather than a slogan.
 **Mass.** The load-bearing identity is `m = hbar omega_C / c^2`, with `omega_C` the whirl
 (Compton) *angular* frequency [V, recovers `m_e` to machine precision; e/p/d rungs to
 <=0.32%]. This is the corrected form of the retired, dimensionally-wrong slogan
-"mass = whirl": the whirl *number* `q = alpha^{-1} ~ 137` is a dimensionless ratio (orbital
-whirls per spin revolution), and mass is a *function* of it, `m = f(q)`, with the
-dimensional carrier `omega_C`. That `hbar omega_C / c^2` reduces to kilograms turns on
+"mass = whirl": mass is a *function* of the whirl *rate* `omega_C` (the dimensional carrier),
+not of any pure count. The separate whirl *number* `q = alpha^{-1} ~ 137` (orbital whirls per
+spin revolution) is NOT load-bearing for the mass and is a *suggestive analogy only* `[flag]`:
+the object's computed winding-to-spin ratio is `iota ~ 1` (a Hopf ring), not 137, so `alpha`'s
+value stays flagged -- a settled negative (`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`).
+That `hbar omega_C / c^2` reduces to kilograms turns on
 `rad` being a dimensionless degree-of-freedom marker rather than a dimension -- a point
 we hold obsessively (Toolkit; the dimensional re-audit is 8/8 clean). Mass is a rate: an
 obstruction to energy flow via spin-precession self-interference, not a Higgs coupling
@@ -571,7 +596,10 @@ current-times-time hides the relation by assigning charge its own dimension `[Q]
 Kaluza-Klein fifth dimension, on this reading, is a topological charge from intrinsic
 spin precession -- a reinterpretation, not a hidden spatial dimension (K1, tiered). No
 incumbent charge measurement is contested; the claim is an ontological re-reading with
-its own dimensional bookkeeping.
+its own dimensional bookkeeping. Under the chirality mirror this charge/precession sign
+flips together with helicity, so the chirality flip *is* charge conjugation C -- computed as
+one frame-closure holonomy sign, tying "antiparticle = opposite chirality" and "= opposite
+charge" into the same statement `[S, computed]` (`results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`).
 
 ## C.2 Topology and the mass tower
 
@@ -581,10 +609,19 @@ label); the *actual CK object* carries a *real* helicity `H = 0.088` [V] (grid-c
 sign-definite), NOT an integer Hopf charge -- the CK field is not closed-fibre (the
 Whitehead pull-back is 54% non-solenoidal; `j_1(lambda R) = 0` does not compactify). So
 `Q_H = 1` is only the idealized-reference label, not the object's integer, and
-`Q_H = B^2`-type identifications are excluded. In its photon/band structure the object
-carries Chern number `+/-2` [credited] / band `+/-1` [V-model]. Four distinct torsions
-(Cartan/Burgers, ribbon twist, Frenet, Ray-Singer) are kept separate; Einstein-Cartan
-torsion is excluded.
+`Q_H = B^2`-type identifications are excluded. Consistently, the object's *computed* continuous
+winding-to-spin ratio is `iota ~ 1` -- one poloidal (whirl) turn per toroidal (orbital)
+circuit, a genuine Hopf ring (`= Q_H`), NOT 137 -- which is exactly why the "winding
+`= 1/alpha = 137`" reading is a suggestive analogy only, permanently flagged (settled negative,
+`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`). In its photon/band structure the object
+carries Chern number `+/-2` [credited] / band `+/-1` [V-model]. What the Hopf/Wess-Zumino
+topology *does* deliver is that the object is quantized as a **spin-1/2 fermion** [credited:
+Wilczek-Zee 1983; Finkelstein-Rubinstein 1968]; note spin-1/2 does NOT by itself give `g = 2`
+(the naive circulating-charge soliton robustly gives `g = 1`; `g = 2` is the Dirac value, an
+open dynamical quantity in the same class as `alpha`'s value `[S]`). The distinct torsions
+(the frame-closure/Frenet holonomy behind charge and chirality, ribbon twist, Ray-Singer) are
+kept separate; Cartan/Burgers *connection* torsion and Einstein-Cartan spacetime torsion are
+excluded.
 
 **The mass tower [TUFT-preprint, tiered].** Nielsen's Toroidal Unified Field Theory
 preprint supplies a spectral mass tower, `m_n ~ (n+1) exp(a n - zeta(3) n^2)`, with
@@ -1157,9 +1194,9 @@ re-reading and an extension of tested physics at four specific joints, and it le
                 |                                            | and dimensionless.                       | Higgs coupling is replaced or contested.
   --------------|--------------------------------------------|------------------------------------------|-------------------------------------------
   CHARGE        | QED: charge a primitive gauge quantum      | charge = mechanical spin angular         | Schwinger a_e = alpha/2pi recovered [V];
-                | number; g-2 confirmed to ~1e-12.           | momentum e ~ [kg.rad/s], a Cartan/       | 137-turn re-sync, d_theta = 2.627 deg per
-                |                                            | Burgers loop-closure torsion defect.     | Compton turn; NO new charge value -- a
-                |                                            |                                          | re-description, not a rival prediction.
+                | number; g-2 confirmed to ~1e-12.           | momentum e ~ [kg.rad/s], a frame-        | correctly-typed g-2, alpha is the input --
+                |                                            | closure (Frenet) holonomy defect.        | '137-turn re-sync' is a suggestive analogy,
+                |                                            |                                          | computed winding iota ~ 1 (Hopf ring), not 137.
   --------------|--------------------------------------------|------------------------------------------|-------------------------------------------
   WAVEFUNCTION  | Born rule: psi a probability amplitude;    | Madelung flow: psi = sqrt(rho)exp(iS/h)  | continuity residual ~5e-16 [V] -- the two
                 | ubiquitously confirmed.                    | read as a real compressible fluid; the   | are mathematically identical; the flow
@@ -1497,10 +1534,14 @@ which is the honest shape of the theory's present boundary.
   open large-data global-regularity problem for 3D Navier-Stokes / Hall-MHD, a famous
   *external* problem, not an FTGB-specific gap.
 - **The neutrino mass hierarchy** is not derived by the object's spectrum; closing it
-  requires an **external Majorana (lepton-number-violating) seesaw sector**. The theory
-  does supply, honestly, the generation *count* (trefoil `T(2,n)`), the oscillation
+  requires an **external Majorana (lepton-number-violating) seesaw sector**. (The object's
+  chirality geometry *does* now predict, as a computed `[S]` result, that the neutrino is
+  **Majorana** -- the self-dual, `H = 0`, C-invariant state, decided by `0nu-beta-beta`;
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md` -- but that fixes no mass *value*.) The
+  theory does supply, honestly, the generation *count* (trefoil `T(2,n)`), the oscillation
   *mechanism* (whirl-beat), and a mixing *clue* (`mu`-`tau` symmetry forcing
-  `theta_23 ~ 45 deg`) -- but not the mass values.
+  `theta_23 ~ 45 deg`, a PMNS angle distinct from the chiral-mixing `theta_chi`) -- but not the
+  mass values.
 
 ## F.3 The honest pattern
 
@@ -1533,7 +1574,7 @@ FTGB is one member of the established class of driven-dissipative nonlinear coup
 oscillators on a helical, elastic, topologically-constrained substrate. The mapping is
 tiered as **7 IDENTITY** rows (same mathematics, already load-bearing in FTGB: the
 Stuart-Landau normal form as the heartbeat with `r* = sqrt(2)`; Kuramoto/Adler/Arnold as
-the multibody beat-locking; `Lk = Tw + Wr` and the four torsions as the object's
+the multibody beat-locking; `Lk = Tw + Wr` and the torsions as the object's
 topology; the Madelung phase as the flow reading), **5 ANALOG** rows (shared mathematics,
 different substrate -- DNA chiral-rod torsion transport, BZ chemical oscillators,
 biological entrainment, the phonon / Pd-D lattice), and **4 CAUTION** rows (imported as
@@ -1571,11 +1612,15 @@ Five methods, tiered:
    seesaw `m_light ~ m_D^2 / M_R` reads as `omega_light ~ omega_D^2 / omega_R`, a
    parametric-beat downconversion; the whirl ladder is a calibrated mass<->frequency map
    (`omega_nu -> 0.05` eV, 0.04%), and a genuine seesaw requires an off-ladder scale.
-5. **RG dielectric-flow / IR-fixed-point method** [S-mechanism] / [flagged value]. `K_PV(q^2)
-   = alpha(0)/alpha(q^2)`; running-coupling and static-winding as the same object at two
-   scales; 137 as the IR endpoint; with a genericity-denominator anti-numerology control
-   (count how many simple invariants land within a tolerance before crediting any single
-   one).
+5. **RG dielectric-flow / IR-fixed-point method** [settled-negative]. `K_PV(q^2)
+   = alpha(0)/alpha(q^2)`; running-coupling and static-winding read as one object at two
+   scales -- but this reframe is now a *settled negative*, not an open mechanism: `alpha` has
+   ~zero running headroom at `m_e` (`alpha^{-1}(m_e) = 137.036` exactly), so dynamics cannot
+   cover the 2.3% integer-skeleton error, and the flow has no forced IR fixed point but the
+   trivial Gaussian one (137 is a threshold freeze-out / integration constant, not `beta = 0`).
+   The genericity-denominator anti-numerology control (count how many simple invariants land
+   within a tolerance before crediting any single one) confirms `137.036` is a generic
+   near-miss. See `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`.
 
 ## G.2 References
 
@@ -1605,7 +1650,9 @@ Prop. label at lock).
 Turok 1997, PRL 79, 367 (B=4 16-mode spectrum); Houghton-Manton-Sutcliffe 1998, Nucl.
 Phys. B 510, 507; Feist, Lau & Manton 2013, PRD 87, 085034; Gudnason & Halcrow 2018, PRD
 98, 125010; Halcrow 2016, Nucl. Phys. B 904, 106; Manton, "Classical Skyrmions" (arXiv:1106.1298);
-Adam, Sanchez-Guillen & Wereszczynski 2010, PLB 691, 105 (BPS Skyrme).
+Adam, Sanchez-Guillen & Wereszczynski 2010, PLB 691, 105 (BPS Skyrme). *Soliton spin-statistics
+(spin-1/2 quantization, [credited]):* Finkelstein & Rubinstein 1968, J. Math. Phys. 9, 1762;
+Wilczek & Zee 1983, PRL 51, 2250.
 
 **Ab-initio nuclear structure.** Hupin, Quaglioni & Navratil 2019, Nat. Commun. 10, 351
 (d+t -> n+4He NCSMC benchmark); Quaglioni & Navratil 2008, PRL 101, 092501; Navratil &

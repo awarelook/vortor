@@ -27,7 +27,7 @@ Read top-down (abstract → concrete). Each layer *constrains* the ones below it
 | **0** | **Dimensional skeleton** — Buckingham-Π null-space | which knobs any law *may* depend on; the falsifier set | **M7** (Buckingham-Π claim-audit); Storti "sense checks" fold here | `[credited]`/`[V]` |
 | **1** | **The field** — Beltrami eigenmode `∇×B = λB` | the *shape*; the Chandrasekhar–Kendall roots → the carrier comb | Beltrami/MHD; Woltjer–Taylor | `[credited]` |
 | **2** | **The topology** — Hopf `π₃(S²)` / Skyrme `π₃(S³)`; linking, helicity, baryon `B` | the *invariants* and the discrete **knot/mass lattice** | Hopf/Skyrme; **Nielsen TUFT** curl-eigenmode knot spectrum | `[credited]`/`[framework]` |
-| **3** | **The matter wave** — `ψ=√ρ e^{iθ}`, `m=ħω/c²` | *mass = whirl*, *charge = torsion (precession)*, `whirl = 1/α`, chirality → antiparticle | **Reed QWM (M8)**; `electron.html`; `ELECTRON_TORSION_DEFECT` | `[framework]`/`[V-dim]` |
+| **3** | **The matter wave** — `ψ=√ρ e^{iθ}`, `m=ħω/c²` | *mass = whirl*; *charge = torsion (frame-closure holonomy)*; `whirl ≈ 1/α` **analogy only** (§3); **chirality = sign(λ) → C**; **Majorana ν** at `θ_χ=45°` | **Reed QWM (M8)**; `electron.html`; `ELECTRON_TORSION_DEFECT`; **`CHIRALITY_DUALITY_ASSESSMENT`** | `[credited]`/`[S]`; `[flag]` α |
 | **4** | **The vacuum medium** — `K_PV`, ZPF `ρ₀∝ω³`, beat comb to `ω_Ω` | the *substrate*; gravity as refraction | **Storti EGM / Quinta Essentia (M11)**; Puthoff PV; Ginzburg toryx/helyx (M12) | `[credited]`/`[framework]` |
 | **5** | **The dynamics** — Stuart–Landau `r*=√2`, Kuramoto comb-lock, current-leg `S=μ−P·v` | the *living beat*, the no-gos, the driven closure, regularity | `FTGB_CURRENTLEG_TRILOGY`; **R2/R3** enstrophy bounds; `dynamics_lab.html` | `[V]`/`[S]`/`open` |
 | **6** | **The interactions** — golden rule `Γ=(2π/ħ)|M_fi|²ρ_f`, `M_fi=ΣC_αA_αR_αS_α`, the energy–mass ledger | transmutation on the lattice; the **LENR anomalies** | `LENR_MATTERWAVE_INTERACTION_MODEL` | `[V]` ledger / `[S]` / `open` Δ |
@@ -47,9 +47,15 @@ The frameworks converge because they share the **same five invariants of the one
 2. **Beltrami / curl eigenmodes** — the CK comb (layer 1), Nielsen's 9D-curl knot spectrum, the Higgs-on-`S³`:
    one operator, `∇×F = λF`.
 3. **`m = ħω/c²`** — mass as the whirl, threading neutrino → electron → nucleon → EVO (layer 3).
-4. **Charge = torsion/precession = `kg·rad/s`** — the M8 dissolution of the "fake" charge dimension;
-   antiparticle = opposite chirality.
-5. **`α ≈ 137` as a winding number** — the whirl count `1/α`; its *value* is `[flag]`/open (§3 below).
+4. **Charge = torsion/precession = `kg·rad/s`** — the M8 dissolution of the "fake" charge dimension. Reed's
+   torsion is a **frame-closure holonomy** (computed `∫τ ds ≈ O(0.1 rad)`), **not** Einstein–Cartan.
+   **Antiparticle = opposite chirality = the `−λ` mirror**, and the chirality flip **is** charge conjugation C —
+   the mirror keeps mass but flips helicity *and* the torsion-defect together (`charge_conjugation_check.py`).
+   The self-dual `θ_χ=45°`, `H=0` state is C-invariant ⇒ the **Majorana neutrino** (`majorana_selfdual_check.py`).
+5. **`α ≈ 137` as a winding number — a *suggestive analogy only*.** The object's computed winding-to-spin
+   ratio is `ι ≈ 1` (a Hopf ring `= Q_H`, not 137); "winding = 1/α" is **settled-negative** as a derivation
+   (`ALPHA_RESOLUTION_ASSESSMENT`), and the value stays `[flag]` (§3 below). The correctly-typed reading of α
+   is the g−2 anomaly (an internal spin precession), whose value is still the open coupling strength.
 
 ## 3. Theory → reality — the honest tier ladder (what is load-bearing)
 
@@ -69,7 +75,9 @@ The frameworks converge because they share the **same five invariants of the one
   near-misses are generic — so **"winding ≈ 1/α" survives only as a suggestive analogy, not a derivation**;
   `e^(-2/3)` stays excised.
 - **`open`:** R2/R3 *unconditional* (prove `⟨δ²⟩^{1/2}≲1/Re` at the object's Reynolds; the Hall `Pm≠1`
-  coupled Lyapunov functional); **Δ** (the B=4 Landau–Zener gap, HPC-only); a first-principles `α` fixed point.
+  coupled Lyapunov functional); **Δ** (the B=4 Landau–Zener gap, HPC-only). *(α's value is **not** an open
+  FTGB target: the winding derivation is settled-negative — its value is the shared open QED coupling
+  strength, `ALPHA_RESOLUTION_ASSESSMENT`.)*
 
 ## 4. Reality → experiment — the falsifiers (what a measurement can kill)
 
@@ -78,8 +86,8 @@ The frameworks converge because they share the **same five invariants of the one
 | Carrier comb **{121, 208, 294} kHz** (1 : 1.72 : 2.43), pull to **7/4, 5/2** | 1, 5 | a lock at 12/7 = 1.714 |
 | **He-4 / heat = 24 MeV/⁴He** (aneutronic) | 6 | a large deviation, or neutron flux scaling with heat |
 | **Δ in the 1.4–1.9 MeV** neutron-suppression band | 6 | a Skyrme Δ outside the band |
-| Neutrino rung = **Majorana** (`ν=ν̄`) | 3 | `0νββ` null at the predicted scale |
-| Plasmoid **aspect ratio A ≈ 9.0** | 1, 3 | a clustered A far from 9 |
+| Neutrino rung = **Majorana** (`ν=ν̄`) — the self-dual `θ_χ=45°`, `H=0`, C-invariant state (computed) | 3 | `0νββ` null at the predicted scale |
+| Plasmoid **aspect ratio A ≈ φ ≈ 1.618** (golden `ε=1/φ`; the flagged `A≈9` was an α-winding input — §7) | 1, 3 | a clustered A far from the theory's `ε=1/φ` |
 | Transmutation products **on the Skyrme/Nielsen lattice**, `ΣB` conserved | 6 | off-lattice / baryon-non-conserving ash |
 
 > **Confronted with data (2026-09-10):** `results/EXPERIMENTAL_CONFRONTATION_2026-09-10.md` checks each row

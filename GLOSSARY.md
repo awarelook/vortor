@@ -56,9 +56,40 @@ citations and `TOOLKIT_HANDBOOK.md` (M7–M14) for the methods.
   1 : 1.72 : 2.43) and its strong-coupling pull toward 7/4, 5/2. `[V]`/`[S]` (M7-2)
 - **Seesaw down-conversion** — frequency down-conversion reading (M10-4). `[S]` + `[V-dim]`
 - **Whirl / winding number `N_W = α⁻¹ ≈ 137`** — helical wavelengths to close the toroidal loop; the
-  fine-structure constant as a winding number. `[framework: Reed]`; a `~137` geometric winding (≈140.2) is
-  held `[flag]` at the 2.3% level, **not** promoted; the `e^(-2/3)` "screening" that would force it is
-  `[excised]`.
+  fine-structure constant read as a winding number. **Two readings, now separated
+  (`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`):** (i) the *winding-count* `1/α = 137` is
+  **settled-negative** — a suggestive analogy only: the object's computed continuous winding-to-spin ratio is
+  `ι ≈ 1` (a Hopf ring `Q_H = 1`), **not** 137; 137 is prime; the `~137` near-misses are generic. (ii) the
+  *spin-precession* reading is **correctly-typed** — the electron's g−2 anomaly `a = α/2π` — but α is the
+  *input* coupling there, not derived. Either way α's **value stays `[flag]`**; the running / IR-fixed-point
+  reframe (`results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`) is quantitatively insufficient (α runs ~0 at
+  `m_e`); the `e^(-2/3)` "screening" that would force it is `[excised]`. `[framework: Reed]` / winding-count
+  `[flag, settled-negative]` / g−2 typing `[credited]`
+
+## 4b. Chirality, antimatter, and the neutrino (the particle reading)
+Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
+(`results/verify/{chirality_helicity, charge_conjugation, majorana_selfdual}_check.py`).
+- **Chirality = sign of the Beltrami `λ` = sign of helicity** — for `curl u = λu`, `H = λ∫|u|²`, so
+  `sign(H) = sign(λ)` **exactly** (computed: `curl(ABC) = +u`, mirror `= −u`); the `±λ` fields are the two
+  chiralities. The theory's cleanest structural fact. `[credited]` (exact identity)
+- **Antiparticle = the `−λ` mirror** — the opposite-chirality partner of the same object (`λ→−λ` flips
+  `H→−H`). `[S, computed]`
+- **Chirality flip = charge conjugation C** — under the `λ→−λ` mirror the **mass is fixed** while **chirality
+  and the Reed torsion-defect / precession sign flip together** (ratio `−1.000`), so "opposite chirality" and
+  "opposite charge" are the *same* statement. `[S, computed]`
+- **Duality / chiral angle `θ_χ`** — the computed helicity-content mixing angle `θ_χ = atan(‖u₋‖/‖u₊‖)`;
+  electron `= 0°`, positron `= 90°`. A computed quantity, not imagery (and *not* the electroweak mixing
+  angle). `[V-def]`
+- **Neutrino = the self-dual `θ_χ = 45°` state ⇒ MAJORANA** — the equal-parts `u = (u₊+u₋)/√2` has `H = 0`
+  (neutral) and is its **own** C-mirror (`ν = ν̄`), the midpoint of the electron/positron axis. The
+  credited/computed chirality layer thus commits to a **Majorana** neutrino, resolving the repo's
+  Majorana-vs-Dirac tension in favor of the computed layer; any TUFT-preprint "Dirac" is the lower-tier
+  disagreement `0νββ` settles. `[S, computed]`
+- **Reed "torsion" = frame-closure holonomy** — the Frenet torsion holonomy `∫τ ds` of the whirl loop
+  (computed `O(0.1 rad)`, sign-flipping across flux surfaces), **NOT** Einstein–Cartan *spacetime* torsion
+  (the spin-density source of ECSK gravity). The *concept* (torsion defect ↔ charge/chirality) is a real
+  computed geometric phase `[credited]`; Reed's specific `dθ = 2πα` value is inserted, so the α-value stays
+  `[flag]`.
 
 ## 5. Framework-specific prime elements (analogy-only)
 - **Toryx** (Ginzburg) — a self-inverting 4D **double-toroidal** spiral element = prime element of **matter**;

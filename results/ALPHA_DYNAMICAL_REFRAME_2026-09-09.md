@@ -5,6 +5,23 @@
 `ELECTRON_TORSION_DEFECT_EXPLANATION`, using the toolkit's M10-5 RG dielectric-flow machinery.
 **Verification:** `results/verify/alpha_running.py` (standard QED one-loop running; anti-numerology gate).
 
+> **SUPERSEDED (2026-09-10) — the α *value* question is now SETTLED-NEGATIVE.** This doc is the (insufficient)
+> *dynamical-running* attempt; it is closed by **`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`**, which
+> runs the decisive tests and returns a clean NEGATIVE:
+> - **The winding-count `1/α = 137` is dead.** The object's *continuous* winding-to-spin ratio computes to
+>   **`ι ≈ 1`** (a Hopf ring `Q_H = 1`), **not 137** (`results/verify/ck_winding_ratio_check.py`); 137 is
+>   **prime** (no `p·q` winding yields it) and the `~137` near-misses are **generic**
+>   (`results/verify/alpha_genericity_check.py`).
+> - **The running reframe below is quantitatively INSUFFICIENT.** `α` runs to **~0 at `m_e`**
+>   (`α⁻¹(m_e) = 137.036` exactly, `results/verify/alpha_scale_headroom_check.py`) — no headroom to cover the
+>   **2.3% integer-skeleton** error (140 vs 137), which is not a dynamical effect at all.
+> - **What survives:** "winding ≈ `1/α`" as a *suggestive analogy* only; the correctly-typed internal reading
+>   is *spin precession* — the g−2 anomaly `a = α/2π` — but there `α` is the *input* coupling, so **the value
+>   stays `[flag]`** either way (RESOLUTION §3c).
+>
+> Nothing below is retracted — the QED-running result stands and is *why* the naive fix fails — but read it as
+> the **closed running-attempt**, not a live path to α's value. `e^(-2/3)` remains `[excised]`.
+
 **One-line.** The geometric winding `q_geom ≈ 140.2` vs `α⁻¹ = 137.036` (a 2.3% gap) should be treated as a
 **running / dynamical** effect, not the excised static `e^(-2/3)` screening factor — and when you actually run
 the QED coupling, you find the standard flow goes the *wrong way*, so the honest reframe is a **magnetic-vacuum
@@ -81,6 +98,13 @@ anti-screening flow replaces an ad-hoc factor) but does not close the *number*.
   structure (M10-5), and show the IR fixed point lands at `137.036` **without tuning the scale window** — or,
   independently, tighten the geometric winding calc (true aspect ratio, knot-polynomial winding) and see
   whether it moves off `140` toward `137`. Either is a concrete frontier calc; neither is done here.
+
+**Done since (2026-09-10).** Both frontier calcs were run and returned **negative**: the winding integer does
+not move to 137 (137 is prime; the object's real topological levels are `Q_H = 1`, `C = ±2`), and the
+*continuous* winding-to-spin ratio computes to **`ι ≈ 1`**, not 137 (`results/verify/ck_winding_ratio_check.py`),
+while the genericity denominator makes any single `~137` hit unpromotable (`alpha_genericity_check.py`). So this
+frontier is **settled-negative**, not open — see `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`; α's value
+stays `[flag]`.
 
 ## References
 QED running / vacuum polarization: standard (Jegerlehner, hadronic `Δα`; PDG). RG dielectric-flow /

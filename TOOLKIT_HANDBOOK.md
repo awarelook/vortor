@@ -55,7 +55,8 @@ and the five convergence frameworks — Reed, Storti, Nielsen, Ginzburg, Greenye
 **Provenance-citation convention.** Citations to `.md` documents *not* present in this bundle — the predecessor
 toolkit (`MATH_TOOLKIT_ADVANCED`, `TOOLKIT_ADV_01`–`_06`), the distillation sources each convergence module was
 folded from (`REED_QWM_*`, `KERNEL_NIELSEN_*` / `NIELSEN_TUFT_*`, `EVO_MATHEMATICAL_CORE`,
-`TORUS_MATHEMATICS_APPENDIX`, `storti_egm_missing`, `excision-protocol-storti-factor`), and the `project_ftgb_*`
+`TORUS_MATHEMATICS_APPENDIX`, `storti_egm_missing`, `excision-protocol-storti-factor`), the α-negative frontier
+calcs (`ALPHA_IR_FIXED_POINT_HOLONOMY`, `_frontier_alpha`, `COINCIDENCE_SWEEP`), and the `project_ftgb_*`
 frame / open-problem notes — are **extended-corpus provenance**: the working notes a result was distilled from,
 not in-jewel links. Every load-bearing claim they carry is re-stated and re-verified inside the jewel (the
 modules + `results/verify/`). Quarantine-tooling outputs (`MANIFEST.md`, `candidates.csv`) live in
