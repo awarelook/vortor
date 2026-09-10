@@ -740,10 +740,15 @@ mu0) B`, the radiated-current point group is the field's; its azimuthal OAM cont
 `m = 0 (mod 3)`, and the order-24 cubic symmetry lives in the space group's *roto-translations*,
 which do not act on a localized radiator). `N = 3` coincides with the theory's native triad
 (the three CK comb lines; `3-6-9`). The earlier "octahedral order" for the EM channel was a
-symmetry **borrowed from the nucleus** -- corrected here. What remains `[claimed synthesis]`,
-not promoted: that the driven plasmoid's far-field EM emission actually *realizes* this `N=3`
-OAM ladder (Stages 1-3 -- radiation multipoles + the OAM/SAM split -- build on this fixed `N`).
-The QED-vacuum contribution to the effective refractive index is negligible.
+symmetry **borrowed from the nucleus** -- corrected here. The far-field emission then *realizes*
+it: Stages 1-3 (`results/verify/oam_stage123_emission_check.py`) compute that the C3 source
+feeds only `m = 0 (mod 3)` radiation multipoles (machine-zero off-ladder, with the `j_l(kr)`
+radial kernel), so the emitted total-angular-momentum ladder steps by 3 -- and that **spacing
+is robust to the orbital/spin (OAM/SAM) split** (the photon SAM shifts the OAM index `l = m - s`
+by a fixed `+/-1`, never the step). So the `N=3` ladder *spacing* is `[V]`; only the **absolute**
+orbital-vs-spin separation per rung stays `[S]` (limit/gauge-dependent -- the global `L/S` split
+is not gauge-invariant, clean only in the paraxial far zone). The QED-vacuum contribution to the
+effective refractive index is negligible.
 
 *End of Parts B-C. Load-bearing claims foregrounded on peer-reviewed work
 (Chandrasekhar-Kendall, Skyrme, Witten, Battye-Sutcliffe, Barnes-Baskerville-Turok);

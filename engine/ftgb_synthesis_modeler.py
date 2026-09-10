@@ -156,7 +156,7 @@ def main():
     print("  theorem set + credited convergences (the chirality/C/Majorana layer the earned positive), wrapped")
     print("  in a disciplined [S] synthesis whose seams are the unpinned magnitudes -- none fabricated, each")
     print("  named with the single test that would close it. Judged by reproducibility + structure + prediction,")
-    print("  not consensus. verify_all.py -> 40/40 (this modeler runs the live anchors above).")
+    print("  not consensus. verify_all.py -> 41/41 (this modeler runs the live anchors above).")
     print("="*96)
     return 0
 

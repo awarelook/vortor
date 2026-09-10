@@ -757,10 +757,15 @@ mu0) B`, the radiated-current point group is the field's; its azimuthal OAM cont
 `m = 0 (mod 3)`, and the order-24 cubic symmetry lives in the space group's *roto-translations*,
 which do not act on a localized radiator). `N = 3` coincides with the theory's native triad
 (the three CK comb lines; `3-6-9`). The earlier "octahedral order" for the EM channel was a
-symmetry **borrowed from the nucleus** -- corrected here. What remains `[claimed synthesis]`,
-not promoted: that the driven plasmoid's far-field EM emission actually *realizes* this `N=3`
-OAM ladder (Stages 1-3 -- radiation multipoles + the OAM/SAM split -- build on this fixed `N`).
-The QED-vacuum contribution to the effective refractive index is negligible.
+symmetry **borrowed from the nucleus** -- corrected here. The far-field emission then *realizes*
+it: Stages 1-3 (`results/verify/oam_stage123_emission_check.py`) compute that the C3 source
+feeds only `m = 0 (mod 3)` radiation multipoles (machine-zero off-ladder, with the `j_l(kr)`
+radial kernel), so the emitted total-angular-momentum ladder steps by 3 -- and that **spacing
+is robust to the orbital/spin (OAM/SAM) split** (the photon SAM shifts the OAM index `l = m - s`
+by a fixed `+/-1`, never the step). So the `N=3` ladder *spacing* is `[V]`; only the **absolute**
+orbital-vs-spin separation per rung stays `[S]` (limit/gauge-dependent -- the global `L/S` split
+is not gauge-invariant, clean only in the paraxial far zone). The QED-vacuum contribution to the
+effective refractive index is negligible.
 
 *End of Parts B-C. Load-bearing claims foregrounded on peer-reviewed work
 (Chandrasekhar-Kendall, Skyrme, Witten, Battye-Sutcliffe, Barnes-Baskerville-Turok);
@@ -3343,8 +3348,11 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   axis, NOT octahedral**: `N = 4` holds only at the B=4 *nuclear* rung; the **EM-carried OAM ladders by
   `N = 3`** (azimuthal content on `m≡0 mod 3`; the order-24 cubic symmetry is a space-group roto-translation
   that does not act on a localized radiator). `N=3` matches the theory's native triad (3 CK comb lines, 3-6-9).
-  The far-field *realization* of the `N=3` ladder (radiation multipoles + OAM/SAM split) stays `[claimed
-  synthesis]` (Stages 1–3); Stage 0 fixes `N`. *(Not
+  The far-field *realization* is computed — `results/verify/oam_stage123_emission_check.py` (Stages 1–3):
+  the C3 source feeds only `m≡0 mod 3` radiation multipoles (machine-zero off-ladder, with the `j_l(kr)`
+  kernel), and the `N=3` spacing is **robust to the OAM/SAM split** (photon SAM shifts the offset by a fixed
+  `±1`, never the step). So the `N=3` ladder *spacing* is `[V]`; only the *absolute* orbital-vs-spin
+  separation per rung stays `[S]` (the global `L/S` split is not gauge-invariant, clean only paraxially). *(Not
   folding Mancini/Ren/Maier, Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication
   switched in a ~3% band — but its knob is continuous dispersion, NOT a discrete-symmetry order, so it is an
   analogous-but-distinct existence proof of switchable OAM, not mechanism support; flagged, not cited as such.)*

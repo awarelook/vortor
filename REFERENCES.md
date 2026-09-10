@@ -59,8 +59,11 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   axis, NOT octahedral**: `N = 4` holds only at the B=4 *nuclear* rung; the **EM-carried OAM ladders by
   `N = 3`** (azimuthal content on `m≡0 mod 3`; the order-24 cubic symmetry is a space-group roto-translation
   that does not act on a localized radiator). `N=3` matches the theory's native triad (3 CK comb lines, 3-6-9).
-  The far-field *realization* of the `N=3` ladder (radiation multipoles + OAM/SAM split) stays `[claimed
-  synthesis]` (Stages 1–3); Stage 0 fixes `N`. *(Not
+  The far-field *realization* is computed — `results/verify/oam_stage123_emission_check.py` (Stages 1–3):
+  the C3 source feeds only `m≡0 mod 3` radiation multipoles (machine-zero off-ladder, with the `j_l(kr)`
+  kernel), and the `N=3` spacing is **robust to the OAM/SAM split** (photon SAM shifts the offset by a fixed
+  `±1`, never the step). So the `N=3` ladder *spacing* is `[V]`; only the *absolute* orbital-vs-spin
+  separation per rung stays `[S]` (the global `L/S` split is not gauge-invariant, clean only paraxially). *(Not
   folding Mancini/Ren/Maier, Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication
   switched in a ~3% band — but its knob is continuous dispersion, NOT a discrete-symmetry order, so it is an
   analogous-but-distinct existence proof of switchable OAM, not mechanism support; flagged, not cited as such.)*
