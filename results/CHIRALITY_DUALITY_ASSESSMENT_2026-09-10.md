@@ -27,6 +27,23 @@ object. Charge conjugation / parity flips `λ → −λ` and hence `H → −H`.
 half-there content in `electron.html` made explicit and reproducible. It is falsifiable in principle: any
 process that distinguishes the object's antiparticle from its `−λ` mirror would break it.
 
+## 2b. The chirality flip **is** charge conjugation C — computed
+
+Does flipping the chirality drag the *charge* with it? Tested on the same fields
+(`results/verify/charge_conjugation_check.py`) by how three quantities behave under the mirror `λ → −λ`:
+
+| under the mirror (λ → −λ) | quantity | behavior |
+|---|---|---|
+| **mass** | energy `E = ⟨\|u\|²⟩` (parity-even) | `+3.000 → +3.000` — **unchanged** |
+| **chirality** | helicity `H = ⟨u·curl u⟩` (parity-odd) | `+3.000 → −3.000` — **flips** |
+| **charge/precession** | Reed frame-closure torsion holonomy `∫τ ds` | `−96.73 → +96.73` (ratio **−1.000**) — **flips** |
+
+So the mirror **keeps the mass but reverses chirality *and* the Reed torsion-defect/precession sign together**
+— which is exactly **charge conjugation C** (same mass, opposite charge/handedness). The chirality `sign(λ)`
+*drags* the charge/precession sign: **chirality → C, tied concretely** `[S, computed]`. This makes "antiparticle
+= opposite chirality" and "antiparticle = opposite charge" the *same* statement for this object, not two
+separate assertions — and it uses Reed's torsion as the frame-closure holonomy it is (§4), not as anything else.
+
 ## 3. The duality angle — now tied to a computed quantity, not analogy
 
 Previously flagged `[framework]/analogy "until tied to something computed."` It is now tied: define the
@@ -67,7 +84,8 @@ it as a derivation** — on the math (genericity), not on anyone's approval.
 ## 6. What works vs what doesn't — the honest ledger, by test
 
 - **WORKS `[credited]`:** chirality = `sign(λ)` = `sign(H)` (exact identity, §1).
-- **WORKS `[S]`/`[V-def]`:** antiparticle = `−λ` mirror (§2); duality angle = `θ_χ` (§3, computed).
+- **WORKS `[S]`/`[V-def]`:** antiparticle = `−λ` mirror (§2); the chirality flip **is** charge conjugation C
+  — mass fixed, chirality and the Reed torsion-defect flip together (§2b); duality angle = `θ_χ` (§3, computed).
 - **REAL but distinct `[credited concept]`:** Reed torsion = frame-closure holonomy, `O(0.1 rad)` (§4) — not EC.
 - **FEATURE `[flag]`:** the `ω_C/ω_p` hierarchy (§5) — explain, don't derive-from.
 - **FAILS a math test:** α from winding / large-number ratios — beaten by the genericity denominator
