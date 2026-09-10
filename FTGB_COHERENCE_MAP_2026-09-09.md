@@ -62,9 +62,12 @@ The frameworks converge because they share the **same five invariants of the one
 - **`[S]` (honest hypothesis):** the *one-object-across-scales* claim; the driven-closure leaning-`[V]`; the
   aneutronic partition mechanism; the five framework readings (Reed/Storti/Nielsen/Ginzburg/Greenyer), all
   method/analogy.
-- **`[flag]` / excised:** the exact `α` value — reframed as a **dynamical running / IR-fixed-point** question
-  (`ALPHA_DYNAMICAL_REFRAME`): standard QED running goes the *wrong way*, so the coherent reframe is a
-  **magnetic-vacuum anti-screening** flow to `137.036`, principled but not parameter-free; `e^(-2/3)` stays out.
+- **`[flag]` / excised:** the exact `α` value. The dynamical-running reframe (`ALPHA_DYNAMICAL_REFRAME`) is
+  quantitatively insufficient (running is zero at `m_e`; can't cover 2.3%), and the winding/holonomy derivation
+  is now a **settled NEGATIVE** (`ALPHA_RESOLUTION_ASSESSMENT_2026-09-10`, reproduced by
+  `verify/alpha_genericity_check.py`): 137 is prime, the object's real levels are `Q_H=1`/`C=±2` (not 137), and
+  near-misses are generic — so **"winding ≈ 1/α" survives only as a suggestive analogy, not a derivation**;
+  `e^(-2/3)` stays excised.
 - **`open`:** R2/R3 *unconditional* (prove `⟨δ²⟩^{1/2}≲1/Re` at the object's Reynolds; the Hall `Pm≠1`
   coupled Lyapunov functional); **Δ** (the B=4 Landau–Zener gap, HPC-only); a first-principles `α` fixed point.
 

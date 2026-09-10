@@ -1,103 +1,94 @@
-# α resolution assessment — can "winding = 1/α" be made parameter-free?
+# α resolution assessment — is "winding = 1/α" derivable? (the test has been run: NO)
 
-**Date:** 2026-09-10 · **Tier:** `[S]`/`[flag]` throughout; nothing promoted; `e^(-2/3)` stays excised.
+**Date:** 2026-09-10 · **Tier:** `[flag]`/**settled-negative**; nothing promoted; `e^(-2/3)` stays excised.
 **Question (from the state-vs-ambition review):** α is the load-bearing pillar — if "whirl count = 1/α"
-can't be made parameter-free, the matter-wave layer never rises above `[S]`. This assesses the resolution
-in principle across the theory's own layers — **ratio, EM, magnetic winding, EM torsion, vacuum/medium,
-resonator, flux / Navier–Stokes** — and says honestly which routes are principled, which are numerology,
-and where the real obstruction sits.
+can't be made parameter-free, the matter-wave layer never rises above `[S]`.
 
-Grounded in `results/verify/alpha_running.py` (direction) and `results/verify/alpha_scale_headroom_check.py`
-(magnitude), both reproducible.
+**Answer, corrected 2026-09-10:** the decisive test — *does a physics-selected winding/holonomy invariant
+of the CK/Hopf object equal 137.036 without a tuned integer?* — **has already been run in the extended corpus,
+more thoroughly than a single A-recompute, with a genericity control, and it returns a clean NEGATIVE.** An
+earlier draft of this file proposed the test as still-open; that was wrong, and this version corrects it. The
+running/scale analysis below (§1) still stands and complements the negative; the routes (§2) are annotated with
+their actual results; the verdict (§4–5) is **settled-open**, not "open to try."
+
+Grounded in: `results/verify/alpha_running.py` (direction), `results/verify/alpha_scale_headroom_check.py`
+(magnitude), `results/verify/alpha_genericity_check.py` (the anti-numerology denominator, reproduced in-jewel),
+and the extended-corpus `ALPHA_IR_FIXED_POINT_HOLONOMY_2026-09-08` / `_frontier_alpha_2026-09-08` (Derivation C).
 
 ---
 
-## 1. The honest relocation: the gap is a SKELETON error, not a dynamical one
+## 1. The gap is a SKELETON error, not a dynamical one (still valid)
 
-The current reframe (α's 2.3% miss as a *dynamical running / IR-fixed-point*) is **quantitatively dead for
-this gap**, for two independent reasons now both computed:
+The "α as dynamical running" framing is quantitatively dead for this gap, two independent ways:
 
-- **Direction** (`alpha_running.py`): standard QED *screens* — `α⁻¹` decreases from its IR ceiling
-  `137.036` as energy rises; `140.2` sits *above* the ceiling, so no standard scale reaches it. Closing the
-  gap needs *anti-screening* (paramagnetic / non-Abelian sign).
-- **Magnitude** (`alpha_scale_headroom_check.py`): even granting the anti-screening sign, the running has
-  **zero headroom at the electron's own scale** (`α⁻¹(m_e) = 137.036` exactly — no charged particles below
-  `m_e` to polarize the vacuum), and covering 2.3% at a QED-strength β needs **~6 decades** of running, while
-  the object's *natural* EM window (`λ_C / r_e = 1/α`, ~2.1 decades) supplies only **0.76% — ~3× too short**.
+- **Direction** (`alpha_running.py`): QED *screens* — `α⁻¹` only decreases below its IR ceiling `137.036`;
+  `140.2` sits *above* the ceiling, so no standard scale reaches it. Closing it needs exotic *anti-screening*.
+- **Magnitude** (`alpha_scale_headroom_check.py`): zero running headroom at `m_e` (`α⁻¹(m_e)=137.036` exactly);
+  covering 2.3% at QED-strength β needs **~6 decades**; the object's natural EM window supplies only 0.76%
+  (~3× short).
 
-So the 2.3% cannot come from dynamics at the electron scale. Decompose honestly:
+So the 2.3% is not dynamics: `1/α = 137.036 = [137 integer skeleton] + [0.036 fraction]`, and the winding gives
+140.2 — the whole error is in the **integer skeleton (140 vs 137)**. Resolution would mean the winding integer
+coming out 137 from the geometry. §2–§3 test exactly that.
 
-> `1/α = 137.036 = [137: integer topological skeleton] + [0.036: a 0.026% fraction]`
+## 2. Route-by-route — with the actual test result on each
 
-The winding gives **140.2 → the whole error is in the integer skeleton (140 vs 137, 2.3%)**. The `0.036`
-fraction is where a tiny vacuum/geometric correction legitimately lives; the skeleton error is ~90× larger
-than that fraction and ∞× larger than the sub-`m_e` running (which is zero). **Resolution therefore means
-making the winding integer come out 137, not 140, from the self-consistent geometry — not running it there.**
+| Route | α would be | Result |
+|---|---|---|
+| **magnetic winding** | a linking / rotational-transform integer | **TESTED → NEGATIVE.** 137 is **prime**, so no nontrivial poloidal×toroidal winding `p·q` gives it at *any* aspect ratio; the object's real topological levels are **Hopf `Q_H=1`** and **Chern `C=±2`** — neither is 137. (`alpha_genericity_check.py` §2; HOLONOMY §2.) |
+| **EM torsion** (Reed `dθ=2πα`) | `α = anholonomy/2π` (a Berry phase) | **TESTED → NEGATIVE.** The whirl/spin frequency ratio is `ω_C/ω_p ≈ 4.4×10⁹`, not 137; `dθ=2πα` has **α inserted by hand** — a relabel, not a holonomy computation. (Derivation C §3c; HOLONOMY §5 torque-harmonics.) |
+| **ratio** | a dimensionless ratio of two invariants | **NEGATIVE by genericity.** ~5 sub-0.5% hits near 137.036 from the object's real constants — *comparable to control targets* (`alpha_genericity_check.py` §1; HOLONOMY §3: 18 vs 12). Any single hit is numerology. |
+| **flux / Navier–Stokes (two-fluid)** | ratio of the canonical vorticity's `B` and `d_i ω` parts | **Not separately computed, but subsumed:** it is a ratio of the same plasma constants (frequencies ~`10⁹`, not 137) and falls under the genericity denominator. No reason to expect 137. |
+| **vacuum / medium (`K_PV`)** | a dielectric renormalization | right home for the tiny `0.036`; **useless for the skeleton** (§1). And the flow has **no forced IR fixed point** — only the trivial Gaussian one; 137 is a threshold freeze-out (integration constant), not `β=0`. (HOLONOMY §1.) |
+| **EM** (`α=r_e/λ_C`) / **resonator** | self-energy / mode ratios | **circular** — restate `r_e/λ_C = α`; the CK ladder gives O(1) roots, 137 only by tuning the free `n_Ω`. |
 
-## 2. Route-by-route — principled vs numerology, and the obstruction in each
+**Every route is negative or circular.** The two that looked most principled in the first draft — magnetic
+winding and EM-torsion holonomy — are precisely the ones the corpus tested and refuted.
 
-| Route (your list) | What α would be | Principled? | Obstruction / verdict |
-|---|---|---|---|
-| **ratio** | a dimensionless ratio of two energies/actions of the object | yes, but empty alone | α *is* a ratio (Coulomb/quantum energy); naming it a ratio restates, doesn't derive. Needs an independent invariant fixing the ratio to 137. |
-| **EM** | `α = r_e/λ_C` (classical radius / Compton) | **circular** | `r_e ≡ α λ_C` *by definition* — the EM-self-energy ratio *is* α tautologically. No derivation without an independent scale law. |
-| **magnetic winding** | a linking / rotational-transform / Hopf self-linking integer | **most principled skeleton** | a genuine integer topological invariant of the Beltrami–Hopf field — but generic Hopf linking is 1, not 137; must identify *why* the electron's self-linking is 137, from force-free closure, **without tuning the aspect ratio**. |
-| **EM torsion** (Reed `dθ=2πα`) | `α = (anholonomy defect of the transport)/2π` | **cleanest calculation** | a well-defined geometric (Berry) phase of parallel transport around the whirl loop — no free knobs once geometry is fixed. But generic anholonomy is O(1); needs a *nearly-closed* transport with a `1/137` slip. No guarantee it lands there. |
-| **vacuum / medium (`K_PV`)** | a dielectric renormalization of a bare coupling | right home for `0.036`, **not the skeleton** | §1: wrong direction + ~3× too short at the natural scale. A QCD-like *paramagnetic* magnetic vacuum is the correct *idea* for the tiny fraction, useless for 2.3%. |
-| **resonator / mode-count** | a mode number `n_Ω` or eigenfrequency ratio | **tuned / circular** | the CK ladder gives O(1) roots, not 137; a mode-count hitting 137 requires tuning the free closure `n_Ω` (flagged in M11-6/M11-7). A 1-D count between `λ_C` and `r_e` gives `1/α` — but that is `r_e/λ_C=α` again. |
-| **flux / Navier–Stokes (two-fluid)** | a ratio of quantized magnetic flux to mechanical circulation | **novel, worth computing** | the R3 canonical vorticity `Ω = B + d_i ω` literally couples magnetic flux (`h/e`) and mechanical circulation (`h/m`); the ratio of its two terms at the electron scale carries `e`. A candidate for α that ties it to machinery *already in the jewel* (R3). Uncomputed. |
+## 3. Why the "recompute at A = φ" move is moot
 
-**Reading the table.** Four routes collapse on inspection: **EM** and **resonator** are circular (they restate
-`r_e/λ_C = α`); **ratio** is empty without an invariant; **vacuum/medium** is the wrong magnitude and direction
-for the skeleton (though it is the correct, tiny home for the `0.036`). Three are genuinely open and principled:
-**magnetic winding** (a topological integer), **EM torsion** (a geometric-phase defect), and **flux/two-fluid**
-(a canonical-vorticity ratio). These are the only routes that could, in principle, make α parameter-free.
+The first draft's headline test — "recompute the winding at the theory's own aspect ratio `A = φ` instead of the
+flagged `A = 9`" — does **not** rescue it, for a reason independent of A: **137 is prime and the object's real
+topological invariants are 1 and 2.** Changing A changes a continuous geometric factor; it cannot turn a
+topological count of 1 or 2 into 137, and it cannot make a prime factor as a nontrivial `p·q` winding. The
+genericity sweep already *includes* `ε = 1/φ` among the object's constants and finds nothing non-generic near
+137. So the A=φ recompute would only add one more generic near-miss to a settled negative. (It was still right
+to strip the tuned `A = 9` from the plasmoid-aspect row — see `EXPERIMENTAL_CONFRONTATION` §7 — but that is a
+geometry-honesty fix, not a path to α.)
 
-## 3. The one concrete, cheap falsification test available now
+## 4. What would flip the negative to `[V]` — and why it is not expected
 
-The current `q_geom = 140.2` uses **aspect ratio `A = 9.0`** — but that `A` is itself a *flagged, tuned* input
-from the α exercise, and it **contradicts the theory's own core geometry** (`ε = 1/φ`, i.e. `A ≈ 1.618`, from the
-cabled-nesting result; the FreeFEM solve gives `ε ≈ 0.697`). The winding is `A`-dependent, so the honest test is:
+For "winding = 1/α" to become a derivation (per the corpus success-criteria), one would need **all** of:
 
-> Compute the Beltrami–Hopf **rotational transform / self-linking at the theory's OWN self-consistent aspect
-> ratio** (`A = φ` or the force-free-closure value), with `A` **not** free. Whatever integer it yields is the
-> parameter-free prediction. If it is 137 → the winding pillar is vindicated. If it is 140, or 3, or anything
-> else → the winding picture is **falsified**, honestly, and "winding = 1/α" drops to analogy.
+1. **137 as an integer LEVEL the theory carries** (a genuine Chern–Simons level or linking the object
+   possesses), reproduced in **≥2 independent routes** with **no post-hoc integer**. Present real levels are
+   `C=±2`, `Q_H=1`; 137 is prime and absent.
+2. A **derived bridge** explaining why a *static* topological count should equal the *q²→0 limit of a running
+   renormalized coupling* (the category mismatch). None exists.
+3. Either a **derived interacting IR fixed point** whose value is fixed by the object's topology with **zero
+   free medium parameters** (currently any such FP value is a free ratio `a/c`), or an **RG limit cycle**
+   (Efimov-like discrete scale invariance) that could single out a value (QED one-loop has none).
 
-This needs the actual `q_geom(A, λ)` winding formula (it lives in the extended-corpus excision notes, not the
-jewel) — a small, reproducible calculation, no HPC. It is the single highest-value α step: it either resolves
-the skeleton or kills the claim, and it removes the tuned `A = 9` that the experimental confrontation already
-flagged (`results/EXPERIMENTAL_CONFRONTATION_2026-09-10.md` §7).
+The corpus judges each "not expected from the current geometry," and the genericity denominator makes any
+single numeric hit (e.g. Wyler `4π³+π²+π`, +2×10⁻⁴%) unpromotable — it is mechanism-free with three free
+coefficients.
 
-## 4. The resolution program (what parameter-free α would actually require)
+## 5. Honest bottom line
 
-1. **Fix the electron's geometry with no free knob** — aspect ratio from force-free closure + a quantization
-   condition (the theory's own `ε = 1/φ`, or a Beltrami self-linking quantization), *not* `A = 9`.
-2. **Compute the topological winding integer** (rotational transform / Hopf self-linking) at that geometry →
-   it must be **137** (an integer), by one of {magnetic winding, EM-torsion holonomy}.
-3. **Account for `0.036`** as the small geometric/vacuum correction (here the `K_PV` paramagnetic-vacuum idea
-   is legitimate — it is a 0.026% effect, the right size).
-4. **The flux/two-fluid route** (`Ω = B + d_i ω`) is the most novel cross-check: derive α from the ratio of the
-   canonical vorticity's magnetic and mechanical parts, tying it to R3.
+- **α is SETTLED-OPEN — a well-posed NEGATIVE, not an untried "maybe."** "Whirl count = 1/α" is an **asserted
+  relabel / analogy**, not a computation: no invariant of the object lands on 137.036 better than a generic
+  near-miss; 137 is prime and the object's real levels are 1 and 2; the whirl/spin ratio is ~10⁹; and it is a
+  category error (topological count vs running coupling). This is the expected outcome for a famous open
+  problem, reached cleanly with an anti-numerology control — a **success-criterion negative**, not a failed hunt.
+- **Consequence for the theory:** the matter-wave layer's α-pillar stays `[flag]` — **permanently, absent a
+  genuinely new mechanism** (§4). "α ≈ 137 as a winding number" survives only as a *suggestive analogy* (a
+  layer of the coherence map, tier `[flag]`), never a load-bearing derivation.
+- **What this does NOT touch:** the `[V]` plasma / topological-fluid core (the current-leg trilogy, R2/R3), the
+  reproducible toolkit, and the falsifiable experimental program all stand independently of α. Honestly closing
+  α as negative *strengthens* the jewel — it converts a tempting overclaim into a disciplined, cited, reproducible
+  no.
 
-If steps 1–2 give 137 without tuning, α is resolved to the skeleton and the matter-wave layer can rise to
-`[V-structure]`. If they do not, the honest outcome is that "winding ≈ 1/α" is a **suggestive analogy, not a
-derivation**, and the layer stays `[S]` permanently — which the theory must be willing to accept.
-
-## 5. Honest bottom line / risk
-
-- **`137.036` is a measured IR coupling with a non-integer part**, not obviously a geometric integer. The
-  history of "geometric 137" (Eddington `136→137`, Wyler) is a graveyard of numerology; the project's own
-  anti-numerology bar (0.5% promotion gate, the genericity denominator, the `e^(-2/3)` excision) is the correct
-  guard and it currently, correctly, keeps α at `[flag]` (139 and 140 are as "close" to `q_geom` as 137).
-- **The reframe was aimed at the wrong target.** "Dynamical running" cannot supply a 2.3% *skeleton* error;
-  the assessment relocates the whole problem to the **topological winding integer**, and identifies the three
-  routes (magnetic winding, EM-torsion holonomy, flux/two-fluid) that could in principle deliver it.
-- **The cheapest decisive move is §3**: recompute the winding at the theory's *own* aspect ratio, with `A` not
-  free. It is a falsification test, not a fitting exercise — and it retires the tuned `A = 9`.
-- **α may remain open.** That is an acceptable, honest outcome; it would fix the matter-wave layer at `[S]`
-  without discrediting the `[V]` plasma core, the toolkit, or the falsifiable program.
-
-*Provenance: `results/verify/alpha_running.py` (direction), `results/verify/alpha_scale_headroom_check.py`
-(magnitude), `results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`, `results/EXCISION_LEDGER.md` (the `e^(-2/3)`
-excision), `results/EXPERIMENTAL_CONFRONTATION_2026-09-10.md` §7 (the `A=9` vs `A=φ` flag). No value promoted;
-`e^(-2/3)` stays excised; every route carries its tier.*
+*Provenance: `results/verify/{alpha_running, alpha_scale_headroom_check, alpha_genericity_check}.py`;
+extended-corpus `ALPHA_IR_FIXED_POINT_HOLONOMY_2026-09-08.md`, `_frontier_alpha_2026-09-08.md` (Derivation C),
+`COINCIDENCE_SWEEP_2026-09-08.md` (genericity methodology); `results/EXCISION_LEDGER.md` (`e^(-2/3)` excised),
+`results/EXPERIMENTAL_CONFRONTATION_2026-09-10.md` §7 (the `A=9` vs `A=φ` flag). No value promoted.*
