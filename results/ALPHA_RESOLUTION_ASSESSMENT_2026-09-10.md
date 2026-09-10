@@ -101,6 +101,29 @@ coupling strength (the deep, shared, unsolved QED question), α-proportional in 
 restates it. FTGB's correctly-typed, honest program is to **derive `g = 2` from the soliton** `[S]`; α's
 *value* stays `[flag]`. The winding-*count* route (§2–§3b) is separately settled-negative (`ι ≈ 1`).
 
+## 3d. Attempted — does the soliton give g = 2? (offered as "winnable"; honestly it isn't)
+
+§3c named "derive g = 2 from the soliton" as the correctly-typed forward step. Running it
+(`results/verify/g_factor_soliton_check.py`) corrects that over-optimism:
+
+- **The naive Reed photon-ring / circulating-charge picture gives `g = 1`, not 2** — robustly
+  (R-, v-, model-independent): `μ = qvR/2` and `S = pR` share the same `q·v·R` scaling, so `μ/S = q/2M`
+  and `g = 1`. Any classical soliton current with charge and mass co-distributed gives `g = 1`.
+- **`g = 2` is the Dirac value** — it comes from minimal coupling of a *first-order spinor* (Dirac) field
+  (the `(σ·p)²` structure), and the measured `g = 2.0023… = 2 + α/π + …` sits on top of it. A classical
+  current loop does not reproduce the factor of 2; relativistic "hidden-momentum" treatments that argue for
+  `g = 2` are model-dependent, not robust.
+- **What the topology *does* deliver — spin-½ `[credited]`.** A Hopf soliton with a Hopf / Wess–Zumino term
+  at `θ = π` is quantized as a **spin-½ fermion** (Wilczek–Zee 1983; Finkelstein–Rubinstein 1968). So FTGB can
+  honestly carry "the object is a spin-½ fermion" from its Hopf topology — but **spin-½ ≠ g = 2**: a spin-½
+  soliton/anyon can have `g ≠ 2`; the g-factor is a separate dynamical quantity fixed by the coupling.
+
+**Verdict:** `g = 2` is **not** cleanly winnable from the geometry — the naive soliton gives `g = 1`, and
+`g = 2` requires the object's quantization to reproduce a minimally-coupled Dirac equation (the same
+quantum/spinor structure α needed). The "g = 2 winnable `[S]`" offer was too optimistic. The real, foldable
+positive is narrower and honest: the Hopf topology gives **spin-½** `[credited]`; `g = 2` stays `[S]`/open,
+in the same difficulty class as α itself.
+
 ## 4. What would flip the negative to `[V]` — and why it is not expected
 
 For "winding = 1/α" to become a derivation (per the corpus success-criteria), one would need **all** of:
