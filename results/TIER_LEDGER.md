@@ -5,6 +5,16 @@ for every `[S]`/`[flag]`/`open` item, **what would resolve it** and its **honest
 proof" answered straight — resolving what is resolvable, and stating plainly what is *not* provable here (and
 why fabricating it would violate the discipline). Every row cites a `results/verify/` script or a hand-off.
 
+**Inclusion & validity policy (governance).** The jewel is a **new** theory, judged by its own
+*reproducibility, prediction, internal consistency, and alignment with results* — **not** by consensus or
+comparison to other theories. What the jewel carries: (1) **`[V]`/locked** promoted; (2) **hypothesis-to-test**
+and **reasonable-frontier** kept at their tier (incl. the `[speculative frontier]` doc
+`SPECULATIVE_FRONTIER_MICROTUBULE_HOLOGRAPHY_2026-09-10.md`, firewalled from the `[V]` core); (3)
+**coincidences/numerology preserved as CLUES**, computed and logged in `COINCIDENCE_LEDGER.md` (everything is
+connected — a clue may later lead somewhere). What is removed: **only superseded or inaccurate** content
+(`e^(-2/3)`, `E_fm=2.5 MeV`, the α-winding-derivation). Nothing is excluded for lacking consensus; the bar is
+*testable meaning + structure + reproducibility*.
+
 ---
 
 ## 1. The solid core — `[V]` proven here / `[credited]` established
