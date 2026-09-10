@@ -79,6 +79,13 @@ The frameworks converge because they share the **same five invariants of the one
 | Plasmoid **aspect ratio A ≈ 9.0** | 1, 3 | a clustered A far from 9 |
 | Transmutation products **on the Skyrme/Nielsen lattice**, `ΣB` conserved | 6 | off-lattice / baryon-non-conserving ash |
 
+> **Confronted with data (2026-09-10):** `results/EXPERIMENTAL_CONFRONTATION_2026-09-10.md` checks each row
+> against the published record. Most are **UNTESTED** (live targets); He-4/heat and aneutronic suppression are
+> **CONSISTENT with a contested anomaly** (accounted-for, not confirmed); the **aspect-ratio row is in TENSION**
+> and, on inspection, mis-sourced (it should read `A ≈ φ`, the theory's own core value, not the flagged
+> α-winding `A ≈ 9`); the neutrino is **open, decidable ~10 yr**, but the repo disagrees with itself on
+> Majorana vs Dirac. The confrontation's chief value was catching two internal contradictions.
+
 ## 5. The bottom line
 
 **One object, seven layers, five frameworks, one convergence.** The plasma/topological-fluid **core is a
