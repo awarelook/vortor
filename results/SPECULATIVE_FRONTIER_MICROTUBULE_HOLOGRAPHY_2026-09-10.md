@@ -68,11 +68,18 @@ is literally a hologram.
    > borne out — the ratios (2.44, 5.14, 2.02) are mixed with large gaps (sub-bands, not one cavity), and
    > `22/9 = 2.44 ≈ 2.427` is a **lone generic near-miss** (0.7%), not a consistent comb. The authors' own
    > **"fractal / scale-free"** characterization (kHz–THz) instead points at FTGB's **N^L cascade** layer
-   > ("fractal-toroidal-beat", M14 Greenyer), a *different* structure from the single-cavity comb. **Refined
-   > (still-open) test:** are the microtubule *bands* spaced by a cascade base `N` (golden `φ` or `4`)? —
-   > needs the full multi-band peak list (not reliably extracted this pass, `[flag: provenance-limited]`).
-   > This is a computed, logged frontier-check: not a `[V]` result, not a refutation of the theory (whose
-   > `[V]` core is scale-independent), and honestly non-confirming on the single-comb form.
+   > ("fractal-toroidal-beat", M14 Greenyer). **Cascade test now RUN** (Ghosh/Sahu/Bandyopadhyay 2020: bands
+   > at 1–40 Hz, kHz, MHz, GHz — a **triplet-of-triplet** with *equally-spaced* sub-peaks, self-similar over
+   > ~12 orders): the band-to-band spacing is **×1000 (decades)**, and `log_φ(1000)=14.35`, `log_4(1000)=4.98`
+   > (4⁵=1024 is 2.4%, fails the 0.5% gate) — so the microtubule bands do **NOT** scale by the golden `φ` or
+   > `4` cascade base either, and the within-band triplets are **arithmetic**, not CK-inharmonic. **Net: both
+   > FTGB spectral signatures (CK comb *and* φ/4 cascade) test NEGATIVE.** What survives is only the
+   > **general principle** — a self-similar, scale-free, near-field biological resonance — matching the
+   > fractal-toroidal-beat *idea* at the level of *kind*, not *number*. The microtubule's decade-self-similar
+   > triplet-of-triplet is its **own** organizing principle. (One unforced lead: is the triplet-of-triplet a
+   > nested **three-wave triad**, M14? — flagged, not claimed.) A computed, logged, *non-confirming* frontier
+   > check: not `[V]`, not a refutation (the `[V]` core is scale-independent). The remaining tests (§3.2
+   > helicity, §3.3 near-field falloff) need lab measurements.
 2. **Single-λ (chiral) coherence.** The resonance should be **single-helicity/chiral** (one handedness
    dominant), detectable as circular-dichroism / helicity asymmetry in the resonant response.
 3. **Near-field, non-radiating coupling.** Coupling between microtubules/neurons should be **near-field
@@ -105,6 +112,29 @@ frontier's sharpest open question, and it is stated, not hidden.
   because coincidences/connections are kept as clues — but it carries **no** `[V]` weight and makes no
   numerical claim. Any scale-bridge would have to pass the same reproducibility/prediction bar as everything
   else.
+
+## 5b. The Bandyopadhyay GML/FIT connection — method converges, numbers diverge `[S] / [speculative frontier]`
+
+Anirban Bandyopadhyay's framework (Geometric Musical Language, Fractal Information Theory, Phase Pattern
+Metric, the "Self-Operating Mathematical Universe" SOMU, and Nanobrain) is the natural home of the
+microtubule work. Stripped to its physics core (as the project lead laid out), **GML/FIT is a multi-scale
+coupled-oscillator model with phase-locking `Ψ = mθᵢ − nθⱼ` tracked on an `N`-torus** — quasiperiodic
+drift vs phase-lock vs mode-switch. Two honest findings:
+
+- **Genuine convergence at the METHOD level `[S]`.** That *is* FTGB's own dynamics layer. `engine.comb_lock`
+  runs exactly this — Adler/Kuramoto phase oscillators at the CK-ratio comb with lock variables `7θ₀−4θ₁`,
+  `5θ₀−2θ₂` and Arnold-tongue capture. FTGB's "beat / comb-lock / near-Beltrami" dynamics and GML's
+  "nested phase-clocks / PPM on a torus" are the **same mathematics** (coupled oscillators, rational-ratio
+  resonance, phase-locking on `Tⁿ`). This is a real, useful bridge — a shared analysis language.
+- **Divergence at the NUMBER level (computed, §3.1 / `microtubule_ck_comb_test.py`).** The microtubule
+  triplet-of-triplet is a **base-`N=3`** (1:3:9) integer/geometric cascade — **not** the CK inharmonic comb
+  and **not** FTGB's golden-`φ` or `N=4` cascade. FTGB's **M14 triad-dichotomy** even makes this a
+  *prediction*: `φ` (`N²=N+1`) is the *unique* self-phase-matching base, integer bases cannot — so FTGB reads
+  the 1:3:9 as a **driven/harmonic** ternary hierarchy, not a self-organizing golden coherence.
+- **Tier discipline on the broad claims.** GML/FIT's phase-dynamics core is `[S]` (shared method). The wide
+  SOMU / "reality is self-operating nested mathematics" / consciousness-substrate claims are
+  **`[speculative frontier]`**, recorded as connective conjecture, **not adopted** and carrying no `[V]`
+  weight — exactly the placement the inclusion policy prescribes.
 
 ## 6. Status and placement
 

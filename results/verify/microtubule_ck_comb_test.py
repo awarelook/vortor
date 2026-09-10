@@ -53,13 +53,51 @@ band_span = peaks[-1]/peaks[0]
 print("  within-band (MHz) span 9->228 = %.1fx ; ln(span)/ln(phi)=%.2f (not a clean integer) -- inconclusive"
       % (band_span, np.log(band_span)/np.log((1+np.sqrt(5))/2)))
 
+banner("4) REFINED cascade test: do the bands scale by the FTGB base N (golden phi or 4)?")
+phi = (1+np.sqrt(5))/2
+# reported band structure (Ghosh/Sahu/Bandyopadhyay 2020): resonance bands at 1-40 Hz, 1-40 kHz,
+# 1-40 MHz, 1-40 GHz -> band-to-band spacing = x1000 (decades); within each band a "triplet-of-triplet"
+# with "equally spaced" (ARITHMETIC) sub-peaks; self-similar across ~12 orders of magnitude.
+band_ratio = 1000.0
+print("  reported band-to-band spacing (Hz->kHz->MHz->GHz) = x%.0f (decades)" % band_ratio)
+print("  FTGB cascade base candidates: N=phi=%.4f, N=4. Does x1000 = N^k for integer k?" % phi)
+print("     log_phi(1000) = %.2f  (not integer -> NOT a golden cascade step)" % (np.log(band_ratio)/np.log(phi)))
+print("     log_4(1000)   = %.2f  (4^5=1024 is 2.4%% off 1000 -> fails the 0.5%% gate; and 1000=10^3 is a" %
+      (np.log(band_ratio)/np.log(4)))
+print("                    DECADE scan structure, not a power of 4) -> NOT a Nardi cascade step either")
+print("  within-band sub-peaks are reported EQUALLY SPACED (arithmetic) -> neither CK-inharmonic nor phi/4-geometric")
+print("  -> the microtubule spectrum is a DECADE-self-similar triplet-of-triplet: its OWN organizing")
+print("     principle, matching neither the CK comb (sec.2) nor the FTGB phi/4 cascade base.")
+
+banner("5) the triplet-of-triplet is 1:3:9 (base N=3) + the GML/FIT method IS FTGB's comb-lock")
+N_mt = 3.0   # Bandyopadhyay GML: triplet-of-triplet = 1:3:9(:27), an integer/geometric cascade base 3
+for base, name in [(phi,"phi (golden)"), (4.0,"4 (Nardi)"), (2.718281828,"e")]:
+    print("  microtubule cascade base N=3  vs  FTGB base %-12s: %s" %
+          (name, "MATCH" if abs(N_mt-base)/base < 0.005 else "no (%.1f%% off)" % (abs(N_mt-base)/base*100)))
+print("  -> N=3 is a clean INTEGER cascade, distinct from CK-inharmonic and from the golden/4 FTGB bases.")
+print("  M14 triad-dichotomy PREDICTION (Greenyer): phi (N^2=N+1) is the UNIQUE self-phase-matching base;")
+print("  INTEGER bases (N=3) cannot phase-match (N^i - N^j != -1 mod N). So FTGB predicts the microtubule")
+print("  1:3:9 is a DRIVEN/harmonic ternary hierarchy, NOT a self-organizing golden coherence -- testable.")
+print("  METHOD CONVERGENCE (genuine, [S]): GML/FIT = multi-scale coupled oscillators with phase-locking")
+print("  Psi = m*theta_i - n*theta_j on an N-torus. That IS FTGB's own dynamics layer -- engine.comb_lock")
+print("  runs exactly this (Adler locks 7*th0-4*th1, 5*th0-2*th2; Arnold tongues). Same mathematics; the")
+print("  frameworks converge at the phase-dynamics METHOD level even where the specific NUMBERS differ.")
+
 banner("VERDICT (logged as a clue, [speculative frontier / contested data])")
-print("  Prediction #1 CK-comb (1:1.719:2.427) is NOT borne out by the four reported microtubule MHz peaks")
-print("  (mixed ratios; one generic near-miss). The authors' own 'fractal/scale-free' characterization")
-print("  points instead to the theory's N^L CASCADE layer, not the single CK comb -- a refined, still-open")
-print("  hypothesis needing the full multi-band peak list. Honest outcome: the sharpest microtubule")
-print("  prediction, when tested against available data, does NOT confirm and REDIRECTS to the cascade.")
-print("  This is a computed, logged frontier-check -- NOT a [V] result, NOT a refutation of the theory")
-print("  (whose [V] core is scale-independent), and the data is contested + provenance-limited.")
+print("  BOTH FTGB spectral signatures test NEGATIVE against the reported microtubule data:")
+print("   (a) the single CK comb 1:1.719:2.427 (sec.2) -- mixed ratios, lone generic near-miss;")
+print("   (b) the phi/4 cascade base (sec.4) -- bands scale by DECADES (x1000), within-band triplets")
+print("       are ARITHMETIC ('equally spaced'), neither CK-inharmonic nor phi/4-geometric.")
+print("  What DOES match is only the GENERAL PRINCIPLE: a self-similar, scale-free, near-field biological")
+print("  resonance -- consistent with the theory's fractal-toroidal-beat idea at the level of KIND, not")
+print("  NUMBER. The microtubule's own structure (decade-self-similar triplet-of-triplet) is a distinct")
+print("  organizing principle -- a clean INTEGER cascade base N=3 (1:3:9), which FTGB's M14 triad-dichotomy")
+print("  says CANNOT self-phase-match (only golden phi does) -> FTGB predicts it is driven/harmonic, testable.")
+print("  THE GENUINE BRIDGE is at the METHOD level, not the numbers: GML/FIT (coupled oscillators + phase-")
+print("  locking on an N-torus) IS FTGB's own dynamics layer (engine.comb_lock). Same mathematics.")
+print("  Honest outcome: the specific-NUMBER predictions (CK comb, phi/4 base) do NOT confirm; the")
+print("  phase-dynamics METHOD genuinely converges; the [V] core is scale-independent and untouched.")
+print("  Computed, logged, contested-data frontier-check -- NOT [V], NOT a refutation. Remaining tests")
+print("  (helicity/circular-dichroism, near-field 1/r falloff) need lab measurements, not available here.")
 print("done.")
 raise SystemExit(0)
