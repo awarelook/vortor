@@ -73,8 +73,11 @@ out of anything cited. This is the same tier discipline the repo already runs, a
 
 1. **Freeze the jewel.** `F:\vortor` is authoritative and on GitHub once pushed (`git push -u origin
    ftgb-coherent-object`; repo `awarelook/vortor` must exist first).
-2. **Make the bins.** `F:\_QUARANTINE\2026-09-09\` (dated) and `results/EXCISION_LEDGER.md` (already-excised
-   items: `e^(-2/3)`, `E_fm=2.5 MeV`, fabricated COP/rates).
+2. **Make the bins.** ✅ **Done (2026-09-09):** `F:\_QUARANTINE\2026-09-09\` is scaffolded with `MANIFEST.md`,
+   `candidates.csv` (854 quarantine candidates, 6.52 GB; Tier A=99 version-series, Tier B=755 titled-doc
+   copies; Tier C auto-named = review-only, not moved; primaries protected), and a **dry-run-by-default**
+   `quarantine_move.ps1` (nothing moves without `-Execute`). `results/EXCISION_LEDGER.md` logs the
+   already-excised claims (`e^(-2/3)`, `E_fm=2.5 MeV`, fabricated COP/rates) and the `[flag]`-only items.
 3. **Triage Downloads by pattern** (low-risk first): route obvious duplicates (`* (1).ext`, `*2/222/333`,
    `*LATER/LATEREST/shorter`) to QUARANTINE; keep the **primaries** already folded (`Larry_Reed_QWM_
    Derivations.md`, `TUFT Jenny Nielsen.pdf`, `Dtorti QE 2-4.pdf`) as source-of-record (copy into a
