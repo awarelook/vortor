@@ -726,8 +726,13 @@ collective mode). The inharmonicity is a discriminating prediction: a uniform or
 comb would falsify it. Its multibody phase-locking behaviour, and the sharpened
 comb-pull prediction (`f2/f1 -> 7/4`, `f3/f1 -> 5/2` under strong coupling), are treated
 in Part D. Orbital angular momentum steps by the octahedral order (`l -> l +/- N`),
-protected by the sheath winding; the QED-vacuum contribution to the effective refractive
-index is negligible.
+protected by the sheath winding -- the discrete-symmetry selection rule itself (a point
+group of order `N` steps angular momentum by `N`) is `[credited: mechanism]`
+(Finkelstein-Rubinstein 1968 and Braaten-Townsend-Carson 1990 for the *same* B=4
+octahedral soliton; Ferrando 2005, Konishi 2014, Chen 2014 for electromagnetic OAM), but
+its *application to this driven Beltrami-Hopf plasmoid's carried OAM* is `[claimed
+synthesis -- a bare assertion, no derivation/verify script yet, NOT promoted]`. The
+QED-vacuum contribution to the effective refractive index is negligible.
 
 *End of Parts B-C. Load-bearing claims foregrounded on peer-reviewed work
 (Chandrasekhar-Kendall, Skyrme, Witten, Battye-Sutcliffe, Barnes-Baskerville-Turok);

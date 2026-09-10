@@ -38,6 +38,24 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   367 (B=4 mode spectrum); Houghton, Manton & Sutcliffe (1998); Feist, Lau & Manton (2013), *PRD* 87, 085034;
   Gudnason & Halcrow (2018), *PRD* 98, 125010; Halcrow (2016), *Nucl. Phys. B* 904, 106; Adam, Sánchez-Guillén
   & Wereszczyński (2010) — BPS/near-BPS Skyrme. Eto & Nitta (2025), *PRL* — knot solitons.
+- Braaten, E., Townsend, S. & Carson, L. (1990), *Phys. Lett. B* 235, 147 — the minimal-energy `B=4`
+  Skyrmion has **cubic (octahedral, O_h) symmetry**; rigid-body (Finkelstein–Rubinstein) quantization forces
+  its collective angular momentum to step by the point-group order (ground `J=0`, first excited `J=4`). This
+  is the credited **mechanism** behind the `l → l ± N` OAM-laddering claim (§C.3) — same octahedral B=4
+  object, same discrete-symmetry selection rule (nuclear spin here, not photon OAM). Finkelstein & Rubinstein
+  (1968, above) is the underlying principle; Krusch (2006) formalizes the F–R constraints for Skyrmions.
+
+**Discrete-symmetry angular-momentum / OAM selection rule (§C.3 mechanism, EM flavor).**
+- Ferrando, A. et al. (2005), *Phys. Rev. E* 72, 036612 (arXiv:nlin/0411059) — in media with a discrete
+  point-group symmetry of order `N`, angular momentum generalizes to an "angular Bloch momentum" defined
+  mod `N`, with vortex/mode mixing in steps of `N` (mathematically exactly `l → l ± N`).
+- Konishi, K. et al. (2014), *PRL* 112, 135502 — OAM/polarization selection rule set by C₃ discrete symmetry
+  in nonlinear nanophotonics; Chen, S. et al. (2014), *PRL* 113, 033901 (arXiv:1403.1604) — same rule across
+  metacrystal symmetry orders. Credited **mechanism** for the EM-OAM reading of §C.3; the *application to a
+  driven Beltrami–Hopf plasmoid's carried OAM* is `[claimed synthesis]` (bare, no verify script yet). *(Not
+  folding Mancini/Ren/Maier, Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication
+  switched in a ~3% band — but its knob is continuous dispersion, NOT a discrete-symmetry order, so it is an
+  analogous-but-distinct existence proof of switchable OAM, not mechanism support; flagged, not cited as such.)*
 - Ab-initio: Hupin, Quaglioni & Navratil (2019), *Nat. Commun.* 10, 351; Quaglioni & Navratil (2008).
 
 **LENR disposal-channel mechanism (phonon-nuclear prior art, contested field).**

@@ -743,8 +743,13 @@ collective mode). The inharmonicity is a discriminating prediction: a uniform or
 comb would falsify it. Its multibody phase-locking behaviour, and the sharpened
 comb-pull prediction (`f2/f1 -> 7/4`, `f3/f1 -> 5/2` under strong coupling), are treated
 in Part D. Orbital angular momentum steps by the octahedral order (`l -> l +/- N`),
-protected by the sheath winding; the QED-vacuum contribution to the effective refractive
-index is negligible.
+protected by the sheath winding -- the discrete-symmetry selection rule itself (a point
+group of order `N` steps angular momentum by `N`) is `[credited: mechanism]`
+(Finkelstein-Rubinstein 1968 and Braaten-Townsend-Carson 1990 for the *same* B=4
+octahedral soliton; Ferrando 2005, Konishi 2014, Chen 2014 for electromagnetic OAM), but
+its *application to this driven Beltrami-Hopf plasmoid's carried OAM* is `[claimed
+synthesis -- a bare assertion, no derivation/verify script yet, NOT promoted]`. The
+QED-vacuum contribution to the effective refractive index is negligible.
 
 *End of Parts B-C. Load-bearing claims foregrounded on peer-reviewed work
 (Chandrasekhar-Kendall, Skyrme, Witten, Battye-Sutcliffe, Barnes-Baskerville-Turok);
@@ -2574,7 +2579,12 @@ For an EVO-catalyzed multibody event:
   *computable/tunable control parameter*, not an opaque unknown (`delta_detuning_beat_check.py`; toolkit M14-1).
 - **Aneutronic partition** — the `⁴He` forms through a **collective E0 mode**; E0 (`0⁺→0⁺`) forbids single
   real-photon emission, so the γ channel is suppressed and the `Q = 23.85 MeV` sheds into **lattice + comb
-  phonons as heat** `[S-mechanism]` (mechanism credited; partition fraction not derived).
+  phonons as heat** `[S-mechanism]` (mechanism credited; partition fraction not derived). The named academic
+  precedent for this phonon-coupled disposal channel is **Hagelstein (2018)**, *J. Condensed Matter Nucl.
+  Sci.* 27, 97–142 — off-resonant, M1, phonon-mediated nuclear excitation transfer with cooperative (Dicke)
+  enhancements, treating exactly the `D₂/⁴He` transition shedding a large quantum without prompt γ. Cited as
+  prior-art **mechanism only**: Hagelstein finds the effect as computed "insufficient to account for" his
+  lab's results, so it grounds the *channel*, not the *rate* — the Δ / partition fraction stays `[open]`.
 
 ### 5. The three players, placed honestly
 
@@ -3301,12 +3311,44 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   367 (B=4 mode spectrum); Houghton, Manton & Sutcliffe (1998); Feist, Lau & Manton (2013), *PRD* 87, 085034;
   Gudnason & Halcrow (2018), *PRD* 98, 125010; Halcrow (2016), *Nucl. Phys. B* 904, 106; Adam, Sánchez-Guillén
   & Wereszczyński (2010) — BPS/near-BPS Skyrme. Eto & Nitta (2025), *PRL* — knot solitons.
+- Braaten, E., Townsend, S. & Carson, L. (1990), *Phys. Lett. B* 235, 147 — the minimal-energy `B=4`
+  Skyrmion has **cubic (octahedral, O_h) symmetry**; rigid-body (Finkelstein–Rubinstein) quantization forces
+  its collective angular momentum to step by the point-group order (ground `J=0`, first excited `J=4`). This
+  is the credited **mechanism** behind the `l → l ± N` OAM-laddering claim (§C.3) — same octahedral B=4
+  object, same discrete-symmetry selection rule (nuclear spin here, not photon OAM). Finkelstein & Rubinstein
+  (1968, above) is the underlying principle; Krusch (2006) formalizes the F–R constraints for Skyrmions.
+
+**Discrete-symmetry angular-momentum / OAM selection rule (§C.3 mechanism, EM flavor).**
+- Ferrando, A. et al. (2005), *Phys. Rev. E* 72, 036612 (arXiv:nlin/0411059) — in media with a discrete
+  point-group symmetry of order `N`, angular momentum generalizes to an "angular Bloch momentum" defined
+  mod `N`, with vortex/mode mixing in steps of `N` (mathematically exactly `l → l ± N`).
+- Konishi, K. et al. (2014), *PRL* 112, 135502 — OAM/polarization selection rule set by C₃ discrete symmetry
+  in nonlinear nanophotonics; Chen, S. et al. (2014), *PRL* 113, 033901 (arXiv:1403.1604) — same rule across
+  metacrystal symmetry orders. Credited **mechanism** for the EM-OAM reading of §C.3; the *application to a
+  driven Beltrami–Hopf plasmoid's carried OAM* is `[claimed synthesis]` (bare, no verify script yet). *(Not
+  folding Mancini/Ren/Maier, Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication
+  switched in a ~3% band — but its knob is continuous dispersion, NOT a discrete-symmetry order, so it is an
+  analogous-but-distinct existence proof of switchable OAM, not mechanism support; flagged, not cited as such.)*
 - Ab-initio: Hupin, Quaglioni & Navratil (2019), *Nat. Commun.* 10, 351; Quaglioni & Navratil (2008).
+
+**LENR disposal-channel mechanism (phonon-nuclear prior art, contested field).**
+- Hagelstein, P.L. (2018), "Phonon-mediated Nuclear Excitation Transfer," *J. Condensed Matter Nucl. Sci.*
+  27, 97–142 (MIT) — off-resonant, M1, phonon-coupled nuclear excitation transfer with cooperative (Dicke)
+  enhancements and up/down-conversion; explicitly treats the `D₂/⁴He` transition shedding a large nuclear
+  quantum *without prompt γ*. The named academic precedent for the FTGB **open-Δ disposal channel** (the
+  23.847 MeV of `d+d→⁴He` partitioned into the coherent collective/lattice-phonon mode rather than fast
+  neutrons or hard γ; `results/LENR_MATTERWAVE_INTERACTION_MODEL_2026-09-09.md` §4). Cited as prior-art
+  **mechanism only** — Hagelstein states the effect as computed is "insufficient to account for" his lab's
+  excitation-transfer results; FTGB's rate/Δ stays open. `[credited: CMNS-theory — contested field]`.
 
 **Dimensional method & misc.**
 - Buckingham, E. (1914), *Phys. Rev.* 4, 345 — the Π theorem (M7).
 - Church & Weneser (1956) — E0 transitions (LENR selection). Scheeler et al. (2017) — helicity conservation
   (ΔH < 5%). Bostick (1956) — plasmoid experiments.
+- Samtaney, R., Loureiro, N.F., Uzdensky, D.A., Schekochihin, A.A. & Cowley, S.C. (2009), *PRL* 103, 105004
+  (arXiv:0903.0542) — plasmoid-chain formation in high-Lundquist-number reconnection (`N ∝ S^{3/8}`); credited
+  plasma grounding for the multibody beat-*chain* / EVO self-similar cascade picture. Grounds an existing
+  claim; adds no new one.
 
 **Chirality, charge conjugation & the Majorana neutrino.**
 - Majorana, E. (1937), *Nuovo Cimento* 14, 171 — the self-conjugate (`ν = ν̄`) neutrino.
@@ -3315,6 +3357,11 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   in-repo** — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
   (`results/verify/{chirality_helicity, charge_conjugation, majorana_selfdual}_check.py`). `0νββ` is the
   external falsifier of the Majorana reading.
+- Peng, C.-J. & Baym, G. (2022), "Inverse Tritium Beta Decay with Relic Neutrinos, Solar Neutrinos, and a
+  ⁵¹Cr Source," arXiv:2205.02363 — inverse-tritium-β-decay (ITBD/PTOLEMY) capture cross-section sensitive to
+  neutrino **helicity** and explicitly to the **Dirac-vs-Majorana** nature; a *second* experimental handle
+  (beyond `0νββ`) on the chirality-layer neutrino reading. Enriches the falsifier section; not load-bearing.
+  `[credited]`.
 
 **Spin-statistics of solitons, `g = 2`, & the Dirac structure (§9f).**
 - Finkelstein, D. & Rubinstein, J. (1968), *J. Math. Phys.* 9, 1762 — "Connection between spin, statistics,
