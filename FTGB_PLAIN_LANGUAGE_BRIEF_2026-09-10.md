@@ -183,6 +183,12 @@ A theory earns its keep by sticking its neck out. The open edges and testable be
   published microtubule data — and reported honestly that the simple version **didn't confirm** (the data
   looks "fractal," pointing elsewhere). We also stated the strongest objection (warm tissue destroys quantum
   coherence too fast) in full. That is what a frontier looks like when it's handled honestly. [frontier]
+- **A convergence worth naming.** The theory's living dynamics — its beat, its self-locking comb — is, at
+  bottom, *coupled oscillators phase-locking* on a torus. That is the **same mathematics** as Bandyopadhyay's
+  "musical" GML/FIT and even Marko Rodin's "3-6-9" folklore. Both were **computed first**: their genuine math
+  folds in (Rodin's is just standard clock-arithmetic), their metaphysics is walled off — and, strikingly,
+  Rodin's 3-6-9 read as a resonance triad phase-matches *uniquely at the golden ratio*, which is the theory's
+  own result. Same method; the numbers and the mysticism are kept at their honest, separate tiers.
 
 ---
 
@@ -197,12 +203,17 @@ wave, appearing across scales from particle to plasmoid.** From that single pict
   not fabricated;
 - a real, proven core of theorems and identities sits under a clearly-labelled scaffold of hypotheses and
   frontiers;
-- everything reproduces from one command, every coincidence is logged as a clue, and only the genuinely-wrong
-  is thrown away.
+- everything reproduces from one command, every coincidence is logged as a clue (a whole **coincidence
+  ledger**), and only the genuinely-wrong is thrown away;
+- and the whole object now compiles into one **executable synthesis isomorph** (`engine/ftgb_synthesis_modeler.py`)
+  — the **math ↔ physics ↔ experiment** correspondence printed with its honest *seams* (it frays to
+  hypothesis exactly at the absolute magnitudes), re-running its live proven anchors so it is *shown*, not
+  merely asserted.
 
 It is offered not as a finished truth but as a **coherent, reproducible, predictive object of reality to
 share** — right to the exact degree the math earns, and honest about the rest.
 
 *Reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` (38/38). Depth:
 `FTGB_GRAND_SYNTHESIS.md`, `MATH_TOOLKIT_BASE.md`, `results/TIER_LEDGER.md` (the honest self-assessment),
-`results/COINCIDENCE_LEDGER.md` (the clues). No claim exceeds its tier; no number is fabricated.*
+`results/COINCIDENCE_LEDGER.md` (the clues), and `engine/ftgb_synthesis_modeler.py` (the executable
+math↔physics↔experiment isomorph). No claim exceeds its tier; no number is fabricated.*
