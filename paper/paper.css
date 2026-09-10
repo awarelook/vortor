@@ -1,0 +1,55 @@
+/* FTGB Grand Synthesis (Full) — print-optimized paper stylesheet */
+@page { size: Letter; margin: 20mm 18mm 20mm 18mm; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body{
+  font-family: "Cambria","Georgia","Times New Roman",serif;
+  font-size: 10.3pt; line-height: 1.42; color:#111; margin:0;
+  text-rendering: optimizeLegibility;
+}
+.title-block, header#title-block-header { text-align:center; margin: 0 0 8mm; }
+h1.title{ font-size: 21pt; font-weight:700; line-height:1.15; margin:0 0 4mm; }
+p.author{ font-size: 11pt; margin:2mm 0 1mm; }
+p.date{ font-size: 10pt; color:#555; margin:0; }
+
+/* Parts start a new page */
+h1{ font-size: 17pt; font-weight:700; border-bottom:2px solid #222; padding-bottom:3px;
+    margin: 0 0 6mm; break-before: page; page-break-before: always; }
+h1:first-of-type{ break-before: auto; page-break-before: auto; }
+h2{ font-size: 13pt; font-weight:700; margin: 7mm 0 2mm; break-after: avoid; page-break-after: avoid; color:#111; }
+h3{ font-size: 11.2pt; font-weight:700; margin: 5mm 0 1.5mm; break-after: avoid; page-break-after: avoid; color:#1a1a1a; }
+h4,h5,h6{ font-size: 10.4pt; font-weight:700; margin: 3.5mm 0 1mm; color:#333; break-after: avoid; }
+
+p{ margin: 0 0 2.4mm; text-align: justify; }
+strong{ font-weight:700; }
+em{ font-style: italic; }
+a{ color:#0645ad; text-decoration:none; }
+
+/* inline math is carried in <code>; keep it legible, no heavy box */
+code{ font-family: "Cascadia Mono","Consolas","DejaVu Sans Mono",monospace; font-size: 9.2pt;
+      background: #f4f5f7; padding: 0 2px; border-radius: 3px; }
+pre{ font-family: "Cascadia Mono","Consolas",monospace; font-size: 8.7pt; line-height:1.35;
+     background:#f5f6f8; border:1px solid #e2e5ea; border-radius:6px; padding: 7px 9px;
+     white-space: pre-wrap; word-wrap: break-word; overflow-wrap:anywhere; break-inside: avoid; margin: 0 0 3mm; }
+pre code{ background:none; padding:0; font-size: inherit; }
+
+ul,ol{ margin: 0 0 2.6mm; padding-left: 6mm; }
+li{ margin: 0.4mm 0; text-align:justify; }
+
+blockquote{ margin: 0 0 3mm; padding: 1mm 0 1mm 4mm; border-left:3px solid #b9c0cc; color:#333; break-inside: avoid; }
+
+table{ border-collapse: collapse; width:100%; font-size: 8.9pt; margin: 1mm 0 4mm; break-inside: avoid; }
+th,td{ border:1px solid #cfd5de; padding: 3px 6px; text-align:left; vertical-align:top; }
+th{ background:#eef1f5; font-weight:700; }
+tbody tr:nth-child(even){ background:#fafbfc; }
+
+hr{ border:none; border-top:1px solid #d5dae2; margin: 5mm 0; }
+
+/* table of contents */
+nav#TOC{ break-after: page; page-break-after: always; }
+nav#TOC > ul{ list-style:none; padding-left:0; }
+nav#TOC ul ul{ padding-left: 6mm; }
+nav#TOC a{ color:#111; }
+#toc-title{ font-size: 15pt; }
+
+/* tighten widows/orphans */
+p, li{ orphans: 2; widows: 2; }

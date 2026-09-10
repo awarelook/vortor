@@ -1,0 +1,33 @@
+# Building `FTGB_GRAND_SYNTHESIS_FULL` — reproducible paper build
+
+Compiles the validated jewel into one shareable PDF. Route: **pandoc → standalone HTML → Chrome
+print-to-PDF** (Chrome's font fallback renders every unicode math glyph — ∇, ‖ ‖, ⟨ ⟩, ∫, √, arrows —
+which xelatex's installed fonts miss).
+
+## Inputs (canonical jewel docs, in order)
+Part I `FTGB_GRAND_SYNTHESIS.md` · Part II `FTGB_CURRENTLEG_TRILOGY.md` · Part III
+`results/{R2_NEAR_BELTRAMI…, R3_HALLMHD…, LENR_MATTERWAVE…, ELECTRON_TORSION…, ALPHA_DYNAMICAL…}.md`
++ `FTGB_COHERENCE_MAP_2026-09-09.md` · Part IV `GLOSSARY.md` + `REFERENCES.md`.
+
+## Steps
+```bash
+# 1. assemble: strip per-doc YAML, demote headings under Part dividers, add front matter
+python paper/assemble.py                       # -> master.md (edit ROOT path if needed)
+
+# 2. markdown -> standalone HTML with the print stylesheet inlined
+pandoc master.md -s --toc --toc-depth=2 --embed-resources -c paper/paper.css \
+       --metadata lang=en -o master.html
+
+# 3. HTML -> PDF via headless Chrome (full unicode via font fallback)
+chrome --headless=new --disable-gpu --no-pdf-header-footer \
+       --virtual-time-budget=20000 --run-all-compositor-stages-before-draw \
+       --print-to-pdf="FTGB_GRAND_SYNTHESIS_FULL_2026-09-09.pdf" master.html
+```
+Output: ~59 pages, Letter, 20/18 mm margins; `paper/paper.css` controls typography and page breaks
+(Parts start a new page; tables/code/blockquotes avoid breaks).
+
+## Notes
+- `assemble.py` demotes headings **outside** fenced code blocks only, so equations/code are untouched.
+- Every claim keeps its source tier (`[V]`/`[credited]`/`[S]`/`open`/`[framework]`); nothing is promoted
+  in the compile. The `master_2026-09-09.md` snapshot is kept for provenance.
+- To refresh: re-run the three steps after editing any source doc.
