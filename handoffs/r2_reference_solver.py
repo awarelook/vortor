@@ -19,8 +19,10 @@ failure diagnostics are all here and verified to run.
 
 Method: rotational form dv/dt = P[v x omega] - nu k^2 v + F, Leray projector P = I - kk/k^2,
 2/3 dealiasing, integrating-factor Heun (IF-RK2). ABC forcing (a Beltrami field, curl F = k_f F)
-holds large scales near force-free; an optional relaxation term -gamma P[curl v - lambda v] is the
-high-Re knob the spec calls for. numpy-only. Run: python handoffs/r2_reference_solver.py
+holds large scales near force-free; the optional near-Beltrami hold is the STABLE gradient flow
+-gamma (curl - lambda)^2 v = -gamma(curl curl v - 2 lambda curl v + lambda^2 v) of int|curl v - lam v|^2
+(pure damping; the naive -gamma(curl v - lambda v) is WRONG -- it carries a +gamma*lambda*v growth
+term -- do not use it). numpy-only. Run: python handoffs/r2_reference_solver.py
 """
 import numpy as np
 

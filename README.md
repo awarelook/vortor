@@ -43,7 +43,7 @@ given when they were published).
 | `dynamics_lab.html` | live fixed-step integration of the governing nonlinear equations (now incl. CH-04 vacuum beat spectrum) |
 | `electron.html` | the electron rung as a torsion defect — precession = charge, whirl = 1/α, chirality → electron / positron / neutrino |
 | `coherence.html` | the interactive coherence stack — the 8 layers and 5 shared-invariant threads of the one object, click-to-open |
-| `FTGB_GRAND_SYNTHESIS_FULL_2026-09-09.pdf` | **the compiled jewel as one shareable paper** (~59 pp): synthesis + trilogy + the 2026-09-09 advances (R2/R3, LENR model, electron/α) + glossary/references. Built via `paper/` (pandoc → Chrome print) |
+| `FTGB_GRAND_SYNTHESIS_FULL_2026-09-10.pdf` | **the compiled jewel as one shareable paper** (~59 pp): synthesis + trilogy + the 2026-09-09 advances (R2/R3, LENR model, electron/α) + glossary/references. Recompiled 2026-09-10 from the corrected sources (charge/chirality = one frame-closure Frenet holonomy; Majorana neutrino). Built via `paper/` (pandoc → Chrome print) |
 | `FTGB_GRAND_SYNTHESIS.{md,pdf}` | the full tiered synthesis manuscript (Parts A–G, ~16.8k words) — **the large text with all the math** |
 | `FTGB_CURRENTLEG_TRILOGY.{md,pdf}` | the standalone lead result (a self-contained plasma / topological-fluid theorem) |
 | `FTGB_LEAD_PAPER_2026-09-09.pdf` | **the journal-length lead paper** (6 pp): the current-leg no-go trilogy + the R2/R3 conditional enstrophy/BKM closure — the defensible `[V]` core, ready to submit. Source `paper/LEAD_PAPER_2026-09-09.md` |

@@ -2,7 +2,7 @@
 title: "The Coherent Object — Grand Synthesis (Full)"
 subtitle: "A driven Beltrami–Hopf toroidal soliton across scales: field, matter wave, vacuum, dynamics, and the LENR anomalies — a tiered synthesis"
 author: "Nathaniel Hanks"
-date: "2026-09-09"
+date: "2026-09-10"
 ---
 
 **Abstract & scope.** This is the compiled *validated jewel* of the FTGB program: one driven,
@@ -20,6 +20,12 @@ explicit tier — `[V]` proven/verified here · `[credited]` established · `[S]
 `open` a named external problem · `[framework]` a folded reading. No over-unity is claimed; the
 fine-structure value and the LENR branching amplitude are marked open; the `e^(-2/3)` factor is
 excised. Load-bearing physics rests on peer-reviewed work.
+
+**Compile note (2026-09-10 recompile).** Regenerated from the corrected sources. The charge/chirality
+torsion is now one **frame-closure (Frenet) holonomy** read two ways — the earlier separate
+"Cartan/Burgers charge torsion" split is **withdrawn**; it is a geometric phase, **not** a Cartan/Burgers
+*connection* torsion nor Einstein–Cartan spacetime torsion. The neutrino rung is committed to **Majorana**
+(self-dual `θ_χ = 45°`, `H = 0`, `C`-invariant). Supersedes the 2026-09-09 compile.
 
 
 # Part I — The Grand Synthesis
@@ -43,7 +49,9 @@ dimensional constant and `A.B` is a helicity density. The defining device of the
 every key law is written in two columns -- REAL-UNIT (dimensional) beside DIMENSIONLESS
 (Buckingham-Pi group) -- each carrying a claim -> Pi-group -> falsifier. Mass is a rate,
 `m = hbar omega_C / c^2`, dimensionally exact; the whirl *number* `q = 1/alpha ~ 137` is
-dimensionless and kept strictly separate. The topology carries a *real* helicity `H ~ 0.088`,
+dimensionless and kept strictly separate -- and is carried only as a *suggestive analogy*, not a
+derivation, since the object's computed winding-to-spin ratio is `~1` (a Hopf ring), not 137 (a
+settled negative; `alpha`'s value stays flagged). The topology carries a *real* helicity `H ~ 0.088`,
 not an integer Hopf charge. The object is *alive*: a Stuart-Landau limit cycle whose family
 self-organizes by Kuramoto/Adler/Arnold dynamics, breathing through a twist-writhe heartbeat
 that conserves the Calugareanu-White linking `Lk = Tw + Wr`.
@@ -55,9 +63,11 @@ and a constructed, realizable closure in the genuinely driven regime, with the o
 dynamics shown to *select* the no-go (closure is externally driven, not emergent). Second, at
 the nuclear scale the result is *scaffold-not-reaction*: the object supplies the coherent
 environment, the cold formation, the merger orientation, and the disposal character, while the
-anomaly reduces to two static inputs -- an internal branching amplitude and an inherited,
-literature-measured electron screening -- with no over-unity (a coefficient of performance
-`COP ~ 1.3-1.4` is inherited field positioning, not a derived or claimed excess).
+anomaly reduces to two static *control* inputs -- an internal branching amplitude (a Landau-Zener
+detuning gap) and an inherited, literature-measured electron screening. The energy released is
+*nuclear and conserved* -- the `d+d -> He-4` mass defect, `23.847 MeV` -- so a `COP > 1` is a nuclear
+source (a per-event quantum ~`1e4-1e5x` the eV-scale trigger, as in fission or fusion), not over-unity,
+which would be a category error; the inherited `COP ~ 1.3-1.4` is field positioning, not a derived excess.
 
 Everything traces to four measured anchors `{B, n_i, m_i, R}` with **zero free structural
 parameters**. The work is presented as a tiered SYNTHESIS HYPOTHESIS, with its load-bearing
@@ -205,14 +215,28 @@ section first; the rest of the paper leans on it.
 - **Zitterbewegung `omega_zbw = 2 m c^2 / hbar`.** The "trembling" clock of the localized matter
   wave. The mass axis rides at exactly half this rate (`omega_C = omega_zbw/2`), which is why
   spin-1/2 appears as a clean 2:1 rotary octave.
-- **Whirl number `q = 1/alpha = 137.036`.** A *dimensionless* count: spin revolutions per closed
-  orbital whirl. For the electron this is about 137, and the electromagnetic fine-structure
-  constant is read as its inverse. The whirl number is a separate quantity from the mass; no
-  equation slides between a mass in kilograms and a pure ratio.
+- **Whirl number `q = 1/alpha = 137.036`.** A *dimensionless* count -- spin revolutions per
+  closed orbital whirl -- whose *idealized* value would be `1/alpha ~ 137`. This is a
+  **suggestive analogy, not a derivation** `[flag]`: the object's *computed* continuous
+  winding-to-spin ratio is `iota ~ 1` (a Hopf ring, `= Q_H`), NOT 137; 137 is prime and the
+  object's real topological levels are `Q_H = 1` and Chern `+/-2`; and near-misses to `137.036`
+  from the object's own constants are generic (anti-numerology denominator). So `alpha`'s value
+  stays flagged -- a settled negative documented in
+  `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`. The whirl number is a separate quantity
+  from the mass; no equation slides between a mass in kilograms and a pure ratio.
 - **Charge as spin angular momentum, `e ~ [kg . rad/s]`.** Electric charge read as an intrinsic,
   Lorentz-invariant mechanical angular momentum, so the Coulomb becomes a *count* of electrons
-  rather than a distinct kind of stuff. Geometrically, charge is a *loop-closure torsion defect*:
-  the precessing spin winding fails to close and re-synchronizes about every 137 turns.
+  rather than a distinct kind of stuff. Geometrically, charge is a *frame-closure holonomy
+  defect* -- the computed Frenet torsion holonomy `integral tau ds ~ O(0.1 rad)` of the whirl
+  loop (a geometric phase, explicitly NOT Einstein-Cartan spacetime torsion). Under the
+  chirality mirror this defect flips sign together with helicity, so the chirality flip behaves
+  *structurally* like charge conjugation C `[S, computed]` -- an internal-consistency check of the
+  operational dictionary (mass = whirl-energy, charge = torsion-holonomy), NOT the QFT operator
+  `C = i gamma^2 gamma^0` (no Dirac spinor appears in the verified content). The specific "re-sync
+  every 137 turns" (`d_theta = 2 pi alpha`) value is inserted, not derived (the computed holonomy
+  is `O(0.1)` and the winding
+  ratio `iota ~ 1`), so it survives only as a suggestive analogy; see
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`.
 
 #### Topology and spectral geometry
 
@@ -226,11 +250,16 @@ section first; the rest of the paper leans on it.
 - **Baryon number `B` (Skyrme degree).** The integer `pi_3(S^3)` winding of a soliton's flux
   field -- a *different* topological reading on a *different* target space from helicity. Mass and
   baryon number are two independent readings of the same object, never slid between.
-- **The four torsions.** Four genuinely distinct objects that share the word "torsion," kept
-  rigidly apart: (a) Cartan/Burgers loop-closure torsion (behind charge), (b) ribbon twist `Tw`
-  (the reconnection heartbeat), (c) Frenet-Serret torsion (a chirality signature), (d) Ray-Singer
-  analytic torsion (the mass-tower torsion coefficient). Einstein-Cartan spacetime torsion sits
-  ~15 orders below the Compton scale and is excluded as dynamically irrelevant.
+- **The torsions.** Genuinely distinct objects that share the word "torsion," kept rigidly
+  apart: (a) the **frame-closure (Frenet) torsion holonomy** `integral tau ds ~ O(0.1 rad)`
+  (computed) -- the loop-closure defect behind *both* charge and chirality, which flip together
+  under charge conjugation C (so the earlier separate "Cartan/Burgers charge torsion" and
+  "Frenet chirality torsion" are one computed holonomy read two ways); (b) ribbon twist `Tw`
+  (the reconnection heartbeat); (c) Ray-Singer analytic torsion (the mass-tower torsion
+  coefficient). This frame-closure holonomy is a geometric phase, NOT a Cartan/Burgers
+  *connection* torsion; Einstein-Cartan spacetime torsion is a different object again, sits
+  ~15 orders below the Compton scale, and is excluded as dynamically irrelevant. (See
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`.)
 - **Mass tower / spectral geometry.** The particle mass ladder read as the eigenvalue spectrum of
   a geometric operator (`*d`, Hodge-star composed with exterior derivative) on nested Hopf shells
   `S^3, S^5, S^7, S^9`. The tower's quadratic Casimir sector is pi-free; its torsion sector
@@ -264,10 +293,12 @@ section first; the rest of the paper leans on it.
   driven current leg (Part D): `mu` is the chemical/enthalpy potential and `P.v` the
   pressure-flow work density. Closure of the current leg holds if and only if `S = 0` on a
   non-empty, index-1, bounded surface.
-- **The two static inputs `{Delta, U_s}`.** The two numbers the LENR boundary reduces to, with
-  *different owners*: **`Delta`**, the internal branching amplitude (FTGB-internal, open [S]); and
-  **`U_s`**, the inherited metallic electron-screening potential, `U_s ~ 300-800 eV`, taken from
-  the literature (accepted-not-adjudicated), not derived from the object.
+- **The two static inputs `{Delta, U_s}`.** The two *control* numbers the LENR boundary reduces to --
+  control parameters, not opaque unknowns -- with *different owners*: **`Delta`**, the internal
+  branching amplitude (FTGB-internal, open [S]), structurally a Landau-Zener *detuning* gap -- the
+  nuclear-scale kin of the object's own spectral-detuning beat (E.2.6); and **`U_s`**, the inherited
+  metallic electron-screening potential, `U_s ~ 300-800 eV`, a *measured* barrier-lowering drive taken
+  from the literature (Raiola / Huke / Czerski; accepted-not-adjudicated), not derived from the object.
 
 #### Claim tiers
 
@@ -531,11 +562,15 @@ Ledger, Part F, as either derived-with-residual or [S] tautology-not-excluded.)
   baryon number is the topological winding. These are distinct, and conflating them was
   a specific corrected error (mass-not-baryon).
 - **Neutrino.** The pure force-free vortical ring -- a chargeless, near-luminal
-  "smoke-ring" (`pi_3(S^2)` helicity sector). It is naturally its own antiparticle: with
-  no charge to conjugate, the Dirac/Majorana distinction maps onto the FTGB
-  charged/chargeless split, and the smoke-ring is the *self-dual* (Majorana-like) member
-  [S]. Neutrinoless double-beta decay is the external falsifier of that reading, not an
-  FTGB prediction.
+  "smoke-ring" (`pi_3(S^2)` helicity sector). It is naturally its own antiparticle, and this
+  is now a *computed* chirality-geometry result, not a slogan: chirality is exactly
+  `sign(lambda) = sign(H)` for a Beltrami field (an exact identity `[credited]`); the
+  antiparticle is the `-lambda` mirror `[S]`; and the neutrino is the **self-dual** member
+  (chiral mixing angle `theta_chi = 45 deg`, helicity `H = 0`, C-invariant), which forces
+  **Majorana** `nu = nu-bar` `[S, computed]`. Neutrinoless double-beta decay is the external
+  falsifier of that reading, not an FTGB prediction; any lower-tier `[TUFT-preprint]` "Dirac"
+  reading would be a disagreement that `0nu-beta-beta` decides. See
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`.
 - **EVO.** A *charged*, non-relativistic electron cluster (micro-ball-lightning), needing
   the non-force-free charged sheath; distinct from the chargeless smoke-ring, and scoped
   to the Greenyer EVO specifically, not to universal ball lightning.
@@ -568,9 +603,12 @@ This honest split is what keeps the synthesis a hypothesis rather than a slogan.
 **Mass.** The load-bearing identity is `m = hbar omega_C / c^2`, with `omega_C` the whirl
 (Compton) *angular* frequency [V, recovers `m_e` to machine precision; e/p/d rungs to
 <=0.32%]. This is the corrected form of the retired, dimensionally-wrong slogan
-"mass = whirl": the whirl *number* `q = alpha^{-1} ~ 137` is a dimensionless ratio (orbital
-whirls per spin revolution), and mass is a *function* of it, `m = f(q)`, with the
-dimensional carrier `omega_C`. That `hbar omega_C / c^2` reduces to kilograms turns on
+"mass = whirl": mass is a *function* of the whirl *rate* `omega_C` (the dimensional carrier),
+not of any pure count. The separate whirl *number* `q = alpha^{-1} ~ 137` (orbital whirls per
+spin revolution) is NOT load-bearing for the mass and is a *suggestive analogy only* `[flag]`:
+the object's computed winding-to-spin ratio is `iota ~ 1` (a Hopf ring), not 137, so `alpha`'s
+value stays flagged -- a settled negative (`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`).
+That `hbar omega_C / c^2` reduces to kilograms turns on
 `rad` being a dimensionless degree-of-freedom marker rather than a dimension -- a point
 we hold obsessively (Toolkit; the dimensional re-audit is 8/8 clean). Mass is a rate: an
 obstruction to energy flow via spin-precession self-interference, not a Higgs coupling
@@ -582,7 +620,14 @@ current-times-time hides the relation by assigning charge its own dimension `[Q]
 Kaluza-Klein fifth dimension, on this reading, is a topological charge from intrinsic
 spin precession -- a reinterpretation, not a hidden spatial dimension (K1, tiered). No
 incumbent charge measurement is contested; the claim is an ontological re-reading with
-its own dimensional bookkeeping.
+its own dimensional bookkeeping. Under the chirality mirror this charge/precession sign
+flips together with helicity, so the chirality flip behaves *structurally* like charge conjugation
+C -- one frame-closure holonomy sign tying "antiparticle = opposite chirality" and "= opposite
+charge" into the same statement `[S, computed]`. This is an internal-consistency check of FTGB's own
+operational dictionary (Reed/M8: mass = whirl-energy, charge = torsion-holonomy), NOT the QFT operator
+`C = i gamma^2 gamma^0` -- there is no Dirac spinor in the verified content
+(`results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`;
+`results/OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md`).
 
 ### C.2 Topology and the mass tower
 
@@ -592,10 +637,19 @@ label); the *actual CK object* carries a *real* helicity `H = 0.088` [V] (grid-c
 sign-definite), NOT an integer Hopf charge -- the CK field is not closed-fibre (the
 Whitehead pull-back is 54% non-solenoidal; `j_1(lambda R) = 0` does not compactify). So
 `Q_H = 1` is only the idealized-reference label, not the object's integer, and
-`Q_H = B^2`-type identifications are excluded. In its photon/band structure the object
-carries Chern number `+/-2` [credited] / band `+/-1` [V-model]. Four distinct torsions
-(Cartan/Burgers, ribbon twist, Frenet, Ray-Singer) are kept separate; Einstein-Cartan
-torsion is excluded.
+`Q_H = B^2`-type identifications are excluded. Consistently, the object's *computed* continuous
+winding-to-spin ratio is `iota ~ 1` -- one poloidal (whirl) turn per toroidal (orbital)
+circuit, a genuine Hopf ring (`= Q_H`), NOT 137 -- which is exactly why the "winding
+`= 1/alpha = 137`" reading is a suggestive analogy only, permanently flagged (settled negative,
+`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`). In its photon/band structure the object
+carries Chern number `+/-2` [credited] / band `+/-1` [V-model]. What the Hopf/Wess-Zumino
+topology *does* deliver is that the object is quantized as a **spin-1/2 fermion** [credited:
+Wilczek-Zee 1983; Finkelstein-Rubinstein 1968]; note spin-1/2 does NOT by itself give `g = 2`
+(the naive circulating-charge soliton robustly gives `g = 1`; `g = 2` is the Dirac value, an
+open dynamical quantity in the same class as `alpha`'s value `[S]`). The distinct torsions
+(the frame-closure/Frenet holonomy behind charge and chirality, ribbon twist, Ray-Singer) are
+kept separate; Cartan/Burgers *connection* torsion and Einstein-Cartan spacetime torsion are
+excluded.
 
 **The mass tower [TUFT-preprint, tiered].** Nielsen's Toroidal Unified Field Theory
 preprint supplies a spectral mass tower, `m_n ~ (n+1) exp(a n - zeta(3) n^2)`, with
@@ -1168,9 +1222,9 @@ re-reading and an extension of tested physics at four specific joints, and it le
                 |                                            | and dimensionless.                       | Higgs coupling is replaced or contested.
   --------------|--------------------------------------------|------------------------------------------|-------------------------------------------
   CHARGE        | QED: charge a primitive gauge quantum      | charge = mechanical spin angular         | Schwinger a_e = alpha/2pi recovered [V];
-                | number; g-2 confirmed to ~1e-12.           | momentum e ~ [kg.rad/s], a Cartan/       | 137-turn re-sync, d_theta = 2.627 deg per
-                |                                            | Burgers loop-closure torsion defect.     | Compton turn; NO new charge value -- a
-                |                                            |                                          | re-description, not a rival prediction.
+                | number; g-2 confirmed to ~1e-12.           | momentum e ~ [kg.rad/s], a frame-        | correctly-typed g-2, alpha is the input --
+                |                                            | closure (Frenet) holonomy defect.        | '137-turn re-sync' is a suggestive analogy,
+                |                                            |                                          | computed winding iota ~ 1 (Hopf ring), not 137.
   --------------|--------------------------------------------|------------------------------------------|-------------------------------------------
   WAVEFUNCTION  | Born rule: psi a probability amplitude;    | Madelung flow: psi = sqrt(rho)exp(iS/h)  | continuity residual ~5e-16 [V] -- the two
                 | ubiquitously confirmed.                    | read as a real compressible fluid; the   | are mathematically identical; the flow
@@ -1218,9 +1272,22 @@ the room in which the reaction becomes possible and orients the players inside i
 push two deuterons through their mutual Coulomb wall. Each side of the boundary is a well-posed
 calculation, not a missing principle.
 
+**The released energy is nuclear, and conserved [V/credited].** When the reaction does occur, the heat
+is not anomalous book-keeping: `d+d -> He-4` releases the mass defect `2 m_d - m(He-4) = 0.02560 u`,
+i.e. `23.847 MeV` -- a nuclear quantum ~`1e4-1e5x` larger than the hundreds-of-eV chemical or electrical
+trigger. A coefficient of performance above unity is therefore *automatic once reactions occur*, a
+nuclear source exactly like fission or fusion; calling it "over-unity" is a category error -- nothing is
+created, the energy is nuclear and baryon-conserving. The barrier that gates the reaction is *really*
+lowered, by *measured* physics: electron screening in deuterated metals, `U_s ~ 300-800 eV` (Raiola /
+Huke / Czerski), which FTGB inherits (E.2.6). And the He-4/heat correlation at ~23.85 MeV per `He-4`
+(Miles) is the signature that the excess heat *is* that nuclear energy, not chemistry. What FTGB does
+not supply is a *rate* or a COP *magnitude* (E.2.6); what the physics affirms is that the source is
+nuclear (`results/LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
+
 Throughout, the CMNS observables are accepted as reported without re-adjudicating them (support-lens):
 He-4 correlated with heat at roughly 24 MeV per helium atom (Miles 1993, replicated), a replicated
-loading threshold with COP approximately 1.3-1.4 -- which is **not** over-unity (McKubre 1994), small
+loading threshold with COP approximately 1.3-1.4 (McKubre 1994; a nuclear source, not over-unity, per
+the positive core above), small
 transmutation yields (Iwamura 2002), and gammaless heat (Storms 2007) [credited / contested]. These
 are treated as accepted-not-adjudicated inputs; the limits reported below are ours, not verdicts on
 those experiments. Following the field's citation hygiene, we do not cite E-Cat / Rossi, hydrino /
@@ -1245,7 +1312,15 @@ Takahashi), and the coherent-correlated state (CCS, Vysotskii). The driven, char
 EVO of Parts B-D *is* that host: one object read three ways. The upstream chain is the verified core
 of the paper -- an EVO cascade condensing into the plasmoid, carrying the inharmonic CK carrier comb
 `{121, 208, 294} kHz` and a coherent multi-body population that self-organizes by the Kuramoto /
-Adler / Arnold dynamics of Part D.
+Adler / Arnold dynamics of Part D. What *makes* that host coherent is credited plasma physics:
+Woltjer-Taylor relaxation drives a plasma, at fixed helicity, to the single-`lambda` minimum-energy
+Beltrami state, so the scaffold's force-free coherence *is* its magnetic helicity *is* its chirality
+(the `sign(lambda) = sign(H)` of Section B.2) [credited: Woltjer 1958; Taylor 1974; Moffatt 1969]. The
+same `+/- lambda` self-dual object thus spans the LENR scaffold here and the lepton chirality / Majorana
+neutrino of B.2 -- one object, both sectors: a genuine unification of the theory's geometry and
+language [S], scoped as such and NOT as a nuclear selector (the aneutronic branch is chosen by O_h
+symmetry, the E0 gamma-ban, and a cold Landau-Zener step, not by `sign(lambda)`; E.2.2 disposal, E.2.5)
+(`results/LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
 
 **Formation, derived cold [V/S].** The force-free bulk together with the non-force-free charged
 theta-pinch sheath assembles deuterons *cold*: degenerate-sea Landau drag *removes* kinetic energy
@@ -1336,10 +1411,12 @@ structurally, independent of any frequency-delivery route:
   (CODATA / AME2020, two independent routes agreeing to <0.01 MeV) [V]. Disposal is a mechanical
   ejecta continuum -- fractionation over `N ~ 1e2 .. 1e4` fragments to 1-100 keV each, a
   many-soft-few-fast, gammaless signature [S].
-- **COP approximately 1.3-1.4.** This is a scaffold enhancing an ordinary aneutronic exit, not
-  over-unity. **FTGB derives NO COP.** The 1.3-1.4 figure is inherited field positioning; any
-  device / COP framing is excised-as-refuted. The heartbeat of Part D is a Prigogine dissipative
-  structure, not a flywheel; helicity rides conserved and no free energy is produced.
+- **COP approximately 1.3-1.4.** A `COP > 1` is the *nuclear* source of E.2.1 -- the 23.847 MeV `He-4`
+  mass defect, ~`1e4-1e5x` the eV-scale trigger per event -- enhancing an ordinary aneutronic exit,
+  *not* over-unity (which would be a category error: the energy is nuclear and conserved, no free energy
+  is produced). **FTGB derives no COP *magnitude*:** the specific 1.3-1.4 figure is inherited field
+  positioning, and any device / free-energy framing is excised-as-refuted. The heartbeat of Part D is a
+  Prigogine dissipative structure, not a flywheel; helicity rides conserved.
 
 ### E.2.5 The kernel as a well-posed matrix element and its factorization
 
@@ -1381,8 +1458,13 @@ value.
 **Input 1 -- Delta (branching): FTGB-internal, open [S].** `Delta` is the off-diagonal `B=4`
 two-diabatic-surface reactive Landau-Zener gap -- the amplitude between the bound `B=4` cube and the
 `B=3 + B=1` breakup surface, meeting at a crossing, with suppression `S = exp(delta)`,
-`delta = pi Delta^2 / (2 hbar v |dF|)`, exponentially sensitive to `Delta`. This is the aneutronic-
-branching / anomaly number, and it is FTGB's own to compute. It is not pinned in-band [S]. The blocker
+`delta = pi Delta^2 / (2 hbar v |dF|)`, exponentially sensitive to `Delta`. Structurally `Delta` is a
+*detuning* -- the same two-near-degenerate-state gap that, at the plasmoid scale, sets the object's beat
+`f_b = (v_A/(2 pi R)) |Delta lambda|` from the spectral detuning `Delta lambda = lambda_2 - lambda_1`
+(computed `Delta lambda = 3.23 -> f_b = 87 kHz`, the `{121, 208, 294} kHz` comb beat). One detuning idea,
+two scales: a cross-scale structural identity [S], the nuclear gap read as the kin of the *measurable*
+beat (`results/LENR_YINYANG_CONNECTIONS_2026-09-10.md`). This is the aneutronic-branching / anomaly
+number, and it is FTGB's own to compute. It is not pinned in-band [S]. The blocker
 is diagnosed and priced rather than hand-waved: both tractable ansaetze fail at the crossing (the
 product ansatz hits the repulsive core wall; naive field-blending breaks topology, `B -> 2.4`), and a
 genuine 3D Skyrme relaxation of the *massless* energy unwinds the topology (`|B| -> 0`) at every
@@ -1456,8 +1538,9 @@ lattices). Its selection skeleton `{C_alpha, A_alpha}` is settled [V]; its colle
 and cross-checks against BBT. The 1.33 MeV static ratio is refuted as the gap; the true branching
 `Delta` is not pinned in-band [S]. Scaffold-not-reaction is a measured boundary, not a dismissal: FTGB
 supplies the scaffold, inherits one contested screening number from the host lattice, and leaves one
-well-posed branching amplitude as its own named external computation. No over-unity is claimed; no
-rate, cross-section, or gap magnitude is fabricated; baryon number is conserved throughout.
+well-posed branching amplitude as its own named external computation. The released energy is nuclear
+and conserved -- the 23.847 MeV `He-4` mass defect -- so any `COP > 1` is a nuclear source, not
+over-unity; no rate, cross-section, or gap magnitude is fabricated; baryon number is conserved throughout.
 
 
 ---
@@ -1508,10 +1591,14 @@ which is the honest shape of the theory's present boundary.
   open large-data global-regularity problem for 3D Navier-Stokes / Hall-MHD, a famous
   *external* problem, not an FTGB-specific gap.
 - **The neutrino mass hierarchy** is not derived by the object's spectrum; closing it
-  requires an **external Majorana (lepton-number-violating) seesaw sector**. The theory
-  does supply, honestly, the generation *count* (trefoil `T(2,n)`), the oscillation
+  requires an **external Majorana (lepton-number-violating) seesaw sector**. (The object's
+  chirality geometry *does* now predict, as a computed `[S]` result, that the neutrino is
+  **Majorana** -- the self-dual, `H = 0`, C-invariant state, decided by `0nu-beta-beta`;
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md` -- but that fixes no mass *value*.) The
+  theory does supply, honestly, the generation *count* (trefoil `T(2,n)`), the oscillation
   *mechanism* (whirl-beat), and a mixing *clue* (`mu`-`tau` symmetry forcing
-  `theta_23 ~ 45 deg`) -- but not the mass values.
+  `theta_23 ~ 45 deg`, a PMNS angle distinct from the chiral-mixing `theta_chi`) -- but not the
+  mass values.
 
 ### F.3 The honest pattern
 
@@ -1544,7 +1631,7 @@ FTGB is one member of the established class of driven-dissipative nonlinear coup
 oscillators on a helical, elastic, topologically-constrained substrate. The mapping is
 tiered as **7 IDENTITY** rows (same mathematics, already load-bearing in FTGB: the
 Stuart-Landau normal form as the heartbeat with `r* = sqrt(2)`; Kuramoto/Adler/Arnold as
-the multibody beat-locking; `Lk = Tw + Wr` and the four torsions as the object's
+the multibody beat-locking; `Lk = Tw + Wr` and the torsions as the object's
 topology; the Madelung phase as the flow reading), **5 ANALOG** rows (shared mathematics,
 different substrate -- DNA chiral-rod torsion transport, BZ chemical oscillators,
 biological entrainment, the phonon / Pd-D lattice), and **4 CAUTION** rows (imported as
@@ -1582,11 +1669,15 @@ Five methods, tiered:
    seesaw `m_light ~ m_D^2 / M_R` reads as `omega_light ~ omega_D^2 / omega_R`, a
    parametric-beat downconversion; the whirl ladder is a calibrated mass<->frequency map
    (`omega_nu -> 0.05` eV, 0.04%), and a genuine seesaw requires an off-ladder scale.
-5. **RG dielectric-flow / IR-fixed-point method** [S-mechanism] / [flagged value]. `K_PV(q^2)
-   = alpha(0)/alpha(q^2)`; running-coupling and static-winding as the same object at two
-   scales; 137 as the IR endpoint; with a genericity-denominator anti-numerology control
-   (count how many simple invariants land within a tolerance before crediting any single
-   one).
+5. **RG dielectric-flow / IR-fixed-point method** [settled-negative]. `K_PV(q^2)
+   = alpha(0)/alpha(q^2)`; running-coupling and static-winding read as one object at two
+   scales -- but this reframe is now a *settled negative*, not an open mechanism: `alpha` has
+   ~zero running headroom at `m_e` (`alpha^{-1}(m_e) = 137.036` exactly), so dynamics cannot
+   cover the 2.3% integer-skeleton error, and the flow has no forced IR fixed point but the
+   trivial Gaussian one (137 is a threshold freeze-out / integration constant, not `beta = 0`).
+   The genericity-denominator anti-numerology control (count how many simple invariants land
+   within a tolerance before crediting any single one) confirms `137.036` is a generic
+   near-miss. See `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`.
 
 ### G.2 References
 
@@ -1616,7 +1707,9 @@ Prop. label at lock).
 Turok 1997, PRL 79, 367 (B=4 16-mode spectrum); Houghton-Manton-Sutcliffe 1998, Nucl.
 Phys. B 510, 507; Feist, Lau & Manton 2013, PRD 87, 085034; Gudnason & Halcrow 2018, PRD
 98, 125010; Halcrow 2016, Nucl. Phys. B 904, 106; Manton, "Classical Skyrmions" (arXiv:1106.1298);
-Adam, Sanchez-Guillen & Wereszczynski 2010, PLB 691, 105 (BPS Skyrme).
+Adam, Sanchez-Guillen & Wereszczynski 2010, PLB 691, 105 (BPS Skyrme). *Soliton spin-statistics
+(spin-1/2 quantization, [credited]):* Finkelstein & Rubinstein 1968, J. Math. Phys. 9, 1762;
+Wilczek & Zee 1983, PRL 51, 2250.
 
 **Ab-initio nuclear structure.** Hupin, Quaglioni & Navratil 2019, Nat. Commun. 10, 351
 (d+t -> n+4He NCSMC benchmark); Quaglioni & Navratil 2008, PRL 101, 092501; Navratil &
@@ -2264,17 +2357,23 @@ symbols.*
 **Author:** Nathaniel Hanks · **Date:** 2026-09-09
 **Provenance:** bridges `FTGB_CURRENTLEG_TRILOGY` (the object) + `handoffs/HANDOFF_DELTA_B4_SKYRME_RELAXATION`
 (the Δ branching) + M8-2 (matter-wave `m = ħω/c²`) + M11/M12 (vacuum) + Nielsen TUFT (the lattice).
-**Verification:** `results/verify/lenr_energy_ledger.py` (exact conservation arithmetic; no fabricated rate).
+**Verification:** `results/verify/lenr_energy_ledger.py` (exact conservation arithmetic; no fabricated rate);
+`results/verify/{lenr_cop_nuclear_positive, delta_detuning_beat_check, plasmoid_helicity_coherence_check}.py`
+(positive nuclear core; Δ-as-detuning; scaffold-coherence = chirality).
 
 **One-line.** Every coherent-object interaction — fusion, transmutation, or an energy transform — is one
 universal process: a **matter-wave beat** whose transition amplitude factorizes into a *settled selection
 skeleton* times an *open radial overlap* (Δ), on a *discrete knot lattice*, with energy–mass conserved as a
-matter-wave frequency ledger. The LENR anomalies are what this kernel predicts **structurally**; the two
-missing numbers (Δ, U_s) are named, not fabricated.
+matter-wave frequency ledger. The LENR anomalies are what this kernel predicts **structurally**, and the
+excess heat is affirmatively **nuclear** (`d+d → ⁴He`, an energy-conserving **23.847 MeV** mass-defect
+release) — a nuclear *source*, not over-unity. The rate reduces to **one computable matrix element (Δ), with
+`U_s` measured** — named, not fabricated (positive-core capstone: `LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
 
-**Tier.** `[S] synthesis` throughout, with `[V]` only for the conservation arithmetic, `[credited]` for the
-established nuclear/plasma physics, and `[open]`/`[inherited]` for the two rate inputs. **No over-unity is
-claimed; no rate or cross-section is derived; the `e^(-2/3)` factor stays excised.**
+**Tier.** `[S] synthesis` throughout, with `[V]` for the conservation arithmetic (the nuclear energy itself),
+`[credited]` for the established nuclear/plasma physics **and the measured screening `U_s`**, and `[open]`
+for the **one** remaining rate input Δ. **COP>1 is a nuclear *source* — the ~10⁴–10⁵/event nuclear-to-chemical
+energy ratio of an energy-conserving `d+d → ⁴He` release — not over-unity (a category error);** no absolute
+rate or cross-section is derived; the `e^(-2/3)` factor stays excised.
 
 ---
 
@@ -2349,11 +2448,16 @@ For an EVO-catalyzed multibody event:
         →  product knot (lower tower rung)  +  Q into the coherent mode  →  heat .
 ```
 
-- **Barrier / probability** — screening `U_s` lowers the Coulomb barrier; the Gamow penetration enhancement
-  `P(E+U_s)/P(E)` is **large but finite** (ledger §5: `~10⁷–10¹²` at `E~300 eV`, `U_s~300–800 eV`). `U_s` is
-  **host-lattice inherited** `[inherited]`, not FTGB-derived; it sets the *probability scale*, not the branch.
-- **Branching** — the aneutronic (bound `⁴He`) vs breakup (neutron) split is set by **Δ** `[open]`; a Δ in
-  the 1.4–1.9 MeV band suppresses the neutron channel.
+- **Barrier / probability** — screening `U_s` really lowers the Coulomb barrier; the Gamow penetration
+  enhancement `P(E+U_s)/P(E)` is **large but finite** (ledger §5: `~10⁷–10¹²` at `E~300 eV`, `U_s~300–800 eV`).
+  `U_s ≈ 300–800 eV` is **measured** in deuterated metals (Raiola et al. 2002–05; Huke et al. 2008; Czerski
+  et al.) and **inherited** `[credited/inherited]`, not FTGB-derived; it sets the *probability scale*, not the
+  branch.
+- **Branching** — the aneutronic (bound `⁴He`) vs breakup (neutron) split is set by **Δ** `[open]`, the
+  Landau–Zener gap between the two near-degenerate diabatic states; a Δ in the 1.4–1.9 MeV band suppresses the
+  neutron channel. In the toroidal-beat reading this Δ is a **spectral detuning** — the same "gap between two
+  near-degenerate states" that sets the carrier beat `f_b=(v_A/2πR)|Δλ|` (one detuning, two scales `[S]`) — a
+  *computable/tunable control parameter*, not an opaque unknown (`delta_detuning_beat_check.py`; toolkit M14-1).
 - **Aneutronic partition** — the `⁴He` forms through a **collective E0 mode**; E0 (`0⁺→0⁺`) forbids single
   real-photon emission, so the γ channel is suppressed and the `Q = 23.85 MeV` sheds into **lattice + comb
   phonons as heat** `[S-mechanism]` (mechanism credited; partition fraction not derived).
@@ -2363,7 +2467,11 @@ For an EVO-catalyzed multibody event:
 - **EVO — the coherent scaffold** `[V]` recipe / `[S]` catalysis. The macroscopic resonance rung
   (`resonator_family.html`; carrier comb {121, 208, 294} kHz). It provides (i) the screening environment
   `U_s`, (ii) the collective-mode basis `S_α`, and (iii) the **resonant beat channels** that bridge the
-  frequency gap in (2). It is the *verified environment* of the LENR position — not the reaction itself.
+  frequency gap in (2). Its **coherence *is* its magnetic helicity = its chirality**: a force-free plasmoid
+  relaxes at fixed helicity to the single-λ (single-chirality) minimum-energy Beltrami state `W=(λ/2)H`
+  `[credited: Woltjer 1958; Taylor 1974; Moffatt 1969]` — the **same `±λ` self-dual object** that reads at the
+  lepton scale as chirality/Majorana (`plasmoid_helicity_coherence_check.py`). It is the *verified environment*
+  of the LENR position — not the reaction itself.
 - **Neutrinos — a separate rung, NOT the heat channel** `[S]`. The neutrino is the chargeless self-dual
   smoke-ring `π₃(S²)`. In the **baryon-conserving `d+d → ⁴He`** channel there is **no weak process**, hence
   **no neutrino** — the heat is aneutronic *and* neutrino-free (fusion, not weak-sector transmutation à la
@@ -2372,9 +2480,10 @@ For an EVO-catalyzed multibody event:
 - **Vacuum waves — the drive medium, not an energy source** `[S]`/`[excised]`. The polarizable vacuum
   (`K_PV`, ZPF `ω³`; M11) is the medium of the driving `E·B` term that makes the current-leg closure
   *realizable* (trilogy leg c). **CRUCIAL:** the vacuum is a reservoir at equilibrium — **no net energy is
-  extracted from the ZPF** (no over-unity; the `e^(-2/3)` "vacuum gain" is excised). The measured gain is the
-  nuclear `Q` released aneutronically; the drive only *organizes* it. **COP 1.3–1.4 is inherited field
-  positioning, not derived, and is not over-unity.**
+  extracted from the ZPF** (the `e^(-2/3)` "vacuum gain" is excised); the drive only *organizes* the release.
+  The gain is **positively the nuclear `Q`** (23.847 MeV/⁴He, energy-conserving) shed aneutronically, so
+  **COP>1 is the nuclear-to-chemical energy ratio (~10⁴–10⁵/event) of a nuclear *source* — automatic once
+  reactions occur, exactly like fission/fusion — not over-unity (a category error).**
 
 ### 6. What the model explains — and what it does not
 
@@ -2386,8 +2495,11 @@ For an EVO-catalyzed multibody event:
 - **Requirement of a coherent host** — the EVO scaffold + screening (no coherent environment ⇒ no channel).
 - **Transmutation spectra** — accessible final states are lattice hops on the Skyrme/Nielsen tower.
 
-**Does NOT (honest):** derive any **rate or cross-section** (needs Δ × `U_s`); derive **COP**; claim
-**over-unity**; predict specific **isotope yields** without the full lattice-amplitude calc.
+**Does NOT (honest):** derive the absolute **rate or cross-section** — hence the *specific* **COP value** —
+without the one magnitude Δ (`U_s` is measured, not derived); predict specific **isotope yields** without the
+full lattice-amplitude calc. But **COP>1 itself is not an open item**: it is the nuclear-to-chemical energy
+ratio of an energy-conserving `d+d → ⁴He` *source* (automatic once reactions occur), and **"over-unity" is a
+category error, not a claim** (positive-core capstone: `LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
 
 ### 7. Testable predictions / falsifiers
 
@@ -2413,13 +2525,17 @@ For an EVO-catalyzed multibody event:
 
 ### 9. References
 
-Nuclear masses / Q-values: AME2020 (used in the ledger). He-4/heat correlation: Miles et al. (1990s).
-E0 transitions: Church & Weneser 1956. Skyrme B=4: Battye–Sutcliffe 1997; Halcrow 2016. Ab-initio `d+d`:
-Hupin–Quaglioni–Navratil 2019. Golden rule / screening: standard (Gamow; Assenbaum–Langanke–Rolfs 1987
-screening). Canonical-helicity drive: Steinhauer–Ishida 1997; Mahajan–Yoshida 1998. Nielsen TUFT
-(Hopf-fibration knot lattice): `REFERENCES.md`. In-repo: `FTGB_CURRENTLEG_TRILOGY.md`,
-`handoffs/HANDOFF_DELTA_B4_SKYRME_RELAXATION_2026-09-09.md`, `results/verify/lenr_energy_ledger.py`,
-`GLOSSARY.md` (§6 current-leg, LENR).
+Nuclear masses / Q-values: AME2020 (used in the ledger). He-4/heat correlation: Miles et al. (1990s; ICCF-10
+2003). E0 transitions: Church & Weneser 1956. Skyrme B=4: Battye–Sutcliffe 1997; Halcrow 2016. Ab-initio
+`d+d`: Hupin–Quaglioni–Navratil 2019. Golden rule / screening: standard (Gamow; Assenbaum–Langanke–Rolfs
+1987); **measured** electron screening `U_s ≈ 300–800 eV`: Raiola et al. 2002–05; Huke et al. 2008; Czerski
+et al. Branching as a two-state (Landau–Zener) gap: Landau 1932; Zener 1932. Single-λ (single-chirality)
+relaxation: Woltjer 1958; Taylor 1974; Moffatt 1969. Canonical-helicity drive: Steinhauer–Ishida 1997;
+Mahajan–Yoshida 1998. Nielsen TUFT (Hopf-fibration knot lattice): `REFERENCES.md`. In-repo:
+`FTGB_CURRENTLEG_TRILOGY.md`, `results/LENR_YINYANG_CONNECTIONS_2026-09-10.md` (positive-core capstone),
+`handoffs/HANDOFF_DELTA_B4_SKYRME_RELAXATION_2026-09-09.md`,
+`results/verify/{lenr_energy_ledger, lenr_cop_nuclear_positive, delta_detuning_beat_check,
+plasmoid_helicity_coherence_check}.py`, `GLOSSARY.md` (§6 current-leg, LENR).
 
 *Do-not-cite Rossi / Mills / bio-transmutation. Baryon-conserving `d+d → ⁴He` only; `E_fm = 2.5 MeV` stays
 retracted. No number here is fabricated; every quoted value is either from a mass table, computed in the
@@ -2537,20 +2653,24 @@ project models:
 - **nucleon = knotted composite** ↔ the `π₃(S³)` Skyrme sector (shared substrate, two matched methods — the
   Reed trefoil-of-electrons and the Skyrme baryon are two readings of one knot, M9/M10 discipline).
 
-It also slots into the **four-framework convergence** (`GLOSSARY.md`): Reed (this reading), Storti (the
+It also slots into the **five-framework convergence** (`GLOSSARY.md`): Reed (this reading), Storti (the
 vacuum the precession lives in), Nielsen (the knot lattice the rungs sit on), Ginzburg (matter = self-inverting
-torus). The shared invariants — toroidal/Hopf topology, `m=ħω/c²`, an `α≈137` winding — are exactly the
+torus), Greenyer (the EVO the object becomes at the high-drive rung). The shared invariants — toroidal/Hopf topology, `m=ħω/c²`, an `α≈137` winding — are exactly the
 threads this electron picture pulls together.
 
 ### 4. Honest boundaries (keep the discipline)
 - **Framework, not QED.** This is the QWM/Reed topological *reading*, folded method/analogy-only. It does not
   replace the Standard Model; it offers a mechanical *interpretation* of what SM/QED leave undefined (what
   charge *is*). That interpretive gap is real and fairly stated in the passage — but the reading is `[framework]`.
-- **`α` value is open — reframed dynamically.** Fold the mechanism, flag the number (2.3%), keep `e^(-2/3)`
-  out. The 2.3% is now treated as a **running / IR-fixed-point** effect, not a static factor: standard QED
-  running goes the *wrong way* (137.036 is the IR ceiling), so the honest reframe is a **magnetic-vacuum
-  anti-screening flow** to a `137.036` fixed point — principled but not parameter-free (still `[flag]`). See
-  `results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`.
+- **`α` value is open `[flag]` — the winding derivation is now SETTLED-NEGATIVE.** (See
+  `ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md` and the `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md`
+  capstone. The "reframed dynamically" running reading below is **superseded**: the running is quantitatively
+  insufficient at the electron scale, the winding-to-spin ratio computes to `ι≈1` (not 137), and α is now
+  correctly-*typed* by several lenses — the g−2 beat, the `Z₀/2R_K` impedance — but **not derived**.) Fold the
+  mechanism, flag the number (2.3%), keep `e^(-2/3)` out. Historically the 2.3% was treated as a
+  **running / IR-fixed-point** effect: standard QED running goes the *wrong way* (137.036 is the IR ceiling),
+  so the reframe was a **magnetic-vacuum anti-screening flow** to a `137.036` fixed point — principled but not
+  parameter-free (still `[flag]`, now settled-negative). See `results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`.
 - **"Future technology implications" stay tiered.** Any application claim inherits the project's rule: **no
   over-unity**, no fabricated rate or device performance. The vacuum is a medium, not a source. The genuine,
   disciplined implications are the *testable* ones — the EVO carrier comb, the aneutronic He-4/heat signature
@@ -2576,6 +2696,23 @@ ASCII apart from standard math symbols.*
 **Provenance:** reframes the toroidal-winding → α gap of `excision-protocol-storti-factor.md` /
 `ELECTRON_TORSION_DEFECT_EXPLANATION`, using the toolkit's M10-5 RG dielectric-flow machinery.
 **Verification:** `results/verify/alpha_running.py` (standard QED one-loop running; anti-numerology gate).
+
+> **SUPERSEDED (2026-09-10) — the α *value* question is now SETTLED-NEGATIVE.** This doc is the (insufficient)
+> *dynamical-running* attempt; it is closed by **`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`**, which
+> runs the decisive tests and returns a clean NEGATIVE:
+> - **The winding-count `1/α = 137` is dead.** The object's *continuous* winding-to-spin ratio computes to
+>   **`ι ≈ 1`** (a Hopf ring `Q_H = 1`), **not 137** (`results/verify/ck_winding_ratio_check.py`); 137 is
+>   **prime** (no `p·q` winding yields it) and the `~137` near-misses are **generic**
+>   (`results/verify/alpha_genericity_check.py`).
+> - **The running reframe below is quantitatively INSUFFICIENT.** `α` runs to **~0 at `m_e`**
+>   (`α⁻¹(m_e) = 137.036` exactly, `results/verify/alpha_scale_headroom_check.py`) — no headroom to cover the
+>   **2.3% integer-skeleton** error (140 vs 137), which is not a dynamical effect at all.
+> - **What survives:** "winding ≈ `1/α`" as a *suggestive analogy* only; the correctly-typed internal reading
+>   is *spin precession* — the g−2 anomaly `a = α/2π` — but there `α` is the *input* coupling, so **the value
+>   stays `[flag]`** either way (RESOLUTION §3c).
+>
+> Nothing below is retracted — the QED-running result stands and is *why* the naive fix fails — but read it as
+> the **closed running-attempt**, not a live path to α's value. `e^(-2/3)` remains `[excised]`.
 
 **One-line.** The geometric winding `q_geom ≈ 140.2` vs `α⁻¹ = 137.036` (a 2.3% gap) should be treated as a
 **running / dynamical** effect, not the excised static `e^(-2/3)` screening factor — and when you actually run
@@ -2654,6 +2791,13 @@ anti-screening flow replaces an ad-hoc factor) but does not close the *number*.
   independently, tighten the geometric winding calc (true aspect ratio, knot-polynomial winding) and see
   whether it moves off `140` toward `137`. Either is a concrete frontier calc; neither is done here.
 
+**Done since (2026-09-10).** Both frontier calcs were run and returned **negative**: the winding integer does
+not move to 137 (137 is prime; the object's real topological levels are `Q_H = 1`, `C = ±2`), and the
+*continuous* winding-to-spin ratio computes to **`ι ≈ 1`**, not 137 (`results/verify/ck_winding_ratio_check.py`),
+while the genericity denominator makes any single `~137` hit unpromotable (`alpha_genericity_check.py`). So this
+frontier is **settled-negative**, not open — see `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`; α's value
+stays `[flag]`.
+
 ### References
 QED running / vacuum polarization: standard (Jegerlehner, hadronic `Δα`; PDG). RG dielectric-flow /
 IR-fixed-point + anti-numerology control: toolkit **M10-5** (`TOOLKIT_ADV_10_TOPOLOGICAL_SOLITON_METHODS`).
@@ -2672,7 +2816,7 @@ stays `[flag]`. `e^(-2/3)` remains excised. ASCII apart from standard math symbo
 mathematics**, and a placement of every framework (Buckingham-Π, Quinta Essentia / EGM, Nielsen TUFT, Reed
 QWM, Ginzburg spiral) into the layer it actually addresses — carried honestly from **theory → reality →
 experiment**. It is a navigation map over `FTGB_GRAND_SYNTHESIS`, `FTGB_CURRENTLEG_TRILOGY`, the `toolkit/`
-(M7–M12), and `results/`, not a new claim.
+(M7–M14), and `results/`, not a new claim.
 
 **The one referent.** A single **driven, force-free Beltrami–Hopf toroidal soliton** with three motions —
 **whirl** (its internal clock), **spin** (poloidal + toroidal), and **torsion** (the loop-closure-failure
@@ -2680,8 +2824,9 @@ precession) — read at once as a *field* and a *matter wave*. Every framework b
 *this* object; they do not compete, they **compose**.
 
 **Tier key.** `[V]` proven/verified here · `[credited]` established · `[S]` structural/contingent · `open`
-named external problem · `[framework]` a folded reading (method/analogy, not asserted). No over-unity; the
-`e^(-2/3)` factor is excised; no rate/mass/α value is fabricated.
+named external problem · `[framework]` a folded reading (method/analogy, not asserted). LENR COP>1 is a
+nuclear *source* (energy-conserving `d+d→⁴He`), not over-unity; the `e^(-2/3)` factor is excised; no
+rate/mass/α value is fabricated.
 
 ---
 
@@ -2694,10 +2839,10 @@ Read top-down (abstract → concrete). Each layer *constrains* the ones below it
 | **0** | **Dimensional skeleton** — Buckingham-Π null-space | which knobs any law *may* depend on; the falsifier set | **M7** (Buckingham-Π claim-audit); Storti "sense checks" fold here | `[credited]`/`[V]` |
 | **1** | **The field** — Beltrami eigenmode `∇×B = λB` | the *shape*; the Chandrasekhar–Kendall roots → the carrier comb | Beltrami/MHD; Woltjer–Taylor | `[credited]` |
 | **2** | **The topology** — Hopf `π₃(S²)` / Skyrme `π₃(S³)`; linking, helicity, baryon `B` | the *invariants* and the discrete **knot/mass lattice** | Hopf/Skyrme; **Nielsen TUFT** curl-eigenmode knot spectrum | `[credited]`/`[framework]` |
-| **3** | **The matter wave** — `ψ=√ρ e^{iθ}`, `m=ħω/c²` | *mass = whirl*, *charge = torsion (precession)*, `whirl = 1/α`, chirality → antiparticle | **Reed QWM (M8)**; `electron.html`; `ELECTRON_TORSION_DEFECT` | `[framework]`/`[V-dim]` |
+| **3** | **The matter wave** — `ψ=√ρ e^{iθ}`, `m=ħω/c²` | *mass = whirl*; *charge = torsion (frame-closure holonomy)*; `whirl ≈ 1/α` **analogy only** (§3); **chirality = sign(λ) → C**; **Majorana ν** at `θ_χ=45°` | **Reed QWM (M8)**; `electron.html`; `ELECTRON_TORSION_DEFECT`; **`CHIRALITY_DUALITY_ASSESSMENT`** | `[credited]`/`[S]`; `[flag]` α |
 | **4** | **The vacuum medium** — `K_PV`, ZPF `ρ₀∝ω³`, beat comb to `ω_Ω` | the *substrate*; gravity as refraction | **Storti EGM / Quinta Essentia (M11)**; Puthoff PV; Ginzburg toryx/helyx (M12) | `[credited]`/`[framework]` |
 | **5** | **The dynamics** — Stuart–Landau `r*=√2`, Kuramoto comb-lock, current-leg `S=μ−P·v` | the *living beat*, the no-gos, the driven closure, regularity | `FTGB_CURRENTLEG_TRILOGY`; **R2/R3** enstrophy bounds; `dynamics_lab.html` | `[V]`/`[S]`/`open` |
-| **6** | **The interactions** — golden rule `Γ=(2π/ħ)|M_fi|²ρ_f`, `M_fi=ΣC_αA_αR_αS_α`, the energy–mass ledger | transmutation on the lattice; the **LENR anomalies** | `LENR_MATTERWAVE_INTERACTION_MODEL` | `[V]` ledger / `[S]` / `open` Δ |
+| **6** | **The interactions** — golden rule `Γ=(2π/ħ)|M_fi|²ρ_f`, `M_fi=ΣC_αA_αR_αS_α`, the energy–mass ledger | transmutation on the lattice; the **LENR anomalies** (COP>1 = nuclear source, energy-conserving) | `LENR_MATTERWAVE_INTERACTION_MODEL`; `LENR_YINYANG_CONNECTIONS` (positive core) | `[V]` energy / `[S]` / `open` Δ |
 | **7** | **Reality / experiment** — the falsifiable fingerprints | what a measurement can confirm or kill | see §4 | mixed |
 
 **Ginzburg (M12)** is an *ontological overlay* on layers 2–3: matter = self-inverting torus (toryx),
@@ -2714,26 +2859,41 @@ The frameworks converge because they share the **same five invariants of the one
 2. **Beltrami / curl eigenmodes** — the CK comb (layer 1), Nielsen's 9D-curl knot spectrum, the Higgs-on-`S³`:
    one operator, `∇×F = λF`.
 3. **`m = ħω/c²`** — mass as the whirl, threading neutrino → electron → nucleon → EVO (layer 3).
-4. **Charge = torsion/precession = `kg·rad/s`** — the M8 dissolution of the "fake" charge dimension;
-   antiparticle = opposite chirality.
-5. **`α ≈ 137` as a winding number** — the whirl count `1/α`; its *value* is `[flag]`/open (§3 below).
+4. **Charge = torsion/precession = `kg·rad/s`** — the M8 dissolution of the "fake" charge dimension. Reed's
+   torsion is a **frame-closure holonomy** (computed `∫τ ds ≈ O(0.1 rad)`), **not** Einstein–Cartan.
+   **Antiparticle = opposite chirality = the `−λ` mirror**, and the chirality flip **is** charge conjugation C —
+   the mirror keeps mass but flips helicity *and* the torsion-defect together (`charge_conjugation_check.py`).
+   The self-dual `θ_χ=45°`, `H=0` state is C-invariant ⇒ the **Majorana neutrino** (`majorana_selfdual_check.py`).
+5. **`α ≈ 137` as a winding number — a *suggestive analogy only*.** The object's computed winding-to-spin
+   ratio is `ι ≈ 1` (a Hopf ring `= Q_H`, not 137); "winding = 1/α" is **settled-negative** as a derivation
+   (`ALPHA_RESOLUTION_ASSESSMENT`), and the value stays `[flag]` (§3 below). Several lenses instead
+   **correctly-type** α without deriving it — the g−2 anomaly (an internal spin-precession beat), the exact
+   vacuum impedance `α = Z₀/(2R_K)`, and the QED harmonic cascade — each *restating* the still-open coupling
+   strength; the frontier capstone `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` collects them.
 
 ### 3. Theory → reality — the honest tier ladder (what is load-bearing)
 
 - **`[V]` proven here:** the current-leg no-gos (static `|B|=const`, aligned `P·v=const`); the driven closure
   `S=0` realizability; the selection **negative** (the object selects the no-go); **R2** conditional enstrophy
   bound (exact Lamb-vector identity → linear Gronwall; `⟨η²⟩<ν²λ₁`); **R3** Hall lift at `Pm=1`; the
-  matter-wave / energy–mass ledger (`2ω_d=ω_He4+ω_Q`); the density profile `ρ∝A·B`.
+  matter-wave / energy–mass ledger (`2ω_d=ω_He4+ω_Q` — the LENR excess heat *is* this energy-conserving
+  nuclear release, a source not over-unity); the density profile `ρ∝A·B`.
 - **`[credited]`:** Beltrami/CK, Woltjer–Taylor, Moffatt helicity, Skyrme B=4, Steinhauer–Ishida &
-  Mahajan–Yoshida canonical helicity, BKM/Chae–Degond–Liu, Puthoff PV, the ZPF `ω³` spectrum.
+  Mahajan–Yoshida canonical helicity, **the measured LENR screening `U_s≈300–800 eV` (Raiola/Huke/Czerski)**,
+  BKM/Chae–Degond–Liu, Puthoff PV, the ZPF `ω³` spectrum.
 - **`[S]` (honest hypothesis):** the *one-object-across-scales* claim; the driven-closure leaning-`[V]`; the
-  aneutronic partition mechanism; the four framework readings (Reed/Storti/Nielsen/Ginzburg), all
+  aneutronic partition mechanism; the five framework readings (Reed/Storti/Nielsen/Ginzburg/Greenyer), all
   method/analogy.
-- **`[flag]` / excised:** the exact `α` value — reframed as a **dynamical running / IR-fixed-point** question
-  (`ALPHA_DYNAMICAL_REFRAME`): standard QED running goes the *wrong way*, so the coherent reframe is a
-  **magnetic-vacuum anti-screening** flow to `137.036`, principled but not parameter-free; `e^(-2/3)` stays out.
+- **`[flag]` / excised:** the exact `α` value. The dynamical-running reframe (`ALPHA_DYNAMICAL_REFRAME`) is
+  quantitatively insufficient (running is zero at `m_e`; can't cover 2.3%), and the winding/holonomy derivation
+  is now a **settled NEGATIVE** (`ALPHA_RESOLUTION_ASSESSMENT_2026-09-10`, reproduced by
+  `verify/alpha_genericity_check.py`): 137 is prime, the object's real levels are `Q_H=1`/`C=±2` (not 137), and
+  near-misses are generic — so **"winding ≈ 1/α" survives only as a suggestive analogy, not a derivation**;
+  `e^(-2/3)` stays excised.
 - **`open`:** R2/R3 *unconditional* (prove `⟨δ²⟩^{1/2}≲1/Re` at the object's Reynolds; the Hall `Pm≠1`
-  coupled Lyapunov functional); **Δ** (the B=4 Landau–Zener gap, HPC-only); a first-principles `α` fixed point.
+  coupled Lyapunov functional); **Δ** (the B=4 Landau–Zener gap, HPC-only). *(α's value is **not** an open
+  FTGB target: the winding derivation is settled-negative — its value is the shared open QED coupling
+  strength, `ALPHA_RESOLUTION_ASSESSMENT`.)*
 
 ### 4. Reality → experiment — the falsifiers (what a measurement can kill)
 
@@ -2742,9 +2902,27 @@ The frameworks converge because they share the **same five invariants of the one
 | Carrier comb **{121, 208, 294} kHz** (1 : 1.72 : 2.43), pull to **7/4, 5/2** | 1, 5 | a lock at 12/7 = 1.714 |
 | **He-4 / heat = 24 MeV/⁴He** (aneutronic) | 6 | a large deviation, or neutron flux scaling with heat |
 | **Δ in the 1.4–1.9 MeV** neutron-suppression band | 6 | a Skyrme Δ outside the band |
-| Neutrino rung = **Majorana** (`ν=ν̄`) | 3 | `0νββ` null at the predicted scale |
-| Plasmoid **aspect ratio A ≈ 9.0** | 1, 3 | a clustered A far from 9 |
+| Neutrino rung = **Majorana** (`ν=ν̄`) — the self-dual `θ_χ=45°`, `H=0`, C-invariant state (computed) | 3 | `0νββ` null at the predicted scale |
+| Plasmoid **aspect ratio A ≈ φ ≈ 1.618** (golden `ε=1/φ`; the flagged `A≈9` was an α-winding input — §7) | 1, 3 | a clustered A far from the theory's `ε=1/φ` |
 | Transmutation products **on the Skyrme/Nielsen lattice**, `ΣB` conserved | 6 | off-lattice / baryon-non-conserving ash |
+
+> **Confronted with data (2026-09-10):** `results/EXPERIMENTAL_CONFRONTATION_2026-09-10.md` checks each row
+> against the published record. Most are **UNTESTED** (live targets); He-4/heat and aneutronic suppression are
+> **CONSISTENT with a contested anomaly** (accounted-for, not confirmed); the **aspect-ratio row is in TENSION**
+> and, on inspection, mis-sourced (it should read `A ≈ φ`, the theory's own core value, not the flagged
+> α-winding `A ≈ 9`); the neutrino is **open, decidable ~10 yr**, and the Majorana-vs-Dirac disagreement it
+> flagged is now resolved by tier — the credited/computed chirality layer predicts **Majorana**
+> (`CHIRALITY_DUALITY_ASSESSMENT` §3b), with TUFT's Dirac the lower-tier `[preprint]` claim `0νββ` will settle.
+> The confrontation's chief value was catching two internal contradictions (both since resolved).
+
+> **Positive core (2026-09-10):** `results/LENR_YINYANG_CONNECTIONS_2026-09-10.md` states the layer-6 result
+> as an affirmative claim — COP>1 is an energy-conserving **nuclear** release (`d+d→⁴He`, 23.847 MeV; gain
+> ~10⁴–10⁵/event), barrier lowered by **measured** screening `U_s≈300–800 eV`, reducing to the one open
+> magnitude Δ (read as the beat detuning `Δλ`, `delta_detuning_beat_check.py`) — and credits the scaffold's
+> coherence = helicity = chirality to Woltjer–Taylor single-λ relaxation (`plasmoid_helicity_coherence_check.py`),
+> the **same `±λ` self-dual object** as the layer-3 lepton chirality/Majorana. Honest scope unchanged:
+> chirality is **not** the aneutronic selector (that stays O_h + E0 + isospin), and Majorana touches only the
+> separate weak sector (neutrino carries energy *away*: a loss, not the heat channel).
 
 ### 5. The bottom line
 
@@ -2752,36 +2930,40 @@ The frameworks converge because they share the **same five invariants of the one
 citable `[V]` result** whose single regularity gate is now **conditionally closed** (R2/R3). The **matter-wave
 layer** gives charge, mass, and antimatter one mechanical origin (torsion + whirl), with `α`'s *value* honestly
 open. The **vacuum layer** places gravity as refraction and the beat comb as the medium. The **interaction
-layer** turns all of it into a falsifiable LENR model whose two missing numbers (Δ, `U_s`) are **named, not
-fabricated**. The frameworks of Buckingham-Π, Quinta Essentia, TUFT, Reed, and Ginzburg are not rival theories
+layer** turns all of it into a falsifiable LENR model with a **positive nuclear core** — COP>1 is an energy-conserving `d+d→⁴He`
+source, reducing to **one computable magnitude Δ with `U_s` measured** (not two open unknowns; capstone
+`LENR_YINYANG_CONNECTIONS`). The frameworks of Buckingham-Π, Quinta Essentia, TUFT, Reed, and Ginzburg are not
+rival theories
 — they are **the dimensional, vacuum, lattice, matter-wave, and ontological layers of the same knotted torus**,
 and the map above is how they cohere from theory to the bench.
 
 ### References / provenance
-`FTGB_GRAND_SYNTHESIS.md`, `FTGB_CURRENTLEG_TRILOGY.md`, `TOOLKIT_HANDBOOK.md` (M7–M12), `GLOSSARY.md`,
-`REFERENCES.md`; `results/` (R2, R3, LENR model, electron, α reframe, + `verify/` scripts); models
+`FTGB_GRAND_SYNTHESIS.md`, `FTGB_CURRENTLEG_TRILOGY.md`, `TOOLKIT_HANDBOOK.md` (M7–M14), `GLOSSARY.md`,
+`REFERENCES.md`; `results/` (R2, R3, LENR model + `LENR_YINYANG_CONNECTIONS` positive-core capstone, electron,
+the α resolution + the `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` frontier capstone, + `verify/` scripts); models
 `index.html`, `resonator_family.html`, `soliton3d.html`, `dynamics_lab.html`, `electron.html`.
 
 *A navigation/ordering map; every load-bearing claim keeps its tier from the source documents. No value is
-promoted; `α` stays framed, Δ stays open, `e^(-2/3)` stays excised, and no over-unity is claimed. ASCII apart
-from standard math symbols.*
+promoted; `α` stays framed, Δ stays open, `e^(-2/3)` stays excised, and LENR COP>1 is a nuclear *source*
+(energy-conserving), not over-unity. ASCII apart from standard math symbols.*
 
 ---
 
 
 # Part IV — Glossary, References, and the Four-Framework Convergence
 
-## FTGB Glossary — the coherent object and its four convergence frameworks
+## FTGB Glossary — the coherent object and its five convergence frameworks
 
 A consolidated, honestly-tiered glossary for the project: the FTGB core terms plus the salvaged vocabulary of
-the four independent fringe frameworks it converges with — **Reed** (Quantum Wave Mechanics), **Storti** (EGM
-/ Quinta Essentia), **Nielsen** (TUFT), and **Ginzburg** (spiral-field theory). Every entry carries a tier and
+the five independent fringe frameworks it converges with — **Reed** (Quantum Wave Mechanics), **Storti** (EGM
+/ Quinta Essentia), **Nielsen** (TUFT), **Ginzburg** (spiral-field theory), and **Greenyer** (Beat Law / EVO
+cascade). Every entry carries a tier and
 a source. Frameworks are folded **method/analogy-only**; no fringe physical claim is load-bearing.
 
 **Tier key.** `[V]` verified in-repo · `[credited]` established physics · `[S]` structural/contingent ·
-`[V-dim]` units-verified only · `[framework]` a named fringe reading (Reed/Storti/Nielsen/Ginzburg), used as
+`[V-dim]` units-verified only · `[framework]` a named fringe reading (Reed/Storti/Nielsen/Ginzburg/Greenyer), used as
 method/analogy, not endorsed · `[flag]`/`[excised]` a claim quarantined or removed. See `REFERENCES.md` for
-citations and `TOOLKIT_HANDBOOK.md` (M7–M12) for the methods.
+citations and `TOOLKIT_HANDBOOK.md` (M7–M14) for the methods.
 
 ---
 
@@ -2828,9 +3010,40 @@ citations and `TOOLKIT_HANDBOOK.md` (M7–M12) for the methods.
   1 : 1.72 : 2.43) and its strong-coupling pull toward 7/4, 5/2. `[V]`/`[S]` (M7-2)
 - **Seesaw down-conversion** — frequency down-conversion reading (M10-4). `[S]` + `[V-dim]`
 - **Whirl / winding number `N_W = α⁻¹ ≈ 137`** — helical wavelengths to close the toroidal loop; the
-  fine-structure constant as a winding number. `[framework: Reed]`; a `~137` geometric winding (≈140.2) is
-  held `[flag]` at the 2.3% level, **not** promoted; the `e^(-2/3)` "screening" that would force it is
-  `[excised]`.
+  fine-structure constant read as a winding number. **Two readings, now separated
+  (`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`):** (i) the *winding-count* `1/α = 137` is
+  **settled-negative** — a suggestive analogy only: the object's computed continuous winding-to-spin ratio is
+  `ι ≈ 1` (a Hopf ring `Q_H = 1`), **not** 137; 137 is prime; the `~137` near-misses are generic. (ii) the
+  *spin-precession* reading is **correctly-typed** — the electron's g−2 anomaly `a = α/2π` — but α is the
+  *input* coupling there, not derived. Either way α's **value stays `[flag]`**; the running / IR-fixed-point
+  reframe (`results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`) is quantitatively insufficient (α runs ~0 at
+  `m_e`); the `e^(-2/3)` "screening" that would force it is `[excised]`. `[framework: Reed]` / winding-count
+  `[flag, settled-negative]` / g−2 typing `[credited]`
+
+### 4b. Chirality, antimatter, and the neutrino (the particle reading)
+Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
+(`results/verify/{chirality_helicity, charge_conjugation, majorana_selfdual}_check.py`).
+- **Chirality = sign of the Beltrami `λ` = sign of helicity** — for `curl u = λu`, `H = λ∫|u|²`, so
+  `sign(H) = sign(λ)` **exactly** (computed: `curl(ABC) = +u`, mirror `= −u`); the `±λ` fields are the two
+  chiralities. The theory's cleanest structural fact. `[credited]` (exact identity)
+- **Antiparticle = the `−λ` mirror** — the opposite-chirality partner of the same object (`λ→−λ` flips
+  `H→−H`). `[S, computed]`
+- **Chirality flip = charge conjugation C** — under the `λ→−λ` mirror the **mass is fixed** while **chirality
+  and the Reed torsion-defect / precession sign flip together** (ratio `−1.000`), so "opposite chirality" and
+  "opposite charge" are the *same* statement. `[S, computed]`
+- **Duality / chiral angle `θ_χ`** — the computed helicity-content mixing angle `θ_χ = atan(‖u₋‖/‖u₊‖)`;
+  electron `= 0°`, positron `= 90°`. A computed quantity, not imagery (and *not* the electroweak mixing
+  angle). `[V-def]`
+- **Neutrino = the self-dual `θ_χ = 45°` state ⇒ MAJORANA** — the equal-parts `u = (u₊+u₋)/√2` has `H = 0`
+  (neutral) and is its **own** C-mirror (`ν = ν̄`), the midpoint of the electron/positron axis. The
+  credited/computed chirality layer thus commits to a **Majorana** neutrino, resolving the repo's
+  Majorana-vs-Dirac tension in favor of the computed layer; any TUFT-preprint "Dirac" is the lower-tier
+  disagreement `0νββ` settles. `[S, computed]`
+- **Reed "torsion" = frame-closure holonomy** — the Frenet torsion holonomy `∫τ ds` of the whirl loop
+  (computed `O(0.1 rad)`, sign-flipping across flux surfaces), **NOT** Einstein–Cartan *spacetime* torsion
+  (the spin-density source of ECSK gravity). The *concept* (torsion defect ↔ charge/chirality) is a real
+  computed geometric phase `[credited]`; Reed's specific `dθ = 2πα` value is inserted, so the α-value stays
+  `[flag]`.
 
 ### 5. Framework-specific prime elements (analogy-only)
 - **Toryx** (Ginzburg) — a self-inverting 4D **double-toroidal** spiral element = prime element of **matter**;
@@ -2844,6 +3057,10 @@ citations and `TOOLKIT_HANDBOOK.md` (M7–M12) for the methods.
 - **TUFT (Topological Unified Field Theory)** (Nielsen) — gravity + SM gauge groups + mass spectrum from the
   Hopf-fibration bundle `S¹→S⁹→CP⁴`; Beltrami–Higgs on `S³`. Used at `[credited/S]` where topological, cited
   as a peer-review-stage preprint.
+- **Beat Law / self-similar cascade** (Greenyer) — nested force-free tori beat at `f_b = C·v_eff·a²/(2πR³)`, a
+  shape-independent ladder `f_b(L)/f_b(0) = N^L` whose triad dichotomy silences integer cascades and resonates
+  the golden ratio `φ`; two Fibonacci Manley–Rowe invariants, anapole `N⁴`, exact `9/8 μ_B`. Maps to the
+  object's resonator/EVO eigenmode ladder read as a driven beat hierarchy. `[framework: Greenyer]` (M14)
 
 ### 6. Current-leg dynamics (the lead result)
 - **Density leg** — `ρ ∝ A·B` (helicity density); holds as a profile identity. `[V]`
@@ -2876,7 +3093,7 @@ named tier. Citations: `REFERENCES.md`.*
 ## FTGB References — consolidated, tiered citation base
 
 Project-wide citations, split into (1) **credited** established literature the results rest on and (2) the
-**four convergence frameworks** (Reed, Storti, Ginzburg, Nielsen), each folded method/analogy-only. Tiers as
+**five convergence frameworks** (Reed, Storti, Ginzburg, Nielsen, Greenyer), each folded method/analogy-only. Tiers as
 in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a framework source.
 
 ---
@@ -2918,12 +3135,26 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
 - Church & Weneser (1956) — E0 transitions (LENR selection). Scheeler et al. (2017) — helicity conservation
   (ΔH < 5%). Bostick (1956) — plasmoid experiments.
 
-### 2. The four convergence frameworks (method/analogy-only)
+**Chirality, charge conjugation & the Majorana neutrino.**
+- Majorana, E. (1937), *Nuovo Cimento* 14, 171 — the self-conjugate (`ν = ν̄`) neutrino.
+- Chirality = `sign λ` = `sign H` rests on Moffatt helicity (above); antiparticle = `−λ`, chirality flip =
+  charge conjugation C, the duality angle `θ_χ`, and neutrino = self-dual `θ_χ = 45°` Majorana are **computed
+  in-repo** — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
+  (`results/verify/{chirality_helicity, charge_conjugation, majorana_selfdual}_check.py`). `0νββ` is the
+  external falsifier of the Majorana reading.
+
+### 2. The five convergence frameworks (method/analogy-only)
 
 **Reed — Quantum Wave Mechanics (QWM)** — `[QWM framework]` (M8). Photon-helicoid electron on a Hopf-link
-torus; polarizable-vacuum `K_PV = √(1+ρ_EM/ρ_vac)`; whirl number `N_W = α⁻¹ ≈ 137`; inertia = trapped EM
-energy; phase-conjugate propulsion (**speculative, not adopted**). In-repo primaries: `Larry_Reed_QWM_
-Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Module_10_Reed_Electron_Model`.
+torus; polarizable-vacuum `K_PV = √(1+ρ_EM/ρ_vac)`; whirl number `N_W = α⁻¹ ≈ 137` — the winding-*count*
+`1/α = 137` is now **settled-negative** (computed continuous winding-to-spin ratio `ι ≈ 1`, a Hopf ring, not
+137; 137 prime; near-misses generic), surviving only as a *suggestive analogy*, α's value `[flag]`
+(`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`); inertia = trapped EM energy; phase-conjugate propulsion
+(**speculative, not adopted**). Reed's charge/chirality = **torsion-defect** is a **frame-closure (Frenet
+torsion) holonomy** `O(0.1 rad)` — **not** Einstein–Cartan spacetime torsion; the chirality cluster (chirality
+= `sign λ` = `sign H`; antiparticle = `−λ`; chirality flip = charge conjugation C; neutrino = self-dual
+Majorana) is computed in `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`. In-repo primaries: `Larry_Reed_
+QWM_Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Module_10_Reed_Electron_Model`.
 
 **Storti — EGM / Quinta Essentia** — `[EGM method]` (M11). "A method of calculation (not a theory)."
 - Storti, R.C. (2007), *Quinta Essentia — Part 2 (US Letter)*, Delta Group Engineering / Lulu, 328 pp.
@@ -2945,14 +3176,35 @@ Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Module
   Topological Physics (preprint lineage 2019 → Oct 2025; **Round 2 peer review, Int. J. Topology**). SM gauge
   groups + gravity + mass spectrum from the Hopf bundle; knot eigenmodes of the 9D curl operator; Beltrami–
   Higgs on `S³`. In-repo primary: `TUFT Jenny Nielsen.pdf` (180 pp.). Used where its topology is load-bearing;
-  its full unification claims are carried at preprint tier, not asserted as established.
+  its full unification claims are carried at preprint tier, not asserted as established. **On the neutrino,**
+  the TUFT preprint predicts **Dirac** (`S⁹` spinor decomposition forbids a Majorana mass ⇒ `0νββ` null) — a
+  `[preprint-claim]` that **disagrees** with the repo's higher-tier computed chirality-geometry layer, which
+  predicts a **Majorana** neutrino (the self-dual `θ_χ = 45°`, C-invariant `ν = ν̄` state;
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md` §3b). `0νββ` decides between them; the credited/computed
+  layer is the higher tier.
+
+**Greenyer — Beat Law & EVO cascade (fractal-toroidal beat dynamics)** — `[V]` on the beat-dynamics layer /
+`[framework: Greenyer/MFMP]` on the geometry & nuclear channel (M14).
+- Distillation sources (extended corpus, not in-jewel): `TORUS_MATHEMATICS_APPENDIX`, `EVO_MATHEMATICAL_CORE`;
+  lineage SAFIRE / MFMP (Martin Fleischmann Memorial Project). Beat Law `f_b = C·v_eff·a²/(2πR³)` with the
+  shape-independent self-similar cascade ladder `f_b(L)/f_b(0) = N^L`; the triad dichotomy (integer ratios
+  cannot self-phase-match = "silence", golden ratio `φ` always resonates); two Fibonacci Manley–Rowe
+  invariants; anapole `T_L/T_(L+1) = N⁴` (= 256 at N=4); the exact `9/8 μ_B` Reed moment. The **beat-dynamics /
+  cascade / dichotomy / Fibonacci layer is `[V]`** (`results/verify/greenyer_beat_cascade_check.py`); the
+  nuclear `N_crit ~ 1.7–3e11` fission band is a pre-registered **`[prediction]`, NOT a result**; **no
+  over-unity** is claimed. Full module: `toolkit/TOOLKIT_ADV_14_GREENYER_BEAT_LAW_2026-09-09.md`.
 
 ### 3. Do-not-cite / excision notes (standing discipline)
 - **`e^(-2/3)` screening factor — [excised].** Unjustified numerology; removed per `excision-protocol-storti-
-  factor.md`. The `~137` / 140.2 winding gap (2.3%) is carried as an **open problem**, not a derivation.
+  factor.md`. The `~137` / 140.2 winding gap (2.3%) is now **settled-negative** — the winding-*count* `1/α = 137`
+  is an analogy, not a derivation (computed winding-to-spin ratio `ι ≈ 1`, 137 prime, near-misses generic; the
+  running / IR-fixed-point reframe is quantitatively insufficient), α's value stays `[flag]`
+  (`results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`; the superseded running attempt is
+  `results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`).
 - **Storti H₀ = 67.08, particle radii, α — [flag].** Not reproduced by clean closed-forms (M11-4); do not cite
   as FTGB-derived.
-- **Ginzburg particle spectrum / "USM" cosmology — not adopted.** Analogy/vocabulary only (M12-3).
+- **Ginzburg particle spectrum / "USM" cosmology — not load-bearing.** The specific spectrum and cosmology are
+  not derived or reproduced from the geometry (M12-3); folded for vocabulary and convergence only, not asserted.
 - **LENR: do-not-cite Rossi / Mills / bio-transmutation.** Keep baryon-conserving `d+d→⁴He` distinct from
   baryon decay; no fabricated rate/cross-section; `E_fm = 2.5 MeV` stays retracted; COP not derived.
 

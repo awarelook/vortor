@@ -50,7 +50,9 @@ Would let the jewel **derive** the mass spectrum instead of asserting `m = ħω/
 
 ### G2. Greenyer — the beat law, the cascade, and the aneutronic energetics  → new module **M14**
 Would let the jewel **derive** the {121,208,294} kHz comb and the LENR selective-release, not just state them.
-- **Beat law** `f_b = C·v_eff·a²/(2πR³)` (`C ≈ 0.2654`); **cascade theorem** `f_b(L)/f_b(0) = N^L`
+- **Beat law** `f_b = C·v_eff·a²/(2πR³)` (`C ≈ 0.2654`, Greenyer's normalization; M14 flags it as
+  convention-ambiguous and the jewel hardens to the FE cascade `c_CK(÷ε²)=0.578`, both reducing to the
+  invariant limit `1/(2 j₀,₁)=0.208` — see `foundation/30_CANONICAL_NUMBERS.md` §C); **cascade theorem** `f_b(L)/f_b(0) = N^L`
   (shape-factor-independent, proven exact).
 - **Triad dichotomy** — integer cascades cannot phase-match (`N^i − N^j ≡ −1 (mod N)`), the golden ratio
   always does (`φⁿ = φⁿ⁻¹+φⁿ⁻²` *is* the matching condition); the network conserves exactly **two

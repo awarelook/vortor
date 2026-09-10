@@ -31,7 +31,7 @@ PREAMBLE = '''---
 title: "The Coherent Object — Grand Synthesis (Full)"
 subtitle: "A driven Beltrami–Hopf toroidal soliton across scales: field, matter wave, vacuum, dynamics, and the LENR anomalies — a tiered synthesis"
 author: "Nathaniel Hanks"
-date: "2026-09-09"
+date: "2026-09-10"
 ---
 
 **Abstract & scope.** This is the compiled *validated jewel* of the FTGB program: one driven,
@@ -49,6 +49,12 @@ explicit tier — `[V]` proven/verified here · `[credited]` established · `[S]
 `open` a named external problem · `[framework]` a folded reading. No over-unity is claimed; the
 fine-structure value and the LENR branching amplitude are marked open; the `e^(-2/3)` factor is
 excised. Load-bearing physics rests on peer-reviewed work.
+
+**Compile note (2026-09-10 recompile).** Regenerated from the corrected sources. The charge/chirality
+torsion is now one **frame-closure (Frenet) holonomy** read two ways — the earlier separate
+"Cartan/Burgers charge torsion" split is **withdrawn**; it is a geometric phase, **not** a Cartan/Burgers
+*connection* torsion nor Einstein–Cartan spacetime torsion. The neutrino rung is committed to **Majorana**
+(self-dual `θ_χ = 45°`, `H = 0`, `C`-invariant). Supersedes the 2026-09-09 compile.
 '''
 
 PARTS = [
@@ -75,5 +81,5 @@ for hdr, files in PARTS:
         chunks.append(load(path, by)+"\n\n---\n")
 
 out="\n".join(chunks)
-io.open(os.path.join(r'C:/Users/natha/AppData/Local/Temp/claude/f--vortor/bd510f23-b67b-4b9b-9b83-6e7d3bba1b6d/scratchpad','master.md'),'w',encoding='utf-8').write(out)
-print("master.md:", len(out), "chars,", out.count('\n#'), "headings-ish")
+io.open(os.path.join(ROOT,'paper','master.md'),'w',encoding='utf-8').write(out)
+print("paper/master.md:", len(out), "chars,", out.count('\n#'), "headings-ish")

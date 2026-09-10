@@ -208,16 +208,16 @@
         <div class="fader"><label for="s2k">K coupling</label><input type="range" id="s2k" min="0" max="1" step="0.005" value="0"><output id="s2kO">0.00</output></div>
         <div class="meter">
           <div class="row"><span class="k">f&#8322;/f&#8321;</span><span class="v c" id="s2r2">1.719</span><span class="v" style="color:var(--muted)" id="s2t2">&rarr; 7/4 = 1.750</span></div>
-          <div class="row"><span class="k">f&#8323;/f&#8321;</span><span class="v a" id="s2r3">2.430</span><span class="v" style="color:var(--muted)" id="s2t3">&rarr; 5/2 = 2.500</span></div>
+          <div class="row"><span class="k">f&#8323;/f&#8321;</span><span class="v a" id="s2r3">2.427</span><span class="v" style="color:var(--muted)" id="s2t3">&rarr; 5/2 = 2.500</span></div>
           <div class="row"><span class="k">lock 7:4</span><span class="dled" id="s2la"></span><span class="k" style="min-width:0">lock 5:2</span><span class="dled amber" id="s2lb"></span></div>
         </div>
-        <div class="status" id="s2status">Natural comb {121, 208, 294} kHz &rarr; 1 : 1.719 : 2.430. Sub-critical coupling: the three tones drift on a KAM 3-torus (quasiperiodic, unlocked).</div>
+        <div class="status" id="s2status">Natural comb {121, 208, 294} kHz &rarr; 1 : 1.719 : 2.427. Sub-critical coupling: the three tones drift on a KAM 3-torus (quasiperiodic, unlocked).</div>
       </div>
     </div>
     <div class="plate">
       <p class="eq">d<span class="w">&theta;</span>&#8342;/dt = <span class="a">&omega;</span>&#8342; + <span class="c">K</span>&middot;sin(<span class="w">&psi;</span>&#8342;) <span class="sm">&nbsp; &psi;&#8322;=7&theta;&#8321;&minus;4&theta;&#8322; (7:4), &nbsp;&psi;&#8323;=5&theta;&#8321;&minus;2&theta;&#8323; (5:2)</span></p>
       <dl class="sym">
-        <dt>&omega;&#8342;</dt><dd>the three carrier tones, ratios fixed by geometry: 1 : 1.719 : 2.430 (the whirl = the fundamental)</dd>
+        <dt>&omega;&#8342;</dt><dd>the three carrier tones, ratios fixed by geometry: 1 : 1.719 : 2.427 (the whirl = the fundamental)</dd>
         <dt>K</dt><dd>inter-tone coupling; raise it to drive the tones through their Arnold tongues</dd>
         <dt>&psi;&#8342;</dt><dd>resonant phase combinations; when a &psi; stops drifting, that pair is mode-locked</dd>
       </dl>
@@ -416,8 +416,8 @@
   // ==========================================================
   // CH-02  Kuramoto/Adler comb : 3 oscillators, {121,208,294}
   // ==========================================================
-  var F=[121,208,294];
-  var OM=[F[0]/F[0], F[1]/F[0], F[2]/F[0]];  // 1, 1.71901, 2.42975
+  var CK=[4.493409,7.725252,10.904122];            // CK/Beltrami roots of tan x = x (the {121,208,294} kHz comb)
+  var OM=[CK[0]/CK[0], CK[1]/CK[0], CK[2]/CK[0]];   // 1, 1.7192, 2.4267 -- eigenvalue ratios (not integer-freq rounding)
   var Da=7*OM[0]-4*OM[1];   // 7:4 detuning
   var Db=5*OM[0]-2*OM[2];   // 5:2 detuning
   var S2={th:[0,0,0], fbar:[OM[0],OM[1],OM[2]], pa:[], pb:[], K:0};
@@ -484,7 +484,7 @@
       x.beginPath();x.arc(px,py,4.5,0,7);x.fill();x.shadowBlur=0;
     }
     x.fillStyle=muted;x.font="10px "+cvar("--mono");
-    x.fillText("phase oscillators  f1:f2:f3 = 1 : 1.719 : 2.430", 12, 16);
+    x.fillText("phase oscillators  f1:f2:f3 = 1 : 1.719 : 2.427", 12, 16);
     // divider
     x.strokeStyle=line;x.beginPath();x.moveTo(0,topH);x.lineTo(W,topH);x.stroke();
     // lower region: psi_a, psi_b strip charts
