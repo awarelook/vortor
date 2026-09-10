@@ -136,6 +136,19 @@ drift vs phase-lock vs mode-switch. Two honest findings:
   **`[speculative frontier]`**, recorded as connective conjecture, **not adopted** and carrying no `[V]`
   weight — exactly the placement the inclusion policy prescribes.
 
+## 5c. Rodin Vortex-Based Mathematics — same phase-dynamics family; 3-6-9 → the golden triad `[credited]/[V]/[S]`
+
+Marko Rodin's VBM (the `1-2-4-8-7-5` doubling circuit + the `3-6-9` sector) computed first
+(`rodin_vbm_check.py`): its skeleton is **exact but entirely standard** `Z₉` ring theory — the 6-cycle is
+just *powers of the primitive root 2 mod 9* (`ord₉(2)=6=φ(9)`; 5 is also a primitive root), `{3,6}` are the
+zero-divisors, `9≡0`. No new mathematics; the vortex/toroidal/"9 = interdimensional source" reading is
+`[speculative]`, not adopted. **The genuine physics content**, exactly as with GML: the `3-6-9` dynamical
+surrogate is the **three-wave resonance triad** `Ψ=θₐ+θ_b−θ_c` — the *same* object as FTGB's M14 triad and
+`engine.comb_lock` — and it **phase-matches uniquely at the golden ratio** (`1+φ−φ²=0`), which *is* the M14
+triad-dichotomy result. So Rodin's "3-6-9", read honestly as dynamics, lands on FTGB's own golden `φ`. Same
+phase-dynamics family as GML/FIT (§5b); the arithmetic is standard, the physics bridge is real, the
+metaphysics is quarantined.
+
 ## 6. Status and placement
 
 `[speculative frontier]` / `[hypothesis-to-test]`, firewalled from the `[V]` core. Its value is (a) four
