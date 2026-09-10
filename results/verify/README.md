@@ -12,8 +12,9 @@ python results/verify/verify_all.py      # runs all checks + the engine; exit 0 
 
 `verify_all.py` runs each theory script plus `engine/ftgb_engine.py`, captures exit
 codes, and prints a `PASS/FAIL` summary (it is also a CI gate — nonzero exit on any
-failure). Deterministic, no network. Current status: **34 / 34 PASS** on CPython 3.12
-(33 theory scripts + the engine).
+failure). Deterministic, no network. Current status: **35 / 35 PASS** on CPython 3.12
+(34 scripts + the engine — 33 `[V]`-core scripts + 1 `[speculative frontier]` hypothesis-test,
+`microtubule_ck_comb_test.py`, whose *verdict* is frontier-tier, not `[V]`).
 
 ## Claim → script coverage map
 
@@ -42,6 +43,7 @@ failure). Deterministic, no network. Current status: **34 / 34 PASS** on CPython
 | `alpha_resonator_imbalance_check.py` | **α on the correct object (standing-wave resonator in medium + point defect), all channels:** mode imbalance = 0 (equipartition); medium imbalance = 0 (non-dispersive, canon §I); defect self-energy = α *only* via inserted `e` (`r_e/λ_C`, circular); and **α RUNS** (1/137.036 = IR endpoint; `K_PV(q²)` dielectric flow) → the frontier reduces to ONE quantity — the running coupling's **anchor** = the charge magnitude. Topology quantizes charge; the magnitude/scale is unpinned | `FRONTIER_INTERNAL_DERIVATION` | `[V]` / settled-neg |
 | `egm_alpha_radii_H0_principle_calc.py` | **Storti-EGM α/radii/H₀ computed FORWARD:** proton radius forward misses ~10⁴× (`n_Ω≈25` back-fit from `r_p`); `H₀=√(GM/R³)` is circular (`=H₀/√2`, `M,R` are `H₀`-defined) + a fitted 1.82; α via `e^(-2/3)`→72 (dead) or `1/(20φ⁴)` (hand-chosen `C(6,3)=20`) → all fit/circular, **confirms the excision by computation** | `COINCIDENCE_LEDGER`, quarantine ledger | `[V]` audit / settled-neg |
 | `coincidence_ledger_check.py` | **the coincidence ledger (core practice):** computes every corpus coincidence/flag and logs value/target/dev/verdict (`α=Z₀/2R_K` restatement; `1/(20φ⁴)`, `6π⁵≈m_p/m_e` @0.0019% coincidences; `e^(-2/3)` dead; EGM back-fit/circular; `c_CK`, `π²/3` derived) + a genericity gate (137 gets 0 clean hits, = controls → generic). Check-record-learn; nothing promoted | `COINCIDENCE_LEDGER` | `[V]` audit |
+| `microtubule_ck_comb_test.py` | **frontier hypothesis-test (NOT [V]):** does the published microtubule resonance data (Sahu/Bandyopadhyay 9/22/113/228 MHz) form the CK comb `1:1.719:2.427`? Computed → **not confirmed** (mixed ratios; lone generic near-miss `22/9≈2.427`); the authors' "fractal/scale-free" spectrum redirects to the N^L cascade layer. Logged, non-confirming, redirected | `SPECULATIVE_FRONTIER_MICROTUBULE_HOLOGRAPHY` | `[speculative frontier]` / contested data |
 | `torque_beat_alpha_check.py` | the frontier through the theory's own lens: the g−2 anomaly **is** a beat (`ω_a=ω_s−ω_c=a·ω_c`), `α` = the spin⊗orbit beat-fraction (`2π·a=α`), the g−2 series = the harmonic/loop cascade (3-loop → measured to 5e-11), chirality = the beat's yin-yang handedness → it **types** the frontier, doesn't derive the value | `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` §5 | `[credited]` / `[S]` |
 | `alpha_impedance_check.py` | the **medium** reading: `α = Z₀/(2R_K)` exactly (to 6e-15) — the vacuum's magnetic-to-electric impedance `Z₀=√(μ₀/ε₀)` over twice the quantum resistance `R_K=h/e²`; folds into the K_PV/M11 layer → types α as a medium-impedance ratio, but a restatement (both carry the constants) | `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` §5 | `[credited]` |
 | `chirality_helicity_check.py` | chirality = `sign(λ)` = `sign(H)` of the Beltrami field (exact: `curl ABC=+u`, mirror `=−u`); antiparticle = `−λ` partner; the duality angle = computed helicity-mixing `θ_χ` (0°/90° = electron/positron) | `CHIRALITY_DUALITY_ASSESSMENT` | `[credited]` / `[S]` |

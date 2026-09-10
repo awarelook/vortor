@@ -8,6 +8,8 @@ manuscripts + the method toolkit + two execute-ready hand-off packages.
 > *matter wave*. Every claim carries an honest tier; the mathematics is shown with its
 > plain-language translation and every symbol labelled.
 
+> **New here? Start with [`FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md`](FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md)** (also as PDF) — a ~9-page, general-audience tour of the math, the physics, and the experimental model, honestly tiered.
+
 ---
 
 ## Open it (no install, any OS)

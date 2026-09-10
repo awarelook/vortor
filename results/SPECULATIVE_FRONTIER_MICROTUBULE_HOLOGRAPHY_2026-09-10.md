@@ -62,7 +62,17 @@ is literally a hologram.
 1. **Inharmonic comb fingerprint.** If microtubule resonances are CK/Beltrami cavity modes, their
    frequency ratios should approach the **`tan x = x` comb `1 : 1.719 : 2.427`** — *not* a harmonic
    `1:2:3`. **Test:** measure the ratio of a microtubule's first three resonances; harmonic ⇒ **falsified**,
-   inharmonic-CK ⇒ supported. (This is a clean, near-term discriminator; the numbers are already on file.)
+   inharmonic-CK ⇒ supported.
+   > **Computed 2026-09-10 (`microtubule_ck_comb_test.py`) — outcome: NOT confirmed, redirected.** Tested
+   > against the published Sahu/Bandyopadhyay peaks (9, 22, 113, 228 MHz): the single CK comb is **not**
+   > borne out — the ratios (2.44, 5.14, 2.02) are mixed with large gaps (sub-bands, not one cavity), and
+   > `22/9 = 2.44 ≈ 2.427` is a **lone generic near-miss** (0.7%), not a consistent comb. The authors' own
+   > **"fractal / scale-free"** characterization (kHz–THz) instead points at FTGB's **N^L cascade** layer
+   > ("fractal-toroidal-beat", M14 Greenyer), a *different* structure from the single-cavity comb. **Refined
+   > (still-open) test:** are the microtubule *bands* spaced by a cascade base `N` (golden `φ` or `4`)? —
+   > needs the full multi-band peak list (not reliably extracted this pass, `[flag: provenance-limited]`).
+   > This is a computed, logged frontier-check: not a `[V]` result, not a refutation of the theory (whose
+   > `[V]` core is scale-independent), and honestly non-confirming on the single-comb form.
 2. **Single-λ (chiral) coherence.** The resonance should be **single-helicity/chiral** (one handedness
    dominant), detectable as circular-dichroism / helicity asymmetry in the resonant response.
 3. **Near-field, non-radiating coupling.** Coupling between microtubules/neurons should be **near-field
