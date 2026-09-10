@@ -1,7 +1,7 @@
 # TOOLKIT ADV — Module M11: EGM / POLARIZABLE-VACUUM SPECTRAL METHODS (as REPRESENTATION-MAP, not theory)
 
-Part of the FTGB math toolkit (see `MATH_TOOLKIT_BASE.md`, the M7–M10 modules, and
-`FTGB_TOOLKIT_PROGRAM_PLAN`). This module folds in the **mathematical machinery** of Riccardo Storti's
+Part of the FTGB math toolkit (see `MATH_TOOLKIT_BASE.md` and the M7–M10 modules; the build plan
+`FTGB_TOOLKIT_PROGRAM_PLAN_2026-09-02.md` is extended corpus, not in the jewel). This module folds in the **mathematical machinery** of Riccardo Storti's
 *Electro-Gravi-Magnetics* (EGM) / *Quinta Essentia* series — the **polarizable-vacuum refractive-index
 representation** and the **ZPF Fourier harmonic-beat spectrum** — as a *method and notation map*, and audits
 its numerical claims against the project's honesty discipline. Every checkable number below is **computed**

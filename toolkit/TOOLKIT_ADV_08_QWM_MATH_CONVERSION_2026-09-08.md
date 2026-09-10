@@ -129,7 +129,9 @@ the same spin-precession mass*. Verdicts computed by the script (SI-strict = ref
   (a rate), the dynamical partner of the winding LABEL. Coulomb `[Q]` is merely a **count** of electrons (amount),
   concealing its nature (D4).
 - **Toolkit map.** **L7 / M5** (origin of charge; torsion/holonomy) — `charge ~ b^a(C) = ∮ e^a = ∫ T^a`
-  (translational torsion holonomy). Directly duplicates `TOOLKIT_ADV_05` M5.6.
+  (translational torsion holonomy). Duplicates the extended-corpus `TOOLKIT_ADV_05_ORIGIN_OF_CHARGE.md` M5.6
+  (origin-of-charge; not in the jewel — its result is folded here at M8-2 and in
+  `results/ELECTRON_TORSION_DEFECT_EXPLANATION_2026-09-09.md`).
 - **Real-unit ‖ dimensionless.** `e = m_e ω_C` [kg·rad/s]  ‖  `q = 1/α ≈ 137.036` [dimensionless] +
   `dθ = 2πα` [rad].
 - **Dimensional check [V].** `m = e/ω → M` **PASS in QWM units** (M8-1 catch #3); `e = m_e·ω_C` numeric =
@@ -272,7 +274,7 @@ L2 QHD spine, L7 charge/torsion, M1 topology, M5 origin-of-charge, M7 Buckingham
   density m/rad², D2/D3 as computed proportionalities); the **`m = f(q)` schema** (D1′, mass a function of the
   whirl number with `ω_C` the carrier). These did not previously live in one place with the units machinery.
 - **DUPLICATES existing modules (cite, don't restate):** `m=ħω_C/c²` and the electron parameter table (M5 /
-  `REED_QWM_MASS_EQUATIONS §1`); charge-as-torsion-defect + `q=1/α` (`TOOLKIT_ADV_05` M5.6); Madelung/RS/MHD spine
+  `REED_QWM_MASS_EQUATIONS §1`); charge-as-torsion-defect + `q=1/α` (extended-corpus `TOOLKIT_ADV_05_ORIGIN_OF_CHARGE.md` M5.6, not in the jewel; folded here at M8-2 + `results/ELECTRON_TORSION_DEFECT_EXPLANATION_2026-09-09.md`); Madelung/RS/MHD spine
   (L2 / `TOOLKIT_ADV_02`, `_03`); winding formula 26-1 (§305); Skyrme nucleon (`REED_QWM_MASS_EQUATIONS §2.3`);
   the standard EM 4-potential (L1). Ch.3 Maxwell, Berry phase, coupled-mode all already credited elsewhere.
 - **[unassessed/fringe] EXCLUDED:** all QWM **gravity** content (Ch.33–47: Oldershaw DSR, oscillator-sync-as-
@@ -343,5 +345,5 @@ unverified named ingredients. `K_PV` itself remains [credited]; only Reed's grav
 Cross-links: `TOOLKIT_ADV_07_BUCKINGHAM_PI_2026-09-08.md` (dimensional method backbone),
 `REED_QWM_MASS_EQUATIONS_BEYOND_QCD_2026-09-02.md` (mass equations source),
 `REED_QWM_SALVAGE_2026-08-17.md`, `L_LETTER_CORRECTIONS_LEDGER_2026-09-03.md` (D1–D4/Q5–Q7 corrections),
-`TOOLKIT_ADV_05_ORIGIN_OF_CHARGE.md` (M5 charge), `MATH_TOOLKIT_BASE.md`. Citations: Reed *QWM* Ch.3/11/17/21/26/36;
+`TOOLKIT_ADV_05_ORIGIN_OF_CHARGE.md` (M5 charge — extended corpus, not in the jewel; folded here at M8-2), `MATH_TOOLKIT_BASE.md`. Citations: Reed *QWM* Ch.3/11/17/21/26/36;
 Madelung 1927; de Broglie 1924; London 1935; Buckingham 1914.

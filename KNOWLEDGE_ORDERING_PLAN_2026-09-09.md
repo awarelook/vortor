@@ -29,7 +29,7 @@ plan** — superseded material is *moved to quarantine* for the author to review
 ## 2. Single-source-of-truth (SSoT) — one home per artifact type
 
 - **Validated physics, math, code, models** → **`F:\vortor` → GitHub.** Nothing validated lives only in
-  Downloads or a vault. (Already: trilogy, R2/R3, toolkit M7–M12, LENR model, electron, α reframe, models.)
+  Downloads or a vault. (Already: trilogy, R2/R3, toolkit M7–M14, LENR model, electron, α reframe, models.)
 - **People / history / lineage / connections** → **`F:\conspire`** (and `F:\SYNTHESIS` for narrative). Real
   physics lineage (Puthoff PV, Shoulders EVOs, Bostick plasmoids, Nielsen, Reed, Storti, Ginzburg) lives here
   as relation-maps that *point to* the jewel — never duplicating its equations.
@@ -115,5 +115,5 @@ quarantine vs. excised.
 - **One SSoT per artifact type** (§2); no validated result lives only in Downloads or a vault.
 - Every promoted number keeps its tier and, if `[V]`, a `results/verify/` script.
 
-*Provenance: `FTGB_COHERENCE_MAP`, `TOOLKIT_HANDBOOK` (M7–M12), `GLOSSARY.md`, `REFERENCES.md`,
+*Provenance: `FTGB_COHERENCE_MAP`, `TOOLKIT_HANDBOOK` (M7–M14), `GLOSSARY.md`, `REFERENCES.md`,
 `excision-protocol-storti-factor.md`. This is an organizational plan; it moves no files on its own.*

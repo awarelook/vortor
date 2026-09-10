@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-09 · **Method:** three parallel scans of `C:\Users\natha\ckfreefem`,
 `C:\Users\natha\Downloads`, and the `F:\conspire` / `F:\SYNTHESIS` vaults, each briefed on exactly what the
-jewel (`F:\vortor`) already holds (toolkit M7–M12, R2/R3, the LENR model, the electron/α work, the engine) so
+jewel (`F:\vortor`) already holds (toolkit M7–M14, R2/R3, the LENR model, the electron/α work, the engine) so
 only genuine gaps are reported. Formulas below are quoted as found in the corpus; **inclusion here is a
 candidate fold, not an endorsement** — each carries the tier it would enter at, and known problems are flagged.
 
@@ -19,7 +19,7 @@ candidate fold, not an endorsement** — each carries the tier it would enter at
   found already-homed (M11-3 pt 2 / M7).
 - **G6 Reed → verdict ALREADY COVERED (no append).** The `4.414e9 kg·rad/s` conversion is a restatement of
   M8-0/M8-2 (`e ~ [kg·rad/s]` + anchor `e = m_e ω_C`); the `dθ=2πα` closure defect is already in M8-2 and
-  triple-covered by `TOOLKIT_ADV_05` M5.6 + `electron.html` — folding either would only duplicate or requarantine.
+  triple-covered by extended-corpus `TOOLKIT_ADV_05` M5.6 + in-jewel `electron.html` — folding either would only duplicate or requarantine.
 
 ## Two discoveries (independent of the math)
 - **`ckfreefem\frontier_calcs\` exists on disk** — the provenance directory the R2 / Δ hand-offs reference

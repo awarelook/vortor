@@ -1,7 +1,8 @@
 # TOOLKIT ADV — Module M7: BUCKINGHAM PI as CLAIM-AUDIT + DIMENSIONLESS-SCALING MAP
 
-Part of the FTGB math toolkit (see `MATH_TOOLKIT_BASE.md`, `MATH_TOOLKIT_ADVANCED_2026-09-02.md`,
-`FTGB_TOOLKIT_PROGRAM_PLAN_2026-09-02.md`). This module supplies the **formal basis of the
+Part of the FTGB math toolkit (see `MATH_TOOLKIT_BASE.md` and the consolidated `TOOLKIT_HANDBOOK.md`; its
+predecessor advanced toolkit `MATH_TOOLKIT_ADVANCED_2026-09-02.md` and that toolkit's build plan
+`FTGB_TOOLKIT_PROGRAM_PLAN_2026-09-02.md` are extended corpus, not in the jewel). This module supplies the **formal basis of the
 dimensional↔dimensionless side-by-side format** and the **claim-audit / scaling-map tool** for the whole
 program. Every dimensional matrix, rank, null-space, and Pi-group below is **computed** (not restated) by
 `frontier_calcs/toolkit_adv07_buckingham_pi.py` → `toolkit_adv07_buckingham_pi_OUT.txt` (numpy + sympy exact

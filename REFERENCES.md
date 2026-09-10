@@ -1,7 +1,7 @@
 # FTGB References — consolidated, tiered citation base
 
 Project-wide citations, split into (1) **credited** established literature the results rest on and (2) the
-**four convergence frameworks** (Reed, Storti, Ginzburg, Nielsen), each folded method/analogy-only. Tiers as
+**five convergence frameworks** (Reed, Storti, Ginzburg, Nielsen, Greenyer), each folded method/analogy-only. Tiers as
 in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a framework source.
 
 ---
@@ -43,7 +43,7 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
 - Church & Weneser (1956) — E0 transitions (LENR selection). Scheeler et al. (2017) — helicity conservation
   (ΔH < 5%). Bostick (1956) — plasmoid experiments.
 
-## 2. The four convergence frameworks (method/analogy-only)
+## 2. The five convergence frameworks (method/analogy-only)
 
 **Reed — Quantum Wave Mechanics (QWM)** — `[QWM framework]` (M8). Photon-helicoid electron on a Hopf-link
 torus; polarizable-vacuum `K_PV = √(1+ρ_EM/ρ_vac)`; whirl number `N_W = α⁻¹ ≈ 137`; inertia = trapped EM
@@ -71,6 +71,17 @@ Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Module
   groups + gravity + mass spectrum from the Hopf bundle; knot eigenmodes of the 9D curl operator; Beltrami–
   Higgs on `S³`. In-repo primary: `TUFT Jenny Nielsen.pdf` (180 pp.). Used where its topology is load-bearing;
   its full unification claims are carried at preprint tier, not asserted as established.
+
+**Greenyer — Beat Law & EVO cascade (fractal-toroidal beat dynamics)** — `[V]` on the beat-dynamics layer /
+`[framework: Greenyer/MFMP]` on the geometry & nuclear channel (M14).
+- Distillation sources (extended corpus, not in-jewel): `TORUS_MATHEMATICS_APPENDIX`, `EVO_MATHEMATICAL_CORE`;
+  lineage SAFIRE / MFMP (Martin Fleischmann Memorial Project). Beat Law `f_b = C·v_eff·a²/(2πR³)` with the
+  shape-independent self-similar cascade ladder `f_b(L)/f_b(0) = N^L`; the triad dichotomy (integer ratios
+  cannot self-phase-match = "silence", golden ratio `φ` always resonates); two Fibonacci Manley–Rowe
+  invariants; anapole `T_L/T_(L+1) = N⁴` (= 256 at N=4); the exact `9/8 μ_B` Reed moment. The **beat-dynamics /
+  cascade / dichotomy / Fibonacci layer is `[V]`** (`results/verify/greenyer_beat_cascade_check.py`); the
+  nuclear `N_crit ~ 1.7–3e11` fission band is a pre-registered **`[prediction]`, NOT a result**; **no
+  over-unity** is claimed. Full module: `toolkit/TOOLKIT_ADV_14_GREENYER_BEAT_LAW_2026-09-09.md`.
 
 ## 3. Do-not-cite / excision notes (standing discipline)
 - **`e^(-2/3)` screening factor — [excised].** Unjustified numerology; removed per `excision-protocol-storti-

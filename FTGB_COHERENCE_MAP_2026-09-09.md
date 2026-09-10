@@ -5,7 +5,7 @@
 mathematics**, and a placement of every framework (Buckingham-Π, Quinta Essentia / EGM, Nielsen TUFT, Reed
 QWM, Ginzburg spiral) into the layer it actually addresses — carried honestly from **theory → reality →
 experiment**. It is a navigation map over `FTGB_GRAND_SYNTHESIS`, `FTGB_CURRENTLEG_TRILOGY`, the `toolkit/`
-(M7–M12), and `results/`, not a new claim.
+(M7–M14), and `results/`, not a new claim.
 
 **The one referent.** A single **driven, force-free Beltrami–Hopf toroidal soliton** with three motions —
 **whirl** (its internal clock), **spin** (poloidal + toroidal), and **torsion** (the loop-closure-failure
@@ -60,7 +60,7 @@ The frameworks converge because they share the **same five invariants of the one
 - **`[credited]`:** Beltrami/CK, Woltjer–Taylor, Moffatt helicity, Skyrme B=4, Steinhauer–Ishida &
   Mahajan–Yoshida canonical helicity, BKM/Chae–Degond–Liu, Puthoff PV, the ZPF `ω³` spectrum.
 - **`[S]` (honest hypothesis):** the *one-object-across-scales* claim; the driven-closure leaning-`[V]`; the
-  aneutronic partition mechanism; the four framework readings (Reed/Storti/Nielsen/Ginzburg), all
+  aneutronic partition mechanism; the five framework readings (Reed/Storti/Nielsen/Ginzburg/Greenyer), all
   method/analogy.
 - **`[flag]` / excised:** the exact `α` value — reframed as a **dynamical running / IR-fixed-point** question
   (`ALPHA_DYNAMICAL_REFRAME`): standard QED running goes the *wrong way*, so the coherent reframe is a
@@ -91,7 +91,7 @@ fabricated**. The frameworks of Buckingham-Π, Quinta Essentia, TUFT, Reed, and 
 and the map above is how they cohere from theory to the bench.
 
 ## References / provenance
-`FTGB_GRAND_SYNTHESIS.md`, `FTGB_CURRENTLEG_TRILOGY.md`, `TOOLKIT_HANDBOOK.md` (M7–M12), `GLOSSARY.md`,
+`FTGB_GRAND_SYNTHESIS.md`, `FTGB_CURRENTLEG_TRILOGY.md`, `TOOLKIT_HANDBOOK.md` (M7–M14), `GLOSSARY.md`,
 `REFERENCES.md`; `results/` (R2, R3, LENR model, electron, α reframe, + `verify/` scripts); models
 `index.html`, `resonator_family.html`, `soliton3d.html`, `dynamics_lab.html`, `electron.html`.
 

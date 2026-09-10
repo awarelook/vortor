@@ -2,7 +2,7 @@
 title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M14)"
 author: Nathaniel Hanks
 date: 2026-09-09
-status: "Consolidated reference handbook. Assembled from the four canonical method modules TOOLKIT_ADV_07..10; those modules remain the source of record. This is a clean, shareable single-file reference; no new claims are introduced here."
+status: "Consolidated reference handbook. Assembled from the eight canonical method modules TOOLKIT_ADV_07..14, resting on the shared foundation MATH_TOOLKIT_BASE.md; those modules remain the source of record. This is a clean, shareable single-file reference; no new claims are introduced here."
 anchors: "Four measured anchors {B, n_i, m_i, R}; zero free structural parameters."
 ---
 
@@ -14,7 +14,7 @@ anchors: "Four measured anchors {B, n_i, m_i, R}; zero free structural parameter
 
 ## 1. Introduction
 
-This handbook consolidates the four *method modules* of the Fractal-Toroidal-Beat (FTGB) program
+This handbook consolidates the eight *method modules* of the Fractal-Toroidal-Beat (FTGB) program
 into a single, tiered, citable reference. The toolkit is not the theory; it is the reusable
 **analysis machinery** the theory is built with -- the dimensional bookkeeping, the conserved-current
 constructions, the no-go templates, the synthesis mappings, and the anti-numerology controls that
@@ -40,9 +40,26 @@ The eight modules are:
 | **M13** | Nielsen TUFT mass-tower & mixing methods | the ζ-valued exponent tower (`C₅=ζ(3)/12`, `β₅=ζ(5)/8π⁴`, …), knot/lens-space torsion, CKM/PMNS overlaps, Chern-Simons `M=ke²/4π`, Proca-Beltrami `λ=mc/ℏ` — coefficients `[V]`-checked, **π-power anomaly + preprint blind-fit flagged** |
 | **M14** | Greenyer beat-law & EVO cascade methods | the Beat Law + shape-independent ladder `N^L`, the triad dichotomy (integer silence / golden resonance), two Manley-Rowe (Fibonacci) invariants, anapole `N⁴`, `9/8 μ_B`; nuclear layer a **pre-registered target** (`N_crit` prediction), **no over-unity** |
 
-Two consolidated knowledge-base files accompany the modules: **`GLOSSARY.md`** (shared vocabulary across FTGB
-and the four convergence frameworks, tiered) and **`REFERENCES.md`** (the credited literature + the four
-framework primaries, with the do-not-cite / excision notes).
+All eight modules rest on **`MATH_TOOLKIT_BASE.md`** — the shared foundation carrying the mathematics they
+import: the Chandrasekhar-Kendall / Beltrami curl eigenproblem (`§1`), helicity / Woltjer-Taylor relaxation
+(`§4`), the **one operator read three ways** (plasma ‖ Madelung matter-wave ‖ `K_PV` polarizable vacuum) and
+the topology (`§9`), and the canonical anchors whose single source of truth is
+**`foundation/30_CANONICAL_NUMBERS.md`** (`§A` anchors `{B,n_i,m_i,R}`, `§C` `c_CK`, `§I` the {121,208,294} kHz
+comb). Every module header cites the base by section; those citations are load-bearing and resolve there.
+
+Two consolidated knowledge-base files also accompany the modules: **`GLOSSARY.md`** (shared vocabulary across FTGB
+and the five convergence frameworks — Reed, Storti, Nielsen, Ginzburg, Greenyer — tiered) and **`REFERENCES.md`**
+(the credited literature + the framework primaries, with the do-not-cite / excision notes), plus **`LINEAGE.md`**
+(the Bostick / Puthoff / Shoulders credited-lineage note).
+
+**Provenance-citation convention.** Citations to `.md` documents *not* present in this bundle — the predecessor
+toolkit (`MATH_TOOLKIT_ADVANCED`, `TOOLKIT_ADV_01`–`_06`), the distillation sources each convergence module was
+folded from (`REED_QWM_*`, `KERNEL_NIELSEN_*` / `NIELSEN_TUFT_*`, `EVO_MATHEMATICAL_CORE`,
+`TORUS_MATHEMATICS_APPENDIX`, `storti_egm_missing`, `excision-protocol-storti-factor`), and the `project_ftgb_*`
+frame / open-problem notes — are **extended-corpus provenance**: the working notes a result was distilled from,
+not in-jewel links. Every load-bearing claim they carry is re-stated and re-verified inside the jewel (the
+modules + `results/verify/`). Quarantine-tooling outputs (`MANIFEST.md`, `candidates.csv`) live in
+`F:\_QUARANTINE\`, not here.
 
 Every module carries a scope limit at its head, stated before any result is used. Nothing here is
 fabricated; every quoted number traces to a named reproducible script in its source module. No
@@ -959,10 +976,11 @@ object read as a field / photon-helicoid (cf. Reed M8). Ginzburg's **discrete en
 resonator eigenmode ladder (M7-2 carrier comb), and his **matter<->radiation transformation** to the
 `m = hbar omega / c^2` field<->matter duality (M8-2).
 
-**The four-framework convergence.** Ginzburg joins Reed (QWM, M8), Storti (EGM, M11), and Nielsen (TUFT --
-Hopf-fibration `S1->S9->CP4` curl-eigenmode knot spectrum; Beltrami-Higgs on `S3`) as a fourth independent
-fringe framework, each folded method/analogy-only, all converging on the **same toroidal, Beltrami/Hopf,
-resonance-quantized object**. The shared invariants (toroidal/Hopf topology; Beltrami/curl eigenmodes; a
+**The five-framework convergence.** Ginzburg joins Reed (QWM, M8), Storti (EGM, M11), Nielsen (TUFT --
+Hopf-fibration `S1->S9->CP4` curl-eigenmode knot spectrum; Beltrami-Higgs on `S3`), and Greenyer (Beat Law /
+EVO cascade, M14 -- the shape-independent `N^L` beat ladder + golden-ratio triad dichotomy the object realizes
+at its high-drive/EVO rung) as independent fringe frameworks -- **five in all** -- each folded
+method/analogy-only, all converging on the **same toroidal, Beltrami/Hopf, resonance-quantized object**. The shared invariants (toroidal/Hopf topology; Beltrami/curl eigenmodes; a
 polarizable-vacuum reading; `m = hbar omega/c^2`; an `alpha ~ 137` winding number) are collected in
 `GLOSSARY.md` and `REFERENCES.md`, each thread `[credited]` where established, `[framework]` where a reading.
 

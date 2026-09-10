@@ -108,9 +108,9 @@ project models:
 - **nucleon = knotted composite** ↔ the `π₃(S³)` Skyrme sector (shared substrate, two matched methods — the
   Reed trefoil-of-electrons and the Skyrme baryon are two readings of one knot, M9/M10 discipline).
 
-It also slots into the **four-framework convergence** (`GLOSSARY.md`): Reed (this reading), Storti (the
+It also slots into the **five-framework convergence** (`GLOSSARY.md`): Reed (this reading), Storti (the
 vacuum the precession lives in), Nielsen (the knot lattice the rungs sit on), Ginzburg (matter = self-inverting
-torus). The shared invariants — toroidal/Hopf topology, `m=ħω/c²`, an `α≈137` winding — are exactly the
+torus), Greenyer (the EVO the object becomes at the high-drive rung). The shared invariants — toroidal/Hopf topology, `m=ħω/c²`, an `α≈137` winding — are exactly the
 threads this electron picture pulls together.
 
 ## 4. Honest boundaries (keep the discipline)

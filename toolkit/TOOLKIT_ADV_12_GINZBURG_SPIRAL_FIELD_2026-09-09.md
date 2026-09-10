@@ -74,8 +74,8 @@ Hopf-fibration knot spectrum), and the FTGB core.
 - Consistent with the project's standing discipline: a fringe framework contributes **method/vocabulary/
   convergence**, never a load-bearing claim.
 
-## M12-4 — Placement in the four-framework convergence set
-FTGB now carries four independent fringe frameworks, each folded method/analogy-only, and each converging on
+## M12-4 — Placement in the five-framework convergence set
+FTGB now carries five independent fringe frameworks, each folded method/analogy-only, and each converging on
 the **same toroidal, Beltrami/Hopf, resonance-quantized object**:
 
 - **Reed — Quantum Wave Mechanics** (M8): photon-helicoid electron on a Hopf-link torus; polarizable-vacuum
@@ -88,8 +88,12 @@ the **same toroidal, Beltrami/Hopf, resonance-quantized object**:
   current-leg trilogy. `[S]`/`[credited]` on the topological core.
 - **Ginzburg — spiral-field theory** (this module): toryx/helyx double-toroidal/double-helical prime elements;
   matter↔radiation at discrete levels. `[fringe framework, analogy-only]`
+- **Greenyer — Beat Law / EVO cascade** (M14): nested force-free tori beat at `f_b = C·v_eff·a²/(2πR³)` with a
+  shape-independent self-similar ladder `f_b(L)/f_b(0) = N^L`; triad dichotomy (integer cascades silent, golden
+  ratio `φ` resonant), two Fibonacci Manley–Rowe invariants, anapole `N⁴`, exact `9/8 μ_B` — the object read at
+  its high-drive/EVO rung. Beat-dynamics layer `[V]`; `N_crit` fission band a `[prediction]`, no over-unity. `[framework: Greenyer/MFMP]`
 
-The **shared invariants** across all four + FTGB — toroidal/Hopf topology, Beltrami/curl eigenmodes, a
+The **shared invariants** across all five + FTGB — toroidal/Hopf topology, Beltrami/curl eigenmodes, a
 polarizable-vacuum reading, `m = ħω/c²`, and an `α≈137` winding number — are collected in `GLOSSARY.md` and
 `REFERENCES.md` and are the honest convergence the synthesis rests on (each thread `[credited]` where it is
 established, `[framework]` where it is a reading).

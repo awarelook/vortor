@@ -1,14 +1,15 @@
-# FTGB Glossary — the coherent object and its four convergence frameworks
+# FTGB Glossary — the coherent object and its five convergence frameworks
 
 A consolidated, honestly-tiered glossary for the project: the FTGB core terms plus the salvaged vocabulary of
-the four independent fringe frameworks it converges with — **Reed** (Quantum Wave Mechanics), **Storti** (EGM
-/ Quinta Essentia), **Nielsen** (TUFT), and **Ginzburg** (spiral-field theory). Every entry carries a tier and
+the five independent fringe frameworks it converges with — **Reed** (Quantum Wave Mechanics), **Storti** (EGM
+/ Quinta Essentia), **Nielsen** (TUFT), **Ginzburg** (spiral-field theory), and **Greenyer** (Beat Law / EVO
+cascade). Every entry carries a tier and
 a source. Frameworks are folded **method/analogy-only**; no fringe physical claim is load-bearing.
 
 **Tier key.** `[V]` verified in-repo · `[credited]` established physics · `[S]` structural/contingent ·
-`[V-dim]` units-verified only · `[framework]` a named fringe reading (Reed/Storti/Nielsen/Ginzburg), used as
+`[V-dim]` units-verified only · `[framework]` a named fringe reading (Reed/Storti/Nielsen/Ginzburg/Greenyer), used as
 method/analogy, not endorsed · `[flag]`/`[excised]` a claim quarantined or removed. See `REFERENCES.md` for
-citations and `TOOLKIT_HANDBOOK.md` (M7–M12) for the methods.
+citations and `TOOLKIT_HANDBOOK.md` (M7–M14) for the methods.
 
 ---
 
@@ -71,6 +72,10 @@ citations and `TOOLKIT_HANDBOOK.md` (M7–M12) for the methods.
 - **TUFT (Topological Unified Field Theory)** (Nielsen) — gravity + SM gauge groups + mass spectrum from the
   Hopf-fibration bundle `S¹→S⁹→CP⁴`; Beltrami–Higgs on `S³`. Used at `[credited/S]` where topological, cited
   as a peer-review-stage preprint.
+- **Beat Law / self-similar cascade** (Greenyer) — nested force-free tori beat at `f_b = C·v_eff·a²/(2πR³)`, a
+  shape-independent ladder `f_b(L)/f_b(0) = N^L` whose triad dichotomy silences integer cascades and resonates
+  the golden ratio `φ`; two Fibonacci Manley–Rowe invariants, anapole `N⁴`, exact `9/8 μ_B`. Maps to the
+  object's resonator/EVO eigenmode ladder read as a driven beat hierarchy. `[framework: Greenyer]` (M14)
 
 ## 6. Current-leg dynamics (the lead result)
 - **Density leg** — `ρ ∝ A·B` (helicity density); holds as a profile identity. `[V]`
