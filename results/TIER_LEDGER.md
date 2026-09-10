@@ -34,7 +34,7 @@ why fabricating it would violate the discipline). Every row cites a `results/ver
 | **LENR mechanism** (scaffold enables the aneutronic channel) | `[S]` | A first-principles collective-rate calculation. `[S]` — the *energy* is `[V]`/conserved; the *mechanism* is structural. |
 | **LENR rate / Δ** (B=4 branching) | `open` | **The one FTGB compute** — a topology-preserving Skyrme-HPC run (`HANDOFF_DELTA_B4_SKYRME_RELAXATION`); test the 1.4–1.9 MeV band. `U_s` is **measured**; the COP *magnitude* (1.3–1.4) is inherited field positioning, **not** FTGB-derived. |
 | **R2 unconditional / at-Reynolds** | `open` | **The genuinely winnable upgrade** — the `S~10³–10⁴` GPU pseudo-spectral run (`R2_NUMERICAL_RUN_SPEC` + `r2_reference_solver`). Execution-limited, scoped, not principle-limited. |
-| **R3 at `Pm≠1`** | `open` | The coupled Lyapunov functional past the `(η−ν)²` obstruction. A bounded analysis problem. |
+| **R3 at `Pm≠1`** | ~~open~~ **`[V]cond`** | **ADVANCED (2026-09-10, `R3_PM_NE_1_COUPLED_LYAPUNOV` + `hallmhd_coupled_lyapunov_check`):** the `(η−ν)²` obstruction is a *canonical-variable artifact* — the coupled functional `L=½‖ω‖²+κd_i²½‖J‖²` has **diagonal coercive dissipation at every `Pm`** and controls `Z`; fluid+Lorentz productions vanish *quadratically* at the single-`λ` relaxed state (same Woltjer coherence as the carrier comb); the lone residual is a Hall smallness `d_i‖B‖∞≲η`. **`Pm=1` removed.** Unconditional large-data `Pm≠1` stays open (= open 3-D Hall-MHD). |
 | **Cross-scale Δ identity** (kHz detuning ↔ MeV gap) | `[S]` | Show the plasma detuning literally sets the nuclear gap. `[S]` hypothesis; only the plasma beat is `[V]`. |
 | **Same-sign-λ of the carrier comb** | ~~open~~ **`[V]`** | **RESOLVED (2026-09-10):** the three CK roots are all positive → single-chirality comb → the Woltjer–Taylor coherence argument is locked (`carrier_chirality_lock_check`). |
 | **Experimental fingerprints** (comb pull, aspect ratio, transmutation-on-lattice) | prediction / `UNTESTED` | Do the measurement. **No data** — live targets. He-4/heat & aneutronic: *consistent with a contested anomaly* (Miles; ×5 scatter, contamination), accounted-for not confirmed (`EXPERIMENTAL_CONFRONTATION`). |
@@ -42,7 +42,9 @@ why fabricating it would violate the discipline). Every row cites a `results/ver
 
 ## 3. Honest bottom line — where "breakthrough proof" can and cannot come from
 
-- **Resolved this session:** the same-sign-λ lock (`[V]`) — the carrier comb is genuinely single-chirality.
+- **Resolved this session:** the same-sign-λ lock (`[V]`) — the carrier comb is genuinely single-chirality; and
+  the **R3 `Pm≠1` advance** (`[V]cond`) — the coupled functional removes the `Pm=1` restriction, localizing the
+  residual to one Hall smallness (the `(η−ν)²` obstruction was a variable-choice artifact).
 - **Genuinely winnable (execution, not proof-by-thought):** **R2 at Reynolds** (the scoped GPU run) upgrades the
   `[V]` core; **Δ** (the Skyrme-HPC run) closes the LENR rate. Both are packaged execute-ready in `handoffs/`.
 - **Not provable here — and honestly so:** **α's value** (settled-negative; the shared QED frontier), **g=2**
@@ -54,5 +56,5 @@ why fabricating it would violate the discipline). Every row cites a `results/ver
   tier is *labeled, reproducible, and honest*. The breakthroughs available are the two scoped external
   computations and the small locks; the rest is the honest frontier.
 
-*Provenance: the 26 `results/verify/` scripts + engine (`verify_all.py` → **27/27** PASS) + the `results/` and `handoffs/` docs
+*Provenance: the 27 `results/verify/` scripts + engine (`verify_all.py` → **28/28** PASS) + the `results/` and `handoffs/` docs
 cited inline. No value promoted; `e^(-2/3)`/`E_fm` excised; the α winding stays settled-negative.*

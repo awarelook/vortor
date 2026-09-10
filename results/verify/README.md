@@ -12,8 +12,8 @@ python results/verify/verify_all.py      # runs all checks + the engine; exit 0 
 
 `verify_all.py` runs each theory script plus `engine/ftgb_engine.py`, captures exit
 codes, and prints a `PASS/FAIL` summary (it is also a CI gate — nonzero exit on any
-failure). Deterministic, no network. Current status: **27 / 27 PASS** on CPython 3.12
-(26 theory scripts + the engine).
+failure). Deterministic, no network. Current status: **28 / 28 PASS** on CPython 3.12
+(27 theory scripts + the engine).
 
 ## Claim → script coverage map
 
@@ -23,6 +23,7 @@ failure). Deterministic, no network. Current status: **27 / 27 PASS** on CPython
 | `r2_identity_check.py` | the exact vortex-stretching = Lamb-vector flux identity `∫ω·(ω·∇)v = ∫(∇×ω)·(v×ω)` (both forms agree ~9 sig figs) | `R2_NEAR_BELTRAMI_ENSTROPHY_THEOREM`, engine | `[V]` |
 | `r2_gronwall_check.py` | the R2 enstrophy/BKM threshold `⟨η²⟩ < ν²λ₁` (time-integrated, sharp) — bounded below / blows up above | `R2_NEAR_BELTRAMI_ENSTROPHY_THEOREM` | `[V]`cond |
 | `hallmhd_canonical_check.py` | the Hall two-fluid `Pm=1` coercivity and the `det = −d_i²(η−ν)²/4` obstruction to `Pm≠1` | `R3_HALLMHD_CANONICAL_ENSTROPHY`, M10 | `[V]` |
+| `hallmhd_coupled_lyapunov_check.py` | **`Pm≠1` advance:** the `(η−ν)²` obstruction is a *canonical-variable artifact* — the coupled functional `L=½‖ω‖²+κd_i²½‖J‖²` has **diagonal coercive dissipation at every `Pm`** and controls `Z`; fluid+Lorentz productions vanish *quadratically* at the single-`λ` relaxed state; the Hall term is absorbed under `d_i‖B‖∞≲η` (linear law verified) → **removes `Pm=1`**, residual = one Hall smallness | `R3_PM_NE_1_COUPLED_LYAPUNOV` | `[V]` / `[V]cond` |
 | `tuft_mass_tower_check.py` | Nielsen ζ-coefficients (`C₅=ζ(3)/12`, …), the exact `C₅/ω₃=π²/3`, lens-space `τ_R(L(n,1))=1/n`; blind-fit VALUES flagged | M13 | `[V]` core / `[flag]` values |
 | `greenyer_beat_cascade_check.py` | cascade `N^L`, anapole `N⁴=256`, the golden-ratio three-wave dichotomy, Fibonacci Manley-Rowe; `N_crit` band flagged | M14 | `[V]` / `[prediction]` |
 | `egm_sense_checks.py` | Storti EGM numerical audit — the 2:1 harmonic is definitional; radii/H₀ miss; `e^(-2/3)` is dead (`→72`, not 137) | M11-4 | `[V]` (audit) / `[flag]`/`[excised]` |
