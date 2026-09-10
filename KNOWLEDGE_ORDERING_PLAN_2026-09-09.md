@@ -85,8 +85,11 @@ out of anything cited. This is the same tier discipline the repo already runs, a
 4. **Vault hygiene.** In `F:\conspire`, tag speculative network/suppression notes `#speculation`; keep the
    physics relation-maps (Puthoff/Shoulders/Bostick/poloidal-toroidal/43 kHz) linked to the jewel via a new
    index note (§ vault integration).
-5. **Archive.** Mirror `F:\vortor`, `F:\_QUARANTINE`, and the vaults to **G: (cloud)** and a **physical
-   external**; verify with a checksum/`robocopy /MIR` log. (Two copies + offsite = safe.)
+5. **Archive.** ✅ **Tool ready:** `results/verify/archive_mirror.ps1` — a **dry-run-by-default** robocopy
+   `/MIR` mirror with a verification pass and exit-code log. It mirrors `F:\vortor`, `F:\_QUARANTINE`, and the
+   vaults into **named subfolders** of the destination (so `/MIR` never purges anything else). Run
+   `.\archive_mirror.ps1` (dry-run) → `-Execute` to a **physical external** *and* **G: (cloud)** — two copies +
+   offsite. Verified: dry-run on the jewel lists 180 files / 1.95 MB, writes nothing.
 6. **VS Code / GitHub.** Open `F:\vortor` as the VS Code workspace; GitHub is the share surface for the jewel
    only. Vaults stay local/cloud (not on the public repo) unless a curated export is intended.
 
