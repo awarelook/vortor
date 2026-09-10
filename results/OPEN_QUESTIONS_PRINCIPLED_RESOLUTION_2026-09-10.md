@@ -87,8 +87,14 @@ Read through the theory's own dynamical concepts — **yin-yang** (chirality dua
   every order.** `[credited]`
 - **Yin-yang:** the beat's **handedness** is the chirality `= sign(λ)`; antiparticle = opposite handedness = C;
   the self-dual midpoint (`θ_χ=45°`) = Majorana. The yin-yang **is** the `±λ` pair. `[S, computed]`
+- **Medium / impedance (mag-to-elect ratio):** the vacuum's magnetic-to-electric ratio is its impedance
+  `Z₀ = √(μ₀/ε₀) = μ₀c`, and **exactly** `α = Z₀/(2 R_K)` with `R_K = h/e²` the quantum of resistance
+  (`alpha_impedance_check.py`, to `6e-15`). So **α = the vacuum-medium impedance / quantum resistance** — α is
+  small because `Z₀ ≈ 377 Ω ≪ 2R_K ≈ 51626 Ω`. This is the **K_PV / M11 medium layer's** natural reading of the
+  coupling. `[credited]` Time-inverse (frequency) enters only via the running `K_PV(ω)=α(0)/α(q²)` dispersion,
+  which runs `~0` at the electron scale and has no forced fixed point — so it does not fix the value either.
 
-So the theory's **torsion/torque/beat/yin-yang language fits the frontier precisely** — α is the beat-fraction,
+So the theory's **torsion/torque/beat/yin-yang/impedance language fits the frontier precisely** — α is the beat-fraction,
 chirality is its handedness, g−2 is the harmonic cascade on that beat. This is a genuine, correctly-typed
 synthesis *in the theory's own language*. And it is honest: it **describes the frontier's structure**, it does
 not **derive its value** — `α = 1/137.036` remains the QED coupling strength, settled-negative for any
