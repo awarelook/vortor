@@ -74,6 +74,6 @@ connected — a clue may later lead somewhere). What is removed: **only supersed
   tier is *labeled, reproducible, and honest*. The breakthroughs available are the two scoped external
   computations and the small locks; the rest is the honest frontier.
 
-*Provenance: the 36 `results/verify/` scripts + engine (`verify_all.py` → **37/37** PASS) + the `results/` and `handoffs/` docs
+*Provenance: the 36 `results/verify/` scripts + engine + the synthesis modeler `engine/ftgb_synthesis_modeler.py` (`verify_all.py` → **38/38** PASS) + the `results/` and `handoffs/` docs
 cited inline; every coincidence/flag is computed and logged in `COINCIDENCE_LEDGER.md`. No value promoted;
 `e^(-2/3)`/`E_fm` excised; the α winding stays settled-negative.*

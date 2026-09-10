@@ -9,6 +9,7 @@ manuscripts + the method toolkit + two execute-ready hand-off packages.
 > plain-language translation and every symbol labelled.
 
 > **New here? Start with [`FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md`](FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md)** (also as PDF) — a ~9-page, general-audience tour of the math, the physics, and the experimental model, honestly tiered.
+> **See the synthesis:** `python engine/ftgb_synthesis_modeler.py` — the executable **MATH ↔ PHYSICS ↔ EXPERIMENT isomorph**: it prints the tiered 11-row correspondence + the honest seams, and re-runs the live `[V]` anchors from the engine.
 
 ---
 
@@ -43,7 +44,7 @@ given when they were published).
 | `resonator_family.html` | the unified object at five resonance conditions (vacuum / neutrino / electron / EVO / nucleon) |
 | `soliton3d.html` | the toroidal soliton in 3D + a phase/time axis |
 | `dynamics_lab.html` | live fixed-step integration of the governing nonlinear equations (now incl. CH-04 vacuum beat spectrum) |
-| `electron.html` | the electron rung as a torsion defect — precession = charge, whirl = 1/α, chirality → electron / positron / neutrino |
+| `electron.html` | the electron rung as a torsion defect — precession = charge, whirl = 1/α *(analogy only — the α value is settled-negative, not derived)*, chirality → electron / positron / neutrino |
 | `coherence.html` | the interactive coherence stack — the 8 layers and 5 shared-invariant threads of the one object, click-to-open |
 | `FTGB_GRAND_SYNTHESIS_FULL_2026-09-10.pdf` | **the compiled jewel as one shareable paper** (~59 pp): synthesis + trilogy + the 2026-09-09 advances (R2/R3, LENR model, electron/α) + glossary/references. Recompiled 2026-09-10 from the corrected sources (charge/chirality = one frame-closure Frenet holonomy; Majorana neutrino). Built via `paper/` (pandoc → Chrome print) |
 | `FTGB_GRAND_SYNTHESIS.{md,pdf}` | the full tiered synthesis manuscript (Parts A–G, ~16.8k words) — **the large text with all the math** |
@@ -58,7 +59,7 @@ given when they were published).
 | `engine/` | **`ftgb_engine.py`** — the theory as one executable model: anchors {B,n,m_i,R} → static structure + dynamics + theorem verification, all tiered (`python engine/ftgb_engine.py`) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations — incl. the **R2 numerical run** now scoped to a runnable reference solver (`r2_reference_solver.py`) + spec that a collaborator scales to GPU |
 | `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the **α resolution** (the winding derivation settled-**negative**, `ι≈1` not 137; α correctly-typed by several lenses — g−2 beat, impedance — but not derived, value open), the **chirality / charge-conjugation / Majorana** cluster (all computed: chirality = `sign(λ)`, antiparticle = `−λ` = C, neutrino = self-dual `θ_χ=45°`), the 2026-09-10 **experimental confrontation** (each fingerprint vs the published record), + **`verify/`** — the reproducible math model: every load-bearing `[V]` claim has a script (map in `results/verify/README.md`) |
-| `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: **37/37** checks (36 scripts + the engine), exit 0 iff every one passes |
+| `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: **38/38** checks (36 theory scripts + the engine + the synthesis modeler), exit 0 iff every one passes |
 
 ## Where this credibly stands — the practical, positive value
 

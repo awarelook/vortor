@@ -12,10 +12,12 @@ python results/verify/verify_all.py      # runs all checks + the engine; exit 0 
 
 `verify_all.py` runs each theory script plus `engine/ftgb_engine.py`, captures exit
 codes, and prints a `PASS/FAIL` summary (it is also a CI gate — nonzero exit on any
-failure). Deterministic, no network. Current status: **37 / 37 PASS** on CPython 3.12
-(36 scripts + the engine — the `[V]`-core, plus `phase_dynamics_gml_check` & `rodin_vbm_check`
-(internalized `[credited]` phase-dynamics/number-theory with `[S]` FTGB bridges), plus one
-`[speculative frontier]` hypothesis-test, `microtubule_ck_comb_test.py`).
+failure). Deterministic, no network. Current status: **38 / 38 PASS** on CPython 3.12
+(36 theory scripts + the engine `ftgb_engine.py` + the synthesis modeler
+`engine/ftgb_synthesis_modeler.py` — the executable MATH↔PHYSICS↔EXPERIMENT isomorph, which
+runs the live `[V]` anchors). The suite spans the `[V]`-core, the internalized `[credited]`
+phase-dynamics/number-theory (`phase_dynamics_gml_check`, `rodin_vbm_check`) with `[S]` FTGB
+bridges, and one `[speculative frontier]` hypothesis-test (`microtubule_ck_comb_test.py`).
 
 ## Claim → script coverage map
 
@@ -57,7 +59,8 @@ failure). Deterministic, no network. Current status: **37 / 37 PASS** on CPython
 | `lenr_cop_nuclear_positive.py` | **positive core claim:** COP>1 is a **nuclear** energy release (d+d→⁴He = **23.85 MeV** mass defect, **conserved**), not over-unity — gain ~10⁴–10⁵/event; barrier lowered by **measured** screening `U_s≈300–800 eV` (enhances tunneling `exp(+936)`); the **He-4/heat = 24 MeV** signature (Miles) confirms the heat is nuclear; Δ is the one compute | LENR⊗yin-yang synthesis | `[V]`/`[credited]`/`[S]` |
 | `delta_detuning_beat_check.py` | Δ reframed as the **spectral detuning** `Δλ=λ₂−λ₁` setting the beat `f_b=(v_A/2πR)\|Δλ\|` (`Δλ=3.23→f_b=87 kHz = f₂−f₁`, the comb beats); the nuclear Δ is the same **Landau–Zener gap** structure; `U_s` = source/seed/surface/screening drive → the two "inputs" are the beat model's **control parameters** | LENR⊗yin-yang synthesis | `[V]` beat / `[S]` |
 | `lenr_energy_ledger.py` | the LENR energy accounting — `E_fm=2.5 MeV` retracted; rate reduces to exactly two named inputs (Δ, `U_s`); no over-unity | `LENR_MATTERWAVE_INTERACTION_MODEL` | `[V]` / `[S]` |
-| `engine/ftgb_engine.py` | the whole object as one executable model: structure (`v_A`, `λ₁R`, comb, mass ladder) → dynamics (Stuart-Landau `r*=√2`, comb-lock, current-leg) → theorems (Lamb identity, R2 threshold, Hall coercivity) | consolidates the R2/R3 scripts | `[V]`/`[S]` |
+| `engine/ftgb_engine.py` | the whole object as one executable model: structure (`v_A`, `λ₁R`, comb, mass ladder) → dynamics (Stuart-Landau `r*=√μ`, comb-lock, current-leg) → theorems (Lamb identity, R2 threshold, Hall coercivity) | consolidates the R2/R3 scripts | `[V]`/`[S]` |
+| `engine/ftgb_synthesis_modeler.py` | **the synthesis isomorph** — the object as an executable **MATH ↔ PHYSICS ↔ EXPERIMENT** map: prints the tiered 11-row correspondence + the honest seams (where the map frays from `[V]` to `[S]`/frontier, all at *absolute magnitudes*) + the closing tests, and **re-runs the live `[V]` anchors** (CK comb ratios, Lamb identity, Hall coercivity, whirl→mass) from the engine | consolidates the whole `[V]`/`[credited]`/`[S]` object | `[V]` anchors / `[S]` synthesis |
 
 ## Not theory verification (excluded from `verify_all.py`)
 

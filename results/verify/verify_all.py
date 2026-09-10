@@ -63,9 +63,10 @@ def run(path):
 
 def main():
     targets = theory_scripts()
-    engine = os.path.join(REPO, "engine", "ftgb_engine.py")
-    if os.path.isfile(engine):
-        targets.append(engine)
+    for extra in ("ftgb_engine.py", "ftgb_synthesis_modeler.py"):
+        p = os.path.join(REPO, "engine", extra)
+        if os.path.isfile(p):
+            targets.append(p)
 
     print("=" * 78)
     print("  FTGB MATH MODEL -- full reproducible verification")

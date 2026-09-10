@@ -351,7 +351,7 @@ validated by this project.
 Reproduced tables (label them **[preprint-claim]** wherever cited): leptons e/μ/τ "sub-0.01%"; quarks u,d,s,c,b,t
 "within 0.5σ…0.01σ" (31pg §XI.B); CKM "all 4, `J` at 0.2σ" (M13-8); ν "`Δm²₃₁` at 2%" (M13-9). The honest reading:
 the tower is **operator-seeded, linear, and formula-dressed** (M13-1, M13-2) with ~94% of the hierarchy in a
-number-theoretic exponent whose coefficients carry the unresolved π-power anomaly (M13-10) — so its *structure* is
+number-theoretic exponent whose coefficients carried the π-power anomaly (M13-10, **now resolved** — the π²-forms are the genuine curl-spectrum coefficients) — so its *structure* is
 foldable and its *arithmetic* checks, but its *physical fit claims stand or fall with the preprint under review*,
 not with anything verified here. Governing caveat: TUFT is a preprint (Nielsen 2024–2025, PhilArchive; in peer
 review); everything framework-tagged is asserted **illustratively**. **NOT `[V]`.**
