@@ -313,7 +313,17 @@ the anomaly — it drops the π² its own route supplies.** This is documented, 
 ```
 The clash, verbatim: *"The S³ quadratic coefficient ζ(3)/(4π²) and the S⁵ quadratic coefficient ζ(3)/12 are the SAME
 kind of object … but have DIFFERENT π-powers. This is the internal inconsistency."* The pure-vs-determinant factor is
-`(ζ(3)/12)/(ζ(3)/(4π²)) = π²/3 = 3.2899`. **Status: OPEN.** Settling which of the pure or the π²-carrying form is
+`(ζ(3)/12)/(ζ(3)/(4π²)) = π²/3 = 3.2899`. **Status: RESOLVED (2026-09-10, `results/verify/curl_spectral_zeta_pi_power_check.py`), in favor of the
+π²-carrying forms.** The S³ curl operator on coexact 1-forms has eigenvalue `(n+1)=m` with multiplicity
+`n(n+2)=m²−1`, so its spectral zeta is *exactly* `ζ_B(s)=Σ(m²−1)m^{−s}=ζ(s−2)−ζ(s)`, and the `n²`
+(quadratic-Casimir) coefficient of `ζ_B′(0)` is `ζ′(−2)=−ζ(3)/(4π²)` — the **π² is structurally mandatory**
+(on S³, ζ(3) enters a spectral derivative *only* via `ζ′(−2)`, which always carries `1/4π²`). The 'pure'
+`ζ(3)/12 = ζ(3)·(−ζ(−1))` is a product of zeta *values*, a categorically **different object**; and on S⁵/S⁹
+the true `n²` spectral derivatives are `ζ′(−4)∝ζ(5)/π⁴`, `ζ′(−8)∝ζ(9)/π⁸` — **not** `ζ(3)`. So "same object,
+different π-power" is **false** — a **category error**: `ω₃, β₅, σ` (π²-carrying) are the genuine
+curl-spectrum / Ray–Singer coefficients, while `C₅=ζ(3)/12`, `C₉=−ζ(3)/8` carry that provenance
+**misattributed** (wrong ζ, dropped π). Resolves the math question; the tower's *data-fit* (M13-11) stays
+**[preprint-claim]**. *(The historical "what would settle it" note below is superseded.)* Settling which of the pure or the π²-carrying form is
 physically correct needs the lens-space η / coexact-p determinant computation (the "A1a/A1b" task) or a firmer TUFT
 primary source — **not guessed here.** **[anomaly]** — carry this flag with any downstream use of `C₅`, `C₉`, `ω₃`,
 `σ₅`, or `σ₉`.

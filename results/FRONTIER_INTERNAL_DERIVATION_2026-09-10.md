@@ -112,5 +112,46 @@ TEST 2 (`θ_χ` = `γ₅` chiral rotation, `H = H_max cos 2θ`, Majorana at 45°
 `ck_winding_ratio_check`; the sector/Majorana facts are `majorana_selfdual_check`,
 `charge_conjugation_check`, `g2_skyrme_composite_check`.
 
-*No number fabricated. g=2's internal structure is verified; α's value and the mass ratios are stated as
-the frontier (settled-negative / `[S]`), not derived. ASCII apart from standard math symbols.*
+## 6. Reassessment via Nielsen TUFT + Reed QWM (2026-09-10) — two new verified results
+
+Brought the two folded frameworks to bear (M13 TUFT masses; M8 QWM charge/α), with creative agents on
+the theory's rhythms (beats, torsion, spectral geometry). Two genuine, *verified* results emerged — and
+one honest correction to §3.
+
+- **α — the energy-imbalance route is now COMPUTED-dead, and sharpened** (`confined_photon_null_balance_check`).
+  QWM says charge/α come from a slight electrostatic/magnetostatic energy imbalance "unlike a free photon."
+  Checked: the free propagating photon (Hopf–Rañada null EM knot) is **exactly balanced** (`U_E/U_B=1`,
+  imbalance ~10⁻¹⁶) — it carries *zero* imbalance. **Corrected object (per the theory):** the electron is
+  **not** that propagating loop but a **standing-wave resonator confined by the medium** (the polarizable
+  vacuum / `v_A` dielectric) with a **point charge defect** (a localized torsion / "spark-imbalance" point)
+  — the null-*violating* structure. So 100% of any α-sized imbalance lives in that resonator/medium/point-
+  defect deviation, not in the photon. Where the energy ratio *does* equal α (`U_E/mc² = r_e/λ_C = α`) it is
+  because `e` was inserted (`e²=4πε₀αħc`) — circular. **α's value stays inserted; the target is now precise:**
+  the standing-wave-in-medium imbalance at the point defect (not yet derived, and even a standing wave is
+  time-average balanced by equipartition — so the imbalance is subtle: instantaneous / dispersive / defect).
+
+- **The TUFT π-power anomaly (M13-10) is RESOLVED** `[V]` (`curl_spectral_zeta_pi_power_check`). The S³ curl
+  operator on coexact 1-forms has eigenvalue `(n+1)=m`, multiplicity `m²−1`, so its spectral zeta is exactly
+  `ζ_B(s)=ζ(s−2)−ζ(s)`; the `n²` (quadratic-Casimir) coefficient of `ζ_B′(0)` is `ζ′(−2)=−ζ(3)/(4π²)` — the
+  **π² is structurally mandatory** (ζ(3) enters a spectral derivative only via `ζ′(−2)`, which always carries
+  `1/4π²`). The 'pure' `ζ(3)/12 = ζ(3)·(−ζ(−1))` is a product of zeta *values*, a categorically **different
+  object**; the true `n²` terms on S⁵/S⁹ are `ζ(5)/π⁴`, `ζ(9)/π⁸`, **not** `ζ(3)`. So the anomaly is a
+  **category error**, resolved in favor of the π²-carrying forms — a documented open item now closed.
+
+- **Mass hierarchy — §3 corrected.** My "circular / numerology graveyard" checked the *bare* CK comb — the
+  wrong object. The TUFT mechanism (same `m=ħλ/c`) carries the hierarchy in the **analytic-torsion
+  exp-dressing**: ~79% is *parameter-free pure-ζ* (the slope `a₅=3.564112` from ζ(3),ζ(5),π), and it
+  genuinely derives the **size/order (~10⁴–10⁵ span)**. The **exact ratios** stay `[preprint-claim]`
+  (framework per-level choices; an independent assembly misses by ~30–46%). So: structure/order derived
+  `[framework/S]`, exact ratios not — an honest upgrade from "[S]-circular."
+
+- **Neutrino — Majorana favored, from one feature.** QWM's "smoke-ring, no-precession → ~massless" is the
+  *same state* as FTGB's self-dual `H=0` (verified): no net whirl → suppressed mass, *and* `C`-invariance →
+  `ν=ν̄` (Majorana) — one geometric feature gives both, more economical than TUFT's two ingredients (which
+  yield Dirac). Physical `m_ν≠0` sits *slightly off* self-dual. **0νββ is the clean discriminator** (Majorana
+  signal vs Dirac null) — the genuine, experimentally-decidable tension between the frameworks.
+
+*No number fabricated. Verified new results: g=2's internal Dirac structure, the free-photon null balance,
+and the π-power anomaly resolution. α's value and the exact mass ratios remain the frontier (now stated
+precisely — the resonator-in-medium imbalance, and the framework per-level fits), not derived. ASCII apart
+from standard math symbols.*

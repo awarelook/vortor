@@ -27,7 +27,7 @@ why fabricating it would violate the discipline). Every row cites a `results/ver
 
 | Item | Tier | What would resolve it → **honest status** |
 |---|---|---|
-| **"One object across all scales"** (rungs vacuum→…→nucleon) | `[S]` | Derive the mass hierarchy (`m_e/m_ν~10⁷`, `m_p/m_e=1836`) from the geometry. **`[S]`-by-nature:** it is a *coherence* claim (shared invariants); the ratios are **not** the CK ladder (1.7, 2.4), and deriving 1836/137-type numbers is the same numerology graveyard as α. Not attempted — would fail the genericity bar. |
+| **Mass hierarchy** (`m_p/m_e=1836`, `m_e/m_ν~10⁷`) | `[S]` / `[framework]` | **Reassessed 2026-09-10 (TUFT M13 + agents).** The bare CK comb (1.7, 2.4) doesn't give 1836 — but that is the wrong object. The Nielsen-TUFT mechanism (same Proca–Beltrami `m=ħλ/c`) carries the hierarchy in an **analytic-torsion exp-dressing**: ~79% is *parameter-free pure-ζ* (slope `a₅=3.564112` from ζ(3),ζ(5),π), genuinely deriving the **size/order (~10⁴–10⁵ span)**; the **exact ratios** stay `[preprint-claim]` (framework per-level choices). **The π-power anomaly (M13-10) is now RESOLVED** (`curl_spectral_zeta_pi_power_check`): `ζ_B(s)=ζ(s−2)−ζ(s)` forces the `n²` coefficient to `ζ′(−2)=−ζ(3)/4π²` (π² mandatory); the pure `ζ(3)/12=ζ(3)·(−ζ(−1))` is a mis-attributed different object. **Neutrino: Majorana favored** (`majorana_selfdual`): QWM "no-precession" ≡ self-dual `H=0` → both suppressed mass *and* `C`-invariance from one feature; TUFT's Dirac is weaker-tier; 0νββ decides. So: **structure/order derived** `[framework/S]`, exact ratios not; numerology still barred. |
 | **α value = 1/137.036** | `[flag]` | Derive it. **Settled-NEGATIVE** (`ALPHA_RESOLUTION_ASSESSMENT`): winding `ι≈1` not 137; typed by beat/impedance/precession but never derived. It is the **shared, non-FTGB QED frontier** ("why is the electron elementary?"). Do **not** re-attempt / fabricate. |
 | **g = 2** | `[S]`/open | Show the soliton's quantization is a minimally-coupled Dirac field. **Hard field theory** (Hopf→spin-½ is credited; g=2 needs the full Dirac structure). **Shown from inside the theory** (`g2_skyrme_composite_check`): FTGB's own B=1 Skyrmion (M10) *does* have a computed moment — Skyrme quantization gives `μ_p/μ_n=−3/2` (~3% of experiment), a **composite** g-factor (5.59), **not** g=2. So the extended soliton yields composite moments (correct for the nucleon); g=2 (electron) is the pointlike/elementary limit = the **same frontier as α**. **FURTHER (2026-09-10, `g2_dirac_structure`):** the Dirac bispinor *algebra* is **internal** — `±λ`=Weyl pair, `θ_χ`=`γ₅` chiral rotation, mirror=`C`, Hopf=spin-½ → g=2 is the *minimal-coupling limit* of this internal structure, reduced to one criterion: `π₁`(charge)/`π₃`(spin) locking (satisfied by the elementary lepton, broken by composites). **Derives g=2's meaning internally**; the lock itself stays `[S]`, and the α *value* stays the frontier. |
 | **Matter-wave dictionary** (mass=whirl, charge=torsion-holonomy; C/Majorana) | `[S,computed]` | Contact with the QFT operators. **`[S]` by construction:** an *internal-consistency* check of FTGB's own dictionary — behaves *structurally like* C; not the QFT `C=iγ²γ⁰` (no Dirac spinor in the verified content). |
@@ -44,7 +44,9 @@ why fabricating it would violate the discipline). Every row cites a `results/ver
 
 - **Resolved this session:** the same-sign-λ lock (`[V]`) — the carrier comb is genuinely single-chirality; and
   the **R3 `Pm≠1` advance** (`[V]cond`) — the coupled functional removes the `Pm=1` restriction, localizing the
-  residual to one Hall smallness (the `(η−ν)²` obstruction was a variable-choice artifact).
+  residual to one Hall smallness (the `(η−ν)²` obstruction was a variable-choice artifact); and the **TUFT π-power
+  anomaly RESOLVED** (`[V]`, `curl_spectral_zeta_pi_power_check`) — the S³ curl spectral zeta forces `ζ′(−2)=−ζ(3)/4π²`,
+  so the π²-carrying forms are genuine and the "pure `ζ(3)/12`" is a mis-attributed different object (category error).
 - **Genuinely winnable (execution, not proof-by-thought):** **R2 at Reynolds** (the scoped GPU run) upgrades the
   `[V]` core; **Δ** (the Skyrme-HPC run) closes the LENR rate. Both are packaged execute-ready in `handoffs/`.
 - **Not provable here — and honestly so:** **α's value** (settled-negative; the shared QED frontier), **g=2**
@@ -56,5 +58,5 @@ why fabricating it would violate the discipline). Every row cites a `results/ver
   tier is *labeled, reproducible, and honest*. The breakthroughs available are the two scoped external
   computations and the small locks; the rest is the honest frontier.
 
-*Provenance: the 28 `results/verify/` scripts + engine (`verify_all.py` → **29/29** PASS) + the `results/` and `handoffs/` docs
+*Provenance: the 30 `results/verify/` scripts + engine (`verify_all.py` → **31/31** PASS) + the `results/` and `handoffs/` docs
 cited inline. No value promoted; `e^(-2/3)`/`E_fm` excised; the α winding stays settled-negative.*
