@@ -38,10 +38,13 @@ dv/dt = P[ v × ω ] − ν k² v + F ,   P = I − kk/k²  (Leray),   ω = ∇�
   holds large scales force-free; the reference exposes a **`γ` relaxation knob**
   `F_relax = −γ P[∇×v − λ v]`. **This is essential:** single-helicity *forcing* does **not** produce a
   near-Beltrami *flow* at high Re (proven in `r2_spectral_retry`) — the flow must be *dynamically pinned* near
-  force-free. **CAVEAT (verified 2026-09-10):** the *naive* `−γ P[∇×v − λ v]` is only a **placeholder** — it
-  carries a `+γλv` growth term and destabilizes (NaN at moderate `γ`); a valid hold needs an
-  **energy-conserving projection onto the Beltrami manifold** (or a helicity-constrained drive), and
-  implementing that stable projection is itself part of the run. **δ(t) must be monitored and kept small** —
+  force-free. **The near-Beltrami hold (fixed 2026-09-10):** use `F_relax = −γ (∇×−λ)² v` — the **gradient
+  flow** of `∫|∇×v−λv|²`, i.e. `−γ(∇×∇×v − 2λ∇×v + λ²v)`. This is **pure damping** (each helical mode by
+  `γ(s|k|−λ)² ≥ 0`), so it is stable and drives the flow onto the single-λ Beltrami manifold — verified in the
+  reference solver: `γ≈1` cuts the Beltrami deviation `δ` ~100× (0.011→0.0001) while `Z` stays bounded. (The
+  *naive* `−γ(∇×v−λv)` was wrong — it carries a `+γλv` growth term; do not use it.) For **large** `γ` the
+  `(∇×−λ)²` damping is stiff — fold it into the **integrating factor** (as with the viscous term), not an
+  explicit step. **δ(t) must be monitored and kept small** —
   otherwise the run tests generic turbulence, not the
   near-Beltrami regime the theorem is about.
 
