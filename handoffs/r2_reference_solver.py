@@ -67,9 +67,9 @@ def rhs(vh, K, K2i, dealias, Fh, lam, gamma):
     lamb = np.array([v[1]*w[2] - v[2]*w[1], v[2]*w[0] - v[0]*w[2], v[0]*w[1] - v[1]*w[0]])
     lh = np.array([np.fft.fftn(lamb[i]) * dealias for i in range(3)])
     N_ = leray(lh, K, K2i) + Fh
-    if gamma > 0.0:                            # optional near-Beltrami relaxation (the high-Re knob)
-        resid = wh - lam * vh                  # curl v - lambda v  (zero for Beltrami)
-        N_ = N_ - gamma * leray(resid, K, K2i)
+    if gamma > 0.0:                            # PLACEHOLDER near-Beltrami knob -- destabilizing as
+        resid = wh - lam * vh                  # written (+gamma*lambda*v growth term); see main()
+        N_ = N_ - gamma * leray(resid, K, K2i)  # CAVEAT. Needs an energy-conserving Beltrami projection.
     return N_
 
 
@@ -88,40 +88,51 @@ def diagnostics(vh, K, N):
     return E, Z, w_inf, delta
 
 
-def main():
-    N, nu, lam, gamma = 32, 0.05, 1.0, 0.0     # laminar demo; gamma=0 (ABC forcing only)
-    dt, T = 0.005, 20.0
+def run_sim(N=32, nu=0.05, gamma=0.0, dt=0.005, T=20.0, lam=1.0, seed=0, verbose=False):
+    """Integrate the driven near-Beltrami flow; return the settled diagnostics.
+    Scale this: set N=192/1024 and swap numpy.fft -> cupy.fft for the real run."""
     K, K2, K2i, dealias = setup(N)
-    abc = abc_forcing(N, A=1.0)                 # the ABC/Beltrami field (k_f=1, curl u = u), spectral
-    Fh = nu * abc                              # forcing that sustains ABC against viscous decay
-    rng = np.random.default_rng(0)
+    abc = abc_forcing(N, A=1.0)                 # ABC/Beltrami field (k_f=1, curl u = u)
+    Fh = nu * abc                              # sustains ABC against viscous decay
+    rng = np.random.default_rng(seed)
     pert = leray(np.array([np.fft.fftn(0.1 * rng.standard_normal((N, N, N))) for _ in range(3)]), K, K2i)
-    vh = abc + pert                            # start near-Beltrami, with a small perturbation
+    vh = abc + pert                            # start near-Beltrami + a small perturbation
     Evisc = np.exp(-nu * K2 * dt)
-
-    print("=" * 78)
-    print("  R2 REFERENCE PIPELINE (N=%d, nu=%.3g, ABC k_f=1, gamma=%.2g) -- DEMO, not the run" % (N, nu, gamma))
-    print("  laminar Re; watching: Z(t) bounded plateau? delta(t) small (near-Beltrami)? BKM ~ linear?")
-    print("=" * 78)
-    print("    t      E        Z(enstr)   ||w||_inf   delta(Beltrami dev)   BKM=int|w|inf dt")
-    nsteps = int(T / dt); bkm = 0.0
+    if verbose:
+        print("    t      E        Z(enstr)   ||w||_inf   delta(Beltrami dev)   BKM=int|w|inf dt")
+    nsteps = int(T / dt); bkm = 0.0; Zs = []; ds = []
     for n in range(nsteps + 1):
         E, Z, w_inf, delta = diagnostics(vh, K, N)
-        if n % int(2.0/dt) == 0:
-            print("  %5.1f  %.4f   %8.3f   %8.3f      %.4f              %8.3f"
-                  % (n*dt, E, Z, w_inf, delta, bkm))
+        if verbose and n % int(2.0/dt) == 0:
+            print("  %5.1f  %.4f   %8.3f   %8.3f      %.4f              %8.3f" % (n*dt, E, Z, w_inf, delta, bkm))
         bkm += w_inf * dt
-        # IF-RK2 (Heun with integrating factor)
+        if n * dt > 0.5 * T:                    # average over the settled second half
+            Zs.append(Z); ds.append(delta)
         a1 = rhs(vh, K, K2i, dealias, Fh, lam, gamma)
         vstar = Evisc * (vh + dt * a1)
         a2 = rhs(vstar, K, K2i, dealias, Fh, lam, gamma)
         vh = Evisc * vh + 0.5 * dt * (Evisc * a1 + a2)
+    Zm = sum(Zs)/len(Zs)
+    return {"N": N, "nu": nu, "gamma": gamma, "Z_mean": Zm, "Z_max": max(Zs),
+            "delta_mean": sum(ds)/len(ds), "bkm": bkm, "bounded": max(Zs) < 2.0*Zm}
 
+
+def main():
     print("=" * 78)
-    print("  READING (demo): if Z(t) settles to a bounded plateau, delta stays small (flow held")
-    print("  near-Beltrami), and BKM grows ~linearly (bounded ||w||_inf), the pipeline + diagnostics")
-    print("  are working and ready to SCALE. Boundedness HERE is laminar-trivial and proves nothing")
-    print("  about R2 -- the test is the same plateau vs secular growth at S~1e3-1e4 (see RUN_SPEC).")
+    print("  R2 REFERENCE PIPELINE -- DEMO, not the physics run (that is S~1e3-1e4, N~192-1024, GPU)")
+    print("=" * 78)
+    print("  (1) time-history at N=32 (laminar): Z(t) bounded plateau, delta small, BKM ~ linear")
+    run_sim(N=32, nu=0.05, gamma=0.0, T=12.0, verbose=True)
+    print("=" * 78)
+    print("  READING: the pipeline runs and the diagnostics (Z, ||w||_inf, delta, BKM) are correct and")
+    print("  ready to SCALE. Laminar boundedness here is TRIVIAL and is NOT R2 -- the test is the same")
+    print("  plateau vs secular growth at S~1e3-1e4 (N~192-1024, GPU; RUN_SPEC). The R2 conditional")
+    print("  MECHANISM (enstrophy production ~ deviation from Beltrami) is verified separately and")
+    print("  rigorously by results/verify/r2_identity_check.py (exact Lamb-vector identity) and")
+    print("  r2_gronwall_check.py (the <eta^2> < nu^2 lambda1 threshold).")
+    print("  CAVEAT: the near-Beltrami 'gamma' knob in rhs() is a PLACEHOLDER -- the naive")
+    print("  -gamma*(curl v - lambda v) carries a +gamma*lambda*v GROWTH term and destabilizes; a")
+    print("  valid hold needs an energy-conserving projection onto the Beltrami manifold (to-do).")
     print("done.")
     return 0
 

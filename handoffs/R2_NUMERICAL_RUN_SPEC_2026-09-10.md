@@ -35,11 +35,14 @@ dv/dt = P[ v × ω ] − ν k² v + F ,   P = I − kk/k²  (Leray),   ω = ∇�
 - **Time step:** integrating-factor Heun (IF-RK2) — the exact viscous factor `e^{−νk²Δt}` removes viscous
   stiffness; verified stable in the reference at `Δt` set by the nonlinear CFL.
 - **Near-Beltrami drive (the load-bearing subtlety):** ABC forcing (`curl F = k_f F`, a Beltrami field)
-  holds large scales force-free; the reference exposes the **`γ` relaxation knob**
-  `F_relax = −γ P[∇×v − λ v]` that damps the departure from Beltrami. **This is essential:** single-helicity
-  *forcing* does **not** produce a near-Beltrami *flow* at high Re (proven in `r2_spectral_retry`) — the flow
-  must be *dynamically pinned* near force-free, which is exactly what `γ` (or a helicity-constrained drive)
-  does. **δ(t) must be monitored and kept small** — otherwise the run tests generic turbulence, not the
+  holds large scales force-free; the reference exposes a **`γ` relaxation knob**
+  `F_relax = −γ P[∇×v − λ v]`. **This is essential:** single-helicity *forcing* does **not** produce a
+  near-Beltrami *flow* at high Re (proven in `r2_spectral_retry`) — the flow must be *dynamically pinned* near
+  force-free. **CAVEAT (verified 2026-09-10):** the *naive* `−γ P[∇×v − λ v]` is only a **placeholder** — it
+  carries a `+γλv` growth term and destabilizes (NaN at moderate `γ`); a valid hold needs an
+  **energy-conserving projection onto the Beltrami manifold** (or a helicity-constrained drive), and
+  implementing that stable projection is itself part of the run. **δ(t) must be monitored and kept small** —
+  otherwise the run tests generic turbulence, not the
   near-Beltrami regime the theorem is about.
 
 ## 3. Diagnostics (all implemented; success/failure criteria)
