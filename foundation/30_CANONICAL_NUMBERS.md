@@ -130,7 +130,7 @@ Beat law: `f_b = c_CK · ε · v_A / (2πR)`. The prefactor has **two live defin
   error — a convention.** BOTH are canonical (user decision 2026-08-11): keep each self-consistent within
   the paper that depends on it. Do **not** "reconcile" by editing one to match the other.
 - **Convention-independent anchor (the bridge)   [V]:** `c_CK(ε→0) = 1/(2·j₀,₁) = 0.20792` (`j₀,₁` = first
-  zero of `J₀`). Matches the FreeFEM sweep `0.2080` at ε=0.05 to **0.04%**. Both conventions reduce to this
+  zero of `J₀`; reproduced by `results/verify/ck_eigenvalues_check.py`). Matches the FreeFEM sweep `0.2080` at ε=0.05 to **0.04%**. Both conventions reduce to this
   limit — it is what makes either value "a coefficient with a derived limit," not a bare fit.
 - **Cross-check rule:** in any single document, `c_CK` must appear in one convention throughout; verify the
   `ε`-power matches the paper's dimensional setup (2D vs 3D) before quoting a value.

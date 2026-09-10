@@ -1,0 +1,22 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# virtual environments
+.venv/
+venv/
+env/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# quarantine / backup tooling outputs (these live in F:\_QUARANTINE, never in the jewel)
+_QUARANTINE/
+*.bak

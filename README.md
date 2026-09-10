@@ -55,7 +55,8 @@ given when they were published).
 | `GLOSSARY.md`, `REFERENCES.md`, `LINEAGE.md` | consolidated, tiered knowledge base: shared vocabulary + citations across FTGB and the convergence frameworks (Reed, Storti, Nielsen, Ginzburg, Greenyer), plus the Bostick / Puthoff / Shoulders lineage note |
 | `engine/` | **`ftgb_engine.py`** — the theory as one executable model: anchors {B,n,m_i,R} → static structure + dynamics + theorem verification, all tiered (`python engine/ftgb_engine.py`) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations |
-| `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the α dynamical reframe, + `verify/` scripts |
+| `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the α dynamical reframe, + **`verify/`** — the reproducible math model: every load-bearing `[V]` claim has a script (map in `results/verify/README.md`) |
+| `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: all 11 theory checks + the engine, exit 0 iff every one passes |
 
 ## Where this credibly stands — the practical, positive value
 

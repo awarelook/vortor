@@ -1,0 +1,15 @@
+# FTGB reproducible math model -- Python dependencies
+#
+#   pip install -r requirements.txt
+#   python results/verify/verify_all.py     # reproduces the whole model (11 checks)
+#
+# Tested on CPython 3.12. Deterministic; no network access.
+
+mpmath>=1.3      # exact zeta / Bessel-zero constants: M13 mass-tower coefficients,
+                 #   the c_CK = 1/(2 j_0,1) limit, authoritative tan x = x roots
+numpy>=1.24      # spectral theorem verifiers: engine, R2 Lamb-vector identity,
+                 #   Hall Pm=1 coercivity, the enstrophy Gronwall bound
+
+# NOT required: scipy -- the Chandrasekhar-Kendall eigenvalue solve is
+# self-contained (a pure-math bisection, cross-checked by mpmath).
+# Standard library only otherwise: math, os, sys, glob, subprocess, time, collections.

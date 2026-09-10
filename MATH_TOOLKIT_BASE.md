@@ -112,7 +112,8 @@ Verified exactly in-project by direct symbolic `curl(B) - lambda B = 0` for `(l,
 `B_r = 0` at `r = R` fixes `lambda R` to a zero of the spherical Bessel function `j_l`:
 
 - **lowest mode `l=1`:** `lambda R` = first nonzero root of **`tan x = x` ≈ 4.4934** -- the CK/Beltrami
-  eigenvalue of the ball (a spheromak) `[credited]`. First six roots (scipy `brentq`): `4.493409,
+  eigenvalue of the ball (a spheromak) `[credited]`. First six roots — **reproduced from scratch (bisection +
+  mpmath, cross-checking the engine) by `results/verify/ck_eigenvalues_check.py` `[V]`** — `4.493409,
   7.725252, 10.904122, 14.066194, 17.220755, 20.371303`, with **inharmonic** ratios `1, 1.719, 2.427,
   3.130, 3.832, 4.534`.
 - **higher `l`** (first `j_l` zeros, `l = 0..4`): `[3.14, 4.49, 5.76, 6.99, 8.18]`; e.g. `Z_21 =

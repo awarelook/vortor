@@ -90,7 +90,8 @@ frequency `ω`). **[V] computed** (`toolkit_adv07`):
   `f_n ∝ v_A/R`; it says **nothing** about the number `Λ_n`. That number is an **eigenvalue** fixed by
   geometry + boundary condition, not by the theorem.
 - **[V] `Λ_1 = 4.493409`** is the first nonzero root of **`tan x = x`** — the Chandrasekhar–Kendall / Beltrami
-  eigenvalue of the **BALL** (`∇×B=λB`, PEC sphere). Script (scipy `brentq`) returns the first six roots
+  eigenvalue of the **BALL** (`∇×B=λB`, PEC sphere). The in-jewel script `results/verify/ck_eigenvalues_check.py`
+(self-contained bisection, mpmath-cross-checked, and cross-checking the engine's hardcoded roots) returns the first six roots
   `4.493409, 7.725252, 10.904122, 14.066194, 17.220755, 20.371303`, with **inharmonic** ratios
   `1, 1.719, 2.427, 3.130, 3.832, 4.534`. With the canonical medium anchors `v_A = 2.033×10⁴ m/s`, `R = 0.12 m`
   these give the carrier comb `f_n = 121.2, 208.3, 294.0, 379.3, 464.3, 549.3 kHz` (reproduces
