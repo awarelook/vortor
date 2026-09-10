@@ -4,7 +4,7 @@ ftgb_engine.py -- the mathematical engine of the FTGB coherent-object theory.
 One executable model. From four physical anchors {B, n, m_i, R} it:
   (1) derives the object's STATIC structure -- Alfven speed, Beltrami eigenvalue, the inharmonic
       Chandrasekhar-Kendall carrier comb, the whirl mass ladder m = hbar*omega/c^2, helicity;
-  (2) integrates the governing DYNAMICS -- the Stuart-Landau heartbeat (r* = sqrt(2)), the
+  (2) integrates the governing DYNAMICS -- the Stuart-Landau heartbeat (normal-form r* = sqrt(mu)), the
       Kuramoto/Adler comb entrainment, and the current-leg closure scalar S(t);
   (3) VERIFIES the load-bearing theorems -- the exact vortex-stretching = Lamb-vector identity,
       the enstrophy/BKM threshold (R2), and the Hall Pm=1 coercivity / (eta-nu)^2 obstruction (R3).
@@ -76,7 +76,7 @@ class CoherentObject:
              "  lambda1 (Beltrami)  = %.4e /m   (lambda1*R = %.4f)     [credited]" % (lam, lam*self.R),
              "  carrier comb ratios = 1 : %.4f : %.4f  (CK roots)       [V]" % (ratios[1], ratios[2]),
              "  carrier comb (abs)  = %.3e, %.3e, %.3e Hz  (v_A/R scaled)" % (f[0], f[1], f[2]),
-             "  EVO calibration     : {121, 208, 294} kHz = 1 : 1.719 : 2.430  (matches CK ratios)  [V]",
+             "  ball-lightning calib: {121,208,294} kHz = 1 : 1.719 : 2.427  (canon anchors v_A=2.03e4,R=0.12; ratios anchor-free)  [V]",
              "  helicity density    = %s" % self.helicity_density_sign(),
              "  real helicity H     ~ 0.088 (grid-convergent; NOT an integer Hopf charge)  [V]/[S]",
              "  --- whirl mass ladder  m = hbar*omega_C/c^2 ---"]
@@ -97,7 +97,10 @@ class CoherentObject:
 
     # ---------- (2) DYNAMICS (the engine integrates) ----------
     def heartbeat(self, mu=2.0, om=1.2, tmax=20.0, dt=2e-3):
-        """Stuart-Landau: dz/dt = (mu + i om - |z|^2) z  ->  r* = sqrt(mu).  [V] r*=sqrt(2) at mu=2."""
+        """Stuart-Landau normal form: dz/dt=(mu+i om-|z|^2)z -> r*=sqrt(mu) (illustrative mu=2 -> sqrt2).  [V]
+        Three DISTINCT numbers, do not conflate: (i) this normal-form radius r*=sqrt(mu) is a demo of the
+        limit-cycle EXISTENCE; (ii) the object's CALIBRATED drive-onset is R*~1.0 with heartbeat w0=42.6 kHz
+        (canonical 30_CANONICAL_NUMBERS.md sec.E); (iii) the MI max-growth WAVENUMBER is k=sqrt2 (sec.A)."""
         z = 0.05+0j
         for _ in range(int(tmax/dt)):
             z += dt*((mu + 1j*om - abs(z)**2)*z)
@@ -143,7 +146,7 @@ class CoherentObject:
         b_spk,_ = self.enstrophy_bounded(0.8, spike=3.0)   # sub-threshold mean, big spikes
         return "\n".join([
           "--- (2) DYNAMICS (integrated live) ---",
-          "  heartbeat        : r settled = %.4f  ->  r* = sqrt(2) = %.4f      [V]" % (r, rt),
+          "  heartbeat (S-L)  : r settled=%.4f -> normal-form r*=sqrt(mu)=%.4f (illustrative mu=2; object onset R*~1.0)  [V]" % (r, rt),
           "  comb lock K=0.1  : (7:4, 5:2) = %s  (sub-critical: drifts on the KAM torus)  [S]" % (lock_lo,),
           "  comb lock K=0.6  : (7:4, 5:2) = %s  (strong: pulled onto 7/4, 5/2)           [S]" % (lock_hi,),
           "  current-leg S    : undriven S=%.3f (rides mu=const no-go) ; driven S=%.3f (->0)  [V]neg" % (S0,S1),
