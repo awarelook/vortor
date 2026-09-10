@@ -114,6 +114,16 @@ naive soliton gives `g = 1`; the Hopf topology earns spin-½ `[credited]`). R2 i
 upgrade to the `[V]` core (execution-limited, scoped). The whole frontier is synthesized in the capstone
 [`results/OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md`](results/OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md).
 
+**LENR — the positive nuclear core (2026-09-10).** COP > 1 is **not** over-unity — it is a **nuclear** energy
+release (`d+d → ⁴He` = 23.847 MeV mass defect, **energy-conserving**), a nuclear source with a per-event gain
+~10⁴–10⁵. The barrier is lowered by **measured** electron screening (`U_s ≈ 300–800 eV`; Raiola/Huke/Czerski),
+and the He-4/heat = 24 MeV signature (Miles) confirms the heat is nuclear. The rate reduces to **one computable
+matrix element** — Δ, read in the toroidal-beat model as the **spectral detuning** `Δλ = λ₂−λ₁` (which sets the
+`{121,208,294}` kHz comb beats and is structurally the nuclear Landau–Zener gap) — with `U_s` measured. And the
+scaffold's coherence **is** its helicity = its chirality: the same self-dual `±λ` object that carries the
+electron/positron/Majorana chirality gives the plasmoid its Woltjer–Taylor force-free coherence `[credited]`.
+Synthesis + citations: [`results/LENR_YINYANG_CONNECTIONS_2026-09-10.md`](results/LENR_YINYANG_CONNECTIONS_2026-09-10.md).
+
 ## Honest tier legend
 
 `[V]` verified / proven here · `[credited]` established result · `[S]` structural /

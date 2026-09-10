@@ -49,6 +49,14 @@ So the mirror **keeps the mass but reverses chirality *and* the Reed torsion-def
 = opposite chirality" and "antiparticle = opposite charge" the *same* statement for this object, not two
 separate assertions — and it uses Reed's torsion as the frame-closure holonomy it is (§4), not as anything else.
 
+**Scope (what this is, precisely).** This is an **internal-consistency check of FTGB's own operational
+dictionary** (Reed/M8: mass = whirl-energy, charge = torsion-holonomy, chirality = `sign λ`): it asks whether
+*those* quantities behave under the parity mirror the way mass/charge/chirality should under C — and they do.
+It is **not** a computation of the Standard-Model operator `C = iγ²γ⁰` on Dirac spinors (the theory carries no
+Dirac spinor in its verified field content). So read it as "the mirror **behaves structurally like C**" — a
+genuine result about the theory's *self-consistency*, exactly at its `[S, computed]` tier — not a claim of
+contact with QFT's C. (Same discipline the project's firewall states: *vocabulary overlap ≠ contact*.)
+
 ## 3. The duality angle — now tied to a computed quantity, not analogy
 
 Previously flagged `[framework]/analogy "until tied to something computed."` It is now tied: define the
