@@ -56,6 +56,46 @@ genericity sweep already *includes* `ε = 1/φ` among the object's constants and
 to strip the tuned `A = 9` from the plasmoid-aspect row — see `EXPERIMENTAL_CONFRONTATION` §7 — but that is a
 geometry-honesty fix, not a path to α.)
 
+## 3b. The continuous winding-to-spin ratio, computed directly — ι ≈ 1 (not 137)
+
+The primality argument (§2–§3) refutes the *integer* invariants, but Reed's actual claim is the
+*continuous* winding-to-spin ratio (rotational transform ι) and the loop-closure torsion holonomy —
+non-integers the primality argument does not touch. So compute them directly from the l=1
+Chandrasekhar–Kendall force-free field (`results/verify/ck_winding_ratio_check.py`, math-only field-line
+tracing, no scipy):
+
+- **Winding-to-spin ratio ι ≈ 1.05–1.11** (mean 1.08) across every flux surface — **≈ 1, not 137**
+  (0.8% of 137; ~125× too small). The force-free electron is a **Hopf ring: one poloidal (whirl) turn per
+  toroidal (orbital) circuit** — exactly the `Q_H = 1` the integer argument cited. The continuous and
+  integer answers *agree*: the object's real winding is 1.
+- **Loop-closure torsion holonomy** `∫τ ds ≈ −0.70 … +0.04` rad — O(0.1 rad), varies with flux surface and
+  flips sign, **not** the fixed `2π/137 = 0.046` rad a torsion-defect-of-α would require.
+
+So the continuous route is **computed-dead**, not merely asserted-dead — this closes the one gap the
+primality argument left. To reach 137 you would need a 137-fold *nested/iterated* structure (not a single
+CK eigenmode) or the tuned, theory-inconsistent `A = 9`.
+
+## 3c. The deeper reason it cannot be patched — a category diagnosis
+
+Every internal route fails for a structural reason, not numerical bad luck:
+
+- **α is a COUPLING, not a count.** `α = e²/4πε₀ℏc` is the strength of the electron⊗photon *interaction
+  vertex* — a two-object property. No internal winding / topology / holonomy of a *single* soliton can *be*
+  a coupling constant; they are different types of object. "Winding = 1/α" equates a one-object shape with a
+  two-object interaction strength — category-confused at the root.
+- **α contains ℏ; the winding does not.** `ι` is a pure classical field-geometry ratio (no ℏ); α is a
+  *quantum* coupling. A classical soliton geometry cannot produce an ℏ-bearing dimensionless coupling without
+  quantization. Equating `ι` (classical, ≈1) with `1/α` (quantum, 137) is a type error.
+
+This is *why* the object's winding is 1 while α is 137 — they are not the same kind of number, so no cleverer
+geometry rescues the program.
+
+**Where α could legitimately live in FTGB (the honest forward direction):** not the static topology (settled
+negative), but the *quantized* electron⊗radiation coupling — the interaction/drive layer's vertex, which
+requires quantizing the soliton's coupling to the photon field. That is the correctly-typed question — and it
+is precisely the genuine, non-FTGB-specific open problem of QED ("why is the coupling 1/137?"), not something
+soliton geometry delivers. It is hard, open, and shared with all of physics.
+
 ## 4. What would flip the negative to `[V]` — and why it is not expected
 
 For "winding = 1/α" to become a derivation (per the corpus success-criteria), one would need **all** of:
