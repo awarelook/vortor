@@ -126,9 +126,16 @@ one honest correction to §3.
   vacuum / `v_A` dielectric) with a **point charge defect** (a localized torsion / "spark-imbalance" point)
   — the null-*violating* structure. So 100% of any α-sized imbalance lives in that resonator/medium/point-
   defect deviation, not in the photon. Where the energy ratio *does* equal α (`U_E/mc² = r_e/λ_C = α`) it is
-  because `e` was inserted (`e²=4πε₀αħc`) — circular. **α's value stays inserted; the target is now precise:**
-  the standing-wave-in-medium imbalance at the point defect (not yet derived, and even a standing wave is
-  time-average balanced by equipartition — so the imbalance is subtle: instantaneous / dispersive / defect).
+  because `e` was inserted (`e²=4πε₀αħc`) — circular. **Now computed on the correct object**
+  (`alpha_resonator_imbalance_check`, all channels): the imbalance is **0** from the resonator mode
+  (equipartition), **0** from the medium (non-dispersive by construction, canon §I), and **= α only via
+  inserted `e`** at the point defect (`r_e/λ_C`). Moreover **α RUNS** — `1/137.036` is the IR endpoint, not a
+  fixed number to hit; the theory's `K_PV(q²)=α(0)/α(q²)` dielectric flow *is* the running. Running relates
+  scales but needs an **anchor** (integration constant), and that anchor **is** the point-defect charge
+  magnitude. So "α runs / not an exact number" and "the magnitude/scale is unpinned" are the **same
+  statement**: the frontier reduces to ONE quantity — the running coupling's anchor = the charge magnitude `e`.
+  Topology quantizes charge (integer winding/Hopf); it does not fix the magnitude. **A thorough, well-posed
+  settled-negative on the correct object** — the sharpest statement of the α frontier to date.
 
 - **The TUFT π-power anomaly (M13-10) is RESOLVED** `[V]` (`curl_spectral_zeta_pi_power_check`). The S³ curl
   operator on coexact 1-forms has eigenvalue `(n+1)=m`, multiplicity `m²−1`, so its spectral zeta is exactly

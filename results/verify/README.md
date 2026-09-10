@@ -12,8 +12,8 @@ python results/verify/verify_all.py      # runs all checks + the engine; exit 0 
 
 `verify_all.py` runs each theory script plus `engine/ftgb_engine.py`, captures exit
 codes, and prints a `PASS/FAIL` summary (it is also a CI gate — nonzero exit on any
-failure). Deterministic, no network. Current status: **31 / 31 PASS** on CPython 3.12
-(30 theory scripts + the engine).
+failure). Deterministic, no network. Current status: **32 / 32 PASS** on CPython 3.12
+(31 theory scripts + the engine).
 
 ## Claim → script coverage map
 
@@ -39,6 +39,7 @@ failure). Deterministic, no network. Current status: **31 / 31 PASS** on CPython
 | `g2_dirac_structure_check.py` | **g=2 re-derived from inside:** the `±λ` Beltrami doublet **is** the two Weyl chiralities (pure `P_±` eigenstates); the duality angle `θ_χ` **is** the `γ₅` chiral rotation (`H=H_max cos2θ`, Majorana at 45°); the mirror **is** `C`; with Hopf spin-½ the **Dirac algebra is internal** → g=2 is its *minimal-coupling limit*, reduced to one criterion — `π₁`(charge)/`π₃`(spin) locking (elementary lepton locked = g=2, composite decoupled) | `FRONTIER_INTERNAL_DERIVATION` | `[V]`/`[credited]`/`[S]` |
 | `confined_photon_null_balance_check.py` | **α energy-imbalance route computed-dead:** the confined photon "chasing its tail" (Hopf–Rañada EM knot) is a **null field** → `U_E/U_B = 1` exactly (imbalance ~10⁻¹⁶); the free photon carries **zero** electro/magneto imbalance, so any α-sized imbalance lives only in the null-violating (charge) part → α **not** derived (stays inserted), route sharpened like the winding negative | `FRONTIER_INTERNAL_DERIVATION` | `[V]` neg |
 | `curl_spectral_zeta_pi_power_check.py` | **resolves the TUFT π-power anomaly (M13-10):** the S³ curl spectral zeta is exactly `ζ_B(s)=ζ(s−2)−ζ(s)`, so its n² coefficient is `ζ′(−2)=−ζ(3)/4π²` — **π² structurally mandatory**; the "pure" `ζ(3)/12 = ζ(3)·(−ζ(−1))` is a product of zeta *values*, a different object → anomaly is a **category error**, resolved for the π²-carrying forms | `TOOLKIT_ADV_13` M13-10 | `[V]` / resolves `[anomaly]` |
+| `alpha_resonator_imbalance_check.py` | **α on the correct object (standing-wave resonator in medium + point defect), all channels:** mode imbalance = 0 (equipartition); medium imbalance = 0 (non-dispersive, canon §I); defect self-energy = α *only* via inserted `e` (`r_e/λ_C`, circular); and **α RUNS** (1/137.036 = IR endpoint; `K_PV(q²)` dielectric flow) → the frontier reduces to ONE quantity — the running coupling's **anchor** = the charge magnitude. Topology quantizes charge; the magnitude/scale is unpinned | `FRONTIER_INTERNAL_DERIVATION` | `[V]` / settled-neg |
 | `torque_beat_alpha_check.py` | the frontier through the theory's own lens: the g−2 anomaly **is** a beat (`ω_a=ω_s−ω_c=a·ω_c`), `α` = the spin⊗orbit beat-fraction (`2π·a=α`), the g−2 series = the harmonic/loop cascade (3-loop → measured to 5e-11), chirality = the beat's yin-yang handedness → it **types** the frontier, doesn't derive the value | `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` §5 | `[credited]` / `[S]` |
 | `alpha_impedance_check.py` | the **medium** reading: `α = Z₀/(2R_K)` exactly (to 6e-15) — the vacuum's magnetic-to-electric impedance `Z₀=√(μ₀/ε₀)` over twice the quantum resistance `R_K=h/e²`; folds into the K_PV/M11 layer → types α as a medium-impedance ratio, but a restatement (both carry the constants) | `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` §5 | `[credited]` |
 | `chirality_helicity_check.py` | chirality = `sign(λ)` = `sign(H)` of the Beltrami field (exact: `curl ABC=+u`, mirror `=−u`); antiparticle = `−λ` partner; the duality angle = computed helicity-mixing `θ_χ` (0°/90° = electron/positron) | `CHIRALITY_DUALITY_ASSESSMENT` | `[credited]` / `[S]` |
