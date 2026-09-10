@@ -400,7 +400,14 @@ as an initial condition. The geometric underpinning is equally standard: the Bel
 exactly the Reeb field of a contact structure whose characteristic foliation is the Hopf
 fibration [credited: Etnyre & Ghrist 2000, *Nonlinearity* **13**, 441], which is what makes the
 winding of a force-free field a genuine topological quantity rather than an incidental geometric
-feature.
+feature. That reading now carries a theorem: because a Beltrami field is a Reeb field, the
+Weinstein conjecture -- proved in dimension three by Taubes (2007) -- *guarantees* it has a
+**closed field line**, so the resonator's standing-wave loop exists by contact topology rather
+than assumption. The contact identity `alpha ^ dalpha = lambda|B|^2 vol` (with `curl B x B = 0`,
+so `B` is the Reeb direction) and the closed-orbit existence are computed in
+`results/verify/reeb_spectral_geometry_check.py`; the same operator's spectrum unifies the CK
+carrier comb, the self-similar cascade, and the `S^3` Ray-Singer torsion (Module M15,
+`toolkit/TOOLKIT_ADV_15_REEB_SPECTRAL_GEOMETRY_2026-09-10.md`).
 
 #### A.2.2 Magnetic helicity as a conserved topological invariant
 

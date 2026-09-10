@@ -1,12 +1,12 @@
 ---
-title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M14)"
+title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M15)"
 author: Nathaniel Hanks
 date: 2026-09-09
-status: "Consolidated reference handbook. Assembled from the eight canonical method modules TOOLKIT_ADV_07..14, resting on the shared foundation MATH_TOOLKIT_BASE.md; those modules remain the source of record. This is a clean, shareable single-file reference; no new claims are introduced here."
+status: "Consolidated reference handbook. Assembled from the nine canonical method modules TOOLKIT_ADV_07..15, resting on the shared foundation MATH_TOOLKIT_BASE.md; those modules remain the source of record. This is a clean, shareable single-file reference; no new claims are introduced here."
 anchors: "Four measured anchors {B, n_i, m_i, R}; zero free structural parameters."
 ---
 
-# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M14)
+# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M15)
 
 **Nathaniel Hanks -- 2026-09-09**
 
@@ -14,7 +14,7 @@ anchors: "Four measured anchors {B, n_i, m_i, R}; zero free structural parameter
 
 ## 1. Introduction
 
-This handbook consolidates the eight *method modules* of the Fractal-Toroidal-Beat (FTGB) program
+This handbook consolidates the nine *method modules* of the Fractal-Toroidal-Beat (FTGB) program
 into a single, tiered, citable reference. The toolkit is not the theory; it is the reusable
 **analysis machinery** the theory is built with -- the dimensional bookkeeping, the conserved-current
 constructions, the no-go templates, the synthesis mappings, and the anti-numerology controls that
@@ -27,7 +27,7 @@ configuration and as a Madelung / quantum-hydrodynamic matter wave, resting on f
 `{B, n_i, m_i, R}` with zero free structural parameters. But each method below is written to be
 lifted out and re-applied to a fresh problem without re-deriving it. That is the point of a toolkit.
 
-The eight modules are:
+The nine modules are:
 
 | Module | Subject | What it gives you |
 |---|---|---|
@@ -39,8 +39,9 @@ The eight modules are:
 | **M12** | Ginzburg spiral-field theory (toryx / helyx) | a toroidal-spiral *structural analogy* (matter = self-inverting torus, radiation = double helix, discrete matter<->radiation ladder) mapped onto the Beltrami-Hopf object; analogy-only, no claim adopted |
 | **M13** | Nielsen TUFT mass-tower & mixing methods | the ζ-valued exponent tower (`C₅=ζ(3)/12`, `β₅=ζ(5)/8π⁴`, …), knot/lens-space torsion, CKM/PMNS overlaps, Chern-Simons `M=ke²/4π`, Proca-Beltrami `λ=mc/ℏ` — coefficients `[V]`-checked, **π-power anomaly now RESOLVED (M13-10); the analytic-torsion dressing derives the hierarchy's size/order (~79% parameter-free); preprint blind-fit stays `[preprint-claim]`** |
 | **M14** | Greenyer beat-law & EVO cascade methods | the Beat Law + shape-independent ladder `N^L`, the triad dichotomy (integer silence / golden resonance), two Manley-Rowe (Fibonacci) invariants, anapole `N⁴`, `9/8 μ_B`; nuclear layer a **pre-registered target** (`N_crit` prediction), **no over-unity** |
+| **M15** | Reeb & spectral geometry | the Beltrami-Hopf field as the **Reeb field of a contact structure** (Etnyre-Ghrist; the contact identity `α∧dα = λ·‖B‖²·vol` with `B` in `ker dα`), so Weinstein/**Taubes** guarantees the resonator's **closed standing-wave orbit** exists by topology; and the **curl operator's one spectrum** in three roles — CK comb (`tan x=x`), cascade (`λ_L=λ_0 N^L`), `S³` Ray-Singer torsion (`ζ'(-2)=-ζ(3)/4π²`). `[V]`/`[credited]`, no new claim |
 
-All eight modules rest on **`MATH_TOOLKIT_BASE.md`** — the shared foundation carrying the mathematics they
+All nine modules rest on **`MATH_TOOLKIT_BASE.md`** — the shared foundation carrying the mathematics they
 import: the Chandrasekhar-Kendall / Beltrami curl eigenproblem (`§1`), helicity / Woltjer-Taylor relaxation
 (`§4`), the **one operator read three ways** (plasma ‖ Madelung matter-wave ‖ `K_PV` polarizable vacuum) and
 the topology (`§9`), and the canonical anchors whose single source of truth is
