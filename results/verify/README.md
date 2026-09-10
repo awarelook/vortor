@@ -27,6 +27,7 @@ failure). Deterministic, no network. Current status: **11 / 11 PASS** on CPython
 | `egm_sense_checks.py` | Storti EGM numerical audit — the 2:1 harmonic is definitional; radii/H₀ miss; `e^(-2/3)` is dead (`→72`, not 137) | M11-4 | `[V]` (audit) / `[flag]`/`[excised]` |
 | `egm_mode_count_closure.py` | the Debye/Nyquist mode-count closure behind `ω_Ω`/`n_Ω`; `ℓ∝λ_C n_Ω^(-1/3)` scaling + weak-sensitivity | M11-6 | `[V]` |
 | `alpha_running.py` | standard QED α running (and that it runs the *wrong way* for a geometric `~137`) — grounds the dynamical reframe | `ALPHA_DYNAMICAL_REFRAME`, M11-4(v) | `[V]` / `[flag]` |
+| `alpha_scale_headroom_check.py` | bounds the α reframe's *magnitude*: zero running headroom at `m_e`, ~6 decades needed, natural window ~3× short → the 2.3% is a winding-**skeleton** error, not dynamical | `ALPHA_RESOLUTION_ASSESSMENT` | `[V]` / `[S]` |
 | `lenr_energy_ledger.py` | the LENR energy accounting — `E_fm=2.5 MeV` retracted; rate reduces to exactly two named inputs (Δ, `U_s`); no over-unity | `LENR_MATTERWAVE_INTERACTION_MODEL` | `[V]` / `[S]` |
 | `engine/ftgb_engine.py` | the whole object as one executable model: structure (`v_A`, `λ₁R`, comb, mass ladder) → dynamics (Stuart-Landau `r*=√2`, comb-lock, current-leg) → theorems (Lamb identity, R2 threshold, Hall coercivity) | consolidates the R2/R3 scripts | `[V]`/`[S]` |
 
