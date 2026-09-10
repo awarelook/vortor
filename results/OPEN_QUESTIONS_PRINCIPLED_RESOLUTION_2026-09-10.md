@@ -4,6 +4,11 @@
 questions — separating what is *settled*, what is a *constraint*, and what is the *irreducible frontier*.
 Every claim below is backed by a `results/verify/` script.
 
+> **This is the capstone for the α / g=2 / R2 frontier.** Its depth sits in two assessments —
+> [`ALPHA_RESOLUTION_ASSESSMENT_2026-09-10`](ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md) (the winding-derivation
+> verdict) and [`CHIRALITY_DUALITY_ASSESSMENT_2026-09-10`](CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md)
+> (chirality / C / Majorana / Reed-torsion) — and it sits under the edifice-wide `FTGB_COHERENCE_MAP`.
+
 ---
 
 ## 1. R2 — **resolved in principle; execution-limited, not principle-limited** (the winnable one)

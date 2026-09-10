@@ -4,6 +4,11 @@
 **Question (from the state-vs-ambition review):** α is the load-bearing pillar — if "whirl count = 1/α"
 can't be made parameter-free, the matter-wave layer never rises above `[S]`.
 
+> **Higher-level synthesis:** the frontier capstone
+> [`OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10`](OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md) places
+> this winding-derivation verdict alongside g=2 and R2 (and the multi-lens *typing* of α); read it for the whole
+> frontier story, this doc for the depth behind the "NO."
+
 **Answer, corrected 2026-09-10:** the decisive test — *does a physics-selected winding/holonomy invariant
 of the CK/Hopf object equal 137.036 without a tuned integer?* — **has already been run in the extended corpus,
 more thoroughly than a single A-recompute, with a genericity control, and it returns a clean NEGATIVE.** An

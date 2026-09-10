@@ -55,7 +55,7 @@ given when they were published).
 | `GLOSSARY.md`, `REFERENCES.md`, `LINEAGE.md` | consolidated, tiered knowledge base: shared vocabulary + citations across FTGB and the convergence frameworks (Reed, Storti, Nielsen, Ginzburg, Greenyer), plus the Bostick / Puthoff / Shoulders lineage note |
 | `engine/` | **`ftgb_engine.py`** — the theory as one executable model: anchors {B,n,m_i,R} → static structure + dynamics + theorem verification, all tiered (`python engine/ftgb_engine.py`) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations — incl. the **R2 numerical run** now scoped to a runnable reference solver (`r2_reference_solver.py`) + spec that a collaborator scales to GPU |
-| `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the **α resolution** (the winding derivation settled-**negative**, `ι≈1` not 137; α correctly-typed as the g−2 spin precession, value open), the **chirality / charge-conjugation / Majorana** cluster (all computed: chirality = `sign(λ)`, antiparticle = `−λ` = C, neutrino = self-dual `θ_χ=45°`), the 2026-09-10 **experimental confrontation** (each fingerprint vs the published record), + **`verify/`** — the reproducible math model: every load-bearing `[V]` claim has a script (map in `results/verify/README.md`) |
+| `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the **α resolution** (the winding derivation settled-**negative**, `ι≈1` not 137; α correctly-typed by several lenses — g−2 beat, impedance — but not derived, value open), the **chirality / charge-conjugation / Majorana** cluster (all computed: chirality = `sign(λ)`, antiparticle = `−λ` = C, neutrino = self-dual `θ_χ=45°`), the 2026-09-10 **experimental confrontation** (each fingerprint vs the published record), + **`verify/`** — the reproducible math model: every load-bearing `[V]` claim has a script (map in `results/verify/README.md`) |
 | `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: all 11 theory checks + the engine, exit 0 iff every one passes |
 
 ## Where this credibly stands — the practical, positive value
@@ -103,6 +103,16 @@ also executed (`results/R3_HALLMHD_CANONICAL_ENSTROPHY_2026-09-09.md`): the iden
 (the Hall term is frozen-in transport, not an extra flux) and the bound carries over at magnetic
 Prandtl number `Pm = 1`, with an explicit `(η−ν)²` dissipation obstruction pinning down exactly what
 blocks the general `Pm ≠ 1` case.
+
+**The α-frontier — resolved honestly (2026-09-10).** The theory's hardest question — does the whirl/winding
+count *derive* `1/α = 137`? — is now **settled-negative**, not open (`results/ALPHA_RESOLUTION_ASSESSMENT`): the
+object's computed winding-to-spin ratio is `ι ≈ 1` (a Hopf ring, not 137), 137 is prime, and the near-misses are
+generic. Several lenses instead **correctly-type** α — the g−2 spin-precession beat, the exact vacuum impedance
+`α = Z₀/(2R_K)`, the QED harmonic cascade — but each only *restates* the measured value, so `α = 1/137.036`
+stays the QED coupling: the same irreducible "why is the electron elementary?" frontier that `g = 2` marks (the
+naive soliton gives `g = 1`; the Hopf topology earns spin-½ `[credited]`). R2 is the one genuinely **winnable**
+upgrade to the `[V]` core (execution-limited, scoped). The whole frontier is synthesized in the capstone
+[`results/OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md`](results/OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md).
 
 ## Honest tier legend
 

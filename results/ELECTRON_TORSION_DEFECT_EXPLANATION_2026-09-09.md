@@ -117,11 +117,15 @@ threads this electron picture pulls together.
 - **Framework, not QED.** This is the QWM/Reed topological *reading*, folded method/analogy-only. It does not
   replace the Standard Model; it offers a mechanical *interpretation* of what SM/QED leave undefined (what
   charge *is*). That interpretive gap is real and fairly stated in the passage — but the reading is `[framework]`.
-- **`α` value is open — reframed dynamically.** Fold the mechanism, flag the number (2.3%), keep `e^(-2/3)`
-  out. The 2.3% is now treated as a **running / IR-fixed-point** effect, not a static factor: standard QED
-  running goes the *wrong way* (137.036 is the IR ceiling), so the honest reframe is a **magnetic-vacuum
-  anti-screening flow** to a `137.036` fixed point — principled but not parameter-free (still `[flag]`). See
-  `results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`.
+- **`α` value is open `[flag]` — the winding derivation is now SETTLED-NEGATIVE.** (See
+  `ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md` and the `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md`
+  capstone. The "reframed dynamically" running reading below is **superseded**: the running is quantitatively
+  insufficient at the electron scale, the winding-to-spin ratio computes to `ι≈1` (not 137), and α is now
+  correctly-*typed* by several lenses — the g−2 beat, the `Z₀/2R_K` impedance — but **not derived**.) Fold the
+  mechanism, flag the number (2.3%), keep `e^(-2/3)` out. Historically the 2.3% was treated as a
+  **running / IR-fixed-point** effect: standard QED running goes the *wrong way* (137.036 is the IR ceiling),
+  so the reframe was a **magnetic-vacuum anti-screening flow** to a `137.036` fixed point — principled but not
+  parameter-free (still `[flag]`, now settled-negative). See `results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`.
 - **"Future technology implications" stay tiered.** Any application claim inherits the project's rule: **no
   over-unity**, no fabricated rate or device performance. The vacuum is a medium, not a source. The genuine,
   disciplined implications are the *testable* ones — the EVO carrier comb, the aneutronic He-4/heat signature

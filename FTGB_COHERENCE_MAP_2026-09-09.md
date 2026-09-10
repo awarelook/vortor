@@ -54,8 +54,10 @@ The frameworks converge because they share the **same five invariants of the one
    The self-dual `θ_χ=45°`, `H=0` state is C-invariant ⇒ the **Majorana neutrino** (`majorana_selfdual_check.py`).
 5. **`α ≈ 137` as a winding number — a *suggestive analogy only*.** The object's computed winding-to-spin
    ratio is `ι ≈ 1` (a Hopf ring `= Q_H`, not 137); "winding = 1/α" is **settled-negative** as a derivation
-   (`ALPHA_RESOLUTION_ASSESSMENT`), and the value stays `[flag]` (§3 below). The correctly-typed reading of α
-   is the g−2 anomaly (an internal spin precession), whose value is still the open coupling strength.
+   (`ALPHA_RESOLUTION_ASSESSMENT`), and the value stays `[flag]` (§3 below). Several lenses instead
+   **correctly-type** α without deriving it — the g−2 anomaly (an internal spin-precession beat), the exact
+   vacuum impedance `α = Z₀/(2R_K)`, and the QED harmonic cascade — each *restating* the still-open coupling
+   strength; the frontier capstone `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` collects them.
 
 ## 3. Theory → reality — the honest tier ladder (what is load-bearing)
 
@@ -94,8 +96,10 @@ The frameworks converge because they share the **same five invariants of the one
 > against the published record. Most are **UNTESTED** (live targets); He-4/heat and aneutronic suppression are
 > **CONSISTENT with a contested anomaly** (accounted-for, not confirmed); the **aspect-ratio row is in TENSION**
 > and, on inspection, mis-sourced (it should read `A ≈ φ`, the theory's own core value, not the flagged
-> α-winding `A ≈ 9`); the neutrino is **open, decidable ~10 yr**, but the repo disagrees with itself on
-> Majorana vs Dirac. The confrontation's chief value was catching two internal contradictions.
+> α-winding `A ≈ 9`); the neutrino is **open, decidable ~10 yr**, and the Majorana-vs-Dirac disagreement it
+> flagged is now resolved by tier — the credited/computed chirality layer predicts **Majorana**
+> (`CHIRALITY_DUALITY_ASSESSMENT` §3b), with TUFT's Dirac the lower-tier `[preprint]` claim `0νββ` will settle.
+> The confrontation's chief value was catching two internal contradictions (both since resolved).
 
 ## 5. The bottom line
 
@@ -110,7 +114,8 @@ and the map above is how they cohere from theory to the bench.
 
 ## References / provenance
 `FTGB_GRAND_SYNTHESIS.md`, `FTGB_CURRENTLEG_TRILOGY.md`, `TOOLKIT_HANDBOOK.md` (M7–M14), `GLOSSARY.md`,
-`REFERENCES.md`; `results/` (R2, R3, LENR model, electron, α reframe, + `verify/` scripts); models
+`REFERENCES.md`; `results/` (R2, R3, LENR model, electron, the α resolution + the
+`OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` frontier capstone, + `verify/` scripts); models
 `index.html`, `resonator_family.html`, `soliton3d.html`, `dynamics_lab.html`, `electron.html`.
 
 *A navigation/ordering map; every load-bearing claim keeps its tier from the source documents. No value is

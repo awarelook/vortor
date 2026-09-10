@@ -5,6 +5,11 @@
 accepted" is not an argument; "fails a genericity/derivation test" is. Everything below is computed —
 `results/verify/chirality_helicity_check.py`.
 
+> **Higher-level synthesis:** the frontier capstone
+> [`OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10`](OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md) §5
+> reads this `±λ` chirality pair as the **yin-yang handedness** of the g−2 beat; this doc is its depth
+> (chirality → C → Majorana, and Reed-torsion as frame-closure holonomy).
+
 ---
 
 ## 1. Chirality = sign of the Beltrami λ = sign of helicity  — `[credited]`, an exact identity
