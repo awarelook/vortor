@@ -32,7 +32,7 @@ for name,(val,rep,note) in coeffs.items():
 
 print()
 print("="*74)
-print("2) THE pi-POWER INTERNAL INCONSISTENCY  [flag] (documented anomaly, carried not hidden)")
+print("2) THE pi-POWER QUESTION -- RESOLVED 2026-09-10 (see curl_spectral_zeta_pi_power_check.py)")
 print("="*74)
 print("  If all n^2 coefficients came from one Ray-Singer normalization zeta_B'(0)=zeta(3)/(4 pi^2),")
 print("  every one should carry pi^2. But:")
@@ -40,7 +40,9 @@ print(f"     C5    = zeta(3)/12        = {z3/12:.6f}   -> pi-FREE  (1/12, no pi^
 print(f"     omega3= zeta(3)/(4 pi^2)  = {z3/(4*pi**2):.6f}   -> carries 1/pi^2")
 print(f"     ratio C5 / omega3 = {(z3/12)/(z3/(4*pi**2)):.6f}  = pi^2/3 = {pi**2/3:.6f}")
 print("  So C5 and omega3 differ by exactly pi^2/3 -- they cannot both be 'the' n^2 normalization.")
-print("  This is the unresolved pi-power anomaly: fold the STRUCTURE, flag the coefficient origin.")
+print("  RESOLVED (curl_spectral_zeta_pi_power_check.py): S^3 curl spectral zeta zeta_B(s)=zeta(s-2)-zeta(s)")
+print("  forces the n^2 coeff to zeta'(-2)=-zeta(3)/(4 pi^2) -- pi^2 MANDATORY; pure zeta(3)/12=zeta(3)*(-zeta(-1))")
+print("  is a product of zeta VALUES, a mis-attributed object (category error). pi^2-forms are genuine.")
 
 print()
 print("="*74)

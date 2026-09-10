@@ -65,6 +65,18 @@ citations and `TOOLKIT_HANDBOOK.md` (M7–M14) for the methods.
   reframe (`results/ALPHA_DYNAMICAL_REFRAME_2026-09-09.md`) is quantitatively insufficient (α runs ~0 at
   `m_e`); the `e^(-2/3)` "screening" that would force it is `[excised]`. `[framework: Reed]` / winding-count
   `[flag, settled-negative]` / g−2 typing `[credited]`
+- **Running-coupling anchor / unpinned charge magnitude** — the α frontier reduced to ONE quantity.
+  Topology *quantizes* charge (integer winding / Hopf) but does NOT *fix* the magnitude `e`; α runs
+  (`K_PV(q²) = α(0)/α(q²)` IS the flow), and a running coupling needs an anchor (integration constant) =
+  the point-defect charge magnitude. So "α runs / not exact" and "the magnitude is unpinned" are the *same
+  statement*. `settled-negative (refined)` (`FRONTIER_INTERNAL_DERIVATION_2026-09-10`,
+  `alpha_resonator_imbalance_check.py`)
+- **Standing-wave resonator vs loop** — the electron is a standing-wave resonator confined by the medium
+  (polarizable vacuum / `v_A` dielectric) with a point charge defect, NOT a propagating loop ("photon
+  chasing its tail"). On the correct object the electro/magnetostatic imbalance is `0` (mode equipartition)
+  + `0` (non-dispersive medium) + `α` only via the inserted `e`; the free propagating photon (Hopf–Rañada
+  null knot) is *exactly* balanced (imbalance ~10⁻¹⁶). **Supersedes** the propagating-loop reading.
+  `settled-negative (refined)` (`confined_photon_null_balance_check.py`)
 
 ## 4b. Chirality, antimatter, and the neutrino (the particle reading)
 Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
@@ -77,9 +89,20 @@ Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
 - **Chirality flip = charge conjugation C** — under the `λ→−λ` mirror the **mass is fixed** while **chirality
   and the Reed torsion-defect / precession sign flip together** (ratio `−1.000`), so "opposite chirality" and
   "opposite charge" are the *same* statement. `[S, computed]`
-- **Duality / chiral angle `θ_χ`** — the computed helicity-content mixing angle `θ_χ = atan(‖u₋‖/‖u₊‖)`;
-  electron `= 0°`, positron `= 90°`. A computed quantity, not imagery (and *not* the electroweak mixing
-  angle). `[V-def]`
+- **Weyl-chirality doublet (`±λ`)** — the two Beltrami branches ARE the two Dirac Weyl chiralities:
+  `+λ` and `−λ` are pure `P_±` helicity eigenstates (purity `1.000000`), so the `(½,0)⊕(0,½)` content is
+  internal to the object, not imported. `[V struct]` (`g2_dirac_structure_check.py`;
+  `FRONTIER_INTERNAL_DERIVATION_2026-09-10`)
+- **Duality / chiral angle `θ_χ` = the `γ₅` chiral rotation** — the computed helicity-content mixing angle
+  `θ_χ = atan(‖u₋‖/‖u₊‖)`; electron `= 0°`, positron `= 90°`. It IS the internal `γ₅` rotation `e^{iθγ₅}`:
+  helicity `H(θ) = H_max cos2θ`, self-dual/Majorana at `45°`. A computed quantity, not imagery (and *not*
+  the electroweak mixing angle). `[V-def]`/`[V]`
+- **`π₁/π₃` locking (the g=2 criterion)** — g=2 reduces to ONE internal condition: the `U(1)` charge
+  winding (`π₁`) must lock to the Hopf spin (`π₃`), which are *separately* conserved in FTGB (so the lock is
+  a genuine condition). Satisfied by the elementary lepton (g=2), broken by composites — FTGB's own `B=1`
+  Skyrmion gives a composite moment (`μ_p/μ_n=−3/2`, ANW ~3%; `g_p=5.59`). Given the internal Dirac algebra
+  + Hopf spin-½, g=2 is the minimal-coupling (Ferrara–Porrati–Telegdi / Weinberg natural-`g`) limit.
+  `[V struct]`/`[credited]`/`[S] the lock` (`g2_dirac_structure_check.py`, `g2_skyrme_composite_check.py`)
 - **Neutrino = the self-dual `θ_χ = 45°` state ⇒ MAJORANA** — the equal-parts `u = (u₊+u₋)/√2` has `H = 0`
   (neutral) and is its **own** C-mirror (`ν = ν̄`), the midpoint of the electron/positron axis. The
   credited/computed chirality layer thus commits to a **Majorana** neutrino, resolving the repo's
@@ -116,8 +139,16 @@ Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
   `μ = const`. `[credited: Mahajan–Yoshida]`
 - **R2 / enstrophy (BKM) bound** — the global-regularity gate; **now conditional `[V]`** via the exact
   vortex-stretching = Lamb-vector identity (`results/R2_…`). `[V] conditional`
-- **Canonical enstrophy / Hall lift** — `Z = ½∫|Ω|²`; bound ports at magnetic Prandtl `Pm = 1`, with a
-  `(η−ν)²` obstruction otherwise (`results/R3_…`). `[V] conditional`
+- **Canonical enstrophy / Hall lift** — `Z = ½∫|Ω|²`, `Ω = B + d_i ω`; ports the R2 machinery, but its
+  dissipation is indefinite for `Pm ≠ 1` (the `(η−ν)²` obstruction — now shown to be a canonical-*variable*
+  artifact, not physics). `[V] conditional` (`R3_HALLMHD_CANONICAL_ENSTROPHY_2026-09-09`)
+- **Coupled-enstrophy Lyapunov functional (`Pm ≠ 1`)** — `L = ½‖ω‖² + κ d_i² ½‖J‖²` tracks the *individual*
+  curls, so each field diffuses by its own coefficient: dissipation is diagonal and coercive at EVERY `Pm`
+  (the `(η−ν)²` obstruction vanishes) and `L` strictly controls `Z`. Productions vanish *quadratically* at
+  the single-`λ` relaxed state; the whole residual is one Hall term absorbed under a small-data
+  `d_i‖B‖∞ ≲ η` (Lundquist, not Prandtl). **Removes the `Pm = 1` restriction**; unconditional large-data
+  `Pm ≠ 1` stays the open 3-D Hall-MHD problem. `[V] conditional` (`R3_PM_NE_1_COUPLED_LYAPUNOV_2026-09-10`,
+  `hallmhd_coupled_lyapunov_check.py`)
 - **Δ (B=4 branching amplitude)** — the open LENR branching gap (Landau–Zener), HPC-only. `open`
 - **`U_s` screening energy** — the host-lattice-inherited LENR rate input (≈ 300–800 eV), not FTGB-derived.
   `[credited/inherited]`

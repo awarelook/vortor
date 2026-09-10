@@ -44,9 +44,10 @@ Would let the jewel **derive** the mass spectrum instead of asserting `m = ħω/
 - **Proca–Beltrami derivation:** `∇×B=λB → ∇²B+λ²B=0` vs static Proca ⇒ `λ = mc/ℏ`; mass operator `⋆d`.
 - **Sources:** `ckfreefem\frontier_calcs\{NIELSEN_TUFT_MASS_COEFFICIENT_EXACT_FORM, C9_MASS_TOWER…,
   KERNEL_NIELSEN_MASS_MATRIX_ELEMENT}_2026-09-0*.md`; `Downloads\{100pg…COMPENDIUM, 31newpg…FRAMEWORK}.md`.
-- **Fold tier `[framework: Nielsen TUFT]` / `[S]`.** ⚠ Honesty flags to carry: a documented **π-power
-  internal inconsistency** in the ζ-coefficients (pure `C₅=ζ(3)/12` vs the π²-carrying `ω₃,σ₅,σ₉`); the
-  "blinded fit at 0.1σ" claims are the preprint's, not `[V]` — fold the *structure*, mark the fits.
+- **Fold tier `[framework: Nielsen TUFT]` / `[S]`.** Honesty flags: the π-power question (pure `C₅=ζ(3)/12`
+  vs the π²-carrying `ω₃,σ₅,σ₉`) is **RESOLVED (2026-09-10, `curl_spectral_zeta_pi_power_check.py`)** in favor
+  of the π²-carrying forms — the pure forms are a category error (`ζ_B(s)=ζ(s−2)−ζ(s)` → `ζ′(−2)=−ζ(3)/4π²`);
+  the "blinded fit at 0.1σ" claims remain the preprint's, not `[V]` — fold the *structure*, mark the fits.
 
 ### G2. Greenyer — the beat law, the cascade, and the aneutronic energetics  → new module **M14**
 Would let the jewel **derive** the {121,208,294} kHz comb and the LENR selective-release, not just state them.

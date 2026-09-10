@@ -123,11 +123,13 @@ restates it. FTGB's correctly-typed, honest program is to **derive `g = 2` from 
   honestly carry "the object is a spin-½ fermion" from its Hopf topology — but **spin-½ ≠ g = 2**: a spin-½
   soliton/anyon can have `g ≠ 2`; the g-factor is a separate dynamical quantity fixed by the coupling.
 
-**Verdict:** `g = 2` is **not** cleanly winnable from the geometry — the naive soliton gives `g = 1`, and
-`g = 2` requires the object's quantization to reproduce a minimally-coupled Dirac equation (the same
-quantum/spinor structure α needed). The "g = 2 winnable `[S]`" offer was too optimistic. The real, foldable
-positive is narrower and honest: the Hopf topology gives **spin-½** `[credited]`; `g = 2` stays `[S]`/open,
-in the same difficulty class as α itself.
+**Verdict (updated 2026-09-10):** the naive soliton gives `g = 1`, and `g = 2` requires a minimally-coupled
+Dirac structure. **That structure is now shown to be INTERNAL** (`g2_dirac_structure_check.py`,
+`FRONTIER_INTERNAL_DERIVATION_2026-09-10.md` §1): the ±λ Beltrami branches are the two Weyl chiralities,
+`θ_χ` is the `γ₅` chiral rotation, the mirror is `C`, and Hopf gives spin-½ — so **g=2's *meaning* is derived
+internally** as the minimal-coupling limit, reduced to one criterion (the π₁/π₃ lock). ~~"g=2 stays [S]/open in
+the same difficulty class as α"~~ is **superseded**: only the *lock itself* stays `[S]`, and it is *satisfied*
+by the elementary lepton (broken by composites). α's *value* remains the frontier; g=2's *structure* does not.
 
 ## 4. What would flip the negative to `[V]` — and why it is not expected
 

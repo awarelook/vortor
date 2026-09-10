@@ -37,7 +37,7 @@ The eight modules are:
 | **M10** | Topological-soliton + conserved-current methods | conserved currents, no-go templates, moduli-geodesic amplitudes, seesaw / RG readings |
 | **M11** | EGM / polarizable-vacuum spectral methods | Storti's PV-refractive-index + ZPF harmonic-beat *representation* mapped onto M7/M9, with its numerology quarantined (method-only, no claim adopted) |
 | **M12** | Ginzburg spiral-field theory (toryx / helyx) | a toroidal-spiral *structural analogy* (matter = self-inverting torus, radiation = double helix, discrete matter<->radiation ladder) mapped onto the Beltrami-Hopf object; analogy-only, no claim adopted |
-| **M13** | Nielsen TUFT mass-tower & mixing methods | the ζ-valued exponent tower (`C₅=ζ(3)/12`, `β₅=ζ(5)/8π⁴`, …), knot/lens-space torsion, CKM/PMNS overlaps, Chern-Simons `M=ke²/4π`, Proca-Beltrami `λ=mc/ℏ` — coefficients `[V]`-checked, **π-power anomaly + preprint blind-fit flagged** |
+| **M13** | Nielsen TUFT mass-tower & mixing methods | the ζ-valued exponent tower (`C₅=ζ(3)/12`, `β₅=ζ(5)/8π⁴`, …), knot/lens-space torsion, CKM/PMNS overlaps, Chern-Simons `M=ke²/4π`, Proca-Beltrami `λ=mc/ℏ` — coefficients `[V]`-checked, **π-power anomaly now RESOLVED (M13-10); the analytic-torsion dressing derives the hierarchy's size/order (~79% parameter-free); preprint blind-fit stays `[preprint-claim]`** |
 | **M14** | Greenyer beat-law & EVO cascade methods | the Beat Law + shape-independent ladder `N^L`, the triad dichotomy (integer silence / golden resonance), two Manley-Rowe (Fibonacci) invariants, anapole `N⁴`, `9/8 μ_B`; nuclear layer a **pre-registered target** (`N_crit` prediction), **no over-unity** |
 
 All eight modules rest on **`MATH_TOOLKIT_BASE.md`** — the shared foundation carrying the mathematics they
@@ -423,6 +423,16 @@ the object's own Beltrami-Hopf geometry.
 framework]**; the arithmetic **[V]**; `~137` **[flagged]**; the recovered Schwinger term `a_e =
 alpha/2pi` **[credited]** (recovers, does not predict).
 
+**Frontier note -- g=2 and alpha, updated readings.** Two frontier advances refine the old "g=2/alpha
+need an external Dirac field, no internal structure" framing: (i) the **g=2 structure is INTERNAL** to the
+object `[V]` (`results/verify/g2_dirac_structure_check.py`, corroborated by `g2_elementary_check.py`,
+`g2_spin_precession_check.py`) -- the Dirac/g=2 spin structure arises from the resonator's own confined-wave
+geometry, not from an inserted external field; (ii) **alpha is the running-coupling anchor** `[S-mechanism]`
+(`results/verify/alpha_resonator_imbalance_check.py`; the IR-endpoint reading of M10-5) -- `137.036` is the
+static/IR value of a running coupling read as a polarizable-medium dielectric, not a bare inserted constant.
+Neither promotes alpha to `[V]`-derived from the object's geometry (that stays the open frontier); both
+retire the "just inserted, no structure" statement.
+
 **How to reuse.** When a "charge" appears in a dimensional relation and the SI check fails by exactly
 `I.T^2`-type residuals, promote charge to `[kg.rad/s]` and re-check; the failure usually means the
 relation is mechanical (angular-momentum) in disguise.
@@ -719,6 +729,13 @@ determined once >= 3 free drive functions are added), with **sustained (all-time
 open piece** -- category-identical to open large-data 3D Navier-Stokes / Hall-MHD regularity, not
 FTGB-specific.
 
+**R3/Hall advance (`[V]cond`, `results/verify/hallmhd_coupled_lyapunov_check.py`).** The Hall-MHD
+enstrophy-regularity leg no longer needs the `Pm = 1` restriction: a **coupled-enstrophy Lyapunov
+functional** removes it, and the old `(η − ν)²` obstruction is shown to be a **canonical-variable
+artifact** (it disappears in the generalized-vorticity variables), not a genuine barrier. This is a
+conditional-regularity advance on the same Hall-MHD-regularity open piece named above -- it narrows the
+open corner, it does not close all-time existence in general.
+
 **Validity / tier.** **[V]** for the template and the static/aligned no-gos; **[S]** in the close-sphere
 corner; **characterized-open** for the driven non-aligned regime. The static [V] negative stands
 untouched by every sequel.
@@ -995,17 +1012,24 @@ Full module: `toolkit/TOOLKIT_ADV_13_NIELSEN_TUFT_MASS_TOWER_2026-09-09.md`. Ver
 **The one limit.** Everything here is `[framework: Nielsen TUFT]` / `[S]` scaffolding on a bed of `[credited]`
 mathematics (Proca/Helmholtz, Ray-Singer torsion, lens-space determinants, the curl/Beltrami spectrum,
 Chern-Simons). Only two classes are `[V]`: (i) the coefficients reproduce their closed forms, and (ii) the
-internal-consistency findings. **Two flags travel with every use:** (a) the **π-power anomaly** -- pure
-`C₅=ζ(3)/12` (no π) vs π²-carrying `ω₃=ζ(3)/4π²`, `σ₅`, `σ₉` for the same class of coefficient; the clash is
-exactly `C₅/ω₃ = π²/3` `[anomaly]`; and (b) the **blind-fit-at-0.1σ / zero-parameter / sub-0.01%
-mass-recovery claims are the PREPRINT's, in Round-2 review -- `[preprint-claim]`, NOT `[V]`.**
+internal-consistency findings. **The π-power anomaly (M13-10) is now RESOLVED** `[V]`
+(`results/verify/curl_spectral_zeta_pi_power_check.py`): the S³ curl spectral zeta
+`ζ_B(s) = ζ(s−2) − ζ(s)` forces the `n²` coefficient onto `ζ′(−2) = −ζ(3)/(4π²)`, so the `π²` structure is
+**mandatory** for every spectral-torsion coefficient (`ω₃=ζ(3)/4π²`, `σ₅`, `σ₉`). The "pure" `C₅=ζ(3)/12 =
+ζ(3)·(−ζ(−1))` is a **mis-attributed different object** -- a category error, not a rival value -- so the
+apparent `C₅/ω₃ = π²/3` clash dissolves for the π²-carrying forms. **What is genuinely derived** `[V]`: the
+mass hierarchy's **SIZE/ORDER (~10⁴–10⁵)** falls out of the analytic-torsion dressing (~79% parameter-free
+pure-ζ). **One flag still travels:** the **blind-fit-at-0.1σ / zero-parameter / sub-0.01% mass-recovery**
+claims are the PREPRINT's, in Round-2 review -- `[preprint-claim]`, NOT `[V]`; exact mass ratios stay
+`[preprint-claim]`.
 
 **What it folds.** The mass operator (Proca-Beltrami `λ=mc/ℏ`, curl S³ spectrum `±(n+1)/R`, `⋆d` -- linear,
 so zero off-diagonal ME); the full quark tower `m_{n,±}=Λ₅(n+1)exp((a₅±λ_T)n + C₅n² + β₅n(n+1)/2 +
 σ₅logτ(Kₙ))` with every ζ-coefficient; lepton `ω₃=ζ(3)/4π²`, neutrino `C₉=−0.15670774`; knot/lens norms
 `τ(Kₙ)={1,4,3}`, `τ_R(L(n,1))=1/n`; the Ray-Singer/Nash-O'Connor ζ(3) provenance; Chern-Simons `M=ke²/4π`;
 CKM `V_ij=⟨ψ_i|ψ_j⟩`; PMNS + ν-masses (`~50 meV`, no seesaw). In-repo verify reproduces `C₅,β₅,σ₅,ω₃,C₉`,
-the exact `C₅/ω₃=π²/3` clash, and `τ_R=1/n`.
+`τ_R=1/n`, and the spectral-zeta resolution `ζ′(−2)=−ζ(3)/(4π²)` that retires the former `C₅/ω₃=π²/3`
+"anomaly" (the `π²` is structurally mandatory; the pure `ζ(3)/12` was a mis-attributed object).
 
 ## 10. Module M14 -- Greenyer beat-law & EVO cascade methods
 

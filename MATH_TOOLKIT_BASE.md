@@ -134,6 +134,31 @@ anchors `v_A = 2.033e4 m/s`, `R = 0.12 m`, the roots give the CK carrier comb `f
 
 ---
 
+## §3a -- S^3 curl spectral zeta and the analytic-torsion pi-power   [V / credited]
+
+The curl (Beltrami `*d`) operator restricted to **coexact 1-forms of `S^3`** has eigenvalue `(n+1) = m`
+(`m >= 1`) with multiplicity `n(n+2) = m^2 - 1`, so its spectral zeta is **exactly**
+
+```
+zeta_B(s) = sum_{m>=1} (m^2 - 1) m^{-s} = zeta(s-2) - zeta(s).
+```
+
+Hence the analytic-torsion derivative `zeta_B'(0) = zeta'(-2) - zeta'(0) = -zeta(3)/(4 pi^2) + (1/2)
+ln(2 pi)`, and the **quadratic (Casimir, `m^2`) coefficient is `zeta'(-2) = -zeta(3)/(4 pi^2)`** -- the
+`pi^2` **structurally mandatory** via the functional-equation ladder `zeta'(-2n) = (-1)^n (2n)!
+zeta(2n+1) / (2^{2n+1} pi^{2n})`. Therefore `omega_3 = zeta(3)/(4 pi^2)` is the genuine `S^3` `n^2`
+analytic-torsion coefficient `[credited: Ray-Singer 1971]`, whereas the "pure" `zeta(3)/12 =
+zeta(3)·(-zeta(-1))` is a **product of zeta VALUES** -- a categorically different object (the higher-shell
+`n^2` derivatives are `zeta'(-4) ~ zeta(5)/pi^4`, `zeta'(-8) ~ zeta(9)/pi^8`, never `zeta(3)`). **[V]**
+(`results/verify/curl_spectral_zeta_pi_power_check.py`, mpmath dps=40: identity checked at `s=4`;
+`zeta'(-2)` matched to `1e-25`; full `zeta_B'(0)` to `1e-20`). This resolves the M13-10 "pi-power anomaly"
+as a **category error** (not a normalization choice) in favor of the `pi^2` forms; it does **NOT** validate
+the TUFT lepton-mass-tower fit, which stays **`[preprint-claim]`** at M13. **FIREWALL:** a spectral-geometry
+identity only; no mass value is promoted here (the `zeta(3)/4pi^2` mass chain remains quarantined in the
+ledger / M13).
+
+---
+
 ## §4 -- Helicity, Woltjer-Taylor relaxation, and the force-free variational principle   [credited / V]
 
 **Magnetic helicity.** `H = integral A·B dV` (`B = curl A`) -- the field-line linking / topological charge
@@ -164,6 +189,39 @@ tying the bulk linking to the single eigenvalue -- **VERIFIED exact in-project**
 the corresponding helicity bound. Its gauge freedom is a **pure boundary term** `Delta H = closed-integral
 chi (B·n) dS` (Berger-Field 1984): flux-closed => `Delta H = 0` (gauge-invariant), verified numerically on
 an ABC field **[V]**.
+
+---
+
+## §4a -- Coupled-enstrophy Lyapunov functional for Hall-MHD at Pm != 1   [V / V-cond]
+
+The canonical Hall enstrophy `Z = (1/2)‖Omega‖^2`, `Omega = B + d_i omega`, has an **indefinite**
+dissipation away from `Pm = nu/eta = 1` (`det M = -d_i^2 (eta-nu)^2 / 4 <= 0`) -- but that obstruction is a
+property of the **mixed canonical variable, not the physics**. In the natural coupled functional of the
+*individual* curls,
+
+```
+L   = (1/2)‖omega‖^2 + kappa d_i^2 (1/2)‖J‖^2 ,     omega = curl v ,  J = curl B
+D_L = nu‖grad omega‖^2 + kappa d_i^2 eta‖grad J‖^2   (DIAGONAL; det = nu·kappa d_i^2 eta > 0 at ANY Pm)
+```
+
+each field is diffused by its **own** coefficient, so the dissipation is diagonal and coercive at **every**
+`Pm`; there is no cross term to make it indefinite. `L` strictly **controls** the canonical enstrophy `Z`
+(via Poincare), while `Z` does **not** control `L` (take `B = -d_i omega => Omega ~ 0`, `Z ~ 0` while
+`‖omega‖,‖J‖ = O(1)`) -- so `L` is the correct (`H^1`-of-the-pair) regularity functional. Near the
+single-`lambda` **double-Beltrami** relaxed state (`v ‖ omega`, `J ‖ B`) `[credited: Mahajan-Yoshida 1998]`
+the fluid Lamb production `S_om` and the Lorentz cross-term `Lambda` vanish **quadratically** (the Woltjer
+constrained minimum is a variational critical point, §4). The one delicate top-order term, the Hall current
+production `H_B = -d_i integral (curl J)·curl(J x B)`, vanishes **identically** on a constant-`lambda`
+Beltrami field (`J x B = 0`) and is absorbed into `eta‖grad J‖^2` under a single explicit **Hall smallness
+`d_i‖B‖_inf <~ eta`** (a Lundquist / small-data condition, matching Chae-Degond-Liu 2014 -- **NOT** a
+Prandtl condition). **This removes `Pm = 1` as a hypothesis.** Tier: the three structural facts (coercivity
+at any `Pm`; quadratic production suppression at the relaxed state; the linear `d_i‖B‖_inf/eta` Hall
+absorbability) are **[V]** (`results/verify/hallmhd_coupled_lyapunov_check.py`, `Pm in {1/4,1/2,1,2,4}`); the
+assembled regularity bound is **[V]-conditional** (a-priori deviation + Hall-smallness hypotheses, exactly as
+the R2 / `Pm=1` theorems). **Unconditional large-data `Pm != 1` stays open** (= the open 3D Hall-MHD
+problem). Full note: `results/R3_PM_NE_1_COUPLED_LYAPUNOV_2026-09-10.md`. This is the **same single-`lambda`
+Woltjer-Taylor structure** (§4) that makes the carrier comb single-chirality -- the Hall lift and the
+carrier coherence are one physics read twice.
 
 ---
 
@@ -255,6 +313,29 @@ AdS/CFT -- no gravity, no "entanglement-entropy = area". **[S].**
 
 ---
 
+### §9f -- The Dirac bispinor structure is internal: Weyl pair, gamma_5 = theta_chi, C   [V / credited / S]
+
+The `+/-lambda` Beltrami helicity branches **are the two Weyl chiralities.** The helical projectors
+`P_+/- = (1/2)(u +/- curl u / |k|)` split any divergence-free field into the two chiralities, and a
+single-`lambda` Beltrami is a **PURE** eigenstate (a `lambda>0` ABC field is 100% `P_+`, its mirror 100%
+`P_-`; verified to `>0.999` energy fraction). The duality angle `theta_chi` acts as the **gamma_5 chiral
+rotation**: for `u(theta) = cos theta·u_+ + sin theta·u_-` the helicity is `H(theta) = H_max cos 2theta`
+(verified vs `cos 2theta` to `<2%`) -- zero at `45deg` (self-dual = **Majorana**), `+/-max` at `0/90deg`
+(electron / positron). The `lambda -> -lambda` mirror swaps `P_+ <-> P_-` and flips helicity (`H_m/H_f = -1`
+exact) -- **charge conjugation C**. With Hopf **spin-1/2** `[credited: Wilczek-Zee 1983; Finkelstein-
+Rubinstein 1968]`, the Dirac bispinor structure is **INTERNAL** to the object, and `g = 2` is its
+**minimal-coupling limit** `[credited: Ferrara-Porrati-Telegdi 1992; Weinberg natural-g]`: `g = 2 <=>` the
+`U(1)` charge winding (`pi_1`) **locks** to the Hopf spin (`pi_3`) -- the "effectively elementary" limit (an
+independent circulating charge gives `g = 1`; a composite such as the proton `g = 5.59` **breaks** the lock).
+Since FTGB's `pi_1 / pi_3` are separately conserved (§9d), the locking is a **stated CONDITION**, not a fudge.
+**[V]** the Weyl / gamma_5 / C algebra (`results/verify/g2_dirac_structure_check.py`); **[credited]** the
+Hopf spin-1/2 and the FPT / Weinberg `g=2`-minimal-coupling theorem; **[S]** the `pi_1/pi_3` lock. This
+**reduces the g=2 frontier to one internal criterion** (ties to the §9d chirality cluster and the computed
+chirality / C / Majorana layer, `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`). It is a derivation of
+what `g=2` **is** inside the theory and the exact residual condition -- **not** a proof of the lock.
+
+---
+
 ## §11.0 -- Canonical anchors `{B, n_i, R, m_i}` and derived medium quantities   [measured / V / S]
 
 *The anchor block M7 shares with `foundation/30_CANONICAL_NUMBERS.md` §A (anchors), §C (`c_CK`), §I (comb).
@@ -318,6 +399,17 @@ line states one as a "result", it is demoted exactly as M11-4 does.
 - **`alpha` from toroidal winding (140.2) / `~137`** -- **[flag]**. The `140.2 vs 137.036` (2.3%) gap is an
   **open problem**, not a screening "derivation"; `~137` is a flagged coincidence (`137` is prime; genericity
   -denominator controls show the near-misses are generic, M10-5). Never cited as FTGB-derived.
+- **`alpha` as an energy-imbalance of the confined object -- settled-negative (value), frontier reduced.**
+  On the correctly-specified object the free photon (Hopf-Ranada **null** EM knot, Bateman construction) is
+  **exactly energy-balanced** (`U_E/U_B = 1`, `E·B = 0`, `|E|=|B|`), so it carries no `alpha`-sized
+  imbalance; the electron standing-wave **resonator** in the non-dispersive canonical medium (§9c,
+  `eps_r = (c/v_A)^2 = const`) has zero mode imbalance (equipartition) and zero dispersive imbalance, and the
+  point-defect self-energy gives `U_E/mc^2 = alpha` **only by inserting `e`** (`= r_e/lambda_C = alpha`
+  restated -- circular). `alpha` moreover **runs** (`K_PV(q^2) = alpha(0)/alpha(q^2)`, §9c); `1/137.036` is
+  only its IR / Thomson anchor. Topology quantizes charge (integer Hopf / winding) but **not** its magnitude;
+  the frontier is thereby reduced to **one** quantity -- the running coupling's anchor = the charge
+  **magnitude** `e`. **[V] baselines / settled-negative (value)** (`results/verify/confined_photon_null_
+  balance_check.py`, `alpha_resonator_imbalance_check.py`) `[credited: Ranada 1989/1990, null EM knots]`.
 - **Particle RMS charge radii to ~0.01%** -- **[flag]**, full-numeric / fit, not a clean closed form; the
   clean forms miss by 10^3-10^4 (M11-4(ii)). The honest Compton-scale energy-balance radius (`r_eq ~ 0.42
   lambda_C`) is the reasonable part; the *precision* claim is flagged.
@@ -371,6 +463,10 @@ never implies these are as settled as §§1-9:
 | B-19 | `c_CK(1/phi)=0.2234` [FE]; `c_CK(eps->0)=1/(2 j_{0,1})=0.20792` [closed form] | [V] | §11.0 |
 | B-20 | `eps = 1/phi` over-determined (resonance / packing / KAM); `eps~0.77` Hall alternative flagged | [S]/[flag] | §11.0 |
 | B-21 | `e^(-2/3)` excised; `alpha`/`~137`, 0.01% radii, `H0` flagged; lepton-mass law -> M13 | [excised]/[flag] | ledger; M11-4 |
+| B-22 | Dirac bispinor internal: `+/-lambda` = Weyl pair (`P_+/-` pure), `theta_chi = gamma_5` (`H=H_max cos2theta`), mirror = C; `g=2` = minimal-coupling limit <=> `pi_1` locks to `pi_3` | [V]/[credited]/[S] | §9f; `g2_dirac_structure_check.py`; WZ 83 / FR 68 / FPT 92 / Weinberg |
+| B-23 | Coupled Hall Lyapunov `L=(1/2)‖om‖^2+kappa d_i^2(1/2)‖J‖^2`: diagonal coercive `D_L` at ANY `Pm` (removes `Pm=1`); prod. vanish quadratically at double-Beltrami; residual = Hall smallness `d_i‖B‖_inf<~eta` | [V]/[V-cond] | §4a; `hallmhd_coupled_lyapunov_check.py`; Mahajan-Yoshida 98 / Chae-Degond-Liu 14 |
+| B-24 | `S^3` curl spectral zeta `zeta_B(s)=zeta(s-2)-zeta(s)`; `n^2` coeff `zeta'(-2)=-zeta(3)/4pi^2` (`pi^2` mandatory); `zeta(3)/12` a product of VALUES; resolves M13-10 (does NOT validate TUFT fit) | [V] | §3a; `curl_spectral_zeta_pi_power_check.py`; Ray-Singer 71 |
+| B-25 | `alpha`: free photon null-balanced (`U_E/U_B=1`); resonator/medium imbalance = 0, defect = `r_e/lambda_C` (circular); `alpha` runs; frontier reduced to charge magnitude `e` | [V]/settled-neg (value) | ledger; `confined_photon_null_balance_check.py`, `alpha_resonator_imbalance_check.py`; Ranada 89/90 |
 
 ## References / provenance
 
@@ -382,7 +478,13 @@ Chandrasekhar-Kendall 1957; Woltjer 1958; Taylor 1974; Moffatt 1969; Berger-Fiel
 Calugareanu / White / Fuller (`Lk = Tw + Wr`); Madelung 1927; Bohm 1952; de Broglie 1924; Bialynicki-Birula
 (Riemann-Silberstein photon wavefunction) and Bialynicki-Birula-Mycielski (log-NLS); Puthoff 1999
 (gr-qc/9909037, PV representation of GR); Fukui-Hatsugai-Suzuki (lattice Chern number); Bliokh 2015;
-Palmerduca-Qin 2024 (photon-helicity Chern `C = +-2`). Cited by: M7 (anchors, `tan x = x`, comb),
+Palmerduca-Qin 2024 (photon-helicity Chern `C = +-2`); Wilczek-Zee 1983 / Finkelstein-Rubinstein 1968
+(soliton spin-statistics, §9f); Ferrara-Porrati-Telegdi 1992 & Weinberg (natural `g=2`, §9f); Mahajan-Yoshida
+1998 (double-Beltrami, §4a); Chae-Degond-Liu 2014 (Hall-MHD small-data, §4a); Ray-Singer 1971 (analytic
+torsion, §3a); Ranada 1989/1990 (null EM knots, ledger). Session-2026-09-10 verify scripts:
+`results/verify/{g2_dirac_structure_check, hallmhd_coupled_lyapunov_check, curl_spectral_zeta_pi_power_check,
+alpha_resonator_imbalance_check, confined_photon_null_balance_check}.py` and
+`results/R3_PM_NE_1_COUPLED_LYAPUNOV_2026-09-10.md`. Cited by: M7 (anchors, `tan x = x`, comb),
 M9 (§9 one-operator-three-readings / dual reading), M10 (`K_PV` polarizable vacuum, topology sec.9),
 M11 (PV / excision protocol), M14 (Beltrami/helicity, topology sec.).
 

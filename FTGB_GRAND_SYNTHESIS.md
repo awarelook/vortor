@@ -552,8 +552,12 @@ Ledger, Part F, as either derived-with-residual or [S] tautology-not-excluded.)
   (chiral mixing angle `theta_chi = 45 deg`, helicity `H = 0`, C-invariant), which forces
   **Majorana** `nu = nu-bar` `[S, computed]`. Neutrinoless double-beta decay is the external
   falsifier of that reading, not an FTGB prediction; any lower-tier `[TUFT-preprint]` "Dirac"
-  reading would be a disagreement that `0nu-beta-beta` decides. See
-  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`.
+  reading would be a disagreement that `0nu-beta-beta` decides. The QWM "no-precession
+  smoke-ring" is the *same state* as this self-dual `H = 0` member, so a single geometric feature
+  yields *both* a suppressed mass (no net whirl) *and* C-invariance (`nu = nu-bar`) -- more
+  economical than a two-ingredient Dirac construction `[QWM framework]`. See
+  `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`,
+  `results/FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`.
 - **EVO.** A *charged*, non-relativistic electron cluster (micro-ball-lightning), needing
   the non-force-free charged sheath; distinct from the chargeless smoke-ring, and scoped
   to the Greenyer EVO specifically, not to universal ball lightning.
@@ -634,6 +638,53 @@ open dynamical quantity in the same class as `alpha`'s value `[S]`). The distinc
 kept separate; Cartan/Burgers *connection* torsion and Einstein-Cartan spacetime torsion are
 excluded.
 
+**The internal Dirac structure and g=2** `[V struct] / [credited] / [S] the lock`. **Superseded
+(2026-09-10):** the earlier reading that `g = 2` merely "needs an external Dirac field" or is a
+bare "open dynamical quantity" with no internal content is now sharpened -- *the Dirac bispinor
+algebra is already internal to this object*, and `g = 2` is its minimal-coupling limit
+(`results/verify/g2_dirac_structure_check.py`;
+`results/FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`). Each Dirac ingredient is a computed FTGB
+quantity: the two Weyl chiralities `gamma_5 = +/-1` ARE the `+/-lambda` Beltrami branches (pure
+`P_+/-` helicity eigenstates, purity `= 1.000000`) `[V]`; the chiral rotation `e^{i theta
+gamma_5}` IS the duality angle `theta_chi` (helicity `H(theta) = H_max cos 2 theta`,
+self-dual/Majorana at `45 deg`) `[V]`; charge conjugation `C` IS the `lambda -> -lambda` mirror
+(swaps `P_+ <-> P_-`, flips `H`, ratio `-1.000`) `[S, computed]`; and spin-1/2 is the
+Hopf/Wess-Zumino term `[credited: Wilczek-Zee 1983; Finkelstein-Rubinstein 1968]`. Given that
+algebra, the Ferrara-Porrati-Telegdi / Weinberg natural-`g` theorem fixes `g = 2` for a
+minimally coupled elementary spin-1/2 field `[credited]` (the naive soliton with an *independent*
+circulating charge gives `g = 1`; `g = 2` requires the charge current to *be* the spin current).
+The whole question then reduces to ONE internal criterion: the `U(1)` charge winding (`pi_1`)
+must **lock** to the Hopf spin (`pi_3`). In FTGB these are *separately* conserved (a phase slip
+changes the winding but not the Hopf number), so the lock is a genuine `[S]` condition -- and it
+is **satisfied by the elementary lepton** (`g = 2`) while **broken by composites**: FTGB's own
+`B = 1` Skyrmion gives a genuine composite moment (`mu_p/mu_n = -3/2`, Adkins-Nappi-Witten, ~3%
+of experiment; `g_p = 5.59`) `[credited]` (`results/verify/g2_skyrme_composite_check.py`). So
+`g = 2` is no longer a foreign target but the signature of being *effectively elementary*: its
+*meaning* is derived; only the lock itself stays `[S]`.
+
+**The alpha frontier: the running-coupling anchor = the unpinned charge magnitude**
+`settled-negative (refined)`. With the internal Dirac structure above, `alpha = e^2 / 4 pi eps_0
+hbar c` is the coupling-squared of that `+/-lambda` Hopf-Dirac doublet to light, with the charge
+read as the frame-closure (Frenet) holonomy. Re-attempting the *value* from inside the theory
+sharpens the settled negative without overturning it
+(`results/verify/alpha_resonator_imbalance_check.py`,
+`results/verify/confined_photon_null_balance_check.py`;
+`results/FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`). **Superseded (2026-09-10):** any picture of
+the electron as a *propagating loop* (a photon "chasing its tail" as a literal ring) is corrected
+to a **standing-wave resonator confined by the medium** (the polarizable vacuum / `v_A`
+dielectric) carrying a **point charge defect** -- the free propagating photon (a Hopf-Ranada null
+EM knot) is *exactly* balanced (`U_E/U_B = 1`, imbalance ~`1e-16`) and so carries no `alpha`-sized
+asymmetry at all. Computing the electro/magnetostatic imbalance on the correct object gives **0**
+from the resonator mode (equipartition), **0** from the non-dispersive medium (canon), and
+`= alpha` **only** via the inserted `e` at the point defect (`r_e/lambda_C`, circular). Moreover
+`alpha` **runs**: `1/137.036` is the IR endpoint, not a fixed number, and the theory's
+`K_PV(q^2) = alpha(0)/alpha(q^2)` dielectric flow IS that running -- which relates scales but
+requires an **anchor** (an integration constant) equal to the point-defect charge magnitude `e`.
+So "`alpha` runs / is not exact" and "the magnitude is unpinned" are the SAME statement: topology
+QUANTIZES charge (integer winding / Hopf) but does not FIX its magnitude. The frontier reduces to
+ONE precisely-named quantity -- the running coupling's anchor = the charge magnitude -- the shared
+"why is the electron elementary?" edge, now stated precisely rather than papered over.
+
 **The mass tower [TUFT-preprint, tiered].** Nielsen's Toroidal Unified Field Theory
 preprint supplies a spectral mass tower, `m_n ~ (n+1) exp(a n - zeta(3) n^2)`, with
 `a = 6 sqrt(2) exp(zeta(3)/24 pi^2) = 8.5285`. It reproduces the charged leptons to
@@ -644,6 +695,20 @@ its derivation status is `[S]`, tautology-not-excluded (Part F). The `n^2`-Casim
 coefficients are pi-free by construction (`C5 = zeta(3)/12`); the `1/pi^2` normalization
 sits in a separate sector -- a distinction we verified against the primary source after
 retracting an earlier misreading.
+
+**Superseded (2026-09-10) -- what the tower DOES derive.** An earlier framing of the mass
+hierarchy as "circular / a numerology graveyard" is corrected: that critique checked the *bare*
+CK comb (the wrong object -- `omega_C proportional m` makes `m = hbar omega_C/c^2` a definition,
+not a ratio prediction). Read through the TUFT analytic-torsion exp-dressing (the same
+`m = hbar lambda/c`), the tower genuinely derives the **size/order** of the span (~`10^4`-`10^5`),
+of which ~79% is carried by a **parameter-free pure-`zeta` slope** `a_5 = 3.564112` (built from
+`zeta(3), zeta(5), pi`). The **exact ratios** remain `[preprint-claim]` (framework per-level
+choices; an independent assembly misses by ~30-46%). So the hierarchy's *order* is derived
+`[framework] / [S]` while its exact ratios are not
+(`results/FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`). The rungs are principled topological
+sectors -- the `pi_1/pi_3`-locked lepton (`g = 2`), the composite `B = 1` baryon, and the
+self-dual `H = 0` Majorana neutrino -- and the self-dual sector qualitatively *suppresses* the
+neutrino whirl (`m_nu << m_e`); but a qualitative hint is not a derived ratio.
 
 **Koide.** `K = (sum m)/(sum sqrt m)^2 = 0.66666051`, a `-9.2` ppm proximity to `2/3`
 that is non-generic (0 of 324 simple forms within 0.5%), with the trefoil `T(2,n)`,
@@ -1551,7 +1616,7 @@ electrostatic drive, but the object's own variational and attractor dynamics **s
 no-go**: closure is externally driven, never emergent. This is an honest structural limit
 of the law, not a hidden assumption.
 
-## F.2 Four open inputs that reduce to named external problems
+## F.2 Five open inputs that reduce to named external problems
 
 Each of the following is a real gap in the working core. None is an internal
 contradiction; each reduces to a *specific, named, external* computation or ingredient --
@@ -1572,7 +1637,22 @@ which is the honest shape of the theory's present boundary.
 - **The full-`[V]` current-leg realizability** reduces, via a clean chain, to a **3D
   enstrophy / Beale-Kato-Majda regularity bound** -- category-identical to the recognized
   open large-data global-regularity problem for 3D Navier-Stokes / Hall-MHD, a famous
-  *external* problem, not an FTGB-specific gap.
+  *external* problem, not an FTGB-specific gap. (Update 2026-09-10: the Hall-MHD lift no longer
+  requires `Pm = 1` -- the coupled-enstrophy Lyapunov functional
+  `L = 1/2 ||omega||^2 + kappa d_i^2 1/2 ||J||^2` tracks the individual curls, so its dissipation
+  is diagonal and coercive at *every* `Pm` (the `(eta-nu)^2` obstruction was a canonical-variable
+  artifact), with the entire residual localized to one Hall term absorbable under a small-data
+  `d_i ||B||_inf <~ eta`; `results/R3_PM_NE_1_COUPLED_LYAPUNOV_2026-09-10.md`. The unconditional
+  large-data case remains the same external open problem.)
+- **The elementary-electron frontier (`g = 2` and `alpha`'s value)** is now *stated precisely*
+  rather than left unstructured. The theory **derives the meaning** of `g = 2`: the Dirac
+  bispinor algebra is internal (`+/-lambda` = Weyl pair, `theta_chi` = the `gamma_5` rotation,
+  the mirror = `C`, Hopf = spin-1/2), so `g = 2` is its minimal-coupling limit, reduced to the
+  single criterion of `pi_1/pi_3` locking (satisfied by the elementary lepton, broken by
+  composites) `[V struct] / [S]`. It does **not** derive `alpha`'s value: that reduces to one
+  named unpinned quantity -- the running coupling's anchor = the point-defect charge magnitude
+  (settled-negative, refined). Both are the shared "why is the electron elementary?" edge, not
+  FTGB-specific defects (`results/FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`).
 - **The neutrino mass hierarchy** is not derived by the object's spectrum; closing it
   requires an **external Majorana (lepton-number-violating) seesaw sector**. (The object's
   chirality geometry *does* now predict, as a computed `[S]` result, that the neutrino is
@@ -1660,7 +1740,15 @@ Five methods, tiered:
    trivial Gaussian one (137 is a threshold freeze-out / integration constant, not `beta = 0`).
    The genericity-denominator anti-numerology control (count how many simple invariants land
    within a tolerance before crediting any single one) confirms `137.036` is a generic
-   near-miss. See `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`.
+   near-miss. See `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`. **Refined (2026-09-10):**
+   computed on the *correct* object -- a standing-wave resonator confined by the medium with a
+   point charge defect, not a propagating loop -- the electro/magnetostatic imbalance is `0` from
+   the mode (equipartition) and `0` from the non-dispersive medium, `= alpha` only via the
+   inserted `e`; the flow's required anchor (integration constant) IS the unpinned charge
+   magnitude, so "`alpha` runs" and "the magnitude is unpinned" are one statement
+   (`results/FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`;
+   `results/verify/alpha_resonator_imbalance_check.py`,
+   `results/verify/confined_photon_null_balance_check.py`).
 
 ## G.2 References
 

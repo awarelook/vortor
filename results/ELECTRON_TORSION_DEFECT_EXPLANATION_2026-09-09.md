@@ -11,13 +11,24 @@ electron rung of `resonator_family.html` / `soliton3d.html`.
 held-but-not-promoted (the exact `α` value). `[V-dim]` = units close, value not forced. No over-unity; the
 `e^(-2/3)` factor stays excised.
 
+> **⚑ Corrected framing (2026-09-10) — read first.** The "loop / smoke-ring of light chasing its own tail"
+> imagery below is the *earlier* picture. The **corrected object** (see `FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`
+> §6, `confined_photon_null_balance_check.py`, `alpha_resonator_imbalance_check.py`): the electron is **not a
+> propagating loop** but a **standing-wave RESONATOR confined by the medium** (the polarizable vacuum / `v_A`
+> dielectric), carrying a **point charge defect** (a localized torsion / "spark-imbalance" point). The free
+> propagating photon (a null Hopf knot) is *exactly* energy-balanced, so the electron cannot be it — the
+> imbalance/charge lives in the confined standing-wave-plus-point-defect structure. The torsion-defect
+> *mechanism* is unchanged; only the *shape* word changes: "loop" → "standing-wave resonator + point defect."
+> (Neutrino "smoke-ring" mentions remain correct — the neutrino does not precess, so it *is* the free-ring-like state.)
+
 ---
 
 ## 0. The 10-year-old version — is "the torsion defect is the spark" safe to say?
 
-**Almost — with one small fix.** Picture the electron as a tiny smoke-ring of light that has curled around
-and bitten its own tail (a Hopf link). Because a light-ring can't *quite* close perfectly, it **wobbles** a
-little as it spins — a permanent, built-in wobble. That wobble is the **torsion defect**. The wobble is what
+**Almost — with one small fix (and see the corrected-framing note above).** Picture the electron as a tiny
+**standing wave of light held in place by the vacuum's own "thickness" (the medium)** — light trapped and
+humming, not flying off. It can't sit perfectly still: it keeps a permanent little **wobble** at one point —
+the **torsion defect** (a point where the twist never quite closes). That wobble is what
 makes the electron *electric* — it is the origin of its **charge**, and charge is what lets it push and pull
 and **spark**.
 

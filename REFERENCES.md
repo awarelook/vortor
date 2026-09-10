@@ -32,7 +32,9 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
 - Schwinger, J. (1949), *Phys. Rev.* 75, 651 — vacuum polarization / self-energy.
 
 **Topological solitons / Skyrme (Δ handoff).**
-- Skyrme (1961/62); Witten (1983); Battye & Sutcliffe (1997); Barnes, Baskerville & Turok (1997), *PRL* 79,
+- Skyrme (1961/62); Witten (1983); Adkins, G.S., Nappi, C.R. & Witten, E. (1983), *Nucl. Phys. B* 228, 552
+  — static nucleon properties in the Skyrme model (soliton quantization / spin from the collective
+  coordinate); Battye & Sutcliffe (1997); Barnes, Baskerville & Turok (1997), *PRL* 79,
   367 (B=4 mode spectrum); Houghton, Manton & Sutcliffe (1998); Feist, Lau & Manton (2013), *PRD* 87, 085034;
   Gudnason & Halcrow (2018), *PRD* 98, 125010; Halcrow (2016), *Nucl. Phys. B* 904, 106; Adam, Sánchez-Guillén
   & Wereszczyński (2010) — BPS/near-BPS Skyrme. Eto & Nitta (2025), *PRL* — knot solitons.
@@ -50,6 +52,28 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   in-repo** — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
   (`results/verify/{chirality_helicity, charge_conjugation, majorana_selfdual}_check.py`). `0νββ` is the
   external falsifier of the Majorana reading.
+
+**Spin-statistics of solitons, `g = 2`, & the Dirac structure (§9f).**
+- Finkelstein, D. & Rubinstein, J. (1968), *J. Math. Phys.* 9, 1762 — "Connection between spin, statistics,
+  and kinks" (soliton quantization; spin-½ from configuration-space topology).
+- Wilczek, F. & Zee, A. (1983), *PRL* 51, 2250 — "Linking numbers, spin, and statistics of solitons"
+  (Hopf term ⇒ soliton spin-½).
+- Ferrara, S., Porrati, M. & Telegdi, V.L. (1992), "`g = 2` as the natural value of the tree-level
+  gyromagnetic ratio of elementary particles," *Phys. Rev. D* 46, 3529 — the FPT natural-`g` result. *(Journal
+  cited from memory as Phys. Rev. D 46, 3529, 1992; the consolidation prompt named Phys. Lett. B — volume/venue
+  to be double-checked against the original before external citation.)*
+- Weinberg, S. — the "natural `g = 2`" argument for a minimally-coupled elementary spin-½/charged field
+  (developed in his Brandeis lectures / QFT lectures; *exact citation venue not verified here — flag before
+  external use*).
+
+**Electromagnetic knots / null fields (confined-photon baseline, α ledger).**
+- Rañada, A.F. (1989), *Lett. Math. Phys.* 18, 97 — a topological (Hopf-fibration) theory of the EM field;
+  Rañada, A.F. (1990), *J. Phys. A* 23, L815 — knotted null solutions of the vacuum Maxwell equations. *(Volume
+  numbers from memory; verify before external citation.)*
+
+**Spectral geometry / analytic torsion (S³ curl zeta, §3a).**
+- Ray, D.B. & Singer, I.M. (1971), *Adv. Math.* 7, 145 — "R-torsion and the Laplacian on Riemannian
+  manifolds" (analytic torsion; the `ζ′(0)` determinant/torsion machinery invoked for the `S³` curl spectrum).
 
 ## 2. The five convergence frameworks (method/analogy-only)
 

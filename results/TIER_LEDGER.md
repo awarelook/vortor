@@ -49,14 +49,20 @@ why fabricating it would violate the discipline). Every row cites a `results/ver
   so the π²-carrying forms are genuine and the "pure `ζ(3)/12`" is a mis-attributed different object (category error).
 - **Genuinely winnable (execution, not proof-by-thought):** **R2 at Reynolds** (the scoped GPU run) upgrades the
   `[V]` core; **Δ** (the Skyrme-HPC run) closes the LENR rate. Both are packaged execute-ready in `handoffs/`.
-- **Not provable here — and honestly so:** **α's value** (settled-negative; the shared QED frontier), **g=2**
-  (needs Dirac quantization), and the **one-object mass hierarchy** ((`[S]`-by-nature; deriving 1836/137 is
-  numerology). Claiming a "proof" of these would be exactly the fabrication the discipline forbids — the honest
-  result is that they are the *frontier the theory stands at*, shared with all of physics, not a crack in it.
+- **The frontier — now stated at its sharpest (not "just open"):** **α's value** is settled-negative *and*
+  reframed — α **runs** (1/137.036 is the IR endpoint), and on the correct object (resonator-in-medium + point
+  defect) every imbalance channel is 0 or circular, so the frontier reduces to ONE quantity: the running
+  coupling's *anchor* = the unpinned charge magnitude (topology quantizes charge but not its magnitude). **g=2's
+  meaning is now DERIVED internally** (the ±λ Weyl / θ_χ=γ₅ / C / Hopf-spin-½ Dirac algebra; g=2 = its
+  minimal-coupling limit, reduced to the π₁/π₃ lock — the lock itself stays `[S]`). The **mass hierarchy** is not
+  numerology-circular: the TUFT analytic-torsion dressing derives its **size/order** (~10⁴–10⁵, ~79% parameter-free
+  pure-ζ), with exact ratios `[preprint-claim]`. Claiming a *proof* of the α value or the exact ratios would be
+  fabrication — those remain the shared elementary-electron frontier; but the theory now supplies the *structure*
+  of all three and names the single residual in each.
 - **What the jewel *is*, precisely:** a citable `[V]` plasma/topological-fluid theorem + a reproducible toolkit +
   a set of exact identities, wrapped in a disciplined, falsifiable **`[S]` synthesis hypothesis** whose every
   tier is *labeled, reproducible, and honest*. The breakthroughs available are the two scoped external
   computations and the small locks; the rest is the honest frontier.
 
-*Provenance: the 30 `results/verify/` scripts + engine (`verify_all.py` → **31/31** PASS) + the `results/` and `handoffs/` docs
+*Provenance: the 31 `results/verify/` scripts + engine (`verify_all.py` → **32/32** PASS) + the `results/` and `handoffs/` docs
 cited inline. No value promoted; `e^(-2/3)`/`E_fm` excised; the α winding stays settled-negative.*

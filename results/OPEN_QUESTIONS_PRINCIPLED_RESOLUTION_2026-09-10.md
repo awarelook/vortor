@@ -71,7 +71,15 @@ Standard Model, measured, not derived, by anyone. Within FTGB it is doubly settl
 
 No fabricated derivation is offered. This is the "why these constants" question, shared with all of physics.
 
-## 4. The unification — α and g=2 are the **same** frontier: *why is the electron elementary?*
+## 4. The unification — α and g=2 (**partially superseded 2026-09-10**; see note)
+
+> **⚑ Update (2026-09-10, `FRONTIER_INTERNAL_DERIVATION` §1/§6):** the framing below — that g=2 is "not delivered
+> by soliton geometry" and sits in the *same* undelivered frontier as α — is **superseded on the g=2 side**.
+> g=2's **structure is now derived internally** (the ±λ Weyl / `θ_χ=γ₅` / `C` / Hopf-spin-½ Dirac algebra;
+> g=2 = its minimal-coupling limit, reduced to the π₁/π₃ lock — *satisfied* by the elementary lepton). What
+> remains shared with all of physics is **α's VALUE** (now sharpened: the running-coupling *anchor* = the unpinned
+> charge magnitude — topology quantizes charge but not its magnitude). So: **g=2's meaning — delivered; α's value —
+> the frontier.** The original text is kept below for provenance.
 
 The honest synthesis: **g=2 and α's value both reduce to one question — why does the electron behave as an
 elementary, pointlike Dirac particle?**

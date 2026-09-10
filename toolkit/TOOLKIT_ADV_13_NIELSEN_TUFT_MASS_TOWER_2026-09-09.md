@@ -30,10 +30,12 @@ version `NielsenTUFT.pdf` 290 pp) is the *framework* source, **in peer review** 
 > [V]-in-project: (i) that the arithmetic reproduces** (given Nielsen's coefficients, the formula returns the numbers
 > she states — the quark tower 6/6 to −0.000%, and the coefficient identities like `C₉=−0.15670774` and
 > `ζ′(−2)=−ζ(3)/4π²` to 30+ dps); **and (ii) the internal-consistency findings below.** Two things are flagged
-> PROMINENTLY and must travel with every use of this module: **(a) a documented π-power internal inconsistency** —
-> the tower carries a *pure* `C₅=ζ(3)/12` (no π) for the n² term on S⁵/S⁹ but a π²-carrying `ω₃=ζ(3)/(4π²)`,
-> `σ₅=ζ(3)/(16π²)`, `σ₉=ζ(3)/(8π²)` for the *same class* of Ray–Singer coefficient on S³ and in the torsion
-> exponents — an **unresolved anomaly [anomaly]**, not a normalization choice; and **(b) the "zero-free-parameter,
+> PROMINENTLY and must travel with every use of this module: **(a) a π-power question — now RESOLVED (2026-09-10,
+> M13-10)** in favor of the π²-carrying forms. The tower carried a *pure* `C₅=ζ(3)/12` (no π) for the n² term on
+> S⁵/S⁹ but a π²-carrying `ω₃=ζ(3)/(4π²)`, `σ₅=ζ(3)/(16π²)`, `σ₉=ζ(3)/(8π²)` on S³ and in the torsion exponents;
+> the S³ curl spectral zeta `ζ_B(s)=ζ(s−2)−ζ(s)` forces the n² coefficient to `ζ′(−2)=−ζ(3)/4π²` (π² mandatory),
+> so the pure forms are a **category error** (a mis-attributed product of zeta *values*), not a normalization
+> choice (`curl_spectral_zeta_pi_power_check.py`); and **(b) the "zero-free-parameter,
 > blind-fit-at-0.1σ, all-masses-recovered" claims are the PREPRINT's, in Round-2 review — [preprint-claim], NOT [V].**
 > We fold the *structure and coefficients*; we mark the *fits* as unverified-here.
 
@@ -296,13 +298,15 @@ internal miss); cross-ref M10-4 (the seesaw-as-frequency-downconversion reading 
 
 ---
 
-## M13-10 — ⚑ THE π-POWER INTERNAL INCONSISTENCY (unresolved anomaly — flag on every use)   [anomaly]
+## M13-10 — THE π-POWER QUESTION — **RESOLVED (2026-09-10)** in favor of the π²-carrying forms   [V, was [anomaly]]
 
-**WHAT.** The single most important honesty flag for the whole tower. The **same class** of object — the "quadratic
-Casimir / Ray–Singer torsion" coefficient — appears with **inconsistent π-powers across shells**: pure `ζ(3)/12` and
-`−ζ(3)/8` on S⁵/S⁹ (no π), but `ζ(3)/(4π²)` on S³ and π²-carrying torsion exponents `σ₅, σ₉`. Nielsen's *own*
-derivation (M13-6) supplies a π² (the lens-space determinant gives `ζ_B′(0)=ζ(3)/(4π²)`), so the **pure `ζ(3)/12` is
-the anomaly — it drops the π² its own route supplies.** This is documented, not smoothed.
+**WHAT.** Formerly the tower's single most important honesty flag — now **resolved** (see the boxed Status
+below and `results/verify/curl_spectral_zeta_pi_power_check.py`). The apparent clash: the "quadratic
+Casimir / Ray–Singer torsion" coefficient appeared with **inconsistent π-powers across shells** — pure `ζ(3)/12`
+and `−ζ(3)/8` on S⁵/S⁹ (no π), but `ζ(3)/(4π²)` on S³ and π²-carrying exponents `σ₅, σ₉`. Nielsen's *own*
+derivation (M13-6) supplies a π² (the lens-space determinant gives `ζ_B′(0)=ζ(3)/(4π²)`). **Resolution: the π²
+is structurally mandatory and the "pure" forms are a *category error* (a mis-attributed product of zeta values),
+not a normalization choice — the S³ curl spectral zeta forces it.** Full statement in the Status box below.
 
 **MATH.** The full π-power ledger (exact-form doc §1, §3), verbatim:
 ```
@@ -386,9 +390,10 @@ This module does **NOT**:
 1. **endorse the mass-recovery fit** — the "zero-parameter blind fit at 0.1σ / sub-0.01%" claims are the preprint's,
    in Round-2 review (**[preprint-claim]**, M13-11); only the arithmetic reproduction and the coefficient identities
    are **[V]**.
-2. **resolve the π-power inconsistency** — pure `C₅=ζ(3)/12` vs π²-carrying `ω₃, σ₅, σ₉` is an **unresolved anomaly**
-   (**[anomaly]**, M13-10); which form is physical is OPEN, needs the lens-space η / coexact-p determinant or a firmer
-   TUFT source.
+2. **~~resolve the π-power inconsistency~~ → RESOLVED (2026-09-10, M13-10)** — the S³ curl spectral zeta
+   `ζ_B(s)=ζ(s−2)−ζ(s)` forces the n² coefficient to `ζ′(−2)=−ζ(3)/4π²` (π² mandatory); the pure `C₅=ζ(3)/12`,
+   `C₉=−ζ(3)/8` are a **category error** (mis-attributed products of zeta *values*), so the π²-carrying forms are
+   the genuine coefficients (`curl_spectral_zeta_pi_power_check.py`). *(The tower's DATA-FIT stays [preprint-claim].)*
 3. **supply a transition matrix element** — `⋆d` is linear ⇒ strictly diagonal, zero off-diagonal (M13-1); the tower
    has no nuclear sector and cannot hand over an ME (see `KERNEL_NIELSEN_MASS_MATRIX_ELEMENT`); MEs need a nonlinear
    interaction the tower lacks.
@@ -397,8 +402,8 @@ This module does **NOT**:
 5. **claim the compendium `(a=8.528175, b=−1.2006804)` popular formula equals the exact ζ-tower** — they are distinct
    parameterizations (M13-3); do not cross-substitute their coefficients.
 
-**The two load-bearing flags, restated:** (a) the tower carries a **documented π-power internal inconsistency**
-(`C₅=ζ(3)/12` pure vs `ω₃/σ₅/σ₉` π²-carrying) — **[anomaly]**, unresolved; (b) the **fit claims are the preprint's,
+**The load-bearing flags, restated:** (a) the π-power question (`C₅=ζ(3)/12` pure vs `ω₃/σ₅/σ₉` π²-carrying) is
+**RESOLVED (M13-10, 2026-09-10)** — the π²-carrying forms are genuine, the pure ones a category error; (b) the **fit claims are the preprint's,
 in review — [preprint-claim], NOT [V].** Fold the structure and coefficients; the fits are unverified-here.
 
 ---
@@ -415,7 +420,7 @@ in review — [preprint-claim], NOT [V].** Fold the structure and coefficients; 
 | M13-7 | `S_CS=(k/4π)∫Tr(A∧dA+⅔A∧A∧A)`, `M=ke²/4π`; `CS₇`, `η(S³)=0.0215`, APS | [credited] theory / [framework] 7D values | 100pg M.2.6/M.12.3; 31pg §XII.C; Witten 1998 |
 | M13-8 | CKM `V_ij=⟨ψ_i\|ψ_j⟩`; `J=3.06×10⁻⁵`; angles 13.1°/2.4°/0.2°/69° | [framework] / [preprint-claim] fit | 31pg §XII.A; 100pg M.2.9 |
 | M13-9 | PMNS `34°/45°/8.5°`; `m_ν~50 meV`, spectrum, `Δm²`; Dirac/normal-ordering | [framework] / [preprint-claim] fit | 31pg §XII.B; 100pg M.2.7 |
-| M13-10 | π-power inconsistency: pure `ζ(3)/12` vs π²-carrying `ω₃,σ₅,σ₉`; factor `π²/3` | **[anomaly]** unresolved | exact-form §1,§3 (verdict) |
+| M13-10 | π-power question: pure `ζ(3)/12` vs π²-carrying `ω₃,σ₅,σ₉`; factor `π²/3` — **RESOLVED** (π²-forms genuine; pure = category error) | **[V]** resolves [anomaly] | `curl_spectral_zeta_pi_power_check.py`; `ζ_B(s)=ζ(s−2)−ζ(s)` |
 | M13-11 | "blind-fit 0.1σ / zero-parameter / sub-0.01%" recovery | **[preprint-claim]** NOT [V] | compendia tables; TUFT in peer review |
 | M13-13 | Limits + the two flags | [V] scope | statement |
 
@@ -430,7 +435,8 @@ in review — [preprint-claim], NOT [V].** Fold the structure and coefficients; 
   `C₉=−0.15670774` and `−ζ(3)/8, ζ(3)/28, (1+ζ(3)/28)` to 50 dps (`c9_mass_tower_coefficient_verification…py`);
   `ζ′(−2)=−ζ(3)/(4π²)=−0.03044846`; `C₅=ζ(3)/12=0.10017141`, `β₅=ζ(5)/(8π⁴)=0.00133064`, `σ₉=ζ(3)/(8π²)=0.01522423`;
   the pure-vs-π² clash and the `π²/3=3.2899` factor; the `⋆d`-linear ⇒ zero-off-diagonal theorem.
-- **[anomaly] flagged, not smoothed:** the cross-shell π-power inconsistency (M13-10).
+- **[anomaly] RESOLVED (2026-09-10):** the cross-shell π-power question (M13-10) is settled by the S³ curl
+  spectral zeta (`curl_spectral_zeta_pi_power_check.py`) — π²-carrying forms genuine, pure forms a category error.
 - **[preprint-claim], NOT validated here:** every mass-recovery, significance (`σ`), and "zero-parameter" statement (M13-11).
 - **Numbers traced, not invented:** every coefficient quotes its source doc + equation number. No mass, rate, cross-section,
   or fit is fabricated; the compendium popular-`(a,b)` form is flagged as distinct from the exact ζ-tower.
