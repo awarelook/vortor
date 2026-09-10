@@ -1,12 +1,12 @@
 ---
-title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M12)"
+title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M14)"
 author: Nathaniel Hanks
 date: 2026-09-09
 status: "Consolidated reference handbook. Assembled from the four canonical method modules TOOLKIT_ADV_07..10; those modules remain the source of record. This is a clean, shareable single-file reference; no new claims are introduced here."
 anchors: "Four measured anchors {B, n_i, m_i, R}; zero free structural parameters."
 ---
 
-# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M12)
+# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M14)
 
 **Nathaniel Hanks -- 2026-09-09**
 
@@ -27,7 +27,7 @@ configuration and as a Madelung / quantum-hydrodynamic matter wave, resting on f
 `{B, n_i, m_i, R}` with zero free structural parameters. But each method below is written to be
 lifted out and re-applied to a fresh problem without re-deriving it. That is the point of a toolkit.
 
-The six modules are:
+The eight modules are:
 
 | Module | Subject | What it gives you |
 |---|---|---|
@@ -37,6 +37,8 @@ The six modules are:
 | **M10** | Topological-soliton + conserved-current methods | conserved currents, no-go templates, moduli-geodesic amplitudes, seesaw / RG readings |
 | **M11** | EGM / polarizable-vacuum spectral methods | Storti's PV-refractive-index + ZPF harmonic-beat *representation* mapped onto M7/M9, with its numerology quarantined (method-only, no claim adopted) |
 | **M12** | Ginzburg spiral-field theory (toryx / helyx) | a toroidal-spiral *structural analogy* (matter = self-inverting torus, radiation = double helix, discrete matter<->radiation ladder) mapped onto the Beltrami-Hopf object; analogy-only, no claim adopted |
+| **M13** | Nielsen TUFT mass-tower & mixing methods | the ζ-valued exponent tower (`C₅=ζ(3)/12`, `β₅=ζ(5)/8π⁴`, …), knot/lens-space torsion, CKM/PMNS overlaps, Chern-Simons `M=ke²/4π`, Proca-Beltrami `λ=mc/ℏ` — coefficients `[V]`-checked, **π-power anomaly + preprint blind-fit flagged** |
+| **M14** | Greenyer beat-law & EVO cascade methods | the Beat Law + shape-independent ladder `N^L`, the triad dichotomy (integer silence / golden resonance), two Manley-Rowe (Fibonacci) invariants, anapole `N⁴`, `9/8 μ_B`; nuclear layer a **pre-registered target** (`N_crit` prediction), **no over-unity** |
 
 Two consolidated knowledge-base files accompany the modules: **`GLOSSARY.md`** (shared vocabulary across FTGB
 and the four convergence frameworks, tiered) and **`REFERENCES.md`** (the credited literature + the four
@@ -958,11 +960,54 @@ polarizable-vacuum reading; `m = hbar omega/c^2`; an `alpha ~ 137` winding numbe
 
 ---
 
-## 9. Consolidated reference list
+## 9. Module M13 -- Nielsen TUFT mass-tower & mixing methods
+
+Full module: `toolkit/TOOLKIT_ADV_13_NIELSEN_TUFT_MASS_TOWER_2026-09-09.md`. Verify:
+`results/verify/tuft_mass_tower_check.py`.
+
+**The one limit.** Everything here is `[framework: Nielsen TUFT]` / `[S]` scaffolding on a bed of `[credited]`
+mathematics (Proca/Helmholtz, Ray-Singer torsion, lens-space determinants, the curl/Beltrami spectrum,
+Chern-Simons). Only two classes are `[V]`: (i) the coefficients reproduce their closed forms, and (ii) the
+internal-consistency findings. **Two flags travel with every use:** (a) the **π-power anomaly** -- pure
+`C₅=ζ(3)/12` (no π) vs π²-carrying `ω₃=ζ(3)/4π²`, `σ₅`, `σ₉` for the same class of coefficient; the clash is
+exactly `C₅/ω₃ = π²/3` `[anomaly]`; and (b) the **blind-fit-at-0.1σ / zero-parameter / sub-0.01%
+mass-recovery claims are the PREPRINT's, in Round-2 review -- `[preprint-claim]`, NOT `[V]`.**
+
+**What it folds.** The mass operator (Proca-Beltrami `λ=mc/ℏ`, curl S³ spectrum `±(n+1)/R`, `⋆d` -- linear,
+so zero off-diagonal ME); the full quark tower `m_{n,±}=Λ₅(n+1)exp((a₅±λ_T)n + C₅n² + β₅n(n+1)/2 +
+σ₅logτ(Kₙ))` with every ζ-coefficient; lepton `ω₃=ζ(3)/4π²`, neutrino `C₉=−0.15670774`; knot/lens norms
+`τ(Kₙ)={1,4,3}`, `τ_R(L(n,1))=1/n`; the Ray-Singer/Nash-O'Connor ζ(3) provenance; Chern-Simons `M=ke²/4π`;
+CKM `V_ij=⟨ψ_i|ψ_j⟩`; PMNS + ν-masses (`~50 meV`, no seesaw). In-repo verify reproduces `C₅,β₅,σ₅,ω₃,C₉`,
+the exact `C₅/ω₃=π²/3` clash, and `τ_R=1/n`.
+
+## 10. Module M14 -- Greenyer beat-law & EVO cascade methods
+
+Full module: `toolkit/TOOLKIT_ADV_14_GREENYER_BEAT_LAW_2026-09-09.md`. Verify:
+`results/verify/greenyer_beat_cascade_check.py`.
+
+**The one limit.** Two layers, two statuses. The **beat-dynamics layer** (M14-1..8, 11..15) is self-contained
+checkable field mathematics -- symbolic proofs, mesh eigensolves, closed-form identities -- and stands
+whether or not any nuclear claim is true. The **nuclear layer** (M14-9/10) is a **pre-registered target** on
+Greenyer's `[framework]` baryon-decay channel, with a stated `1.27×` sub-threshold gap; `N_crit ~ 1.7-3e11`
+is a `[prediction]`, never a finding. **No over-unity.** Never conflate the continuous helicity `N^(−4L)`
+(shrinks) with the exactly-conserved integer winding number.
+
+**What it folds.** The Beat Law `f_b=C v_eff a²/(2πR³)` + the **shape-independent ladder theorem
+`f_b(L)/f_b(0)=N^L`** `[V]`; the heartbeat theorem (fixed-helicity min = a single pure mode ⇒ every persistent
+beat is driven) `[V]`; the **triad dichotomy** (integer cascades cannot self-phase-match; the golden ratio
+always does) `[V]`; two Manley-Rowe invariants with **Fibonacci** coefficients `[V]`; the BIC linking rule;
+the anapole `T_L/T_(L+1)=N⁴` and helicity `N^(−4L)`; the THz cascade `ω₀=α_CK ε²ω_A` (`α_CK=½`); the Madelung
+bridge + exact **`9/8 μ_B`** Reed theorem `[V]`; magnetic-tension Rayleigh fission + the `N_crit`
+`[prediction]`; the Gamow ledger `[framework]`; MRxMHD; the Hopf-Beltrami no-go; the `l=2` mode
+`z_(2,1)=5.763459`; the off-resonance theorem `Q(N^k−1)`. In-repo verify confirms the ladder, `N⁴=256`, the
+three-wave dichotomy (integer NONE vs golden to 7e-15), and the Fibonacci→φ shadow.
+
+## 11. Consolidated reference list
 
 Established, credited literature underpinning the toolkit (per module). Primary load-bearing references
 are named in full; tiers are as used above. See `REFERENCES.md` for the full project-wide citation base,
-including the four convergence-framework primaries (Reed, Storti, Ginzburg, Nielsen).
+the convergence-framework primaries (Reed, Storti, **Nielsen TUFT**, Ginzburg, **Greenyer/MFMP**), and the
+Bostick / Puthoff / Shoulders ancestors (`LINEAGE.md`).
 
 **Dimensional method (M7).**
 - E. Buckingham, *Phys. Rev.* **4**, 345 (1914) -- the Pi theorem. [credited]
@@ -1025,7 +1070,7 @@ including the four convergence-framework primaries (Reed, Storti, Ginzburg, Niel
 
 ---
 
-## 10. Do-not-cite note
+## 12. Do-not-cite note
 
 The following are named so they are never cited as established, and never resurrected:
 

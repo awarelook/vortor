@@ -48,9 +48,9 @@ given when they were published).
 | `FTGB_CURRENTLEG_TRILOGY.{md,pdf}` | the standalone lead result (a self-contained plasma / topological-fluid theorem) |
 | `FTGB_LEAD_PAPER_2026-09-09.pdf` | **the journal-length lead paper** (6 pp): the current-leg no-go trilogy + the R2/R3 conditional enstrophy/BKM closure — the defensible `[V]` core, ready to submit. Source `paper/LEAD_PAPER_2026-09-09.md` |
 | `FTGB_COHERENCE_MAP_2026-09-09.md` | the capstone: the 7-layer stack ordering all frameworks (Buckingham-Π, EGM, TUFT, Reed, Ginzburg) theory → reality → experiment |
-| `TOOLKIT_HANDBOOK.md` | plain-language + math handbook tying the six method modules together |
-| `toolkit/` | the six method modules: Buckingham-Π (M7), QWM conversion (M8), coupled-oscillator substrate (M9), topological-soliton methods (M10), EGM / polarizable-vacuum spectral methods (M11), Ginzburg spiral-field theory (M12) |
-| `GLOSSARY.md`, `REFERENCES.md` | consolidated, tiered knowledge base: shared vocabulary + citations across FTGB and the four convergence frameworks (Reed, Storti, Ginzburg, Nielsen) |
+| `TOOLKIT_HANDBOOK.md` | plain-language + math handbook tying the eight method modules together |
+| `toolkit/` | the eight method modules: Buckingham-Π (M7), QWM conversion (M8), coupled-oscillator substrate (M9), topological-soliton methods (M10), EGM / polarizable-vacuum spectral methods (M11), Ginzburg spiral-field theory (M12), **Nielsen TUFT mass-tower (M13)**, **Greenyer beat-law & EVO cascade (M14)** — the last two folded from the corpus gap-scan, honestly flagged |
+| `GLOSSARY.md`, `REFERENCES.md`, `LINEAGE.md` | consolidated, tiered knowledge base: shared vocabulary + citations across FTGB and the convergence frameworks (Reed, Storti, Nielsen, Ginzburg, Greenyer), plus the Bostick / Puthoff / Shoulders lineage note |
 | `engine/` | **`ftgb_engine.py`** — the theory as one executable model: anchors {B,n,m_i,R} → static structure + dynamics + theorem verification, all tiered (`python engine/ftgb_engine.py`) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations |
 | `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the α dynamical reframe, + `verify/` scripts |

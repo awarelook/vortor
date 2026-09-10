@@ -6,6 +6,15 @@ jewel (`F:\vortor`) already holds (toolkit M7–M12, R2/R3, the LENR model, the 
 only genuine gaps are reported. Formulas below are quoted as found in the corpus; **inclusion here is a
 candidate fold, not an endorsement** — each carries the tier it would enter at, and known problems are flagged.
 
+## ✅ Status (2026-09-09): the top gaps are folded
+- **G1 Nielsen TUFT → `toolkit/TOOLKIT_ADV_13_NIELSEN_TUFT_MASS_TOWER_2026-09-09.md` (M13)** + verify
+  `results/verify/tuft_mass_tower_check.py` — coefficients `[V]`-reproduced, π-anomaly + blind-fit `[flag]`.
+- **G2 Greenyer → `toolkit/TOOLKIT_ADV_14_GREENYER_BEAT_LAW_2026-09-09.md` (M14)** + verify
+  `results/verify/greenyer_beat_cascade_check.py` — cascade/dichotomy/Fibonacci `[V]`, `N_crit` `[prediction]`,
+  no over-unity.
+- **G3–G5 lineage (Bostick/Puthoff/Shoulders) → `LINEAGE.md`** `[credited-lineage]`/`[framework]`.
+- **G6 Reed + Tier-3 Storti → M8 / M11 extensions** — *pending* (next batch, methods-only, values excised).
+
 ## Two discoveries (independent of the math)
 - **`ckfreefem\frontier_calcs\` exists on disk** — the provenance directory the R2 / Δ hand-offs reference
   (previously noted as "not in the repo"). The verification calcs are real and locatable there.
