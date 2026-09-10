@@ -12,8 +12,8 @@ python results/verify/verify_all.py      # runs all checks + the engine; exit 0 
 
 `verify_all.py` runs each theory script plus `engine/ftgb_engine.py`, captures exit
 codes, and prints a `PASS/FAIL` summary (it is also a CI gate — nonzero exit on any
-failure). Deterministic, no network. Current status: **28 / 28 PASS** on CPython 3.12
-(27 theory scripts + the engine).
+failure). Deterministic, no network. Current status: **29 / 29 PASS** on CPython 3.12
+(28 theory scripts + the engine).
 
 ## Claim → script coverage map
 
@@ -36,6 +36,7 @@ failure). Deterministic, no network. Current status: **28 / 28 PASS** on CPython
 | `g_factor_soliton_check.py` | does the soliton give g=2? The naive Reed photon-ring / circulating-charge gives **g = 1** (robust); g=2 is the Dirac value (needs spinor structure). The Hopf term gives **spin-½** `[credited]` but **not** g=2 → g=2 stays `[S]`/open | `ALPHA_RESOLUTION_ASSESSMENT` §3d | `[credited]` / `[S]` |
 | `g2_elementary_check.py` | g=2 resolved-in-principle: elementary leptons sit at g=2 (electron = Dirac + `α/2π`), composites deviate (proton 5.59, neutron −3.83) → **g=2 ⇔ effectively pointlike Dirac**, the *same frontier as α* ("why is the electron elementary?") | `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` §2 | `[credited]` |
 | `g2_skyrme_composite_check.py` | g=2 from **FTGB's own soliton layer**: the B=1 Skyrmion (M10) is the nucleon, and Skyrme collective quantization **computes** its moment — parameter-free `μ_p/μ_n=−3/2` vs experiment −1.46 (~3%), a **composite** g-factor (`g_p=5.59`), manifestly **not** Dirac g=2 → extended solitons give composite moments; g=2 (electron) is the pointlike/elementary limit = the **same frontier as α**, shown from inside the theory | `TIER_LEDGER` §2, M10 | `[credited]` / `[S]`open |
+| `g2_dirac_structure_check.py` | **g=2 re-derived from inside:** the `±λ` Beltrami doublet **is** the two Weyl chiralities (pure `P_±` eigenstates); the duality angle `θ_χ` **is** the `γ₅` chiral rotation (`H=H_max cos2θ`, Majorana at 45°); the mirror **is** `C`; with Hopf spin-½ the **Dirac algebra is internal** → g=2 is its *minimal-coupling limit*, reduced to one criterion — `π₁`(charge)/`π₃`(spin) locking (elementary lepton locked = g=2, composite decoupled) | `FRONTIER_INTERNAL_DERIVATION` | `[V]`/`[credited]`/`[S]` |
 | `torque_beat_alpha_check.py` | the frontier through the theory's own lens: the g−2 anomaly **is** a beat (`ω_a=ω_s−ω_c=a·ω_c`), `α` = the spin⊗orbit beat-fraction (`2π·a=α`), the g−2 series = the harmonic/loop cascade (3-loop → measured to 5e-11), chirality = the beat's yin-yang handedness → it **types** the frontier, doesn't derive the value | `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` §5 | `[credited]` / `[S]` |
 | `alpha_impedance_check.py` | the **medium** reading: `α = Z₀/(2R_K)` exactly (to 6e-15) — the vacuum's magnetic-to-electric impedance `Z₀=√(μ₀/ε₀)` over twice the quantum resistance `R_K=h/e²`; folds into the K_PV/M11 layer → types α as a medium-impedance ratio, but a restatement (both carry the constants) | `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` §5 | `[credited]` |
 | `chirality_helicity_check.py` | chirality = `sign(λ)` = `sign(H)` of the Beltrami field (exact: `curl ABC=+u`, mirror `=−u`); antiparticle = `−λ` partner; the duality angle = computed helicity-mixing `θ_χ` (0°/90° = electron/positron) | `CHIRALITY_DUALITY_ASSESSMENT` | `[credited]` / `[S]` |
