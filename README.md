@@ -51,6 +51,7 @@ given when they were published).
 | `TOOLKIT_HANDBOOK.md` | plain-language + math handbook tying the six method modules together |
 | `toolkit/` | the six method modules: Buckingham-Π (M7), QWM conversion (M8), coupled-oscillator substrate (M9), topological-soliton methods (M10), EGM / polarizable-vacuum spectral methods (M11), Ginzburg spiral-field theory (M12) |
 | `GLOSSARY.md`, `REFERENCES.md` | consolidated, tiered knowledge base: shared vocabulary + citations across FTGB and the four convergence frameworks (Reed, Storti, Ginzburg, Nielsen) |
+| `engine/` | **`ftgb_engine.py`** — the theory as one executable model: anchors {B,n,m_i,R} → static structure + dynamics + theorem verification, all tiered (`python engine/ftgb_engine.py`) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations |
 | `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the α dynamical reframe, + `verify/` scripts |
 
