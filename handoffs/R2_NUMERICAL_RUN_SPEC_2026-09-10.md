@@ -35,8 +35,8 @@ dv/dt = P[ v × ω ] − ν k² v + F ,   P = I − kk/k²  (Leray),   ω = ∇�
 - **Time step:** integrating-factor Heun (IF-RK2) — the exact viscous factor `e^{−νk²Δt}` removes viscous
   stiffness; verified stable in the reference at `Δt` set by the nonlinear CFL.
 - **Near-Beltrami drive (the load-bearing subtlety):** ABC forcing (`curl F = k_f F`, a Beltrami field)
-  holds large scales force-free; the reference exposes a **`γ` relaxation knob**
-  `F_relax = −γ P[∇×v − λ v]`. **This is essential:** single-helicity *forcing* does **not** produce a
+  holds large scales force-free; the reference exposes a **`γ` relaxation knob** (the near-Beltrami hold
+  specified just below). **This is essential:** single-helicity *forcing* does **not** produce a
   near-Beltrami *flow* at high Re (proven in `r2_spectral_retry`) — the flow must be *dynamically pinned* near
   force-free. **The near-Beltrami hold (fixed 2026-09-10):** use `F_relax = −γ (∇×−λ)² v` — the **gradient
   flow** of `∫|∇×v−λv|²`, i.e. `−γ(∇×∇×v − 2λ∇×v + λ²v)`. This is **pure damping** (each helical mode by
