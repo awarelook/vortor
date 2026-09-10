@@ -725,30 +725,27 @@ CK Bessel roots (`4.4934 / 7.7253 / 10.9041`): frequencies `{121, 208, 294}` kHz
 collective mode). The inharmonicity is a discriminating prediction: a uniform or harmonic
 comb would falsify it. Its multibody phase-locking behaviour, and the sharpened
 comb-pull prediction (`f2/f1 -> 7/4`, `f3/f1 -> 5/2` under strong coupling), are treated
-in Part D. Orbital angular momentum steps by a discrete-symmetry order (`l -> l +/- N`),
-protected by the sheath winding. The selection rule itself (a point group of order `N`
-steps angular momentum by `N`) is `[V]`, computed in-repo, and `[credited]`
-(Finkelstein-Rubinstein 1968; Braaten-Townsend-Carson 1990; Ferrando 2005, Konishi 2014,
-Chen 2014). But `N` is *rung-dependent*, and computation now pins it: at the **B=4 nuclear
-rung** the object is octahedral, so `N = 4` and the invariant ladder is `l in {0,4,6,8,9,
-10,...}`, `Delta l = 4`, reproducing the credited B=4 Skyrmion spectrum
-(`results/verify/octahedral_oam_ladder_check.py`). The **plasma object's electromagnetically
-carried OAM**, however, is governed by the *plasma* Beltrami field's own point group -- and
-Stage 0 computes that to be a **3-fold body-diagonal axis, NOT octahedral**, so `N = 3` for
-the EM channel (`results/verify/oam_stage0_pointgroup_check.py`: since force-free `J = (lam/
-mu0) B`, the radiated-current point group is the field's; its azimuthal OAM content lives on
-`m = 0 (mod 3)`, and the order-24 cubic symmetry lives in the space group's *roto-translations*,
-which do not act on a localized radiator). `N = 3` coincides with the theory's native triad
-(the three CK comb lines; `3-6-9`). The earlier "octahedral order" for the EM channel was a
-symmetry **borrowed from the nucleus** -- corrected here. The far-field emission then *realizes*
-it: Stages 1-3 (`results/verify/oam_stage123_emission_check.py`) compute that the C3 source
-feeds only `m = 0 (mod 3)` radiation multipoles (machine-zero off-ladder, with the `j_l(kr)`
-radial kernel), so the emitted total-angular-momentum ladder steps by 3 -- and that **spacing
-is robust to the orbital/spin (OAM/SAM) split** (the photon SAM shifts the OAM index `l = m - s`
-by a fixed `+/-1`, never the step). So the `N=3` ladder *spacing* is `[V]`; only the **absolute**
-orbital-vs-spin separation per rung stays `[S]` (limit/gauge-dependent -- the global `L/S` split
-is not gauge-invariant, clean only in the paraxial far zone). The QED-vacuum contribution to the
-effective refractive index is negligible.
+in Part D. The object's angular-momentum structure is **not** a point-group OAM ladder
+`l -> l +/- N`. The theory's localized EM object is the **fractal-toroidal matter resonator**
+(electron / neutrino / EVO) -- the **Reeb field of a contact structure** whose characteristic
+foliation is the Hopf fibration `[credited: Etnyre-Ghrist 2000, Nonlinearity 13, 441]` -- not a
+spheromak in a ball. Pinned to that object
+(`results/verify/oam_toroidal_resonator_resolution_check.py`), the structure is:
+(i) an **ANAPOLE** (Zel'dovich toroidal dipole) -- the ordinary radiating dipole cancels to
+`~1e-16`, so the resonator is electromagnetically **quiet** (a bound state), and the naive
+"OAM radiated in an `l -> l +/- N` ladder" question is *ill-posed* `[V]`;
+(ii) a **self-similar fractal CASCADE** -- the anapole multipole *type* is invariant under fractal
+resolution, and its strength scales by an exact power of the cascade base `N` per level (`N^3`
+fixed-current / `N^4` twin-core, M14-6) `[V]`;
+(iii) **topologically protected** -- the spectrum ladders `lam_L = lam_0 N^L` (spectral geometry)
+and the continuous helicity shrinks `~N^(-4L)`, but the integer winding / Reeb-orbit linking (the
+Hopf charge) is *exactly* conserved (`Lk = Tw + Wr`).
+So the discrete "OAM steps by `N`" reading is a **point-group artifact of proxy fields** (the
+space-filling ABC field / the spherical spheromak -- both since superseded); the real ladder is
+the fractal cascade, and the octahedral `N = 4` survives only at the composite **B=4 nuclear rung**
+(`results/verify/octahedral_oam_ladder_check.py`). Reeb geometry (Etnyre-Ghrist) + spectral
+geometry (`lam_L = lam_0 N^L`) is the correct frame. The QED-vacuum contribution to the effective
+refractive index is negligible.
 
 *End of Parts B-C. Load-bearing claims foregrounded on peer-reviewed work
 (Chandrasekhar-Kendall, Skyrme, Witten, Battye-Sutcliffe, Barnes-Baskerville-Turok);

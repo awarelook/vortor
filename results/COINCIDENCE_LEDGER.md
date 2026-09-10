@@ -33,7 +33,7 @@ mechanism — logged as a clue, `[flag]`).
 | EGM `H₀=√(GM/R³)/H₀` | 0.7071 | 1 | — | **CIRCULAR** — `M,R` defined via `H₀` → `=1/√2` identically |
 | EGM 2:1 harmonic `ω(e)/ω(p)` | 2 | 2 | 0.000% | **RESTATEMENT** — `ω_Ω(e)=ω_CP²/ω_Ce=2ω(p)` by definition |
 | `π²/3` (TUFT `C₅/ω₃`) | 3.28987 | 3.2899 | 0.001% | **DERIVED** — RESOLVED: `ω₃=ζ′(−2)` genuine, pure form a category error |
-| plasma-OAM order `N` vs the triad | 3 | 3 (CK lines, 3-6-9) | exact | **STRUCTURAL** `[clue]` — Stage 0 (`oam_stage0_pointgroup_check.py`) computes the plasma Beltrami point group = a 3-fold body-diagonal `C₃` (no `C₄`), so the EM-carried OAM ladders by `N=3`, coinciding with the native triad. Honest caveat: a 3-fold body diagonal is a generic feature of the `A=B=C` ABC field, so the match may be structural, not deep — logged as a clue, not promoted |
+| ~~ABC-proxy OAM order `N` vs the triad~~ | 3 | 3 (CK lines, 3-6-9) | exact | **SUPERSEDED** `[clue, retired]` — a point-group `N=3` from the space-filling **ABC proxy** (a 3-fold body diagonal, generic to the `A=B=C` field). Superseded: the theory's localized object is the fractal-toroidal **anapole** Reeb resonator (`oam_toroidal_resonator_resolution_check.py`), which has *no* point-group OAM ladder; the real ladder is the self-similar **cascade** `N` (`N^3`/`N^4` per level). The `3`-vs-triad match was a proxy coincidence, not the object's — kept as a retired clue |
 
 **Genericity gate (why `137` is not "special").** Sweeping `k·φ^a·π^b` (small integers, `k∈{½…6,20}`)
 lands **0 hits within 0.5%** of `137.036` — the *same* as random control targets (0–1 hits). A number the

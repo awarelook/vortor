@@ -51,22 +51,29 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   mod `N`, with vortex/mode mixing in steps of `N` (mathematically exactly `l → l ± N`).
 - Konishi, K. et al. (2014), *PRL* 112, 135502 — OAM/polarization selection rule set by C₃ discrete symmetry
   in nonlinear nanophotonics; Chen, S. et al. (2014), *PRL* 113, 033901 (arXiv:1403.1604) — same rule across
-  metacrystal symmetry orders. The **mechanism** is computed in-repo — `results/verify/
+  metacrystal symmetry orders. This point-group mechanism is computed in-repo — `results/verify/
   octahedral_oam_ladder_check.py` (`[V]`): the ladder step is *exactly* `N`, and the `SO(3)→O` subduction
-  forces `l ∈ {0,4,6,8,9,10,…}`, `Δl=4`, reproducing the credited B=4 Skyrmion spectrum. **But `N` is
-  rung-dependent** — `results/verify/oam_stage0_pointgroup_check.py` (Stage 0) computes the *plasma* Beltrami
-  field's point group (force-free ⇒ `J ∥ B`, so it selects the radiated OAM) to be a **3-fold body-diagonal
-  axis, NOT octahedral**: `N = 4` holds only at the B=4 *nuclear* rung; the **EM-carried OAM ladders by
-  `N = 3`** (azimuthal content on `m≡0 mod 3`; the order-24 cubic symmetry is a space-group roto-translation
-  that does not act on a localized radiator). `N=3` matches the theory's native triad (3 CK comb lines, 3-6-9).
-  The far-field *realization* is computed — `results/verify/oam_stage123_emission_check.py` (Stages 1–3):
-  the C3 source feeds only `m≡0 mod 3` radiation multipoles (machine-zero off-ladder, with the `j_l(kr)`
-  kernel), and the `N=3` spacing is **robust to the OAM/SAM split** (photon SAM shifts the offset by a fixed
-  `±1`, never the step). So the `N=3` ladder *spacing* is `[V]`; only the *absolute* orbital-vs-spin
-  separation per rung stays `[S]` (the global `L/S` split is not gauge-invariant, clean only paraxially). *(Not
-  folding Mancini/Ren/Maier, Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication
-  switched in a ~3% band — but its knob is continuous dispersion, NOT a discrete-symmetry order, so it is an
-  analogous-but-distinct existence proof of switchable OAM, not mechanism support; flagged, not cited as such.)*
+  forces `l ∈ {0,4,6,8,9,10,…}`, `Δl=4`, reproducing the credited B=4 Skyrmion spectrum. **This applies at
+  the composite B=4 *nuclear* rung only** (`N=4`, a genuinely octahedral 4-baryon Skyrmion). It does **not**
+  describe the theory's localized **EM object** — see the resolution below. *(Not folding Mancini/Ren/Maier,
+  Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication switched in a ~3% band —
+  but its knob is continuous dispersion, NOT a discrete-symmetry order; flagged, not cited as mechanism support.)*
+
+**The EM matter resonator's angular momentum: anapole + fractal cascade, via Reeb & spectral geometry (§C.3).**
+- **Resolution (`results/verify/oam_toroidal_resonator_resolution_check.py`).** The theory's localized EM
+  object is the fractal-toroidal matter resonator (electron/neutrino/EVO), **not** a spheromak — and it has
+  **no** point-group OAM ladder `l→l±N`. It is (i) an **anapole** (Zel'dovich toroidal dipole; ordinary
+  radiating dipole cancels to `~1e-16`, so it is nonradiating — the "OAM ladder" question is ill-posed);
+  (ii) a **self-similar fractal cascade** (anapole *type* fractal-invariant; strength `~N^p` per level —
+  `N^3` fixed-current / `N^4` twin-core, M14-6); (iii) topologically protected — spectrum `λ_L = λ_0 N^L`,
+  continuous helicity `~N^{-4L}`, integer winding (Hopf/Reeb-orbit linking) exactly conserved (`Lk=Tw+Wr`).
+  *(This supersedes an earlier point-group analysis — the space-filling ABC field and the spherical spheromak
+  as proxies gave `N=3`/axisymmetric; both were the wrong geometry for the localized toroidal object.)*
+- Etnyre, J.B. & Ghrist, R. (2000), *Nonlinearity* 13, 441 — a Beltrami field is (up to reparametrization)
+  the **Reeb field of a contact structure**; the correct geometric frame for the toroidal resonator (already
+  `[credited]` in the synthesis §A). Spectral-geometry side: the CK spectrum + cascade `λ_L = λ_0 N^L`
+  (§3, M14) and the `S³` curl spectral zeta / Ray-Singer torsion (M13, `curl_spectral_zeta_pi_power_check.py`).
+- Ab-initio: Hupin, Quaglioni & Navratil (2019), *Nat. Commun.* 10, 351; Quaglioni & Navratil (2008).
 - Ab-initio: Hupin, Quaglioni & Navratil (2019), *Nat. Commun.* 10, 351; Quaglioni & Navratil (2008).
 
 **LENR disposal-channel mechanism (phonon-nuclear prior art, contested field).**

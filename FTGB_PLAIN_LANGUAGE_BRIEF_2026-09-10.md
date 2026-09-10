@@ -3,7 +3,7 @@
 *A driven Beltrami–Hopf toroidal soliton, read as field and matter wave. One knot of energy, across scales.*
 **For new readers. ~9 pages. Every claim carries an honesty tier; nothing here is asserted beyond what the
 math earns.** Full technical version: `FTGB_GRAND_SYNTHESIS.md`; reproduce everything:
-`pip install -r requirements.txt && python results/verify/verify_all.py` → **41/41 PASS**.
+`pip install -r requirements.txt && python results/verify/verify_all.py` → **40/40 PASS**.
 
 Tiers used throughout: **[V]** proven/verified in this project (a script re-runs it) · **[credited]**
 established textbook physics we build on · **[S]** a structural hypothesis (reasonable, not yet proven) ·
@@ -120,7 +120,7 @@ check line by line:
   resolution of a long-standing coefficient puzzle in the mass framework (a "category error," now fixed);
   and the exact statement that the vacuum's magnetic-to-electric impedance ratio equals `α`.
 
-All of it re-runs from one command (**41/41 checks pass**), with no internet and no hidden fudge.
+All of it re-runs from one command (**40/40 checks pass**), with no internet and no hidden fudge.
 
 ---
 
@@ -213,7 +213,7 @@ wave, appearing across scales from particle to plasmoid.** From that single pict
 It is offered not as a finished truth but as a **coherent, reproducible, predictive object of reality to
 share** — right to the exact degree the math earns, and honest about the rest.
 
-*Reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` (41/41). Depth:
+*Reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` (40/40). Depth:
 `FTGB_GRAND_SYNTHESIS.md`, `MATH_TOOLKIT_BASE.md`, `results/TIER_LEDGER.md` (the honest self-assessment),
 `results/COINCIDENCE_LEDGER.md` (the clues), and `engine/ftgb_synthesis_modeler.py` (the executable
 math↔physics↔experiment isomorph). No claim exceeds its tier; no number is fabricated.*
