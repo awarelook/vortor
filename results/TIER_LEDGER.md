@@ -29,7 +29,7 @@ why fabricating it would violate the discipline). Every row cites a `results/ver
 |---|---|---|
 | **"One object across all scales"** (rungs vacuum→…→nucleon) | `[S]` | Derive the mass hierarchy (`m_e/m_ν~10⁷`, `m_p/m_e=1836`) from the geometry. **`[S]`-by-nature:** it is a *coherence* claim (shared invariants); the ratios are **not** the CK ladder (1.7, 2.4), and deriving 1836/137-type numbers is the same numerology graveyard as α. Not attempted — would fail the genericity bar. |
 | **α value = 1/137.036** | `[flag]` | Derive it. **Settled-NEGATIVE** (`ALPHA_RESOLUTION_ASSESSMENT`): winding `ι≈1` not 137; typed by beat/impedance/precession but never derived. It is the **shared, non-FTGB QED frontier** ("why is the electron elementary?"). Do **not** re-attempt / fabricate. |
-| **g = 2** | `[S]`/open | Show the soliton's quantization is a minimally-coupled Dirac field. **Hard field theory** (Hopf→spin-½ is credited; g=2 needs the full Dirac structure). Same frontier as α. Not provable here. |
+| **g = 2** | `[S]`/open | Show the soliton's quantization is a minimally-coupled Dirac field. **Hard field theory** (Hopf→spin-½ is credited; g=2 needs the full Dirac structure). **Shown from inside the theory** (`g2_skyrme_composite_check`): FTGB's own B=1 Skyrmion (M10) *does* have a computed moment — Skyrme quantization gives `μ_p/μ_n=−3/2` (~3% of experiment), a **composite** g-factor (5.59), **not** g=2. So the extended soliton yields composite moments (correct for the nucleon); g=2 (electron) is the pointlike/elementary limit = the **same frontier as α**. Not provable here. |
 | **Matter-wave dictionary** (mass=whirl, charge=torsion-holonomy; C/Majorana) | `[S,computed]` | Contact with the QFT operators. **`[S]` by construction:** an *internal-consistency* check of FTGB's own dictionary — behaves *structurally like* C; not the QFT `C=iγ²γ⁰` (no Dirac spinor in the verified content). |
 | **LENR mechanism** (scaffold enables the aneutronic channel) | `[S]` | A first-principles collective-rate calculation. `[S]` — the *energy* is `[V]`/conserved; the *mechanism* is structural. |
 | **LENR rate / Δ** (B=4 branching) | `open` | **The one FTGB compute** — a topology-preserving Skyrme-HPC run (`HANDOFF_DELTA_B4_SKYRME_RELAXATION`); test the 1.4–1.9 MeV band. `U_s` is **measured**; the COP *magnitude* (1.3–1.4) is inherited field positioning, **not** FTGB-derived. |
@@ -54,5 +54,5 @@ why fabricating it would violate the discipline). Every row cites a `results/ver
   tier is *labeled, reproducible, and honest*. The breakthroughs available are the two scoped external
   computations and the small locks; the rest is the honest frontier.
 
-*Provenance: the 26 `results/verify/` scripts (`verify_all.py` → all PASS) + the `results/` and `handoffs/` docs
+*Provenance: the 26 `results/verify/` scripts + engine (`verify_all.py` → **27/27** PASS) + the `results/` and `handoffs/` docs
 cited inline. No value promoted; `e^(-2/3)`/`E_fm` excised; the α winding stays settled-negative.*
