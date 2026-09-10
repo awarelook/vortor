@@ -6,6 +6,11 @@
 now exists for the NSE first model (a-priori bounded `Z`, hence BKM-regular, provided the drive holds
 the time-averaged Beltrami deviation below an explicit `O(1/Re)` threshold `<eta^2> < nu^2 lambda_1`).
 The two routes below remain the way to make it UNCONDITIONAL / at-Reynolds and to lift it to Hall-MHD.
+**Numerical route now scoped execute-ready (2026-09-10):** `handoffs/R2_NUMERICAL_RUN_SPEC_2026-09-10.md`
++ a runnable reference solver `handoffs/r2_reference_solver.py` (pseudo-spectral NS + near-Beltrami drive +
+the `Z`/BKM/`δ` diagnostics, verified to run at demo resolution) — the run is that code scaled to `N≈192–1024`
+with a GPU FFT.
+
 **One-line:** prove (or numerically evidence at the object's Reynolds) that the driven-dissipative
 near-Beltrami limit cycle has an a-priori bounded enstrophy, upgrading the FTGB current-leg
 trilogy's R2 from `[S] conditional` to `[V]` -- *without* requiring general 3D Navier-Stokes.
