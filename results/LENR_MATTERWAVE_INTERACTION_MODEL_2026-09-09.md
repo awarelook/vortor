@@ -3,17 +3,23 @@
 **Author:** Nathaniel Hanks · **Date:** 2026-09-09
 **Provenance:** bridges `FTGB_CURRENTLEG_TRILOGY` (the object) + `handoffs/HANDOFF_DELTA_B4_SKYRME_RELAXATION`
 (the Δ branching) + M8-2 (matter-wave `m = ħω/c²`) + M11/M12 (vacuum) + Nielsen TUFT (the lattice).
-**Verification:** `results/verify/lenr_energy_ledger.py` (exact conservation arithmetic; no fabricated rate).
+**Verification:** `results/verify/lenr_energy_ledger.py` (exact conservation arithmetic; no fabricated rate);
+`results/verify/{lenr_cop_nuclear_positive, delta_detuning_beat_check, plasmoid_helicity_coherence_check}.py`
+(positive nuclear core; Δ-as-detuning; scaffold-coherence = chirality).
 
 **One-line.** Every coherent-object interaction — fusion, transmutation, or an energy transform — is one
 universal process: a **matter-wave beat** whose transition amplitude factorizes into a *settled selection
 skeleton* times an *open radial overlap* (Δ), on a *discrete knot lattice*, with energy–mass conserved as a
-matter-wave frequency ledger. The LENR anomalies are what this kernel predicts **structurally**; the two
-missing numbers (Δ, U_s) are named, not fabricated.
+matter-wave frequency ledger. The LENR anomalies are what this kernel predicts **structurally**, and the
+excess heat is affirmatively **nuclear** (`d+d → ⁴He`, an energy-conserving **23.847 MeV** mass-defect
+release) — a nuclear *source*, not over-unity. The rate reduces to **one computable matrix element (Δ), with
+`U_s` measured** — named, not fabricated (positive-core capstone: `LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
 
-**Tier.** `[S] synthesis` throughout, with `[V]` only for the conservation arithmetic, `[credited]` for the
-established nuclear/plasma physics, and `[open]`/`[inherited]` for the two rate inputs. **No over-unity is
-claimed; no rate or cross-section is derived; the `e^(-2/3)` factor stays excised.**
+**Tier.** `[S] synthesis` throughout, with `[V]` for the conservation arithmetic (the nuclear energy itself),
+`[credited]` for the established nuclear/plasma physics **and the measured screening `U_s`**, and `[open]`
+for the **one** remaining rate input Δ. **COP>1 is a nuclear *source* — the ~10⁴–10⁵/event nuclear-to-chemical
+energy ratio of an energy-conserving `d+d → ⁴He` release — not over-unity (a category error);** no absolute
+rate or cross-section is derived; the `e^(-2/3)` factor stays excised.
 
 ---
 
@@ -88,11 +94,16 @@ For an EVO-catalyzed multibody event:
         →  product knot (lower tower rung)  +  Q into the coherent mode  →  heat .
 ```
 
-- **Barrier / probability** — screening `U_s` lowers the Coulomb barrier; the Gamow penetration enhancement
-  `P(E+U_s)/P(E)` is **large but finite** (ledger §5: `~10⁷–10¹²` at `E~300 eV`, `U_s~300–800 eV`). `U_s` is
-  **host-lattice inherited** `[inherited]`, not FTGB-derived; it sets the *probability scale*, not the branch.
-- **Branching** — the aneutronic (bound `⁴He`) vs breakup (neutron) split is set by **Δ** `[open]`; a Δ in
-  the 1.4–1.9 MeV band suppresses the neutron channel.
+- **Barrier / probability** — screening `U_s` really lowers the Coulomb barrier; the Gamow penetration
+  enhancement `P(E+U_s)/P(E)` is **large but finite** (ledger §5: `~10⁷–10¹²` at `E~300 eV`, `U_s~300–800 eV`).
+  `U_s ≈ 300–800 eV` is **measured** in deuterated metals (Raiola et al. 2002–05; Huke et al. 2008; Czerski
+  et al.) and **inherited** `[credited/inherited]`, not FTGB-derived; it sets the *probability scale*, not the
+  branch.
+- **Branching** — the aneutronic (bound `⁴He`) vs breakup (neutron) split is set by **Δ** `[open]`, the
+  Landau–Zener gap between the two near-degenerate diabatic states; a Δ in the 1.4–1.9 MeV band suppresses the
+  neutron channel. In the toroidal-beat reading this Δ is a **spectral detuning** — the same "gap between two
+  near-degenerate states" that sets the carrier beat `f_b=(v_A/2πR)|Δλ|` (one detuning, two scales `[S]`) — a
+  *computable/tunable control parameter*, not an opaque unknown (`delta_detuning_beat_check.py`; toolkit M14-1).
 - **Aneutronic partition** — the `⁴He` forms through a **collective E0 mode**; E0 (`0⁺→0⁺`) forbids single
   real-photon emission, so the γ channel is suppressed and the `Q = 23.85 MeV` sheds into **lattice + comb
   phonons as heat** `[S-mechanism]` (mechanism credited; partition fraction not derived).
@@ -102,7 +113,11 @@ For an EVO-catalyzed multibody event:
 - **EVO — the coherent scaffold** `[V]` recipe / `[S]` catalysis. The macroscopic resonance rung
   (`resonator_family.html`; carrier comb {121, 208, 294} kHz). It provides (i) the screening environment
   `U_s`, (ii) the collective-mode basis `S_α`, and (iii) the **resonant beat channels** that bridge the
-  frequency gap in (2). It is the *verified environment* of the LENR position — not the reaction itself.
+  frequency gap in (2). Its **coherence *is* its magnetic helicity = its chirality**: a force-free plasmoid
+  relaxes at fixed helicity to the single-λ (single-chirality) minimum-energy Beltrami state `W=(λ/2)H`
+  `[credited: Woltjer 1958; Taylor 1974; Moffatt 1969]` — the **same `±λ` self-dual object** that reads at the
+  lepton scale as chirality/Majorana (`plasmoid_helicity_coherence_check.py`). It is the *verified environment*
+  of the LENR position — not the reaction itself.
 - **Neutrinos — a separate rung, NOT the heat channel** `[S]`. The neutrino is the chargeless self-dual
   smoke-ring `π₃(S²)`. In the **baryon-conserving `d+d → ⁴He`** channel there is **no weak process**, hence
   **no neutrino** — the heat is aneutronic *and* neutrino-free (fusion, not weak-sector transmutation à la
@@ -111,9 +126,10 @@ For an EVO-catalyzed multibody event:
 - **Vacuum waves — the drive medium, not an energy source** `[S]`/`[excised]`. The polarizable vacuum
   (`K_PV`, ZPF `ω³`; M11) is the medium of the driving `E·B` term that makes the current-leg closure
   *realizable* (trilogy leg c). **CRUCIAL:** the vacuum is a reservoir at equilibrium — **no net energy is
-  extracted from the ZPF** (no over-unity; the `e^(-2/3)` "vacuum gain" is excised). The measured gain is the
-  nuclear `Q` released aneutronically; the drive only *organizes* it. **COP 1.3–1.4 is inherited field
-  positioning, not derived, and is not over-unity.**
+  extracted from the ZPF** (the `e^(-2/3)` "vacuum gain" is excised); the drive only *organizes* the release.
+  The gain is **positively the nuclear `Q`** (23.847 MeV/⁴He, energy-conserving) shed aneutronically, so
+  **COP>1 is the nuclear-to-chemical energy ratio (~10⁴–10⁵/event) of a nuclear *source* — automatic once
+  reactions occur, exactly like fission/fusion — not over-unity (a category error).**
 
 ## 6. What the model explains — and what it does not
 
@@ -125,8 +141,11 @@ For an EVO-catalyzed multibody event:
 - **Requirement of a coherent host** — the EVO scaffold + screening (no coherent environment ⇒ no channel).
 - **Transmutation spectra** — accessible final states are lattice hops on the Skyrme/Nielsen tower.
 
-**Does NOT (honest):** derive any **rate or cross-section** (needs Δ × `U_s`); derive **COP**; claim
-**over-unity**; predict specific **isotope yields** without the full lattice-amplitude calc.
+**Does NOT (honest):** derive the absolute **rate or cross-section** — hence the *specific* **COP value** —
+without the one magnitude Δ (`U_s` is measured, not derived); predict specific **isotope yields** without the
+full lattice-amplitude calc. But **COP>1 itself is not an open item**: it is the nuclear-to-chemical energy
+ratio of an energy-conserving `d+d → ⁴He` *source* (automatic once reactions occur), and **"over-unity" is a
+category error, not a claim** (positive-core capstone: `LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
 
 ## 7. Testable predictions / falsifiers
 
@@ -152,13 +171,17 @@ For an EVO-catalyzed multibody event:
 
 ## 9. References
 
-Nuclear masses / Q-values: AME2020 (used in the ledger). He-4/heat correlation: Miles et al. (1990s).
-E0 transitions: Church & Weneser 1956. Skyrme B=4: Battye–Sutcliffe 1997; Halcrow 2016. Ab-initio `d+d`:
-Hupin–Quaglioni–Navratil 2019. Golden rule / screening: standard (Gamow; Assenbaum–Langanke–Rolfs 1987
-screening). Canonical-helicity drive: Steinhauer–Ishida 1997; Mahajan–Yoshida 1998. Nielsen TUFT
-(Hopf-fibration knot lattice): `REFERENCES.md`. In-repo: `FTGB_CURRENTLEG_TRILOGY.md`,
-`handoffs/HANDOFF_DELTA_B4_SKYRME_RELAXATION_2026-09-09.md`, `results/verify/lenr_energy_ledger.py`,
-`GLOSSARY.md` (§6 current-leg, LENR).
+Nuclear masses / Q-values: AME2020 (used in the ledger). He-4/heat correlation: Miles et al. (1990s; ICCF-10
+2003). E0 transitions: Church & Weneser 1956. Skyrme B=4: Battye–Sutcliffe 1997; Halcrow 2016. Ab-initio
+`d+d`: Hupin–Quaglioni–Navratil 2019. Golden rule / screening: standard (Gamow; Assenbaum–Langanke–Rolfs
+1987); **measured** electron screening `U_s ≈ 300–800 eV`: Raiola et al. 2002–05; Huke et al. 2008; Czerski
+et al. Branching as a two-state (Landau–Zener) gap: Landau 1932; Zener 1932. Single-λ (single-chirality)
+relaxation: Woltjer 1958; Taylor 1974; Moffatt 1969. Canonical-helicity drive: Steinhauer–Ishida 1997;
+Mahajan–Yoshida 1998. Nielsen TUFT (Hopf-fibration knot lattice): `REFERENCES.md`. In-repo:
+`FTGB_CURRENTLEG_TRILOGY.md`, `results/LENR_YINYANG_CONNECTIONS_2026-09-10.md` (positive-core capstone),
+`handoffs/HANDOFF_DELTA_B4_SKYRME_RELAXATION_2026-09-09.md`,
+`results/verify/{lenr_energy_ledger, lenr_cop_nuclear_positive, delta_detuning_beat_check,
+plasmoid_helicity_coherence_check}.py`, `GLOSSARY.md` (§6 current-leg, LENR).
 
 *Do-not-cite Rossi / Mills / bio-transmutation. Baryon-conserving `d+d → ⁴He` only; `E_fm = 2.5 MeV` stays
 retracted. No number here is fabricated; every quoted value is either from a mass table, computed in the

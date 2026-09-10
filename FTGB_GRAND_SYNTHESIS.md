@@ -46,9 +46,11 @@ and a constructed, realizable closure in the genuinely driven regime, with the o
 dynamics shown to *select* the no-go (closure is externally driven, not emergent). Second, at
 the nuclear scale the result is *scaffold-not-reaction*: the object supplies the coherent
 environment, the cold formation, the merger orientation, and the disposal character, while the
-anomaly reduces to two static inputs -- an internal branching amplitude and an inherited,
-literature-measured electron screening -- with no over-unity (a coefficient of performance
-`COP ~ 1.3-1.4` is inherited field positioning, not a derived or claimed excess).
+anomaly reduces to two static *control* inputs -- an internal branching amplitude (a Landau-Zener
+detuning gap) and an inherited, literature-measured electron screening. The energy released is
+*nuclear and conserved* -- the `d+d -> He-4` mass defect, `23.847 MeV` -- so a `COP > 1` is a nuclear
+source (a per-event quantum ~`1e4-1e5x` the eV-scale trigger, as in fission or fusion), not over-unity,
+which would be a category error; the inherited `COP ~ 1.3-1.4` is field positioning, not a derived excess.
 
 Everything traces to four measured anchors `{B, n_i, m_i, R}` with **zero free structural
 parameters**. The work is presented as a tiered SYNTHESIS HYPOTHESIS, with its load-bearing
@@ -210,9 +212,12 @@ section first; the rest of the paper leans on it.
   rather than a distinct kind of stuff. Geometrically, charge is a *frame-closure holonomy
   defect* -- the computed Frenet torsion holonomy `integral tau ds ~ O(0.1 rad)` of the whirl
   loop (a geometric phase, explicitly NOT Einstein-Cartan spacetime torsion). Under the
-  chirality mirror this defect flips sign together with helicity, so the chirality flip *is*
-  charge conjugation C (computed). The specific "re-sync every 137 turns" (`d_theta = 2 pi
-  alpha`) value is inserted, not derived (the computed holonomy is `O(0.1)` and the winding
+  chirality mirror this defect flips sign together with helicity, so the chirality flip behaves
+  *structurally* like charge conjugation C `[S, computed]` -- an internal-consistency check of the
+  operational dictionary (mass = whirl-energy, charge = torsion-holonomy), NOT the QFT operator
+  `C = i gamma^2 gamma^0` (no Dirac spinor appears in the verified content). The specific "re-sync
+  every 137 turns" (`d_theta = 2 pi alpha`) value is inserted, not derived (the computed holonomy
+  is `O(0.1)` and the winding
   ratio `iota ~ 1`), so it survives only as a suggestive analogy; see
   `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`.
 
@@ -271,10 +276,12 @@ section first; the rest of the paper leans on it.
   driven current leg (Part D): `mu` is the chemical/enthalpy potential and `P.v` the
   pressure-flow work density. Closure of the current leg holds if and only if `S = 0` on a
   non-empty, index-1, bounded surface.
-- **The two static inputs `{Delta, U_s}`.** The two numbers the LENR boundary reduces to, with
-  *different owners*: **`Delta`**, the internal branching amplitude (FTGB-internal, open [S]); and
-  **`U_s`**, the inherited metallic electron-screening potential, `U_s ~ 300-800 eV`, taken from
-  the literature (accepted-not-adjudicated), not derived from the object.
+- **The two static inputs `{Delta, U_s}`.** The two *control* numbers the LENR boundary reduces to --
+  control parameters, not opaque unknowns -- with *different owners*: **`Delta`**, the internal
+  branching amplitude (FTGB-internal, open [S]), structurally a Landau-Zener *detuning* gap -- the
+  nuclear-scale kin of the object's own spectral-detuning beat (E.2.6); and **`U_s`**, the inherited
+  metallic electron-screening potential, `U_s ~ 300-800 eV`, a *measured* barrier-lowering drive taken
+  from the literature (Raiola / Huke / Czerski; accepted-not-adjudicated), not derived from the object.
 
 ### Claim tiers
 
@@ -597,9 +604,13 @@ Kaluza-Klein fifth dimension, on this reading, is a topological charge from intr
 spin precession -- a reinterpretation, not a hidden spatial dimension (K1, tiered). No
 incumbent charge measurement is contested; the claim is an ontological re-reading with
 its own dimensional bookkeeping. Under the chirality mirror this charge/precession sign
-flips together with helicity, so the chirality flip *is* charge conjugation C -- computed as
-one frame-closure holonomy sign, tying "antiparticle = opposite chirality" and "= opposite
-charge" into the same statement `[S, computed]` (`results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`).
+flips together with helicity, so the chirality flip behaves *structurally* like charge conjugation
+C -- one frame-closure holonomy sign tying "antiparticle = opposite chirality" and "= opposite
+charge" into the same statement `[S, computed]`. This is an internal-consistency check of FTGB's own
+operational dictionary (Reed/M8: mass = whirl-energy, charge = torsion-holonomy), NOT the QFT operator
+`C = i gamma^2 gamma^0` -- there is no Dirac spinor in the verified content
+(`results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`;
+`results/OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md`).
 
 ## C.2 Topology and the mass tower
 
@@ -1244,9 +1255,22 @@ the room in which the reaction becomes possible and orients the players inside i
 push two deuterons through their mutual Coulomb wall. Each side of the boundary is a well-posed
 calculation, not a missing principle.
 
+**The released energy is nuclear, and conserved [V/credited].** When the reaction does occur, the heat
+is not anomalous book-keeping: `d+d -> He-4` releases the mass defect `2 m_d - m(He-4) = 0.02560 u`,
+i.e. `23.847 MeV` -- a nuclear quantum ~`1e4-1e5x` larger than the hundreds-of-eV chemical or electrical
+trigger. A coefficient of performance above unity is therefore *automatic once reactions occur*, a
+nuclear source exactly like fission or fusion; calling it "over-unity" is a category error -- nothing is
+created, the energy is nuclear and baryon-conserving. The barrier that gates the reaction is *really*
+lowered, by *measured* physics: electron screening in deuterated metals, `U_s ~ 300-800 eV` (Raiola /
+Huke / Czerski), which FTGB inherits (E.2.6). And the He-4/heat correlation at ~23.85 MeV per `He-4`
+(Miles) is the signature that the excess heat *is* that nuclear energy, not chemistry. What FTGB does
+not supply is a *rate* or a COP *magnitude* (E.2.6); what the physics affirms is that the source is
+nuclear (`results/LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
+
 Throughout, the CMNS observables are accepted as reported without re-adjudicating them (support-lens):
 He-4 correlated with heat at roughly 24 MeV per helium atom (Miles 1993, replicated), a replicated
-loading threshold with COP approximately 1.3-1.4 -- which is **not** over-unity (McKubre 1994), small
+loading threshold with COP approximately 1.3-1.4 (McKubre 1994; a nuclear source, not over-unity, per
+the positive core above), small
 transmutation yields (Iwamura 2002), and gammaless heat (Storms 2007) [credited / contested]. These
 are treated as accepted-not-adjudicated inputs; the limits reported below are ours, not verdicts on
 those experiments. Following the field's citation hygiene, we do not cite E-Cat / Rossi, hydrino /
@@ -1271,7 +1295,15 @@ Takahashi), and the coherent-correlated state (CCS, Vysotskii). The driven, char
 EVO of Parts B-D *is* that host: one object read three ways. The upstream chain is the verified core
 of the paper -- an EVO cascade condensing into the plasmoid, carrying the inharmonic CK carrier comb
 `{121, 208, 294} kHz` and a coherent multi-body population that self-organizes by the Kuramoto /
-Adler / Arnold dynamics of Part D.
+Adler / Arnold dynamics of Part D. What *makes* that host coherent is credited plasma physics:
+Woltjer-Taylor relaxation drives a plasma, at fixed helicity, to the single-`lambda` minimum-energy
+Beltrami state, so the scaffold's force-free coherence *is* its magnetic helicity *is* its chirality
+(the `sign(lambda) = sign(H)` of Section B.2) [credited: Woltjer 1958; Taylor 1974; Moffatt 1969]. The
+same `+/- lambda` self-dual object thus spans the LENR scaffold here and the lepton chirality / Majorana
+neutrino of B.2 -- one object, both sectors: a genuine unification of the theory's geometry and
+language [S], scoped as such and NOT as a nuclear selector (the aneutronic branch is chosen by O_h
+symmetry, the E0 gamma-ban, and a cold Landau-Zener step, not by `sign(lambda)`; E.2.2 disposal, E.2.5)
+(`results/LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
 
 **Formation, derived cold [V/S].** The force-free bulk together with the non-force-free charged
 theta-pinch sheath assembles deuterons *cold*: degenerate-sea Landau drag *removes* kinetic energy
@@ -1362,10 +1394,12 @@ structurally, independent of any frequency-delivery route:
   (CODATA / AME2020, two independent routes agreeing to <0.01 MeV) [V]. Disposal is a mechanical
   ejecta continuum -- fractionation over `N ~ 1e2 .. 1e4` fragments to 1-100 keV each, a
   many-soft-few-fast, gammaless signature [S].
-- **COP approximately 1.3-1.4.** This is a scaffold enhancing an ordinary aneutronic exit, not
-  over-unity. **FTGB derives NO COP.** The 1.3-1.4 figure is inherited field positioning; any
-  device / COP framing is excised-as-refuted. The heartbeat of Part D is a Prigogine dissipative
-  structure, not a flywheel; helicity rides conserved and no free energy is produced.
+- **COP approximately 1.3-1.4.** A `COP > 1` is the *nuclear* source of E.2.1 -- the 23.847 MeV `He-4`
+  mass defect, ~`1e4-1e5x` the eV-scale trigger per event -- enhancing an ordinary aneutronic exit,
+  *not* over-unity (which would be a category error: the energy is nuclear and conserved, no free energy
+  is produced). **FTGB derives no COP *magnitude*:** the specific 1.3-1.4 figure is inherited field
+  positioning, and any device / free-energy framing is excised-as-refuted. The heartbeat of Part D is a
+  Prigogine dissipative structure, not a flywheel; helicity rides conserved.
 
 ## E.2.5 The kernel as a well-posed matrix element and its factorization
 
@@ -1407,8 +1441,13 @@ value.
 **Input 1 -- Delta (branching): FTGB-internal, open [S].** `Delta` is the off-diagonal `B=4`
 two-diabatic-surface reactive Landau-Zener gap -- the amplitude between the bound `B=4` cube and the
 `B=3 + B=1` breakup surface, meeting at a crossing, with suppression `S = exp(delta)`,
-`delta = pi Delta^2 / (2 hbar v |dF|)`, exponentially sensitive to `Delta`. This is the aneutronic-
-branching / anomaly number, and it is FTGB's own to compute. It is not pinned in-band [S]. The blocker
+`delta = pi Delta^2 / (2 hbar v |dF|)`, exponentially sensitive to `Delta`. Structurally `Delta` is a
+*detuning* -- the same two-near-degenerate-state gap that, at the plasmoid scale, sets the object's beat
+`f_b = (v_A/(2 pi R)) |Delta lambda|` from the spectral detuning `Delta lambda = lambda_2 - lambda_1`
+(computed `Delta lambda = 3.23 -> f_b = 87 kHz`, the `{121, 208, 294} kHz` comb beat). One detuning idea,
+two scales: a cross-scale structural identity [S], the nuclear gap read as the kin of the *measurable*
+beat (`results/LENR_YINYANG_CONNECTIONS_2026-09-10.md`). This is the aneutronic-branching / anomaly
+number, and it is FTGB's own to compute. It is not pinned in-band [S]. The blocker
 is diagnosed and priced rather than hand-waved: both tractable ansaetze fail at the crossing (the
 product ansatz hits the repulsive core wall; naive field-blending breaks topology, `B -> 2.4`), and a
 genuine 3D Skyrme relaxation of the *massless* energy unwinds the topology (`|B| -> 0`) at every
@@ -1482,8 +1521,9 @@ lattices). Its selection skeleton `{C_alpha, A_alpha}` is settled [V]; its colle
 and cross-checks against BBT. The 1.33 MeV static ratio is refuted as the gap; the true branching
 `Delta` is not pinned in-band [S]. Scaffold-not-reaction is a measured boundary, not a dismissal: FTGB
 supplies the scaffold, inherits one contested screening number from the host lattice, and leaves one
-well-posed branching amplitude as its own named external computation. No over-unity is claimed; no
-rate, cross-section, or gap magnitude is fabricated; baryon number is conserved throughout.
+well-posed branching amplitude as its own named external computation. The released energy is nuclear
+and conserved -- the 23.847 MeV `He-4` mass defect -- so any `COP > 1` is a nuclear source, not
+over-unity; no rate, cross-section, or gap magnitude is fabricated; baryon number is conserved throughout.
 
 
 ---

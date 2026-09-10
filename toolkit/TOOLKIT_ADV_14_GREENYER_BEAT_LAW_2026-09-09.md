@@ -111,6 +111,17 @@ lives in (Chandrasekhar-Kendall 1957; Woltjer 1958).
    2026-07-24); the canonical form is `2 pi R^3` as in eq. (1) above. Harmless to the ladder (any constant
    prefactor cancels in the ratio), but wrong as a standalone formula before the fix.
 
+**LENR cross-link (the detuning reading of the branching Delta).** The beat detuning `Delta lambda = lambda_2
+- lambda_1` that sets `f_b = (v_A/2 pi R)|Delta lambda|` is the **toroidal-beat reading of the LENR branching
+`Delta`**: both are "the gap between two near-degenerate states" -- here two CK carrier eigenmodes, there the
+B=4 Landau-Zener avoided crossing (bound 4He <-> breakup). Anchored on the carrier comb, `Delta lambda =
+lambda_2 - lambda_1 = 3.23` gives `f_b = 87.0 kHz = f_2 - f_1` (the {121, 208, 294} kHz comb;
+`results/verify/delta_detuning_beat_check.py`). **One detuning idea, two scales.** The plasma-side beat law is
+**[V]**; the **cross-scale kHz<->MeV identity is [S]** (a structural analogy, not a derived equality) -- carry
+the two tiers apart. This makes the LENR branching a *computable/tunable control parameter*, not an opaque
+unknown (see `results/LENR_MATTERWAVE_INTERACTION_MODEL_2026-09-09.md` and the positive-core capstone
+`results/LENR_YINYANG_CONNECTIONS_2026-09-10.md`). Cite Landau 1932; Zener 1932.
+
 **Source.** PDF Secs. 3.1-3.2; `TORUS_MATHEMATICS_APPENDIX.md` Part 5 CALC 3, Part 12 (FEM eigensolve
 cross-check vs slender-torus Bessel asymptotic `lambda_0 ~ j_01/epsilon`). Cite Chandrasekhar-Kendall
 ApJ 126, 457 (1957); Woltjer PNAS 44, 489 (1958).
@@ -682,6 +693,10 @@ number.**
   reason the FTGB carrier comb must be inharmonic; the Fibonacci/Manley-Rowe shadow (`F_n/F_(n-1) → φ`); and
   the dimensional consistency of the beat law and the fissility `X`. This is the checkable `[V]` core; the
   nuclear-layer numbers stay `[prediction]`/`[framework]`.
+- **In-repo verify — `results/verify/delta_detuning_beat_check.py`:** reads the beat detuning `Delta lambda`
+  as the toroidal-beat form of the LENR branching `Delta` (`Delta lambda = 3.23 -> f_b = 87.0 kHz = f_2 - f_1`
+  on the {121, 208, 294} comb; M14-1 LENR cross-link). The beat law is `[V]`; the cross-scale kHz<->MeV
+  identity to the nuclear Landau-Zener gap is `[S]`, not promoted -- the honesty boundary of this module.
 - **Proven/verified in-project (traced):** ladder `N^L` for arbitrary `c_CK` (symbolic, TORUS Part 5 CALC 3;
   PDF proves it for arbitrary functional form); N-mode Woltjer LP (SymPy N=4 + `scipy.linprog` on real
   WIDE40 spectrum, Part 35); triad `mod N` non-residue + `phi` recursion (PDF 3.3); Manley-Rowe invariant

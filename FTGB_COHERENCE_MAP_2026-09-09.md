@@ -13,8 +13,9 @@ precession) — read at once as a *field* and a *matter wave*. Every framework b
 *this* object; they do not compete, they **compose**.
 
 **Tier key.** `[V]` proven/verified here · `[credited]` established · `[S]` structural/contingent · `open`
-named external problem · `[framework]` a folded reading (method/analogy, not asserted). No over-unity; the
-`e^(-2/3)` factor is excised; no rate/mass/α value is fabricated.
+named external problem · `[framework]` a folded reading (method/analogy, not asserted). LENR COP>1 is a
+nuclear *source* (energy-conserving `d+d→⁴He`), not over-unity; the `e^(-2/3)` factor is excised; no
+rate/mass/α value is fabricated.
 
 ---
 
@@ -30,7 +31,7 @@ Read top-down (abstract → concrete). Each layer *constrains* the ones below it
 | **3** | **The matter wave** — `ψ=√ρ e^{iθ}`, `m=ħω/c²` | *mass = whirl*; *charge = torsion (frame-closure holonomy)*; `whirl ≈ 1/α` **analogy only** (§3); **chirality = sign(λ) → C**; **Majorana ν** at `θ_χ=45°` | **Reed QWM (M8)**; `electron.html`; `ELECTRON_TORSION_DEFECT`; **`CHIRALITY_DUALITY_ASSESSMENT`** | `[credited]`/`[S]`; `[flag]` α |
 | **4** | **The vacuum medium** — `K_PV`, ZPF `ρ₀∝ω³`, beat comb to `ω_Ω` | the *substrate*; gravity as refraction | **Storti EGM / Quinta Essentia (M11)**; Puthoff PV; Ginzburg toryx/helyx (M12) | `[credited]`/`[framework]` |
 | **5** | **The dynamics** — Stuart–Landau `r*=√2`, Kuramoto comb-lock, current-leg `S=μ−P·v` | the *living beat*, the no-gos, the driven closure, regularity | `FTGB_CURRENTLEG_TRILOGY`; **R2/R3** enstrophy bounds; `dynamics_lab.html` | `[V]`/`[S]`/`open` |
-| **6** | **The interactions** — golden rule `Γ=(2π/ħ)|M_fi|²ρ_f`, `M_fi=ΣC_αA_αR_αS_α`, the energy–mass ledger | transmutation on the lattice; the **LENR anomalies** | `LENR_MATTERWAVE_INTERACTION_MODEL` | `[V]` ledger / `[S]` / `open` Δ |
+| **6** | **The interactions** — golden rule `Γ=(2π/ħ)|M_fi|²ρ_f`, `M_fi=ΣC_αA_αR_αS_α`, the energy–mass ledger | transmutation on the lattice; the **LENR anomalies** (COP>1 = nuclear source, energy-conserving) | `LENR_MATTERWAVE_INTERACTION_MODEL`; `LENR_YINYANG_CONNECTIONS` (positive core) | `[V]` energy / `[S]` / `open` Δ |
 | **7** | **Reality / experiment** — the falsifiable fingerprints | what a measurement can confirm or kill | see §4 | mixed |
 
 **Ginzburg (M12)** is an *ontological overlay* on layers 2–3: matter = self-inverting torus (toryx),
@@ -64,9 +65,11 @@ The frameworks converge because they share the **same five invariants of the one
 - **`[V]` proven here:** the current-leg no-gos (static `|B|=const`, aligned `P·v=const`); the driven closure
   `S=0` realizability; the selection **negative** (the object selects the no-go); **R2** conditional enstrophy
   bound (exact Lamb-vector identity → linear Gronwall; `⟨η²⟩<ν²λ₁`); **R3** Hall lift at `Pm=1`; the
-  matter-wave / energy–mass ledger (`2ω_d=ω_He4+ω_Q`); the density profile `ρ∝A·B`.
+  matter-wave / energy–mass ledger (`2ω_d=ω_He4+ω_Q` — the LENR excess heat *is* this energy-conserving
+  nuclear release, a source not over-unity); the density profile `ρ∝A·B`.
 - **`[credited]`:** Beltrami/CK, Woltjer–Taylor, Moffatt helicity, Skyrme B=4, Steinhauer–Ishida &
-  Mahajan–Yoshida canonical helicity, BKM/Chae–Degond–Liu, Puthoff PV, the ZPF `ω³` spectrum.
+  Mahajan–Yoshida canonical helicity, **the measured LENR screening `U_s≈300–800 eV` (Raiola/Huke/Czerski)**,
+  BKM/Chae–Degond–Liu, Puthoff PV, the ZPF `ω³` spectrum.
 - **`[S]` (honest hypothesis):** the *one-object-across-scales* claim; the driven-closure leaning-`[V]`; the
   aneutronic partition mechanism; the five framework readings (Reed/Storti/Nielsen/Ginzburg/Greenyer), all
   method/analogy.
@@ -101,23 +104,34 @@ The frameworks converge because they share the **same five invariants of the one
 > (`CHIRALITY_DUALITY_ASSESSMENT` §3b), with TUFT's Dirac the lower-tier `[preprint]` claim `0νββ` will settle.
 > The confrontation's chief value was catching two internal contradictions (both since resolved).
 
+> **Positive core (2026-09-10):** `results/LENR_YINYANG_CONNECTIONS_2026-09-10.md` states the layer-6 result
+> as an affirmative claim — COP>1 is an energy-conserving **nuclear** release (`d+d→⁴He`, 23.847 MeV; gain
+> ~10⁴–10⁵/event), barrier lowered by **measured** screening `U_s≈300–800 eV`, reducing to the one open
+> magnitude Δ (read as the beat detuning `Δλ`, `delta_detuning_beat_check.py`) — and credits the scaffold's
+> coherence = helicity = chirality to Woltjer–Taylor single-λ relaxation (`plasmoid_helicity_coherence_check.py`),
+> the **same `±λ` self-dual object** as the layer-3 lepton chirality/Majorana. Honest scope unchanged:
+> chirality is **not** the aneutronic selector (that stays O_h + E0 + isospin), and Majorana touches only the
+> separate weak sector (neutrino carries energy *away*: a loss, not the heat channel).
+
 ## 5. The bottom line
 
 **One object, seven layers, five frameworks, one convergence.** The plasma/topological-fluid **core is a
 citable `[V]` result** whose single regularity gate is now **conditionally closed** (R2/R3). The **matter-wave
 layer** gives charge, mass, and antimatter one mechanical origin (torsion + whirl), with `α`'s *value* honestly
 open. The **vacuum layer** places gravity as refraction and the beat comb as the medium. The **interaction
-layer** turns all of it into a falsifiable LENR model whose two missing numbers (Δ, `U_s`) are **named, not
-fabricated**. The frameworks of Buckingham-Π, Quinta Essentia, TUFT, Reed, and Ginzburg are not rival theories
+layer** turns all of it into a falsifiable LENR model with a **positive nuclear core** — COP>1 is an energy-conserving `d+d→⁴He`
+source, reducing to **one computable magnitude Δ with `U_s` measured** (not two open unknowns; capstone
+`LENR_YINYANG_CONNECTIONS`). The frameworks of Buckingham-Π, Quinta Essentia, TUFT, Reed, and Ginzburg are not
+rival theories
 — they are **the dimensional, vacuum, lattice, matter-wave, and ontological layers of the same knotted torus**,
 and the map above is how they cohere from theory to the bench.
 
 ## References / provenance
 `FTGB_GRAND_SYNTHESIS.md`, `FTGB_CURRENTLEG_TRILOGY.md`, `TOOLKIT_HANDBOOK.md` (M7–M14), `GLOSSARY.md`,
-`REFERENCES.md`; `results/` (R2, R3, LENR model, electron, the α resolution + the
-`OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` frontier capstone, + `verify/` scripts); models
+`REFERENCES.md`; `results/` (R2, R3, LENR model + `LENR_YINYANG_CONNECTIONS` positive-core capstone, electron,
+the α resolution + the `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` frontier capstone, + `verify/` scripts); models
 `index.html`, `resonator_family.html`, `soliton3d.html`, `dynamics_lab.html`, `electron.html`.
 
 *A navigation/ordering map; every load-bearing claim keeps its tier from the source documents. No value is
-promoted; `α` stays framed, Δ stays open, `e^(-2/3)` stays excised, and no over-unity is claimed. ASCII apart
-from standard math symbols.*
+promoted; `α` stays framed, Δ stays open, `e^(-2/3)` stays excised, and LENR COP>1 is a nuclear *source*
+(energy-conserving), not over-unity. ASCII apart from standard math symbols.*
