@@ -72,6 +72,29 @@ neutrino (self-dual `θ_χ=45°`), the `[V]` plasma/topological-fluid core, and 
 **not** deliver — the electron's *elementary* nature: the value of α and the pointlike g=2 — is the single
 shared frontier, and the theory is honest that it stands there with the rest of physics, not past it.
 
+## 5. Through the theory's own lens — the frontier is a yin-yang beat (it *types* it, doesn't dissolve it)
+
+Read through the theory's own dynamical concepts — **yin-yang** (chirality duality), **torsion/torque**
+(precession), **harmonic beats/rhythms** — the elementary-electron frontier is **correctly-typed**, exactly
+(`torque_beat_alpha_check.py`):
+
+- **Torque / beat:** the g−2 anomaly *is* a beat. In a field the spin precesses at `ω_s`, the cyclotron at
+  `ω_c`; what is *measured* (Penning trap) is the beat `ω_a = ω_s − ω_c = a·ω_c`. The per-orbit beat phase-slip
+  is `2π·a = α` (leading) — so **α = the spin⊗orbit beat-fraction**, the theory's "torque-harmonic" language
+  applied correctly. `[credited]`
+- **Harmonic rhythm:** `a = ½(α/π) − 0.328(α/π)² + 1.181(α/π)³ + …` is the QED loop expansion — a **harmonic
+  cascade** converging to the measured `a_e` (to `5e-11` at 3 loops). It refines the beat; **α is the input at
+  every order.** `[credited]`
+- **Yin-yang:** the beat's **handedness** is the chirality `= sign(λ)`; antiparticle = opposite handedness = C;
+  the self-dual midpoint (`θ_χ=45°`) = Majorana. The yin-yang **is** the `±λ` pair. `[S, computed]`
+
+So the theory's **torsion/torque/beat/yin-yang language fits the frontier precisely** — α is the beat-fraction,
+chirality is its handedness, g−2 is the harmonic cascade on that beat. This is a genuine, correctly-typed
+synthesis *in the theory's own language*. And it is honest: it **describes the frontier's structure**, it does
+not **derive its value** — `α = 1/137.036` remains the QED coupling strength, settled-negative for any
+winding/ratio derivation (a big beat-number is only meaningful if it beats the genericity denominator).
+**The rhythm structure fits the frontier; it does not dissolve it.**
+
 *Provenance: `results/verify/{g_factor_soliton_check, g2_elementary_check, g2_spin_precession_check,
 alpha_genericity_check, ck_winding_ratio_check, r2_identity_check, r2_gronwall_check, hallmhd_canonical_check}.py`;
 `ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`, `CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`;
