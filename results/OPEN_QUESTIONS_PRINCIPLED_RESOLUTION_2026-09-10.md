@@ -117,7 +117,8 @@ not **derive its value** — `α = 1/137.036` remains the QED coupling strength,
 winding/ratio derivation (a big beat-number is only meaningful if it beats the genericity denominator).
 **The rhythm structure fits the frontier; it does not dissolve it.**
 
-*Provenance: `results/verify/{g_factor_soliton_check, g2_elementary_check, g2_spin_precession_check,
-alpha_genericity_check, ck_winding_ratio_check, r2_identity_check, r2_gronwall_check, hallmhd_canonical_check}.py`;
+*Provenance: `results/verify/{g_factor_soliton_check, g2_elementary_check, g2_skyrme_composite_check,
+g2_spin_precession_check, alpha_genericity_check, ck_winding_ratio_check, r2_identity_check, r2_gronwall_check,
+hallmhd_canonical_check}.py`;
 `ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`, `CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`;
 `handoffs/R2_NUMERICAL_RUN_SPEC_2026-09-10.md`. No value promoted; `e^(-2/3)` stays excised.*
