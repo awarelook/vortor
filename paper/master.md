@@ -744,12 +744,16 @@ comb would falsify it. Its multibody phase-locking behaviour, and the sharpened
 comb-pull prediction (`f2/f1 -> 7/4`, `f3/f1 -> 5/2` under strong coupling), are treated
 in Part D. Orbital angular momentum steps by the octahedral order (`l -> l +/- N`),
 protected by the sheath winding -- the discrete-symmetry selection rule itself (a point
-group of order `N` steps angular momentum by `N`) is `[credited: mechanism]`
-(Finkelstein-Rubinstein 1968 and Braaten-Townsend-Carson 1990 for the *same* B=4
-octahedral soliton; Ferrando 2005, Konishi 2014, Chen 2014 for electromagnetic OAM), but
-its *application to this driven Beltrami-Hopf plasmoid's carried OAM* is `[claimed
-synthesis -- a bare assertion, no derivation/verify script yet, NOT promoted]`. The
-QED-vacuum contribution to the effective refractive index is negligible.
+group of order `N` steps angular momentum by `N`) is now `[V]`, computed in-repo
+(`results/verify/octahedral_oam_ladder_check.py`: the ladder step is *exactly* `N`, and
+the full `SO(3) -> O` subduction forces the octahedral OAM ladder `l in {0,4,6,8,9,10,...}`
+with fundamental step `Delta l = 4`, reproducing the credited B=4 Skyrmion spectrum) /
+`[credited]` (Finkelstein-Rubinstein 1968 and Braaten-Townsend-Carson 1990 for the *same*
+B=4 octahedral soliton; Ferrando 2005, Konishi 2014, Chen 2014 for electromagnetic OAM).
+Its *application to this driven Beltrami-Hopf plasmoid's electromagnetically carried OAM*
+remains `[claimed synthesis -- the selection rule is proven, its application to the
+EM-emission channel is not]`. The QED-vacuum contribution to the effective refractive
+index is negligible.
 
 *End of Parts B-C. Load-bearing claims foregrounded on peer-reviewed work
 (Chandrasekhar-Kendall, Skyrme, Witten, Battye-Sutcliffe, Barnes-Baskerville-Turok);
@@ -3324,8 +3328,11 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   mod `N`, with vortex/mode mixing in steps of `N` (mathematically exactly `l → l ± N`).
 - Konishi, K. et al. (2014), *PRL* 112, 135502 — OAM/polarization selection rule set by C₃ discrete symmetry
   in nonlinear nanophotonics; Chen, S. et al. (2014), *PRL* 113, 033901 (arXiv:1403.1604) — same rule across
-  metacrystal symmetry orders. Credited **mechanism** for the EM-OAM reading of §C.3; the *application to a
-  driven Beltrami–Hopf plasmoid's carried OAM* is `[claimed synthesis]` (bare, no verify script yet). *(Not
+  metacrystal symmetry orders. The **mechanism** is now computed in-repo — `results/verify/
+  octahedral_oam_ladder_check.py` (`[V]`): the ladder step is *exactly* `N`, and the `SO(3)→O` subduction
+  forces `l ∈ {0,4,6,8,9,10,…}`, `Δl=4`, reproducing the credited B=4 Skyrmion spectrum. The *application to a
+  driven Beltrami–Hopf plasmoid's electromagnetically carried OAM* remains `[claimed synthesis]` (the rule is
+  proven; its EM-emission application is not). *(Not
   folding Mancini/Ren/Maier, Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication
   switched in a ~3% band — but its knob is continuous dispersion, NOT a discrete-symmetry order, so it is an
   analogous-but-distinct existence proof of switchable OAM, not mechanism support; flagged, not cited as such.)*

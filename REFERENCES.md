@@ -51,8 +51,11 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   mod `N`, with vortex/mode mixing in steps of `N` (mathematically exactly `l → l ± N`).
 - Konishi, K. et al. (2014), *PRL* 112, 135502 — OAM/polarization selection rule set by C₃ discrete symmetry
   in nonlinear nanophotonics; Chen, S. et al. (2014), *PRL* 113, 033901 (arXiv:1403.1604) — same rule across
-  metacrystal symmetry orders. Credited **mechanism** for the EM-OAM reading of §C.3; the *application to a
-  driven Beltrami–Hopf plasmoid's carried OAM* is `[claimed synthesis]` (bare, no verify script yet). *(Not
+  metacrystal symmetry orders. The **mechanism** is now computed in-repo — `results/verify/
+  octahedral_oam_ladder_check.py` (`[V]`): the ladder step is *exactly* `N`, and the `SO(3)→O` subduction
+  forces `l ∈ {0,4,6,8,9,10,…}`, `Δl=4`, reproducing the credited B=4 Skyrmion spectrum. The *application to a
+  driven Beltrami–Hopf plasmoid's electromagnetically carried OAM* remains `[claimed synthesis]` (the rule is
+  proven; its EM-emission application is not). *(Not
   folding Mancini/Ren/Maier, Nat. Photonics 18, 677 (2024): real and correctly described — OAM multiplication
   switched in a ~3% band — but its knob is continuous dispersion, NOT a discrete-symmetry order, so it is an
   analogous-but-distinct existence proof of switchable OAM, not mechanism support; flagged, not cited as such.)*
