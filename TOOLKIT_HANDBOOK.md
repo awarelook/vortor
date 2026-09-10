@@ -906,7 +906,7 @@ cross-section, branching magnitude, mass, or scale.
 ## 7. Module M11 -- EGM / polarizable-vacuum spectral methods (representation-map, not theory)
 
 Full module: `toolkit/TOOLKIT_ADV_11_EGM_POLARIZABLE_VACUUM_2026-09-09.md`. Verification:
-`results/verify/egm_sense_checks.py`.
+`results/verify/egm_sense_checks.py`, `results/verify/egm_mode_count_closure.py`.
 
 **The one limit (Storti's own framing).** EGM is -- Part 2 §7.2.24 -- *"a method of calculation (not a
 theory) based upon energy density."* M11 folds in its **mathematical representation** and **credits its
@@ -916,6 +916,14 @@ foundations**, while **adopting none of its numerical predictions**. This extend
 **What is credited.** The polarizable-vacuum refractive index `K_PV`, `c_eff = c/sqrt(K_PV)` (Puthoff 1999);
 the ZPF cubic spectral energy density `rho_0(omega) = hbar omega^3 / (2 pi^2 c^3)` (SED; Sakharov;
 Haisch-Rueda-Puthoff) -- **[V]** its Planck-cutoff integral returns a Planck-scale energy density.
+
+**The cut-off closure, folded (M11-6).** M11-1 left "how `n_Omega` is fixed" a black box; M11-6 folds the
+reusable technique behind it -- the ordinary **Debye/Nyquist 3-D mode-count** band-limit: `g(omega) =
+rho_0/(hbar omega) ~ omega^2/c^3`, count `N(Omega) ~ (Omega/c)^3`, terminate at integer `n_Omega` -> cut-off
+`omega_Omega ~ n_Omega^(1/3) omega_C`, length `ell ~ lambda_C n_Omega^(-1/3)` (Compton-scale). **[V]**
+`egm_mode_count_closure.py`. The cube-root makes the *scale* robust but leaves the *precise* value to the free
+integer `n_Omega` -- a structural reason the 0.01% radius "match" is a closure fit, not parameter-free
+(reinforcing the M11-4(ii) flag). Method folded; every value stays quarantined.
 
 **The four maps into the toolkit** (why it is worth folding in -- each pillar is math a module already carries):
 1. EGM's band-limited harmonic-beat spectrum (fundamental `omega_PV(1,r,M)` -> cut-off `omega_Omega`/`n_Omega`)

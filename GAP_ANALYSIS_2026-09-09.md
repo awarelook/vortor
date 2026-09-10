@@ -13,7 +13,13 @@ candidate fold, not an endorsement** — each carries the tier it would enter at
   `results/verify/greenyer_beat_cascade_check.py` — cascade/dichotomy/Fibonacci `[V]`, `N_crit` `[prediction]`,
   no over-unity.
 - **G3–G5 lineage (Bostick/Puthoff/Shoulders) → `LINEAGE.md`** `[credited-lineage]`/`[framework]`.
-- **G6 Reed + Tier-3 Storti → M8 / M11 extensions** — *pending* (next batch, methods-only, values excised).
+- **Tier-3 Storti → `M11-6` (spectral mode-count closure) + `M11-7` (dispositions/quarantine ledger)** +
+  verify `results/verify/egm_mode_count_closure.py` — folds the Debye/Nyquist mode-count method M11-1 left as a
+  black box `[V]`; the 2:1 harmonic / radii / H₀ / α stay quarantined. Candidates K_PV(ω) & Buckingham-Π log
+  found already-homed (M11-3 pt 2 / M7).
+- **G6 Reed → verdict ALREADY COVERED (no append).** The `4.414e9 kg·rad/s` conversion is a restatement of
+  M8-0/M8-2 (`e ~ [kg·rad/s]` + anchor `e = m_e ω_C`); the `dθ=2πα` closure defect is already in M8-2 and
+  triple-covered by `TOOLKIT_ADV_05` M5.6 + `electron.html` — folding either would only duplicate or requarantine.
 
 ## Two discoveries (independent of the math)
 - **`ckfreefem\frontier_calcs\` exists on disk** — the provenance directory the R2 / Δ hand-offs reference

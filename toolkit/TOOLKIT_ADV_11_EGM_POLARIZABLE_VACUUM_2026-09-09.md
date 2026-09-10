@@ -20,7 +20,8 @@ its numerical claims against the project's honesty discipline. Every checkable n
 > project's standing **excision** of the `e^(-2/3)` factor.
 
 ## Tier legend (honesty discipline)
-- **[V]** verified here by `results/verify/egm_sense_checks.py` or a checked identity.
+- **[V]** verified here by `results/verify/egm_sense_checks.py`, `results/verify/egm_mode_count_closure.py`
+  (the M11-6 mode-count closure), or a checked identity.
 - **[credited]** established physics we build on: Puthoff (PV representation of GR); Sakharov / Haisch–Rueda–
   Puthoff (ZPF inertia/gravity); the SED cubic ZPF spectrum; Buckingham 1914.
 - **[EGM method]** = Storti's representation/notation borrowed as a *calculation method only* (his own framing).
@@ -133,12 +134,78 @@ foundations*; carry every numerical "prediction" at `[flag]`/`[excised]`. Nothin
 - **DO NOT USE** as: a source of particle radii, mass ratios, α, or H₀ "derivations." EGM is Storti's stated
   *calculation method*; its numerology is `[flag]`/`[excised]` here and must never be cited as FTGB-derived.
 
+## M11-6 — The spectral mode-count closure: constructing `ω_Ω` and its length   [credited: Debye/Nyquist mode-count + EGM method]
+
+M11-1 names `ω_Ω, n_Ω` as the harmonic cut-off frequency/mode but leaves the *closure* — how `n_Ω` is fixed —
+a black box ("the physics content is entirely in the choice of cut-off closure `n_Ω`"). The reusable technique
+behind that closure is a **spectral mode-count band-limit**, foldable as *method only* because it is the
+ordinary **Debye-frequency / Nyquist mode-count** construction — not new physics. Reproduced by
+`results/verify/egm_mode_count_closure.py`.
+
+- **WHAT (Storti Part 2, §7.2.43–45, with the spectrum §7.2.74, 7.2.79–80; the radius §7.2.65).** Band-limit
+  the ZPF harmonic set by counting its modes and terminating at a chosen count; read a length from the
+  cut-off. This is the same construction that fixes a Debye frequency from a mode budget `[credited]`.
+- **CONSTRUCTION (method, no values).** From the credited cubic spectrum `ρ₀(ω) = ħω³/(2π²c³)` (M11-1), the
+  energy-per-mode is `~ħω`, so the **mode density** is `g(ω) = ρ₀(ω)/(ħω) ∝ ω²/c³` — the ordinary free-field
+  3-D density of states. Define an **integrated mode count** to a trial band limit `Ω`,
+  `N(Ω) = ∫₀^Ω g(ω) dω ∝ (Ω/c)³` (per volume; `∝ (Ωℓ/c)³` in a region of scale `ℓ`). **Terminate** the set by
+  *fixing that count to an integer* `n_Ω`; the closure returns the cut-off `ω_Ω`, and a characteristic length
+  is its wavelength `ℓ ~ 2πc/ω_Ω`. Structurally identical to the Debye cut-off and to a band-limited signal's
+  Nyquist mode number. **[V]** `egm_mode_count_closure.py` confirms the quadratic DOS, `N(2Ω)/N(Ω)=8`, and the
+  cube-root closure exactly.
+- **DIMENSIONAL CONTENT.** `g(ω) dω` and `N` are dimensionless counts; `ω_Ω` is `[T⁻¹]`; `ℓ ~ c/ω_Ω` is `[L]`.
+  **No new constant enters** — the length is fixed by `{c, the cubic shape, the chosen count}` alone. Referred
+  to the object's Compton frequency `ω_C` (the natural scale, M11-2), the cubic count gives `N ∝ (ω_Ω/ω_C)³`,
+  so the closure fixes `ω_Ω/ω_C ∝ n_Ω^{1/3}` and hence `ℓ ~ c/ω_Ω ∝ λ_C/n_Ω^{1/3}` — a **Compton-scale**
+  length, which is *why* the independent energy-balance reconstruction in M11-4(iii) also lands at the Compton
+  scale.
+- **THE FREE CHOICE (load-bearing caveat).** All content sits in the **boundary-condition choice of `n_Ω`**;
+  the theorem-like part fixes only the *scaling* (`ℓ ∝ c/ω_Ω`, `ω_Ω ∝ n_Ω^{1/3}`), never a number — the exact
+  analogue of M7-2's "`Λ_n` is an eigenvalue fixed by the boundary condition, not by the theorem." Because
+  `ℓ ∝ n_Ω^{-1/3}`, the length is only **weakly** sensitive to the count: a `10×` change in `n_Ω` moves `ℓ` by
+  only `0.46×` (`= 10^{-1/3}`, `[V]` in the script), so the Compton **scale** is robust but the **precise**
+  value is set by solving the free integer `n_Ω = (k·λ_C/ℓ)³` — a fit knob. This is a structural reason the
+  M11-4(ii) sub-0.01% radius "match" **cannot** be read as parameter-free, reinforcing that `[flag]`. Every
+  specific `n_Ω`, cut-off frequency, or radius the closure yields is a **value**, quarantined at M11-4, not
+  folded here.
+- **CROSS-CHECK / USE.** `[credited]` as the Debye/Nyquist mode-count; `[EGM method]` as Storti's closure
+  framing. Dovetails with **M11-3 pt 1** (`n_Ω` is the same mode budget `∫g dω` the FTGB carrier comb realises
+  ↔ M9) and **M7-2** (closure = boundary-condition eigenvalue). Use it as the explicit construction for
+  M11-1's cut-off closure and as shared vocabulary for counting the FTGB comb's modes — never to *generate* a
+  radius.
+
+## M11-7 — Candidates audited, not folded: dispositions + quarantine ledger   [flag / credited / excised]
+
+Two further EGM candidates were examined against M11-1..M11-6 and found **already covered** — folding them
+would add no reusable method, only numerology to quarantine.
+
+- **(b) A frequency-dependent `K_PV(ω)` "dispersion" relation — NOT folded; already homed.** `[credited,
+  already routed]` Storti's own `K_PV = exp(2GM/rc²)` is **static and frequency-independent** (M11-1, M11-2).
+  The only genuine frequency/scale dependence of a vacuum index is the **running-coupling-as-dielectric**
+  duality `K_PV(q²) = α(0)/α(q²)` — exact, textbook QED — for which **M11-3 pt 2 already designates the RG
+  dielectric-flow module as the home**. No distinct Storti dispersion law exists to fold; the value it would
+  "predict" is `[flag]` (an RG integration constant, not forced).
+- **(c) A Buckingham-Π "log identity" for non-dimensionalisation — NOT folded; subsumed by M7.** `[credited:
+  Buckingham; already routed]` Taking logs of a dimensionless monomial, `ln Π = Σ_j a_j ln q_j`, is merely the
+  linearisation of the null-space condition `D a = 0` already folded in **M7-1**; Storti's Π-usage
+  (`St_β…St_θ`) is `[method-only]`, already routed at **M11-2** (the `St` row) and **M11-3 pt 4**. It adds no
+  technique beyond M7's exact rank/null-space construction.
+- **QUARANTINE LEDGER (outputs of the M11-6 closure; kept flagged, never cited as FTGB-derived).**
+  - electron/proton **2:1 harmonic** `ω_Ω(e) = 2·ω_Ω(p) = ω_CP²/ω_Ce` — `[flag: numerical coincidence —
+    quarantined]` (definitional/by-construction; M11-4(i)).
+  - **sub-0.01% particle-radius** closures — `[flag]` full-numeric/fit, not a clean closed form (M11-4(ii),
+    now with the M11-6 weak-sensitivity structural reason).
+  - **H₀** from a cosmic cut-off — `[flag]` order-of-magnitude + fudge (M11-4(iv)).
+  - **α** from toroidal winding via `e^(-2/3)` — `[excised]` (M11-4(v); standing excision protocol).
+  The **method** (M11-6) is folded; these **values** are not — the M11-5 discipline, verbatim.
+
 ## References
 Storti, R.C. (2007). *Quinta Essentia — Part 2 (US Letter)*, Delta Group Engineering / Lulu (primary, read
 directly). Series: Parts 1 (layman intro), 2–4, 5.1 (solution algorithm) — ResearchGate. Puthoff, H.E.
 (1999), "Polarizable-Vacuum representation of general relativity," arXiv:gr-qc/9909037. Sakharov, A.D.
 (1968), Sov. Phys. Dokl. 12, 1040. Haisch, Rueda & Puthoff (1994), Phys. Rev. A 49, 678 (ZPF inertia).
-Buckingham, E. (1914), Phys. Rev. 4, 345. Provenance: `results/verify/egm_sense_checks.py`; secondary
+Buckingham, E. (1914), Phys. Rev. 4, 345. Provenance: `results/verify/egm_sense_checks.py`,
+`results/verify/egm_mode_count_closure.py` (M11-6); secondary
 working notes `storti_egm_missing.md` (corrected here) and `excision-protocol-storti-factor.md` (discipline
 carried). Cross-refs: M7 (Buckingham-Π), M9 (coupled-oscillator substrate), `resonator_family.html`.
 
