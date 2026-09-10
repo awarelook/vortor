@@ -1,0 +1,34 @@
+/* FTGB lead paper — readable journal layout (single column, generous typography) */
+@page { size: Letter; margin: 24mm 22mm; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body{
+  font-family: "Cambria","Georgia","Times New Roman",serif;
+  font-size: 11.6pt; line-height: 1.62; color:#111; margin:0;
+  text-rendering: optimizeLegibility;
+}
+header#title-block-header, .title-block { text-align:center; margin: 0 0 11mm; }
+h1.title{ font-size: 20pt; font-weight:700; line-height:1.22; margin:0 0 5mm; }
+p.author{ font-size: 12pt; margin:2mm 0 1mm; }
+p.date{ font-size: 10.5pt; color:#555; margin:0; }
+
+h1{ font-size: 16pt; font-weight:700; margin: 8mm 0 4mm; break-after: avoid; }
+h2{ font-size: 13.4pt; font-weight:700; margin: 8mm 0 2.5mm; break-after: avoid; page-break-after: avoid; }
+h3{ font-size: 11.8pt; font-weight:700; margin: 5mm 0 1.5mm; break-after: avoid; }
+
+p{ margin: 0 0 3.4mm; text-align: justify; }
+strong{ font-weight:700; } em{ font-style: italic; }
+a{ color:#0645ad; text-decoration:none; }
+
+code{ font-family: "Cascadia Mono","Consolas","DejaVu Sans Mono",monospace; font-size: 10.4pt;
+      background:#f4f5f7; padding: 0 2px; border-radius:3px; }
+pre{ font-family: "Cascadia Mono","Consolas",monospace; font-size: 10pt; line-height:1.45;
+     background:#f6f7f9; border:1px solid #e2e5ea; border-radius:6px; padding: 9px 12px;
+     white-space: pre-wrap; overflow-wrap:anywhere; break-inside: avoid; margin: 1mm 0 4mm; }
+pre code{ background:none; padding:0; font-size:inherit; }
+
+ul,ol{ margin: 0 0 3.4mm; padding-left: 7mm; }
+li{ margin: 0.8mm 0; text-align:justify; }
+blockquote{ margin: 1mm 0 4mm; padding: 1.5mm 0 1.5mm 5mm; border-left:3px solid #b9c0cc; color:#222;
+            font-style:italic; break-inside: avoid; }
+hr{ border:none; border-top:1px solid #d5dae2; margin: 6mm 0; }
+p, li{ orphans:2; widows:2; }
