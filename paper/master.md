@@ -531,6 +531,76 @@ its structure and its living dynamics off that spine; and Part E carries the law
 boundary. Wherever a later claim is ours, it is tiered; wherever it rests on the physics of this
 part, that physics is credited here.
 
+---
+
+### A.3 The null of self-interaction: why the object is coherent, regular, and eternal
+
+A nonlinear field theory blows up when a configuration feeds its own growth — when the
+self-interaction term drives the field harder the larger it gets. The deep fact about this object is
+that its coherent state sits at the exact place where that feedback **turns off**. At the force-free
+Beltrami condition `∇×u = λu`, the object's own nonlinearity is not small — it is *identically zero*,
+pointwise. The coherent state is the **null of the self-interaction**, and stated as one line:
+**coherence IS regularity.** The object does not first become coherent and then, separately, happen to
+be smooth; it is coherent *because* the state at which its self-interaction cancels is the only state in
+which it can persist without tearing itself apart. Five layers already in the theory — each verified or
+credited on its own — are one story told about that single point. **Tier of the core claim:** `[V]` for
+the *exact* state (`δ=0`), verified to machine precision in `results/verify/exact_beltrami_regularity_check.py`.
+
+**A.3.1 The nonlinearity is null: the object is an exact eternal solution `[V]`.** With `∇×u = λu`, the
+vorticity is `ω = λu`, and three exact facts follow, each computed: (i) the **Lamb vector vanishes
+pointwise**, `u×ω = λ(u×u) = 0` (`|u×ω|/(|u||ω|) = 3e-15`) — the Lamb vector is the entire rotational
+part of the advection, so when it is null the blow-up engine has no fuel; (ii) the **advection is a pure
+gradient**, `u·∇u = ∇(½|u|²)` (so `∇×(u·∇u) = 0` to `9e-14`), absorbed whole into the pressure — vortex
+stretching, the mechanism behind every candidate 3-D singularity, switches off at coherence; (iii) a
+Beltrami field is a Stokes eigenfunction (`Δu = −λ²u`), so `u(t) = e^{−νλ²t}u₀` is an **exact eternal
+solution** with enstrophy `Z(t) = Z₀e^{−2νλ²t}` decaying monotonically, so the Beale–Kato–Majda integral
+is finite and BKM **never triggers** `[credited: Beale–Kato–Majda 1984]`. The object, as its coherent
+force-free state, is globally regular — validly, unconditionally, completely.
+
+**A.3.2 The fluid theorems: production is controlled by the departure from coherence `[V/V-cond]`.** The
+exact identity `∫ω·(ω·∇)v = ∫(∇×ω)·(v×ω)` (§A.2 / MATH_TOOLKIT §4b) says vortex-stretching production
+equals the Lamb-vector flux and **vanishes at Beltrami**, so production is governed entirely by the
+*departure* from force-free; the enstrophy budget then gives the sharp near-Beltrami threshold
+`⟨η²⟩ < ν²λ₁` (R2, `r2_gronwall_check.py`), with the two-fluid/Hall analogue bounded at any `Pm` under one
+Hall-smallness hypothesis (R3). Coherence is the floor of production; every departure is what production measures.
+
+**A.3.3 Woltjer–Taylor: the null is an attractor, not a fine-tuning `[credited]`.** The force-free state
+is the minimum-energy configuration at fixed helicity `[credited: Woltjer 1958]`, and a turbulent weakly
+resistive plasma **relaxes into** it by selective decay `[credited: Taylor 1974]`. The null is an
+**energetic attractor** — a real plasma *falls into* it — so the same state that is energetically
+*selected* is the one that *shuts off* production. Coherence is not imposed; it is what the object relaxes
+to and what then sustains it.
+
+**A.3.4 Reeb/contact + Weinstein–Taubes: the coherent loop exists by topology `[credited]`.** A Beltrami
+field is exactly the **Reeb field** of a contact structure whose characteristic foliation is the Hopf
+fibration `[credited: Etnyre–Ghrist 2000]`; because it is a Reeb field, the Weinstein conjecture — proved
+in dim 3 by **Taubes 2007** — *guarantees a closed field line*. The standing-wave loop exists by contact
+topology, not assumption (§A.2.1, M15, `reeb_spectral_geometry_check.py`). So **existence** (Taubes),
+**selection** (Woltjer–Taylor), and **regularity** (the null) coincide on one state — one object, not three.
+
+**A.3.5 Field ↔ matter wave: the null is why a soliton can BE a particle `[V-struct/QWM]`.** Read through
+the Madelung lens (§9), an exact eternal, `e^{−νλ²t}`-slaved coherent mode is precisely what a stable
+matter wave is: a self-trapped standing wave that neither disperses nor blows up. The reason a soliton can
+*be* a particle is the reason the Beltrami state is regular — the self-interaction that would spread or
+singularize the packet is null at coherence, so the mode stands `[credited: Madelung 1927; Bohm 1952]`.
+Particle-likeness is not bolted on; it is the same null, read on the matter-wave face.
+
+**A.3.6 The self-consistency, in one line.** Assemble the five and they are a single closed argument:
+**selected → exists → regular → particle-like**, all at one point — the null of the self-interaction. A
+configuration that is not force-free feeds its own destruction (production `≠ 0`); the object survives
+precisely by sitting where that feedback is null. *Coherence is not a property the object has — it is the
+null the object is.*
+
+**The honest boundary (do not blur).** What is `[V]`: regularity of the object **as its exact force-free
+state** (`δ=0`) — complete, unconditional, an explicit eternal solution. What stays **open and is NOT
+claimed**: the **driven** departure `δ` (the very thing that makes the object beat and radiate) and the
+general large-data problem. For *this* object that regime is **strongly Hall-mediated** — the ion skin
+depth exceeds the object, `d_i = 0.296 m > R = 0.12 m`, `S_di = d_i v_A/η ≈ 15–2400 ≫ 1`
+(`r3_hall_smallness_physical_check.py`) — electron-MHD/whistler territory where EMHD models can even blow
+up. That is the open 3-D Hall-MHD problem (Clay-tier); the exact object does not depend on it. Saying "the
+object is globally regular" means exactly and only "the exact coherent state is an eternal smooth solution"
+— it must never be read as "we solved 3-D Navier–Stokes / Hall-MHD." The precise line is not a weakness of
+the result; it *is* the result.
 
 ---
 

@@ -36,6 +36,16 @@ terms: a field whose swirl points *along itself* everywhere, so it exerts no for
 without tearing (`curl B = λB`). This is standard, credited plasma physics — it's the relaxed, lowest-energy
 state a tangled magnetic field settles into (**Woltjer–Taylor relaxation** [credited]).
 
+There is a beautiful reason this state is so stable, and it may be the deepest single fact in the theory:
+**at the force-free state the field's own nonlinearity — the very term that makes fluids and plasmas blow
+up — cancels to exactly zero.** We verified it to machine precision: the "self-push" (the Lamb vector)
+vanishes pointwise, the churning term becomes a pure pressure and does no damage, and the object becomes an
+*exact, forever-smooth solution* that simply can't blow up [V]. In one line: **coherence *is* regularity.**
+The object is coherent *because* the null of its own self-interaction is the one place it can live without
+tearing itself apart — it sits at the still point of its own storm. (Honest edge: this is exact for the
+*ideal* coherent state; the *driven* wobble that makes it beat and radiate is a genuinely harder, still-open
+fluid-math question, and we don't claim to have solved that.)
+
 Two consequences do a lot of work:
 
 - **A bell-like set of tones.** Confine such a field in a rounded region and it can only ring at certain
