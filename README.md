@@ -1,7 +1,13 @@
 # The Coherent Object — FTGB modeler & synthesis bundle
 
+[![verify](https://github.com/awarelook/vortor/actions/workflows/verify.yml/badge.svg)](https://github.com/awarelook/vortor/actions/workflows/verify.yml)
+
 **Author:** Nathaniel Hanks · **A self-contained package:** one interactive modeler + the two
 manuscripts + the method toolkit + two execute-ready hand-off packages.
+
+*Reproducibility gate: every push runs the full model (`verify_all.py`, **44/44** checks) on a clean
+Ubuntu + Python 3.12 runner via GitHub Actions — a green badge means the entire model reproduces from
+scratch, deterministically, with no network. Tested stack: `numpy==2.4.6`, `mpmath==1.3.0`.*
 
 > One driven, force-free Beltrami–Hopf toroidal soliton, built up from a point → a string →
 > a resonator → a knotted field → driven dynamics, and read at once as a *field* and a
