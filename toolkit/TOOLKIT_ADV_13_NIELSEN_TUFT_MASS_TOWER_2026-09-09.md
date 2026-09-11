@@ -120,6 +120,16 @@ arithmetic reproduces (6/6 quark masses to −0.000% in `nielsen_quark_assembly_
 TUFT]** for the tower ansatz and the ζ-value coefficient assignments; cross-checks `C₅=0.10017141`,
 `β₅=0.00133064`, `σ₅` all reproduce.
 
+**Completion, stated precisely (`results/verify/nielsen_mass_completion_check.py`, `[V]` arithmetic).** Every
+coefficient is a *closed form*, so the tower has **one continuous free parameter — the scale `Λ₅`** (= the Higgs
+VEV). Fixing `Λ₅` from **u alone**, the other five masses are **parameter-free ratio *predictions*** and land 5/5
+within ~1% of PDG (all <0.5% of Nielsen's table). This is stronger than "size/order, ~79% parameter-free": the
+*ratios* carry no continuous freedom. The honest residual is now precisely named — the discrete **assignments**
+(knots `τ=(1,4,3)` by crossing number; the ± parity; `comp=(2/3,1,1)`) — and the open `[framework/S]` question is
+whether those assignments are **theory-forced** (a derivation) or **systematically chosen** (a structured fit);
+the topology needs the preprint + expert review, not certified here. The `6π⁵ ≈ m_p/m_e` (0.0019%) coincidence is
+kept as a computed `[flag]` clue.
+
 ---
 
 ## M13-3 — THE CHARGED-LEPTON TOWER (S³) AND ω₃   [framework tower / credited torsion prefactor]
