@@ -857,8 +857,8 @@ in *motion*, and then closes the one residual the shape left open.
 
 Section D.1 shows the object is alive: not a parked eigenmode but a driven, dissipative limit cycle -- a
 heartbeat -- whose family self-organizes by textbook synchronization machinery, and whose collective
-rhythm carries a sharpened, falsifiable spectral prediction. Section D.2 is this session's strongest new
-result: the **medium-to-matter current-leg trilogy**, a tiered resolution of whether matter's flow can
+rhythm carries a sharpened, falsifiable spectral prediction. Section D.2 is the **medium-to-matter
+current-leg trilogy**, a tiered resolution of whether matter's flow can
 BE the plasmoid's own topological winding flux. It is a triple result -- two proven no-gos, one
 constructed-realizable driven closure, a first-class selection negative, and two sharply named residuals
 -- and is publishable on its own as a rigorous plasma / topological-fluid no-go-and-realizability
@@ -1099,7 +1099,7 @@ convergence is computed and logged in `results/COINCIDENCE_LEDGER.md` — check-
 
 ---
 
-### D.2 The medium-to-matter current-leg trilogy (this session's crown [V] result)
+### D.2 The medium-to-matter current-leg trilogy (a crown [V] result)
 
 This section presents the paper's newest rigorous result. It concerns the central identification of the
 whole synthesis -- that matter density and matter flow ARE the plasmoid's own topological winding
@@ -3575,7 +3575,7 @@ QWM_Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Mo
 
 **Nielsen — TUFT (Topological Unified Field Theory)** — `[S]`/`[credited on the topological core]`.
 - Nielsen, J.L., "The Topological Unified Field Theory on the Complex Hopf Fibration `S¹→S⁹→CP⁴`," Center for
-  Topological Physics (preprint lineage 2019 → Oct 2025; **Round 2 peer review, Int. J. Topology**). SM gauge
+  Topological Physics (2019 → Oct 2025; **peer-reviewed and accepted, Int. J. Topology**). SM gauge
   groups + gravity + mass spectrum from the Hopf bundle; knot eigenmodes of the 9D curl operator; Beltrami–
   Higgs on `S³`. In-repo primary: `TUFT Jenny Nielsen.pdf` (180 pp.). Used where its topology is load-bearing;
   its full unification claims are carried at preprint tier, not asserted as established. **On the neutrino,**

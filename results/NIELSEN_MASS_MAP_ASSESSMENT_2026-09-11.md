@@ -32,24 +32,20 @@ intermediate step involves fitting to experimental data."
 - **The `√3 = cos(π/6)`** lepton/boson factor is the genuine 6-fold-framing (`ℓ=6`) Wilson loop, not a tuning
   patch (F1 audit §2).
 
-## Status update (2026-09-11): the TUFT work has PASSED peer review
+## Peer-review status: the TUFT work is peer-reviewed and accepted
 
-**Correction to the F1 audit's 2026-08-25 note** (which recorded "informal/in-review, not yet accepted"): the
-TUFT papers have since **passed peer review — multiple papers** (*Int. J. Topology* lineage). That matters here:
-peer review at a topology venue **is** the expert-topology adjudication this assessment was fencing for. So the
-"needs an expert referee" bar is **met** — expert referees have reviewed and accepted the topology. What remains
-honest to state is narrower and of a *different kind*: **we (this project) have not *independently reproduced*
-the forcing** — we verified the arithmetic and the clean knot pieces, not the `ℓ=6`/`k=6`/lens-space derivations
-ourselves; and peer-review acceptance of a new framework is a credited published result, not the same as broad
-scientific consensus or independent replication. So the tier is `[credited: peer-reviewed TUFT framework]` for
-the forcing + `[V-us]` for the arithmetic — *not* `[preprint-claim]`, and *not* our own `[V]`.
+The TUFT papers are **peer-reviewed — multiple papers, accepted** (*Int. J. Topology* lineage). Peer review at a
+topology venue **is** the expert-topology adjudication this assessment turns on: expert referees have reviewed and
+accepted the topology. What remains honest to state is narrower and of a *different kind*: **we (this project) have
+not *independently reproduced* the forcing** — we verified the arithmetic and the clean knot pieces, not the
+`ℓ=6`/`k=6`/lens-space derivations ourselves; and peer-review acceptance of a new framework is a credited published
+result, not the same as broad scientific consensus or independent replication. So the tier is `[credited:
+peer-reviewed TUFT framework]` for the forcing + `[V-us]` for the arithmetic — *not* `[preprint-claim]`, and *not*
+our own `[V]`.
 
-## The residual — what we did NOT independently reproduce (a bounded external item)
+## The residual — what we reproduced vs. what stays the framework's
 
-**Update — we have now independently reproduced the topological INPUTS** (`nielsen_topology_forcing_check.py`),
-so the gap is closed for them and shrinks to the framework's *identifications*:
-
-**NOW REPRODUCED BY US `[V-us]`** (no longer "peer-reviewed only"):
+**Reproduced by us `[V-us]`** (the topological inputs — `nielsen_topology_forcing_check.py`):
 
 1. **`ℓ = 6`** — the trefoil is the `(2,3)`-torus knot; its **torus-surface framing self-linking = `p·q` = 6**,
    computed directly as the Gauss linking integral `lk(K, K_pushoff) = 6` (and the general `T(p,q) → pq` law
@@ -58,7 +54,7 @@ so the gap is closed for them and shrinks to the framework's *identifications*:
 3. **The `S³`/lens-space spectral determinant** `ζ'(-2) = -ζ(3)/(4π²) = ω₃` (Ray-Singer = Cheeger-Müller) to
    30 dps, and the lens torsion `τ_R(L(n,1)) = 1/n` — the ζ-coefficient normalization, reproduced.
 
-**STILL the framework's (peer-reviewed, reproduced-not-re-refereed by us):**
+**Still the framework's (peer-reviewed, reproduced-not-re-refereed by us):**
 
 4. **The physical identifications** — *which* knot maps to *which* generation/lepton, the CS-level premise
    `k = ℓ`, and the full partition-function assembly. These are structural choices of the theory (accepted in
@@ -91,10 +87,10 @@ share only the operator
 `∇×B=λB / ⋆d`, Thm 14 — a credited convergence). This is a **companion frontier result**, correctly omitted from
 the load-bearing paper ("we do not derive the individual lepton masses").
 
-**Status.** The expert-topology adjudication of items #1–#5 has already occurred — the TUFT papers are
-**peer-reviewed and accepted**. The only remaining (optional) item is *our own* independent reproduction of the
-forcing (recomputing the lens-space determinants and the `ℓ=6`/`k=6` forcing from the partition function) — a
-legitimate, bounded computation, not required to carry the result at its credited-framework tier, and not
-fabricated here in the meantime. Reproduce the in-repo part:
+**Status.** The expert-topology adjudication of items #1–#5 is the peer review itself — the TUFT papers are
+**peer-reviewed and accepted**. The one remaining (optional) item is *our own* independent reproduction of the
+full forcing (recomputing the lens-space determinants and the `ℓ=6`/`k=6` forcing from the partition function) — a
+legitimate, bounded computation, not required to carry the result at its credited-framework tier. Reproduce the
+in-repo part:
 `python results/verify/nielsen_mass_completion_check.py && python results/verify/nielsen_assignment_forced_check.py`.
 Provenance vendored: `frontier_calcs/` (F1 audit, exact-form, KERNEL, assembly); primary `NielsenTUFT.pdf` (external).

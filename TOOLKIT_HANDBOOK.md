@@ -37,7 +37,7 @@ The nine modules are:
 | **M10** | Topological-soliton + conserved-current methods | conserved currents, no-go templates, moduli-geodesic amplitudes, seesaw / RG readings |
 | **M11** | EGM / polarizable-vacuum spectral methods | Storti's PV-refractive-index + ZPF harmonic-beat *representation* mapped onto M7/M9, with its numerology quarantined (method-only, no claim adopted) |
 | **M12** | Ginzburg spiral-field theory (toryx / helyx) | a toroidal-spiral *structural analogy* (matter = self-inverting torus, radiation = double helix, discrete matter<->radiation ladder) mapped onto the Beltrami-Hopf object; analogy-only, no claim adopted |
-| **M13** | Nielsen TUFT mass-tower & mixing methods | the ζ-valued exponent tower (`C₅=ζ(3)/12`, `β₅=ζ(5)/8π⁴`, …), knot/lens-space torsion, CKM/PMNS overlaps, Chern-Simons `M=ke²/4π`, Proca-Beltrami `λ=mc/ℏ` — coefficients `[V]`-checked, **π-power anomaly now RESOLVED (M13-10); the analytic-torsion dressing derives the hierarchy's size/order (~79% parameter-free); preprint blind-fit stays `[preprint-claim]`** |
+| **M13** | Nielsen TUFT mass-tower & mixing methods | the ζ-valued exponent tower (`C₅=ζ(3)/12`, `β₅=ζ(5)/8π⁴`, …), knot/lens-space torsion, CKM/PMNS overlaps, Chern-Simons `M=ke²/4π`, Proca-Beltrami `λ=mc/ℏ` — coefficients `[V]`-checked, **π-power form resolved (M13-10); the quark tower completes 6/6 masses as five parameter-free ratio predictions from one scale, topological inputs reproduced in-repo `[V-us]`; blind-fit significances stay `[preprint-claim]`** |
 | **M14** | Greenyer beat-law & EVO cascade methods | the Beat Law + shape-independent ladder `N^L`, the triad dichotomy (integer silence / golden resonance), two Manley-Rowe (Fibonacci) invariants, anapole `N⁴`, `9/8 μ_B`; nuclear layer a **pre-registered target** (`N_crit` prediction), **no over-unity** |
 | **M15** | Reeb & spectral geometry | the Beltrami-Hopf field as the **Reeb field of a contact structure** (Etnyre-Ghrist; the contact identity `α∧dα = λ·‖B‖²·vol` with `B` in `ker dα`), so Weinstein/**Taubes** guarantees the resonator's **closed standing-wave orbit** exists by topology; and the **curl operator's one spectrum** in three roles — CK comb (`tan x=x`), cascade (`λ_L=λ_0 N^L`), `S³` Ray-Singer torsion (`ζ'(-2)=-ζ(3)/4π²`). `[V]`/`[credited]`, no new claim |
 
@@ -1018,11 +1018,12 @@ internal-consistency findings. **The π-power anomaly (M13-10) is now RESOLVED**
 `ζ_B(s) = ζ(s−2) − ζ(s)` forces the `n²` coefficient onto `ζ′(−2) = −ζ(3)/(4π²)`, so the `π²` structure is
 **mandatory** for every spectral-torsion coefficient (`ω₃=ζ(3)/4π²`, `σ₅`, `σ₉`). The "pure" `C₅=ζ(3)/12 =
 ζ(3)·(−ζ(−1))` is a **mis-attributed different object** -- a category error, not a rival value -- so the
-apparent `C₅/ω₃ = π²/3` clash dissolves for the π²-carrying forms. **What is genuinely derived** `[V]`: the
-mass hierarchy's **SIZE/ORDER (~10⁴–10⁵)** falls out of the analytic-torsion dressing (~79% parameter-free
-pure-ζ). **One flag still travels:** the **blind-fit-at-0.1σ / zero-parameter / sub-0.01% mass-recovery**
-claims are the PREPRINT's, in Round-2 review -- `[preprint-claim]`, NOT `[V]`; exact mass ratios stay
-`[preprint-claim]`.
+apparent `C₅/ω₃ = π²/3` clash dissolves for the π²-carrying forms. **What is genuinely derived** `[V-us]`
+(arithmetic): the quark tower completes 6/6 masses to <0.5% as **five parameter-free ratio predictions** from a
+single scale (the Higgs VEV) — the *ratios* carry no continuous freedom — and its topological inputs (`ℓ=6`,
+`√3/2=cos π/6`, `ζ'(-2)=-ζ(3)/4π²`) are reproduced in-repo. **One flag still travels:** the **blind-fit-at-0.1σ / zero-parameter / sub-0.01% mass-recovery**
+claims are TUFT's own (peer-reviewed and accepted, not validated by us) -- `[preprint-claim]`, NOT `[V]`; exact
+mass ratios stay `[preprint-claim]`.
 
 **What it folds.** The mass operator (Proca-Beltrami `λ=mc/ℏ`, curl S³ spectrum `±(n+1)/R`, `⋆d` -- linear,
 so zero off-diagonal ME); the full quark tower `m_{n,±}=Λ₅(n+1)exp((a₅±λ_T)n + C₅n² + β₅n(n+1)/2 +

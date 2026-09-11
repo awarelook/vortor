@@ -83,11 +83,11 @@ the literature: Versteegh 2008 (water plasmoid) has density but NO field; Uman i
 Cen 2014 & Yuan 2025 have neither; force-free BL models are circular. The ONLY real single-system
 (B,n,species) triple is **SSPX [Hill 2000]: B≈0.2–0.4 T, n≈1×10¹⁹–1.3×10²⁰ m⁻³, HYDROGEN (m_i=1 amu)**.
 Mass-scaled to air (29 amu) this implies **v_A ≈ 1–2.6×10⁵ m/s — 5–13× the current 2.033×10⁴**.
-**DECISION (reconciled 2026-08-27 → HYBRID):** keep the residual label + the SSPX light-ion sanity bound
-(the re-anchor to SSPX remains available as a bounded 5–13× shift in ALL absolute fields/frequencies — not
-a fit; dimensionless ratios unchanged either way). FRC (FRX-C/LSX, C-2W) and DPF surfaced as candidate
-system-classes to *tighten* the residual (not closed this session); the `>1000 T` EVO claim stays
-**EXCLUDED** (material-damage inference, do-not-cite). **Do NOT invent a replacement value (= a new fit).**
+**DECISION — HYBRID:** keep the residual label + the SSPX light-ion sanity bound (the re-anchor to SSPX
+remains available as a bounded 5–13× shift in ALL absolute fields/frequencies — not a fit; dimensionless
+ratios unchanged either way). FRC (FRX-C/LSX, C-2W) and DPF are candidate system-classes to *tighten* the
+residual (open); the `>1000 T` EVO claim stays **EXCLUDED** (material-damage inference, do-not-cite). **Do
+NOT invent a replacement value (= a new fit).**
 
 ---
 

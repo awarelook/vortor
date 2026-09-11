@@ -1,8 +1,8 @@
 # LENR ⊗ the self-dual (yin-yang) object — the positive core, and the honest connections
 
-**Date:** 2026-09-10. Applies this session's computed advances (the self-dual `±λ` object: chirality,
-charge-conjugation, Majorana; the toroidal-beat structure) to the FTGB LENR model — stated as a **positive
-core claim**, with each connection tiered honestly and cited. Verify: the `results/verify/` scripts named below.
+Applies the self-dual `±λ` object (chirality, charge-conjugation, Majorana; the toroidal-beat structure) to
+the FTGB LENR model — stated as a **positive core claim**, with each connection tiered honestly and cited.
+Verify: the `results/verify/` scripts named below.
 
 ---
 

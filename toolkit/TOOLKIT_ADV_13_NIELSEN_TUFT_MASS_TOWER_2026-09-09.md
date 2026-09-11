@@ -30,13 +30,13 @@ version `NielsenTUFT.pdf` 290 pp) is the *framework* source, **peer-reviewed / a
 > [V]-in-project: (i) that the arithmetic reproduces** (given Nielsen's coefficients, the formula returns the numbers
 > she states — the quark tower 6/6 to −0.000%, and the coefficient identities like `C₉=−0.15670774` and
 > `ζ′(−2)=−ζ(3)/4π²` to 30+ dps); **and (ii) the internal-consistency findings below.** Two things are flagged
-> PROMINENTLY and must travel with every use of this module: **(a) a π-power question — now RESOLVED (2026-09-10,
-> M13-10)** in favor of the π²-carrying forms. The tower carried a *pure* `C₅=ζ(3)/12` (no π) for the n² term on
+> PROMINENTLY and must travel with every use of this module: **(a) a π-power question — RESOLVED
+> (M13-10)** in favor of the π²-carrying forms. The tower carried a *pure* `C₅=ζ(3)/12` (no π) for the n² term on
 > S⁵/S⁹ but a π²-carrying `ω₃=ζ(3)/(4π²)`, `σ₅=ζ(3)/(16π²)`, `σ₉=ζ(3)/(8π²)` on S³ and in the torsion exponents;
 > the S³ curl spectral zeta `ζ_B(s)=ζ(s−2)−ζ(s)` forces the n² coefficient to `ζ′(−2)=−ζ(3)/4π²` (π² mandatory),
 > so the pure forms are a **category error** (a mis-attributed product of zeta *values*), not a normalization
 > choice (`curl_spectral_zeta_pi_power_check.py`); and **(b) the "zero-free-parameter,
-> blind-fit-at-0.1σ, all-masses-recovered" claims are Nielsen's -- now PEER-REVIEWED / accepted (multiple TUFT papers) -- a [peer-reviewed framework] claim, NOT our [V].**
+> blind-fit-at-0.1σ, all-masses-recovered" claims are Nielsen's -- PEER-REVIEWED / accepted (multiple TUFT papers) -- a [peer-reviewed framework] claim, NOT our [V].**
 > We fold the *structure and coefficients*; we mark the *fits* as unverified-here.
 
 ## Tier legend (honesty discipline)
@@ -124,10 +124,10 @@ TUFT]** for the tower ansatz and the ζ-value coefficient assignments; cross-che
 coefficient is a *closed form*, so the tower has **one continuous free parameter — the scale `Λ₅`** (= the Higgs
 VEV). Fixing `Λ₅` from **u alone**, the other five masses are **parameter-free ratio *predictions*** and land 5/5
 within ~1% of PDG (all <0.5% of Nielsen's table). This is stronger than "size/order, ~79% parameter-free": the
-*ratios* carry no continuous freedom. The honest residual is now precisely named — the discrete **assignments**
-(knots `τ=(1,4,3)` by crossing number; the ± parity; `comp=(2/3,1,1)`) — and the open `[framework/S]` question is
-whether those assignments are **theory-forced** (a derivation) or **systematically chosen** (a structured fit);
-the topology needs the preprint + expert review, not certified here. The `6π⁵ ≈ m_p/m_e` (0.0019%) coincidence is
+*ratios* carry no continuous freedom. The topological inputs (`ℓ=6`, `√3/2=cos π/6`, `ζ'(-2)=-ζ(3)/4π²`) are
+reproduced in-repo `[V-us]` (`nielsen_topology_forcing_check.py`); the honest residual is the framework's
+**physical identification map** (knot↔generation) — a peer-reviewed hypothesis (particle=knot), not a math theorem,
+with the sharpest open sub-question being why exactly 3 generations. The `6π⁵ ≈ m_p/m_e` (0.0019%) coincidence is
 kept as a computed `[flag]` clue.
 
 **How forced IS the assignment rule? — bounded (`nielsen_assignment_forced_check.py`, `[V]`).** The knot
@@ -139,17 +139,17 @@ the theory's own `[V]` `±λ` chirality doublet, and **two loose elements** (`τ
 topological — *not* a clean derivation, *not* a per-mass free fit. Whether TUFT topologically derives the full
 generation↔knot map remains the expert-review frontier; this bounds it honestly, does not resolve it.
 
-**Assessed against the primary source + FENCED (`results/NIELSEN_MASS_MAP_ASSESSMENT_2026-09-11.md`).** Nielsen
+**Against the primary source (`results/NIELSEN_MASS_MAP_ASSESSMENT_2026-09-11.md`).** Nielsen
 **explicitly claims full forcing** — Remark 19 "none is a free parameter", §4.16 "No intermediate step involves
 fitting" — and names the topological quantities: the **13-mass** spectrum from ONE scale (`v=246220 MeV`), with
 a Hopf self-linking `ℓ=6`, CS level `k=6`, lens-space spectral determinants, `τ` Reidemeister/Alexander invariants,
 and CS Wilson loops (`T_H=2/3`, `√3=cos π/6`). **Verified in-repo:** the arithmetic (12/12 coefficients, 6/6 quark
-assembly), `τ(trefoil)=3=|Δ(-1)|`, `√3=cos π/6`. **Peer-review status corrected 2026-09-11:** the TUFT work has **passed peer review (multiple
-papers, accepted)** — so the expert-topology adjudication the earlier note fenced for **has occurred**; and we have now
-**independently reproduced the topological INPUTS** (`nielsen_topology_forcing_check.py`, `[V-us]`): **`ℓ=6`** =
+assembly), `τ(trefoil)=3=|Δ(-1)|`, `√3=cos π/6`. The TUFT work has **passed peer review (multiple
+papers, accepted)**, so the expert-topology adjudication is settled. The topological INPUTS are
+**independently reproduced in-repo** (`nielsen_topology_forcing_check.py`, `[V-us]`): **`ℓ=6`** =
 the trefoil `(2,3)`-torus-knot surface self-linking `= p·q` (Gauss integral = 6; general `T(p,q)→pq` verified),
 the framing factor `√3/2 = cos(π/6) = cos(π/ℓ)`, and the `S³` Ray-Singer determinant `ζ'(-2)=-ζ(3)/4π² = ω₃`
-(+ lens torsion `1/n`). So those inputs are ours now, not "peer-reviewed only." What remains the framework's
+(+ lens torsion `1/n`). What remains the framework's
 (peer-reviewed, reproduced-not-re-refereed): the physical **identifications** — which knot ↔ which
 generation, `k=ℓ`, `τ(2)=4` as the link torsion, and the partition-function assembly. Tier: `[V-us]`
 (arithmetic + topological inputs) + `[credited: peer-reviewed TUFT framework]` (the identifications). See
@@ -210,7 +210,7 @@ Provenance (verbatim, FAQ 18): *"the leading −ζ(3)/8 is the lens-space determ
 from the same mechanism as ζ(3) on S³. The correction ζ(3)/28 comes from the SO(8) triality automorphism of the S⁷
 sub-shell (dim SO(8)=28)."* So `1/8 = rank(ξ)` on S⁹ and `ζ(3)/28 = 1/dim SO(8)`. **[V]** arithmetic + the fact that
 this exact form is Nielsen's verbatim coefficient (not an agent ansatz); **[framework: Nielsen TUFT]** for the S⁹
-identification. (Housekeeping note: a stale `C₉ = −0.110` cited in one open-problems parenthetical is a **phantom** —
+identification. (A `C₉ = −0.110` cited in one open-problems parenthetical is a **phantom** —
 not a π-power/normalization pair of −0.15671, ratio `π^0.309`, coincidence-gate FAIL; do not reintroduce it.)
 
 ---
@@ -291,7 +291,7 @@ CS action, `M=ke²/4π`, the η-invariant and APS; **[framework: Nielsen TUFT]**
 ## M13-8 — CKM FROM CP⁴ OVERLAPS   [framework construction / [preprint-claim] fit]
 
 **WHAT.** Quark mixing = topological overlap integrals of S⁵ eigenmodes on CP⁴. The *construction* (an overlap
-`⟨ψ_i|ψ_j⟩`) is a legitimate framework move; the *agreement numbers* are the preprint's, under review (M13-11).
+`⟨ψ_i|ψ_j⟩`) is a legitimate framework move; the *agreement numbers* are TUFT's own, not validated by us (M13-11).
 
 **MATH.** Definition + values (31pg §XII.A), verbatim:
 ```
@@ -333,9 +333,9 @@ internal miss); cross-ref M10-4 (the seesaw-as-frequency-downconversion reading 
 
 ---
 
-## M13-10 — THE π-POWER QUESTION — **RESOLVED (2026-09-10)** in favor of the π²-carrying forms   [V, was [anomaly]]
+## M13-10 — THE π-POWER QUESTION — **RESOLVED** in favor of the π²-carrying forms   [V] / resolves [anomaly]
 
-**WHAT.** Formerly the tower's single most important honesty flag — now **resolved** (see the boxed Status
+**WHAT.** The tower's single most important honesty flag, **resolved** (see the boxed Status
 below and `results/verify/curl_spectral_zeta_pi_power_check.py`). The apparent clash: the "quadratic
 Casimir / Ray–Singer torsion" coefficient appeared with **inconsistent π-powers across shells** — pure `ζ(3)/12`
 and `−ζ(3)/8` on S⁵/S⁹ (no π), but `ζ(3)/(4π²)` on S³ and π²-carrying exponents `σ₅, σ₉`. Nielsen's *own*
@@ -352,7 +352,7 @@ not a normalization choice — the S³ curl spectral zeta forces it.** Full stat
 ```
 The clash, verbatim: *"The S³ quadratic coefficient ζ(3)/(4π²) and the S⁵ quadratic coefficient ζ(3)/12 are the SAME
 kind of object … but have DIFFERENT π-powers. This is the internal inconsistency."* The pure-vs-determinant factor is
-`(ζ(3)/12)/(ζ(3)/(4π²)) = π²/3 = 3.2899`. **Status: RESOLVED (2026-09-10, `results/verify/curl_spectral_zeta_pi_power_check.py`), in favor of the
+`(ζ(3)/12)/(ζ(3)/(4π²)) = π²/3 = 3.2899`. **Status: RESOLVED (`results/verify/curl_spectral_zeta_pi_power_check.py`), in favor of the
 π²-carrying forms.** The S³ curl operator on coexact 1-forms has eigenvalue `(n+1)=m` with multiplicity
 `n(n+2)=m²−1`, so its spectral zeta is *exactly* `ζ_B(s)=Σ(m²−1)m^{−s}=ζ(s−2)−ζ(s)`, and the `n²`
 (quadratic-Casimir) coefficient of `ζ_B′(0)` is `ζ′(−2)=−ζ(3)/(4π²)` — the **π² is structurally mandatory**
@@ -362,9 +362,7 @@ the true `n²` spectral derivatives are `ζ′(−4)∝ζ(5)/π⁴`, `ζ′(−8
 different π-power" is **false** — a **category error**: `ω₃, β₅, σ` (π²-carrying) are the genuine
 curl-spectrum / Ray–Singer coefficients, while `C₅=ζ(3)/12`, `C₉=−ζ(3)/8` carry that provenance
 **misattributed** (wrong ζ, dropped π). Resolves the math question; the tower's *data-fit* (M13-11) stays
-**[preprint-claim]**. *(The historical "what would settle it" note below is superseded.)* Settling which of the pure or the π²-carrying form is
-physically correct needs the lens-space η / coexact-p determinant computation (the "A1a/A1b" task) or a firmer TUFT
-primary source — **not guessed here.** **[anomaly]** — carry this flag with any downstream use of `C₅`, `C₉`, `ω₃`,
+**[preprint-claim]**. **[anomaly]** — carry this flag with any downstream use of `C₅`, `C₉`, `ω₃`,
 `σ₅`, or `σ₉`.
 
 ---
@@ -372,9 +370,9 @@ primary source — **not guessed here.** **[anomaly]** — carry this flag with 
 ## M13-11 — ⚑ HONESTY ON THE FITS: "blind-fit at 0.1σ / all-masses-recovered" is Nielsen's claim, PEER-REVIEWED (accepted)   [credited framework — NOT our [V]]
 
 **WHAT.** The second prominent flag. The compendia advertise **sub-0.01% mass agreement, `χ²/dof ≈ 0`, "zero free
-parameters," quark masses "within 0.1σ / 0.01σ," CKM "all four at 0.2σ."** These are **the preprint's own
-data-recovery claims, currently in Round-2 peer review** — reproduced here for completeness and **NOT** independently
-validated by this project.
+parameters," quark masses "within 0.1σ / 0.01σ," CKM "all four at 0.2σ."** These are **TUFT's own data-recovery
+claims** — peer-reviewed and accepted, reproduced here for completeness, and **NOT** independently validated by this
+project.
 
 **MATH / what is and isn't ours.**
 ```
@@ -386,10 +384,11 @@ validated by this project.
 Reproduced tables (label them **[preprint-claim]** wherever cited): leptons e/μ/τ "sub-0.01%"; quarks u,d,s,c,b,t
 "within 0.5σ…0.01σ" (31pg §XI.B); CKM "all 4, `J` at 0.2σ" (M13-8); ν "`Δm²₃₁` at 2%" (M13-9). The honest reading:
 the tower is **operator-seeded, linear, and formula-dressed** (M13-1, M13-2) with ~94% of the hierarchy in a
-number-theoretic exponent whose coefficients carried the π-power anomaly (M13-10, **now resolved** — the π²-forms are the genuine curl-spectrum coefficients) — so its *structure* is
-foldable and its *arithmetic* checks, but its *physical fit claims stand or fall with the preprint under review*,
-not with anything verified here. Governing caveat: TUFT is a preprint (Nielsen 2024–2025, PhilArchive; in peer
-review); everything framework-tagged is asserted **illustratively**. **NOT `[V]`.**
+number-theoretic exponent whose coefficients carried the π-power anomaly (M13-10, **resolved** — the π²-forms are the genuine curl-spectrum coefficients) — so its *structure* is
+foldable and its *arithmetic* checks, but its *physical fit claims rest on the TUFT framework*, not on anything
+verified here. Governing caveat: TUFT is a peer-reviewed, accepted framework (Nielsen 2024–2025) that this project
+has not independently reproduced; everything framework-tagged is carried as `[credited]`/`[preprint-claim]`, not as
+our own result. **NOT `[V]`.**
 
 ---
 
@@ -425,10 +424,10 @@ This module does **NOT**:
 1. **endorse the mass-recovery fit** — the "zero-parameter blind fit at 0.1σ / sub-0.01%" claims are the preprint's,
    peer-reviewed/accepted (**[credited framework]**, M13-11); only the arithmetic reproduction and the coefficient identities
    are **[V]**.
-2. **~~resolve the π-power inconsistency~~ → RESOLVED (2026-09-10, M13-10)** — the S³ curl spectral zeta
+2. **resolve the tower's DATA-FIT** — the π-power *math* inconsistency IS resolved (M13-10): the S³ curl spectral zeta
    `ζ_B(s)=ζ(s−2)−ζ(s)` forces the n² coefficient to `ζ′(−2)=−ζ(3)/4π²` (π² mandatory); the pure `C₅=ζ(3)/12`,
    `C₉=−ζ(3)/8` are a **category error** (mis-attributed products of zeta *values*), so the π²-carrying forms are
-   the genuine coefficients (`curl_spectral_zeta_pi_power_check.py`). *(The tower's DATA-FIT stays [preprint-claim].)*
+   the genuine coefficients (`curl_spectral_zeta_pi_power_check.py`); the tower's DATA-FIT stays [preprint-claim].
 3. **supply a transition matrix element** — `⋆d` is linear ⇒ strictly diagonal, zero off-diagonal (M13-1); the tower
    has no nuclear sector and cannot hand over an ME (see `KERNEL_NIELSEN_MASS_MATRIX_ELEMENT`); MEs need a nonlinear
    interaction the tower lacks.
@@ -438,7 +437,7 @@ This module does **NOT**:
    parameterizations (M13-3); do not cross-substitute their coefficients.
 
 **The load-bearing flags, restated:** (a) the π-power question (`C₅=ζ(3)/12` pure vs `ω₃/σ₅/σ₉` π²-carrying) is
-**RESOLVED (M13-10, 2026-09-10)** — the π²-carrying forms are genuine, the pure ones a category error; (b) the **fit claims are the preprint's,
+**RESOLVED (M13-10)** — the π²-carrying forms are genuine, the pure ones a category error; (b) the **fit claims are the preprint's,
 peer-reviewed/accepted — [credited framework], NOT our [V].** Fold the structure and coefficients; the fits are peer-reviewed but not independently reproduced by us.
 
 ---
@@ -470,7 +469,7 @@ peer-reviewed/accepted — [credited framework], NOT our [V].** Fold the structu
   `C₉=−0.15670774` and `−ζ(3)/8, ζ(3)/28, (1+ζ(3)/28)` to 50 dps (`c9_mass_tower_coefficient_verification…py`);
   `ζ′(−2)=−ζ(3)/(4π²)=−0.03044846`; `C₅=ζ(3)/12=0.10017141`, `β₅=ζ(5)/(8π⁴)=0.00133064`, `σ₉=ζ(3)/(8π²)=0.01522423`;
   the pure-vs-π² clash and the `π²/3=3.2899` factor; the `⋆d`-linear ⇒ zero-off-diagonal theorem.
-- **[anomaly] RESOLVED (2026-09-10):** the cross-shell π-power question (M13-10) is settled by the S³ curl
+- **[anomaly] RESOLVED:** the cross-shell π-power question (M13-10) is settled by the S³ curl
   spectral zeta (`curl_spectral_zeta_pi_power_check.py`) — π²-carrying forms genuine, pure forms a category error.
 - **[preprint-claim], NOT validated here:** every mass-recovery, significance (`σ`), and "zero-parameter" statement (M13-11).
 - **Numbers traced, not invented:** every coefficient quotes its source doc + equation number. No mass, rate, cross-section,

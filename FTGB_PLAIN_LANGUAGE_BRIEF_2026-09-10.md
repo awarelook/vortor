@@ -123,11 +123,11 @@ check line by line:
 - **The current-leg trilogy** [V] — a self-contained theorem about when a driven plasma knot can and cannot
   sustain itself. Real, finished mathematics.
 - **A fluid-regularity result (R2/R3)** [V/conditional] — a proof that the object's "swirl energy" stays
-  bounded (it doesn't blow up) as long as it stays near its relaxed state, extended this year to the
+  bounded (it doesn't blow up) as long as it stays near its relaxed state, extended to the
   two-fluid (Hall) plasma at *any* viscosity ratio, by finding the right combined quantity to track. This
   connects to one of the deep open problems of fluid dynamics, and the object's piece of it is settled.
 - **A pile of exact identities** [V] — the bell-comb tones; charge/handedness = swirl sign; a clean
-  resolution of a long-standing coefficient puzzle in the mass framework (a "category error," now fixed);
+  resolution of a long-standing coefficient puzzle in the mass framework (a "category error");
   and the exact statement that the vacuum's magnetic-to-electric impedance ratio equals `α`.
 
 All of it re-runs from one command (**51/51 checks pass**), with no internet and no hidden fudge.

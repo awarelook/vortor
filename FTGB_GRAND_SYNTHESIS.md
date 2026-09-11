@@ -40,7 +40,7 @@ self-organizes by Kuramoto/Adler/Arnold dynamics, breathing through a twist-writ
 that conserves the Calugareanu-White linking `Lk = Tw + Wr`.
 
 Two results define the current version of the theory. First, the one residual left open in the
-organizing law -- the *current leg* of the four-current identification -- is now resolved as a
+organizing law -- the *current leg* of the four-current identification -- is resolved as a
 trilogy: a verified no-go in the static regime, a verified no-go in the aligned-steady regime,
 and a constructed, realizable closure in the genuinely driven regime, with the object's own
 dynamics shown to *select* the no-go (closure is externally driven, not emergent). Second, at
@@ -71,7 +71,7 @@ plasmoid -- can be read consistently across scales as electron, nucleon, exotic 
 (EVO), and neutrino, differing by scale and boundary condition rather than by kind. (2) That one
 organizing law, the profile proportionality `rho = kappa (A.B)`, ties the matter-wave continuity
 of the object to the conservation of its magnetic helicity, with a verified density leg and a
-current leg that is now named and resolved. (3) That mass is a dimensionally exact rewriting as a
+current leg that is named and resolved. (3) That mass is a dimensionally exact rewriting as a
 rate, `m = hbar omega_C / c^2`. (4) That the particle mass ladder admits a spectral-geometry
 reading on nested Hopf shells. (5) That the object is a living, driven limit cycle whose family
 self-organizes by standard synchronization dynamics. (6) That the LENR / CMNS anomaly reduces,
@@ -666,8 +666,7 @@ This honest split is what keeps the synthesis a hypothesis rather than a slogan.
 
 **Mass.** The load-bearing identity is `m = hbar omega_C / c^2`, with `omega_C` the whirl
 (Compton) *angular* frequency [V, recovers `m_e` to machine precision; e/p/d rungs to
-<=0.32%]. This is the corrected form of the retired, dimensionally-wrong slogan
-"mass = whirl": mass is a *function* of the whirl *rate* `omega_C` (the dimensional carrier),
+<=0.32%]. Mass is a *function* of the whirl *rate* `omega_C` (the dimensional carrier),
 not of any pure count. The separate whirl *number* `q = alpha^{-1} ~ 137` (orbital whirls per
 spin revolution) is NOT load-bearing for the mass and is a *suggestive analogy only* `[flag]`:
 the object's computed winding-to-spin ratio is `iota ~ 1` (a Hopf ring), not 137, so `alpha`'s
@@ -715,9 +714,7 @@ open dynamical quantity in the same class as `alpha`'s value `[S]`). The distinc
 kept separate; Cartan/Burgers *connection* torsion and Einstein-Cartan spacetime torsion are
 excluded.
 
-**The internal Dirac structure and g=2** `[V struct] / [credited] / [S] the lock`. **Superseded
-(2026-09-10):** the earlier reading that `g = 2` merely "needs an external Dirac field" or is a
-bare "open dynamical quantity" with no internal content is now sharpened -- *the Dirac bispinor
+**The internal Dirac structure and g=2** `[V struct] / [credited] / [S] the lock`. *The Dirac bispinor
 algebra is already internal to this object*, and `g = 2` is its minimal-coupling limit
 (`results/verify/g2_dirac_structure_check.py`;
 `results/FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`). Each Dirac ingredient is a computed FTGB
@@ -746,10 +743,10 @@ read as the frame-closure (Frenet) holonomy. Re-attempting the *value* from insi
 sharpens the settled negative without overturning it
 (`results/verify/alpha_resonator_imbalance_check.py`,
 `results/verify/confined_photon_null_balance_check.py`;
-`results/FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`). **Superseded (2026-09-10):** any picture of
-the electron as a *propagating loop* (a photon "chasing its tail" as a literal ring) is corrected
-to a **standing-wave resonator confined by the medium** (the polarizable vacuum / `v_A`
-dielectric) carrying a **point charge defect** -- the free propagating photon (a Hopf-Ranada null
+`results/FRONTIER_INTERNAL_DERIVATION_2026-09-10.md`). The electron is a **standing-wave resonator
+confined by the medium** (the polarizable vacuum / `v_A`
+dielectric) carrying a **point charge defect**, not a *propagating loop* (a photon "chasing its
+tail" as a literal ring); the free propagating photon (a Hopf-Ranada null
 EM knot) is *exactly* balanced (`U_E/U_B = 1`, imbalance ~`1e-16`) and so carries no `alpha`-sized
 asymmetry at all. Computing the electro/magnetostatic imbalance on the correct object gives **0**
 from the resonator mode (equipartition), **0** from the non-dispersive medium (canon), and
@@ -770,13 +767,11 @@ preprint supplies a spectral mass tower, `m_n ~ (n+1) exp(a n - zeta(3) n^2)`, w
 anti-fit signal, but the construction carries one free knob against one constraint, so
 its derivation status is `[S]`, tautology-not-excluded (Part F). The `n^2`-Casimir
 coefficients are pi-free by construction (`C5 = zeta(3)/12`); the `1/pi^2` normalization
-sits in a separate sector -- a distinction we verified against the primary source after
-retracting an earlier misreading.
+sits in a separate sector -- a distinction verified against the primary source.
 
-**Superseded (2026-09-10) -- what the tower DOES derive.** An earlier framing of the mass
-hierarchy as "circular / a numerology graveyard" is corrected: that critique checked the *bare*
-CK comb (the wrong object -- `omega_C proportional m` makes `m = hbar omega_C/c^2` a definition,
-not a ratio prediction). Read through the TUFT analytic-torsion exp-dressing (the same
+**What the tower DOES derive.** The *bare*
+CK comb is the wrong object for the hierarchy -- `omega_C proportional m` makes `m = hbar omega_C/c^2` a definition,
+not a ratio prediction. Read through the TUFT analytic-torsion exp-dressing (the same
 `m = hbar lambda/c`), the tower genuinely derives the **size/order** of the span (~`10^4`-`10^5`),
 of which ~79% is carried by a **parameter-free pure-`zeta` slope** `a_5 = 3.564112` (built from
 `zeta(3), zeta(5), pi`). The **exact ratios** remain `[preprint-claim]` (framework per-level
@@ -840,7 +835,7 @@ in *motion*, and then closes the one residual the shape left open.
 
 Section D.1 shows the object is alive: not a parked eigenmode but a driven, dissipative limit cycle -- a
 heartbeat -- whose family self-organizes by textbook synchronization machinery, and whose collective
-rhythm carries a sharpened, falsifiable spectral prediction. Section D.2 is this session's strongest new
+rhythm carries a sharpened, falsifiable spectral prediction. Section D.2 is the strongest new
 result: the **medium-to-matter current-leg trilogy**, a tiered resolution of whether matter's flow can
 BE the plasmoid's own topological winding flux. It is a triple result -- two proven no-gos, one
 constructed-realizable driven closure, a first-class selection negative, and two sharply named residuals
@@ -1082,7 +1077,7 @@ convergence is computed and logged in `results/COINCIDENCE_LEDGER.md` — check-
 
 ---
 
-## D.2 The medium-to-matter current-leg trilogy (this session's crown [V] result)
+## D.2 The medium-to-matter current-leg trilogy (the crown [V] result)
 
 This section presents the paper's newest rigorous result. It concerns the central identification of the
 whole synthesis -- that matter density and matter flow ARE the plasmoid's own topological winding
@@ -1758,8 +1753,8 @@ which is the honest shape of the theory's present boundary.
 - **The full-`[V]` current-leg realizability** reduces, via a clean chain, to a **3D
   enstrophy / Beale-Kato-Majda regularity bound** -- category-identical to the recognized
   open large-data global-regularity problem for 3D Navier-Stokes / Hall-MHD, a famous
-  *external* problem, not an FTGB-specific gap. (Update 2026-09-10: the Hall-MHD lift no longer
-  requires `Pm = 1` -- the coupled-enstrophy Lyapunov functional
+  *external* problem, not an FTGB-specific gap. (The Hall-MHD lift does not
+  require `Pm = 1` -- the coupled-enstrophy Lyapunov functional
   `L = 1/2 ||omega||^2 + kappa d_i^2 1/2 ||J||^2` tracks the individual curls, so its dissipation
   is diagonal and coercive at *every* `Pm` (the `(eta-nu)^2` obstruction was a canonical-variable
   artifact), with the entire residual localized to one Hall term absorbable under a small-data
@@ -1861,8 +1856,8 @@ Five methods, tiered:
    trivial Gaussian one (137 is a threshold freeze-out / integration constant, not `beta = 0`).
    The genericity-denominator anti-numerology control (count how many simple invariants land
    within a tolerance before crediting any single one) confirms `137.036` is a generic
-   near-miss. See `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`. **Refined (2026-09-10):**
-   computed on the *correct* object -- a standing-wave resonator confined by the medium with a
+   near-miss. See `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`.
+   Computed on the *correct* object -- a standing-wave resonator confined by the medium with a
    point charge defect, not a propagating loop -- the electro/magnetostatic imbalance is `0` from
    the mode (equipartition) and `0` from the non-dispersive medium, `= alpha` only via the
    inserted `e`; the flow's required anchor (integration constant) IS the unpinned charge
