@@ -59,10 +59,12 @@ tau = {1: 1, 2: 4, 3: 3}
 match = {1: (tau[1] == natural[0]), 2: (tau[2] == natural[1]), 3: (tau[3] == natural[2])}
 for n in (1, 2, 3):
     kn = ["unknot", "Hopf link", "trefoil"][n-1]
-    print("   gen %d (%-9s): Nielsen tau=%d  vs determinant=%d  ->  %s"
-          % (n, kn, tau[n], natural[n-1], "EXACT (forced)" if match[n] else "ANOMALY (4 != Hopf det 2)"))
+    print("   gen %d (%-9s): Nielsen tau=%d  vs 1-var determinant=%d  ->  %s"
+          % (n, kn, tau[n], natural[n-1], "EXACT (clean knot invariant)" if match[n]
+             else "!= 1-var det 2 (link Reidemeister torsion; identification FENCED for expert review)"))
 nmatch = sum(match.values())
-print("   -> %d/3 tau are exact topological invariants of the natural sequence; gen-2 is the loose one." % nmatch)
+print("   -> %d/3 tau are exact single-knot determinants; gen-2 (a 2-component LINK) needs the multivariable" % nmatch)
+print("      Reidemeister torsion, not the 1-var determinant -- its identification is fenced (see the assessment).")
 ok = ok and match[1] and match[3] and not match[2]
 
 # ---------------------------------------------------------------------------
@@ -81,9 +83,11 @@ print("  PARTLY forced, honestly bounded:")
 print("   FORCED / clean  : the knot SET is the natural minimal one (crossings 0,2,3); 2 of 3 tau are EXACT")
 print("                     knot determinants (unknot=1, trefoil=3 -- the trefoil especially, a strong match);")
 print("                     the +- parity maps to the theory's own [V] +-lambda chirality doublet.")
-print("   LOOSE (residual): gen-2 tau=4 (!= Hopf det 2, and NOT data-forced), and the comp=2/3 factor.")
-print("  So the assignment rule is mostly-topological with TWO named loose elements -- NOT a clean derivation,")
-print("  NOT a per-mass free fit. Whether TUFT topologically DERIVES the full generation<->knot map is the")
-print("  expert-review frontier; this bounds it (2/3 forced) but does NOT resolve or fabricate it. status:",
+print("   LOOSE / FENCED: gen-2 tau=4 (a link torsion, != the 1-var det 2, not data-forced) and comp=2/3 --")
+print("                     Nielsen claims BOTH are geometrically forced (Remark 19; T_H=2/3 a CS Wilson loop),")
+print("                     but that is an unadjudicated topological premise (see NIELSEN_MASS_MAP_ASSESSMENT).")
+print("  So the rule is mostly-topological with TWO fenced elements -- NOT a demonstrated fit, NOT independently")
+print("  certified as forced. Whether TUFT topologically DERIVES the full generation<->knot map needs an expert")
+print("  topology/QFT referee (the paper is in informal review); this bounds it, does NOT resolve or fabricate it. status:",
       "PASS" if ok else "FAIL")
 raise SystemExit(0 if ok else 1)

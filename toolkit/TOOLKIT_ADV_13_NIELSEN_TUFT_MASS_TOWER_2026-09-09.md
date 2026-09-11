@@ -139,6 +139,16 @@ the theory's own `[V]` `±λ` chirality doublet, and **two loose elements** (`τ
 topological — *not* a clean derivation, *not* a per-mass free fit. Whether TUFT topologically derives the full
 generation↔knot map remains the expert-review frontier; this bounds it honestly, does not resolve it.
 
+**Assessed against the primary source + FENCED (`results/NIELSEN_MASS_MAP_ASSESSMENT_2026-09-11.md`).** Nielsen
+**explicitly claims full forcing** — Remark 19 "none is a free parameter", §4.16 "No intermediate step involves
+fitting" — and names the topological quantities: the **13-mass** spectrum from ONE scale (`v=246220 MeV`), with
+a Hopf self-linking `ℓ=6`, CS level `k=6`, lens-space spectral determinants, `τ` Reidemeister/Alexander invariants,
+and CS Wilson loops (`T_H=2/3`, `√3=cos π/6`). **Verified in-repo:** the arithmetic (12/12 coefficients, 6/6 quark
+assembly), `τ(trefoil)=3=|Δ(-1)|`, `√3=cos π/6`. **Fenced (needs an expert topology/QFT referee — the paper is in
+informal review, not accepted):** whether `ℓ=6` is forced, `k=ℓ` required, `τ(2)=4` the correct link torsion, the
+lens-space determinants, and the probe point `λ_T(n)`'s `n`-dependence (where hidden per-generation freedom could
+hide). A bounded external computation, not fabricable here. See also the prior `F1_NIELSEN_TOWER_AUDIT` (vendored).
+
 ---
 
 ## M13-3 — THE CHARGED-LEPTON TOWER (S³) AND ω₃   [framework tower / credited torsion prefactor]
