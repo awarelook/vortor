@@ -11,7 +11,7 @@ the honest boundary is this project's most valuable feature.
 
 | I want to… | Go to |
 |---|---|
-| **Reproduce it from scratch** (48 checks, no network) | `pip install -r requirements.txt && python results/verify/verify_all.py` → exit 0. Map: [`results/verify/README.md`](results/verify/README.md). CI runs this on every push (badge above). **Full run-access for *every* derivation (incl. scipy/sympy provenance, FreeFEM torus eigensolves, HPC handoffs, doc build): [`REPRODUCE.md`](REPRODUCE.md).** |
+| **Reproduce it from scratch** (49 checks, no network) | `pip install -r requirements.txt && python results/verify/verify_all.py` → exit 0. Map: [`results/verify/README.md`](results/verify/README.md). CI runs this on every push (badge above). **Full run-access for *every* derivation (incl. scipy/sympy provenance, FreeFEM torus eigensolves, HPC handoffs, doc build): [`REPRODUCE.md`](REPRODUCE.md).** |
 | **Understand it in ~9 pages** | [`FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md`](FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md) (also PDF) — general-audience, honestly tiered. |
 | **Read the full theory** | [`FTGB_GRAND_SYNTHESIS.md`](FTGB_GRAND_SYNTHESIS.md) (Parts A–G). The deep organizing principle is **§A.3** ("coherence *is* regularity"). |
 | **Check what's actually proven** | the **settled vs frontier map** below, and [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md) (the honest self-assessment). |
@@ -57,7 +57,7 @@ A theory worth trusting says how to break it. These would:
 
 ```
 pip install -r requirements.txt
-python results/verify/verify_all.py      # 48/48 PASS, deterministic, no network
+python results/verify/verify_all.py      # 49/49 PASS, deterministic, no network
 ```
 
 Everything load-bearing has a script; the foundation numbers are re-derived in-repo

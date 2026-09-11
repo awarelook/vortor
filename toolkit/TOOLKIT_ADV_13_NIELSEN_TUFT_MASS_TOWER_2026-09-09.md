@@ -130,6 +130,15 @@ whether those assignments are **theory-forced** (a derivation) or **systematical
 the topology needs the preprint + expert review, not certified here. The `6π⁵ ≈ m_p/m_e` (0.0019%) coincidence is
 kept as a computed `[flag]` clue.
 
+**How forced IS the assignment rule? — bounded (`nielsen_assignment_forced_check.py`, `[V]`).** The knot
+determinants `|Δ(-1)|` of the natural minimal sequence are (unknot 1, Hopf 2, trefoil 3, fig-8 5). Nielsen's
+`τ=(1,4,3)`: gen-1 (1) and **gen-3 (trefoil = 3) are EXACT** topological invariants — genuine, not fitted;
+**gen-2 uses 4, ≠ the Hopf-link determinant 2** (an anomaly, and the mass data doesn't discriminate 2 vs 4 —
+a `~0.5%` shift, both <1% of PDG). So the rule is **2/3 topologically forced**, with the `±` parity mapping to
+the theory's own `[V]` `±λ` chirality doublet, and **two loose elements** (`τ(2)=4`, `comp=2/3`). Mostly
+topological — *not* a clean derivation, *not* a per-mass free fit. Whether TUFT topologically derives the full
+generation↔knot map remains the expert-review frontier; this bounds it honestly, does not resolve it.
+
 ---
 
 ## M13-3 — THE CHARGED-LEPTON TOWER (S³) AND ω₃   [framework tower / credited torsion prefactor]
