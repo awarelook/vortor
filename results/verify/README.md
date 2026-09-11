@@ -12,8 +12,8 @@ python results/verify/verify_all.py      # runs all checks + the engine; exit 0 
 
 `verify_all.py` runs each theory script plus `engine/ftgb_engine.py`, captures exit
 codes, and prints a `PASS/FAIL` summary (it is also a CI gate — nonzero exit on any
-failure). Deterministic, no network. Current status: **45 / 45 PASS** on CPython 3.12
-(43 theory scripts + the engine `ftgb_engine.py` + the synthesis modeler
+failure). Deterministic, no network. Current status: **46 / 46 PASS** on CPython 3.12
+(44 theory scripts + the engine `ftgb_engine.py` + the synthesis modeler
 `engine/ftgb_synthesis_modeler.py` — the executable MATH↔PHYSICS↔EXPERIMENT isomorph, which
 runs the live `[V]` anchors). The suite spans the `[V]`-core, the internalized `[credited]`
 phase-dynamics/number-theory (`phase_dynamics_gml_check`, `rodin_vbm_check`) with `[S]` FTGB
@@ -25,6 +25,7 @@ bridges, and one `[speculative frontier]` hypothesis-test (`microtubule_ck_comb_
 |---|---|---|---|
 | `ck_eigenvalues_check.py` | roots of `tan x = x` (`λ₁R=4.4934`, first six) two ways (bisection ‖ mpmath); carrier comb ratios `1:1.719:2.427`; `c_CK(ε→0)=1/(2 j₀,₁)=0.20792`; cross-checks the engine's hardcoded `CK_ROOTS` | `MATH_TOOLKIT_BASE.md` §3, `foundation/30_CANONICAL_NUMBERS.md` §C/§H, M7-2 | `[V]` / `[credited]` |
 | `canonical_numbers_provenance_check.py` | **provenance closure (self-contained foundation):** re-derives the DERIVED canonical numbers from the cited anchors, in-repo — `v_A=R/τ`, `B=v_A√(μ₀n_i m_i)`, `b_eff=(Γ/R_dim)²m_i v_A²` (=magnetic energy/ion), `ħ_eff=(Γ/R_dim²)m_i v_A R`, `d_i=c/ω_pi` — each ≤0.1% vs the tabulated §A/§B value. Full provenance scripts vendored (frozen) in `frontier_calcs/`; states the `v_A`-residual caveat | `foundation/30_CANONICAL_NUMBERS.md` §A/§B/§I, `frontier_calcs/` | `[V]` |
+| `absolute_magnitude_invariance_check.py` | **the `v_A` residual, quarantined by proof:** scaling `v_A` over a 65× band leaves every DIMENSIONLESS observable invariant to machine precision (comb ratios, beat/carrier, cascade, `Q_H`, `C`, `b_eff/`mag-per-ion — spread ≤`1e-16`); only ABSOLUTE magnitudes scale, by the exact documented powers (×13 linear, ×169 square-law). Band grounded in real measured `(B,n)` data; the collapsing measurement named. No load-bearing claim depends on `v_A` | `V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md`, `30_CANONICAL_NUMBERS.md` §A | `[V]` |
 | `r2_identity_check.py` | the exact vortex-stretching = Lamb-vector flux identity `∫ω·(ω·∇)v = ∫(∇×ω)·(v×ω)` (both forms agree ~9 sig figs) | `R2_NEAR_BELTRAMI_ENSTROPHY_THEOREM`, engine | `[V]` |
 | `r2_gronwall_check.py` | the R2 enstrophy/BKM threshold `⟨η²⟩ < ν²λ₁` (time-integrated, sharp) — bounded below / blows up above | `R2_NEAR_BELTRAMI_ENSTROPHY_THEOREM` | `[V]`cond |
 | `exact_beltrami_regularity_check.py` | **the object AS its coherent state is globally regular — validly, UNconditionally.** At the exact Beltrami state the Lamb vector `u×ω=0` pointwise (`3e-15`), so the advection `u·∇u=∇(½‖u‖²)` is a pure gradient (`curl=9e-14`, absorbed into pressure): `u(t)=e^{−νλ²t}u₀` is an **exact eternal smooth solution**, enstrophy decays monotonically → BKM never triggers. The blow-up nonlinearity is **null at coherence** — coherence *is* regularity. *(Does NOT claim the general/driven large-data problem — that stays open; the object's exact state doesn't depend on it.)* | §4b, `R2_NEAR_BELTRAMI_ENSTROPHY_THEOREM` | `[V]` |
