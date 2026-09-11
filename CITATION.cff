@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "The Coherent Object (FTGB): a driven Beltrami-Hopf toroidal soliton, read as field and matter wave"
+abstract: >
+  A reproducible, honestly-tiered synthesis around one driven, force-free Beltrami-Hopf toroidal
+  soliton, read at once as a plasma field and a Madelung matter wave. The verified core is a set of
+  plasma / topological-fluid results (the Chandrasekhar-Kendall carrier spectrum; the R2 near-Beltrami
+  enstrophy / BKM conditional-regularity theorem; the R3 Hall-MHD Pm-not-equal-1 coupled-Lyapunov lift;
+  exact-state global regularity, where the object's nonlinearity is null at coherence; the topological
+  invariants Q_H = 1 and Chern C = +/-2; the Beltrami = Reeb-field contact structure with Weinstein-Taubes
+  closed-orbit existence; the chirality / charge-conjugation / Majorana cluster; the S^3 curl spectral
+  zeta). Around this core sits a disciplined, tiered speculative frontier (the matter-wave particle
+  reading, the alpha value as a settled-negative, LENR energetics, the lepton mass tower). Every
+  load-bearing claim is reproduced by a script (verify_all.py, 46/46, CI-gated); no claim exceeds its
+  tier; settled-negatives are kept.
+type: software
+authors:
+  - family-names: Hanks
+    given-names: Nathaniel
+    email: nathanielhanks@gmail.com
+version: "1.0.0"
+date-released: 2026-09-10
+repository-code: "https://github.com/awarelook/vortor"
+keywords:
+  - Beltrami field
+  - force-free plasma
+  - Hopf soliton
+  - Reeb field
+  - contact topology
+  - Chandrasekhar-Kendall
+  - Woltjer-Taylor relaxation
+  - magnetic helicity
+  - Navier-Stokes regularity
+  - Hall-MHD
+  - matter wave
+  - reproducible physics
