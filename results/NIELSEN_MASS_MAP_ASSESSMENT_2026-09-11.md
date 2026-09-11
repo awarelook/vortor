@@ -68,10 +68,22 @@ so the gap is closed for them and shrinks to the framework's *identifications*:
 6. **`τ(2) = 4`** — *not* the Hopf-link 1-variable determinant (= 2); its identification as the correct
    multivariable link Reidemeister torsion is a framework detail we did not re-derive (fenced).
 
+## The terminus: the identification map (`nielsen_identification_map_check.py`)
+
+With the topological inputs now `[V-us]`, the *last* piece is the **identification map** — which knot maps to
+which generation. Computation takes it as far as: it is **one ordering rule** (generation = knot by crossing
+number: unknot 0, Hopf 2, trefoil 3), **monotone** with generation mass (consistent with "mass = knot/Beltrami
+energy"), **~0 continuous parameters**, and **predictive** (gen-4 = figure-8, 4 crossings). That is the end of
+what a *derivation* can do — because the map is a **physical identification** ("a generation *is* the n-th
+knotted Beltrami-Hopf configuration"), the same *kind* of claim as "the electron *is* this soliton": a
+peer-reviewed framework hypothesis, structurally natural, but **not a theorem derivable from math alone**.
+Derivation correctly stops here; the theory's central physical postulate begins. The sharpest open sub-question
+is **why exactly 3 generations** (a topological cutoff the theory would need to force).
+
 ## Honest verdict + scope
 
-**The tower is a derivation-shaped result whose arithmetic we verified and whose forcing is peer-reviewed
-(accepted) but not independently reproduced by us** — "[credited: peer-reviewed TUFT framework] + [V-us]
+**The tower is a derivation-shaped result whose arithmetic + topological inputs we verified and whose physical
+identifications are peer-reviewed (accepted) but are a framework hypothesis, not derivable by us** — "[credited: peer-reviewed TUFT framework] + [V-us]
 (coefficients 12/12, quark assembly 6/6; `τ(trefoil)=3`, `√3=cos π/6` clean) + the geometric *forcing* passed
 expert peer review but is not *independently re-derived here*." Do **not** carry it at bare `[V]` (it is a
 credited framework result we cite, not one we derived); do **not** fold it into the FTGB plasmoid core (they
