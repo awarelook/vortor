@@ -5,7 +5,7 @@
 **Author:** Nathaniel Hanks · **A self-contained package:** one interactive modeler + the two
 manuscripts + the method toolkit + two execute-ready hand-off packages.
 
-*Reproducibility gate: every push runs the full model (`verify_all.py`, **46/46** checks) on a clean
+*Reproducibility gate: every push runs the full model (`verify_all.py`, **47/47** checks) on a clean
 Ubuntu + Python 3.12 runner via GitHub Actions — a green badge means the entire model reproduces from
 scratch, deterministically, with no network. Tested stack: `numpy==2.4.6`, `mpmath==1.3.0`.*
 
@@ -66,7 +66,7 @@ given when they were published).
 | `engine/` | **`ftgb_engine.py`** — the theory as one executable model: anchors {B,n,m_i,R} → static structure + dynamics + theorem verification, all tiered (`python engine/ftgb_engine.py`) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations — incl. the **R2 numerical run** now scoped to a runnable reference solver (`r2_reference_solver.py`) + spec that a collaborator scales to GPU |
 | `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the **α resolution** (the winding derivation settled-**negative**, `ι≈1` not 137; α correctly-typed by several lenses — g−2 beat, impedance — but not derived, value open), the **chirality / charge-conjugation / Majorana** cluster (all computed: chirality = `sign(λ)`, antiparticle = `−λ` = C, neutrino = self-dual `θ_χ=45°`), the 2026-09-10 **experimental confrontation** (each fingerprint vs the published record), + **`verify/`** — the reproducible math model: every load-bearing `[V]` claim has a script (map in `results/verify/README.md`) |
-| `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: **46/46** checks (44 theory scripts + the engine + the synthesis modeler), exit 0 iff every one passes |
+| `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: **47/47** checks (45 theory scripts + the engine + the synthesis modeler), exit 0 iff every one passes |
 
 ## Where this credibly stands — the practical, positive value
 

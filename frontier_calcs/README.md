@@ -38,3 +38,17 @@ provenance results are covered by the CI gate even without scipy.
 **residual band** — there is no independent air-plasmoid `(B, n)` measurement — so absolute Hz/Tesla/eV
 values travel with a 5–13× (linear) to ~170× (square-law, `b_eff`/anapole) band. Only **dimensionless
 ratios** are load-bearing. See `V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md` (root) and `tension_T1_T2_resolution.py`.
+
+## Additional vendored provenance (2026-09-10 integrity pass)
+
+To eliminate every phantom script reference, the toolkit-module / handoff provenance scripts cited across the
+corpus were also vendored (frozen) here: `toolkit_adv07_buckingham_pi.py`, `toolkit_adv08_qwm_math_conversion.py`,
+the current-leg no-go scripts (`driven_canonical_aligned_2026-09-08.py`, `driven_pv_const_nogo_2026-09-08.py`,
+`driven_nonaligned_closure_2026-09-08.py` — the trilogy core is *also* reproduced in-repo by
+`results/verify/currentleg_trilogy_check.py`), `self_unified_skyrme_multibody_2026-09-08.py`,
+`b4_moduli_geodesic_executed_2026-09-08.py`, `b4_two_diabatic_relaxation_2026-09-08.py`,
+`seesaw_ftgb_duality_bridge.py`, `nielsen_quark_assembly_verify.py`,
+`benchtop_quadruplet_independent_circuit_crosscheck.py`, and the R2 exploration scripts
+(`r2_grashof_threshold_*`, `r2_near_beltrami_enstrophy_*`, `r2_spectral_retry_*`). Deps vary (some need
+scipy/sympy); each is cited by its toolkit module. These are a **frozen provenance record**, not part of the
+CI gate — every *load-bearing* result is reproduced by an in-repo `results/verify/` script.

@@ -35,7 +35,7 @@ reproducible script; nothing is fabricated.
 - `DRIVEN_NONALIGNED_CLOSURE_2026-09-08` (+ `driven_nonaligned_closure_2026-09-08.py`) -- M10-1, M10-2.
 - `DRIVEN_PV_CONST_NOGO_PROOF_2026-09-08` (+ `..._VERIFY`, `driven_pv_const_nogo_2026-09-08.py`) -- M10-2.
 - `CURRENTLEG_RESIDUAL_REDUCIBILITY_2026-09-08`, `CURRENTLEG_R1_CURRENTNULL_2026-09-08` -- M10-2.
-- `SELF_UNIFIED_SKYRME_MULTIBODY_2026-09-08` (+ `..._DELTA_VERIFY`, `self_unified_skyrme_multibody_..py`) -- M10-3.
+- `SELF_UNIFIED_SKYRME_MULTIBODY_2026-09-08` (+ `..._DELTA_VERIFY`, `self_unified_skyrme_multibody_2026-09-08.py`) -- M10-3.
 - `B4_MODULI_GEODESIC_EXECUTED_2026-09-08`, `B4_TWO_DIABATIC_RELAXATION_2026-09-08` -- M10-3 (the warning).
 - `SEESAW_FTGB_DUALITY_BRIDGE_2026-09-08` (+ `seesaw_ftgb_duality_bridge.py`) -- M10-4.
 - `ALPHA_KPV_RUNNING_BRIDGE_2026-09-08`, `ALPHA_IR_FIXED_POINT_HOLONOMY_2026-09-08` -- M10-5.
@@ -423,22 +423,22 @@ B=0). Always run the `S = exp(delta)` freeze-both sanity check.
 |---|---|---|---|
 | M10-1 | Canonical helicity `d_mu K^mu=0` ideal even when `d_mu K^mu_mag=-2E.B`; `f_ext perp Omega` conserves it | [V]/[credited] | `eps.Omega=0` Casimir; residual ~1e-16; Bae-Kang-Shin arXiv:2504.07629 VERIFIED real (confirm Prop. label at lock; carried by Steinhauer-Ishida + Mahajan-Yoshida) |
 | M10-2 | Closure-iff-magnitude-const no-go template; `(A'B'C')^2>=0`; measure-zero vs finite-volume | [V] (+[S] corner) | static 0.605; `P.v` band 0.46-0.66; const-`|P|` closes ~1e-16; R1 codim-3 benign |
-| M10-3 | Moduli-geodesic `(mu,V)` VALIDATED (kink 1.4e-6, force 0.99, breather p=1.93 vs 2.0, ceiling ~2.2) | [S-model VALIDATED] | `self_unified_skyrme_multibody_..py`; diagonal 66-95 MeV = BBT |
+| M10-3 | Moduli-geodesic `(mu,V)` VALIDATED (kink 1.4e-6, force 0.99, breather p=1.93 vs 2.0, ceiling ~2.2) | [S-model VALIDATED] | `self_unified_skyrme_multibody_2026-09-08.py`; diagonal 66-95 MeV = BBT |
 | M10-3-warn | Diagonal quantum != off-diagonal `Delta`; needs real relaxation; freeze-both gate | [V]/[label BLOCKED] | `log10 S ~ 9600`; product/blend/coarse all fail; `dx<=0.06-0.10 fm` |
 | M10-4 | Seesaw = frequency downconversion; ladder calibrated (0.04%); genuine seesaw needs off-ladder scale | [A]/[V-dim]/NEG | `seesaw_ftgb_duality_bridge.py`; nu rung 0.05002 eV; only trivial on-ladder |
-| M10-5 | RG dielectric `K_PV=alpha(0)/alpha(q^2)`; 137=IR endpoint; no forcing FP; genericity control | [S-mechanism]/[flagged] | `alpha_kpv_running.py`, `alpha_ir_fixed_point.py`; 18 vs 12 @0.5% |
+| M10-5 | RG dielectric `K_PV=alpha(0)/alpha(q^2)`; 137=IR endpoint; no forcing FP; genericity control | [S-mechanism]/[flagged] | `results/verify/alpha_running.py`, `results/verify/alpha_genericity_check.py` (α settled-negative, in-repo); 18 vs 12 @0.5% |
 | M10-7 | Limits + the load-bearing moduli warning | [V] | statement of scope |
 
 ## Verification coverage (M10)
 - **Proven/verified in-project (traced):** canonical helicity Casimir + local `d_mu K^mu=0` (residual ~1e-16,
-  `driven_canonical_aligned_..py`); static `|B|=const` [V] no-go (residual 0.605); aligned `P.v=const` [V]
-  no-go (band 0.46-0.66; const-`|P|` control ~1e-16; `driven_pv_const_nogo_..py`); R1 current-null measure-zero
+  `driven_canonical_aligned_2026-09-08.py`); static `|B|=const` [V] no-go (residual 0.605); aligned `P.v=const` [V]
+  no-go (band 0.46-0.66; const-`|P|` control ~1e-16; `driven_pv_const_nogo_2026-09-08.py`); R1 current-null measure-zero
   benign (codim-3, `dA` L1/`|dA|^2` L2 integrable); sine-Gordon validation (kink 1.4e-6, force 0.9%, breather
-  p=1.93 vs 2.0, ceiling ~2.2, `self_unified_skyrme_multibody_..py`); B4 diagonal `hbar*omega_merger=66-95 MeV`
-  = BBT `Eg` ~20 MeV, freeze-both `log10 S~9600` (`b4_moduli_geodesic_executed_..py`); O(4) baryon-monitor
-  dx-convergence (`b4_two_diabatic_relaxation_..py`); ladder calibration nu=0.05002 eV @0.04%, e/p/d <=0.3%
-  (`seesaw_ftgb_duality_bridge.py`); alpha IR endpoint + genericity denominators (`alpha_kpv_running.py`,
-  `alpha_ir_fixed_point.py`).
+  p=1.93 vs 2.0, ceiling ~2.2, `self_unified_skyrme_multibody_2026-09-08.py`); B4 diagonal `hbar*omega_merger=66-95 MeV`
+  = BBT `Eg` ~20 MeV, freeze-both `log10 S~9600` (`b4_moduli_geodesic_executed_2026-09-08.py`); O(4) baryon-monitor
+  dx-convergence (`b4_two_diabatic_relaxation_2026-09-08.py`); ladder calibration nu=0.05002 eV @0.04%, e/p/d <=0.3%
+  (`seesaw_ftgb_duality_bridge.py`); alpha IR endpoint + genericity denominators — the α winding is **settled-negative**, reproduced in-repo by
+  `results/verify/alpha_running.py`, `alpha_genericity_check.py`, `ck_winding_ratio_check.py` (analysis: `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`).
 - **Numbers traced, not invented:** every value above quotes its source doc + script. No nuclear rate,
   cross-section, branching magnitude, mass, or scale is fabricated; `E_fm=2.5 MeV` retracted; baryon conserved.
 
