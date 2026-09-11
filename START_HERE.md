@@ -18,6 +18,8 @@ the honest boundary is this project's most valuable feature.
 | **See it as one executable object** | `python engine/ftgb_synthesis_modeler.py` — the MATH ↔ PHYSICS ↔ EXPERIMENT isomorph with its honest seams. |
 | **Try to kill it** | the **falsifiers** below. |
 | **Cite an absolute number (Hz/T/eV)** | read [`V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md`](V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md) **first** — absolutes carry a band; ratios don't. |
+| **Map every document** | [`INDEX.md`](INDEX.md) — the complete document map, by purpose. |
+| **Look up a symbol or term** | [`NOTATION.md`](NOTATION.md) (symbols: λ, `Q_H`, `C`, `v_A`, …) · [`GLOSSARY.md`](GLOSSARY.md) (concepts) · [`REFERENCES.md`](REFERENCES.md) (citations). |
 
 ## Settled vs frontier — the trust map
 

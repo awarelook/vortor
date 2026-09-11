@@ -179,3 +179,32 @@ Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
 
 *No fringe-framework physical claim in this glossary is load-bearing; each is folded as method/analogy with a
 named tier. Citations: `REFERENCES.md`.*
+
+## 8. Contact topology, invariants, and regularity (the geometric core, M15 + 2026-09-10)
+
+- **Reeb field** — the vector field `R` of a contact form `α` (defined by `α(R)=1`, `ι_R dα=0`). A Beltrami
+  field **is** a Reeb field: `α = B♭` gives `α∧dα = λ‖B‖²vol` (contact) and `curl B × B = 0` (so `B` is the
+  Reeb direction). `[credited: Etnyre–Ghrist 2000]` · `reeb_spectral_geometry_check.py`.
+- **Contact structure** — a maximally non-integrable hyperplane field (`α∧dα ≠ 0`); here the force-free field's
+  natural geometry, its characteristic foliation the Hopf fibration. Makes the winding a genuine topological
+  quantity. `[credited]`.
+- **Weinstein conjecture / Taubes** — every Reeb field on a closed 3-manifold has a **closed orbit** (proved
+  in dim 3 by Taubes 2007). ⇒ the resonator's standing-wave loop **exists by topology**, not assumption. `[credited]`.
+- **Hopf charge `Q_H`** — the Hopf invariant = linking number of two preimage fibres (Whitehead); the object
+  carries `Q_H = 1`. `[V]` · Gauss linking, `topology_invariants_check.py`.
+- **Chern number `C = ±2`** — the wave-mode topological index of the CK/Beltrami beat eigenmode = the spin-1
+  **photon helicity Chern** (`2s`, Fukui–Hatsugai over `S²`); `|C| = 2 Q_H`. A credited convergence (the
+  object's eigenmode carries the photon's index). `[V]/[credited]` · `topology_invariants_check.py`.
+- **Anapole (toroidal dipole)** — Zel'dovich's confined-field configuration where the ordinary radiating
+  dipole cancels (to `~1e-16`) → **nonradiating**. The theory's actual EM object; its multipole is
+  fractal-invariant, its strength ladders `~N^p` per cascade level. `[V]/[credited: Kaelberer 2010; Papasimakis
+  2016]` · `oam_toroidal_resonator_resolution_check.py`.
+- **Cascade base `N` / `N^L`** — the self-similar fractal ladder of nested tori: `λ_L = λ_0 N^L`, anapole
+  `T_L/T_{L+1} = N⁴`, continuous helicity `~N^{−4L}` while the integer winding is exactly conserved. `[V]` (M14).
+- **Null of self-interaction / "coherence is regularity"** — at the exact Beltrami state the Lamb vector
+  `u×ω = 0`, so the advection `u·∇u = ∇(½‖u‖²)` is a pure gradient and `u(t)=e^{−νλ²t}u₀` is an **exact
+  eternal smooth solution** (no blow-up). The object is coherent *because* its self-interaction cancels there.
+  `[V]` for the exact state; the driven/large-data case stays open (§A.3, `exact_beltrami_regularity_check.py`).
+- **`v_A` residual** — `v_A` is a self-consistency residual, not a measurement; every **absolute** magnitude
+  carries a band (linear / square-law), only **dimensionless ratios** are load-bearing (proven-quarantined,
+  `absolute_magnitude_invariance_check.py`; see `V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md`).
