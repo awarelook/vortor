@@ -246,6 +246,16 @@ identity is `[V]` (both forms agree to ~9 sig figs, `r2_identity_check.py`); the
 the Woltjer-Taylor *variational* selection (§4): the same force-free state that is energetically selected is
 the one that shuts off enstrophy production.
 
+**The exact state is unconditionally regular (the `δ=0` corner; `exact_beltrami_regularity_check.py`) `[V]`.**
+At the *exact* Beltrami state the Lamb vector is null (`u×ω = λ(u×u) = 0` pointwise), so the advection
+`u·∇u = ∇(½|u|²)` is a **pure gradient** (absorbed into pressure) and `u(t) = e^{−νλ²t}u₀` is an **exact
+eternal smooth solution** with monotonically-decaying enstrophy -- BKM never triggers. So **the coherent
+object, as its exact force-free state, is globally regular validly and completely** (the blow-up nonlinearity
+is *null at coherence* -- coherence is the regularity). This is the honest resolution of "does the object
+blow up": no. What stays OPEN, and is not claimed, is the *general/driven* large-data question -- whether a
+small driven departure `δ` (strongly Hall-mediated here, `d_i > R`, B-29) also stays regular -- which is the
+open 3-D Hall-MHD problem; the exact object does not depend on it.
+
 ---
 
 ## §9 -- One operator, three readings: the dual reading, K_PV, and the topology   [the load-bearing anchor]
@@ -499,6 +509,7 @@ never implies these are as settled as §§1-9:
 | B-27 | Topology invariants in-repo: `Q_H=1` = Gauss linking of two Hopf fibres (Whitehead); `C=+-2` = spin-1 photon-helicity Chern `2s` (Fukui-Hatsugai over `S^2`); `|C|=2 Q_H`, credited convergence | [V]/[credited] | §9d, §F; `topology_invariants_check.py`; Bliokh 15 / Palmerduca-Qin 24 |
 | B-28 | Beltrami = Reeb field of a contact structure (`alpha^dalpha=lam|B|^2 vol`, `curl B x B=0`); Weinstein/Taubes -> closed field line exists by topology; curl spectrum unifies comb+cascade+`S^3` torsion | [V]/[credited] | M15; `reeb_spectral_geometry_check.py`; Etnyre-Ghrist 00 / Taubes 07 |
 | B-29 | Physical object vs R3 condition (iii): `d_i=0.296 m > R=0.12 m` and `S_di=d_i v_A/eta ~ 15-2400 >> 1` -> Hall-smallness VIOLATED, strongly Hall-mediated; object sits OUTSIDE R3's proven-regular regime (gap named, conditional theorem not refuted) | [V] | §4a/§4b; `r3_hall_smallness_physical_check.py`; 30_CANONICAL §A/§B |
+| B-30 | Exact-state global regularity: at Beltrami the Lamb vector `u x omega = 0` pointwise, so advection `u.grad u` is a PURE GRADIENT (absorbed into pressure) and `u(t)=e^{-nu lam^2 t}u_0` is an exact eternal smooth solution (enstrophy decays) -> the object AS its coherent state is globally regular UNCONDITIONALLY; general/driven case stays open | [V] | §4b; `exact_beltrami_regularity_check.py` |
 
 ## References / provenance
 

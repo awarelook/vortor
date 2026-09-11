@@ -2172,6 +2172,16 @@ Integrating the first by parts on the periodic box, `∫ ω·∇×L = ∫ (∇×
 `∇×v = λv`), then `P = 0` identically: **a force-free field produces no enstrophy.** Near-Beltrami, `P` is
 controlled *linearly* by the Lamb vector — not by a generic strain norm.
 
+**Corollary (the object *as* its coherent state is globally regular — unconditionally) `[V]`
+(`exact_beltrami_regularity_check.py`).** Since `L = v×ω = 0` at the exact Beltrami state, the advection
+`v·∇v = (∇×v)×v + ∇(½|v|²) = ∇(½|v|²)` is a **pure gradient** (absorbed into pressure), and — a Beltrami
+field being a Stokes eigenfunction (`Δv = −λ²v`) — `v(t) = e^{−νλ²t}v₀` is an **exact eternal smooth
+solution** with enstrophy `Z(t) = Z₀e^{−2νλ²t}` decaying monotonically, so `∫₀^∞‖ω‖∞dt < ∞` (Beale–Kato–
+Majda) and there is **no blow-up**. So the answer to "does the coherent object blow up?" is a clean **no**:
+the blow-up nonlinearity is *null at coherence* — the coherence is the regularity. This is *not* a claim
+about general/driven large-data flow (that stays open, and is strongly Hall-mediated for this object,
+`r3_hall_smallness_physical_check.py`); the exact object does not depend on it.
+
 *Numerical confirmation (`r2_identity_check.py`).* Both forms of `P` agree to ~9 significant figures on a
 generic (Gaussian) divergence-free field where `P = −1.281×10⁻⁹` is a genuine value seven orders above the
 `~10⁻¹⁶` round-off floor; `P → 10⁻¹⁶` (machine zero) on an exact ABC Beltrami field; and the auxiliary
