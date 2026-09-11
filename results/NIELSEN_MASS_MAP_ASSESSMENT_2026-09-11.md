@@ -46,21 +46,27 @@ the forcing + `[V-us]` for the arithmetic — *not* `[preprint-claim]`, and *not
 
 ## The residual — what we did NOT independently reproduce (a bounded external item)
 
-The arithmetic is settled here; the topological **forcing** is peer-reviewed (accepted) but not re-derived by us.
-These are the specific derivations a reader wanting *our* independent certification would recompute (they are
-beyond a `numpy` check — knot-theory / CS-QFT):
+**Update — we have now independently reproduced the topological INPUTS** (`nielsen_topology_forcing_check.py`),
+so the gap is closed for them and shrinks to the framework's *identifications*:
 
-1. **Is `ℓ = 6` forced?** (the trefoil Hopf self-linking that sets the lepton slope `a = κ·γ_eff·ℓ`). Asserted
-   "geometrically forced"; not certified.
-2. **Is `k = ℓ` required?** (the Chern–Simons level = the self-linking). A structural premise, not adjudicated.
-3. **Is `τ(2) = 4` a genuine invariant of the n=2 link?** It is *not* the Hopf-link 1-variable determinant (= 2);
-   its identification as the correct (multivariable) Reidemeister torsion of that link is part of the
-   unadjudicated topology — the one knot value not matching a standard single-knot determinant.
-4. **The lens-space spectral determinants** (Nash–O'Connor / Cheeger–Müller) that set the ζ-coefficient
-   normalizations — cited, textbook machinery, but their specific application here is uncertified.
-5. **The probe point (where hidden per-generation freedom could hide):** the parity splitting
-   `λ_T(n) = 2/π + (ζ(3)/12π)(5/2 − n)` (eq.103) carries an explicit `n`-dependent term — flag it as the natural
-   home of any concealed freedom.
+**NOW REPRODUCED BY US `[V-us]`** (no longer "peer-reviewed only"):
+
+1. **`ℓ = 6`** — the trefoil is the `(2,3)`-torus knot; its **torus-surface framing self-linking = `p·q` = 6**,
+   computed directly as the Gauss linking integral `lk(K, K_pushoff) = 6` (and the general `T(p,q) → pq` law
+   verified). The lepton slope `a = κ·γ_eff·ℓ` therefore rests on a self-linking *we* compute.
+2. **The framing factor** `√3/2 = cos(π/6) = cos(π/ℓ)` (the 6-fold framing Wilson loop) — exact.
+3. **The `S³`/lens-space spectral determinant** `ζ'(-2) = -ζ(3)/(4π²) = ω₃` (Ray-Singer = Cheeger-Müller) to
+   30 dps, and the lens torsion `τ_R(L(n,1)) = 1/n` — the ζ-coefficient normalization, reproduced.
+
+**STILL the framework's (peer-reviewed, reproduced-not-re-refereed by us):**
+
+4. **The physical identifications** — *which* knot maps to *which* generation/lepton, the CS-level premise
+   `k = ℓ`, and the full partition-function assembly. These are structural choices of the theory (accepted in
+   review), not topological facts we recompute.
+5. **The probe point** `λ_T(n) = 2/π + (ζ(3)/12π)(5/2 − n)` (eq.103) — the `n`-dependent parity term, the
+   natural home of any concealed per-generation freedom; flagged.
+6. **`τ(2) = 4`** — *not* the Hopf-link 1-variable determinant (= 2); its identification as the correct
+   multivariable link Reidemeister torsion is a framework detail we did not re-derive (fenced).
 
 ## Honest verdict + scope
 

@@ -12,8 +12,8 @@ python results/verify/verify_all.py      # runs all checks + the engine; exit 0 
 
 `verify_all.py` runs each theory script plus `engine/ftgb_engine.py`, captures exit
 codes, and prints a `PASS/FAIL` summary (it is also a CI gate — nonzero exit on any
-failure). Deterministic, no network. Current status: **49 / 49 PASS** on CPython 3.12
-(47 theory scripts + the engine `ftgb_engine.py` + the synthesis modeler
+failure). Deterministic, no network. Current status: **50 / 50 PASS** on CPython 3.12
+(48 theory scripts + the engine `ftgb_engine.py` + the synthesis modeler
 `engine/ftgb_synthesis_modeler.py` — the executable MATH↔PHYSICS↔EXPERIMENT isomorph, which
 runs the live `[V]` anchors). The suite spans the `[V]`-core, the internalized `[credited]`
 phase-dynamics/number-theory (`phase_dynamics_gml_check`, `rodin_vbm_check`) with `[S]` FTGB
@@ -36,6 +36,7 @@ bridges, and one `[speculative frontier]` hypothesis-test (`microtubule_ck_comb_
 | `tuft_mass_tower_check.py` | Nielsen ζ-coefficients (`C₅=ζ(3)/12`, …), the exact `C₅/ω₃=π²/3`, lens-space `τ_R(L(n,1))=1/n`; blind-fit VALUES flagged | M13 | `[V]` core / `[flag]` values |
 | `nielsen_mass_completion_check.py` | **seeking Nielsen to *complete* the masses (the honest ceiling):** every quark-tower coefficient is a closed-form ζ-value, so the tower has **one continuous free parameter** (the scale `Λ₅`=Higgs VEV). Fix `Λ₅` from **u alone** → the other 5 masses are **parameter-free ratio *predictions***, 5/5 within ~1% of PDG (<0.5% of Nielsen's table). Stronger than "79%"; the residual `[framework/S]` is precisely named — whether the discrete knot/parity/`comp` **assignments** are theory-forced or structured-fit (topology needs expert review). `6π⁵≈m_p/m_e` (0.0019%) kept as a clue | M13, `COINCIDENCE_LEDGER` | `[V]` arith / `[framework/S]` |
 | `nielsen_assignment_forced_check.py` | **is the mass-tower assignment rule forced or fitted?** (the frontier). The knot determinants `|Δ(-1)|` of the natural minimal sequence are (unknot 1, Hopf 2, trefoil 3, fig-8 5). Nielsen's `τ=(1,4,3)`: gen-1 (1) and **gen-3 (trefoil=3) are EXACT** topological invariants; **gen-2 (4) ≠ Hopf det 2** (anomaly, and the data doesn't discriminate 2 vs 4). So the rule is **2/3 topologically forced** + `±`=the `[V]` chirality doublet, with two loose elements (`τ(2)=4`, `comp=2/3`) — mostly-topological, not a clean derivation, not a per-mass fit. The full map's derivation is the expert-review frontier | M13, `nielsen_mass_completion_check` | `[V]` bound / `[framework/S]` |
+| `nielsen_topology_forcing_check.py` | **we now INDEPENDENTLY reproduce the tower's topological inputs** (closing the 'not reproduced by us' gap): **`ℓ=6`** = the trefoil `(2,3)`-torus-knot **surface self-linking** = `p·q` (Gauss integral = 6; general `T(p,q)→pq` verified); the framing factor **`√3/2 = cos(π/6) = cos(π/ℓ)`**; the **S³ Ray-Singer determinant** `ζ'(-2)=-ζ(3)/4π²` (`=ω₃`) + lens torsion `1/n`. So the inputs are `[V-us]`; only the framework *identifications* (knot↔generation, `k=ℓ`, partition-function assembly) remain `[credited: peer-reviewed TUFT]` | `NIELSEN_MASS_MAP_ASSESSMENT`, M13 | `[V]` |
 | `greenyer_beat_cascade_check.py` | cascade `N^L`, anapole `N⁴=256`, the golden-ratio three-wave dichotomy, Fibonacci Manley-Rowe; `N_crit` band flagged | M14 | `[V]` / `[prediction]` |
 | `egm_sense_checks.py` | Storti EGM numerical audit — the 2:1 harmonic is definitional; radii/H₀ miss; `e^(-2/3)` is dead (`→72`, not 137) | M11-4 | `[V]` (audit) / `[flag]`/`[excised]` |
 | `egm_mode_count_closure.py` | the Debye/Nyquist mode-count closure behind `ω_Ω`/`n_Ω`; `ℓ∝λ_C n_Ω^(-1/3)` scaling + weak-sensitivity | M11-6 | `[V]` |

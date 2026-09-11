@@ -145,11 +145,15 @@ fitting" — and names the topological quantities: the **13-mass** spectrum from
 a Hopf self-linking `ℓ=6`, CS level `k=6`, lens-space spectral determinants, `τ` Reidemeister/Alexander invariants,
 and CS Wilson loops (`T_H=2/3`, `√3=cos π/6`). **Verified in-repo:** the arithmetic (12/12 coefficients, 6/6 quark
 assembly), `τ(trefoil)=3=|Δ(-1)|`, `√3=cos π/6`. **Peer-review status corrected 2026-09-11:** the TUFT work has **passed peer review (multiple
-papers, accepted)** — so the expert-topology adjudication the earlier note fenced for **has occurred**; what
-remains is that *we* did not independently re-derive the forcing (`ℓ=6`/`k=ℓ`, `τ(2)=4` the link torsion, the
-lens-space determinants, the probe point `λ_T(n)`'s `n`-dependence). Tier: `[credited: peer-reviewed TUFT
-framework]` + `[V-us]` arithmetic. See `results/NIELSEN_MASS_MAP_ASSESSMENT_2026-09-11.md` and the vendored
-`F1_NIELSEN_TOWER_AUDIT`.
+papers, accepted)** — so the expert-topology adjudication the earlier note fenced for **has occurred**; and we have now
+**independently reproduced the topological INPUTS** (`nielsen_topology_forcing_check.py`, `[V-us]`): **`ℓ=6`** =
+the trefoil `(2,3)`-torus-knot surface self-linking `= p·q` (Gauss integral = 6; general `T(p,q)→pq` verified),
+the framing factor `√3/2 = cos(π/6) = cos(π/ℓ)`, and the `S³` Ray-Singer determinant `ζ'(-2)=-ζ(3)/4π² = ω₃`
+(+ lens torsion `1/n`). So those inputs are ours now, not "peer-reviewed only." What remains the framework's
+(peer-reviewed, reproduced-not-re-refereed): the physical **identifications** — which knot ↔ which
+generation, `k=ℓ`, `τ(2)=4` as the link torsion, and the partition-function assembly. Tier: `[V-us]`
+(arithmetic + topological inputs) + `[credited: peer-reviewed TUFT framework]` (the identifications). See
+`results/NIELSEN_MASS_MAP_ASSESSMENT_2026-09-11.md` and the vendored `F1_NIELSEN_TOWER_AUDIT`.
 
 ---
 

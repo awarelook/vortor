@@ -47,8 +47,8 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 ## Reproduction, harness & provenance
 | File | What |
 |---|---|
-| [`results/verify/`](results/verify/) | **the reproducible model** — 47 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
-| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**49/49**, CI-gated) |
+| [`results/verify/`](results/verify/) | **the reproducible model** — 48 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
+| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**50/50**, CI-gated) |
 | [`engine/`](engine/) | `ftgb_engine.py` (the object as one executable model) + `ftgb_synthesis_modeler.py` (the isomorph) |
 | [`frontier_calcs/`](frontier_calcs/) | vendored (frozen) provenance scripts for the canonical numbers + toolkit-module methods |
 | [`toroidal_core/`](toroidal_core/) | vendored (frozen) core-derivation package (`fields.py`, `madelung.py`, `topology.py`, …) |
