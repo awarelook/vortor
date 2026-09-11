@@ -5,9 +5,12 @@ authoritative place** for every load-bearing number, design point, and conventio
 The method modules (M7–M15) and the synthesis cite this file for their anchors — e.g. M7-2 reproduces the
 carrier comb of §I "to the digit," M7-2 reads the `c_CK` conventions of §C, and M9 draws the comb from §I.
 
-> **Provenance.** Curated import of the ckfreefem foundation ledger `30_CANONICAL_NUMBERS.md` (values
-> re-sourced from live `frontier_calcs/` scripts on 2026-08-11, not recalled; the named scripts are the
-> reproducible provenance and live in the extended-corpus `frontier_calcs/` directory). Reorganized here
+> **Provenance — now self-contained.** Values re-sourced from live `frontier_calcs/` scripts on 2026-08-11,
+> not recalled. **Those provenance scripts are now VENDORED (frozen) into this repo under
+> [`frontier_calcs/`](../frontier_calcs/)** (10 scripts + manifest), so every cited path resolves in-repo —
+> the foundation no longer depends on the external corpus. The load-bearing *derived* numbers (`v_A`, `B`,
+> `b_eff`, `ħ_eff`, `d_i`) are additionally **re-derived from the anchors, CI-gated**, by
+> `results/verify/canonical_numbers_provenance_check.py` (≤0.1%). Reorganized here
 > to the jewel's honesty discipline: a tier tag on every row, residual/ansatz labels preserved verbatim,
 > and a note where a value is a self-consistency residual rather than a measurement. No number was changed
 > in import. Excised numerology (the `e^(-2/3)` screening factor, the Storti radii/H₀/α "derivations") does
