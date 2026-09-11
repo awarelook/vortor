@@ -1,0 +1,136 @@
+// ============================================================
+// stage3_torus_doublet.edp
+// STAGE B -- the decisive 3D vector CK doublet splitting.
+// Same ground-truth-validated Boffi mixed H(curl) formulation (validated on the PEC ball to <0.4% vs
+// the closed-form spherical-cavity spectrum, incl. the 4.49341 spheromak). Solves the full 3D
+// non-axisymmetric problem on a torus, identifies the physical (n=0, n=1) poloidal doublet by a Fourier
+// mode-ID of |u|^2(phi) (n=0 <-> phi-independent |u|^2; n=1 standing <-> a cos(2phi) component), and
+// extracts Delta_lambda = lambda_1 - lambda_0 -> c_CK. Mode-ID guards against the selection bug
+// (tracking the SAME physical pair as the mesh refines), not "nearest raw eigenvalue".
+// ============================================================
+load "msh3"
+load "Element_Mixte3d"
+load "gmsh"
+
+string mshF = "C:/Users/natha/ckfreefem/stage3_torus_eps0697_h140.msh";
+string csvF = "C:/Users/natha/ckfreefem/output/stage3_doublet_eps0697_h140.csv";
+string tag  = "eps0697_h140";
+real   epsAR= 0.697, R0 = 1.0, EvShift = 13.5;
+int    NumEv= 24;
+int    isGmsh = 1;   // 1: gmshload3 (my meshes)   0: readmesh3 (existing tgst meshes)
+
+for(int i=0;i<ARGV.n;i++){
+    if(ARGV[i]=="-meshfile"&&i+1<ARGV.n) mshF   = ARGV[i+1];
+    if(ARGV[i]=="-csvout"  &&i+1<ARGV.n) csvF   = ARGV[i+1];
+    if(ARGV[i]=="-tag"     &&i+1<ARGV.n) tag    = ARGV[i+1];
+    if(ARGV[i]=="-eps"     &&i+1<ARGV.n) epsAR  = atof(ARGV[i+1]);
+    if(ARGV[i]=="-shift"   &&i+1<ARGV.n) EvShift= atof(ARGV[i+1]);
+    if(ARGV[i]=="-nev"     &&i+1<ARGV.n) NumEv  = atoi(ARGV[i+1]);
+    if(ARGV[i]=="-gmsh"    &&i+1<ARGV.n) isGmsh = atoi(ARGV[i+1]);
+}
+real a0 = epsAR*R0;
+real j01 = 2.40482556;
+
+mesh3 Th; if(isGmsh==1) Th = gmshload3(mshF); else Th = readmesh3(mshF);
+cout << "TORUS " << tag << ": " << Th.nt << " tetra, " << Th.nv << " vertices" << endl;
+
+fespace Wh(Th, Edge03d);
+fespace WPh(Th, [Edge03d, P1]);
+WPh [u1,u2,u3,p],[v1,v2,v3,q];
+int ndof = WPh.ndof;
+cout << "Mixed DOF: " << ndof << endl;
+
+varf aForm([u1,u2,u3,p],[v1,v2,v3,q]) =
+    int3d(Th)(
+        (dy(u3)-dz(u2))*(dy(v3)-dz(v2))
+      + (dz(u1)-dx(u3))*(dz(v1)-dx(v3))
+      + (dx(u2)-dy(u1))*(dx(v2)-dy(v1))
+      + dx(p)*v1 + dy(p)*v2 + dz(p)*v3
+      + u1*dx(q) + u2*dy(q) + u3*dz(q))
+  + on(1, u1=0,u2=0,u3=0, p=0);
+varf mForm([u1,u2,u3,p],[v1,v2,v3,q]) = int3d(Th)( u1*v1+u2*v2+u3*v3 );
+
+matrix A = aForm(WPh,WPh, solver=UMFPACK);
+matrix M = mForm(WPh,WPh, solver=UMFPACK);
+
+real[int] ev(NumEv);
+WPh[int] [ex,ey,ez,ep](NumEv);
+int found = EigenValue(A,M, sym=true, sigma=EvShift, value=ev, vector=ex,
+                       tol=1e-10, maxit=20000, nev=NumEv);
+cout << "ARPACK: " << found << "/" << NumEv << " found." << endl;
+
+int Nphi = 32;
+real[int] kk(found), rat2(found), rat4(found), pn2(found);
+real[int] rhos = [R0, R0+0.5*a0, R0-0.5*a0];
+for(int i=0;i<found;i++){
+    WPh [wx,wy,wz,wp]; wx[]=ex[i][];
+    real curlT = int3d(Th)((dy(wz)-dz(wy))^2+(dz(wx)-dx(wz))^2+(dx(wy)-dy(wx))^2);
+    real coupT = int3d(Th)(2*(dx(wp)*wx+dy(wp)*wy+dz(wp)*wz));
+    real den   = int3d(Th)(wx^2+wy^2+wz^2);
+    real lam2  = (den>1e-30)?(curlT+coupT)/den:-1;
+    kk[i]  = (lam2>1e-9)?sqrt(lam2):-1;
+    pn2[i] = int3d(Th)(wp^2)/max(den,1e-30);
+    real acc2=0, acc4=0;
+    for(int s=0;s<3;s++){
+        real rho=rhos[s], DC=0,c2=0,ss2=0,c4=0,ss4=0;
+        for(int kp=0;kp<Nphi;kp++){
+            real ph=2*pi*kp/Nphi, xq=rho*cos(ph), yq=rho*sin(ph), zq=0.0;
+            real m2=wx(xq,yq,zq)^2+wy(xq,yq,zq)^2+wz(xq,yq,zq)^2;
+            DC+=m2; c2+=m2*cos(2*ph); ss2+=m2*sin(2*ph); c4+=m2*cos(4*ph); ss4+=m2*sin(4*ph);
+        }
+        DC/=Nphi; c2*=2.0/Nphi; ss2*=2.0/Nphi; c4*=2.0/Nphi; ss4*=2.0/Nphi;
+        real a2=sqrt(c2^2+ss2^2), a4=sqrt(c4^2+ss4^2);
+        if(DC>1e-30){ acc2+=a2/DC; acc4+=a4/DC; }
+    }
+    rat2[i]=acc2/3.0; rat4[i]=acc4/3.0;
+}
+
+// Extract the CK CARRIER doublet = the (n=0,n=1) pair near the slender anchor lambda_0 ~ j01/a (the
+// mode that reduces to the disk j01 mode as eps->0), NOT the globally-lowest modes (those are distinct
+// lower branches). Guards against the documented selection bug: purity (mode-ID) AND proximity (anchor).
+real anchor = j01/a0;
+real klo=0.55*anchor, khi=1.70*anchor;
+cout << "  --- per-mode diagnostics (k, |p|^2rel, rat2, rat4, class); carrier anchor j01/a="
+     << anchor << " ---" << endl;
+for(int i=0;i<found;i++){
+    string cls;
+    if(rat2[i]<0.12 && rat4[i]<0.12) cls="n0";
+    else if(rat2[i]>=rat4[i])        cls="n1";
+    else                             cls="n2/mix";
+    cout << "  mode "<<i<<"  k="<<kk[i]<<"  |p|2="<<pn2[i]<<"  rat2="<<rat2[i]
+         <<"  rat4="<<rat4[i]<<"  -> "<<cls<<endl;
+}
+// pass 1: lambda_0 = physical n0 mode NEAREST the slender anchor
+real lam0=-1, r2at0=-1, best0=1e30;
+for(int i=0;i<found;i++){
+    if(kk[i]>klo && kk[i]<khi && pn2[i]<1e-4 && rat2[i]<0.12 && rat4[i]<0.12){
+        real d=abs(kk[i]-anchor);
+        if(d<best0){ best0=d; lam0=kk[i]; r2at0=rat2[i]; }
+    }
+}
+// pass 2: lambda_1 = n1 partner, smallest k strictly above lam0 and within 30% (the split partner)
+real lam1=-1, r2at1=-1, best1=1e30;
+for(int i=0;i<found;i++){
+    int isN1 = (rat2[i]>=0.12 && rat2[i]>=rat4[i]);
+    if(pn2[i]<1e-4 && isN1 && lam0>0 && kk[i]>lam0 && kk[i]<1.30*lam0){
+        if(kk[i]<best1){ best1=kk[i]; lam1=kk[i]; r2at1=rat2[i]; }
+    }
+}
+
+cout << endl << "=== CARRIER DOUBLET (anchor + mode-ID selected) ===" << endl;
+ofstream fc(csvF);
+fc << "tag,eps,ndof,nv,lam0,lam1,dLam,cCK_eps,cCK_eps2,lam0_slender,rat2_n0,rat2_n1,status" << endl;
+if(lam0>0 && lam1>0){
+    real dLam = lam1-lam0;
+    real cEps = dLam/epsAR, cEps2 = dLam/(epsAR*epsAR);
+    real lam0slender = j01/a0;
+    cout << "lam0="<<lam0<<" (slender j01/a="<<lam0slender<<", diff "
+         << (lam0-lam0slender)/lam0slender*100 <<"%)   lam1="<<lam1<<endl;
+    cout << "Delta_lambda="<<dLam<<"   c_CK(/eps)="<<cEps<<"   c_CK(/eps^2)="<<cEps2<<endl;
+    fc << tag<<","<<epsAR<<","<<ndof<<","<<Th.nv<<","<<lam0<<","<<lam1<<","<<dLam<<","
+       << cEps<<","<<cEps2<<","<<lam0slender<<","<<r2at0<<","<<r2at1<<",OK"<<endl;
+}else{
+    cout << "DOUBLET INCOMPLETE: lam0="<<lam0<<" lam1="<<lam1<<endl;
+    fc << tag<<","<<epsAR<<","<<ndof<<","<<Th.nv<<",-1,-1,-1,-1,-1,-1,-1,-1,INCOMPLETE"<<endl;
+}
+cout << "STAGE_B_DONE " << tag << endl;

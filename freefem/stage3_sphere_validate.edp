@@ -1,0 +1,71 @@
+// ============================================================
+// stage3_sphere_validate.edp
+// STAGE A -- ground-truth validation of the full 3D vector CK FEM.
+// Runs the SAME Boffi mixed H(curl) formulation used for the torus on a PEC ball,
+// whose spectrum is known in closed form. The div-free, n x u = 0 curl-curl modes
+// are the PEC spherical-cavity modes; kR = sqrt(eigenvalue) must reproduce:
+//   TM_1 : 2.74371   (root of tan x = x/(1-x^2))          [x3 degenerate]
+//   TM_2 : 3.87023                                          [x5]
+//   TE_1 : 4.49341   (root of tan x = x)  <-- SPHEROMAK / canonical 3D force-free (Chandrasekhar-Kendall)
+//   TM_3 : 4.97342                                          [x7]
+//   TE_2 : 5.76346   (2nd root of tan x = x)               [x5]
+// Recovering these -- especially the 4.49341 Beltrami mode -- validates the solver's absolute
+// eigenvalue accuracy against an unambiguous closed form before trusting the toroidal doublet.
+// ============================================================
+load "msh3"
+load "Element_Mixte3d"
+load "gmsh"
+
+string mshF  = "C:/Users/natha/ckfreefem/stage3_ball_h110.msh";
+int    NumEv  = 30;
+real   EvShift= 12.0;      // mid of the low band (k^2: 7.5 .. 33); shift-invert pulls the cluster
+real   EvTol  = 1e-10;
+int    EvMaxit= 20000;
+
+for(int i=0;i<ARGV.n;i++){
+    if(ARGV[i]=="-meshfile" && i+1<ARGV.n) mshF   = ARGV[i+1];
+    if(ARGV[i]=="-shift"    && i+1<ARGV.n) EvShift= atof(ARGV[i+1]);
+    if(ARGV[i]=="-nev"      && i+1<ARGV.n) NumEv  = atoi(ARGV[i+1]);
+}
+
+mesh3 Th = gmshload3(mshF);
+cout << "BALL mesh: " << Th.nt << " tetra, " << Th.nv << " vertices" << endl;
+
+fespace Wh(Th, Edge03d);
+fespace WPh(Th, [Edge03d, P1]);
+WPh [u1,u2,u3,p],[v1,v2,v3,q];
+cout << "Mixed DOF: " << WPh.ndof << " (H(curl)=" << Wh.ndof << ")" << endl;
+
+varf aForm([u1,u2,u3,p],[v1,v2,v3,q]) =
+    int3d(Th)(
+        (dy(u3)-dz(u2))*(dy(v3)-dz(v2))
+      + (dz(u1)-dx(u3))*(dz(v1)-dx(v3))
+      + (dx(u2)-dy(u1))*(dx(v2)-dy(v1))
+      + dx(p)*v1 + dy(p)*v2 + dz(p)*v3
+      + u1*dx(q) + u2*dy(q) + u3*dz(q)
+    )
+  + on(1, u1=0,u2=0,u3=0, p=0);
+varf mForm([u1,u2,u3,p],[v1,v2,v3,q]) = int3d(Th)( u1*v1+u2*v2+u3*v3 );
+
+matrix A = aForm(WPh,WPh, solver=UMFPACK);
+matrix M = mForm(WPh,WPh, solver=UMFPACK);
+
+real[int] ev(NumEv);
+WPh[int] [ex,ey,ez,ep](NumEv);
+int found = EigenValue(A,M, sym=true, sigma=EvShift, value=ev, vector=ex,
+                       tol=EvTol, maxit=EvMaxit, nev=NumEv);
+cout << "ARPACK: " << found << "/" << NumEv << " found." << endl << endl;
+
+// Rayleigh quotient (full form, curl energy) + |p|^2 filter, report k=sqrt(lam2)
+cout << "  idx    k=sqrt(lam)      lam(k^2)     curlOnly/den     |p|^2" << endl;
+for(int i=0;i<found;i++){
+    WPh [wx,wy,wz,wp]; wx[]=ex[i][];
+    real curlT = int3d(Th)((dy(wz)-dz(wy))^2+(dz(wx)-dx(wz))^2+(dx(wy)-dy(wx))^2);
+    real coupT = int3d(Th)(2*(dx(wp)*wx+dy(wp)*wy+dz(wp)*wz));
+    real den   = int3d(Th)(wx^2+wy^2+wz^2);
+    real pN2   = int3d(Th)(wp^2);
+    real lam2  = (den>1e-30)?(curlT+coupT)/den:-1;
+    real k     = (lam2>1e-9)?sqrt(lam2):-1;
+    cout << "  " << i << "   " << k << "   " << lam2 << "   " << curlT/den << "   " << pN2 << endl;
+}
+cout << "STAGE_A_DONE" << endl;

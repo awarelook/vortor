@@ -1,0 +1,60 @@
+// Frontier pass, Phase 5b (GREENYER_BEAT_QHD_FRONTIER_EXPANSION_PASS.md).
+//
+// The main paper's Sec 3.1 shape-sensitivity d(ln c_CK)/d(ln eps)=-0.179 comes from exactly TWO
+// points: c_CK(eps=0.20)=1.0486 (hcurl_n1_torus.edp, this project's own general FEM solver) and
+// c_CK(eps=0.6970)=0.581 (cited from SELF_SIMILAR_FORCE_FREE_CASCADE_PUBLICATION.md Sec 2 -- a
+// DIFFERENT lineage's own paper). This script generalizes hcurl_n1_torus.edp (same exact method:
+// n=0/n=1 Grad-Shafranov-reduced Beltrami eigenvalue problem, c_CK=(lam1-lam0)/eps^2) to take eps as
+// a command-line argument, so a real multi-point curve can be built using ONE consistent method
+// throughout -- including an independent RECOMPUTATION at eps=0.697 (a bare aspect-ratio number, not
+// itself lineage-owned data) using this project's own solver, rather than importing the other
+// lineage's own quoted value.
+
+real eps = 0.20;
+for(int i = 0; i < ARGV.n; i++){
+    if(ARGV[i] == "-eps" && i+1 < ARGV.n) eps = atof(ARGV[i+1]);
+}
+real R0  = 1.0;
+real a0  = eps * R0;
+int  Nm  = 300;
+int  nEv = 6;
+
+border Circ(t=0, 2.*pi){ x = R0 + a0*cos(t); y = a0*sin(t); label=1; }
+mesh Th = buildmesh(Circ(Nm));
+
+fespace Vh(Th, P2);
+Vh psi, phi2;
+
+varf aForm0(psi, phi2) =
+    int2d(Th)( (dx(psi)*dx(phi2) + dy(psi)*dy(phi2)) / x )
+  + on(1, psi=0);
+varf bForm(psi, phi2) = int2d(Th)( psi * phi2 / x );
+
+matrix A0 = aForm0(Vh, Vh, solver=UMFPACK);
+matrix B  = bForm(Vh, Vh);
+
+real[int] ev0(nEv);
+Vh[int]   eV0(nEv);
+int found0 = EigenValue(A0, B, sym=true, sigma=0, value=ev0, vector=eV0, tol=1e-12, maxit=2000, nev=nEv);
+real lam0 = -1;
+for(int i = 0; i < min(found0, nEv); i++){
+    if(ev0[i] < 0) continue;
+    if(lam0 < 0) lam0 = sqrt(ev0[i]);
+}
+
+varf aForm1(psi, phi2) =
+    int2d(Th)( (dx(psi)*dx(phi2) + dy(psi)*dy(phi2)) / x + psi*phi2/(x*x*x) )
+  + on(1, psi=0);
+
+matrix A1 = aForm1(Vh, Vh, solver=UMFPACK);
+real[int] ev1(nEv);
+Vh[int]   eV1(nEv);
+int found1 = EigenValue(A1, B, sym=true, sigma=0, value=ev1, vector=eV1, tol=1e-12, maxit=2000, nev=nEv);
+real lam1 = -1;
+for(int i = 0; i < min(found1, nEv); i++){
+    if(ev1[i] < 0) continue;
+    if(lam1 < 0) lam1 = sqrt(ev1[i]);
+}
+
+real cCK = (lam1 - lam0) / (eps*eps);
+cout << "SWEEP_RESULT eps=" << eps << " lam0=" << lam0 << " lam1=" << lam1 << " c_CK=" << cCK << endl;

@@ -1,0 +1,70 @@
+// ============================================================
+// SMALL-EPS SCAN of the n=0/n=1 toroidicity doublet (2026-08-27).
+// Purpose: settle the beat-scaling question raised by the quadratic-
+// toroidicity red-team. Uses the ROBUST reduced axisymmetric GS operators
+// (n=0 standard, n=1 modified with the centrifugal n^2/r^2 term) as TWO
+// SEPARATE eigenproblems -> NO 3-D mode-ID ambiguity (the pathology that
+// made the eps=0.20 full-H(curl) run unreliable).
+//
+// Circular cross-section (elongation=1), radius a0=eps*R0, R0=1 fixed.
+// Fixed boundary resolution (Nm) => constant RELATIVE mesh resolution across eps.
+//
+// Outputs (eps, lam0, lam1, dLam, carrier, ratio) so we can fit BOTH:
+//   Delta-lam(eps)          [expect ~ LINEAR: the standard TAE gap width]
+//   ratio = dLam/carrier(eps)[expect ~ QUADRATIC: carrier ~ 1/eps]
+// If both hold, the linear-vs-quadratic dispute is a CARRIER-CONVENTION choice.
+// ============================================================
+
+real[int] epsList = [0.02, 0.04, 0.06, 0.08, 0.10, 0.13, 0.16, 0.20, 0.25, 0.30, 0.40, 0.50, 0.60, 0.697];
+int Nm = 320;      // boundary points (relative resolution constant across eps)
+int nEv = 4;
+
+ofstream fcsv("C:/Users/natha/ckfreefem/output/beat_smalleps_scan.csv");
+fcsv << "eps,lam0,lam1,dLam,carrier,ratio" << endl;
+
+cout << "eps      lam0        lam1        dLam        carrier     ratio(dLam/car)" << endl;
+
+for(int ie=0; ie<epsList.n; ie++){
+    real eps = epsList[ie];
+    real R0  = 1.0;
+    real a0  = eps*R0;
+
+    border Circ(t=0, 2.*pi){ x = R0 + a0*cos(t); y = a0*sin(t); label=1; }
+    mesh Th = buildmesh(Circ(Nm));
+
+    fespace Vh(Th, P2);
+    Vh psi, phi2;
+
+    // n=0: standard Grad-Shafranov  -Delta* psi = lam^2 psi
+    varf aForm0(psi, phi2) =
+        int2d(Th)( (dx(psi)*dx(phi2) + dy(psi)*dy(phi2)) / x ) + on(1, psi=0);
+    // n=1: modified GS with centrifugal +psi/x^3
+    varf aForm1(psi, phi2) =
+        int2d(Th)( (dx(psi)*dx(phi2) + dy(psi)*dy(phi2)) / x + psi*phi2/(x*x*x) ) + on(1, psi=0);
+    varf bForm(psi, phi2) =
+        int2d(Th)( psi * phi2 / x );
+
+    matrix A0 = aForm0(Vh, Vh, solver=UMFPACK);
+    matrix A1 = aForm1(Vh, Vh, solver=UMFPACK);
+    matrix B  = bForm(Vh, Vh);
+
+    real[int] ev0(nEv), ev1(nEv);
+    Vh[int]   eV0(nEv), eV1(nEv);
+    EigenValue(A0, B, sym=true, sigma=0, value=ev0, vector=eV0, tol=1e-12, maxit=3000, nev=nEv);
+    EigenValue(A1, B, sym=true, sigma=0, value=ev1, vector=eV1, tol=1e-12, maxit=3000, nev=nEv);
+
+    // ground (smallest positive) of each operator
+    real lam0 = -1, lam1 = -1;
+    for(int i=0;i<nEv;i++){ if(ev0[i]>0){ lam0=sqrt(ev0[i]); break; } }
+    for(int i=0;i<nEv;i++){ if(ev1[i]>0){ lam1=sqrt(ev1[i]); break; } }
+
+    real dLam = lam1 - lam0;
+    real car  = 0.5*(lam0 + lam1);
+    real ratio= dLam/car;
+
+    fcsv << eps << "," << lam0 << "," << lam1 << "," << dLam << "," << car << "," << ratio << endl;
+    cout.scientific;
+    cout << eps << "  " << lam0 << "  " << lam1 << "  " << dLam << "  " << car << "  " << ratio << endl;
+    cout.default;
+}
+cout << "DONE -> C:/Users/natha/ckfreefem/output/beat_smalleps_scan.csv" << endl;
