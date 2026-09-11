@@ -202,7 +202,7 @@ QWM_Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Mo
 
 **Nielsen — TUFT (Topological Unified Field Theory)** — `[S]`/`[credited on the topological core]`.
 - Nielsen, J.L., "The Topological Unified Field Theory on the Complex Hopf Fibration `S¹→S⁹→CP⁴`," Center for
-  Topological Physics (preprint lineage 2019 → Oct 2025; **Round 2 peer review, Int. J. Topology**). SM gauge
+  Topological Physics (**peer-reviewed / accepted (multiple TUFT papers), Int. J. Topology** (lineage 2019 → 2025)). SM gauge
   groups + gravity + mass spectrum from the Hopf bundle; knot eigenmodes of the 9D curl operator; Beltrami–
   Higgs on `S³`. In-repo primary: `TUFT Jenny Nielsen.pdf` (180 pp.). Used where its topology is load-bearing;
   its full unification claims are carried at preprint tier, not asserted as established. **On the neutrino,**

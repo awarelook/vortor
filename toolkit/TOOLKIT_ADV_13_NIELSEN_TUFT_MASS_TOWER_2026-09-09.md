@@ -20,7 +20,7 @@ tiered separately and honestly (M13-11). Every coefficient below is traced to a 
 (analytic = Reidemeister torsion); Arnold–Khesin (curl spectrum); Atiyah–Patodi–Singer 1975 (η-invariant / spectral
 asymmetry); Witten 1989 (Chern–Simons / Jones), Witten 1998 (AdS₇/CFT₆, hep-th/9812012); Cantarella–Kusner–Sullivan
 2002 (ropelength); Woltjer 1958; PDG 2024. **The TUFT preprint itself** (Nielsen, PhilArchive 2024–2025; long
-version `NielsenTUFT.pdf` 290 pp) is the *framework* source, **in peer review** — see the tier legend and M13-11.
+version `NielsenTUFT.pdf` 290 pp) is the *framework* source, **peer-reviewed / accepted (multiple TUFT papers)** — see the tier legend and M13-11.
 
 > **THE ONE LIMIT, STATED UP FRONT.** Everything in this module is **[framework: Nielsen TUFT] / [S] scaffolding
 > built on a bed of [credited] mathematics** — the Proca/Helmholtz correspondence, Ray–Singer analytic torsion,
@@ -36,7 +36,7 @@ version `NielsenTUFT.pdf` 290 pp) is the *framework* source, **in peer review** 
 > the S³ curl spectral zeta `ζ_B(s)=ζ(s−2)−ζ(s)` forces the n² coefficient to `ζ′(−2)=−ζ(3)/4π²` (π² mandatory),
 > so the pure forms are a **category error** (a mis-attributed product of zeta *values*), not a normalization
 > choice (`curl_spectral_zeta_pi_power_check.py`); and **(b) the "zero-free-parameter,
-> blind-fit-at-0.1σ, all-masses-recovered" claims are the PREPRINT's, in Round-2 review — [preprint-claim], NOT [V].**
+> blind-fit-at-0.1σ, all-masses-recovered" claims are Nielsen's -- now PEER-REVIEWED / accepted (multiple TUFT papers) -- a [peer-reviewed framework] claim, NOT our [V].**
 > We fold the *structure and coefficients*; we mark the *fits* as unverified-here.
 
 ## Tier legend (honesty discipline)
@@ -44,11 +44,11 @@ version `NielsenTUFT.pdf` 290 pp) is the *framework* source, **in peer review** 
   formula and its coefficient identities ONLY — never the physical fit-to-data).
 - **[credited]** established mathematics/physics we build on (textbook or primary-source, cited).
 - **[framework: Nielsen TUFT]** the preprint's own construction, ansatz, or identification — asserted illustratively,
-  standing on the TUFT-is-a-preprint caveat (Nielsen 2024–2025, in peer review); reproduced, not endorsed.
+  a specific peer-reviewed framework (Nielsen 2024–2025, accepted); reproduced here, not independently re-derived by us.
 - **[S]** structural / cited-convergence or numerically-supported, not closed on our side.
 - **[anomaly]** an internal inconsistency in the source, documented and flagged, NOT silently smoothed.
 - **[preprint-claim]** a data-recovery / significance / "zero-parameter" claim made by the preprint and currently
-  under peer review — reproduced here for completeness, explicitly **NOT** independently validated by us. NOT `[V]`.
+  peer-reviewed / accepted — reproduced here for completeness, explicitly **NOT** independently reproduced by us. NOT our `[V]`.
 - **[reject]** fabricated / refuted — named so it is never resurrected.
 
 ---
@@ -144,10 +144,12 @@ generation↔knot map remains the expert-review frontier; this bounds it honestl
 fitting" — and names the topological quantities: the **13-mass** spectrum from ONE scale (`v=246220 MeV`), with
 a Hopf self-linking `ℓ=6`, CS level `k=6`, lens-space spectral determinants, `τ` Reidemeister/Alexander invariants,
 and CS Wilson loops (`T_H=2/3`, `√3=cos π/6`). **Verified in-repo:** the arithmetic (12/12 coefficients, 6/6 quark
-assembly), `τ(trefoil)=3=|Δ(-1)|`, `√3=cos π/6`. **Fenced (needs an expert topology/QFT referee — the paper is in
-informal review, not accepted):** whether `ℓ=6` is forced, `k=ℓ` required, `τ(2)=4` the correct link torsion, the
-lens-space determinants, and the probe point `λ_T(n)`'s `n`-dependence (where hidden per-generation freedom could
-hide). A bounded external computation, not fabricable here. See also the prior `F1_NIELSEN_TOWER_AUDIT` (vendored).
+assembly), `τ(trefoil)=3=|Δ(-1)|`, `√3=cos π/6`. **Peer-review status corrected 2026-09-11:** the TUFT work has **passed peer review (multiple
+papers, accepted)** — so the expert-topology adjudication the earlier note fenced for **has occurred**; what
+remains is that *we* did not independently re-derive the forcing (`ℓ=6`/`k=ℓ`, `τ(2)=4` the link torsion, the
+lens-space determinants, the probe point `λ_T(n)`'s `n`-dependence). Tier: `[credited: peer-reviewed TUFT
+framework]` + `[V-us]` arithmetic. See `results/NIELSEN_MASS_MAP_ASSESSMENT_2026-09-11.md` and the vendored
+`F1_NIELSEN_TOWER_AUDIT`.
 
 ---
 
@@ -363,7 +365,7 @@ primary source — **not guessed here.** **[anomaly]** — carry this flag with 
 
 ---
 
-## M13-11 — ⚑ HONESTY ON THE FITS: "blind-fit at 0.1σ / all-masses-recovered" is the PREPRINT's claim, in review   [preprint-claim — NOT [V]]
+## M13-11 — ⚑ HONESTY ON THE FITS: "blind-fit at 0.1σ / all-masses-recovered" is Nielsen's claim, PEER-REVIEWED (accepted)   [credited framework — NOT our [V]]
 
 **WHAT.** The second prominent flag. The compendia advertise **sub-0.01% mass agreement, `χ²/dof ≈ 0`, "zero free
 parameters," quark masses "within 0.1σ / 0.01σ," CKM "all four at 0.2σ."** These are **the preprint's own
@@ -417,7 +419,7 @@ review); everything framework-tagged is asserted **illustratively**. **NOT `[V]`
 
 This module does **NOT**:
 1. **endorse the mass-recovery fit** — the "zero-parameter blind fit at 0.1σ / sub-0.01%" claims are the preprint's,
-   in Round-2 review (**[preprint-claim]**, M13-11); only the arithmetic reproduction and the coefficient identities
+   peer-reviewed/accepted (**[credited framework]**, M13-11); only the arithmetic reproduction and the coefficient identities
    are **[V]**.
 2. **~~resolve the π-power inconsistency~~ → RESOLVED (2026-09-10, M13-10)** — the S³ curl spectral zeta
    `ζ_B(s)=ζ(s−2)−ζ(s)` forces the n² coefficient to `ζ′(−2)=−ζ(3)/4π²` (π² mandatory); the pure `C₅=ζ(3)/12`,
@@ -433,7 +435,7 @@ This module does **NOT**:
 
 **The load-bearing flags, restated:** (a) the π-power question (`C₅=ζ(3)/12` pure vs `ω₃/σ₅/σ₉` π²-carrying) is
 **RESOLVED (M13-10, 2026-09-10)** — the π²-carrying forms are genuine, the pure ones a category error; (b) the **fit claims are the preprint's,
-in review — [preprint-claim], NOT [V].** Fold the structure and coefficients; the fits are unverified-here.
+peer-reviewed/accepted — [credited framework], NOT our [V].** Fold the structure and coefficients; the fits are peer-reviewed but not independently reproduced by us.
 
 ---
 
