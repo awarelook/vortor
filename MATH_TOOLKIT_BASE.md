@@ -498,6 +498,7 @@ never implies these are as settled as §§1-9:
 | B-26 | R2 near-Beltrami: Lamb-vector identity `int om.(om.grad)v = int(curl om).(v x om)` (vanishes at Beltrami) -> linear Gronwall; enstrophy bounded (BKM: no blow-up) iff `<eta^2> < nu^2 lambda_1`; unconditional-at-Reynolds open | [V]/[V-cond] | §4b; `r2_identity_check.py`, `r2_gronwall_check.py` |
 | B-27 | Topology invariants in-repo: `Q_H=1` = Gauss linking of two Hopf fibres (Whitehead); `C=+-2` = spin-1 photon-helicity Chern `2s` (Fukui-Hatsugai over `S^2`); `|C|=2 Q_H`, credited convergence | [V]/[credited] | §9d, §F; `topology_invariants_check.py`; Bliokh 15 / Palmerduca-Qin 24 |
 | B-28 | Beltrami = Reeb field of a contact structure (`alpha^dalpha=lam|B|^2 vol`, `curl B x B=0`); Weinstein/Taubes -> closed field line exists by topology; curl spectrum unifies comb+cascade+`S^3` torsion | [V]/[credited] | M15; `reeb_spectral_geometry_check.py`; Etnyre-Ghrist 00 / Taubes 07 |
+| B-29 | Physical object vs R3 condition (iii): `d_i=0.296 m > R=0.12 m` and `S_di=d_i v_A/eta ~ 15-2400 >> 1` -> Hall-smallness VIOLATED, strongly Hall-mediated; object sits OUTSIDE R3's proven-regular regime (gap named, conditional theorem not refuted) | [V] | §4a/§4b; `r3_hall_smallness_physical_check.py`; 30_CANONICAL §A/§B |
 
 ## References / provenance
 

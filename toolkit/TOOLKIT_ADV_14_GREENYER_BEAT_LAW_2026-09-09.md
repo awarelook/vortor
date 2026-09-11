@@ -58,6 +58,12 @@ Cantarella-DeTurck-Gluck-Teytel 2000 (CDG); Hudson-Hole-Dewar 2007 (MRxMHD); Arn
 1982 / Rubakov 1981 / Wilczek 1982; Hsu-Zhen-Stone-Joannopoulos-Soljacic 2016 (BIC); Nicolis-Prigogine 1977;
 Fano 1961; Mathieu 1868. Full ledger reproduced at the end.
 
+**In-repo verify —** besides `greenyer_beat_cascade_check.py` (the `N^L` ladder, `N⁴=256`, the triad
+dichotomy), `results/verify/rodin_vbm_check.py` `[V]`: Rodin's `3-6-9`, read as a three-wave resonance
+triad, phase-matches **uniquely at the golden ratio** (`φ²=φ+1`, detuning 0) — the number-theoretic
+restatement of this module's triad/golden result (the `1-2-4-8-7-5` doubling = powers of the primitive
+root 2 mod 9, standard `Z₉`).
+
 ---
 
 ## M14-1 -- THE BEAT LAW and the CASCADE LADDER-INDEPENDENCE THEOREM   [V / credited]

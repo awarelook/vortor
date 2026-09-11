@@ -45,6 +45,11 @@ reproducible script; nothing is fabricated.
 Battye-Sutcliffe 1997; Barnes-Baskerville-Turok 1997; Feist-Lau-Manton 2013; Dashen-Hasslacher-Neveu 1975;
 Minkowski 1977 / Gell-Mann-Ramond-Slansky / Yanagida (type-I seesaw); Mohapatra-Senjanovic 1980; PDG 2024.
 
+**In-repo verify —** `results/verify/octahedral_oam_ladder_check.py` `[V]` (the `Δl=4` OAM ladder =
+credited B=4 Skyrmion spectrum, Braaten-Townsend-Carson `J=0→4`) and `results/verify/g2_skyrme_composite_check.py`
+`[V]` (parameter-free `μ_p/μ_n=−3/2` via Skyrme collective quantization) — this module's B=4 / Skyrme
+methods made computational. See also `topology_invariants_check.py` (`Q_H=1`, `C=±2`).
+
 ---
 
 ## M10-1 -- CANONICAL / GENERALIZED HELICITY conserved-current method   [V / credited]

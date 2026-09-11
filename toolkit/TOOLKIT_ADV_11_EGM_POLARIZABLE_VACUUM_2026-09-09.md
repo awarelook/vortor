@@ -21,7 +21,8 @@ its numerical claims against the project's honesty discipline. Every checkable n
 
 ## Tier legend (honesty discipline)
 - **[V]** verified here by `results/verify/egm_sense_checks.py`, `results/verify/egm_mode_count_closure.py`
-  (the M11-6 mode-count closure), or a checked identity.
+  (the M11-6 mode-count closure), `results/verify/alpha_impedance_check.py` (`α = Z₀/2R_K` exact to 6e-15,
+  the medium-impedance reading of α), or a checked identity.
 - **[credited]** established physics we build on: Puthoff (PV representation of GR); Sakharov / Haisch–Rueda–
   Puthoff (ZPF inertia/gravity); the SED cubic ZPF spectrum; Buckingham 1914.
 - **[EGM method]** = Storti's representation/notation borrowed as a *calculation method only* (his own framing).

@@ -12,8 +12,8 @@ python results/verify/verify_all.py      # runs all checks + the engine; exit 0 
 
 `verify_all.py` runs each theory script plus `engine/ftgb_engine.py`, captures exit
 codes, and prints a `PASS/FAIL` summary (it is also a CI gate — nonzero exit on any
-failure). Deterministic, no network. Current status: **42 / 42 PASS** on CPython 3.12
-(40 theory scripts + the engine `ftgb_engine.py` + the synthesis modeler
+failure). Deterministic, no network. Current status: **43 / 43 PASS** on CPython 3.12
+(41 theory scripts + the engine `ftgb_engine.py` + the synthesis modeler
 `engine/ftgb_synthesis_modeler.py` — the executable MATH↔PHYSICS↔EXPERIMENT isomorph, which
 runs the live `[V]` anchors). The suite spans the `[V]`-core, the internalized `[credited]`
 phase-dynamics/number-theory (`phase_dynamics_gml_check`, `rodin_vbm_check`) with `[S]` FTGB
@@ -28,6 +28,7 @@ bridges, and one `[speculative frontier]` hypothesis-test (`microtubule_ck_comb_
 | `r2_gronwall_check.py` | the R2 enstrophy/BKM threshold `⟨η²⟩ < ν²λ₁` (time-integrated, sharp) — bounded below / blows up above | `R2_NEAR_BELTRAMI_ENSTROPHY_THEOREM` | `[V]`cond |
 | `hallmhd_canonical_check.py` | the Hall two-fluid `Pm=1` coercivity and the `det = −d_i²(η−ν)²/4` obstruction to `Pm≠1` | `R3_HALLMHD_CANONICAL_ENSTROPHY`, M10 | `[V]` |
 | `hallmhd_coupled_lyapunov_check.py` | **`Pm≠1` advance:** the `(η−ν)²` obstruction is a *canonical-variable artifact* — the coupled functional `L=½‖ω‖²+κd_i²½‖J‖²` has **diagonal coercive dissipation at every `Pm`** and controls `Z`; fluid+Lorentz productions vanish *quadratically* at the single-`λ` relaxed state; the Hall term is absorbed under `d_i‖B‖∞≲η` (linear law verified) → **removes `Pm=1`**, residual = one Hall smallness | `R3_PM_NE_1_COUPLED_LYAPUNOV` | `[V]` / `[V]cond` |
+| `r3_hall_smallness_physical_check.py` | **does the physical object satisfy R3's residual (iii)?** Plug the canonical anchors (`d_i=λ_L=0.296 m`, `v_A=2.03e4 m/s`, `R=0.12 m`) into `S_di=d_i v_A/η` (Spitzer `η`, `T_e=1–30 eV`): **(iii) `d_i‖B‖∞≲η` robustly VIOLATED** — structurally `d_i>R` (`d_i/R≈2.5`, ion skin depth exceeds the object → strongly Hall-mediated) and `S_di≈15–2400≫1`. Names the gap in physical units: the object lives **outside** the regime R3 proves regular (does not refute the conditional theorem) | `R3_PM_NE_1_COUPLED_LYAPUNOV` §Open | `[V]` |
 | `tuft_mass_tower_check.py` | Nielsen ζ-coefficients (`C₅=ζ(3)/12`, …), the exact `C₅/ω₃=π²/3`, lens-space `τ_R(L(n,1))=1/n`; blind-fit VALUES flagged | M13 | `[V]` core / `[flag]` values |
 | `greenyer_beat_cascade_check.py` | cascade `N^L`, anapole `N⁴=256`, the golden-ratio three-wave dichotomy, Fibonacci Manley-Rowe; `N_crit` band flagged | M14 | `[V]` / `[prediction]` |
 | `egm_sense_checks.py` | Storti EGM numerical audit — the 2:1 harmonic is definitional; radii/H₀ miss; `e^(-2/3)` is dead (`→72`, not 137) | M11-4 | `[V]` (audit) / `[flag]`/`[excised]` |

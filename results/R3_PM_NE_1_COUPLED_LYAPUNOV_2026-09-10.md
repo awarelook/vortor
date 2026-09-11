@@ -160,10 +160,21 @@ and the `Pm=1` theorem: a-priori control of the deviation ⇒ regularity.
 
 **Open:** the **unconditional large-data `Pm ≠ 1`** case. Condition (iii) `d_i‖B‖∞ ≲ η` is a genuine
 small-data restriction; removing it is equivalent to global regularity of 3-D Hall-MHD without smallness,
-which is **open** (Chae–Degond–Liu give local large-data / global small-data). Whether the physical
-plasmoid parameters satisfy (iii) — dense, cold, small `d_i` — is a separate quantitative check, not
-asserted here. **No claim of solving the general problem is made; the advance is the removal of `Pm=1`
-and the exact localization of the residual to one Hall term.**
+which is **open** (Chae–Degond–Liu give local large-data / global small-data). **No claim of solving the
+general problem is made; the advance is the removal of `Pm=1` and the exact localization of the residual
+to one Hall term.**
+
+**Does the physical plasmoid satisfy (iii)? — now checked (`results/verify/r3_hall_smallness_physical_check.py`, `[V]`).**
+Plugging the canonical anchors (`d_i = λ_L = 0.2963 m`, `v_A = 2.033×10⁴ m/s`, `R = 0.12 m`; 30_CANONICAL
+§A/§B) into the dimensionless Hall-smallness number `S_di = d_i v_A / η` (with `η` the Spitzer magnetic
+diffusivity across `T_e = 1–30 eV`): **(iii) is robustly VIOLATED.** Two facts: (a) *structural* —
+`d_i = 0.296 m > R = 0.12 m` (`d_i/R ≈ 2.5`), the ion skin depth **exceeds the object**, the signature of a
+**strongly Hall-mediated** (electron-MHD/whistler) regime; (b) *quantitative* — `S_di ≈ 15–2400 ≫ 1` across
+the entire `(T_e, v_A)` band (the `v_A` residual `×5–13` only worsens it). So the physical object lives
+**outside** the regime this note proves regular — global regularity for *this* object stays open (the open
+3-D Hall-MHD problem), and the R2/R3 conditional enstrophy bounds are the honest ceiling. The gap is now
+named in physical units, not hand-waved. *(This does not refute R3, a conditional theorem — it locates the
+object relative to R3's hypotheses.)*
 
 ## 7. Verification artifact
 

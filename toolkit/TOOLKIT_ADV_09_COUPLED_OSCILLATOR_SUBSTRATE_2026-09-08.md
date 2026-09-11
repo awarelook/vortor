@@ -39,6 +39,11 @@ spirit as FTGB discipline.
 - Solid-state phonon Hamiltonian, normal modes, Bloch/de Broglie, PdH/D isotope shift: **cfm.ehu**, **APS PRB 101,
   075117**.
 
+**In-repo verify —** `results/verify/phase_dynamics_gml_check.py` `[V]`: the harmonic (1:3:9) vs inharmonic
+(CK-comb) locking discriminator on `Tⁿ` (Adler/Arnold tongues `K*=det/(m+n)`, the Phase-Pattern Metric),
+**generalizing `engine.comb_lock`** to arbitrary `N` and `m:n` — this module's coupled-oscillator subject
+made computational.
+
 ---
 
 ## M9-0 — The unifying claim, scoped honestly   [S / synthesis]
