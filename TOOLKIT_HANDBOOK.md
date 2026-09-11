@@ -1054,7 +1054,27 @@ bridge + exact **`9/8 μ_B`** Reed theorem `[V]`; magnetic-tension Rayleigh fiss
 `z_(2,1)=5.763459`; the off-resonance theorem `Q(N^k−1)`. In-repo verify confirms the ladder, `N⁴=256`, the
 three-wave dichotomy (integer NONE vs golden to 7e-15), and the Fibonacci→φ shadow.
 
-## 11. Consolidated reference list
+## 11. Module M15 -- Reeb & spectral geometry (contact topology + the curl operator's unified spectrum)
+
+Two geometric pillars the whole object rests on, made computational (`results/verify/reeb_spectral_geometry_check.py`,
+machine-clean; source of record `TOOLKIT_ADV_15`). **No new physical claim** — two theorems that upgrade
+"assume a resonant loop" to "a loop exists by topology," plus a unification of three standing spectral results.
+
+- **REEB / CONTACT (dynamics).** A Beltrami field `∇×B=λB` **is** the Reeb field of a contact structure
+  `[credited: Etnyre–Ghrist 2000]`: `α=B♭` gives the contact identity `α∧dα=(B·∇×B)vol=λ‖B‖²vol` (verified
+  `9e-15` via FFT) and `∇×B×B=0`, so `B` is the Reeb direction (`3e-15`). Then the **Weinstein conjecture**,
+  proved in dim 3 by **Taubes 2007**, *guarantees* a **closed field line** — the resonator's standing-wave loop
+  exists by contact topology, not assumption (integrated one, closes to `3e-5`). Enciso–Peralta-Salas 2012
+  strengthens it: force-free fields realize *any* knot/link. `[V]`/`[credited]`.
+- **SPECTRAL (statics).** The `curl` operator's **one spectrum** in three geometric roles: the CK carrier comb
+  (bounded, `tan x=x`), the self-similar cascade (`λ_L=λ_0 N^L`, M14), and the `S³` Ray–Singer analytic-torsion
+  coefficient (`ζ′(−2)=−ζ(3)/4π²`, M13) — one operator, three geometries, not three coincidences. `[V]`/`[credited]`.
+- **BRIDGE.** `curl` is simultaneously the Reeb-flow generator (dynamics → closed orbits = the modes) and the
+  operator whose spectrum is comb+cascade+torsion (statics) — the precise sense the object is "one thing."
+  Two adjacent invariants are reproduced in-repo by `topology_invariants_check.py`: `Q_H=1` (Hopf linking) and
+  `C=±2` (spin-1 photon-helicity Chern, `|C|=2Q_H`).
+
+## 12. Consolidated reference list
 
 Established, credited literature underpinning the toolkit (per module). Primary load-bearing references
 are named in full; tiers are as used above. See `REFERENCES.md` for the full project-wide citation base,
@@ -1122,7 +1142,7 @@ Bostick / Puthoff / Shoulders ancestors (`LINEAGE.md`).
 
 ---
 
-## 12. Do-not-cite note
+## 13. Do-not-cite note
 
 The following are named so they are never cited as established, and never resurrected:
 

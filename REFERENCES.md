@@ -122,13 +122,55 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   external use*).
 
 **Electromagnetic knots / null fields (confined-photon baseline, α ledger).**
-- Rañada, A.F. (1989), *Lett. Math. Phys.* 18, 97 — a topological (Hopf-fibration) theory of the EM field;
-  Rañada, A.F. (1990), *J. Phys. A* 23, L815 — knotted null solutions of the vacuum Maxwell equations. *(Volume
-  numbers from memory; verify before external citation.)*
+- Rañada, A.F. (1989), *Lett. Math. Phys.* **18**, 97–106 (DOI 10.1007/BF00401864) — a topological
+  (Hopf-fibration) theory of the EM field; Rañada, A.F. (1990), *J. Phys. A: Math. Gen.* **23**, L815–L820
+  (DOI 10.1088/0305-4470/23/16/007) — knotted null solutions of the vacuum Maxwell equations. *(Volumes/pages
+  verified 2026-09-10.)*
 
 **Spectral geometry / analytic torsion (S³ curl zeta, §3a).**
 - Ray, D.B. & Singer, I.M. (1971), *Adv. Math.* 7, 145 — "R-torsion and the Laplacian on Riemannian
   manifolds" (analytic torsion; the `ζ′(0)` determinant/torsion machinery invoked for the `S³` curl spectrum).
+
+**Anapole / toroidal-dipole electrodynamics (§C.3 nonradiating resonator).**
+- Kaelberer, T., Fedotov, V.A., Papasimakis, N., Tsai, D.P. & Zheludev, N.I. (2010), *Science* **330**, 1510
+  (DOI 10.1126/science.1197172) — first direct observation of a resonant **toroidal dipole**, a multipole
+  family distinct from electric/magnetic. Papasimakis, N., Fedotov, V.A., Savinov, V., Raybould, T.A. &
+  Zheludev, N.I. (2016), *Nat. Mater.* **15**, 263 (DOI 10.1038/nmat4563) — the authoritative **anapole**
+  review (nonradiating electric+toroidal-dipole interference). The modern experimental anchor for the §C.3
+  anapole reading (ordinary dipole cancels ~1e-16); complements Zel'dovich 1957. `[credited]`.
+
+**Beltrami fields carry knots/links (topology core, M15/M14-6).**
+- Enciso, A. & Peralta-Salas, D. (2012), *Ann. of Math.* **175**, 345 (arXiv:1003.3122) — *any* link is realized
+  by closed field lines of a Beltrami field: knottedness of force-free fields is a theorem. The stronger
+  companion to Taubes' single-orbit existence, underpinning the Hopf-linking / `Lk=Tw+Wr` core. `[credited]`.
+- Cardona, R., Miranda, E., Peralta-Salas, D. & Presas, F. (2021), *PNAS* **118**, e2026818118; (2023),
+  *Adv. Math.* **428**, 109142 — Etnyre-Ghrist-based universality of Beltrami/Reeb flows (Turing-complete
+  Euler flows; flexible Reeb embeddings). Deepen the §A.2.1/M15 contact frame. `[credited]` / `[S]` relevance.
+  *(UNVERIFIED vol/page — verify before external use: Enciso-Peralta-Salas (2015), *Acta Math.* **214**, 61
+  (knotted vortex tubes); Cieliebak & Volkov (2015), *JEMS* **17**, 321 (stable Hamiltonian structures);
+  Ginzburg, V.L. (2005), Weinstein-conjecture survey, *Progr. Math.* **232**.)*
+
+**Force-free / two-fluid companions (§1/§4/§4a).**
+- Chandrasekhar, S. & Woltjer, L. (1958), *PNAS* **44**, 285 (DOI 10.1073/pnas.44.4.285) — force-free
+  minimum-dissipation states (companion to the already-cited Woltjer 44, 489). Yoshida, Z. & Mahajan, S.M.
+  (2002), *PRL* **88**, 095001 (DOI 10.1103/PhysRevLett.88.095001) — the coercive **canonical-enstrophy
+  variational principle** whose relaxed states are double-Beltrami; the credited anchor §4a generalizes.
+- Bellan, P.M. (2000), *Spheromaks* (Imperial College Press, ISBN 978-1-86094-141-2) — the standard force-free
+  spheromak monograph (helicity, Taylor relaxation, the `tan x = x` ball eigenvalue). Loureiro, N.F. &
+  Uzdensky, D.A. (2016), *Plasma Phys. Control. Fusion* **58**, 014021 — the plasmoid-chain review behind the
+  EVO multibody-cascade grounding (companion to the cited Samtaney et al. 2009). `[credited]`.
+
+**Hydrodynamic QM & topological-soliton experiments (§9 dual reading, §C).**
+- Madelung, E. (1927), *Z. Phys.* **40**, 322 (DOI 10.1007/BF01400372) — the Schrödinger↔fluid (Madelung)
+  equivalence. Bohm, D. (1952), *Phys. Rev.* **85**, 166 & 180 — the causal/quantum-potential reading. The
+  primary sources for the field↔matter-wave convergence the §9 dual reading *instantiates*. `[credited-convergence]`.
+- Structural analogues (fold as `[S]`, not load-bearing): Barceló, C., Liberati, S. & Visser, M. (2005),
+  *Living Rev. Relativ.* **8**, 12 — analogue gravity / effective metric (keep firewall; route any promotion
+  through the analogue-prior-art-verifier). Kleckner, D. & Irvine, W.T.M. (2013), *Nat. Phys.* **9**, 253 —
+  lab creation of knotted vortices. Ackerman, P.J. & Smalyukh, I.I. (2017), *Nat. Mater.* **16**, 426 — static
+  hopfions (`Q_H`-charged particle-like solitons). Nagaosa, N. & Tokura, Y. (2013), *Nat. Nanotechnol.* **8**,
+  899 — magnetic skyrmions (topological protection, emergent EM). Empirical support that topological solitons
+  are physical — in fluid/condensed-matter media, not the FTGB EM object itself. `[credited]` / `[S]` mapping.
 
 ## 2. The five convergence frameworks (method/analogy-only)
 

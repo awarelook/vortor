@@ -2,7 +2,7 @@
 
 **Foundation tier · the load-bearing numbers the toolkit modules rest on.** This is the **one
 authoritative place** for every load-bearing number, design point, and convention the FTGB theory uses.
-The method modules (M7–M14) and the synthesis cite this file for their anchors — e.g. M7-2 reproduces the
+The method modules (M7–M15) and the synthesis cite this file for their anchors — e.g. M7-2 reproduces the
 carrier comb of §I "to the digit," M7-2 reads the `c_CK` conventions of §C, and M9 draws the comb from §I.
 
 > **Provenance.** Curated import of the ckfreefem foundation ledger `30_CANONICAL_NUMBERS.md` (values
@@ -190,8 +190,17 @@ n₀/n₁ doublet, conditional on coexistence / anapole phase-locking (β<1).
 ## F. Topological invariants
 | Symbol | Value | Tier | Note / source |
 |---|---|---|---|
-| `Q_H` (Hopf) | **1.000000** | **[V]** | Whitehead integral (`frontier_calcs/greenyer_real_hopf_charge_whitehead_integral.py`) — field-line linking |
-| Chern `C` | **±2** | **[credited]** | wave-mode Chern of the CK/Beltrami beat eigenmode (`beltrami_beat_eigenmode_chern_number.py`). ⚠ **RECOVERED, not novel** — equals the known photon-helicity value (Bliokh 2015 *Science* 348:1448; Palmerduca–Qin 2024 *PRD* 109:085005). **Present as concession.** |
+| `Q_H` (Hopf) | **1.000000** | **[V]** | Hopf charge = linking number of two preimage fibres (Whitehead). **Reproduced in-repo:** `results/verify/topology_invariants_check.py` (Gauss linking of a Hopf-linked pair `= 1`, unlinked control `= 0`). External provenance: `frontier_calcs/greenyer_real_hopf_charge_whitehead_integral.py` |
+| Chern `C` | **±2** | **[V]/[credited]** | wave-mode Chern of the CK/Beltrami beat eigenmode = spin-1 photon-helicity value `2s` (Bliokh 2015 *Science* 348:1448; Palmerduca–Qin 2024 *PRD* 109:085005). **Reproduced in-repo:** `results/verify/topology_invariants_check.py` (Fukui-Hatsugai over `S²`, `C = +2` exact). A **credited convergence** — the object's eigenmode carries the photon's helicity index (`|C| = 2 Q_H`), corroborating the confined-photon reading — not a concession |
+
+**Structural backbone (existence & spectral unification — M15, `reeb_spectral_geometry_check.py`)   [V]/[credited]**
+- **Closed-orbit existence (the standing-wave loop is a theorem).** The Beltrami field is the **Reeb field of a
+  contact structure** (`α∧dα = λ‖B‖²vol`, `curl B×B=0`; Etnyre–Ghrist 2000), so Weinstein/**Taubes 2007**
+  *guarantees* a closed field line — the resonator's fundamental loop **exists by topology, not assumption**.
+  Enciso–Peralta-Salas 2012 strengthens this: force-free fields realize *any* knot/link.
+- **Curl-spectrum unification (one operator, three geometries).** The `curl` (Beltrami/Reeb) operator's single
+  spectrum is the CK carrier comb (bounded, `tan x = x`), the self-similar cascade (`λ_L = λ_0 N^L`, §I/M14),
+  and the `S³` Ray-Singer torsion coefficient (`ζ′(−2) = −ζ(3)/4π²`, §3a/M13) — not three coincidences.
 
 ---
 

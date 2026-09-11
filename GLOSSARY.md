@@ -9,7 +9,7 @@ a source. Frameworks are folded **method/analogy-only**; no fringe physical clai
 **Tier key.** `[V]` verified in-repo · `[credited]` established physics · `[S]` structural/contingent ·
 `[V-dim]` units-verified only · `[framework]` a named fringe reading (Reed/Storti/Nielsen/Ginzburg/Greenyer), used as
 method/analogy, not endorsed · `[flag]`/`[excised]` a claim quarantined or removed. See `REFERENCES.md` for
-citations and `TOOLKIT_HANDBOOK.md` (M7–M14) for the methods.
+citations and `TOOLKIT_HANDBOOK.md` (M7–M15) for the methods.
 
 ---
 

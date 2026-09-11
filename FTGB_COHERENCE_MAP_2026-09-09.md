@@ -5,7 +5,7 @@
 mathematics**, and a placement of every framework (Buckingham-Π, Quinta Essentia / EGM, Nielsen TUFT, Reed
 QWM, Ginzburg spiral) into the layer it actually addresses — carried honestly from **theory → reality →
 experiment**. It is a navigation map over `FTGB_GRAND_SYNTHESIS`, `FTGB_CURRENTLEG_TRILOGY`, the `toolkit/`
-(M7–M14), and `results/`, not a new claim.
+(M7–M15), and `results/`, not a new claim.
 
 **The one referent.** A single **driven, force-free Beltrami–Hopf toroidal soliton** with three motions —
 **whirl** (its internal clock), **spin** (poloidal + toroidal), and **torsion** (the loop-closure-failure
@@ -127,7 +127,7 @@ rival theories
 and the map above is how they cohere from theory to the bench.
 
 ## References / provenance
-`FTGB_GRAND_SYNTHESIS.md`, `FTGB_CURRENTLEG_TRILOGY.md`, `TOOLKIT_HANDBOOK.md` (M7–M14), `GLOSSARY.md`,
+`FTGB_GRAND_SYNTHESIS.md`, `FTGB_CURRENTLEG_TRILOGY.md`, `TOOLKIT_HANDBOOK.md` (M7–M15), `GLOSSARY.md`,
 `REFERENCES.md`; `results/` (R2, R3, LENR model + `LENR_YINYANG_CONNECTIONS` positive-core capstone, electron,
 the α resolution + the `OPEN_QUESTIONS_PRINCIPLED_RESOLUTION` frontier capstone, + `verify/` scripts); models
 `index.html`, `resonator_family.html`, `soliton3d.html`, `dynamics_lab.html`, `electron.html`.

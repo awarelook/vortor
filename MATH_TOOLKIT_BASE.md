@@ -1,6 +1,6 @@
 # MATH TOOLKIT BASE -- the shared foundational mathematics behind the FTGB toolkit
 
-The foundation the eight advanced modules (M7-M14) rest on. Every advanced module cites this document
+The foundation the nine advanced modules (M7-M15) rest on. Every advanced module cites this document
 for its shared operators, its anchors, and its honesty discipline; those citations are load-bearing, so
 the section identities below (`§1` Beltrami/CK, `§9` one-operator-three-readings + dual reading + K_PV +
 topology, and the canonical-anchor block) are preserved verbatim in number and content. This is
@@ -225,6 +225,29 @@ carrier coherence are one physics read twice.
 
 ---
 
+## §4b -- Near-Beltrami enstrophy / BKM conditional regularity (the R2 theorem)   [V / V-cond]
+
+The companion fluid result to §4a, on the single-fluid (Navier-Stokes) side. **The exact identity** (no
+approximation): the vortex-stretching term equals the Lamb-vector flux,
+
+```
+  ∫ ω·(ω·∇)v  =  ∫ (∇×ω)·(v×ω)  ,
+```
+
+which **vanishes at a Beltrami state** (`∇×ω ∥ ω`), so enstrophy production is controlled by the *departure*
+from Beltrami. Feeding this into the enstrophy budget gives a **linear Grönwall inequality** with the sharp
+threshold: the enstrophy `⟨η²⟩ = ‖ω‖²` stays bounded (hence, by Beale-Kato-Majda, no blow-up) iff the driven
+near-Beltrami departure obeys `⟨η²⟩ < ν²λ₁` (the first curl eigenvalue sets the scale). Above threshold the
+bound is lost -- a genuine, falsifiable dividing line, not a universal claim. **Tier:** the Lamb-vector
+identity is `[V]` (both forms agree to ~9 sig figs, `r2_identity_check.py`); the conditional bound is
+`[V]cond` (time-integrated, sharp; `r2_gronwall_check.py`). The **unconditional-at-Reynolds** upgrade
+(`S~10³-10⁴`) is the packaged, execution-limited open item (`handoffs/`, R2 numerical-run spec). Full note:
+`results/R2_NEAR_BELTRAMI_ENSTROPHY_THEOREM_2026-09-09.md`. This is the near-Beltrami *dynamical* companion to
+the Woltjer-Taylor *variational* selection (§4): the same force-free state that is energetically selected is
+the one that shuts off enstrophy production.
+
+---
+
 ## §9 -- One operator, three readings: the dual reading, K_PV, and the topology   [the load-bearing anchor]
 
 *This is the section M9 cites as "§9 one operator, three readings" / the dual reading, M10 cites as "K_PV
@@ -290,11 +313,14 @@ EGM numerical outputs are quarantined at M11-4. Tier: PV/Alfven-dielectric rewri
 ### §9d -- Topological charge: Hopf linking, Chern number, pi_1/pi_3   [V / credited]
 
 - **Hopf linking `Q_H = p·q`** (poloidal (X) toroidal winding), computed via exact `S^3` Hopf fibers + the
-  Gauss linking integral (`topology.py`); the object carries `Q_H = 1`. **[V].**
-- **Wave-mode Chern number `C = +-2`** of the Beltrami eigenmode (Fukui-Hatsugai-Suzuki lattice Berry-flux,
-  validated on the 2-level Weyl monopole `C = -+1`, grid-independent) **[V computed]** -- this is the
-  **known** spin-1 photon-helicity value (Bliokh 2015; Palmerduca-Qin 2024): **recovered, not novel**
-  `[credited]`.
+  Gauss linking integral; the object carries `Q_H = 1`. **[V]** -- reproduced in-repo by
+  `results/verify/topology_invariants_check.py` (the Hopf invariant = linking number of two preimage fibres,
+  Whitehead: Gauss linking of a Hopf-linked pair `= 1`, unlinked control `= 0`).
+- **Wave-mode Chern number `C = +-2`** of the Beltrami eigenmode (Fukui-Hatsugai lattice Berry-flux over
+  `S^2`, exact) **[V computed]** (`results/verify/topology_invariants_check.py`) -- the **known** spin-1
+  photon-helicity value `2s` (Bliokh 2015; Palmerduca-Qin 2024). This is a **credited convergence, not a
+  concession**: the object's own CK/Beltrami beat eigenmode carries the *same* topological index as a
+  photon's helicity, positive corroboration of the confined-photon reading (`|C| = 2 Q_H`). `[credited]`.
 - **pi_1 / pi_3 decoupling:** a Madelung phase slip changes the U(1) winding (`pi_1`, `Dw = -1`) but **not**
   the baryon/Hopf number (`pi_3`, `DB = 0`, a degree of the direction field). Classical topology, **not** a
   nuclear decay. **[V / credited]** (firewall-sharpening).
@@ -328,7 +354,9 @@ Rubinstein 1968]`, the Dirac bispinor structure is **INTERNAL** to the object, a
 `U(1)` charge winding (`pi_1`) **locks** to the Hopf spin (`pi_3`) -- the "effectively elementary" limit (an
 independent circulating charge gives `g = 1`; a composite such as the proton `g = 5.59` **breaks** the lock).
 Since FTGB's `pi_1 / pi_3` are separately conserved (§9d), the locking is a **stated CONDITION**, not a fudge.
-**[V]** the Weyl / gamma_5 / C algebra (`results/verify/g2_dirac_structure_check.py`); **[credited]** the
+**[V]** the Weyl / gamma_5 / C algebra (`results/verify/g2_dirac_structure_check.py`, with the underlying
+computed chirality layer `chirality_helicity_check.py` = chirality=sign λ=sign H, `charge_conjugation_check.py`
+= mirror is C, `majorana_selfdual_check.py` = self-dual `θ_χ=45°` neutrino); **[credited]** the
 Hopf spin-1/2 and the FPT / Weinberg `g=2`-minimal-coupling theorem; **[S]** the `pi_1/pi_3` lock. This
 **reduces the g=2 frontier to one internal criterion** (ties to the §9d chirality cluster and the computed
 chirality / C / Majorana layer, `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`). It is a derivation of
@@ -467,6 +495,9 @@ never implies these are as settled as §§1-9:
 | B-23 | Coupled Hall Lyapunov `L=(1/2)‖om‖^2+kappa d_i^2(1/2)‖J‖^2`: diagonal coercive `D_L` at ANY `Pm` (removes `Pm=1`); prod. vanish quadratically at double-Beltrami; residual = Hall smallness `d_i‖B‖_inf<~eta` | [V]/[V-cond] | §4a; `hallmhd_coupled_lyapunov_check.py`; Mahajan-Yoshida 98 / Chae-Degond-Liu 14 |
 | B-24 | `S^3` curl spectral zeta `zeta_B(s)=zeta(s-2)-zeta(s)`; `n^2` coeff `zeta'(-2)=-zeta(3)/4pi^2` (`pi^2` mandatory); `zeta(3)/12` a product of VALUES; resolves M13-10 (does NOT validate TUFT fit) | [V] | §3a; `curl_spectral_zeta_pi_power_check.py`; Ray-Singer 71 |
 | B-25 | `alpha`: free photon null-balanced (`U_E/U_B=1`); resonator/medium imbalance = 0, defect = `r_e/lambda_C` (circular); `alpha` runs; frontier reduced to charge magnitude `e` | [V]/settled-neg (value) | ledger; `confined_photon_null_balance_check.py`, `alpha_resonator_imbalance_check.py`; Ranada 89/90 |
+| B-26 | R2 near-Beltrami: Lamb-vector identity `int om.(om.grad)v = int(curl om).(v x om)` (vanishes at Beltrami) -> linear Gronwall; enstrophy bounded (BKM: no blow-up) iff `<eta^2> < nu^2 lambda_1`; unconditional-at-Reynolds open | [V]/[V-cond] | §4b; `r2_identity_check.py`, `r2_gronwall_check.py` |
+| B-27 | Topology invariants in-repo: `Q_H=1` = Gauss linking of two Hopf fibres (Whitehead); `C=+-2` = spin-1 photon-helicity Chern `2s` (Fukui-Hatsugai over `S^2`); `|C|=2 Q_H`, credited convergence | [V]/[credited] | §9d, §F; `topology_invariants_check.py`; Bliokh 15 / Palmerduca-Qin 24 |
+| B-28 | Beltrami = Reeb field of a contact structure (`alpha^dalpha=lam|B|^2 vol`, `curl B x B=0`); Weinstein/Taubes -> closed field line exists by topology; curl spectrum unifies comb+cascade+`S^3` torsion | [V]/[credited] | M15; `reeb_spectral_geometry_check.py`; Etnyre-Ghrist 00 / Taubes 07 |
 
 ## References / provenance
 
