@@ -93,8 +93,11 @@ beta_a = pc_a/(KE_a + MC2_A)
 conn_nuc = TAU_BK/((R_B4*1e-15)/C)
 print("   4d->2alpha:  Q = %.2f MeV = 2 x %.2f MeV ;  each alpha p = %.1f MeV/c, beta = %.3f ;  net p = 0 (back-to-back)" % (Q_4d2a, KE_a, pc_a, beta_a))
 print("   nuclear config ~%.0f fm -> causally connected %.0fx within tau_bk (no lattice recoil partner, no gamma)" % (R_B4, conn_nuc))
-check("momentum is conserved TRIVIALLY and nuclear-locally (net p=0), and the config is causally connected",
-      abs(Q_4d2a - 47.7) < 0.2 and conn_nuc > 20, "structure + momentum cleared; BURDEN: two ~24 MeV alphas -> (alpha,n)+bremsstrahlung (a falsifier)")
+print("   CAVEAT (aneutronic_disposal_fork_check): this 4d->2alpha momentum route is itself (alpha,n)-EXCLUDED (its")
+print("   23.85 MeV alphas overproduce secondary neutrons 3-8 OOM above observed) -> momentum is cleared for the")
+print("   STRUCTURE but the operative branch must be d+d->4He soft-collective (small recoil via a slow cascade); a FORK.")
+check("momentum is conservable nuclear-locally (4d->2alpha, net p=0), so the causal-STRUCTURE charge is answered",
+      abs(Q_4d2a - 47.7) < 0.2 and conn_nuc > 20, "but 4d->2alpha is (alpha,n)-excluded -> the surviving soft branch is rate-open (fork check)")
 
 # ---------------------------------------------------------------- TEST 4: the co-variance is kinematic, not a rate
 banner("TEST 4 -- the c*tau(E)=hbar c/E co-variance is KINEMATIC, not a rate argument (repo TEST 7: slicing buys nothing)")
