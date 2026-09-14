@@ -155,6 +155,26 @@ nuclear-*adjacent* collective / small-level-splitting route. The sole survivable
 names *which* reading is dead (the pump) vs which survives (the structural gap). Consistent with the already
 `[V]`/NEGATIVE route-4 seesaw (`eta^N = R^-2`, NEET `P < 4.1e-10`) in `FTGB_GRAND_SYNTHESIS.md` E.2.3.
 
+**AUDIT EXTENSION (2026-09-14, `cross_scale_slow_scale_audit_check.py`) -- the third carve-out RESOLVED.**
+The fence left "a genuinely-slow (`w_b ~ w_slow`) nuclear-adjacent route" as an open carve-out. An 8-scale
+audit (compute-and-log every candidate slow scale vs the 87.14 kHz beat) resolves it:
+- The **LITERAL "kHz = MeV gap" identity is DEAD** -- a settled-negative by **~16.8 OOM** (`E_beat = h f_beat
+  = 0.360 neV` vs `Q = 23.847 MeV`). Every nuclear-internal / lattice / plasma / LZ-sweep scale sits **+7.5 to
+  +17.6 OOM ABOVE** the beat; the only kHz hits are the object-Alfven beat itself (0 OOM **by construction** --
+  tautological) or **field-tunable** atomic/molecular splittings a control target also hits (`4He` has `I=0` ->
+  no nuclear Zeeman -> the reactant-only bridge is empty). So **87 kHz is a MACROSCOPIC-COLLECTIVE
+  (object-Alfven/MHD) scale, not nuclear-internal** -- kHz order is generic to any lab-scale collective object.
+- The **PUMP reading is DOUBLY-closed**: parametric short by 15.7 OOM (this M16-4) **AND** slow-adiabatic
+  killed by `tau_cross/T_kHz ~ 1e-18` (the nuclear crossing is frozen/DC across a kHz cycle -- the quantitative
+  form of the already-rejected "slow lattice sets the sweep" lesson: the sweep is set by nuclear velocity).
+- **Two ideas that wore the one phrase "detuning-gap" are separated:** **(A)** the structural nuclear LZ gap
+  `Delta_nuc` -- **kHz-FREE**, the legitimate B=4 theory (LZ formula `[credited]` math / d+d identification
+  `[S]` / rate open); "detuning-gap" is a **shared-schema analogy** (von Neumann-Wigner codim-1, disjoint
+  Pi-groups, **zero transferred number**, NOT a forced law, NOT a pump). **(B)** the macroscopic beat as a slow
+  **yield-GATE / duty-cycle** -- **`[S]`, FALSIFIABLE** by a beat-locked yield step surviving an `H2`
+  (non-fusable) control; does not touch the conserved 23.847 MeV `[V]` ledger. The half-beat 43.57 kHz (Klimov
+  43-46 kHz window) is tiered identically to the object-beat: macroscopic/environmental, not nuclear-internal.
+
 ---
 
 ## M16-5 -- ANHARMONIC (DUFFING) RESONANCE: the amplitude-dependent frequency the heartbeat omits   [V / credited], and its consequence for the comb falsifier   [V-us -> S]

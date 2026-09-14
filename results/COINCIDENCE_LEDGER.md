@@ -64,6 +64,27 @@ the second is a **pre-registered falsifier** (a prediction); the third a weak `[
 | **Duffing comb-drift falsifier**: `d(1.719)` per unit drive `μ` (shear `c=0.10`) | `+0.016` (→`1.736`) | — | **PRE-REGISTERED FALSIFIER** — an anharmonic (finite-amplitude) equilibrium makes the CK ratios `1.719/2.427` drive-amplitude-dependent, so the comb falsifier must be quoted **at the linear-amplitude limit**; a measured drift is a *prediction* (Duffing-pull), distinct from the Arnold-tongue plateau-lock. Computed in `duffing_backbone_check.py` TEST 4. Not a coincidence — a sharpened falsifier |
 | **2:1 octave ↔ chirality-doublet** `ℤ₂↔ℤ₂` | `ℤ₂` both sides | — | **GENERIC `[flag-weak]`** — the antiparticle involution `λ→−λ` (chirality `=sign λ`, `C=−λ`) is a `ℤ₂`, and the EGM `ω(e)/ω(p)=2` octave carries a `ℤ₂` doubling; the "match" is a shared `ℤ₂` label. **`ℤ₂` is the most generic group** (an involution is everywhere), so this carries near-zero information — logged for completeness, essentially retired on arrival, never promoted |
 
+## Cross-scale audit additions — the "genuinely-slow route" resolved (computed 2026-09-14)
+
+The 8-scale audit (`cross_scale_slow_scale_audit_check.py`) that resolves the third cross-scale carve-out
+("a genuinely-slow nuclear-adjacent route"). Every candidate slow scale computed vs the 87.14 kHz beat and
+logged. Net: **the LITERAL "kHz = MeV gap" identity is a settled-negative; the only kHz-scale things are the
+beat itself (tautological) or field-tunable/generic environmental splittings.** 87 kHz is a macroscopic scale.
+
+| Relation | value | target | verdict |
+|---|---|---|---|
+| LITERAL identity `E_beat` vs d+d `Q` | 0.360 neV vs 23.847 MeV (ratio `1.5×10⁻¹⁷`, `−16.82` dex) | equal (for a literal kHz=MeV identity) | **SETTLED-NEGATIVE (win)** — dead by 16.8 OOM; no nuclear-internal scale reaches kHz (all +7.5..+17.6 OOM). TEST 2 |
+| object-Alfvén beat "MATCHES-kHz" | `f_b=v_A\|Δλ\|/2πR` = 87.0 kHz (0 OOM) | the 87.14 kHz beat | **RESTATEMENT / TAUTOLOGICAL** — the beat matching the beat carries ZERO information (macroscopic scale). GUARD: never quote as evidence FOR a cross-scale identity — it is the definition. TEST 3 |
+| far-miss band (nuclear / lattice / plasma / LZ-sweep) | `+7.5 to +17.6` OOM ABOVE | 87.14 kHz | **SETTLED-NEGATIVE (far-miss)** — level spacing +15.3..+15.9, LZ sweep +16.9, plasma +8.65, phonon +7.5..+8.7; even 1 keV is +12.4 OOM. TEST 1 |
+| D₂/H₂ molecular hyperfine straddle | 8 / 57.7 / 113.9 / 225 kHz | 87.14 kHz beat | **GENERIC** — the un-fusable H₂ control (p–p spin-spin 57.7 kHz=0.66×, proton spin-rotation 113.9 kHz=1.31×) straddles the beat as tightly as D₂ ⇒ a control hits it ⇒ not a signal. TEST 5 |
+| deuteron Larmor = `f_beat` | 87.14 kHz at `B=133.3 G` (proton control at 20.5 G) | 87.14 kHz | **TUNABLE-COINCIDENCE** — field-tunable (a control nucleus also lands), AND connects only to the REACTANT; ⁴He `I=0` ⇒ no nuclear Zeeman ⇒ bridge empty even before tunability. TEST 5 |
+| macroscopic kHz genericity band | `v_A∈[10⁴,10⁵], R∈[0.05,0.12]` → `f_b∈[4.3×10⁴, 1.0×10⁶] Hz` | 87.14 kHz | **GENERIC (macroscopic)** — kHz ORDER is generic to any lab-scale collective/MHD object; ties the object-beat and the Klimov half-beat (43.57 kHz, same class). 87 kHz sits at the macroscopic-collective, not nuclear, scale. TEST 4/7 |
+
+**What survives (not a coincidence — the honest positive):** the Landau-Zener normal form as the correct
+*description* of the B=4 branching (`[credited]` formula / `[S]` d+d identification / open rate, **kHz-free**),
+and the macroscopic beat as a slow **rate-gate** (`[S]`, falsifiable — a beat-locked yield step surviving an
+H₂ control). Neither transfers a number from kHz to MeV; the pump reading is a doubly-closed settled-negative.
+
 ## What the log teaches (the clues)
 
 - **The two genuinely-close, mechanism-free coincidences to keep watching:** `6π⁵ ≈ m_p/m_e` (0.0019%) and
