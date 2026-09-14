@@ -16,12 +16,12 @@ grouped by how much you need installed. **Tier A is the whole load-bearing core 
 
 ```bash
 pip install -r requirements.txt          # numpy, mpmath
-python results/verify/verify_all.py      # 62/62 PASS, exit 0 iff all pass
+python results/verify/verify_all.py      # 63/63 PASS, exit 0 iff all pass
 ```
 
-`verify_all.py` globs every `results/verify/*.py` (59 theory scripts) + the three engine files
+`verify_all.py` globs every `results/verify/*.py` (60 theory scripts) + the three engine files
 (`engine/ftgb_engine.py`, `engine/ftgb_synthesis_modeler.py`, `engine/ftgb_resonator_sim.py`) =
-**62 checks**. This reproduces the entire load-bearing model: the CK spectrum, R2/R3 fluid theorems,
+**63 checks**. This reproduces the entire load-bearing model: the CK spectrum, R2/R3 fluid theorems,
 exact-state regularity (incl. the full nonlinear pseudo-spectral simulation of the eternal Beltrami
 solution), the topological invariants `Q_H=1`/`C=±2`, the Reeb/contact + curl-spectrum results, the
 chirality/C/Majorana cluster, the curl spectral zeta, the cascade, the α settled-negatives, the LENR
