@@ -52,6 +52,18 @@ lands **0 hits within 0.5%** of `137.036` — the *same* as random control targe
 object's own constants cannot cleanly reach is, by this test, **generic**: the near-misses are what you
 expect by chance, not a signal. (Full control-target denominator in `alpha_genericity_check.py`.)
 
+## M16 additions — rhythm dynamics (computed 2026-09-14)
+
+Three entries from the M16 rhythm-dynamics fold (`rhythm_parametric_resonance_check.py`,
+`duffing_backbone_check.py`). The first is a **settled-negative WIN** (a clue disciplined, not a dead end);
+the second is a **pre-registered falsifier** (a prediction); the third a weak `[flag]` retired on arrival.
+
+| Coincidence / relation | value | target | verdict |
+|---|---|---|---|
+| **sum-vs-difference no-go**: `ω_beat/(2ω_nuc)` | `1.80×10⁻¹⁶` | `≥1` for a pump | **SETTLED-NEGATIVE (win)** — the kHz carrier beat is a *difference* frequency, 15.7 OOM too slow to parametrically pump (`Ω≈2ω_nuc`) or drive a MeV mode; the only tongue it hits (`n≈5.6×10¹⁵`) has vanishing width. Retires the "beat pumps the nucleus" reading **only**; leaves the conserved 23.847 MeV ledger, the Landau-Zener B=4 route, and any genuinely-slow (`ω_b≈ω_slow`) route intact. Computed in `rhythm_parametric_resonance_check.py` TEST 4 |
+| **Duffing comb-drift falsifier**: `d(1.719)` per unit drive `μ` (shear `c=0.10`) | `+0.016` (→`1.736`) | — | **PRE-REGISTERED FALSIFIER** — an anharmonic (finite-amplitude) equilibrium makes the CK ratios `1.719/2.427` drive-amplitude-dependent, so the comb falsifier must be quoted **at the linear-amplitude limit**; a measured drift is a *prediction* (Duffing-pull), distinct from the Arnold-tongue plateau-lock. Computed in `duffing_backbone_check.py` TEST 4. Not a coincidence — a sharpened falsifier |
+| **2:1 octave ↔ chirality-doublet** `ℤ₂↔ℤ₂` | `ℤ₂` both sides | — | **GENERIC `[flag-weak]`** — the antiparticle involution `λ→−λ` (chirality `=sign λ`, `C=−λ`) is a `ℤ₂`, and the EGM `ω(e)/ω(p)=2` octave carries a `ℤ₂` doubling; the "match" is a shared `ℤ₂` label. **`ℤ₂` is the most generic group** (an involution is everywhere), so this carries near-zero information — logged for completeness, essentially retired on arrival, never promoted |
+
 ## What the log teaches (the clues)
 
 - **The two genuinely-close, mechanism-free coincidences to keep watching:** `6π⁵ ≈ m_p/m_e` (0.0019%) and

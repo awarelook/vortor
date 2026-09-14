@@ -34,11 +34,11 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 | [`foundation/30_CANONICAL_NUMBERS.md`](foundation/30_CANONICAL_NUMBERS.md) | the single source of truth for the anchors & derived numbers |
 | [`V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md`](V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md) | the one caveat for absolute magnitudes |
 
-## Toolkit (method modules M7–M15)
+## Toolkit (method modules M7–M16)
 | File | What |
 |---|---|
-| [`TOOLKIT_HANDBOOK.md`](TOOLKIT_HANDBOOK.md) | consolidated handbook (M7–M15) |
-| [`toolkit/`](toolkit/) | the nine modules: M7 Buckingham-Π · M8 QWM · M9 coupled-oscillator · M10 topological-soliton · M11 EGM/PV · M12 Ginzburg · M13 TUFT mass-tower · M14 Greenyer beat/cascade · M15 Reeb & spectral geometry |
+| [`TOOLKIT_HANDBOOK.md`](TOOLKIT_HANDBOOK.md) | consolidated handbook (M7–M16) |
+| [`toolkit/`](toolkit/) | the ten modules: M7 Buckingham-Π · M8 QWM · M9 coupled-oscillator · M10 topological-soliton · M11 EGM/PV · M12 Ginzburg · M13 TUFT mass-tower · M14 Greenyer beat/cascade · M15 Reeb & spectral geometry · M16 rhythm/Duffing & sum-vs-difference fence |
 
 ## Results, assessments & governance
 | File | What |
@@ -51,8 +51,8 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 ## Reproduction, harness & provenance
 | File | What |
 |---|---|
-| [`results/verify/`](results/verify/) | **the reproducible model** — 64 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
-| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**67/67**, CI-gated) |
+| [`results/verify/`](results/verify/) | **the reproducible model** — 66 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
+| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**69/69**, CI-gated) |
 | [`engine/`](engine/) | `ftgb_engine.py` (the object as one executable model) + `ftgb_synthesis_modeler.py` (the isomorph) + `ftgb_resonator_sim.py` (the theory as **running simulation**: nonlinear NS evolution of the eternal Beltrami state, comb/beat oscillation, the de Broglie matter wave) |
 | [`frontier_calcs/`](frontier_calcs/) | vendored (frozen) provenance scripts for the canonical numbers + toolkit-module methods, **+ the citation stores** (the ~198-row verified references ledger, the paper-prep pass with its 4 bibliographic corrections, the M14 61-entry catalog) and ark salvage (Sector-A OAM form, Cho–Maison solve, two-electron ring Madelung) |
 | [`toroidal_core/`](toroidal_core/) | vendored (frozen) core-derivation package (`fields.py`, `madelung.py`, `topology.py`, …) |

@@ -315,6 +315,31 @@ adversarial prior-art pass. The mechanism is `[S]`; the energy accounting `[V]`;
   1700 (the honest outer bound: vacuum "feeding" yields only one-shot Casimir work, never continuous power).
   `[credited]`; a "vacuum/ZPF net power source" reading is **not** supported and stays settled-negative.
 
+**1l. Rhythm dynamics, anharmonic (Duffing) resonance & the parametric fence (§ M16, 2026-09-14).**
+*Grounding the M16 fold (`toolkit/TOOLKIT_ADV_16_RHYTHM_PARAMETRIC_2026-09-14.md`,
+`results/verify/rhythm_parametric_resonance_check.py`, `results/verify/duffing_backbone_check.py`). All
+relations credited textbook physics, reproduced in-repo; the one speculative bridge (cross-scale pump) is
+the fenced settled-negative.*
+- **Beats as a nonlinear/energy observable**: Feynman, R.P. (1963), *Lectures on Physics* I-48 — the beat
+  envelope is not a linear Fourier line; the difference frequency appears in a quadratic (energy/intensity)
+  observable. `[credited]`.
+- **Parametric resonance & the anharmonic oscillator**: Landau, L.D. & Lifshitz, E.M., *Mechanics* (3rd ed.,
+  Pergamon 1976), §27 (parametric resonance, principal tongue `Ω=2ω₀`, threshold), §29 (the anharmonic
+  oscillator, amplitude-dependent frequency / backbone `ω(a)=ω₀+(3β/8ω₀)a²`); Mathieu, É. (1868), *J. Math.
+  Pures Appl.* **13**, 137 (the Mathieu equation); Nayfeh, A.H. & Mook, D.T. (1979), *Nonlinear Oscillations*
+  (Wiley), ch.3–5 (multiple-scales, Duffing backbone, jump/hysteresis, odd harmonics). `[credited]`.
+- **Entrainment / phase-locking**: Adler, R. (1946), *Proc. IRE* **34**, 351 (`dψ/dt=Δω−K sin ψ`, lock iff
+  `|Δω|≤K`); Pikovsky, A., Rosenblum, M. & Kurths, J. (2001), *Synchronization* (CUP) — Arnold tongues,
+  devil's-staircase mode-locking (the Arnold-tongue comb-lock, distinct from the M16-5 Duffing-pull).
+  `[credited]`.
+- **The sum-rule for parametric/three-wave pumping** (the settled-negative's basis): Kruer, W.L. (1988),
+  *The Physics of Laser Plasma Interactions* (Addison-Wesley), ch.7 — parametric instabilities require a
+  sum/twice-frequency match `Ω≈ω_j+ω_k`; a slow **difference** (beat) frequency is not a valid pump, so the
+  kHz carrier beat cannot pump a MeV mode (15.7 OOM short). `[credited]`.
+- **The CK inharmonic comb** (the linear-limit fingerprint): Chandrasekhar, S. & Kendall, P.C. (1957),
+  *Astrophys. J.* **126**, 457 — force-free eigenvalues `tan x=x`, ratios `1:1.719:2.427`. `[credited]`
+  (also reproduced two ways in `ck_eigenvalues_check.py`).
+
 ## 2. The five convergence frameworks (method/analogy-only)
 
 **Reed — Quantum Wave Mechanics (QWM)** — `[QWM framework]` (M8). Photon-helicoid electron on a Hopf-link

@@ -1,12 +1,12 @@
 ---
-title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M15)"
+title: "The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M16)"
 author: Nathaniel Hanks
 date: 2026-09-09
-status: "Consolidated reference handbook. Assembled from the nine canonical method modules TOOLKIT_ADV_07..15, resting on the shared foundation MATH_TOOLKIT_BASE.md; those modules remain the source of record. This is a clean, shareable single-file reference; no new claims are introduced here."
+status: "Consolidated reference handbook. Assembled from the ten canonical method modules TOOLKIT_ADV_07..16, resting on the shared foundation MATH_TOOLKIT_BASE.md; those modules remain the source of record. This is a clean, shareable single-file reference; no new claims are introduced here."
 anchors: "Four measured anchors {B, n_i, m_i, R}; zero free structural parameters."
 ---
 
-# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M15)
+# The FTGB Methods Toolkit: A Consolidated Handbook (Modules M7-M16)
 
 **Nathaniel Hanks -- 2026-09-09**
 
@@ -14,7 +14,7 @@ anchors: "Four measured anchors {B, n_i, m_i, R}; zero free structural parameter
 
 ## 1. Introduction
 
-This handbook consolidates the nine *method modules* of the Fractal-Toroidal-Beat (FTGB) program
+This handbook consolidates the ten *method modules* of the Fractal-Toroidal-Beat (FTGB) program
 into a single, tiered, citable reference. The toolkit is not the theory; it is the reusable
 **analysis machinery** the theory is built with -- the dimensional bookkeeping, the conserved-current
 constructions, the no-go templates, the synthesis mappings, and the anti-numerology controls that
@@ -27,7 +27,7 @@ configuration and as a Madelung / quantum-hydrodynamic matter wave, resting on f
 `{B, n_i, m_i, R}` with zero free structural parameters. But each method below is written to be
 lifted out and re-applied to a fresh problem without re-deriving it. That is the point of a toolkit.
 
-The nine modules are:
+The ten modules are:
 
 | Module | Subject | What it gives you |
 |---|---|---|
@@ -40,8 +40,9 @@ The nine modules are:
 | **M13** | Nielsen TUFT mass-tower & mixing methods | the ζ-valued exponent tower (`C₅=ζ(3)/12`, `β₅=ζ(5)/8π⁴`, …), knot/lens-space torsion, CKM/PMNS overlaps, Chern-Simons `M=ke²/4π`, Proca-Beltrami `λ=mc/ℏ` — coefficients `[V]`-checked, **π-power form resolved (M13-10); the quark tower completes 6/6 masses as five parameter-free ratio predictions from one scale, topological inputs reproduced in-repo `[V-us]`; blind-fit significances stay `[preprint-claim]`** |
 | **M14** | Greenyer beat-law & EVO cascade methods | the Beat Law + shape-independent ladder `N^L`, the triad dichotomy (integer silence / golden resonance), two Manley-Rowe (Fibonacci) invariants, anapole `N⁴`, `9/8 μ_B`; nuclear layer a **pre-registered target** (`N_crit` prediction), **no over-unity** |
 | **M15** | Reeb & spectral geometry | the Beltrami-Hopf field as the **Reeb field of a contact structure** (Etnyre-Ghrist; the contact identity `α∧dα = λ·‖B‖²·vol` with `B` in `ker dα`), so Weinstein/**Taubes** guarantees the resonator's **closed standing-wave orbit** exists by topology; and the **curl operator's one spectrum** in three roles — CK comb (`tan x=x`), cascade (`λ_L=λ_0 N^L`), `S³` Ray-Singer torsion (`ζ'(-2)=-ζ(3)/4π²`). `[V]`/`[credited]`, no new claim |
+| **M16** | Rhythm/Duffing & the sum-vs-difference fence | rhythm dynamics grounds the core (beat = a nonlinear/**energy** observable not a linear line; Mathieu tongue `Ω=2ω₀` threshold `2/Q`; Adler lock `\|Δω\|≤K`; inharmonic comb `1:1.719:2.427`), adds the **one new-physics leg** the Stuart-Landau heartbeat omits — **anharmonic (Duffing) amplitude-dependent frequency** (backbone bending, bistability/jump, odd 3f harmonics), which makes the comb ratios **drive-dependent** so the falsifier is a *linear-limit* statement (Duffing-pull separable from the Arnold-tongue lock), and the **load-bearing settled-negative**: a slow kHz **difference**-beat cannot parametrically pump a MeV mode (needs a **sum** match; 15.7 OOM short), retiring the pump-reading only. `[V]`/`[credited]`/`[settled-neg]` |
 
-All nine modules rest on **`MATH_TOOLKIT_BASE.md`** — the shared foundation carrying the mathematics they
+All ten modules rest on **`MATH_TOOLKIT_BASE.md`** — the shared foundation carrying the mathematics they
 import: the Chandrasekhar-Kendall / Beltrami curl eigenproblem (`§1`), helicity / Woltjer-Taylor relaxation
 (`§4`), the **one operator read three ways** (plasma ‖ Madelung matter-wave ‖ `K_PV` polarizable vacuum) and
 the topology (`§9`), and the canonical anchors whose single source of truth is
@@ -1075,6 +1076,44 @@ machine-clean; source of record `TOOLKIT_ADV_15`). **No new physical claim** —
   Two adjacent invariants are reproduced in-repo by `topology_invariants_check.py`: `Q_H=1` (Hopf linking) and
   `C=±2` (spin-1 photon-helicity Chern, `|C|=2Q_H`).
 
+## 11a. Module M16 -- Rhythm dynamics, anharmonic (Duffing) resonance & the sum-vs-difference fence
+
+Rhythm dynamics — how repeated motion organizes in time — grounds the FTGB core, adds the one standard
+concept the model switches off, and disciplines the cross-scale claim (`results/verify/rhythm_parametric_resonance_check.py`,
+`results/verify/duffing_backbone_check.py`; source of record `TOOLKIT_ADV_16`). Every relation credited or
+computed; nothing fabricated.
+
+- **GROUNDING (four credited relations, reproduced).** The **beat is a nonlinear/energy observable**, not a
+  linear Fourier line: `A cos ω₁t + A cos ω₂t` has **no** spectral line at `ω_b=|ω₂−ω₁|` in the linear field,
+  but a real line in a quadratic (energy/stress/intensity) observable — exactly how the resonator sim and a
+  square-law detector see the kHz beat `[credited: Feynman I-48]`. The **parametric (Mathieu)** drive has its
+  principal tongue at `Ω=2ω₀` (half-frequency response) with threshold `h_th≈2/Q` — grounds the driven
+  heartbeat and the M14 Floquet-Mathieu `η_c=2/Q` `[credited]`. The carrier **comb-lock** is **Adler
+  entrainment**: lock iff `|Δω|≤K` (Arnold-tongue half-width) `[credited]`. The CK comb is **inharmonic**
+  `1:1.719:2.427` (a harmonic `1:2:3` lock would falsify the Beltrami-carrier reading) — the fingerprint,
+  read at the *linear-amplitude limit*. `[V]`/`[credited]`.
+- **THE NEW-PHYSICS LEG — anharmonic (Duffing) resonance.** The engine's Stuart-Landau heartbeat
+  `dz/dt=(μ+iω−|z|²)z` has shear `c=0`: amplitude *saturation* but **zero amplitude→frequency coupling**.
+  Restoring the anharmonic term (`x''+2γx'+ω₀²x+βx³=F cosΩt`) gives, reproduced in-repo: **backbone bending**
+  `Ω_peak(A)≈ω₀(1+3βA²/8ω₀²)` (peak frequency climbs with drive), **bistability/jump** (two coexisting steady
+  states → swept-drive hysteresis), and **odd-harmonic** (3f≫2f) generation. In amplitude-equation form
+  (`dz/dt=(μ+iω−(1+ic)|z|²)z`) the limit-cycle frequency is `ω_eff=ω−c|z|²` (confirmed numerically), so with
+  shear on the **CK comb ratios drift with drive amplitude** (`c=0.10`, drive `μ:0→1` pulls `1.719→1.736`).
+  **Consequence for the sharpest FTGB falsifier:** the comb `1:1.719:2.427` must be quoted **at the
+  linear-amplitude limit**, and a measured **drift-with-amplitude is a prediction, not a refutation** — and
+  this **Duffing-pull** (continuous, single-oscillator) is experimentally **separable** from the
+  **Arnold-tongue comb-lock** (a discontinuous plateau onto a rational `7/4,5/2`, needing a second mode).
+  `[V]`/`[credited: L&L Mechanics §29 / Nayfeh-Mook ch.4]`.
+- **THE LOAD-BEARING SETTLED-NEGATIVE — the sum-vs-difference fence.** Parametric onset needs a **sum**/
+  twice-frequency match `Ω≈ω_j+ω_k`; a slow **difference** (beat) frequency is not a valid pump. The FTGB
+  carrier beat `ω_b=2π·87 kHz≈5.47×10⁵ rad/s` is `1.8×10⁻¹⁶` of `2ω_nuc≈3.04×10²¹ rad/s` (15.7 OOM short);
+  the only tongue it hits, `n≈5.6×10¹⁵`, has exponentially vanishing width (adiabatic, not resonant). This
+  **retires the "beat dynamically pumps the nucleus" reading only.** It does **not** touch the conserved
+  `d+d→⁴He=23.847 MeV` energy ledger, the cold **Landau-Zener B=4** resolution, or a genuinely-slow
+  (`ω_b≈ω_slow`) nuclear-adjacent route — the sole survivable cross-scale form is a **structural detuning-gap
+  (Landau-Zener) analogy, never a dynamical pump.** `[V-arith]`/`[settled-neg]` (sharpens TIER_LEDGER
+  "Cross-scale Δ identity").
+
 ## 12. Consolidated reference list
 
 Established, credited literature underpinning the toolkit (per module). Primary load-bearing references
@@ -1172,6 +1211,6 @@ The following are named so they are never cited as established, and never resurr
 
 ---
 
-*This handbook is a consolidation of TOOLKIT_ADV_07 (M7), _08 (M8), _09 (M9), and _10 (M10), which
-remain the canonical source-of-record modules with their reproducible ASCII scripts in
-`frontier_calcs/`. No new claim is introduced here; every quoted number traces to its source module.*
+*This handbook is a consolidation of TOOLKIT_ADV_07 through _16 (modules M7-M16), which remain the
+canonical source-of-record modules with their reproducible scripts in `frontier_calcs/` and
+`results/verify/`. No new claim is introduced here; every quoted number traces to its source module.*

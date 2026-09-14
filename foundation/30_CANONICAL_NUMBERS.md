@@ -2,7 +2,7 @@
 
 **Foundation tier · the load-bearing numbers the toolkit modules rest on.** This is the **one
 authoritative place** for every load-bearing number, design point, and convention the FTGB theory uses.
-The method modules (M7–M15) and the synthesis cite this file for their anchors — e.g. M7-2 reproduces the
+The method modules (M7–M16) and the synthesis cite this file for their anchors — e.g. M7-2 reproduces the
 carrier comb of §I "to the digit," M7-2 reads the `c_CK` conventions of §C, and M9 draws the comb from §I.
 
 > **Provenance — now self-contained.** Values re-sourced from live `frontier_calcs/` scripts on 2026-08-11,

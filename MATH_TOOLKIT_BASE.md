@@ -1,6 +1,6 @@
 # MATH TOOLKIT BASE -- the shared foundational mathematics behind the FTGB toolkit
 
-The foundation the nine advanced modules (M7-M15) rest on. Every advanced module cites this document
+The foundation the ten advanced modules (M7-M16) rest on. Every advanced module cites this document
 for its shared operators, its anchors, and its honesty discipline; those citations are load-bearing, so
 the section identities below (`§1` Beltrami/CK, `§9` one-operator-three-readings + dual reading + K_PV +
 topology, and the canonical-anchor block) are preserved verbatim in number and content. This is
@@ -510,6 +510,8 @@ never implies these are as settled as §§1-9:
 | B-28 | Beltrami = Reeb field of a contact structure (`alpha^dalpha=lam|B|^2 vol`, `curl B x B=0`); Weinstein/Taubes -> closed field line exists by topology; curl spectrum unifies comb+cascade+`S^3` torsion | [V]/[credited] | M15; `reeb_spectral_geometry_check.py`; Etnyre-Ghrist 00 / Taubes 07 |
 | B-29 | Physical object vs R3 condition (iii): `d_i=0.296 m > R=0.12 m` and `S_di=d_i v_A/eta ~ 15-2400 >> 1` -> Hall-smallness VIOLATED, strongly Hall-mediated; object sits OUTSIDE R3's proven-regular regime (gap named, conditional theorem not refuted) | [V] | §4a/§4b; `r3_hall_smallness_physical_check.py`; 30_CANONICAL §A/§B |
 | B-30 | Exact-state global regularity: at Beltrami the Lamb vector `u x omega = 0` pointwise, so advection `u.grad u` is a PURE GRADIENT (absorbed into pressure) and `u(t)=e^{-nu lam^2 t}u_0` is an exact eternal smooth solution (enstrophy decays) -> the object AS its coherent state is globally regular UNCONDITIONALLY; general/driven case stays open | [V] | §4b; `exact_beltrami_regularity_check.py` |
+| B-31 | Rhythm/anharmonic (M16): beat=quadratic/energy observable (no linear line); Mathieu tongue `Om=2om0` thresh `2/Q`; Adler lock `|dw|<=K`; **Duffing backbone** `Om_peak~om0(1+3beta A^2/8om0^2)`+bistability+odd(3f), so the comb ratios DRIFT with drive (Stuart-Landau `om_eff=om-c|z|^2`, engine has `c=0`) -> comb falsifier is a LINEAR-LIMIT statement; Duffing-pull separable from Arnold-lock | [V]/[credited] | M16; `rhythm_parametric_resonance_check.py`, `duffing_backbone_check.py`; L&L Mech §27-29 / Nayfeh-Mook |
+| B-32 | Sum-vs-difference fence (M16, settled-neg): a slow DIFFERENCE (beat) freq cannot pump a fast mode — parametric onset needs a SUM match `Om=w_j+w_k`; FTGB kHz beat `w_b/(2 w_nuc)=1.8e-16` (15.7 OOM short), only tongue `n~5.6e15` has zero width -> retires the "beat pumps the nucleus" reading ONLY (conserved 23.847 MeV ledger, cold Landau-Zener B=4, slow-collective route untouched) | [V-arith]/[settled-neg] | M16; `rhythm_parametric_resonance_check.py` TEST 4; L&L Mech §27 / Kruer ch.7 |
 
 ## References / provenance
 
