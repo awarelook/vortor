@@ -92,6 +92,6 @@ connected — a clue may later lead somewhere). What is removed: **only supersed
   tier is *labeled, reproducible, and honest*. The breakthroughs available are the two scoped external
   computations and the small locks; the rest is the honest frontier.
 
-*Provenance: the 58 `results/verify/` scripts + engine + the synthesis modeler + the resonator simulation `engine/ftgb_resonator_sim.py` (`verify_all.py` → **61/61** PASS) + the `results/` and `handoffs/` docs
+*Provenance: the 59 `results/verify/` scripts + engine + the synthesis modeler + the resonator simulation `engine/ftgb_resonator_sim.py` (`verify_all.py` → **62/62** PASS) + the `results/` and `handoffs/` docs
 cited inline; every coincidence/flag is computed and logged in `COINCIDENCE_LEDGER.md`. No value promoted;
 `e^(-2/3)`/`E_fm` excised; the α winding stays settled-negative.*
