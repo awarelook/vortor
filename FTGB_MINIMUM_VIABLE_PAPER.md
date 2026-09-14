@@ -1,7 +1,7 @@
 # The Coherent Object — a minimum viable, reproducible theory
 
 **FTGB (Fractal-Toroidal-Beat):** one driven Beltrami–Hopf toroidal soliton, read at once as a plasma field
-and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**70/70**,
+and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**71/71**,
 CI-gated, no network). Full map: [`INDEX.md`](INDEX.md) · terms: [`GLOSSARY.md`](GLOSSARY.md) · citations:
 [`REFERENCES.md`](REFERENCES.md) · honest self-assessment: [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md).
 
@@ -80,9 +80,10 @@ null].
   swirl-vs-straight `COP` contrast maps directly onto the Woltjer–Taylor single-λ coherence claim — testable,
   not just analogical, with a helicity diagnostic.
 - **Direct heat *and* electricity (Aureon-style LEC / co-deposition):** the object's oscillating near-field
-  **junction-pole EMF** (`V=ω_b ΔΦ ~ 0.1–1 V`) is a real, reactive, load-driving voltage — the nuclear
-  energy couples into the EM mode that drives current, rather than degrading to heat first. Honest limit: it
-  is *fed*, never a net source; the energy is nuclear and conserved.
+  **junction-pole EMF** (`V=ω_b ΔΦ ~ 0.1–1 V`, an `[S]` order-of-magnitude estimate — not yet derived or
+  scripted) would be a real, reactive, load-driving voltage — the nuclear energy couples into the EM mode
+  that drives current, rather than degrading to heat first. Honest limit: it is *fed*, never a net source;
+  the energy is nuclear and conserved.
 - **Transmutation:** hops on the discrete knot/Skyrme baryon lattice (baryon-conserving), plus a specific,
   falsifiable **bound-state β/EC trigger** (`¹⁶³Dy→¹⁶³Ho`, ionization-gated [Bosch 1996; Jung 1992]) — a
   heatless, ν-dominated ΔZ signature testable by X-ray charge-state spectroscopy against zero background.
@@ -102,7 +103,7 @@ null].
 
 ```bash
 pip install -r requirements.txt          # numpy, mpmath
-python results/verify/verify_all.py      # 70/70 PASS, deterministic, no network, CI-gated
+python results/verify/verify_all.py      # 71/71 PASS, deterministic, no network, CI-gated
 ```
 
 Everything load-bearing has a script; the foundation numbers are re-derived in-repo; no claim exceeds its

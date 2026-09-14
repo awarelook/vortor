@@ -12,8 +12,8 @@ python results/verify/verify_all.py      # runs all checks + the engine; exit 0 
 
 `verify_all.py` runs each theory script plus `engine/ftgb_engine.py`, captures exit
 codes, and prints a `PASS/FAIL` summary (it is also a CI gate — nonzero exit on any
-failure). Deterministic, no network. Current status: **70 / 70 PASS** on CPython 3.12
-(67 theory scripts + the engine `ftgb_engine.py` + the synthesis modeler
+failure). Deterministic, no network. Current status: **71 / 71 PASS** on CPython 3.12
+(68 theory scripts + the engine `ftgb_engine.py` + the synthesis modeler
 `engine/ftgb_synthesis_modeler.py` — the executable MATH↔PHYSICS↔EXPERIMENT isomorph, which
 runs the live `[V]` anchors — + the resonator simulation `engine/ftgb_resonator_sim.py`,
 which time-integrates the object's dynamics in software). The suite spans the `[V]`-core, the internalized `[credited]`
@@ -45,6 +45,7 @@ bridges, and one `[speculative frontier]` hypothesis-test (`microtubule_ck_comb_
 | `rhythm_parametric_resonance_check.py` | the five load-bearing rhythm relations: beat=nonlinear/energy observable (not a linear Fourier line); Mathieu tongue at `Ω=2ω₀`, threshold `2/Q`; Adler lock `\|Δω\|≤K`; the CK comb is inharmonic `1:1.719:2.427`; **and the sum-vs-difference fence** — a slow kHz beat is 15.7 OOM too slow to parametrically pump a MeV mode (settled-neg, pump-reading only) | M16 | `[V]` / `[credited]` / `[settled-neg]` |
 | `duffing_backbone_check.py` | the anharmonic (Duffing) leg the heartbeat omits: backbone bending `Ω_peak(A)≈ω₀(1+3βA²/8ω₀²)`, bistability/jump, odd-harmonic (3f) generation; and the shear-on consequence — the CK comb ratios **drift with drive amplitude** (Stuart-Landau `ω_eff=ω−c\|z\|²`), so the comb falsifier is a *linear-limit* statement and Duffing-pull is separable from the Arnold-tongue lock | M16 | `[V]` / `[credited]` |
 | `cross_scale_slow_scale_audit_check.py` | **resolves the "genuinely-slow route" carve-out:** 8-scale audit vs the 87 kHz beat — the LITERAL "kHz = MeV gap" identity is DEAD (settled-neg, ~16.8 OOM); every nuclear/lattice/plasma/LZ-sweep scale is +7.5..+17.6 OOM away; the only kHz hits are the beat itself (tautological) or field-tunable/generic splittings (⁴He `I=0` ⇒ empty bridge). Separates **(A)** the kHz-free nuclear LZ gap Δ (LZ formula `[credited]` / d+d id `[S]` / rate open) from **(B)** the macroscopic beat-as-rate-gate (`[S]`, falsifiable). Pump reading **doubly**-closed (parametric 15.7 OOM AND slow-adiabatic frozen/DC, `τ_cross/T_kHz~10⁻¹⁸`) | M16 | `[V]` / `[settled-neg]` / `[S]` |
+| `beat_ladder_nonmatch_check.py` | **the honest prior-art non-match:** the CK inharmonic comb 1:1.719:2.427 `[V]` and the geometric beat-cascade ladder `f_b(L)=N^L` `[S]` are FTGB's two spectral discriminators; the sole published beat-sweep excess-heat dataset (Hagelstein-Letts-Cravens 2010, THz steps 8.2/15.1/20.8, consecutive ratios 1.84 vs 1.38) does **NOT** form a geometric ladder for any N — logged as a non-match, so the `N^L` prediction is neither over-claimed as confirmed nor mistaken for prior art (signature-class credited; exact geometric form the untested-novel residue) | M14/M16 | `[V]` / `[S]` / `[log]` |
 | `egm_sense_checks.py` | Storti EGM numerical audit — the 2:1 harmonic is definitional; radii/H₀ miss; `e^(-2/3)` is dead (`→72`, not 137) | M11-4 | `[V]` (audit) / `[flag]`/`[excised]` |
 | `egm_mode_count_closure.py` | the Debye/Nyquist mode-count closure behind `ω_Ω`/`n_Ω`; `ℓ∝λ_C n_Ω^(-1/3)` scaling + weak-sensitivity | M11-6 | `[V]` |
 | `alpha_running.py` | standard QED α running (and that it runs the *wrong way* for a geometric `~137`) — grounds the dynamical reframe | `ALPHA_DYNAMICAL_REFRAME`, M11-4(v) | `[V]` / `[flag]` |

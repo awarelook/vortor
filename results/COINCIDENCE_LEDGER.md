@@ -85,6 +85,16 @@ beat itself (tautological) or field-tunable/generic environmental splittings.** 
 and the macroscopic beat as a slow **rate-gate** (`[S]`, falsifiable — a beat-locked yield step surviving an
 H₂ control). Neither transfers a number from kHz to MeV; the pump reading is a doubly-closed settled-negative.
 
+## Beat-ladder prior-art non-match (computed 2026-09-14)
+
+The novelty audit's one computable finding (`beat_ladder_nonmatch_check.py`): does the ONE published
+beat-sweep excess-heat dataset already show — or already refute — FTGB's geometric yield-step ladder
+`f_b(L)=N^L`?
+
+| Relation | value | target | verdict |
+|---|---|---|---|
+| Hagelstein-Letts-Cravens 2010 THz steps vs the `f_b(L)=N^L` ladder | 8.2/15.1/20.8 THz (consecutive ratios 1.84, 1.38 — differ ~34%) | a geometric ladder (equal consecutive ratios) | **NON-MATCH (logged)** — the reported steps are not geometric for **any** base N, so the sole existing beat-sweep dataset neither confirms nor duplicates the FTGB ladder. The signature-CLASS ("sweep a beat, find a locked yield step") is credited prior art (HLC 2010, JCMNS 3, 59); the exact geometric `N^L` form stays a GENUINELY UNTESTED falsifier. Neither a hit nor a refutation — a clue on the record. |
+
 ## What the log teaches (the clues)
 
 - **The two genuinely-close, mechanism-free coincidences to keep watching:** `6π⁵ ≈ m_p/m_e` (0.0019%) and

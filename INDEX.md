@@ -47,12 +47,13 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 | [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md) | the honest self-assessment (every open item) |
 | [`results/COINCIDENCE_LEDGER.md`](results/COINCIDENCE_LEDGER.md) | every coincidence computed & logged as a clue |
 | [`results/LENR_ACTIVE_SITE_SYNTHESIS_2026-09-14.md`](results/LENR_ACTIVE_SITE_SYNTHESIS_2026-09-14.md) | the `[S]` LENR mechanism: an open-fed anapole dipole-balance resonance → collective nuclear disposal; every wall named; `lenr_disposal_channel_check` |
+| [`results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`](results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md) | **the tiered anomaly-landscape map** — what FTGB explains/predicts/leaves-open across heat-helium, branching, transmutation, SAFIRE, EVO, Aureon; convergence ranking; original-vs-literature novelty audit; the breakthrough stated honestly (a falsifiable program, not a proof) |
 
 ## Reproduction, harness & provenance
 | File | What |
 |---|---|
-| [`results/verify/`](results/verify/) | **the reproducible model** — 67 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
-| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**70/70**, CI-gated) |
+| [`results/verify/`](results/verify/) | **the reproducible model** — 68 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
+| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**71/71**, CI-gated) |
 | [`engine/`](engine/) | `ftgb_engine.py` (the object as one executable model) + `ftgb_synthesis_modeler.py` (the isomorph) + `ftgb_resonator_sim.py` (the theory as **running simulation**: nonlinear NS evolution of the eternal Beltrami state, comb/beat oscillation, the de Broglie matter wave) |
 | [`frontier_calcs/`](frontier_calcs/) | vendored (frozen) provenance scripts for the canonical numbers + toolkit-module methods, **+ the citation stores** (the ~198-row verified references ledger, the paper-prep pass with its 4 bibliographic corrections, the M14 61-entry catalog) and ark salvage (Sector-A OAM form, Cho–Maison solve, two-electron ring Madelung) |
 | [`toroidal_core/`](toroidal_core/) | vendored (frozen) core-derivation package (`fields.py`, `madelung.py`, `topology.py`, …) |

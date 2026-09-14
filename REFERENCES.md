@@ -340,6 +340,35 @@ the fenced settled-negative.*
   *Astrophys. J.* **126**, 457 — force-free eigenvalues `tan x=x`, ratios `1:1.719:2.427`. `[credited]`
   (also reproduced two ways in `ck_eigenvalues_check.py`).
 
+**1m. LENR prior-art completeness (§ folded by the explanatory-resolution-map novelty audit, 2026-09-14).**
+*Prior art that FTGB's predictions/explanations must credit or be distinguished from — surfaced by an
+adversarial novelty audit against the six named theorists (grounding
+`results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`). Each independently verified (author/year/venue).*
+- **Beat-sweep excess-heat (the signature-CLASS predates FTGB)**: Hagelstein, P.L., Letts, D. & Cravens, D.
+  (2010), *J. Condensed Matter Nucl. Sci.* **3**, 59 — two-laser THz difference-frequency (beat) response of
+  Pd-D; excess-heat steps near 8.2/15.1/20.8 THz. The credited precedent for "sweep a beat frequency, look
+  for a locked yield step." **Computed non-match** to the FTGB geometric ladder `f_b(L)=N^L` (the reported
+  steps are not geometric): `beat_ladder_nonmatch_check.py`. `[credited]` (class) / FTGB's exact `N^L` form is
+  the untested-novel residue.
+- **Ionization-as-LENR-trigger (general concept)**: Gareev, F.A. & Zhidkova, I.E. (2005), arXiv:nucl-th/0505021
+  — "the excitation and ionization of atoms may play a role as a trigger for LENR." The general precedent for
+  the FTGB `¹⁶³Dy→¹⁶³Ho` ionization-gated trigger (which adds the specific isotope + X-ray charge-state
+  protocol). `[credited]` (concept) / the isotope+protocol packaging is the novel residue.
+- **TSC / 4D-cluster branching (the analogous question, a different route)**: Takahashi, A. (2014), *J.
+  Condensed Matter Nucl. Sci.* **13**, 565 — the tetrahedral-symmetric-condensate `4d→2⁴He` picture answers
+  the branching/product question via an EQPET/Gamow-barrier route, distinct from the FTGB B=4 Landau–Zener
+  adiabaticity selector. `[credited, distinct mechanism]`.
+- **Coherent-condensate fusion twins (the nearest structural rivals to the collective-disposal `[S]` core)**:
+  Kim, Y.E. (2009), *Naturwissenschaften* **96**, 803 — Bose–Einstein-Condensation Nuclear Fusion (deuterons
+  in a coherent BEC → ⁴He, momentum absorbed collectively); Chubb, T.A. & Chubb, S.R. (2000), *Proc. ICCF-8*
+  — ion-band-state (coherent Bloch deuteron) theory. Distinguished from FTGB by the anapole/Hopf–Chern
+  topological referent + CK-comb signature + LZ-Δ selector, none of which they carry. `[credited, distinct]`.
+- **SAFIRE's peer-reviewed mechanism (in tension with the Beltrami reading)**: Morgan, T. & Childs, M. (2015),
+  *Plasma Sources Sci. Technol.* **24**, 055022 — the anode-shell striations attributed to an **electrostatic**
+  negative-ion space-charge mechanism, *disfavoring* (not merely untested against) a magnetic single-λ
+  force-free reading. `[credited]`; the FTGB driven-Beltrami-attractor reading of SAFIRE is softened to a
+  category analogy, not a structural identity.
+
 ## 2. The five convergence frameworks (method/analogy-only)
 
 **Reed — Quantum Wave Mechanics (QWM)** — `[QWM framework]` (M8). Photon-helicoid electron on a Hopf-link

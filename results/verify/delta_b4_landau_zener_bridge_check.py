@@ -37,9 +37,9 @@ fabricated; the model is exact, the inputs carry an honest nuclear-scale band.
 
   TIER DISCIPLINE (do not blur): the Landau-Zener FORMULA/normal form is [credited] mathematics (Landau 1932,
   Zener 1932). Identifying d+d -> 4He vs breakup AS an adiabatic LZ avoided crossing is an FTGB [S] HYPOTHESIS,
-  NOT established nuclear physics -- standard nuclear physics attributes the ~1e-6 aneutronic (4He+gamma)
-  suppression to the E1/isospin-forbidden radiative channel out of the ~23.8 MeV compound state, not to an
-  adiabaticity Gamma. The Delta VALUE is open (the near-BPS/HPC run). This LZ gap is kHz-FREE: it is swept at
+  NOT established nuclear physics -- standard nuclear physics attributes the measured ~1e-7 aneutronic
+  (4He+gamma) suppression to the E1/isospin-forbidden radiative channel out of the ~23.8 MeV compound state,
+  not to an adiabaticity Gamma. The Delta VALUE is open (the near-BPS/HPC run). This LZ gap is kHz-FREE: it is swept at
   NUCLEAR velocity (the kHz beat is frozen/DC across the crossing, tau_cross/T_kHz ~ 1e-18 --
   cross_scale_slow_scale_audit_check TEST 6), so it never carries a cross-scale number from the plasma beat.
 
