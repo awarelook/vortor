@@ -52,8 +52,8 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 ## Reproduction, harness & provenance
 | File | What |
 |---|---|
-| [`results/verify/`](results/verify/) | **the reproducible model** — 68 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
-| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**71/71**, CI-gated) |
+| [`results/verify/`](results/verify/) | **the reproducible model** — 70 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
+| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**73/73**, CI-gated) |
 | [`engine/`](engine/) | `ftgb_engine.py` (the object as one executable model) + `ftgb_synthesis_modeler.py` (the isomorph) + `ftgb_resonator_sim.py` (the theory as **running simulation**: nonlinear NS evolution of the eternal Beltrami state, comb/beat oscillation, the de Broglie matter wave) |
 | [`frontier_calcs/`](frontier_calcs/) | vendored (frozen) provenance scripts for the canonical numbers + toolkit-module methods, **+ the citation stores** (the ~198-row verified references ledger, the paper-prep pass with its 4 bibliographic corrections, the M14 61-entry catalog) and ark salvage (Sector-A OAM form, Cho–Maison solve, two-electron ring Madelung) |
 | [`toroidal_core/`](toroidal_core/) | vendored (frozen) core-derivation package (`fields.py`, `madelung.py`, `topology.py`, …) |

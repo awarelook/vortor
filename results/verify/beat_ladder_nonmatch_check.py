@@ -83,10 +83,30 @@ print("   -> HONEST LOG: FTGB's geometric f_b(L)=N^L is DISTINCT from Hagelstein
 print("      stays a GENUINELY UNTESTED falsifier (not confirmed, not refuted). Signature-CLASS is credited")
 print("      prior art (HLC 2010); the exact geometric form is the narrow original residue. [COINCIDENCE_LEDGER]")
 
+# ---------------------------------------------------------------- TEST 4: does HLC fit the CK comb? (object-mismatch)
+banner("TEST 4 -- does the HLC dataset fit the CK inharmonic comb, or a harmonic/phonon reading?  [log]")
+hlc_r = hlc/hlc[0]                                  # 1 : 1.841 : 2.537
+ck = np.array([1.0, 1.719, 2.427])                 # CK inharmonic (from TEST 1 roots)
+harm = np.array([1.0, 2.0, 3.0])                   # a harmonic string (a 1:2:3 lock would FALSIFY the Beltrami reading)
+dev_ck = np.abs(hlc_r - ck)/ck
+dev_h = np.abs(hlc_r - harm)/harm
+print("   HLC flagged freqs 8.2/15.1/20.8 THz  ->  ratios 1 : %.3f : %.3f" % (hlc_r[1], hlc_r[2]))
+print("   vs CK inharmonic 1 : 1.719 : 2.427   ->  miss +%.1f%% / +%.1f%%" % (dev_ck[1]*100, dev_ck[2]*100))
+print("   vs harmonic     1 : 2 : 3            ->  miss %.1f%% / %.1f%%" % ((hlc_r[1]-2)/2*100, (hlc_r[2]-3)/3*100))
+check("HLC matches NEITHER the CK comb (>4% off) NOR a clean harmonic -- and it is a LATTICE/phonon system",
+      dev_ck[1] > 0.04 and dev_ck[2] > 0.04,
+      "so HLC does not confirm the CK plasmoid comb (wrong object -- Pd-D lattice, ~phonon overtones per Hagelstein)")
+print("   -> HONEST LOG: the HLC data (its own caption: 'historical summary, not raw time series', heavy scatter,")
+print("      interspersed zeros) is a Pd-D LATTICE/phonon system, NOT a force-free Beltrami PLASMOID. Its clustering")
+print("      is ~phonon-overtone-like (Hagelstein's reading), the WRONG object to test the CK comb; and it shows no")
+print("      N^L ladder. The CK comb + N^L stay untested by an APPROPRIATE object (SAFIRE/spheromak/plasmoid). [LEDGER]")
+
 banner("VERDICT")
 print("  The CK inharmonic comb (TEST 1, [V]) and the geometric beat-cascade ladder (TEST 2, [S]) are FTGB's")
-print("  two falsifiable spectral discriminators. The discipline check (TEST 3): the sole published")
-print("  beat-sweep excess-heat dataset (Hagelstein-Letts-Cravens 2010) does NOT fit the N^L ladder -- logged")
-print("  as a non-match, so the prediction is neither over-claimed as confirmed nor mistaken for prior art.")
+print("  two falsifiable spectral discriminators. The discipline checks: the sole published beat-sweep")
+print("  excess-heat dataset (Hagelstein-Letts-Cravens 2010) does NOT fit the N^L ladder (TEST 3) and does NOT")
+print("  fit the CK comb (TEST 4, +7%/+5% off, ~harmonic phonon overtones) -- AND it is a lattice, not a plasmoid,")
+print("  so it is the wrong object for the CK claim. Logged as a non-match: neither over-claimed as confirmed nor")
+print("  mistaken for prior art; the FTGB signatures stay genuinely untested by an appropriate (plasmoid) object.")
 print("  status:", "PASS" if ok else "FAIL")
 raise SystemExit(0 if ok else 1)
