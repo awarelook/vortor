@@ -161,9 +161,15 @@ engineering) · **Kantrowitz** (first fusion attempt 1938; laser propulsion 1972
   `nmode_woltjer_lp_check.py`; the **Sector-A exact OAM ratio** `R = π m_e R_L² f_L/ħ` with its identical
   `n_e` cancellation — `sector_a_oam_ratio_check.py`; the **FPUT winding-conservation** result, reproduced
   on the canonical focusing-NLS ring *with its exact boundary observed* (protection to 7e-16 away from
-  zeros; transient slips only at near-zeros) — `fput_winding_conservation_check.py`. Remaining named
-  candidates (not yet folded): the ball-lightning sustaining-power closure (<0.5 W, Abrahamson–Dinniss
-  precedent) and the Eshelby zero-coupling theorem (`dynamical_plasmoid`).
+  zeros; transient slips only at near-zeros) — `fput_winding_conservation_check.py`; the
+  **ball-lightning sustaining-power closures** (0.46 W ionization budget over the canon volume; the
+  Abrahamson–Dinniss Si-combustion delivery at 14–71 **µg** — a corpus "ng" units slip caught by the
+  reproduction; the magnetic-structure sustaining power honestly left open) —
+  `ball_lightning_closures_check.py`; and the **Eshelby zero-coupling theorem**, reproduced *and*
+  sharpened (the zeros are symmetry-protected — exact for every corpus-tested configuration — but the
+  "any orientation" generalization is corrected: a short-axis-spanning shear couples at
+  O((1−2ν)(I₁−I₃)); the physically-aligned closure stands) — `eshelby_zero_coupling_check.py`. **All
+  named corpus folds are now executed.**
 
 ---
 

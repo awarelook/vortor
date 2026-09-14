@@ -173,6 +173,15 @@ A 35, L133 (2002), Auckly-Speight CMP 263, 173 (2006), Kleckner-Irvine (already 
    π₂-degree computed, Widom-Larsen field requirement, Burgers classes) + the FPUT winding result
    (`fput_winding_conservation_check.py`, protection + boundary). Still corpus-only: 6 Hopf
    scale-fixings, D-ion heating, Thomson N≤6 (recorded in HISTORY §3).
+   **Completed 2026-09-13 (final pass):** the two remaining named candidates are folded too —
+   `ball_lightning_closures_check.py` (ionization budget 0.46 W over the canon volume; Si-combustion
+   delivery at 14–71 **µg** — a corpus "ng" units slip CAUGHT by the reproduction, the closure standing
+   at the corrected magnitude with 4-orders margin; the magnetic sustaining power honestly open) and
+   `eshelby_zero_coupling_check.py` (from-scratch Eshelby S-tensor validated vs the textbook sphere;
+   the corpus's zeros reproduced exactly for every configuration it tested; our closed trace law shows
+   they are SYMMETRY-PROTECTED and the "any orientation" generalization overreaches — a
+   short-axis-spanning shear couples at O((1−2ν)(I₁−I₃)) ≈ 0.36 — the aligned physical closure stands).
+   **Every fold named by this survey is now executed; nothing remains pending.**
 9. ✅ Governance — **folded** (COINCIDENCE_LEDGER preamble: two-routes-must-prove-equivalence,
    near-integer discipline, self-consistency≠derivation, topology-check-before-machinery; the
    scalar-EM/Whittaker closure → REFERENCES §3). TVR superseded by the harness — cited, not duplicated.
