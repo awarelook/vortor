@@ -24,6 +24,7 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 | [`FTGB_COHERENCE_MAP_2026-09-09.md`](FTGB_COHERENCE_MAP_2026-09-09.md) | the layer stack ordering the frameworks |
 | [`LINEAGE.md`](LINEAGE.md) | the Bostick / Puthoff / Shoulders lineage (equations verbatim, tiered) |
 | [`HISTORY_PEOPLE_EVO_CMNS.md`](HISTORY_PEOPLE_EVO_CMNS.md) | the salvaged science history: timeline, people roster (mainstream / EVO-CMNS / propulsion-fenced), the EVO & cold-fusion record, the fence list |
+| [`results/SALVAGE_SURVEY_ARC_2026-09-13.md`](results/SALVAGE_SURVEY_ARC_2026-09-13.md) · [`…ARK…`](results/SALVAGE_SURVEY_ARK_2026-09-13.md) | the frozen full survey digests behind the salvage (Arc science track; ckfreefem ark + citation stores, with the ranked remaining-folds list) |
 
 ## Foundation & math
 | File | What |

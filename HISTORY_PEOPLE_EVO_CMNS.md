@@ -4,7 +4,10 @@
 science track + the ckfreefem ark), 2026-09-13: the people, the timeline, the EVO/CMNS record, and the
 fences. Companion deep-dives: [`LINEAGE.md`](LINEAGE.md) (Bostick · Puthoff · Shoulders, equations verbatim);
 citations: [`REFERENCES.md`](REFERENCES.md) §1e–1j; vocabulary: [`GLOSSARY.md`](GLOSSARY.md) §9; the full
-verification-tagged citation stores are vendored frozen in [`frontier_calcs/`](frontier_calcs/README.md).
+verification-tagged citation stores are vendored frozen in [`frontier_calcs/`](frontier_calcs/README.md);
+the complete survey digests (everything extracted, including material *not* folded) are preserved as
+frozen records: [`results/SALVAGE_SURVEY_ARC_2026-09-13.md`](results/SALVAGE_SURVEY_ARC_2026-09-13.md) and
+[`results/SALVAGE_SURVEY_ARK_2026-09-13.md`](results/SALVAGE_SURVEY_ARK_2026-09-13.md).
 
 **Discipline.** Science only — the source vault's suppression/banking/intelligence narrative is **not
 ingested** (not testable physics). Every person is carried at their *genuine published contribution*, with an
