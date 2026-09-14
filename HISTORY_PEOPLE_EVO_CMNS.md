@@ -143,20 +143,26 @@ engineering) · **Kantrowitz** (first fusion attempt 1938; laser propulsion 1972
   Beat-Law absolute match, R*/n_e citation error, AB-gate premise, barrier closure, tuned P_diss). What
   survived: the cascade scaling theorem, the two-electron ring Madelung reduction (vendored:
   `frontier_calcs/two_electron_ring_madelung.py`), and the beat/cascade `[V]` layer now in M14.
-- **Computed settled-negatives inherited from the corpus ark** (each a closed, quantified win — never
-  resurrect): **Widom–Larsen ruled out** three independent ways; **direct phonon-nuclear coupling dead**
-  (Gamow `G ≈ 90` ⇒ ~52 orders; Dicke enhancement would need ~1e104 coherent sites vs ~1e12 available);
-  **six Hopf-soliton scale-fixing attempts failed** (each diagnosed); **monopole program closed** (`π₃(S²)`
-  ≠ `π₂(S²)`); **Burgers-vector correspondence ruled out**; **Taleyarkhan bubble fusion** (misconduct
-  finding); **Schumann-harmonic numerology** (the vault's own Tier-D cut). Sources:
-  `11_verified_ark/{helium_heat_nuclear_extensions, plasmoid_beat_lenr, topological_monopole_program,
-  cascade_vacuum_bridge}`.
-- **Positive corpus results worth future folds** (named, not yet folded): the generalized N-mode Woltjer
-  theorem (fixed-helicity minimum is always the single lowest-eigenvalue pure mode — linear program,
-  verified symbolically and on a real 40-mode spectrum) + the Heuser 1991 dislocation-core density input
-  (`11_verified_ark/dislocation_core`); the Sector-A exact OAM ratio `R = π m_e R_L² f_L/ħ` (vendored:
-  `frontier_calcs/SECTOR_A_ENVIRONMENT_THEORY.md`); the FPUT winding-conservation result
-  (`cascade_vacuum_bridge`); the ball-lightning sustaining-power closure (<0.5 W, Abrahamson–Dinniss
+- **Computed settled-negatives inherited from the corpus ark** — each a closed, quantified win, and the
+  decisive arithmetic of four of them is now **reproduced in-repo**
+  (`results/verify/corpus_settled_negatives_check.py`): **direct phonon-nuclear coupling dead** (d-d
+  `E_G = 986 keV` from CODATA; suppression `1e-25`–`1e-86` over the screened range; Dicke `√N` rescue
+  needs ~1e78 sites vs ~1e12 available — the corpus's fuller rate accounting said ~1e104); **monopole
+  program closed** with the invariants *computed* (hopfion `π₂` degree = 0 vs hedgehog = 1; the object has
+  `π₃`, Rubakov-Callan needs `π₂`); **Widom–Larsen** (the mass-renormalization field requirement ~450×
+  beyond the invoked field — our independent check; the corpus ruled it out three other ways);
+  **Burgers-vector correspondence ruled out** (`Z³` vs `Z` vs `π₃` — different classes). Still
+  corpus-closed without in-repo scripts: six Hopf-soliton scale-fixings, Taleyarkhan (misconduct),
+  Schumann numerology (the vault's own Tier-D cut), the scalar-EM/Whittaker extension (symbolic proof —
+  REFERENCES §3). Never resurrect any of them.
+- **Positive corpus results, now folded in-repo (2026-09-13):** the **generalized N-mode Woltjer theorem**
+  (fixed-helicity minimum is always the single lowest-eigenvalue pure mode — a linear program; "heartbeat,
+  not flywheel" is generic) + the Heuser-1991 dislocation-core Wigner crystal (`Γ = 196.7` reproduced) —
+  `nmode_woltjer_lp_check.py`; the **Sector-A exact OAM ratio** `R = π m_e R_L² f_L/ħ` with its identical
+  `n_e` cancellation — `sector_a_oam_ratio_check.py`; the **FPUT winding-conservation** result, reproduced
+  on the canonical focusing-NLS ring *with its exact boundary observed* (protection to 7e-16 away from
+  zeros; transient slips only at near-zeros) — `fput_winding_conservation_check.py`. Remaining named
+  candidates (not yet folded): the ball-lightning sustaining-power closure (<0.5 W, Abrahamson–Dinniss
   precedent) and the Eshelby zero-coupling theorem (`dynamical_plasmoid`).
 
 ---

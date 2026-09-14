@@ -15,6 +15,17 @@ carry the same constants) · `GENERIC` (near-miss comparable to control-target h
 `DEAD` (the proposed factor doesn't even produce the claimed correction) · `COINCIDENCE` (close, no
 mechanism — logged as a clue, `[flag]`).
 
+**Salvaged governance lessons (from the corpus ark's `BEST_LESSONS`/`cascade_vacuum_bridge`, folded
+2026-09-13 — each earned by a caught error there):** (1) **two routes to the same number must be *proven
+equivalent*, never assumed** — coincidence of outputs is not proof of identity (the corpus verified its
+7/8-factor routes explicitly before trusting them); (2) **near-integers are documented, not promoted**
+(already this ledger's practice — restated as a standing rule); (3) **self-consistency ≠ derivation** — a
+loop that returns its own input (X → law → X) is labeled circular, not derived; (4) **run the cheap
+topology/Stokes triviality check *before* building machinery** — a corpus AB-flux program built a full
+Biot–Savart solve for a loop class that homotopy shows is trivial (`∮A·dl ≡ 0`); for a solid torus there is
+exactly **one** AB flux class (the meridian). Check whether the target is already topologically determined
+first.
+
 ---
 
 ## The log (computed 2026-09-10)

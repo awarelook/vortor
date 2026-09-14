@@ -364,7 +364,13 @@ that thread). Disentangle before citing any "Reed" item externally; QWM claims a
     equivalence. None of these enter the record.
   - Adamenko/Proton-21 energy-gain and Cu→Fe figures, Klimov COP 2.4–10, Podkletnov/Li-Torr/Pais/Buhler
     gravity-propulsion claims — **unreplicated single-source claims**; log in the history file with flags,
-    never cite as support. Bibliographic **corrections** that ride with the vendored store: MoEDAL is
+    never cite as support.
+  - **The "scalar-EM/bidirectional-Whittaker" energy claim — RULED OUT by explicit symbolic proof** (corpus
+    `cascade_vacuum_bridge` §2.3): Whittaker (1903), *Math. Ann.* **57**, 333 is a genuine, legitimate
+    plane-wave-superposition theorem — but the Bearden-lineage extension (counter-propagating decomposition
+    ⇒ extractable energy beyond the total field's Poynting bookkeeping) fails three ways (no global null
+    from two real waves; `u_tot − (u₁+u₂) = 0` exactly; components at a node are superposed, not separately
+    addressable). Cite Whittaker; never the extension. Bibliographic **corrections** that ride with the vendored store: MoEDAL is
     *Nature* **602**, 63 (2022); arXiv:1705.07052 is **Gould & Rajantie**, *PRL* **119**, 241601; PRAB **22**,
     054503 (2019) is **Bartalucci–Vysotskii–Vysotskyy**; the pear-shaped-fission paper is **Scamps & Simenel**,
     *Nature* **564**, 382 (2018).

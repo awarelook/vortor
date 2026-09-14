@@ -23,6 +23,13 @@ connected — a clue may later lead somewhere). What is removed: **only supersed
   and aligned `P·v=const` no-gos; driven `S=0` realizability; the reduction of the one gate to R2). Citable today.
 - **R2 conditional enstrophy/BKM bound** `[V]cond` — exact Lamb-vector identity → Gronwall, bounded *if*
   `⟨η²⟩<ν²λ₁` (`r2_identity_check`, `r2_gronwall_check`). **R3 Hall lift at `Pm=1`** (`hallmhd_canonical_check`).
+- **The N-mode Woltjer theorem** `[V]` — fixed-helicity energy minimization over any `N` distinct-eigenvalue
+  Beltrami modes is exactly a **linear program** whose minimum is always the single lowest-eigenvalue **pure**
+  mode; no static multi-mode mixture is ever a critical point (`nmode_woltjer_lp_check`, corpus fold). So a
+  beat-carrying structure survives only by **driven regeneration** against Taylor relaxation — "heartbeat, not
+  flywheel" is *generic*, grounding the driven Stuart–Landau core. Companion `[V]`: integer **winding is
+  protected away from field zeros and can slip only through them** — both the protection (7e-16) and its exact
+  boundary observed (`fput_winding_conservation_check`).
 - **Exact identities** `[V]` — the CK carrier index `tan x=x` (`ck_eigenvalues_check`); **chirality = sign(λ) =
   sign(H)** and the carrier comb is **single-chirality** (`chirality_helicity_check`, `carrier_chirality_lock_check`);
   the Nielsen ζ-coefficients incl. `C₅/ω₃=π²/3` (`tuft_mass_tower_check`); the Greenyer cascade `N^L`, anapole `N⁴`,
@@ -79,6 +86,6 @@ connected — a clue may later lead somewhere). What is removed: **only supersed
   tier is *labeled, reproducible, and honest*. The breakthroughs available are the two scoped external
   computations and the small locks; the rest is the honest frontier.
 
-*Provenance: the 49 `results/verify/` scripts + engine + the synthesis modeler + the resonator simulation `engine/ftgb_resonator_sim.py` (`verify_all.py` → **52/52** PASS) + the `results/` and `handoffs/` docs
+*Provenance: the 53 `results/verify/` scripts + engine + the synthesis modeler + the resonator simulation `engine/ftgb_resonator_sim.py` (`verify_all.py` → **56/56** PASS) + the `results/` and `handoffs/` docs
 cited inline; every coincidence/flag is computed and logged in `COINCIDENCE_LEDGER.md`. No value promoted;
 `e^(-2/3)`/`E_fm` excised; the α winding stays settled-negative.*

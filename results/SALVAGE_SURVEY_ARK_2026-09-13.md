@@ -163,15 +163,19 @@ A 35, L133 (2002), Auckly-Speight CMP 263, 173 (2006), Kleckner-Irvine (already 
 3. ✅ Cite Afanasiev-Stepanovsky 1995, Tuchin 2016, Xia-Qin-Wang 2016, Zanca-Terranova 2004 — **done** (§1e).
 4. ✅ Vendor `two_electron_ring_madelung.py` + `cho_maison_real_monopole_solve.py` + the monopole
    settled-negative closure — **done**.
-5. ⏳ Sector-A closed form (`R = π m_e R_L² f_L/ħ`) — vendored; **fold into the OAM thread** pending.
+5. ✅ Sector-A closed form (`R = π m_e R_L² f_L/ħ`) — **folded** (`sector_a_oam_ratio_check.py`, the
+   `n_e` cancellation verified to 2e-16; joins the anapole-resonator OAM thread).
 6. ✅ Tiered EVO/LENR history file — **done** (`HISTORY_PEOPLE_EVO_CMNS.md`, pointing at corpus PDF paths).
-7. ⏳ **N-mode Woltjer LP theorem + Γ=196.7/Heuser 1991** (dislocation_core) — candidate verify script from
-   `scripts\finite_ring_coulomb_crystal_normal_modes.py`. The top remaining fold.
-8. ⏳ Settled-negative ledger imports (Widom-Larsen 3-way, G~90.35/Dicke 1e104, 6 Hopf scale-fixings,
-   Burgers ruled-out, D-ion heating, Thomson N≤6) — recorded in HISTORY §3; individual verify-script
-   reproduction optional.
-9. ⏳ Governance: fold missing BEST_LESSONS items (near-integer discipline, two-routes-must-prove-
-   equivalence) into practice docs; TVR superseded by the harness — cite, don't duplicate.
+7. ✅ **N-mode Woltjer LP theorem + Γ=196.7/Heuser 1991** — **folded** (`nmode_woltjer_lp_check.py`:
+   theorem verified on the jewel's 40-mode CK spectrum + near-degenerate spectrum + 20000 mixtures;
+   Γ=196.7 reproduced from the Heuser density; "heartbeat not flywheel" generic → TIER_LEDGER §1).
+8. ✅ Settled-negative imports — **folded** (`corpus_settled_negatives_check.py`: Gamow/Dicke, monopole
+   π₂-degree computed, Widom-Larsen field requirement, Burgers classes) + the FPUT winding result
+   (`fput_winding_conservation_check.py`, protection + boundary). Still corpus-only: 6 Hopf
+   scale-fixings, D-ion heating, Thomson N≤6 (recorded in HISTORY §3).
+9. ✅ Governance — **folded** (COINCIDENCE_LEDGER preamble: two-routes-must-prove-equivalence,
+   near-integer discipline, self-consistency≠derivation, topology-check-before-machinery; the
+   scalar-EM/Whittaker closure → REFERENCES §3). TVR superseded by the harness — cited, not duplicated.
 10. ❌ Skip: all retracted EVO/D4D machinery (N_flux=896, CET routing, Channel B×C, G_eff/G_req,
     52.351 THz); the 1283-script `main_draft\frontier_calcs\` wholesale; superseded archive PDFs; DIRD
     material as physics; the Hagelstein 2025 "in press" citation until independently located.
