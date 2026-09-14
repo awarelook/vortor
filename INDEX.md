@@ -17,6 +17,7 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 ## The theory (readable)
 | File | What |
 |---|---|
+| [`FTGB_MINIMUM_VIABLE_PAPER.md`](FTGB_MINIMUM_VIABLE_PAPER.md) | **the capstone** — the whole theory in one tight, citable, reproducible paper: apex summary + proven core `[V]` + hypothesis-to-test `[S]` + LENR significance + falsifiers |
 | [`FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md`](FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md) (+PDF) | ~9-page general-audience tour |
 | [`FTGB_GRAND_SYNTHESIS.md`](FTGB_GRAND_SYNTHESIS.md) (+PDF) | the full tiered synthesis (Parts A–G); **§A.3 = "coherence is regularity"** |
 | `FTGB_GRAND_SYNTHESIS_FULL_2026-09-10.pdf` | the compiled jewel as one shareable paper |
@@ -45,12 +46,13 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 | [`results/`](results/) | executed advances: R2/R3 theorems, LENR model, electron torsion-defect, α resolution, chirality/C/Majorana, R3 Hall-smallness, exact-state regularity |
 | [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md) | the honest self-assessment (every open item) |
 | [`results/COINCIDENCE_LEDGER.md`](results/COINCIDENCE_LEDGER.md) | every coincidence computed & logged as a clue |
+| [`results/LENR_ACTIVE_SITE_SYNTHESIS_2026-09-14.md`](results/LENR_ACTIVE_SITE_SYNTHESIS_2026-09-14.md) | the `[S]` LENR mechanism: an open-fed anapole dipole-balance resonance → collective nuclear disposal; every wall named; `lenr_disposal_channel_check` |
 
 ## Reproduction, harness & provenance
 | File | What |
 |---|---|
-| [`results/verify/`](results/verify/) | **the reproducible model** — 56 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
-| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**59/59**, CI-gated) |
+| [`results/verify/`](results/verify/) | **the reproducible model** — 57 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
+| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**60/60**, CI-gated) |
 | [`engine/`](engine/) | `ftgb_engine.py` (the object as one executable model) + `ftgb_synthesis_modeler.py` (the isomorph) + `ftgb_resonator_sim.py` (the theory as **running simulation**: nonlinear NS evolution of the eternal Beltrami state, comb/beat oscillation, the de Broglie matter wave) |
 | [`frontier_calcs/`](frontier_calcs/) | vendored (frozen) provenance scripts for the canonical numbers + toolkit-module methods, **+ the citation stores** (the ~198-row verified references ledger, the paper-prep pass with its 4 bibliographic corrections, the M14 61-entry catalog) and ark salvage (Sector-A OAM form, Cho–Maison solve, two-electron ring Madelung) |
 | [`toroidal_core/`](toroidal_core/) | vendored (frozen) core-derivation package (`fields.py`, `madelung.py`, `topology.py`, …) |

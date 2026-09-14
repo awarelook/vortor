@@ -281,6 +281,40 @@ anomaly," never "confirmed." These are the field's primary measurements + the ho
   maps** (`11_verified_ark/topological_monopole_program`). Kept as a computed closure. `[credited]` /
   settled-negative.
 
+**1k. LENR active-site & disposal physics (§ the anapole dipole-balance mechanism, 2026-09-14).**
+*Grounding the `[S]` active-site synthesis (`results/LENR_ACTIVE_SITE_SYNTHESIS_2026-09-14.md`,
+`results/verify/lenr_disposal_channel_check.py`). Credited-vs-novel verdicts independently checked by an
+adversarial prior-art pass. The mechanism is `[S]`; the energy accounting `[V]`; the rate open.*
+- **The E0 selection rule** (the crux): Church, E.L. & Weneser, J. (1956), *Phys. Rev.* **103**, 1035 — a
+  single real photon cannot mediate a `0⁺→0⁺` transition (no `L=0` photon) — the credited nuclear-structure
+  reason an aneutronic ⁴He channel must shed its 23.85 MeV **collectively**. `[credited]`.
+- **Ponderomotive (Miller) force**: Gaponov, A.V. & Miller, M.A. (1958), *Sov. Phys. JETP* **7**, 168
+  (*ZhETF* **34**, 242) — `U_p = q²⟨E²⟩/4mω²`; real, but `∝1/m` (electron-mediated) and the non-relativistic
+  form fails at `a₀~1` (Quesnel & Mora (1998), *Phys. Rev. E* **58**, 3719). Tajima, T. & Dawson, J.M.
+  (1979), *Phys. Rev. Lett.* **43**, 267 — ponderomotive longitudinal-wakefield acceleration. `[credited]`
+  (as the force/small-parameter regime; a *fast disposal-rate* role is settled-negative — kinematic wall).
+- **Phase conjugation / time reversal**: Zel'dovich, B.Ya. et al. (1972), *JETP Lett.* **15**, 109 (SBS
+  wavefront reversal); Yariv, A. & Pepper, D.M. (1977), *Opt. Lett.* **1**, 16 (DFWM, `R=tan²|κ|L` — any
+  `R>1` is **pump** energy); Fink, M. (1997), *Phys. Today* **50**(3), 34 (acoustic time-reversal mirror).
+  `[credited]` as *refocusing*; the "amplifies from nothing" reading is settled-negative (adds no coupling).
+- **Coherent nuclear disposal (prior-art mechanism, contested)**: Hagelstein, P.L. (2018), *JCMNS* **27**, 97
+  (phonon-mediated nuclear excitation transfer); Preparata, G. (1991), *Nuovo Cimento A* **104**, 1259, and
+  *QED Coherence in Matter* (World Scientific, 1995) — a **distinct** coherent-domain tradition, cited as
+  role-**analogue**, not identity; Dicke, R.H. (1954), *Phys. Rev.* **93**, 99 (superradiance — an
+  atomic/photonic result, extrapolated to nuclear quanta, not a direct match). The direct phonon-coupling
+  **rate** is settled-negative by ~66 orders (`corpus_settled_negatives_check.py`). `[contested]`/`[credited]`.
+- **Bound-state β/EC transmutation trigger** (baryon-conserving, ionization-gated): Bosch, F. et al. (1996),
+  *Phys. Rev. Lett.* **77**, 5190 (`¹⁸⁷Re` bound-state β, ~1e9× faster fully-ionized); Jung, M. et al.
+  (1992), *Phys. Rev. Lett.* **69**, 2164 (`¹⁶³Dy` stable→47-day, ionized). The credited basis of the
+  falsifiable `¹⁶³Dy→¹⁶³Ho` X-ray charge-state prediction. `[credited]` (mechanism) / `[S]` (the FTGB trigger).
+- **The historical acceleration analogue**: Cockcroft, J.D. & Walton, E.T.S. (1932), *Nature* **129**, 649 —
+  the first artificial nuclear disintegration (`⁷Li+p→2⁴He`) by an accelerated longitudinal field; cited as a
+  *role*-analogue (a longitudinal field triggers a nuclear channel), **not** a scale identity. `[credited]`.
+- **Impedance-matched open cavity** (the "open-fed" substrate): Haus, H.A. (1984), *Waves and Fields in
+  Optoelectronics* (critical coupling = impedance matching); Forward, R.L. (1984), *Phys. Rev. B* **30**,
+  1700 (the honest outer bound: vacuum "feeding" yields only one-shot Casimir work, never continuous power).
+  `[credited]`; a "vacuum/ZPF net power source" reading is **not** supported and stays settled-negative.
+
 ## 2. The five convergence frameworks (method/analogy-only)
 
 **Reed — Quantum Wave Mechanics (QWM)** — `[QWM framework]` (M8). Photon-helicoid electron on a Hopf-link
