@@ -4,17 +4,27 @@ This repo is set up to be a **fixed, citable, self-verifying artifact**. Cutting
 moving repo into a permanent, DOI-addressable snapshot.
 
 ## What is already in place
-- **CI reproducibility gate** — `.github/workflows/verify.yml` runs `verify_all.py` (46/46) on every push;
-  the green badge is public proof the model reproduces from scratch on a clean machine.
-- **Self-contained foundation** — provenance scripts vendored under `frontier_calcs/`; canonical numbers
-  re-derived in-repo (`canonical_numbers_provenance_check.py`).
-- **Citation metadata** — `CITATION.cff` (v1.0.0), which GitHub and Zenodo read automatically.
+- **CI reproducibility gate** — `.github/workflows/verify.yml` runs `verify_all.py` (58/58 at v1.1.0) on
+  every push; the green badge is public proof the model reproduces from scratch on a clean machine.
+- **Self-contained foundation** — provenance scripts + citation stores vendored under `frontier_calcs/`;
+  canonical numbers re-derived in-repo (`canonical_numbers_provenance_check.py`).
+- **Citation metadata** — `CITATION.cff` (v1.1.0), which GitHub and Zenodo read automatically.
 - **Canonical snapshot PDF** — `FTGB_GRAND_SYNTHESIS_FULL_2026-09-10.pdf` (compiled from `paper/master.md`).
 
-## Cut the v1.0.0 release (one-time, ~5 min)
+## Tags cut so far
+- **v1.0.0** (2026-09-10) — the hardening milestone: CI gate, vendored provenance, START_HERE trust map,
+  `v_A` proven-quarantined (46 checks).
+- **v1.1.0** (2026-09-13) — the salvage + simulation milestone: the readability/current-true pass; the
+  resonator simulation (`engine/ftgb_resonator_sim.py` — the theory running in software); the corpus
+  salvage layer (history/people/EVO-CMNS record, REFERENCES §1e–1j, GLOSSARY §9, vendored citation
+  stores, frozen survey digests); all twelve survey folds executed (N-mode Woltjer "heartbeat generic"
+  theorem, Sector-A OAM identity, settled-negatives incl. the computed π₂ = 0 monopole closure, FPUT
+  winding boundary, ball-lightning closures, Eshelby zero-coupling with corrected scope) — 58 checks.
+
+## Cut a GitHub release for the current tag (~5 min)
 1. Confirm CI is green on the default branch (the badge in `README.md` / `START_HERE.md`).
-2. The annotated tag `v1.0.0` is created in this commit. Push it: `git push origin v1.0.0`.
-3. On GitHub → **Releases → Draft a new release** → choose tag `v1.0.0` → attach
+2. Push the tag if not yet pushed: `git push origin v1.1.0`.
+3. On GitHub → **Releases → Draft a new release** → choose the tag → attach
    `FTGB_GRAND_SYNTHESIS_FULL_2026-09-10.pdf` → publish.
 
 ## Mint a DOI (make it citable forever, via Zenodo)
