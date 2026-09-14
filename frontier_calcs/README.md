@@ -52,3 +52,21 @@ the current-leg no-go scripts (`driven_canonical_aligned_2026-09-08.py`, `driven
 (`r2_grashof_threshold_*`, `r2_near_beltrami_enstrophy_*`, `r2_spectral_retry_*`). Deps vary (some need
 scipy/sympy); each is cited by its toolkit module. These are a **frozen provenance record**, not part of the
 CI gate — every *load-bearing* result is reproduced by an in-repo `results/verify/` script.
+
+## Vendored citation stores & ark salvage (2026-09-13 corpus-salvage pass)
+
+Frozen from the ckfreefem corpus so the jewel's **citation base and its verification tags** are
+self-contained (sources: `03_paper/main_draft/` and `11_verified_ark/`):
+
+| File | What | Source |
+|---|---|---|
+| `REFERENCES_VERIFIED_LEDGER_2026-08-28.md` | the corpus's full ~198-row citation ledger, every row tagged `[V]` live-verified / `[T]` textbook / `[P]` project | `03_paper/main_draft/` |
+| `PAPER_PREP_CITATIONS_2026-09-01.md` | the paper-prep citation pass: 13 re-verified entries, **4 bibliographic corrections** (MoEDAL *Nature* **602**, 63; Gould & Rajantie PRL 119; Bartalucci–Vysotskii–Vysotskyy PRAB 22; Scamps & Simenel *Nature* 564, 382) + the do-not-cite list | `03_paper/main_draft/` |
+| `greenyer_61_entry_catalog_slice.md` | the M14 (Greenyer beat/cascade) 61-entry per-citation verified catalog, every entry status-tagged | `11_verified_ark/greenyer_toroidal_beat/citations/` |
+| `two_electron_ring_madelung.py` | the surviving iccf27 positive: two-electron ring Madelung reduction (×4 ratio from first-principles QHD) | `11_verified_ark/iccf27_evo_d4d/scripts/` |
+| `cho_maison_real_monopole_solve.py` | from-scratch Cho–Maison electroweak-monopole BVP solve (Cho & Maison, *PLB* 391, 360 (1997)) — pairs with the settled-negative monopole-program closure (Hopf `π₃(S²)` ≠ monopole `π₂(S²)`) | `11_verified_ark/greenyer_toroidal_beat/scripts/` |
+| `SECTOR_A_ENVIRONMENT_THEORY.md` | the helium-heat program's surviving Sector A: verified m=1 Beltrami eigenmode + solved Madelung ring + the exact closed-form OAM ratio `R = π m_e R_L² f_L / ħ` | `11_verified_ark/helium_heat_nuclear_extensions/verified_core/` |
+
+Same rule as above: **frozen provenance, not CI-gated**. The curated fold of the absent citation clusters
+into the jewel's own `REFERENCES.md` (§1e–§1h) is the load-bearing part; these files preserve the full
+verification-tagged record they were curated from.

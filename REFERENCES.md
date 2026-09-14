@@ -172,6 +172,115 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   899 — magnetic skyrmions (topological protection, emergent EM). Empirical support that topological solitons
   are physical — in fluid/condensed-matter media, not the FTGB EM object itself. `[credited]` / `[S]` mapping.
 
+---
+
+### 1e–1j. Corpus-salvage clusters (2026-09-13)
+
+*Salvaged from the Arc vault (science track only) and the ckfreefem corpus citation stores. The full
+verification-tagged records are vendored frozen in `frontier_calcs/` (`REFERENCES_VERIFIED_LEDGER_2026-08-28.md`,
+~198 rows `[V]`/`[T]`/`[P]`-tagged; `PAPER_PREP_CITATIONS_2026-09-01.md` with 4 bibliographic corrections;
+`greenyer_61_entry_catalog_slice.md` for M14). Below is the curated fold — items that ground claims the jewel
+already makes. `[real-checkable]` = venue+year verified in those stores; `[cited, unverified]` = carried with
+its source flag. Companion history/people roster: `HISTORY_PEOPLE_EVO_CMNS.md`.*
+
+**1e. Chandrasekhar–Kendall photon / Beltrami prior art (directly on the jewel's core).**
+- Moses, H.E. (1971), *SIAM J. Appl. Math.* **21**, 114 — eigenfunctions of the curl operator (the CK basis
+  as a general decomposition). Yoshida, Z. & Giga, Y. (1990), *Math. Z.* **204**, 235 — self-adjointness and
+  spectrum of curl. Lakhtakia, A. (1994), *Czech. J. Phys.* **44**, 89 — Trkal/Beltrami history. Marsh, G.E.
+  (1996), *Force-Free Magnetic Fields* (World Scientific) — the standard monograph. `[credited]`.
+- **Tuchin, K. (2016), *Phys. Rev. C* 93, 054903** — the EM field quantized in the CK basis inside a plasma;
+  **Xia, Y., Qin, H. & Wang, W. (2016), *Phys. Rev. D* 94, 054042** — chiral-plasma route to the CK-wave
+  state. Direct prior art for "the photon in the medium lives on the CK/Beltrami basis." `[credited]`.
+- Hall-MHD **wave topology**: Fu, Y. & Qin, H. (2024), *Phys. Rev. Res.* **6**, 023273 — Weyl point in Hall
+  MHD; Mesa Dame, Palmerduca, Fu & Qin (2025), arXiv:2506.18830 — HMHD spectrum homotopic to ideal MHD,
+  Chern numbers `C± = ±1`, **circularly-polarized Beltrami modes as limiting cases of the shear-Alfvén-Hall
+  branch**. Modern topological-wave frame for the jewel's Hall-MHD + Chern (`C=±2` photon) threads. `[credited]`.
+- Zanca, P. & Terranova, D. (2004), *Plasma Phys. Control. Fusion* **46**, 1115 — the external
+  order-of-magnitude validity anchor used for the finite-ε `c_CK` pipeline (`freefem/`, corpus MVVC ledger). `[credited]`.
+
+**1f. Ball lightning & laboratory plasmoids (the object's observational family).**
+- Hill, M.J.M. (1894), *Phil. Trans. R. Soc. A* **185** — the spherical vortex (the exact toroidal
+  equilibrium prototype). Kapitza, P.L. (1955) — microwave-resonance ball-lightning theory. Bostick, W.H.
+  (1956), *Phys. Rev.* — "plasmoid" coined (already in LINEAGE). `[credited]`.
+- Rañada, A.F. & Trueba, J.L. (1996), *Nature* **383**, 32 — "Ball lightning an electromagnetic knot?";
+  Rañada, Soler & Trueba (2000), *Phys. Rev. E* **62**, 7181 — the Hopf-knot ball-lightning model (topological
+  protection). The BL companions to the already-cited Rañada 1989/1990 EM knots. `[credited]`.
+- **Cen, J., Yuan, P. & Xue, S. (2014), *Phys. Rev. Lett.* 112, 035001** — the first recorded optical
+  spectrum of natural ball lightning (Si/Fe/Ca lines — soil elements; supports combustion/plasmoid readings).
+  Peacock, N.J. & Norton, B.A. (1975), *Phys. Rev. A* **11**, 2142 — the measured MG-scale DPF field.
+  Abrahamson, J. & Dinniss, J. (2000), *Nature* **403**, 519 — silicon-combustion BL precedent (the
+  sustaining-power closure used in the corpus's dynamical-plasmoid work). Stenhoff, M. (1999), *Ball
+  Lightning* (Kluwer) — the standard observational monograph. `[credited]`.
+- Jennison, R.C. & Drinkwater, A.J. (1977), *J. Phys. A* **10** — phase-locked-cavity model (inertia of a
+  trapped standing wave) + Jennison's in-cabin BL observation; a genuine precedent for "mass = trapped
+  oscillation." Davis, E.W. (2002), AFRL-PR-ED-TR-2002-0039 — the AFRL ball-lightning literature survey
+  (adopts Nachamkin force-free + Rañada topological models; **cited as a literature survey only** — the same
+  author's teleportation-study speculation is excluded). Egorov & Stepanov (2002) reproducible lab BL
+  `[cited, unverified venue]`. `[credited]` / noted.
+- Spheromak stability anchors: Rosenbluth, M.N. & Bussac, M.N. (1979), *Nucl. Fusion* **19**, 489; Bondeson
+  et al. (1981), *Phys. Fluids* **24**, 1682; Belova et al. (2000), *Phys. Plasmas* **7**, 4996. `[credited]`.
+
+**1g. LENR / CMNS experimental record (contested field — cited as the record, not as settled).**
+*The jewel's standing rule: energy accounting `[V]`, mechanism `[S]`, rate open; "consistent with a contested
+anomaly," never "confirmed." These are the field's primary measurements + the honest negative.*
+- Fleischmann, M. & Pons, S. (1989), *J. Electroanal. Chem.* **261**, 301 — the original excess-heat claim.
+  **Miles, M.H. et al. (1993), *J. Electroanal. Chem.* 346, 99** — the He-4/excess-heat correlation (the
+  measurement the jewel already leans on, now formally cited); Miles et al. (2000), *J. Electroanal. Chem.*
+  **482**, 56 — `23±5 MeV`/⁴He calorimetry. McKubre, M.C.H. et al. — the loading-threshold record
+  (`D/Pd ≳ 0.85–0.88` necessary-not-sufficient; ICCF-4 1994; *JCMNS* **15**, 137 (2015)). `[credited-measurement,
+  contested field]`.
+- Hagelstein, P.L., Letts, D. & Cravens, D. (2010), *JCMNS* **3**, 59 — the two-laser THz difference-frequency
+  result (the field's key spectral anchor; relevant to any comb/beat reading). Iwamura, Y. et al. (2002),
+  *Jpn. J. Appl. Phys.* **41**, 4642 — Cs→Pr permeation transmutation (+ Toyota 2013 replication). Szpak, S.
+  & Mosier-Boss, P.A. — SPAWAR co-deposition morphology (*Naturwissenschaften* 2009) — **co-occurrence, not
+  mechanism** (the corpus's own reading; NRL found "striking differences" vs neutron-exposed CR-39). `[credited-measurement, contested]`.
+- Screening: Kasagi, J. et al. (2000) — the screening anomaly; Huke, A., Czerski, K. et al. (2008), *Phys.
+  Rev. C* **78**, 015803; Czerski, K. (2022), *Phys. Rev. C*; Dubey et al. (2025), *Phys. Rev. X* `[cited
+  in-corpus; verify before external use]`. The measured `U_s` the jewel's LENR module inherits. `[credited]`.
+- **The honest negative: Berlinguette, C.P. et al. (2019), *Nature* 570, 45** — the Google-funded
+  multi-lab null (no excess heat under controlled conditions at the loadings reached). Cited alongside the
+  positives; the field's reproducibility statistics (50% null / 500% variability on identical samples, per
+  the DoD 16-F-1333 briefing digest) ride with every positive claim. `[credited-negative]`.
+- Storms, E. (2010), *Naturwissenschaften* **97**, 861 — the field review. Benyo, T. & Steinetz, B. et al.
+  (2020), *Phys. Rev. C* **101**, 054604 — NASA lattice-confinement fusion (2.45 MeV D-D neutrons,
+  gamma-driven): **real screened-fusion physics, a different mechanism — not an F-P confirmation**. Widom, A.
+  & Larsen, L. (2006), *Eur. Phys. J. C* **46**, 107 — the ULM-neutron theory, cited AND **ruled out three
+  independent ways in the corpus** (`11_verified_ark/helium_heat_nuclear_extensions`) — carried as a
+  checked-and-closed alternative. Klimov, A. et al. (2016), *JCMNS* **19**, 67 — the Plasma Vortex Reactor
+  43–46 kHz window + COP claims (**unreplicated outside his group; field journal**) — the source of the
+  "43 kHz" clue in `COINCIDENCE_LEDGER.md`. `[credited]` / `[flag]` as marked.
+- Strange radiation (fenced chain): Urutskoev, L.I. et al. (2002), *Ann. Fond. L. de Broglie* **27** —
+  anomalous CR-39 tracks; Ivoilov, N.G. (2006), *Ann. Fond. L. de Broglie* **31**, 115; Fredericks, K.A.
+  (2015), *JCMNS* **15**, 203; theory reading: Lochak, G. (2007), *Z. Naturforsch. A* **62**, 231 (leptonic
+  monopole). **Phenomenon unrecognized by mainstream nuclear physics** — logged as contested observations
+  with provenance, never as support. Rukhadze & Grachev (2017), *RENSIT* **9**(1) — the Russian-program
+  history (incl. Filimonenko 1957/1962 priority claims, which rest on retrospective literature). `[contested-observation]` / `[framework]`.
+
+**1h. Charged-drop fissility (the corpus's EVO-fissility backbone; do-not-merge pair flagged).**
+- Rayleigh (1882), *Philos. Mag.* **14**, 184 — the charged-drop stability limit; Bohr, N. & Wheeler, J.A.
+  (1939), *Phys. Rev.* **56**, 426 — the fissility parameter; Wong, C.-Y. (1973), *Ann. Phys.* **77**, 279 —
+  toroidal nuclei. Duft, D. et al. (2002), *Phys. Rev. Lett.* **89**, 084503 **and** Duft, D. et al. (2003),
+  *Nature* **421**, 128 — Rayleigh jets from levitated microdroplets (**two distinct papers — do not merge**,
+  per the vendored citation store). Hill, R.J.A. & Eaves, L. (2012), *Appl. Phys. Lett.* **100**, 114106;
+  Liao, L. & Hill, R.J.A. (2017), *Phys. Rev. Lett.* **119**, 114501 — charged-drop fission experiments. `[credited]`.
+
+**1i. Dissipative time crystals (the driven-limit-cycle "heartbeat" family).**
+- Kongkhambut, P. et al. (2022), *Science* **377**, 670 — observation of a continuous dissipative time
+  crystal; Wu, J. et al. (2024), *Nat. Phys.* **20**, 1389; Liu, T. et al. (2025), *Nat. Commun.* **16**,
+  1419. The experimental family the Stuart–Landau "heartbeat" (driven, dissipative, self-organized period)
+  structurally belongs to — companions to the already-cited Cosme 2025. `[credited]` / `[S]` mapping.
+
+**1j. Magnetic monopole searches & the electroweak monopole (fenced frontier).**
+- MoEDAL Collaboration (2022), *Nature* **602**, 63 (**corrected citation** — not 604/64) — monopole search
+  in heavy-ion collisions; MoEDAL (2024), *Phys. Rev. Lett.* **133**, 071803. Milton, K.A. (2006), *Rep.
+  Prog. Phys.* **69**, 1637 — the monopole-status review. Cho, Y.M. & Maison, D. (1997), *Phys. Lett. B*
+  **391**, 360 — the electroweak monopole (the corpus's from-scratch BVP solve is vendored:
+  `frontier_calcs/cho_maison_real_monopole_solve.py`). **The corpus's six-angle monopole program is
+  settled-NEGATIVE** for connecting the toroidal geometry to monopole physics — decisively: the Hopf
+  invariant classifies `π₃(S²)`, monopole charge classifies `π₂(S²)` — **different invariants of different
+  maps** (`11_verified_ark/topological_monopole_program`). Kept as a computed closure. `[credited]` /
+  settled-negative.
+
 ## 2. The five convergence frameworks (method/analogy-only)
 
 **Reed — Quantum Wave Mechanics (QWM)** — `[QWM framework]` (M8). Photon-helicoid electron on a Hopf-link
@@ -184,6 +293,11 @@ torsion) holonomy** `O(0.1 rad)` — **not** Einstein–Cartan spacetime torsion
 = `sign λ` = `sign H`; antiparticle = `−λ`; chirality flip = charge conjugation C; neutrino = self-dual
 Majorana) is computed in `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`. In-repo primaries: `Larry_Reed_
 QWM_Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Module_10_Reed_Electron_Model`.
+**Identity fence (2026-09-13, from the Arc-vault audit):** the corpus's source vault conflates at least two
+distinct authors under "Reed" — **Larry J. Reed** (*Quantum Wave Mechanics*, self-published, the QWM framework
+folded here) and **Donald Reed** ("Beltrami Topology as Archetypal Vortex," 1992/94; extended-electrodynamics
+work with **Lee M.** Hively — Reed & Hively (2020), *Symmetry* **12**, 2110 is the one peer-reviewed item of
+that thread). Disentangle before citing any "Reed" item externally; QWM claims attach to Larry J. Reed only.
 
 **Storti — EGM / Quinta Essentia** — `[EGM method]` (M11). "A method of calculation (not a theory)."
 - Storti, R.C. (2007), *Quinta Essentia — Part 2 (US Letter)*, Delta Group Engineering / Lulu, 328 pp.
@@ -236,6 +350,24 @@ QWM_Derivations.md`; `larry reed quantum wave mechanics history career.pdf`; `Mo
   not derived or reproduced from the geometry (M12-3); folded for vocabulary and convergence only, not asserted.
 - **LENR: do-not-cite Rossi / Mills / bio-transmutation.** Keep baryon-conserving `d+d→⁴He` distinct from
   baryon decay; no fabricated rate/cross-section; `E_fm = 2.5 MeV` stays retracted; COP not derived.
+- **Corpus-salvage do-not-cite additions (2026-09-13,** from the vendored `PAPER_PREP_CITATIONS` store + the
+  Arc-vault audit — each a *checked* provenance failure, not a style preference**):**
+  - "Greenyer et al., MFMP Technical Report 2018" — **could not be located; do not cite** (the corpus's own
+    verification failed). Vishnevskii (2008) — cite only *as the source Greenyer's program cites*, not as an
+    independently verified primary. Huang et al., *Sci. Rep.* (2024) — real paper but **carries an Editor's
+    Note**; do not treat its claims as confirmed.
+  - Taleyarkhan (2002) bubble-fusion — **settled-negative (research misconduct finding)**; cite only as the
+    cautionary case. Holmlid ultra-dense hydrogen H(0) — ~94% of the literature is one group, ~88%
+    self-citation, zero outside replication, contradicted by Hansen (2016) reanalysis — do not lean on.
+  - Heim "verified at DESY 1981" — community legend, no DESY publication; Feynman "acknowledged EVO reality" —
+    an overstatement of an unverified private letter; the 2016 Nobel "confirms the vortex atom" — false
+    equivalence. None of these enter the record.
+  - Adamenko/Proton-21 energy-gain and Cu→Fe figures, Klimov COP 2.4–10, Podkletnov/Li-Torr/Pais/Buhler
+    gravity-propulsion claims — **unreplicated single-source claims**; log in the history file with flags,
+    never cite as support. Bibliographic **corrections** that ride with the vendored store: MoEDAL is
+    *Nature* **602**, 63 (2022); arXiv:1705.07052 is **Gould & Rajantie**, *PRL* **119**, 241601; PRAB **22**,
+    054503 (2019) is **Bartalucci–Vysotskii–Vysotskyy**; the pear-shaped-fission paper is **Scamps & Simenel**,
+    *Nature* **564**, 382 (2018).
 
 *Frameworks contribute method, vocabulary, and convergence — never a load-bearing claim. Established physics
 is always `[credited]`; every framework reading is tier-tagged and attributed.*

@@ -208,3 +208,59 @@ named tier. Citations: `REFERENCES.md`.*
 - **`v_A` residual** — `v_A` is a self-consistency residual, not a measurement; every **absolute** magnitude
   carries a band (linear / square-law), only **dimensionless ratios** are load-bearing (proven-quarantined,
   `absolute_magnitude_invariance_check.py`; see `V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md`).
+
+## 9. Plasmoid, EVO & CMNS vocabulary (the observational family — salvage pass 2026-09-13)
+
+*From the Arc-vault science track + the ckfreefem ark; history/people in `HISTORY_PEOPLE_EVO_CMNS.md`,
+citations in `REFERENCES.md` §1e–1j. These are the field's terms, tiered — none is load-bearing.*
+
+- **Plasmoid** — Bostick's term (1956) for a self-organized toroidal plasma-magnetic entity; the parent
+  category of the laboratory objects (compact toroids, spheromaks, FRCs) and the natural ones (ball
+  lightning). The jewel's driven Hall-MHD object sits in this family. `[credited]`.
+- **Compact toroid / spheromak / FRC** — *physically distinct* self-confined toroidal configurations
+  (spheromak: comparable toroidal+poloidal field, Taylor-relaxed; FRC: negligible toroidal field). The
+  source vault's claim that these are one suppressed object serially renamed is **rejected** — standard
+  terminology, distinct physics. `[credited]` + fence.
+- **Ball lightning (BL)** — the natural atmospheric plasmoid; centuries of observation (Richmann 1753 →
+  Cen–Yuan–Xue 2014 first spectrum: Si/Fe/Ca soil lines). Three complementary model families: energy source
+  (Kapitza microwave resonance), force-free equilibrium (Nachamkin; Beltrami), topological protection
+  (Rañada–Trueba Hopf knot). `[credited]`; the jewel's calibration comb {121, 208, 294} kHz is *named* on
+  this family (`[S]` calibration, absolutes carry the `v_A` band).
+- **EVO (exotic vacuum object) / charge cluster / ecton / "capsule"** — four naming traditions for the same
+  *observational class*: a µm-scale dense electron cluster (Shoulders: ~10⁸–10¹¹ e⁻, toroidal morphology,
+  nuclear-active claims `[contested-observation]`; Mesyats: the **ecton**, explosive-emission cathode-spot
+  avalanche — *mainstream pulsed-power physics*; Klimov and Myshinsky: their own labels `[framework]`). The
+  identification of all four as one object is the vault's reading, folded not endorsed. Deep-dive:
+  `LINEAGE.md` §3.
+- **Strange radiation** — the anomalous CR-39/film track families reported after electro-explosions and
+  discharges (Urutskoev → Ivoilov → Fredericks chain); readings: Lochak leptonic monopole, Shishkin MTER,
+  Myshinsky capsules — all `[contested-observation]`/`[framework]`; unrecognized by mainstream nuclear
+  physics; logged with provenance, never used as support.
+- **Dense plasma focus (DPF) / Z-pinch** — the Filippov/Mather discharge device: pinch → helicity →
+  relaxed toroid; the laboratory generator of the plasmoid family (Peacock–Norton MG fields; Lerner's
+  modern pB11 program `[credited]`, net-gain unproven).
+- **CMNS / LENR** — condensed-matter nuclear science / low-energy nuclear reactions: the post-1989 field.
+  The jewel's standing tier: energy accounting `[V]`, mechanism `[S]`, rate open; "consistent with a
+  contested anomaly," never "confirmed"; the Berlinguette 2019 null and the field's reproducibility
+  statistics ride with every positive.
+- **Loading ratio `D/Pd`** — the deuterium loading of palladium; the field's necessary-not-sufficient
+  threshold (`≳ 0.85–0.88`, McKubre). `[credited-measurement, contested field]`.
+- **Heat–helium correlation** — the field's central quantitative claim: excess heat tracks ⁴He production
+  at ~`23–24 MeV`/atom (Miles 1993/2000) — the d+d→⁴He energy, which is why the jewel's *energy accounting*
+  can be `[V]` while the mechanism stays `[S]`.
+- **CR-39** — solid-state nuclear track detector; carries both the SPAWAR co-deposition morphology
+  (**co-occurrence, not mechanism**) and the strange-radiation claims; interpretation is the contested step.
+- **43–46 kHz window** — Klimov's claimed optimal drive band for anomalous effects in his Plasma Vortex
+  Reactor (`[flag]`, unreplicated outside his group); MFMP treats the sweep as a diagnostic. The jewel's
+  own comb half-beat lands at ~43.6 kHz — **computed and logged as a coincidence clue**
+  (`COINCIDENCE_LEDGER.md`), explicitly *not* promoted (absolute frequencies carry the `v_A` band).
+- **Counter-rotation** — the recurring stability motif (vortex/antivortex pairing, two-fermion→boson
+  composites, Bostick's plasmoid pairs). Genuine physics core wrapped, in the vault, in device lore — the
+  core is salvaged, the lore fenced.
+- **Sonoluminescence / cavitation** — 20–100 kHz acoustic drive collapsing bubbles to measured ~15,000 K /
+  4,000 atm (Flannigan–Suslick 2005): real extreme-condition physics adjacent to the resonator family;
+  bubble *fusion* (Taleyarkhan) is a settled-negative (misconduct finding).
+- **Madelung precision note** (high-quality salvage): smooth Madelung (quantum-hydrodynamic) flow is
+  **irrotational in the bulk** — vorticity lives only on quantized vortex lines (`∮v·dl = nh/m`); coupling
+  a charge (`v = (∇S−qA)/m`) reopens bulk vorticity (`curl v = −(q/m)B`). Keeps the jewel's fluid↔quantum
+  dictionary honest about *where* Beltrami character can live. `[credited]`.

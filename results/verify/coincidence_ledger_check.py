@@ -54,6 +54,17 @@ log("EGM 2:1 harmonic w(e)/w(p)", 2.0, 2.0, "RESTATEMENT", "omega_Omega(e)=omega
 # --- resolved / genuine (logged for completeness) ---
 log("pi^2/3 (TUFT C5/omega3)", np.pi**2/3, 3.2899, "DERIVED", "RESOLVED: category error; omega3=zeta'(-2) genuine")
 
+# --- the 43 kHz window (Arc-vault salvage 2026-09-13; Klimov JCMNS 19, 67 (2016): 43-46 kHz optimal band) ---
+vA, R = 2.033e4, 0.12                      # canon anchors (absolutes carry the v_A band -- see note)
+x1, x2, x3 = 4.493409457909064, 7.725251836937707, 10.904121659428899
+f = [vA*x/(2*np.pi*R)/1e3 for x in (x1, x2, x3)]          # kHz comb {121.2, 208.3, 294.0}
+half_beat = (f[1]-f[0])/2                                  # 43.57 kHz
+log("comb half-beat vs Klimov 43-46 kHz", half_beat, 44.5, "COINCIDENCE",
+    "(f2-f1)/2=%.2f kHz inside the claimed window; (f3-f2)/2=%.2f just below. CAVEATS: absolutes carry "
+    "the v_A band (5-13x) so the match dissolves off-anchor; Klimov's window is an unreplicated "
+    "single-group claim; the vault author's own CK+Pd-D ~44.5 kHz estimate is arithmetic, not "
+    "convergence. A clue [flag], never promoted." % (half_beat, (f[2]-f[1])/2))
+
 print("="*94)
 print("COINCIDENCE LEDGER -- computed, logged (clues kept, nothing promoted)")
 print("="*94)

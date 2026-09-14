@@ -16,15 +16,16 @@ grouped by how much you need installed. **Tier A is the whole load-bearing core 
 
 ```bash
 pip install -r requirements.txt          # numpy, mpmath
-python results/verify/verify_all.py      # 51/51 PASS, exit 0 iff all pass
+python results/verify/verify_all.py      # 52/52 PASS, exit 0 iff all pass
 ```
 
-`verify_all.py` globs every `results/verify/*.py` (49 theory scripts) + the two engine files
-(`engine/ftgb_engine.py`, `engine/ftgb_synthesis_modeler.py`) = **51 checks**. This reproduces the entire
-load-bearing model: the CK spectrum, R2/R3 fluid theorems, exact-state regularity, the topological
-invariants `Q_H=1`/`C=±2`, the Reeb/contact + curl-spectrum results, the chirality/C/Majorana cluster, the
-curl spectral zeta, the cascade, the α settled-negatives, the LENR energy ledger, and the canonical-number
-provenance + v_A-invariance. Per-script map: **`results/verify/README.md`**. Run one script directly, e.g.:
+`verify_all.py` globs every `results/verify/*.py` (49 theory scripts) + the three engine files
+(`engine/ftgb_engine.py`, `engine/ftgb_synthesis_modeler.py`, `engine/ftgb_resonator_sim.py`) =
+**52 checks**. This reproduces the entire load-bearing model: the CK spectrum, R2/R3 fluid theorems,
+exact-state regularity (incl. the full nonlinear pseudo-spectral simulation of the eternal Beltrami
+solution), the topological invariants `Q_H=1`/`C=±2`, the Reeb/contact + curl-spectrum results, the
+chirality/C/Majorana cluster, the curl spectral zeta, the cascade, the α settled-negatives, the LENR
+energy ledger, the resonator/matter-wave simulation, and the canonical-number provenance + v_A-invariance. Per-script map: **`results/verify/README.md`**. Run one script directly, e.g.:
 
 ```bash
 python results/verify/exact_beltrami_regularity_check.py     # any single derivation, standalone

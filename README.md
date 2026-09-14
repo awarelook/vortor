@@ -5,7 +5,7 @@
 **Author:** Nathaniel Hanks · **A self-contained package:** one interactive modeler + the two
 manuscripts + the method toolkit + two execute-ready hand-off packages.
 
-*Reproducibility gate: every push runs the full model (`verify_all.py`, **51/51** checks) on a clean
+*Reproducibility gate: every push runs the full model (`verify_all.py`, **52/52** checks) on a clean
 Ubuntu + Python 3.12 runner via GitHub Actions — a green badge means the entire model reproduces from
 scratch, deterministically, with no network. Tested stack: `numpy==2.4.6`, `mpmath==1.3.0`.*
 
@@ -62,11 +62,11 @@ given when they were published).
 | `foundation/30_CANONICAL_NUMBERS.md` | the single source of truth for the canonical anchors `{B, n_i, m_i, R}`, `c_CK`, and the {121, 208, 294} kHz comb (§A/§C/§I) — residuals flagged, excisions pointed to the ledger |
 | `TOOLKIT_HANDBOOK.md` | plain-language + math handbook tying the nine method modules together (and to the base above) |
 | `toolkit/` | the nine method modules: Buckingham-Π (M7), QWM conversion (M8), coupled-oscillator substrate (M9), topological-soliton methods (M10), EGM / polarizable-vacuum spectral methods (M11), Ginzburg spiral-field theory (M12), **Nielsen TUFT mass-tower (M13)**, **Greenyer beat-law & EVO cascade (M14)**, Reeb & spectral geometry (M15) — the TUFT/Greenyer pair folded from the corpus gap-scan (honestly flagged), M15 the contact-topology + curl-spectrum foundation |
-| `GLOSSARY.md`, `REFERENCES.md`, `LINEAGE.md` | consolidated, tiered knowledge base: shared vocabulary + citations across FTGB and the convergence frameworks (Reed, Storti, Nielsen, Ginzburg, Greenyer), plus the Bostick / Puthoff / Shoulders lineage note |
-| `engine/` | **`ftgb_engine.py`** — the theory as one executable model: anchors {B,n,m_i,R} → static structure + dynamics + theorem verification, all tiered (`python engine/ftgb_engine.py`) |
+| `GLOSSARY.md`, `REFERENCES.md`, `LINEAGE.md`, `HISTORY_PEOPLE_EVO_CMNS.md` | consolidated, tiered knowledge base: shared vocabulary (incl. §9 plasmoid/EVO/CMNS) + citations (incl. the §1e–1j corpus-salvage clusters; full verified stores vendored in `frontier_calcs/`) + the Bostick / Puthoff / Shoulders lineage + the salvaged science history (timeline, people, the EVO & cold-fusion record, the fences) |
+| `engine/` | **`ftgb_engine.py`** — the theory as one executable model: anchors {B,n,m_i,R} → static structure + dynamics + theorem verification, all tiered (`python engine/ftgb_engine.py`) · **`ftgb_resonator_sim.py`** — the theory as **running simulation**: full nonlinear pseudo-spectral NS evolution of the eternal Beltrami state (tracks `e^{−νλ²t}u₀` to ~5e-16; Taylor–Green contrast departs), the CK comb + kHz beat, the driven Lorentzian, and the de Broglie matter-wave packet (`v_g·v_p=c²` measured) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations — incl. the **R2 numerical run** now scoped to a runnable reference solver (`r2_reference_solver.py`) + spec that a collaborator scales to GPU |
 | `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the **α resolution** (the winding derivation settled-**negative**, `ι≈1` not 137; α correctly-typed by several lenses — g−2 beat, impedance — but not derived, value open), the **chirality / charge-conjugation / Majorana** cluster (all computed: chirality = `sign(λ)`, antiparticle = `−λ` = C, neutrino = self-dual `θ_χ=45°`), the 2026-09-10 **experimental confrontation** (each fingerprint vs the published record), + **`verify/`** — the reproducible math model: every load-bearing `[V]` claim has a script (map in `results/verify/README.md`) |
-| `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: **51/51** checks (49 theory scripts + the engine + the synthesis modeler), exit 0 iff every one passes |
+| `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: **52/52** checks (49 theory scripts + the engine + the synthesis modeler + the resonator simulation), exit 0 iff every one passes |
 
 ## Where this credibly stands — the practical, positive value
 

@@ -33,3 +33,28 @@ CoherentObject.verify_lamb_identity()   # exact stretching = Lamb-vector flux
 `results/verify/{r2_identity_check, r2_gronwall_check, hallmhd_canonical_check}.py`; grounded in
 `FTGB_CURRENTLEG_TRILOGY` and `FTGB_COHERENCE_MAP`. Open items (unconditional R2/R3, the Δ LENR branching,
 the exact α value) are named in the report, not hidden.
+
+---
+
+`ftgb_resonator_sim.py` — the theory as running **simulation** (where the engine is the model, this is
+the software that time-integrates it). Five simulations, each with hard PASS/FAIL:
+
+```bash
+python engine/ftgb_resonator_sim.py     # deterministic; auto-included in verify_all
+```
+
+1. **The object** `[V]` — exact Beltrami eigenfield (`curl u = u`) built on the 3-torus; Beltrami property
+   and the self-interaction null (`u×ω = 0` pointwise) verified spectrally to ~1e-14.
+2. **Coherence is regularity** `[V]` — the **full nonlinear Navier–Stokes equations** integrated
+   pseudo-spectrally (32³, RK4, 2/3-dealiased) from the Beltrami state track the exact eternal solution
+   `u(t)=e^{−νλ²t}u₀` to ~5e-16; a Taylor–Green (non-Beltrami) start departs at ~9e-2 — the coherent state
+   is the one that evolves exactly, and the contrast proves the test has teeth. (Companion to
+   `exact_beltrami_regularity_check.py`: that verifies the law's identities; this runs the dynamics.)
+3. **The resonator** `[V]` — CK comb `tan x = x` re-derived by bisection; ratios `1:1.719:2.427`; the
+   {121, 208, 294} kHz canon calibration and its beat structure (87.1/85.7 kHz, second-order detuning
+   ≈ 1.43 kHz — the theory's kHz detuning scale).
+4. **Harmonic oscillation** `[V]` — driven-damped oscillator lands on the analytic Lorentzian (Q recovered);
+   the two-mode beat frequency is *extracted from the simulated envelope* (FFT-Hilbert) and equals `x₂−x₁`.
+5. **The matter wave** `[V]` math / `[S,QWM]` reading — packet under the Proca/Compton-cutoff dispersion
+   `ω²=c²k²+ω_c²`: measured group velocity `= c²k/ω`, rest packet ticks at exactly `ω_c` (the internal
+   clock), and `v_g·v_p = c²` — the de Broglie matter-wave kinematics measured in software.

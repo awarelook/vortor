@@ -63,7 +63,7 @@ def run(path):
 
 def main():
     targets = theory_scripts()
-    for extra in ("ftgb_engine.py", "ftgb_synthesis_modeler.py"):
+    for extra in ("ftgb_engine.py", "ftgb_synthesis_modeler.py", "ftgb_resonator_sim.py"):
         p = os.path.join(REPO, "engine", extra)
         if os.path.isfile(p):
             targets.append(p)

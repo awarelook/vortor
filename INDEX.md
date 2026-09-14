@@ -22,7 +22,8 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 | `FTGB_GRAND_SYNTHESIS_FULL_2026-09-10.pdf` | the compiled jewel as one shareable paper |
 | [`FTGB_CURRENTLEG_TRILOGY.md`](FTGB_CURRENTLEG_TRILOGY.md) (+PDF) | the self-contained `[V]` lead result |
 | [`FTGB_COHERENCE_MAP_2026-09-09.md`](FTGB_COHERENCE_MAP_2026-09-09.md) | the layer stack ordering the frameworks |
-| [`LINEAGE.md`](LINEAGE.md) | the Bostick / Puthoff / Shoulders lineage |
+| [`LINEAGE.md`](LINEAGE.md) | the Bostick / Puthoff / Shoulders lineage (equations verbatim, tiered) |
+| [`HISTORY_PEOPLE_EVO_CMNS.md`](HISTORY_PEOPLE_EVO_CMNS.md) | the salvaged science history: timeline, people roster (mainstream / EVO-CMNS / propulsion-fenced), the EVO & cold-fusion record, the fence list |
 
 ## Foundation & math
 | File | What |
@@ -48,9 +49,9 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 | File | What |
 |---|---|
 | [`results/verify/`](results/verify/) | **the reproducible model** — 49 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
-| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**51/51**, CI-gated) |
-| [`engine/`](engine/) | `ftgb_engine.py` (the object as one executable model) + `ftgb_synthesis_modeler.py` (the isomorph) |
-| [`frontier_calcs/`](frontier_calcs/) | vendored (frozen) provenance scripts for the canonical numbers + toolkit-module methods |
+| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**52/52**, CI-gated) |
+| [`engine/`](engine/) | `ftgb_engine.py` (the object as one executable model) + `ftgb_synthesis_modeler.py` (the isomorph) + `ftgb_resonator_sim.py` (the theory as **running simulation**: nonlinear NS evolution of the eternal Beltrami state, comb/beat oscillation, the de Broglie matter wave) |
+| [`frontier_calcs/`](frontier_calcs/) | vendored (frozen) provenance scripts for the canonical numbers + toolkit-module methods, **+ the citation stores** (the ~198-row verified references ledger, the paper-prep pass with its 4 bibliographic corrections, the M14 61-entry catalog) and ark salvage (Sector-A OAM form, Cho–Maison solve, two-electron ring Madelung) |
 | [`toroidal_core/`](toroidal_core/) | vendored (frozen) core-derivation package (`fields.py`, `madelung.py`, `topology.py`, …) |
 | [`freefem/`](freefem/) | vendored (frozen) FreeFEM torus eigensolves (finite-ε `c_CK`, the doublet) |
 | [`handoffs/`](handoffs/) | the two open heavy computes (R2-at-Reynolds solver + spec; Δ B=4 Skyrme spec) |

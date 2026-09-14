@@ -11,15 +11,17 @@ the honest boundary is this project's most valuable feature.
 
 | I want to… | Go to |
 |---|---|
-| **Reproduce it from scratch** (51 checks, no network) | `pip install -r requirements.txt && python results/verify/verify_all.py` → exit 0. Map: [`results/verify/README.md`](results/verify/README.md). CI runs this on every push (badge above). **Full run-access for *every* derivation (incl. scipy/sympy provenance, FreeFEM torus eigensolves, HPC handoffs, doc build): [`REPRODUCE.md`](REPRODUCE.md).** |
+| **Reproduce it from scratch** (52 checks, no network) | `pip install -r requirements.txt && python results/verify/verify_all.py` → exit 0. Map: [`results/verify/README.md`](results/verify/README.md). CI runs this on every push (badge above). **Full run-access for *every* derivation (incl. scipy/sympy provenance, FreeFEM torus eigensolves, HPC handoffs, doc build): [`REPRODUCE.md`](REPRODUCE.md).** |
 | **Understand it in ~9 pages** | [`FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md`](FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md) (also PDF) — general-audience, honestly tiered. |
 | **Read the full theory** | [`FTGB_GRAND_SYNTHESIS.md`](FTGB_GRAND_SYNTHESIS.md) (Parts A–G). The deep organizing principle is **§A.3** ("coherence *is* regularity"). |
 | **Check what's actually proven** | the **settled vs frontier map** below, and [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md) (the honest self-assessment). |
 | **See it as one executable object** | `python engine/ftgb_synthesis_modeler.py` — the MATH ↔ PHYSICS ↔ EXPERIMENT isomorph with its honest seams. |
+| **Watch it run as a simulation** | `python engine/ftgb_resonator_sim.py` — the oscillating harmonic resonator matter wave in software: full nonlinear NS evolution of the eternal Beltrami state, the CK comb + kHz beats, the driven Lorentzian, the de Broglie packet. |
 | **Try to kill it** | the **falsifiers** below. |
 | **Cite an absolute number (Hz/T/eV)** | read [`V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md`](V_A_RESIDUAL_AND_ABSOLUTE_MAGNITUDES.md) **first** — absolutes carry a band; ratios don't. |
 | **Map every document** | [`INDEX.md`](INDEX.md) — the complete document map, by purpose. |
-| **Look up a symbol or term** | [`NOTATION.md`](NOTATION.md) (symbols: λ, `Q_H`, `C`, `v_A`, …) · [`GLOSSARY.md`](GLOSSARY.md) (concepts) · [`REFERENCES.md`](REFERENCES.md) (citations). |
+| **Look up a symbol or term** | [`NOTATION.md`](NOTATION.md) (symbols: λ, `Q_H`, `C`, `v_A`, …) · [`GLOSSARY.md`](GLOSSARY.md) (concepts, incl. §9 plasmoid/EVO/CMNS vocabulary) · [`REFERENCES.md`](REFERENCES.md) (citations, incl. §1e–1j salvage clusters). |
+| **The history: plasmoids, EVOs, cold fusion** | [`HISTORY_PEOPLE_EVO_CMNS.md`](HISTORY_PEOPLE_EVO_CMNS.md) — the tiered science timeline + people roster + the record and its fences · deep-dives in [`LINEAGE.md`](LINEAGE.md). |
 
 ## Settled vs frontier — the trust map
 
@@ -57,7 +59,7 @@ A theory worth trusting says how to break it. These would:
 
 ```
 pip install -r requirements.txt
-python results/verify/verify_all.py      # 51/51 PASS, deterministic, no network
+python results/verify/verify_all.py      # 52/52 PASS, deterministic, no network
 ```
 
 Everything load-bearing has a script; the foundation numbers are re-derived in-repo
