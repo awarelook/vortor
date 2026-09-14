@@ -23,6 +23,12 @@ connected — a clue may later lead somewhere). What is removed: **only supersed
   and aligned `P·v=const` no-gos; driven `S=0` realizability; the reduction of the one gate to R2). Citable today.
 - **R2 conditional enstrophy/BKM bound** `[V]cond` — exact Lamb-vector identity → Gronwall, bounded *if*
   `⟨η²⟩<ν²λ₁` (`r2_identity_check`, `r2_gronwall_check`). **R3 Hall lift at `Pm=1`** (`hallmhd_canonical_check`).
+- **The DRIVEN coherent state** `[V]` — forcing the exact Beltrami field with `f=νλ²u_B` makes it an
+  **exact time-independent solution** (the object *sustains itself*; the drive only replaces the viscous
+  loss, the Lamb-null advection adds nothing), and it is a **stable attractor** — a 30% perturbation decays
+  (numerical, Re≈157), a Taylor–Green base drifts under the same drive (`r2_driven_beltrami_attractor_check`).
+  Extends exact-state regularity from freely-decaying to driven/sustained; the unconditional high-Re case
+  stays open.
 - **The N-mode Woltjer theorem** `[V]` — fixed-helicity energy minimization over any `N` distinct-eigenvalue
   Beltrami modes is exactly a **linear program** whose minimum is always the single lowest-eigenvalue **pure**
   mode; no static multi-mode mixture is ever a critical point (`nmode_woltjer_lp_check`, corpus fold). So a
@@ -50,7 +56,7 @@ connected — a clue may later lead somewhere). What is removed: **only supersed
 | **Matter-wave dictionary** (mass=whirl, charge=torsion-holonomy; C/Majorana) | `[S,computed]` | Contact with the QFT operators. **`[S]` by construction:** an *internal-consistency* check of FTGB's own dictionary — behaves *structurally like* C; not the QFT `C=iγ²γ⁰` (no Dirac spinor in the verified content). |
 | **LENR mechanism** (scaffold enables the aneutronic channel) | `[S]` | A first-principles collective-rate calculation. `[S]` — the *energy* is `[V]`/conserved; the *mechanism* is structural. |
 | **LENR rate / Δ** (B=4 branching) | `open` | **The one FTGB compute** — a topology-preserving Skyrme-HPC run (`HANDOFF_DELTA_B4_SKYRME_RELAXATION`); test the 1.4–1.9 MeV band. `U_s` is **measured**; the COP *magnitude* (1.3–1.4) is inherited field positioning, **not** FTGB-derived. |
-| **R2 unconditional / at-Reynolds** | `open` | **The genuinely winnable upgrade** — the `S~10³–10⁴` GPU pseudo-spectral run (`R2_NUMERICAL_RUN_SPEC` + `r2_reference_solver`). Execution-limited, scoped, not principle-limited. |
+| **R2 unconditional / at-Reynolds** | `open` (driven case **advanced**) | **Reapproached in-environment** (`r2_driven_beltrami_attractor_check`): the DRIVEN coherent state is an **exact steady solution** `[V]` and a **stable attractor** with direct numerical evidence at Re≈157 `[V@Re]` — so exact-state regularity now extends to the driven/sustained case. What stays open is *unconditional* regularity at high Reynolds: the `S~10³–10⁴` GPU pseudo-spectral run (`R2_NUMERICAL_RUN_SPEC` + `r2_reference_solver`) — execution-limited, scoped, not principle-limited. (The Δ-Skyrme compute is genuinely NOT in-environment: even the minimum topology-preserving grid costs ~15 h/sweep in pure numpy and unwinds at affordable `dx` — needs the compiled/GPU minimizer.) |
 | **R3 at `Pm≠1`** | ~~open~~ **`[V]cond`** | The `(η−ν)²` obstruction is a *canonical-variable artifact* (`R3_PM_NE_1_COUPLED_LYAPUNOV` + `hallmhd_coupled_lyapunov_check`) — the coupled functional `L=½‖ω‖²+κd_i²½‖J‖²` has **diagonal coercive dissipation at every `Pm`** and controls `Z`; fluid+Lorentz productions vanish *quadratically* at the single-`λ` relaxed state (same Woltjer coherence as the carrier comb); the lone residual is a Hall smallness `d_i‖B‖∞≲η`. **`Pm=1` removed.** Unconditional large-data `Pm≠1` stays open (= open 3-D Hall-MHD). The plasmoid itself does **not** satisfy that smallness (`r3_hall_smallness_physical_check`) — `d_i=0.296 m > R=0.12 m`, `S_di=d_i v_A/η≈15–2400≫1` — it is **strongly Hall-mediated**, living *outside* the regime R3 proves regular; the gap is named in physical units (does not refute the conditional theorem). |
 | **Cross-scale Δ identity** (kHz detuning ↔ MeV gap) | `[S]` | Show the plasma detuning literally sets the nuclear gap. `[S]` hypothesis; only the plasma beat is `[V]`. |
 | **Same-sign-λ of the carrier comb** | ~~open~~ **`[V]`** | **RESOLVED (2026-09-10):** the three CK roots are all positive → single-chirality comb → the Woltjer–Taylor coherence argument is locked (`carrier_chirality_lock_check`). |
@@ -86,6 +92,6 @@ connected — a clue may later lead somewhere). What is removed: **only supersed
   tier is *labeled, reproducible, and honest*. The breakthroughs available are the two scoped external
   computations and the small locks; the rest is the honest frontier.
 
-*Provenance: the 55 `results/verify/` scripts + engine + the synthesis modeler + the resonator simulation `engine/ftgb_resonator_sim.py` (`verify_all.py` → **58/58** PASS) + the `results/` and `handoffs/` docs
+*Provenance: the 56 `results/verify/` scripts + engine + the synthesis modeler + the resonator simulation `engine/ftgb_resonator_sim.py` (`verify_all.py` → **59/59** PASS) + the `results/` and `handoffs/` docs
 cited inline; every coincidence/flag is computed and logged in `COINCIDENCE_LEDGER.md`. No value promoted;
 `e^(-2/3)`/`E_fm` excised; the α winding stays settled-negative.*
