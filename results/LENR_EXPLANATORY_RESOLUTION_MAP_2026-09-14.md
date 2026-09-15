@@ -151,10 +151,12 @@ kill conditions and a single computable unknown — not a claimed result.**
 ## 6. The frontier (the honest edge)
 
 1. **The HPC Δ run.** The B=4 selector is calibrated to `Δ = 23.85 MeV × ρ_eff`, `ρ_eff∈[0,1]` (Cauchy–Schwarz
-   overlap, `delta_nearbps_scale_bound_check`), target `ρ_eff≈0.06–0.08 → Δ≈1.4–1.9 MeV`. `ρ_eff` is a single
-   dimensionless unknown needing the **actual near-BPS Skyrme solitons at the crossing** — an external run,
-   explicitly **not** fabricated in-repo. Computing it converts the `[S]` selector into a **hard** ⁴He/neutron
-   prediction. Path proven end-to-end; production number un-run.
+   overlap, `delta_nearbps_scale_bound_check`), target `ρ_eff≈0.06–0.08 → Δ≈1.4–1.9 MeV`. **Since narrowed
+   (Stages E–G, §6.2):** `ρ_eff = f_orient × f_density × f_dyn` with two factors computed in-env and `f_dyn`
+   now *bounded* — rigorously `(0,1]`, O(1)-bracketed `[0.2,1.0]`, with metric concentration excluded — so the
+   single external unknown left is the **relative-orientation VPDiff average** on the near-BPS surface (not an
+   unbounded `ρ_eff`). Computing it converts the `[S]` selector into a **hard** ⁴He/neutron prediction. Path
+   proven end-to-end; production number un-run.
 2. **The Byrnes causality wall — assessed, PARTIALLY RESOLVED** (`causality_wall_assessment_check.py`,
    adversarially stress-tested). The objection: an atomic-scale coherent mode cannot act within the ~`1e-21 s`
    nuclear-breakup window (`d < ct`). **What clears:** (a) *causality-of-structure* — FTGB's 24 MeV disposal is

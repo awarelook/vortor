@@ -2,7 +2,7 @@
 
 **Author:** Nathaniel Hanks · **Date:** 2026-09-15 · **Harness:** `verify_all.py` → **91/91**.
 The honest "where does it stand, and what is left" report, current after this week's advancements
-(78 → 91 checks; the corridor sharpening; Stage D; the spin gate; Stage F's f_dyn bracket; the PV-gravity fence; the negative-program
+(78 → 91 checks; the corridor sharpening; Stages D–G — the ρ_eff factorization, the spin gate, the f_dyn bracket, and the moduli-metric homogeneity check; the PV-gravity fence; the negative-program
 salvage; the beat→spin magnetic-resonance resolution; and the result-first presentation reframe). Companion
 views: the positive core `FTGB_WHAT_WORKS.md`; the per-item status `TIER_LEDGER.md`; the crystallization
 `BEST_AVAILABLE_THEORY_2026-09-14.md`; the kept negatives `NEGATIVE_PROGRAM_LOG_2026-09-15.md`.

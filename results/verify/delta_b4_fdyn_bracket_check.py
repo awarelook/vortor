@@ -24,7 +24,7 @@ computed here instead.
             (off-diagonal shares the diagonal's edge coefficient) is an uncomputed ansatz -- so this REMOVES the
             Stage-D obstruction only conditionally, and is tiered [S], per the audit.
   TEST 2 -- RIGOROUS UPPER BOUND  [V]-exact: f_dyn <= 1 (Cauchy-Schwarz on the positive V-metric). Verified
-            across the g- and delta-sweeps; empirically saturates no higher than ~0.836.
+            across the g- and delta-sweeps (max over the sweep 0.996, -> 1 as g -> 1).
   TEST 3 -- RIGOROUS NONZERO + the O_h GRAM FLOOR (independent anchor #1)  [V] structure / [S] value. The
             singlet->A_1g cube channel is O_h-ALLOWED (no selection zero => f_dyn > 0, unconditional). The
             A_1g-projected normalized amplitude on the n-config merger orbit is EXACTLY f_dyn = sqrt((1+(n-1)s)/n)
@@ -34,7 +34,7 @@ computed here instead.
   TEST 4 -- VIBRATIONAL FRANCK-CONDON (independent anchor #2, the low dissenter)  [S]. The vibrational part of
             f_dyn on top of the static overlap: FC(0->0)=exp(-S), S=lambda/hbar_omega, with hbar_omega from the
             Barnes-Baskerville-Turok ~20 MeV cube breather and lambda ~ the 23.85 MeV reorganization/Q scale.
-            FC = 0.37 (lambda=20) to 0.30 (lambda=23.85); +-factor-2 on lambda -> [0.19, 0.50]. Also density-proxy-
+            FC = 0.37 (lambda=20) to 0.30 (lambda=23.85); +-factor-2 on lambda -> [0.09, 0.61]. Also density-proxy-
             FREE. Its central ~0.3 is the strongest evidence the true value may sit BELOW the static-overlap
             cluster -- but still O(1) and inside the observed window. (lambda is order-of-magnitude, flagged [S].)
   TEST 5 -- ASSEMBLY + THE CROSS-VALIDATED BRACKET + honest circularity caveat. Five angles land in [0.2,1.0]
@@ -184,7 +184,8 @@ print("  (TEST 3). DEFENSIBLE & conditional: O(1), bracket [0.2,1.0], central ~0
 print("  proxy-FREE numbers -- the O_h Gram floor 0.577 (s>=0) and the Franck-Condon central 0.30. The Stage-D")
 print("  L_2 divergence is shown to cancel in the normalized amplitude, but only under an edge-universality")
 print("  ansatz [S]. What stays external is g -- the moduli-metric-weighted orientation overlap; the strongest")
-print("  in-env route to pin it is the Speight-metric homogeneity check (Stage G, not yet built). Net upgrade:")
+print("  in-env route to tighten it, the Speight-metric homogeneity check (Stage G), is BUILT: the metric is")
+print("  HOMOGENEOUS (ratio 1.48) -> metric concentration EXCLUDED; only the VPDiff orientation average external. Net upgrade:")
 print("  'expected O(1) but unproven' -> 'rigorously (0,1], O(1) bracket [0.2,1.0]; precise value external.' Nothing fabricated.")
 print("  status:", "PASS" if ok else "FAIL")
 raise SystemExit(0 if ok else 1)

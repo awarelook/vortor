@@ -3,7 +3,7 @@
 **Author:** Nathaniel Hanks · **Date:** 2026-09-14 · **Provenance:** a six-dimension jewel audit
 (completeness / coherence / derivation depth / explanation quality / sourcing / theoretical advancement),
 each dimension run as an independent adversarial pass, findings verified line-by-line against the files,
-then folded. Harness after the fold: `verify_all.py` → **91/91** (82nd: the torus expedition; 83rd: Stage D; 84th: the spin gate — all 2026-09-15).
+then folded. Harness after the fold: `verify_all.py` → **91/91** (the 2026-09-15 passes: torus expedition 82nd, Stage D 83rd, spin gate 84th; then PV-gravity, beat→spin magnetic-resonance, Stage E (ρ_eff factorized), data-confrontation, Stage F (f_dyn bracketed), and Stage G (moduli-metric concentration excluded) carried it to 91).
 
 This document does three things: (1) states the **real working theory** — what the jewel actually is when
 every claim is held at its earned tier; (2) records the **audit outcome** including the forgotten-batch
@@ -109,7 +109,11 @@ grid-convergent `H = 0.088` of the actual CK object.
    geometries, grid-converged) — which yields a **new structural constraint**: density-support geometry
    CANNOT supply the needed ρ_eff ~ 0.07; the smallness, if real, must originate in the
    **orientation / Finkelstein–Rubinstein phase structure** of the crossing (+ moduli metric + the
-   regularized boundary). The external run should resolve the orientation-space structure *first*.
+   regularized boundary). **DONE — Stages E–G (2026-09-15, see §4):** all three candidates are now bounded
+   in-env — orientation is *rigorous* (the singlet, Stage E), the moduli metric does *not* concentrate
+   (homogeneous, ratio 1.48, Stage G), and the L₂ boundary divergence *cancels* in the normalized amplitude
+   (Stage F) — so `f_dyn` is rigorously `(0,1]` and O(1)-bracketed `[0.2,1.0]`, leaving only the
+   relative-orientation VPDiff average external.
 2. **CK overlap integrals** (`V_111`, `⟨D⟩`) — converts the comb-pull falsifier coefficient to in-repo `[V]`.
 3. **EMF junction derivation** `V = ω_b·ΔΦ` vs LEC's 525 mV — needs one declared junction-geometry model
    (a new `[S]` choice), then is a ~50-line EM computation; currently an `[S]` order-of-magnitude.
@@ -154,6 +158,18 @@ must be *dynamical/coherent* — the cold Bose seed's mechanism-shaped job. Logg
 one decade. **New falsifier #9: polarization-steered aneutronic yield** (m=±1 collapse is the sharp kill).
 The pieces now interlock: *corridor (where) → slow/soft fence (how fast) → orientation gate (what selects)
 → coherent seed (what prepares) → polarization knob (how to test)*.
+
+**Stages E–G (2026-09-15) — the three candidates resolved, `f_dyn` bounded.** The gate made orientation the
+leading candidate; Stages E–G then bounded the whole rate factor. **Stage E** (`delta_b4_stageE_rho_eff_semianalytic_check`):
+the orientation factor is *rigorous* — ⁴He(0⁺) forces the singlet, and FR quantization makes it the
+cube-forming orientation — so `ρ_eff = f_orient(1/9–1/3) × f_density([0.55,0.96]) × f_dyn`. **Stage F**
+(`delta_b4_fdyn_bracket_check`, a 12-agent adversarial attack): `f_dyn` is rigorously `(0,1]` (≤1 Cauchy–Schwarz,
+>0 by O_h A₁g-allowedness) and O(1) by a cross-validated bracket `[0.2,1.0]`, anchored by two density-proxy-free
+numbers (O_h Gram floor `1/√3=0.577`, Franck–Condon `~0.30`); the L₂ boundary divergence *cancels* in the
+normalized amplitude (`[S]`, an auditor `[V]`→`[S]` demotion). **Stage G** (`delta_b4_stageG_moduli_metric_check`):
+the moduli-metric collective inertia `M(t)=∫b|∇φ|²` along the merger is *homogeneous* (ratio 1.48, elliptic
+solve validated to 1e-16) → metric concentration *excluded*. **Net: the nuclear rate is O(1) × the singlet gate;
+the one external number left is the near-BPS relative-orientation VPDiff average.**
 
 ---
 

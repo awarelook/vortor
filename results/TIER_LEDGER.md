@@ -1,6 +1,6 @@
 # Tier ledger — what is proven, what is honest-tier, and what would resolve each
 
-**Date:** 2026-09-10, last updated **2026-09-14** (LENR disposal-chain convergence + the jewel-audit
+**Date:** 2026-09-10, last updated **2026-09-15** (LENR disposal-chain convergence + the jewel-audit
 capture pass: corridor sharpening, two-bar frontier, forgotten-batch checks). The project's honest self-assessment in one page: the solid `[V]`/`[credited]` core, and
 for every `[S]`/`[flag]`/`open` item, **what would resolve it** and its **honest status**. "Seek to resolve to
 proof" answered straight — resolving what is resolvable, and stating plainly what is *not* provable here (and
