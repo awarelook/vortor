@@ -45,6 +45,13 @@ def main():
         print("  %-28s    sidecar: %s" % ("", os.path.basename(produced["meta"])))
     print("=" * 78)
     print("  rendered %d artifacts from %d scenes; each carries a tier-captioned .meta.json." % (total, len(manifest)))
+    # build the tier-annotated gallery from the sidecars (single source of truth)
+    try:
+        from engine.viz.gallery import build_gallery
+        gpath, nr, ni = build_gallery(renders_dir=outdir, out_html="gallery.html")
+        print("  gallery: %s  (%d posters + %d interactives, tiers from the sidecars)" % (gpath, nr, ni))
+    except Exception as e:
+        print("  (gallery build skipped: %s)" % e)
     print("  (CI untouched: verify_all.py does not import engine/viz or this driver.)")
     print("=" * 78)
     return 0
