@@ -2,7 +2,7 @@
 
 **A reproducible, tiered theory — the ten-page presentation.**
 Nathaniel Hanks · 2026-09-15 · reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` → **84/84**, deterministic, no network, CI-gated.
-Longform: `FTGB_GRAND_SYNTHESIS.md` · one-page-per-claim ledger: `results/TIER_LEDGER.md` · visuals: `gallery.html`.
+Complete 25-page version: `paper/FTGB_FULL_PAPER_25PG_2026-09-15.md` · longform: `FTGB_GRAND_SYNTHESIS.md` · per-claim ledger: `results/TIER_LEDGER.md` · visuals: `gallery.html`.
 
 ---
 
