@@ -2,7 +2,7 @@
 
 **FTGB × the anomaly landscape — what the theory explains, predicts, and leaves open, tiered.**
 Author: Nathaniel Hanks · 2026-09-14 · a synthesis/index over already-committed, already-verified material
-(`verify_all.py` **83/83**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
+(`verify_all.py` **84/84**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
 tier or explicitly tagged `[S]`/open. Built and adversarially audited by a 24-agent workflow (novelty checked
 against Hagelstein / Preparata / Widom–Larsen / Storms / Takahashi / Kim; discipline pass certified the
 committed corpus clean of fabricated COP / rate / cross-section / branching).
@@ -216,6 +216,18 @@ kill conditions and a single computable unknown — not a claimed result.**
    suppression, if real, lives in the **relative orientation / Finkelstein–Rubinstein phase structure** of
    the crossing (+ the moduli metric + the regularized boundary). The external run should resolve the
    orientation-space structure of the crossing *first* — the open problem is now pointed, not just named.
+   **[THE GATE, same day (`spin_channel_gate_check`).]** The quantum arithmetic of that orientation space:
+   the s-wave door to ⁴He(0⁺) is the **singlet alone** — statistical gate `1/9` `[credited]` — and the gate
+   is **steerable by coherent preparation**: a single-mode condensate pair `|1,m⟩⊗|1,m⟩` has singlet
+   fraction **1/3 at m=0** (3× statistical) and **exactly 0 at m=±1** (pure quintet; the residual d-wave
+   route is `~10⁻⁶` centrifugally suppressed). Thermal polarization is `~10⁻⁶` at any plasmoid field, so
+   any channel selection must be **dynamical/coherent** — giving the cold Bose-degenerate seed `[S]` a
+   mechanism-shaped job: **channel preparation**. Logged consistency (coincidence-class, not promoted):
+   `1/9 × [0.55,0.96] = [0.061,0.107]` overlaps the `ρ_eff ~ 0.06–0.08` target band — three independent
+   pieces meeting at one decade (`COINCIDENCE_LEDGER`). **New falsifier:** the aneutronic yield of a
+   coherent site must **depend on deuteron spin preparation** (m=0 enhances up to 3×; m=±1 collapses the
+   s-wave door) — a polarization/field-steering knob no thermal-statistical model predicts
+   [context: Kulsrud et al. PRL **49**, 1248 (1982); the contested d+d quintet-suppression question].
 3. **The lab confrontations that would decide it** — none of which have the required diagnostics in the
    current candidate-system record: neutron-yield-vs-heat (the band-independent kill); `He-4/heat = 24 MeV/⁴He`
    to `<×2` with the ×5 scatter beaten down; an inharmonic CK triplet vs harmonic; geometric `N^L` yield

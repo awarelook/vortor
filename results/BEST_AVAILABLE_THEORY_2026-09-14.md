@@ -3,7 +3,7 @@
 **Author:** Nathaniel Hanks · **Date:** 2026-09-14 · **Provenance:** a six-dimension jewel audit
 (completeness / coherence / derivation depth / explanation quality / sourcing / theoretical advancement),
 each dimension run as an independent adversarial pass, findings verified line-by-line against the files,
-then folded. Harness after the fold: `verify_all.py` → **83/83** (82nd: the torus_project_repo expedition; 83rd: Stage D, both 2026-09-15).
+then folded. Harness after the fold: `verify_all.py` → **84/84** (82nd: the torus_project_repo expedition; 83rd: Stage D, both 2026-09-15).
 
 This document does three things: (1) states the **real working theory** — what the jewel actually is when
 every claim is held at its earned tier; (2) records the **audit outcome** including the forgotten-batch
@@ -144,6 +144,17 @@ sufficiency bar plus the Cauchy–Schwarz ceiling `Δ ≤ 23.85 MeV` **derives a
 independently with the corridor result. One geometric question, two computable bars, decidable either way
 (corridor excluded → the aneutronic reading falls — a decisive settled-negative, which is also a win).
 
+**The gate (2026-09-15, `spin_channel_gate_check` — the push past Stage D).** Stage D localized the
+suppression to orientation space; the gate check computes its quantum arithmetic: the s-wave door to
+⁴He(0⁺) is the **singlet alone** (statistical gate 1/9 `[credited]`), and it is **steerable by coherent
+preparation** — a single-mode condensate pair has singlet fraction **1/3 at m=0** and **exactly 0 at
+m=±1** (d-wave residual ~10⁻⁶). Thermal polarization is ~10⁻⁶ at any plasmoid field, so channel selection
+must be *dynamical/coherent* — the cold Bose seed's mechanism-shaped job. Logged (coincidence-class):
+`1/9 × [0.55, 0.96] = [0.061, 0.107]` overlaps the target band 0.06–0.08 — three independent pieces at
+one decade. **New falsifier #9: polarization-steered aneutronic yield** (m=±1 collapse is the sharp kill).
+The pieces now interlock: *corridor (where) → slow/soft fence (how fast) → orientation gate (what selects)
+→ coherent seed (what prepares) → polarization knob (how to test)*.
+
 ---
 
 ## 5. The organized breakthrough program (with its fences)
@@ -182,7 +193,7 @@ currently with ZERO experimental convergence, live targets). The kHz beat is a *
 
 ## 6. Reproduce & falsify
 
-`pip install -r requirements.txt && python results/verify/verify_all.py` → **83/83**, deterministic, no
+`pip install -r requirements.txt && python results/verify/verify_all.py` → **84/84**, deterministic, no
 network, CI-gated. The falsifier set: `FTGB_MINIMUM_VIABLE_PAPER.md` §5 (comb linear-limit; neutron∝heat
 primary; E0-pair secondary; `N^L` beat-lock; 0νββ; the parameter-free scalars). The tier ledger:
 `results/TIER_LEDGER.md`. The LENR map: `results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`.

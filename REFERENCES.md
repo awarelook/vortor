@@ -295,6 +295,13 @@ adversarial prior-art pass. The mechanism is `[S]`; the energy accounting `[V]`;
   III & Cecil, F.E. (1985), *Phys. Rev. C* **31**, 2036 — `D(d,γ)⁴He` at low energy: the radiative-capture
   branch is ~seven orders of magnitude below the nucleon channels. `[credited — resolves the vendored
   ledger's "verify vol/page at lock" flag, 2026-09-14]`.
+- **Spin-polarized fusion** (context for the spin/orientation gate, `spin_channel_gate_check.py`):
+  Kulsrud, R.M., Furth, H.P., Valeo, E.J. & Goldhaber, M. (1982), *Phys. Rev. Lett.* **49**, 1248 —
+  fusion-reactivity control by nuclear spin polarization (d-t). The **d+d "quintet suppression"**
+  question (whether the S=2 channel of d+d is dynamically suppressed) is a NAMED, CONTESTED few-body
+  issue (Paetz gen Schieck and collaborators) `[context — complete the specific citation before external
+  use]`. FTGB's addition is the coherent-site, preparation-steered version (singlet gate 1/9 → 1/3 at
+  m=0, → 0 at m=±1), minted as falsifier #9. `[credited]`-arith / `[S]` identification.
 - **Ponderomotive (Miller) force**: Gaponov, A.V. & Miller, M.A. (1958), *Sov. Phys. JETP* **7**, 168
   (*ZhETF* **34**, 242) — `U_p = q²⟨E²⟩/4mω²`; real, but `∝1/m` (electron-mediated) and the non-relativistic
   form fails at `a₀~1` (Quesnel & Mora (1998), *Phys. Rev. E* **58**, 3719). Tajima, T. & Dawson, J.M.

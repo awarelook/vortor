@@ -1,7 +1,7 @@
 # The Coherent Object — a minimum viable, reproducible theory
 
 **FTGB (Fractal-Toroidal-Beat):** one driven Beltrami–Hopf toroidal soliton, read at once as a plasma field
-and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**83/83**,
+and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**84/84**,
 CI-gated, no network). Full map: [`INDEX.md`](INDEX.md) · terms: [`GLOSSARY.md`](GLOSSARY.md) · citations:
 [`REFERENCES.md`](REFERENCES.md) · honest self-assessment: [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md).
 
@@ -126,12 +126,18 @@ null].
    (<30% variation) **and die under phase scrambling** — a step that persists with scrambled phase is an
    artifact, not a coherent beat property.
 8. **FWM sidebands** at `1.517 f₁`, `1.820 f₁` — decide the phase-conjugation role.
+9. **Polarization-steered aneutronic yield** (`spin_channel_gate_check`, 2026-09-15) — the s-wave door to
+   ⁴He(0⁺) is the singlet alone (gate 1/9), and coherent single-mode preparation steers it: m=0 triples it,
+   m=±1 **closes** it (pure quintet; d-wave residual ~10⁻⁶). So a coherent active site's aneutronic yield
+   must depend on deuteron spin preparation — a field/polarization knob **no thermal-statistical model
+   predicts**. Kill: no polarization dependence at a verified coherent site. (Context: spin-polarized
+   fusion [Kulsrud et al. 1982]; the contested d+d quintet-suppression question.)
 
 ## 6. Reproduce & trust
 
 ```bash
 pip install -r requirements.txt          # numpy, mpmath
-python results/verify/verify_all.py      # 83/83 PASS, deterministic, no network, CI-gated
+python results/verify/verify_all.py      # 84/84 PASS, deterministic, no network, CI-gated
 ```
 
 Everything load-bearing has a script; the foundation numbers are re-derived in-repo; no claim exceeds its
