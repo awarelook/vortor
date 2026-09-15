@@ -295,6 +295,13 @@ adversarial prior-art pass. The mechanism is `[S]`; the energy accounting `[V]`;
   III & Cecil, F.E. (1985), *Phys. Rev. C* **31**, 2036 — `D(d,γ)⁴He` at low energy: the radiative-capture
   branch is ~seven orders of magnitude below the nucleon channels. `[credited — resolves the vendored
   ledger's "verify vol/page at lock" flag, 2026-09-14]`.
+- **The radiative-channel mechanism (E2, not E1 — the channel-separation refinement)**: Czerski, K. et al.
+  (2022), *Phys. Rev. C* **106**, L011601 — `d+d` at extremely low energy; the `D(d,γ)⁴He` capture proceeds
+  by **E2** (d-wave→¹S₀ at E>400 keV; s-wave→D-state admixture at low E), because E1 is isospin-forbidden
+  (T=0→T=0). Muon-catalyzed measurement: Balin, D.V. et al. / the ddμ J=1 search, arXiv:nucl-ex/0203005
+  (n_γ ≤ 2×10⁻⁵ per fusion). `[credited — grounds the channel separation: the measured radiative branch is
+  E2, distinct from the FTGB non-radiative E0/collective corridor; `delta_b4_data_confrontation_check`,
+  2026-09-15]`.
 - **Spin-polarized fusion** (context for the spin/orientation gate, `spin_channel_gate_check.py`):
   Kulsrud, R.M., Furth, H.P., Valeo, E.J. & Goldhaber, M. (1982), *Phys. Rev. Lett.* **49**, 1248 —
   fusion-reactivity control by nuclear spin polarization (d-t). The **d+d "quintet suppression"**

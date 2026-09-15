@@ -1,7 +1,7 @@
 # The Coherent Object: a driven Beltrami–Hopf toroidal soliton read as field and matter wave
 
 **A reproducible, tiered theory — the ten-page presentation.**
-Nathaniel Hanks · 2026-09-15 · reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` → **88/88**, deterministic, no network, CI-gated.
+Nathaniel Hanks · 2026-09-15 · reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` → **89/89**, deterministic, no network, CI-gated.
 Complete 25-page version: `paper/FTGB_FULL_PAPER_25PG_2026-09-15.md` · longform: `FTGB_GRAND_SYNTHESIS.md` · per-claim ledger: `results/TIER_LEDGER.md` · visuals: `gallery.html`.
 
 ---
@@ -104,7 +104,7 @@ measurable knob.*
 
 **The ledger and the operator `[V]`/`[credited]`.** If the heat is nuclear it is `d+d→⁴He` at 23.847 MeV per
 atom, conserved — a nuclear *source*, never over-unity. No single photon can carry a `0⁺→0⁺` transition
-(Church & Weneser 1956), and the E1 channel is isospin-forbidden (N=Z) — measured branching ~`1e-7`
+(Church & Weneser 1956), and the E1 channel is isospin-forbidden (so the measured ~10⁻⁷ radiative branch is E2 — a *different* channel from the collective corridor) (N=Z) — measured branching ~`1e-7`
 [Wilkinson & Cecil, PRC **31**, 2036 (1985)]. So γ-quiet ⁴He heat **must shed collectively** (operator = E0 /
 collective; shared prior art: Hagelstein, Preparata, Takahashi — credited). The anapole knot is the **active
 site** (slow confinement at assembly), *not* the energy antenna — a toroidal dipole is double-forbidden
@@ -171,7 +171,7 @@ kept strictly distinct from baryon decay.
 
 ## 8. Reproducibility & provenance
 
-One command reproduces the entire model (88 checks: 85 theory scripts + 3 engine runs), deterministic and
+One command reproduces the entire model (89 checks: 86 theory scripts + 3 engine runs), deterministic and
 offline, gated by CI on every push. Canonical numbers are re-derived in-repo from cited anchors; external data
 (AME2020 masses, TUNL levels, measured screening) is vendored with named provenance; the absolute-magnitude
 caveat (`v_A` band) is quarantined by proof (dimensionless observables invariant to 1e-16). Confronted

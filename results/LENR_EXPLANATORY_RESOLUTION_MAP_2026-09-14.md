@@ -2,7 +2,7 @@
 
 **FTGB × the anomaly landscape — what the theory explains, predicts, and leaves open, tiered.**
 Author: Nathaniel Hanks · 2026-09-14 · a synthesis/index over already-committed, already-verified material
-(`verify_all.py` **88/88**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
+(`verify_all.py` **89/89**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
 tier or explicitly tagged `[S]`/open. Built and adversarially audited by a 24-agent workflow (novelty checked
 against Hagelstein / Preparata / Widom–Larsen / Storms / Takahashi / Kim; discipline pass certified the
 committed corpus clean of fabricated COP / rate / cross-section / branching).
@@ -190,7 +190,11 @@ kill conditions and a single computable unknown — not a claimed result.**
    itself, scoped** (`disposal_nonpopulation_check.py`, after a verification found a first draft too defeatist):
    the ~50/50 p+t:n+³He strong split is **isospin mirror symmetry** (d+d pure T=0; each channel 50% T=0), and
    **no** symmetry (isospin/Pauli/L) makes d+d aneutronic — it is a *dynamical* competition; the **in-env
-   handle** is the **E1 ΔT=0-forbidden → measured ~10⁻⁷** radiative baseline (already in-repo). So the open
+   handle** is the **E1 ΔT=0-forbidden → measured ~10⁻⁷** radiative baseline (already in-repo). *(Literature
+   refinement, 2026-09-15: E1 being isospin-forbidden means the measured ~10⁻⁷ radiative branch proceeds by
+   **E2** — d-wave→¹S₀ / s-wave→D-state admixture [Czerski et al., PRC 106, L011601 (2022)]; that radiative E2
+   channel is DISTINCT from the FTGB non-radiative E0/collective corridor, so it does not constrain the
+   corridor ρ_eff — `delta_b4_data_confrontation_check`.)* So the open
    item is *narrow and well-posed*, not dark: **can coherent slow assembly raise the bound-⁴He fraction *above*
    the measured ~10⁻⁷ baseline?** — that alone is the B=4/B=8 moduli-space geodesic / HPC run. (The E0-pair
    e⁺e⁻ discriminator is discharged by kinematics but was only ever *secondary*; the strong-particle/neutron

@@ -1,8 +1,8 @@
 # State of the theory & the open problems — current-true
 
-**Author:** Nathaniel Hanks · **Date:** 2026-09-15 · **Harness:** `verify_all.py` → **88/88**.
+**Author:** Nathaniel Hanks · **Date:** 2026-09-15 · **Harness:** `verify_all.py` → **89/89**.
 The honest "where does it stand, and what is left" report, current after this week's advancements
-(78 → 88 checks; the corridor sharpening; Stage D; the spin gate; the PV-gravity fence; the negative-program
+(78 → 89 checks; the corridor sharpening; Stage D; the spin gate; the PV-gravity fence; the negative-program
 salvage; the beat→spin magnetic-resonance resolution; and the result-first presentation reframe). Companion
 views: the positive core `FTGB_WHAT_WORKS.md`; the per-item status `TIER_LEDGER.md`; the crystallization
 `BEST_AVAILABLE_THEORY_2026-09-14.md`; the kept negatives `NEGATIVE_PROGRAM_LOG_2026-09-15.md`.
@@ -14,7 +14,7 @@ views: the positive core `FTGB_WHAT_WORKS.md`; the per-item status `TIER_LEDGER.
 **The verified core is done and stable.** Coherence *is* regularity; the driven self-sustaining attractor
 (Re 126→628); the CK inharmonic comb; the heartbeat theorem; the topology / chirality / Majorana cluster;
 the exact spectral zeta; the anapole; the conserved nuclear ledger; the rhythm layer. All `[V]`, all
-re-runnable, all presented (WHAT_WORKS → 10-page → 25-page → Grand Synthesis → ledger → 88 scripts) with the
+re-runnable, all presented (WHAT_WORKS → 10-page → 25-page → Grand Synthesis → ledger → 89 scripts) with the
 same tiers and numbers at every rung.
 
 **The negative program is clean.** A 12-agent adversarial reassessment (grade A−) found the 33 negatives are
@@ -51,6 +51,14 @@ Everything nuclear reduces to a single computation, now pointed as sharply as in
 - **What remains external (now one number):** `f_dyn` — the moduli-metric-weighted, L₂-boundary-regularized
   first-order amplitude (the L₂ energy log-diverges on the exact compacton — not plain quadrature), expected
   O(1) but unproven. That single O(1) check is the production run's remaining job, not an open-ended computation.
+- **Can f_dyn be resolved by literature or data now? — checked (`delta_b4_data_confrontation_check`):** *no* by
+  either existing route, but both routes are now explicit. **Literature:** the near-BPS model and B=4 interactions
+  are published, but the specific B=2+B=2→B=4 *non-radiative fusion* matrix element is uncomputed → the theory
+  route is the near-BPS run. **Data:** the measured `d+d→⁴He+γ` ~1e-7 is the **radiative E2** channel (E1
+  isospin-forbidden — a literature refinement folded), *distinct* from the FTGB non-radiative E0/collective
+  corridor, so it does not pin ρ_eff → the data route is a controlled LENR aneutronic-branching measurement. The
+  inversion is defined (a measured aneutronic fraction pins f_dyn), and the theory is **consistent (f_dyn ~ O(1))**
+  with a weak aneutronic claim at the slow/soft corner.
 - **Sub-piece now with a mechanism (not open):** the beat→deuteron-spin *coupling* is magnetic resonance
   (`beat_spin_magnetic_resonance_check`); its *strength* (`Ω_R = γ_d·b₁ vs 1/T₂`) still needs the transverse-δB
   amplitude and the coherence time T₂ — the external polarized-target beat-sweep quantities.
@@ -140,8 +148,8 @@ not the repo.*
 ## 7. Outward-facing / publish housekeeping
 
 - **GitHub Release + Zenodo DOI** — still need the author (an outward-facing publish; the repo is
-  release-ready, CI-green, tagged v1.2.0). A v1.3.0 tag would mark this week's state (88/88; the papers;
-  WHAT_WORKS; the salvage + magnetic-resonance resolution).
+  release-ready, CI-green, tagged v1.2.0). A v1.3.0 tag would mark this week's state (89/89; the papers;
+  WHAT_WORKS; the salvage + magnetic-resonance resolution; Stage E + the data-confrontation).
 - The presentation stack is complete and coherent; no documentation gap remains.
 
 ---
