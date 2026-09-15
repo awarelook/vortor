@@ -3,7 +3,7 @@
 ## A driven Beltrami–Hopf toroidal soliton read as field and matter wave: the complete presentation
 
 **Nathaniel Hanks** · 2026-09-15 · version 1.2.0
-Reproduce everything: `pip install -r requirements.txt && python results/verify/verify_all.py` → **91/91** PASS, deterministic, offline, CI-gated on every push.
+Reproduce everything: `pip install -r requirements.txt && python results/verify/verify_all.py` → **92/92** PASS, deterministic, offline, CI-gated on every push.
 Companions: ten-page version `paper/FTGB_TEN_PAGE_2026-09-15.md` · longform synthesis `FTGB_GRAND_SYNTHESIS.md` (+ Addendum H) · per-claim ledger `results/TIER_LEDGER.md` · visual gallery `gallery.html`.
 
 ---
@@ -47,7 +47,7 @@ Every claim below carries one of five labels, and the label is part of the claim
 - **[flag]** — a numerical observation logged as a clue (a coincidence ledger exists for exactly this);
 - **settled-negative** — a computed refutation, kept and cited as a result.
 
-*Plain language: the labels are the instrument. A reader who trusts nothing can re-run all 91 checks with one
+*Plain language: the labels are the instrument. A reader who trusts nothing can re-run all 92 checks with one
 command; a reader who trusts the labels can navigate the whole theory knowing precisely where the floor is.*
 
 ---
@@ -58,7 +58,7 @@ command; a reader who trusts the labels can navigate the whole theory knowing pr
 
 The project operates under standing rules that are enforced mechanically, not aspirationally:
 
-1. **Every load-bearing claim has a script.** The harness (`verify_all.py`) runs 88 theory scripts plus three
+1. **Every load-bearing claim has a script.** The harness (`verify_all.py`) runs 89 theory scripts plus three
    engine programs; a failing assertion turns the public CI badge red. Nothing is asserted that a stranger
    cannot re-run, deterministically, offline.
 2. **Settled-negatives are wins.** When a tempting idea fails the mathematics, the failure is *computed,
@@ -662,4 +662,4 @@ Kulsrud, Furth, Valeo & Goldhaber, PRL **49**, 1248 (1982) · Landau (1932); Zen
 Shoulders (EVO); each credited at its point of contact, none used as authority.
 
 *No claim exceeds its tier; no number is fabricated; settled-negatives are kept as wins; the discipline is
-symmetric. Everything above re-runs from one command: `python results/verify/verify_all.py` → 91/91.*
+symmetric. Everything above re-runs from one command: `python results/verify/verify_all.py` → 92/92.*

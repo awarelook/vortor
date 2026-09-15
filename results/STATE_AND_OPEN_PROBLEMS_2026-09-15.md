@@ -1,8 +1,8 @@
 # State of the theory & the open problems — current-true
 
-**Author:** Nathaniel Hanks · **Date:** 2026-09-15 · **Harness:** `verify_all.py` → **91/91**.
+**Author:** Nathaniel Hanks · **Date:** 2026-09-15 · **Harness:** `verify_all.py` → **92/92**.
 The honest "where does it stand, and what is left" report, current after this week's advancements
-(78 → 91 checks; the corridor sharpening; Stages D–G — the ρ_eff factorization, the spin gate, the f_dyn bracket, and the moduli-metric homogeneity check; the PV-gravity fence; the negative-program
+(78 → 92 checks; the corridor sharpening; Stages D–G — the ρ_eff factorization, the spin gate, the f_dyn bracket, and the moduli-metric homogeneity check; the PV-gravity fence; the negative-program
 salvage; the beat→spin magnetic-resonance resolution; and the result-first presentation reframe). Companion
 views: the positive core `FTGB_WHAT_WORKS.md`; the per-item status `TIER_LEDGER.md`; the crystallization
 `BEST_AVAILABLE_THEORY_2026-09-14.md`; the kept negatives `NEGATIVE_PROGRAM_LOG_2026-09-15.md`.
@@ -14,7 +14,7 @@ views: the positive core `FTGB_WHAT_WORKS.md`; the per-item status `TIER_LEDGER.
 **The verified core is done and stable.** Coherence *is* regularity; the driven self-sustaining attractor
 (Re 126→628); the CK inharmonic comb; the heartbeat theorem; the topology / chirality / Majorana cluster;
 the exact spectral zeta; the anapole; the conserved nuclear ledger; the rhythm layer. All `[V]`, all
-re-runnable, all presented (WHAT_WORKS → 10-page → 25-page → Grand Synthesis → ledger → 91 scripts) with the
+re-runnable, all presented (WHAT_WORKS → 10-page → 25-page → Grand Synthesis → ledger → 92 scripts) with the
 same tiers and numbers at every rung.
 
 **The negative program is clean.** A 12-agent adversarial reassessment (grade A−) found the 33 negatives are
@@ -152,11 +152,14 @@ not the repo.*
 
 ## 6. The in-environment backlog (recomputes — the housekeeping frontier)
 
-- **The `[V-external]` orphans** — `V_111 = 2.30` / `⟨D⟩ ≈ 0.86` (CK eigenmode overlaps, the comb-pull
-  coefficient); the Madelung continuity residual `5e-16`; the O_h gerade/parity settlement; the grid-convergent
-  `H = 0.088`. These are carried honestly as parent-corpus results but **not yet reproduced in-repo** (the
-  ckfreefem parent is not on the local drive; the 2026-09-15 expedition confirmed this). **In-env move:
-  recompute each** (small quadratures / a coarse H integral), converting `[V-external]` → `[V]`.
+- **The `[V-external]` orphans** — *partially closed 2026-09-15.* The **Madelung continuity residual** is now
+  reproduced in-repo `[V]` (`madelung_continuity_check`): the de Broglie/Madelung law `∂_t ρ + ∇·(ρv) = 0` is an
+  exact identity of any Schrödinger field, verified to **spectral roundoff** (1D 3e-13, 3D 2e-14, the Madelung
+  decomposition `j=ρv` to 9e-16) — the parent-corpus "residual ~5e-16" closed from first principles. The
+  **remaining** orphans genuinely need the FreeFEM torus eigenmodes (the ckfreefem parent is not on the local
+  drive): the CK comb-pull overlaps `V_111 = 2.30` / `⟨D⟩ ≈ 0.86` and the grid-convergent real helicity
+  `H = 0.088` stay `[V-external]` (not fabricated); the O_h gerade/parity item is subsumed by the
+  fractal-toroidal-anapole resolution (`oam_toroidal_resonator_resolution_check`, point-group superseded).
 - **StageD ρ_eff bracket** — the *density* factor is computed `[0.55, 0.96]`; the **orientation-resolved** factor
   is now bracketed in-env (Stage F, `f_dyn ∈ [0.2,1.0]`, §2), with the precise value external.
 - **The f_dyn next-checks (ranked by the 12-agent attack)** — **(1, strongest) `delta_b4_stageG_moduli_metric`
@@ -174,7 +177,7 @@ not the repo.*
 ## 7. Outward-facing / publish housekeeping
 
 - **GitHub Release + Zenodo DOI** — still need the author (an outward-facing publish; the repo is
-  release-ready, CI-green, tagged v1.2.0). A v1.3.0 tag would mark this week's state (91/91; the papers;
+  release-ready, CI-green, tagged v1.2.0). A v1.3.0 tag would mark this week's state (92/92; the papers;
   WHAT_WORKS; the salvage + magnetic-resonance resolution; Stage E + the data-confrontation).
 - The presentation stack is complete and coherent; no documentation gap remains.
 
@@ -190,4 +193,4 @@ run** (unconditional high-Re), and — the real bottleneck — **the experimenta
 bench, not a repo. Nothing is fabricated; every open item is named at its tier with the specific work that
 would close it. The jewel does not overclaim what is left; it maps it.
 
-*Reproduce the whole: `python results/verify/verify_all.py` → 91/91.*
+*Reproduce the whole: `python results/verify/verify_all.py` → 92/92.*

@@ -8,7 +8,7 @@
 #     pip install -r requirements-viz.txt
 #     python render_all.py
 #
-# The rendering layer consumes the SAME numbers the 91 checks validate; every artifact carries
+# The rendering layer consumes the SAME numbers the 92 checks validate; every artifact carries
 # a tier-captioned metadata sidecar naming its verify script. Rendering is downstream of [V],
 # never inside it.
 

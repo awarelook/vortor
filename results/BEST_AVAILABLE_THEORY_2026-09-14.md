@@ -3,7 +3,7 @@
 **Author:** Nathaniel Hanks · **Date:** 2026-09-14 · **Provenance:** a six-dimension jewel audit
 (completeness / coherence / derivation depth / explanation quality / sourcing / theoretical advancement),
 each dimension run as an independent adversarial pass, findings verified line-by-line against the files,
-then folded. Harness after the fold: `verify_all.py` → **91/91** (the 2026-09-15 passes: torus expedition 82nd, Stage D 83rd, spin gate 84th; then PV-gravity, beat→spin magnetic-resonance, Stage E (ρ_eff factorized), data-confrontation, Stage F (f_dyn bracketed), and Stage G (moduli-metric concentration excluded) carried it to 91).
+then folded. Harness after the fold: `verify_all.py` → **92/92** (the 2026-09-15 passes: torus expedition 82nd, Stage D 83rd, spin gate 84th; then PV-gravity, beat→spin magnetic-resonance, Stage E (ρ_eff factorized), data-confrontation, Stage F (f_dyn bracketed), and Stage G (moduli-metric concentration excluded) carried it to 91).
 
 This document does three things: (1) states the **real working theory** — what the jewel actually is when
 every claim is held at its earned tier; (2) records the **audit outcome** including the forgotten-batch
@@ -209,7 +209,7 @@ currently with ZERO experimental convergence, live targets). The kHz beat is a *
 
 ## 6. Reproduce & falsify
 
-`pip install -r requirements.txt && python results/verify/verify_all.py` → **91/91**, deterministic, no
+`pip install -r requirements.txt && python results/verify/verify_all.py` → **92/92**, deterministic, no
 network, CI-gated. The falsifier set: `FTGB_MINIMUM_VIABLE_PAPER.md` §5 (comb linear-limit; neutron∝heat
 primary; E0-pair secondary; `N^L` beat-lock; 0νββ; the parameter-free scalars). The tier ledger:
 `results/TIER_LEDGER.md`. The LENR map: `results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`.

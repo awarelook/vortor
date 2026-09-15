@@ -4,12 +4,12 @@ This repo is set up to be a **fixed, citable, self-verifying artifact**. Cutting
 moving repo into a permanent, DOI-addressable snapshot.
 
 ## What is already in place
-- **CI reproducibility gate** — `.github/workflows/verify.yml` runs `verify_all.py` (currently 91/91;
+- **CI reproducibility gate** — `.github/workflows/verify.yml` runs `verify_all.py` (currently 92/92;
   58/58 at the v1.1.0 tag) on every push; the green badge is public proof the model reproduces from
   scratch on a clean machine.
 - **Self-contained foundation** — provenance scripts + citation stores vendored under `frontier_calcs/`;
   canonical numbers re-derived in-repo (`canonical_numbers_provenance_check.py`).
-- **Citation metadata** — `CITATION.cff` (v1.1.0), which GitHub and Zenodo read automatically.
+- **Citation metadata** — `CITATION.cff` (v1.3.0), which GitHub and Zenodo read automatically.
 - **Canonical snapshot PDF** — `FTGB_GRAND_SYNTHESIS_FULL_2026-09-10.pdf` (compiled from `paper/master.md`).
 
 ## Tags cut so far
@@ -21,6 +21,15 @@ moving repo into a permanent, DOI-addressable snapshot.
   stores, frozen survey digests); all twelve survey folds executed (N-mode Woltjer "heartbeat generic"
   theorem, Sector-A OAM identity, settled-negatives incl. the computed π₂ = 0 monopole closure, FPUT
   winding boundary, ball-lightning closures, Eshelby zero-coupling with corrected scope) — 58 checks.
+- **v1.2.0** (2026-09-15) — the presentation + positive-core milestone: the ten- and twenty-five-page papers;
+  `FTGB_WHAT_WORKS.md` as the result-first publish lead; the negatives moved to the `NEGATIVE_PROGRAM_LOG`;
+  the LENR corridor/gate posters; the corridor→fence→gate→seed→knob nuclear chain — 86 checks.
+- **v1.3.0** (2026-09-15) — the nuclear-rate convergence + coherence milestone: the **f_dyn resolution**
+  (Stage E factorization → Stage F bracket `f_dyn ∈ (0,1]`, O(1) `[0.2,1.0]` → Stage G moduli-metric
+  concentration *excluded*), the data-confrontation and magnetic-resonance passes; the **coherence total
+  pass** (Stage E–G propagated through the papers/refs/visuals, two-agent audit-verified) with the new
+  `lenr_fdyn_bracket` gallery poster and the Speight/Benamou–Brenier references; and the **Madelung-continuity
+  recompute** closing a `[V-external]` orphan to `[V]` — **92 checks**.
 
 ## Cut a GitHub release for the current tag (~5 min)
 1. Confirm CI is green on the default branch (the badge in `README.md` / `START_HERE.md`).

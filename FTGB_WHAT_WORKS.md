@@ -2,7 +2,7 @@
 
 **The positive core, stated plainly and with confidence.** One driven Beltrami–Hopf toroidal soliton, read as
 field and matter wave. Four measured anchors, one geometric selection, zero fitted parameters — and from that,
-the results below. Every one reproduces from a single command: `python results/verify/verify_all.py` → 91/91.
+the results below. Every one reproduces from a single command: `python results/verify/verify_all.py` → 92/92.
 
 *This is the working theory: what it establishes, what it explains, and what it predicts. The full honest
 apparatus — the settled-negatives, the excised numerology, the limits and open edges — is preserved and
@@ -88,14 +88,14 @@ assembly scales. `[V]`/`[S]`.
 
 ## Why you can trust it
 
-Every claim above wears a tier and is backed by a named script a stranger can re-run: 91 checks, deterministic,
+Every claim above wears a tier and is backed by a named script a stranger can re-run: 92 checks, deterministic,
 offline, gated on every push. Foundational numbers are re-derived in-repo from cited anchors; imported data is
 vendored with provenance. The theory adds no new force, fabricates no rate or cross-section, and claims no
 energy from nothing — and it computed its own central fence (the polarizable-vacuum gravity reading is
 GR-equivalent, so no levitation or propulsion follows). Nothing here asks for belief; it asks to be run.
 
 **One command, the whole model:** `pip install -r requirements.txt && python results/verify/verify_all.py`
-→ **91/91**.
+→ **92/92**.
 
 ---
 
