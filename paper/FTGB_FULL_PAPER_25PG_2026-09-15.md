@@ -418,8 +418,10 @@ results (`delta_b4_stageD_bps_overlap_check`):
    **[0.55, 0.96]** across every crossing geometry (Cauchy–Schwarz-normalized, grid-converged).
 3. *A structural constraint (the payoff):* the target regime needs `ρ_eff ~ 0.07`, and density-support
    geometry **cannot** produce it (floor 0.55). The suppression — if the aneutronic reading is right —
-   must live in the **relative orientation / Finkelstein–Rubinstein phase structure** of the crossing.
-   The external run is thereby *pointed*: resolve orientation space first.
+   must therefore live in **what the density proxy omits**: the relative orientation / Finkelstein–Rubinstein
+   phase structure of the crossing, the moduli-space metric, and the regularized-boundary (L₂) physics — of
+   which the orientation/phase structure is the dominant, gate-facing factor (§8.6). The external run is
+   thereby *pointed*: resolve orientation space first.
 
 **8.6 The gate — the quantum arithmetic of that space [credited]/[S].** The orientation space's quantum
 version is exactly solvable (`spin_channel_gate_check`, spin-1 pair algebra built from operators):
