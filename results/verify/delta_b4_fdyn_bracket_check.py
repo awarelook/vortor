@@ -46,7 +46,9 @@ computed here instead.
   WHAT THIS DOES AND DOES NOT DO. RIGOROUS & unconditional: f_dyn in (0,1] (<=1 exact; >0 by O_h allowedness).
   DEFENSIBLE & conditional: O(1), bracket [0.2,1.0], central ~0.5-0.8, via named methods -- but the precise value
   is g, the moduli-metric-weighted orientation overlap, which STAYS THE EXTERNAL near-BPS run (the strongest
-  in-env route to pin it is the Speight-metric homogeneity check, Stage G, not yet built). So "expected O(1) but
+  in-env route to tighten it, the Speight-metric homogeneity check, is now BUILT -- Stage G,
+  delta_b4_stageG_moduli_metric_check: the metric is HOMOGENEOUS, ratio 1.48, so metric concentration is
+  EXCLUDED as an f_dyn suppressor; the full relative-orientation VPDiff average stays external). So "expected O(1) but
   unproven" -> "rigorously in (0,1], O(1) with a cross-validated in-env bracket [0.2,1.0]; precise value external."
   No rate/COP/xsec/matrix-element is fabricated; every conditional (edge-universality, s>=0, the FC lambda-scale)
   is flagged at [S].

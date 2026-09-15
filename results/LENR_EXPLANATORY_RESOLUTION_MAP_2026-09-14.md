@@ -2,7 +2,7 @@
 
 **FTGB × the anomaly landscape — what the theory explains, predicts, and leaves open, tiered.**
 Author: Nathaniel Hanks · 2026-09-14 · a synthesis/index over already-committed, already-verified material
-(`verify_all.py` **90/90**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
+(`verify_all.py` **91/91**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
 tier or explicitly tagged `[S]`/open. Built and adversarially audited by a 24-agent workflow (novelty checked
 against Hagelstein / Preparata / Widom–Larsen / Storms / Takahashi / Kim; discipline pass certified the
 committed corpus clean of fabricated COP / rate / cross-section / branching).
@@ -239,6 +239,12 @@ kill conditions and a single computable unknown — not a claimed result.**
    amplitude** (exact algebra, tiered `[S]` under an edge-universality ansatz — an auditor demotion from `[V]`,
    folded). The precise value = `g` (moduli-metric orientation overlap) stays external; strongest next in-env
    move = the Stage-G Speight-metric homogeneity check. Density-proxy circularity of the high-side angles flagged.
+   **[STAGE G, same day (`delta_b4_stageG_moduli_metric_check`).]** That strongest next move, built: the
+   Speight/Arnold moduli-metric *weighting* (the one ingredient the proxies omit) is computed via the exact
+   Benamou–Brenier collective inertia `M(t)=∫b|∇φ|²` along the merger (pure-numpy elliptic solve, validated by
+   `∫b|∇φ|²=∫φ ∂_t b` to 1e-16, grid+ε-robust). **M(t) is HOMOGENEOUS** (shallow bowl, ratio 1.48, no
+   bottleneck) ⇒ **metric concentration EXCLUDED** as an f_dyn suppressor: f_dyn is set by geometric overlap ×
+   vibrational FC, not moduli-metric structure. Only the relative-orientation VPDiff average stays external.
    **[THE GATE, same day (`spin_channel_gate_check`).]** The quantum arithmetic of that orientation space:
    the s-wave door to ⁴He(0⁺) is the **singlet alone** — statistical gate `1/9` `[credited]` — and the gate
    is **steerable by coherent preparation**: a single-mode condensate pair `|1,m⟩⊗|1,m⟩` has singlet
