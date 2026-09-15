@@ -16,9 +16,12 @@ CI-gated, no network). Full map: [`INDEX.md`](INDEX.md) · terms: [`GLOSSARY.md`
 > topological invariants (Hopf `Q_H=1`, Chern `C=±2`), an exact **anapole** (nonradiating) form, and a
 > computed chirality/`C`/**Majorana** cluster. **Hypothesized `[S]` (to test):** *the object is the particle*
 > — mass = trapped oscillation (`m=ħω/c²`, de Broglie `v_g·v_p=c²` shown in software), and the **LENR active
-> site** is this object open-fed into a coherent nuclear-disposal channel. **Falsifiable now:** the comb
-> fingerprint, the kHz beat, a `0νββ` null, and He-4/heat at `24 MeV/⁴He`. **Never claimed:** α's value, exact
-> mass ratios, any nuclear *rate*, energy from nothing. Every claim carries a tier; every result has a script.
+> site** is this object providing slow coherence at *assembly* (γ-quiet disposal is the credited **E0**
+> collective channel, not the anapole; the one open problem is the entrance-channel **assembly geodesic** —
+> beat the measured `~10⁻⁷` baseline). **Falsifiable now:** the comb fingerprint (at the linear-drive limit),
+> the kHz beat, a `0νββ` null, He-4/heat at `24 MeV/⁴He`, and neutron-yield ∝ heat (the primary kill).
+> **Never claimed:** α's value, exact mass ratios, any nuclear *rate*, energy from nothing. Every claim
+> carries a tier; every result has a script.
 
 ---
 
@@ -55,13 +58,19 @@ Credited inputs used, not re-derived: Beltrami/CK [Chandrasekhar–Kendall 1957]
   oscillation (`m=ħω/c²`), spin-½ = Hopf topology, charge = integer winding, de Broglie wave = the beat
   envelope. The **software simulation** reproduces the kinematics: measured `v_g=c²k/ω`, rest-clock `=ω_c`,
   and `v_g·v_p=c²` (`engine/ftgb_resonator_sim.py`). The *math* is `[V]`; the *identification* is `[S]`.
-- **The LENR active site:** an **open-fed anapole dipole-balance resonance** holding charge/spin, channeling
-  a matched drive into a **coherent nuclear-disposal channel** for `d+d→⁴He`. Crux (computed, credited):
-  single-photon `0⁺→0⁺` is forbidden [Church–Weneser 1956], so aneutronic ⁴He heat **must** be collective —
-  exactly the coherence the anapole supplies. Mechanism `[S]`, energy `[V]`, **rate open** (the one item: an
-  on-shell B=4 Skyrme/⁴He\* matrix element, HPC-limited). Full doc:
-  [`results/LENR_ACTIVE_SITE_SYNTHESIS_2026-09-14.md`](results/LENR_ACTIVE_SITE_SYNTHESIS_2026-09-14.md);
-  computable core `lenr_disposal_channel_check`.
+- **The LENR active site:** an **open-fed anapole dipole-balance resonance** holding charge/spin — the
+  **active site** providing slow confinement/coherence at *assembly* (`[V]` object / `[S]` role). Crux
+  (computed, credited): single-photon `0⁺→0⁺` is E0-forbidden [Church–Weneser 1956] **and** the E1 radiative
+  channel is ΔT=0-forbidden (N=Z), so aneutronic ⁴He heat **must** shed **collectively** — the `0⁺→0⁺`
+  disposal *operator* is **E0 (monopole)**, *not* the anapole toroidal *dipole* (a forbidden 0→0 double-zero).
+  Energy `[V]`, disposal-requirement `[credited]`, mechanism `[S]`. **The one open problem has CONVERGED** (a
+  7-check disposal chain, each adversarially verified): it is **not** "one matrix element" (that framing was
+  refuted) and **not** the disposal — it is the **entrance-channel assembly geodesic**: can coherent slow
+  assembly raise the bound-⁴He fraction **above the measured ~10⁻⁷** aneutronic baseline (steer the B=4/B=8
+  Skyrme trajectory to the compact bound ⁴He)? — the moduli-space/HPC run, `≥3` open objects. See the tiered
+  [`results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`](results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md)
+  (disposal chain: `disposal_e0_pair_fork` / `disposal_nonpopulation` / `disposal_coherence_volume_nogo` / …);
+  earlier synthesis `lenr_disposal_channel_check`, `results/LENR_ACTIVE_SITE_SYNTHESIS_2026-09-14.md`.
 
 **Settled-negatives kept as wins:** α's value from winding (`ι≈1`, not 137); direct phonon-nuclear coupling
 (dead by `~66` orders); phase conjugation / ponderomotive as *rate* levers; monopole catalysis (`π₃≠π₂`);
@@ -90,14 +99,20 @@ null].
 
 ## 5. Predict / test / falsify
 
-1. **Comb fingerprint** — a driven plasmoid rings at `1 : 1.72 : 2.43`; a *harmonic* `1:2:3` comb falsifies it.
-2. **kHz beat + detuning** — near-equal beats with a small second-order detuning (coil + FFT).
-3. **He-4/heat = 24 MeV/⁴He** [Miles] — a large deviation kills the `d+d→⁴He` reading.
-4. **Neutron yield ∝ heat** — would kill the aneutronic (E0-suppressed) channel.
-5. **`0νββ` null** [KamLAND-Zen / LEGEND] — kills the Majorana-neutrino prediction.
-6. **Beat-locked yield steps** as drive sweeps the cascade `f_b(L)=N^L f_b(0)` — the sharpest
-   theory-specific discriminator (no static LENR model predicts it).
-7. **FWM sidebands** at `1.517 f₁`, `1.820 f₁` — decide the phase-conjugation role.
+1. **Comb fingerprint** — a driven plasmoid rings at `1 : 1.72 : 2.43` **in the linear/low-drive limit**; a
+   *harmonic* `1:2:3` comb falsifies it. (M16: under hard drive the ratios pull anharmonically — the Duffing
+   backbone bend, separable from the Arnold-tongue lock — so the fingerprint is a *linear-limit* statement.)
+2. **kHz beat + detuning** — near-equal beats with a small second-order detuning (coil + FFT). (The kHz beat
+   is a macroscopic rate-*gate*, **never** a pump of the MeV channel — settled-negative, M16.)
+3. **Neutron yield ∝ heat** — **the primary, band-independent kill** of the aneutronic channel.
+4. **He-4/heat = 24 MeV/⁴He** [Miles] — a large deviation kills the `d+d→⁴He` reading.
+5. **~20 MeV e⁺e⁻ / 511 keV** — the E0 internal-pair *secondary* discriminator: if a localized hot ⁴He\* 0⁺
+   compound forms it would appear; its non-observation is weak evidence for the entrance-assembly (b2) premise.
+6. **`0νββ` null** [KamLAND-Zen / LEGEND] — kills the Majorana-neutrino prediction.
+7. **Beat-locked yield steps** as drive sweeps the cascade `f_b(L)=N^L f_b(0)` — the sharpest theory-specific
+   discriminator (no static LENR model predicts it; the one existing dataset, HLC 2010, fits neither N^L nor
+   CK — but it is a Pd-D lattice, the wrong object).
+8. **FWM sidebands** at `1.517 f₁`, `1.820 f₁` — decide the phase-conjugation role.
 
 ## 6. Reproduce & trust
 

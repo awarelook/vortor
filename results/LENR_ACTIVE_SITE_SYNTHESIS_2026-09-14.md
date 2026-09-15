@@ -40,9 +40,13 @@ thermal). The mechanism's job is to make that collective sink real.
 
 - **The anapole does NOT hide a nuclear γ.** A 24 MeV photon has near-field radius `ℏc/E ≈ 8 fm` — *inside*
   the nucleus; it is deep far-field for any atomic-scale loop. The anapole explains the *plasmoid's own* EM
-  quietness `[V]`, and supplies coherence, but "radiationless" here means **non-population of the hot 2-body
-  compound** (a collective `4d→2α` exit, Takahashi TSC-class) + internal-conversion-style non-radiation —
-  *not* γ-suppression (TEST 6). This is the single most important thing to get right.
+  quietness `[V]`, and supplies the **active-site** coherence, but "radiationless" here means **non-population
+  of the hot compound** + collective disposal — *not* γ-suppression (TEST 6). **[UPDATED by the later disposal
+  chain]:** the γ-quiet `0⁺→0⁺` disposal *operator* is **E0** (the toroidal *dipole*/anapole is a forbidden
+  0→0 double-zero, so the anapole is the active site, not the operator); and the **`4d→2α` exit is now
+  (α,n)-EXCLUDED** (`aneutronic_disposal_fork_check`: its two 23.85 MeV alphas make secondary neutrons ~3–8
+  OOM *above* the observed dearth) — the surviving branch is **d+d→⁴He soft-collective**, with "non-population"
+  meaning non-population of the *localized hot ⁴He\* 0⁺ compound* (`disposal_nonpopulation_check`).
 - **Ponderomotive transport (Gaponov–Miller 1958 `[credited]`) is real but doubly walled:** `F_p∝1/m` so it
   acts on electrons `~3600×` more than deuterons (any ion effect is electron-mediated/ambipolar); and it is
   a *slow* lever — even the fast whirl clock (`~1.4e-17 s`) is `~5800×` slower than the compound breakup
@@ -62,11 +66,16 @@ thermal). The mechanism's job is to make that collective sink real.
 A real (**on-shell**) `N`-step down-conversion cascade beats the single 24 MeV jump by orders (`η^N`); a
 **virtual** (off-resonant) cascade is provably **invariant under subdivision** (energy-ratios telescope to
 the same suppression for any `N` — no free lunch). Real modes tile the ladder densely below `~keV`
-(phonon/plasmon/internal-conversion) but sparsely across the hard `MeV→keV` segment. **So the entire open
-question reduces to one matrix element:** does an on-shell collective mode with nonzero coupling to the
-`d+d→⁴He` transition exist on that hard segment? That is the **B=4 Skyrme/⁴He\* vibrational overlap**
-(`handoffs/HANDOFF_DELTA_B4_SKYRME_RELAXATION`) — HPC-limited, not closable in-environment, **not
-fabricated**.
+(phonon/plasmon/internal-conversion) but sparsely across the hard `MeV→keV` segment. The TEST-7
+subdivision-invariance result stands. **[UPDATED by the later disposal chain — the "one matrix element"
+framing below was REFUTED (a 4-agent verification found it manufactured on a false premise / literature
+typo).]** The honest open item is **not** one overlap magnitude: it is the **entrance-channel assembly
+geodesic** — can coherent slow assembly raise the bound-⁴He fraction *above* the **measured ~10⁻⁷** aneutronic
+baseline (E1/isospin-forbidden), steering the B=4/B=8 Skyrme trajectory to the compact bound ⁴He? — `≥3` open
+objects (on-shell mode existence; per-rung overlap; branching vs the *calculable* E0-pair/strong rates), and
+collective enhancement is O(1) at the hard 24 MeV rung (`disposal_coherence_volume_nogo_check`). Current-true:
+[`LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`](LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md) §6.2. The B=4
+Skyrme overlap remains HPC-limited, **not fabricated**.
 
 ## A distinct credited precedent, and a baryon-conserving transmutation trigger
 
