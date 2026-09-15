@@ -24,8 +24,10 @@ be driven); computed topology, chirality, charge-conjugation and Majorana struct
 on S³; and a conserved nuclear energy ledger. Twelve computed refutations are retained as results. The one
 open nuclear problem is converged — by a chain of adversarially verified computations — to a single geometric
 question, the **entrance-channel assembly corridor**, carrying two data bars, a derived constraint on the
-crossing (`β·|dF| ≤ 0.874 MeV/fm`), a computed localization of its selectivity to spin/orientation space, and
-a new experimentally accessible falsifier: **polarization-steered aneutronic yield**. The theory proves no
+crossing (`β·|dF| ≤ 0.874 MeV/fm`, under the structural hypothesis that d+d→⁴He-vs-breakup is an adiabatic
+Landau–Zener crossing), a computed *exclusion* of density geometry as the source of that selectivity (leaving
+orientation/phase structure, the moduli metric, and the boundary physics as the live candidates), and a new
+experimentally accessible falsifier: **polarization-steered aneutronic yield**. The theory proves no
 LENR, derives no COP, demonstrates no new nuclear mechanism, and fabricates no number: its contribution is
 the conversion of a scattered anomaly landscape into one tiered, falsifiable, reproducible program.
 
@@ -381,10 +383,10 @@ force the shape of any surviving mechanism (`entrance_corridor_survival_check`):
    sits *above* the lowest breakup threshold (p+t, 19.815 MeV). Below breakup there is no rung to pause on;
    energy shedding must ride the moving assembly trajectory continuously.
 2. **There is no slow lane above threshold.** Any dwell in the continuum above p+t decays at Γ ~ 0.5 MeV:
-   half-life `≈ 9×10⁻²² s`. A picosecond of "slow assembly" up there survives as `e^{−760}`. Slowness exists
+   half-life `≈ 9×10⁻²² s`. An attosecond of "slow assembly" up there survives as `e^{−760}` (a picosecond, `e^{−7.6×10⁸}`). Slowness exists
    only *below* threshold.
 
-Therefore the **only** aneutronic route is a **dissipative sub-breakup corridor**: the assembly must shed
+Therefore the **only γ-quiet, collective-disposal aneutronic route** is a **dissipative sub-breakup corridor** (the measured ~10⁻⁷ radiative branch is itself aneutronic but is not this route): the assembly must shed
 the full 23.85 MeV *while it happens* — never pausing (no rungs), never crossing p+t (no survival). The
 question "does that corridor exist on the fitted near-BPS energy surface?" *is* the open problem — one
 geometric question where there had been a fog, and decidable either way (corridor excluded → the aneutronic
@@ -400,8 +402,11 @@ dearth `n/⁴He ≤ 10⁻⁹`, which in the Landau–Zener bridge means `Γ_LZ �
 β·|dF|  ≤  2π (23.85 MeV)² / (ħc · ln 10⁹)  =  0.874 MeV/fm
 ```
 
-— *the data forces the crossing into the slow/soft corner*, independently converging with the corridor's
-own slowness requirement (`delta_b4_landau_zener_bridge_check` TEST 2b). The bridge also makes any future
+— *the data forces the crossing into the slow/soft corner* (a conditional result: it presumes the `[S]`
+identification of d+d→⁴He-vs-breakup **as** an adiabatic Landau–Zener crossing, which is an FTGB hypothesis,
+not established nuclear physics — the measured ~10⁻⁷ suppression is standardly the E1/isospin-forbidden
+radiative channel), independently converging with the corridor's own slowness requirement
+(`delta_b4_landau_zener_bridge_check` TEST 2b). The bridge also makes any future
 Δ testable in both directions (forward: Δ → ⁴He/neutron ratio; inverse: measured ratio → effective Δ).
 
 **8.5 Stage D — where the smallness cannot come from [V]-arith.** In the near-BPS Skyrme model the BPS
@@ -411,17 +416,17 @@ compactons (`cos(ξ/2) = r/R`, derived and machine-validated in-check). Executin
 results (`delta_b4_stageD_bps_overlap_check`):
 
 1. *A scoping correction (the audit audited):* the first-order **L₂ energy log-diverges at the compacton
-   boundary** (cutoff increments exactly `2·ln10` per decade) while the L₄ energy is finite (11.886,
+   boundary** (cutoff increments ≈ `2·ln10` per decade (the analytic log-divergence slope)) while the L₄ energy is finite (11.886,
    compacton units) — only the quartic piece is plain quadrature; the quadratic piece needs a
    boundary-layer-regularized scheme. The earlier "pure quadrature" scoping was corrected in print.
 2. *A proxy bracket:* the density-geometry Franck–Condon overlap of the B=4 ball with the 2×B=2 dumbbell is
    **[0.55, 0.96]** across every crossing geometry (Cauchy–Schwarz-normalized, grid-converged).
 3. *A structural constraint (the payoff):* the target regime needs `ρ_eff ~ 0.07`, and density-support
    geometry **cannot** produce it (floor 0.55). The suppression — if the aneutronic reading is right —
-   must therefore live in **what the density proxy omits**: the relative orientation / Finkelstein–Rubinstein
-   phase structure of the crossing, the moduli-space metric, and the regularized-boundary (L₂) physics — of
-   which the orientation/phase structure is the dominant, gate-facing factor (§8.6). The external run is
-   thereby *pointed*: resolve orientation space first.
+   must therefore live in **what the density proxy omits** — three co-equal candidates the check does not
+   rank: the relative orientation / Finkelstein–Rubinstein phase structure of the crossing, the moduli-space
+   metric, and the regularized-boundary (L₂) physics. Of these, the orientation/phase structure is the one the
+   spin gate (§8.6) next makes computable, so the external run is *pointed*: resolve orientation space first.
 
 **8.6 The gate — the quantum arithmetic of that space [credited]/[S].** The orientation space's quantum
 version is exactly solvable (`spin_channel_gate_check`, spin-1 pair algebra built from operators):
@@ -545,8 +550,8 @@ Battye & Sutcliffe, PRL **79**, 363 (1997) · Barnes, Baskerville & Turok, PRL *
 normal modes; attribution verified against the original] · Houghton, Manton & Sutcliffe, NPB **510**, 507
 (1998).
 
-**Near-BPS and nuclear.** Adam, Sánchez-Guillén & Wereszczyński, PRL **105**, 232001 (2010) · Adam, Naya,
-Sánchez-Guillén & Wereszczyński, PRL **111**, 232501 (2013) · Speight, J. Geom. Phys. (2014) · Church &
+**Near-BPS and nuclear.** Adam, Sánchez-Guillén & Wereszczyński, Phys. Lett. B **691**, 105 (2010) [arXiv:1001.4544] · Adam, Naya,
+Sánchez-Guillén & Wereszczyński, PRL **111**, 232501 (2013) · Speight, J. Geom. Phys. **92**, 30 (2015) [arXiv:1406.0966] · Church &
 Weneser, Phys. Rev. **103**, 1035 (1956) · Wilkinson & Cecil, PRC **31**, 2036 (1985) · Tilley, Weller &
 Hale, NPA **541**, 1 (1992) [A=4 evaluation] · AME2020: Wang et al., Chin. Phys. C **45**, 030003 (2021) ·
 Kulsrud, Furth, Valeo & Goldhaber, PRL **49**, 1248 (1982) · Landau (1932); Zener (1932).

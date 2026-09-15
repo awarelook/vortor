@@ -33,7 +33,7 @@ near-BPS parameters + the moduli-space matrix element -- a real calculation, but
 full-field HPC relaxation). No Delta value is fabricated. Full roadmap of candidate routes:
 DELTA_BREAKTHROUGH_CONFIGURATIONS_2026-09-14.md.
 
-Refs: Adam, Sanchez-Guillen & Wereszczynski (2010), PRL 105, 232001 (BPS Skyrme integrability);
+Refs: Adam, Sanchez-Guillen & Wereszczynski (2010), Phys. Lett. B 691, 105 [arXiv:1001.4544] (BPS Skyrme integrability);
 Speight (2014), J. Geom. Phys. (BPS moduli / compactons); Gudnason & Halcrow (2020) (near-BPS spectra).
 numpy only, deterministic. Run: python results/verify/delta_bps_perturbative_structure_check.py
 """

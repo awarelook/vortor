@@ -1,7 +1,7 @@
 {
   "model": "the spin/orientation gate: the singlet-only s-wave door and its coherent steering",
-  "tier": "[credited]",
-  "tier_meaning": "established textbook physics we build on",
+  "tier": "[S]",
+  "tier_meaning": "structural hypothesis -- falsifiable, NOT proven",
   "verify_scripts": [
     "spin_channel_gate_check.py",
     "delta_b4_stageD_bps_overlap_check.py"

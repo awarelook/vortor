@@ -3,7 +3,7 @@
 **Author:** Nathaniel Hanks · **Date:** 2026-09-14 · **Provenance:** a six-dimension jewel audit
 (completeness / coherence / derivation depth / explanation quality / sourcing / theoretical advancement),
 each dimension run as an independent adversarial pass, findings verified line-by-line against the files,
-then folded. Harness after the fold: `verify_all.py` → **84/84** (82nd: the torus_project_repo expedition; 83rd: Stage D, both 2026-09-15).
+then folded. Harness after the fold: `verify_all.py` → **84/84** (82nd: the torus expedition; 83rd: Stage D; 84th: the spin gate — all 2026-09-15).
 
 This document does three things: (1) states the **real working theory** — what the jewel actually is when
 every claim is held at its earned tier; (2) records the **audit outcome** including the forgotten-batch
@@ -83,7 +83,7 @@ is nothing.
 
 ## 3. The forgotten batch — captured, retagged, or backlogged
 
-**Captured (new/extended checks, 78 → 81; → 83 on 09-15):**
+**Captured (new/extended checks, 78 → 81 on 09-14; → 84 on 09-15 — beat-tunneling 82nd, Stage D 83rd, the spin gate 84th):**
 - `multibody_sync_capture_check.py` — the Grand Synthesis Part-D orphan `[V]`s recomputed: Kuramoto N=800
   Lorentzian onset **P = 1.20** (the synthesis's quoted ~1.2 reproduced), r(2K_c) = 0.69 (mean-field 0.71);
   Aizawa **λ_max = 0.094 > 0** (Benettin; literature band 0.10–0.124).

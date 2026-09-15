@@ -41,7 +41,7 @@ scoping claim (the discipline is symmetric: the audit gets audited).
   configurations are unrelaxed analytic compactons; no relative-orientation average is performed. The
   external near-BPS run remains the production number.
 
-Refs: Adam, Sanchez-Guillen & Wereszczynski (2010), PRL 105, 232001; Adam-Naya-Sanchez-Guillen-Wereszczynski
+Refs: Adam, Sanchez-Guillen & Wereszczynski (2010), Phys. Lett. B 691, 105 [arXiv:1001.4544]; Adam-Naya-Sanchez-Guillen-Wereszczynski
 (2013), PRL 111, 232501; Speight (2014). numpy only, deterministic.
 Run: python results/verify/delta_b4_stageD_bps_overlap_check.py
 """

@@ -28,7 +28,7 @@ computed reason: the reduced model cannot resolve a ~1%-of-release gap when its 
 ~9x. That IS the deliverable the plan promised (a bracket + the named systematic + the precise handoff).
 
 Refs: Adkins, Nappi & Witten (1983), Nucl. Phys. B228, 552 (calibration + overbinding); Houghton, Manton &
-Sutcliffe (1998), NPB510, 507; Adam, Sanchez-Guillen & Wereszczynski (2010), PRL 105, 232001 (BPS Skyrme,
+Sutcliffe (1998), NPB510, 507; Adam, Sanchez-Guillen & Wereszczynski (2010), Phys. Lett. B 691, 105 [arXiv:1001.4544] (BPS Skyrme,
 resolves overbinding). numpy only, deterministic. Run: python results/verify/delta_b4_stageB_endpoints_check.py
 """
 import numpy as np

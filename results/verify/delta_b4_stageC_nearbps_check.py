@@ -27,7 +27,7 @@ Wereszczynski 2010) places the physical binding exactly where it belongs.
             program's honest end: the reduced-CPU route is complete and the path is proven; the production
             number is handed off to a specific, credible model + run. No Delta value fabricated.
 
-Refs: Adam, Sanchez-Guillen & Wereszczynski (2010), PRL 105, 232001 (BPS Skyrme); Adam, Naya, Sanchez-Guillen,
+Refs: Adam, Sanchez-Guillen & Wereszczynski (2010), Phys. Lett. B 691, 105 [arXiv:1001.4544] (BPS Skyrme); Adam, Naya, Sanchez-Guillen,
 Wereszczynski (2013), PRL 111, 232501 / PRC 88, 054313 (near-BPS nuclear binding energies ~1%); Adkins-Nappi-
 Witten (1983), NPB228, 552 (standard-Skyrme overbinding). numpy only, deterministic.
 Run: python results/verify/delta_b4_stageC_nearbps_check.py

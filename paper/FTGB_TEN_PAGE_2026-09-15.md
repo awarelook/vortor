@@ -32,7 +32,7 @@ much it has earned, and every labeled claim can be re-run by a stranger with one
 
 Claims are tiered **[V]** / **[credited]** / **[S]** / **[flag]** / **settled-negative**, and the tier travels
 with the claim into every document, interactive, and rendered figure. Three practices distinguish the project:
-(i) **settled-negatives are wins** — a computed refutation is kept, cited, and celebrated (twelve of them below);
+(i) **settled-negatives are wins** — a computed refutation is kept, cited, and celebrated (a dozen — fully enumerated in the 25-page paper §9);
 (ii) **coincidences are computed and logged, never promoted** (`results/COINCIDENCE_LEDGER.md`); (iii) **the
 discipline is symmetric** — under-claiming is policed as hard as over-claiming, and this week's record includes
 corrections in both directions, including two of the project's own audit findings refuted by computation.
@@ -112,19 +112,22 @@ between `J=0` states.
 
 **The corridor (the sharpened open problem).** ⁴He has **no bound excited states** (first excited 0⁺₂ at
 20.21 MeV sits *above* the p+t threshold at 19.815), so no state-ladder exists below breakup; and any dwell
-*above* threshold dies in `t_½ ≈ 9×10⁻²² s`. Therefore the only aneutronic route is a **dissipative
+*above* threshold dies in `t_½ ≈ 9×10⁻²² s`. Therefore the only γ-quiet, collective-disposal aneutronic route is a **dissipative
 sub-breakup corridor**: the assembly must shed the full 23.85 MeV *while it happens*, never pausing, never
 crossing p+t (`entrance_corridor_survival_check`). Two data bars travel with it — *existence*: beat the
 measured `1e-7`; *sufficiency*: the observed dearth `n/⁴He ≤ 1e-9`, which is `Δ_suff = 5.47×` the dominance
 threshold and, with the Cauchy–Schwarz ceiling `Δ = 23.85 MeV × ρ_eff ≤ 23.85 MeV`, **derives a constraint**:
-`β·|dF| ≤ 0.874 MeV/fm` — *the data itself forces the crossing into the slow/soft corner*.
+`β·|dF| ≤ 0.874 MeV/fm` — *the data itself forces the crossing into the slow/soft corner* (conditional on the
+`[S]` identification of d+d→⁴He-vs-breakup as an adiabatic Landau–Zener crossing — an FTGB hypothesis, not
+established nuclear physics).
 
 **Stage D (where the smallness cannot come from).** On the analytic BPS compacton (`cos(ξ/2) = r/R`;
 Adam–Sánchez-Guillén–Wereszczyński 2010), first-order perturbation theory is *half*-tractable — the L₂ piece
 log-diverges at the compacton boundary (computed; a known near-BPS subtlety), the L₄ piece is finite — and the
 density-geometry overlap of the B=4 ball with the 2×B=2 dumbbell is **[0.55, 0.96]** at every crossing
 geometry. Since the target regime needs `ρ_eff ~ 0.07`, **density geometry cannot supply the suppression: it
-must live in orientation/phase space** (`delta_b4_stageD_bps_overlap_check`).
+must live in what the density proxy omits — orientation/phase structure, the moduli metric, and the
+regularized L₂-boundary physics** (`delta_b4_stageD_bps_overlap_check`).
 
 **The gate (the quantum arithmetic of that space).** The s-wave door to ⁴He(0⁺) is the **spin singlet alone**
 — 1 of 9 d+d spin states (statistical gate 1/9). And the gate is **steerable**: a deuteron pair drawn from a
@@ -183,7 +186,7 @@ Chandrasekhar & Kendall, ApJ **126**, 457 (1957) · Woltjer, PNAS **44**, 489 (1
 322 (1927) · Finkelstein & Rubinstein, JMP **9**, 1762 (1968) · Wilczek & Zee, PRL **51**, 2250 (1983) ·
 Etnyre & Ghrist, Nonlinearity **13**, 441 (2000) · Church & Weneser, Phys. Rev. **103**, 1035 (1956) ·
 Wilkinson & Cecil, PRC **31**, 2036 (1985) · Barnes, Baskerville & Turok, PRL **79**, 367 (1997) ·
-Adam, Sánchez-Guillén & Wereszczyński, PRL **105**, 232001 (2010) · Adam–Naya–Sánchez-Guillén–Wereszczyński,
+Adam, Sánchez-Guillén & Wereszczyński, Phys. Lett. B **691**, 105 (2010) [arXiv:1001.4544] · Adam–Naya–Sánchez-Guillén–Wereszczyński,
 PRL **111**, 232501 (2013) · Kulsrud, Furth, Valeo & Goldhaber, PRL **49**, 1248 (1982) · Miles et al.
 (He/heat correlation, as measurement) · full tiered bibliography: `REFERENCES.md`.
 

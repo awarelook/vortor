@@ -99,7 +99,9 @@ class SpinGateScene:
     def metadata(self):
         return make_metadata(
             model="the spin/orientation gate: the singlet-only s-wave door and its coherent steering",
-            tier="[credited]",
+            tier="[S]",   # the CG fractions are [credited] arithmetic, but the poster's load-bearing claim is
+                          # the [S] STEERING mechanism (+ the [flag] consistency) -- tag to the frontier tier,
+                          # never present [S]/[flag] content under a bare [credited] banner (verify link carries the arithmetic)
             verify_scripts=["spin_channel_gate_check.py", "delta_b4_stageD_bps_overlap_check.py"],
             equations=["s-wave door to 4He(0+) = the SINGLET alone: 1 of 9 spin states",
                        "condensate pair |1,m>x|1,m>: singlet fraction = 1/3 (m=0), 0 exactly (m=+-1)",
