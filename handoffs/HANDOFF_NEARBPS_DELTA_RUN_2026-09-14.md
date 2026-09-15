@@ -67,3 +67,21 @@ small perturbation:
 **Bottom line:** the LENR rate is reduced to one dimensionless number, ρ_eff, from this one specified run — a
 data-anchored scale × one bounded factor, and falsifiable either way. Executing the run (or measuring the
 ⁴He/neutron ratio, which the LZ bridge makes decisive) is the honest next step; nothing here is fabricated.
+
+---
+
+## Amendment (2026-09-15, Stage D executed in-repo)
+
+`results/verify/delta_b4_stageD_bps_overlap_check.py` ran the first-order route on the analytic ASW
+compactons and CORRECTS this handoff's scope in two ways:
+
+1. **Do not plan the first-order evaluation as plain quadrature.** On the exact compacton the L_2
+   first-order energy log-diverges at the compacton boundary (computed: 2*ln10 per cutoff decade); only
+   the L_4 piece is finite (11.886, compacton units). The c_2 piece needs a boundary-layer-regularized
+   scheme (known near-BPS subtlety) — budget for it.
+2. **Resolve orientation space first.** The density-geometry Franck-Condon factor is [0.55, 0.96] at every
+   crossing geometry (CS-normalized, grid-converged) — density-support geometry cannot produce the target
+   rho_eff ~ 0.07. If the aneutronic reading is right, the suppression lives in the relative
+   orientation / Finkelstein-Rubinstein phase structure of the crossing (+ moduli metric). The
+   highest-value first deliverable of the external run is therefore the ORIENTATION-resolved crossing
+   overlap, not the radial profile refinement.

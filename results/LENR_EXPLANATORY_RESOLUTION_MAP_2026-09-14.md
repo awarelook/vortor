@@ -2,7 +2,7 @@
 
 **FTGB × the anomaly landscape — what the theory explains, predicts, and leaves open, tiered.**
 Author: Nathaniel Hanks · 2026-09-14 · a synthesis/index over already-committed, already-verified material
-(`verify_all.py` **82/82**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
+(`verify_all.py` **83/83**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
 tier or explicitly tagged `[S]`/open. Built and adversarially audited by a 24-agent workflow (novelty checked
 against Hagelstein / Preparata / Widom–Larsen / Storms / Takahashi / Kim; discipline pass certified the
 committed corpus clean of fabricated COP / rate / cross-section / branching).
@@ -208,6 +208,14 @@ kill conditions and a single computable unknown — not a claimed result.**
    near-BPS B=4 adiabatic surface = the `ρ_eff` run — unchanged in difficulty, but now one named geometric
    question with two computable bars, and a win either way (corridor excluded → the aneutronic reading falls,
    a decisive settled-negative).
+   **[STAGE D, 2026-09-15 (`delta_b4_stageD_bps_overlap_check`).]** First-order structure computed on the
+   *analytic* ASW BPS compactons: (i) the "pure-quadrature" scoping was **half-wrong** — the L₂ first-order
+   piece **log-diverges** at the compacton boundary (only the L₄ piece is quadrature; the c₂ piece needs
+   boundary-layer regularization); (ii) the density-geometry Franck–Condon factor is **[0.55, 0.96]** at
+   every crossing geometry — so **ρ_eff ~ 0.07 cannot originate in density-support geometry**: the
+   suppression, if real, lives in the **relative orientation / Finkelstein–Rubinstein phase structure** of
+   the crossing (+ the moduli metric + the regularized boundary). The external run should resolve the
+   orientation-space structure of the crossing *first* — the open problem is now pointed, not just named.
 3. **The lab confrontations that would decide it** — none of which have the required diagnostics in the
    current candidate-system record: neutron-yield-vs-heat (the band-independent kill); `He-4/heat = 24 MeV/⁴He`
    to `<×2` with the ×5 scatter beaten down; an inharmonic CK triplet vs harmonic; geometric `N^L` yield

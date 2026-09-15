@@ -3,7 +3,7 @@
 **Author:** Nathaniel Hanks · **Date:** 2026-09-14 · **Provenance:** a six-dimension jewel audit
 (completeness / coherence / derivation depth / explanation quality / sourcing / theoretical advancement),
 each dimension run as an independent adversarial pass, findings verified line-by-line against the files,
-then folded. Harness after the fold: `verify_all.py` → **82/82** (the 82nd added 2026-09-15 by the torus_project_repo expedition).
+then folded. Harness after the fold: `verify_all.py` → **83/83** (82nd: the torus_project_repo expedition; 83rd: Stage D, both 2026-09-15).
 
 This document does three things: (1) states the **real working theory** — what the jewel actually is when
 every claim is held at its earned tier; (2) records the **audit outcome** including the forgotten-batch
@@ -83,7 +83,7 @@ is nothing.
 
 ## 3. The forgotten batch — captured, retagged, or backlogged
 
-**Captured (new/extended checks, 78 → 81; → 82 on 09-15):**
+**Captured (new/extended checks, 78 → 81; → 83 on 09-15):**
 - `multibody_sync_capture_check.py` — the Grand Synthesis Part-D orphan `[V]`s recomputed: Kuramoto N=800
   Lorentzian onset **P = 1.20** (the synthesis's quoted ~1.2 reproduced), r(2K_c) = 0.69 (mean-field 0.71);
   Aizawa **λ_max = 0.094 > 0** (Benettin; literature band 0.10–0.124).
@@ -99,11 +99,17 @@ the Madelung continuity residual `~5e-16`; the full O_h gerade/parity settlement
 grid-convergent `H = 0.088` of the actual CK object.
 
 **The capture backlog, ranked by leverage (all tier-B feasible except where noted):**
-1. **StageD BPS first-order ρ_eff bracket** — `delta_bps_perturbative_structure_check` already shows Δ is
-   a FIRST-order matrix element on the *analytically-known* BPS moduli space; strict first-order evaluates
-   `L₂+L₄` on unperturbed Speight compactons — quadrature, not HPC. A computed ρ_eff *sub-interval* (with
-   an ansatz-systematic band) is the single highest-leverage in-env move. (The HPC run stays the
-   production number; this brackets it.)
+1. **StageD BPS first-order ρ_eff bracket** — ~~"quadrature, not HPC"~~ **EXECUTED 2026-09-15
+   (`delta_b4_stageD_bps_overlap_check.py`) and the scoping was itself half-wrong (the audit got
+   audited):** on the exact ASW compacton the first-order **L₂ energy log-diverges at the compacton
+   boundary** (increments = 2·ln10 per decade, computed) while **L₄ is finite** (11.886, compacton
+   units) — so only the `c₄` piece is quadrature; the `c₂` piece needs boundary-layer regularization
+   (research-grade). What WAS computed: the **density-geometry proxy bracket [0.55, 0.96]**
+   (Cauchy–Schwarz-normalized Franck–Condon overlap of the B4 ball vs 2×B2 dumbbell at three crossing
+   geometries, grid-converged) — which yields a **new structural constraint**: density-support geometry
+   CANNOT supply the needed ρ_eff ~ 0.07; the smallness, if real, must originate in the
+   **orientation / Finkelstein–Rubinstein phase structure** of the crossing (+ moduli metric + the
+   regularized boundary). The external run should resolve the orientation-space structure *first*.
 2. **CK overlap integrals** (`V_111`, `⟨D⟩`) — converts the comb-pull falsifier coefficient to in-repo `[V]`.
 3. **EMF junction derivation** `V = ω_b·ΔΦ` vs LEC's 525 mV — needs one declared junction-geometry model
    (a new `[S]` choice), then is a ~50-line EM computation; currently an `[S]` order-of-magnitude.
@@ -176,7 +182,7 @@ currently with ZERO experimental convergence, live targets). The kHz beat is a *
 
 ## 6. Reproduce & falsify
 
-`pip install -r requirements.txt && python results/verify/verify_all.py` → **82/82**, deterministic, no
+`pip install -r requirements.txt && python results/verify/verify_all.py` → **83/83**, deterministic, no
 network, CI-gated. The falsifier set: `FTGB_MINIMUM_VIABLE_PAPER.md` §5 (comb linear-limit; neutron∝heat
 primary; E0-pair secondary; `N^L` beat-lock; 0νββ; the parameter-free scalars). The tier ledger:
 `results/TIER_LEDGER.md`. The LENR map: `results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`.

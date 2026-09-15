@@ -4,7 +4,7 @@ This repo is set up to be a **fixed, citable, self-verifying artifact**. Cutting
 moving repo into a permanent, DOI-addressable snapshot.
 
 ## What is already in place
-- **CI reproducibility gate** — `.github/workflows/verify.yml` runs `verify_all.py` (currently 82/82;
+- **CI reproducibility gate** — `.github/workflows/verify.yml` runs `verify_all.py` (currently 83/83;
   58/58 at the v1.1.0 tag) on every push; the green badge is public proof the model reproduces from
   scratch on a clean machine.
 - **Self-contained foundation** — provenance scripts + citation stores vendored under `frontier_calcs/`;

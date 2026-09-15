@@ -203,5 +203,5 @@ engineering) · **Kantrowitz** (first fusion attempt 1938; laser propulsion 1972
 ---
 
 *Everything here is history and provenance — no entry is load-bearing for the theory. The load-bearing
-content lives in the verify harness (82/82) and the tiered docs. Salvage pass: 2026-09-13; sources: the Arc
+content lives in the verify harness (83/83) and the tiered docs. Salvage pass: 2026-09-13; sources: the Arc
 vault science track (read-only) + `ckfreefem/11_verified_ark` + the vendored citation stores.*
