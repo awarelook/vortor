@@ -2,16 +2,19 @@
 
 [![verify](https://github.com/awarelook/vortor/actions/workflows/verify.yml/badge.svg)](https://github.com/awarelook/vortor/actions/workflows/verify.yml)
 
-One driven, force-free **Beltrami–Hopf toroidal soliton**, read at once as a *field* and a *matter wave*.
-Every claim carries an **honest tier**, and the whole model reproduces from one command. This page routes you
-by what you want, and — most importantly — shows you exactly **what is settled vs what is frontier**, because
-the honest boundary is this project's most valuable feature.
+One driven, force-free **Beltrami–Hopf toroidal soliton**, read at once as a *field* and a *matter wave* — and
+from it, a verified core: coherence *is* regularity, a self-sustaining attractor, a computed particle-structure,
+and a scattered nuclear-anomaly landscape converted into one testable program. **The result first:
+[`FTGB_WHAT_WORKS.md`](FTGB_WHAT_WORKS.md).** Every claim carries an **honest tier** and reproduces from one
+command (86/86), and this page also maps exactly **what is settled vs what is frontier** — that honest boundary
+is kept, and it is a strength, but the accomplishments lead.
 
 ## Route by intent
 
 | I want to… | Go to |
 |---|---|
-| **Reproduce it from scratch** (85 checks, no network) | `pip install -r requirements.txt && python results/verify/verify_all.py` → exit 0. Map: [`results/verify/README.md`](results/verify/README.md). CI runs this on every push (badge above). **Full run-access for *every* derivation (incl. scipy/sympy provenance, FreeFEM torus eigensolves, HPC handoffs, doc build): [`REPRODUCE.md`](REPRODUCE.md).** |
+| **See what the theory solves and explains** (start here — the positive core, confident and concise) | [`FTGB_WHAT_WORKS.md`](FTGB_WHAT_WORKS.md) |
+| **Reproduce it from scratch** (86 checks, no network) | `pip install -r requirements.txt && python results/verify/verify_all.py` → exit 0. Map: [`results/verify/README.md`](results/verify/README.md). CI runs this on every push (badge above). **Full run-access for *every* derivation (incl. scipy/sympy provenance, FreeFEM torus eigensolves, HPC handoffs, doc build): [`REPRODUCE.md`](REPRODUCE.md).** |
 | **Read the whole theory in one page** | [`FTGB_MINIMUM_VIABLE_PAPER.md`](FTGB_MINIMUM_VIABLE_PAPER.md) — the capstone: apex summary + proven core + hypothesis-to-test + LENR significance + falsifiers, tight and citable. |
 | **See what FTGB explains vs leaves open across the LENR anomaly landscape** | [`results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`](results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md) — the tiered map (heat-helium, branching, transmutation, SAFIRE/EVO/Aureon), convergence ranking, novelty audit, and the disposal chain converging the one open problem to the entrance-channel assembly geodesic. The breakthrough stated honestly: a falsifiable *program*, not a proof. |
 | **Understand it in ~9 pages** | [`FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md`](FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md) (also PDF) — general-audience, honestly tiered. |
@@ -63,7 +66,7 @@ A theory worth trusting says how to break it. These would:
 
 ```
 pip install -r requirements.txt
-python results/verify/verify_all.py      # 85/85 PASS, deterministic, no network
+python results/verify/verify_all.py      # 86/86 PASS, deterministic, no network
 ```
 
 Everything load-bearing has a script; the foundation numbers are re-derived in-repo

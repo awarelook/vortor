@@ -2,7 +2,7 @@
 
 **FTGB × the anomaly landscape — what the theory explains, predicts, and leaves open, tiered.**
 Author: Nathaniel Hanks · 2026-09-14 · a synthesis/index over already-committed, already-verified material
-(`verify_all.py` **85/85**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
+(`verify_all.py` **86/86**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
 tier or explicitly tagged `[S]`/open. Built and adversarially audited by a 24-agent workflow (novelty checked
 against Hagelstein / Preparata / Widom–Larsen / Storms / Takahashi / Kim; discipline pass certified the
 committed corpus clean of fabricated COP / rate / cross-section / branching).

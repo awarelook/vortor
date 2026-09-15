@@ -17,6 +17,7 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 ## The theory (readable)
 | File | What |
 |---|---|
+| [`FTGB_WHAT_WORKS.md`](FTGB_WHAT_WORKS.md) | **the positive core (start here)** — what the theory *solves and explains*, stated with confidence: clear, concise, accurate. The result first; the honest boundary kept in the ledgers |
 | [`FTGB_MINIMUM_VIABLE_PAPER.md`](FTGB_MINIMUM_VIABLE_PAPER.md) | **the capstone** — the whole theory in one tight, citable, reproducible paper: apex summary + proven core `[V]` + hypothesis-to-test `[S]` + LENR significance + falsifiers |
 | [`paper/FTGB_TEN_PAGE_2026-09-15.md`](paper/FTGB_TEN_PAGE_2026-09-15.md) | **the ten-page presentation** — journal-style, plain language inline with the math: method/discipline, the object, the verified-core table, the matter-wave reading, the full nuclear program (corridor → fence → Stage D → gate → knob), the nine falsifiers, what is never claimed, key references |
 | [`paper/FTGB_FULL_PAPER_25PG_2026-09-15.md`](paper/FTGB_FULL_PAPER_25PG_2026-09-15.md) | **the complete 25-page paper** — the full presentation in seven Parts: Method (the discipline as instrument + reproducibility architecture) · The Object (Beltrami/CK spectrum, anchors, geometry honesty) · The Rhythm (heartbeat theorem, Duffing leg, many-body layer, the cross-scale fences) · Topology & Matter Wave (invariants, chirality algebra, Reeb/zeta/anapole, g=2/α/mass/neutrino handled honestly) · The Nuclear Program in full (ledger → disposal chain → corridor → two bars + derived fence → Stage D → gate → chain) · Confrontation (13 settled-negatives, 9 falsifiers with protocols, threats-to-validity, the audit record) · The Program (the convergence ranking, the four ambition-legs incl. coherent energy transformation, the fences with the computed PV-gravity/no-propulsion negative, and the one-coherence synthesis) + key references |
@@ -56,8 +57,8 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 ## Reproduction, harness & provenance
 | File | What |
 |---|---|
-| [`results/verify/`](results/verify/) | **the reproducible model** — 82 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
-| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**85/85**, CI-gated) |
+| [`results/verify/`](results/verify/) | **the reproducible model** — 83 theory scripts; map in [`results/verify/README.md`](results/verify/README.md) |
+| [`results/verify/verify_all.py`](results/verify/verify_all.py) | the harness (**86/86**, CI-gated) |
 | [`engine/`](engine/) | `ftgb_engine.py` (the object as one executable model) + `ftgb_synthesis_modeler.py` (the isomorph) + `ftgb_resonator_sim.py` (the theory as **running simulation**: nonlinear NS evolution of the eternal Beltrami state, comb/beat oscillation, the de Broglie matter wave) |
 | [`frontier_calcs/`](frontier_calcs/) | vendored (frozen) provenance scripts for the canonical numbers + toolkit-module methods, **+ the citation stores** (the ~198-row verified references ledger, the paper-prep pass with its 4 bibliographic corrections, the M14 61-entry catalog) and ark salvage (Sector-A OAM form, Cho–Maison solve, two-electron ring Madelung) |
 | [`toroidal_core/`](toroidal_core/) | vendored (frozen) core-derivation package (`fields.py`, `madelung.py`, `topology.py`, …) |
