@@ -20,6 +20,7 @@ is kept, and it is a strength, but the accomplishments lead.
 | **Understand it in ~9 pages** | [`FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md`](FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md) (also PDF) — general-audience, honestly tiered. |
 | **Read the full theory** | [`FTGB_GRAND_SYNTHESIS.md`](FTGB_GRAND_SYNTHESIS.md) (Parts A–G). The deep organizing principle is **§A.3** ("coherence *is* regularity"). |
 | **Check what's actually proven** | the **settled vs frontier map** below, and [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md) (the honest self-assessment). |
+| **See what's left — the open problems** | [`results/STATE_AND_OPEN_PROBLEMS_2026-09-15.md`](results/STATE_AND_OPEN_PROBLEMS_2026-09-15.md) — the current-true state & work remaining (the one central nuclear computation, the four ambition-legs' open pieces, the fluid GPU run, and the real bottleneck: experiment). |
 | **See it as one executable object** | `python engine/ftgb_synthesis_modeler.py` — the MATH ↔ PHYSICS ↔ EXPERIMENT isomorph with its honest seams. |
 | **Watch it run as a simulation** | `python engine/ftgb_resonator_sim.py` — the oscillating harmonic resonator matter wave in software: full nonlinear NS evolution of the eternal Beltrami state, the CK comb + kHz beats, the driven Lorentzian, the de Broglie packet. |
 | **Try to kill it** | the **falsifiers** below. |
