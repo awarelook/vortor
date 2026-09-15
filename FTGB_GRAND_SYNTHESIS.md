@@ -1956,3 +1956,35 @@ torsion/oscillator physics and are unrelated to "biological transmutation."
 *End of Part G. Every citation real and verified; flags binding at lock (Bae-Kang-Shin
 now verified real; Bacca caveat; Navratil-Quaglioni-2011 = A=6; Kishimoto bound re-verify);
 established vs FTGB-novel labelled; ASCII-clean.*
+
+---
+
+## Addendum H — the September-2026 convergence (current-true digest, 2026-09-15)
+
+The week of 2026-09-14/15 executed a six-dimension jewel audit and three computation passes whose results
+supersede or sharpen several statements in Parts D–F above (inline banners mark each). The digest, each item
+backed by a named check (harness now **84/84**):
+
+1. **The corridor.** The LENR open problem is ONE question: ⁴He has **no bound excited states** (census) and
+   supra-threshold dwell dies in `~9e-22 s` (survival), so the only aneutronic route is a **dissipative
+   sub-breakup corridor** shedding all 23.85 MeV during assembly (`entrance_corridor_survival_check`).
+2. **Two bars + a derived fence.** Existence: beat the measured `1e-7` (Wilkinson–Cecil 1985, primary
+   resolved). Sufficiency: `n/4He <= 1e-9` => `Delta_suff = 5.47 x Delta_dom` => the crossing must satisfy
+   `beta*|dF| <= 0.874 MeV/fm` — the data forces the slow/soft corner (LZ bridge TEST 2b).
+3. **Stage D.** On the analytic BPS compacton the first-order L2 piece LOG-DIVERGES at the boundary (only L4
+   is quadrature — the "pure quadrature" scoping was itself corrected), and the density-geometry overlap is
+   [0.55, 0.96] — so `rho_eff ~ 0.07` **cannot** be density-geometric: the suppression must live in
+   orientation/FR-phase space (`delta_b4_stageD_bps_overlap_check`).
+4. **The gate.** That space's quantum arithmetic: the s-wave door to ⁴He(0⁺) is the **singlet alone** (1/9),
+   and coherent single-mode preparation steers it — 1/3 at m=0, **exactly 0** at m=±1 — while thermal
+   polarization (~1e-6) cannot; the cold Bose seed's job is **channel preparation**
+   (`spin_channel_gate_check`). Consistency `1/9 x [0.55,0.96] = [0.061,0.107] ~` target band: logged
+   coincidence-class, never promoted. **New falsifier: polarization-steered aneutronic yield.**
+5. **The forgotten-batch capture + salvage.** Part-D orphan `[V]`s recomputed in-repo (Kuramoto P=1.20;
+   Aizawa λ_max=0.094); transmutation Q-values harnessed; the pre-jewel THz campaign surveyed, its
+   beat-modulated-tunneling claim fence-killed, its phase-scrambled control protocol salvaged into the
+   `N^L` falsifier (`multibody_sync_capture_check`, `transmutation_qvalue_arithmetic_check`,
+   `beat_modulated_tunneling_nogo_check`).
+
+Ten-page presentation: `paper/FTGB_TEN_PAGE_2026-09-15.md`. Crystallization + program:
+`results/BEST_AVAILABLE_THEORY_2026-09-14.md`. The chain interlocks: corridor → fence → gate → seed → knob.

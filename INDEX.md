@@ -18,6 +18,7 @@ Every document and directory, by purpose. New here? → **[`START_HERE.md`](STAR
 | File | What |
 |---|---|
 | [`FTGB_MINIMUM_VIABLE_PAPER.md`](FTGB_MINIMUM_VIABLE_PAPER.md) | **the capstone** — the whole theory in one tight, citable, reproducible paper: apex summary + proven core `[V]` + hypothesis-to-test `[S]` + LENR significance + falsifiers |
+| [`paper/FTGB_TEN_PAGE_2026-09-15.md`](paper/FTGB_TEN_PAGE_2026-09-15.md) | **the ten-page presentation** — journal-style, plain language inline with the math: method/discipline, the object, the verified-core table, the matter-wave reading, the full nuclear program (corridor → fence → Stage D → gate → knob), the nine falsifiers, what is never claimed, key references |
 | [`FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md`](FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md) (+PDF) | ~9-page general-audience tour |
 | [`FTGB_GRAND_SYNTHESIS.md`](FTGB_GRAND_SYNTHESIS.md) (+PDF) | the full tiered synthesis (Parts A–G); **§A.3 = "coherence is regularity"** |
 | `FTGB_GRAND_SYNTHESIS_FULL_2026-09-10.pdf` | the compiled jewel as one shareable paper |

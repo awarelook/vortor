@@ -1,0 +1,31 @@
+{
+  "model": "the entrance-channel assembly corridor (the one open LENR problem, sharpened)",
+  "tier": "[V]",
+  "tier_meaning": "verified in-repo by a named check (a reader can re-run it)",
+  "verify_scripts": [
+    "entrance_corridor_survival_check.py",
+    "disposal_nonpopulation_check.py",
+    "delta_b4_landau_zener_bridge_check.py"
+  ],
+  "equations": [
+    "4He: NO bound excited states (first excited 0+_2 at 20.21 MeV > p+t at 19.815)",
+    "supra-threshold half-life t_1/2 = hbar ln2 / Gamma ~ 9e-22 s (Gamma ~ 0.5 MeV)",
+    "=> the only aneutronic route: shed ALL 23.85 MeV DURING assembly, never pausing",
+    "two data bars: existence > 1e-7 (Wilkinson-Cecil 1985); sufficiency n/4He <= 1e-9",
+    "derived fence: beta*|dF| <= 0.874 MeV/fm (the dearth forces the slow/soft corner)"
+  ],
+  "params": {
+    "E_dd_MeV": 23.847,
+    "E_pt_MeV": 19.815,
+    "E_n3He_MeV": 20.578,
+    "E_02_MeV": 20.21,
+    "Gamma_02_MeV": 0.5,
+    "t_half_s": 9.1e-22
+  },
+  "time_transform": "static level scheme (no time axis)",
+  "outputs": [
+    "lenr_corridor.png"
+  ],
+  "note": "no state ladder exists below breakup and no slow dwell exists above it -- the corridor formulation is FORCED by census + survival arithmetic, not chosen.",
+  "provenance": "FTGB jewel -- github.com/awarelook/vortor; numbers backed by results/verify/"
+}

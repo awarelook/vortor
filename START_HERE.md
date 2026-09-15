@@ -57,7 +57,7 @@ A theory worth trusting says how to break it. These would:
 - **The parameter-free scalar tests** (`30_CANONICAL_NUMBERS.md` §G) failing → kills the calibration-free predictions.
 - **A harmonic (not inharmonic) carrier comb, *in the linear/low-drive limit*** → kills the CK-spectrum fingerprint (M16: under hard drive the ratios pull anharmonically — the Duffing backbone bend is separable from the Arnold-tongue lock, so the test is a linear-limit statement).
 - **`b_eff ≠` magnetic energy per ion** in a second plasmoid → kills the medium-reduction closed form.
-- Full numbered falsifier set — including the **E0 internal-pair secondary** (~20 MeV `e⁺e⁻` / 511 keV) and the **beat-locked yield step `f_b(L)=N^L`** (the sharpest theory-specific discriminator): [`FTGB_MINIMUM_VIABLE_PAPER.md`](FTGB_MINIMUM_VIABLE_PAPER.md) §5.
+- Full numbered falsifier set — including the **E0 internal-pair secondary** (~20 MeV `e⁺e⁻` / 511 keV), the **beat-locked yield step `f_b(L)=N^L`** (now with the phase-scramble control protocol), and the new **polarization-steered aneutronic yield** (#9 — the spin knob no thermal model predicts): [`FTGB_MINIMUM_VIABLE_PAPER.md`](FTGB_MINIMUM_VIABLE_PAPER.md) §5.
 
 ## Reproduce & trust
 

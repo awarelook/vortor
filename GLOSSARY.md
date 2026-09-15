@@ -184,6 +184,12 @@ Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
   **dissipative sub-breakup corridor** shedding the full 23.85 MeV during assembly. Two data bars:
   existence `>1e-7` (Wilkinson–Cecil 1985), sufficiency `n/⁴He ≤ 1e-9`. `open` ·
   `entrance_corridor_survival_check.py`
+- **Spin/orientation gate** — the corridor's selectivity arithmetic (2026-09-15): the s-wave door to
+  ⁴He(0⁺) is the **spin singlet alone** (1 of 9 d+d states; gate 1/9), and coherent single-mode
+  preparation steers it (condensate pair `|1,m⟩⊗|1,m⟩`: singlet fraction 1/3 at m=0, exactly 0 at m=±1 —
+  the d-wave residual is `(kR)⁴~1e-6`). Thermal polarization `~1e-6` ⇒ selection must be
+  dynamical/coherent — the Bose seed's job is **channel preparation** `[S]`. Mints falsifier #9
+  (polarization-steered aneutronic yield). `[credited]`-arith · `spin_channel_gate_check.py`
 - **`U_s` screening energy** — the host-lattice-inherited LENR rate input (≈ 300–800 eV), not FTGB-derived.
   `[credited/inherited]`
 
