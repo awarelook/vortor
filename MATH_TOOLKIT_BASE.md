@@ -71,7 +71,7 @@ FreeFEM's own `ev[i]` returns `mu = lambda^2`, **not** `lambda` -- always recove
 as `lambda = sqrt(ev)`. Tier: operator + reduction **[credited]**; the `lambda = sqrt(ev)` convention
 **[V]** (re-verified in `spectral_sweep.py` / `greenyer_frontier_cCK_general_eps_sweep.edp`).
 
-**Toolkit module.** `toroidal_core/spectral_sweep.py` (`solve_point`, `sweep`, `mesh_convergence_check`,
+**Toolkit module.** `freefem/spectral_sweep.py` (`solve_point`, `sweep`, `mesh_convergence_check`,
 `overlap_matrix`, `fit_power_law`, `solve_point_robin`). The near-degenerate doublet
 `lambda_0(eps), lambda_1(eps)` this operator produces is the source of the Beat Law (§ anchors).
 

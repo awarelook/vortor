@@ -1,7 +1,7 @@
 # The Coherent Object — a minimum viable, reproducible theory
 
 **FTGB (Fractal-Toroidal-Beat):** one driven Beltrami–Hopf toroidal soliton, read at once as a plasma field
-and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**78/78**,
+and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**81/81**,
 CI-gated, no network). Full map: [`INDEX.md`](INDEX.md) · terms: [`GLOSSARY.md`](GLOSSARY.md) · citations:
 [`REFERENCES.md`](REFERENCES.md) · honest self-assessment: [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md).
 
@@ -41,7 +41,9 @@ identity (Schrödinger ⇔ a fluid) [Madelung 1927], as a **matter wave**. One o
 | **Coherence *is* regularity** | at the Beltrami state the Lamb vector `u×ω=0`, so advection is a pure gradient → `u(t)=e^{−νλ²t}u₀` is an **exact eternal smooth solution** (BKM never triggers) [cf. Beale–Kato–Majda 1984] | `[V]` `exact_beltrami_regularity_check` |
 | **Driven / sustained** | forcing `f=νλ²u_B` makes it an **exact steady solution** (self-sustaining) and a **stable attractor** — perturbations decay, enstrophy stays bounded, **swept across Re ≈ 126 → 628** (32³, confirmed 48³) with the attraction not weakening; a Taylor–Green base drifts | `[V]`@Re≤628 `r2_driven_beltrami_attractor_check`, `r2_reynolds_sweep_check` |
 | **Heartbeat, not flywheel** | fixed-helicity energy minimization over N modes is a **linear program** whose minimum is the single lowest mode → a beat-carrying object is *never* static; it must be **driven** | `[V]` `nmode_woltjer_lp_check` |
-| **Topology** | Hopf charge `Q_H=1` (Gauss linking) and wave-mode Chern `C=±2` (the photon helicity index), both in-repo | `[V]` `topology_invariants_check` |
+| **Topology** | idealized-reference Hopf charge `Q_H=1` (Gauss linking of the closed-fibre reference pair) and wave-mode Chern `C=±2` (the photon helicity index), both reproduced in-repo; the *actual CK object* carries real helicity `H≈0.088`, not an integer charge (Grand Synthesis C.2) | `[V]` `topology_invariants_check` |
+| **Current-leg trilogy** | static closure `ρv ~ K^i` ⇔ `\|B\\|=const` — impossible for nontrivial force-free fields; the driven closure is externally-driven, not emergent (the flagship structural theorem) | `[V]` `currentleg_trilogy_check` |
+| **S³ curl spectral zeta** | exact closed form `ζ_B(s)=ζ(s−2)−ζ(s)` ⇒ `ζ′(−2)=−ζ(3)/4π²` (verified to 1e-25; resolves the π-power anomaly) | `[V]` `curl_spectral_zeta_pi_power_check` |
 | **Reeb / contact** | the Beltrami field is a **Reeb field**; Weinstein–Taubes guarantees a closed field-line loop [Etnyre–Ghrist 2000; Taubes 2007] | `[credited]` `reeb_spectral_geometry_check` |
 | **Anapole (nonradiating)** | the ordinary dipole cancels (`~1e-16`); a Zel'dovich toroidal-dipole resonator holds energy without radiating [Afanasiev–Stepanovsky 1995; Papasimakis 2016] | `[V]`/`[credited]` `oam_toroidal_resonator_resolution_check` |
 | **Chirality / C / Majorana** | chirality `= sign λ = sign H`; antiparticle `= −λ = C`; the self-dual `θ_χ=45°` state is **Majorana** | `[V]` `majorana_selfdual_check` |
@@ -65,9 +67,14 @@ Credited inputs used, not re-derived: Beltrami/CK [Chandrasekhar–Kendall 1957]
   disposal *operator* is **E0 (monopole)**, *not* the anapole toroidal *dipole* (a forbidden 0→0 double-zero).
   Energy `[V]`, disposal-requirement `[credited]`, mechanism `[S]`. **The one open problem has CONVERGED** (a
   7-check disposal chain, each adversarially verified): it is **not** "one matrix element" (that framing was
-  refuted) and **not** the disposal — it is the **entrance-channel assembly geodesic**: can coherent slow
-  assembly raise the bound-⁴He fraction **above the measured ~10⁻⁷** aneutronic baseline (steer the B=4/B=8
-  Skyrme trajectory to the compact bound ⁴He)? — the moduli-space/HPC run, `≥3` open objects. See the tiered
+  refuted) and **not** the disposal — it is the **entrance-channel assembly corridor** *(sharpened
+  2026-09-14 from "geodesic, ≥3 open objects" to ONE question: ⁴He has no bound excited states and
+  supra-threshold dwell dies in zeptoseconds, so the only aneutronic route is a **dissipative sub-breakup
+  corridor** that sheds the full 23.85 MeV during assembly — `entrance_corridor_survival_check`)*. It carries
+  **two data bars**: *existence* — beat the measured `~10⁻⁷` baseline [Wilkinson–Cecil, PRC **31**, 2036
+  (1985)]; *sufficiency* — the observed dearth `n/⁴He ≤ 10⁻⁹`, i.e. `Δ_suff = 5.47×Δ_dominance`, which with
+  the Cauchy–Schwarz ceiling **derives** the crossing fence `β·|dF| ≤ 0.874 MeV/fm`
+  (`delta_b4_landau_zener_bridge_check` TEST 2b) — the moduli-space/HPC run decides it. See the tiered
   [`results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`](results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md)
   (disposal chain: `disposal_e0_pair_fork` / `disposal_nonpopulation` / `disposal_coherence_volume_nogo` / …);
   earlier synthesis `lenr_disposal_channel_check`, `results/LENR_ACTIVE_SITE_SYNTHESIS_2026-09-14.md`.
@@ -101,7 +108,10 @@ null].
 
 1. **Comb fingerprint** — a driven plasmoid rings at `1 : 1.72 : 2.43` **in the linear/low-drive limit**; a
    *harmonic* `1:2:3` comb falsifies it. (M16: under hard drive the ratios pull anharmonically — the Duffing
-   backbone bend, separable from the Arnold-tongue lock — so the fingerprint is a *linear-limit* statement.)
+   backbone bend, separable from the Arnold-tongue lock — so the fingerprint is a *linear-limit* statement.
+   Geometry caveat: the ratios are the **spherical-boundary** CK values; the toroidal eigenvalues shift with
+   aspect `a/R` — the FreeFEM torus solve gives a doublet split `Δλ=0.2806`, not sphere roots
+   (`MATH_TOOLKIT_BASE.md` §3 CORRECTIVE) — so the experimental comparison must state which geometry it assumes.)
 2. **kHz beat + detuning** — near-equal beats with a small second-order detuning (coil + FFT). (The kHz beat
    is a macroscopic rate-*gate*, **never** a pump of the MeV channel — settled-negative, M16.)
 3. **Neutron yield ∝ heat** — **the primary, band-independent kill** of the aneutronic channel.
@@ -118,14 +128,14 @@ null].
 
 ```bash
 pip install -r requirements.txt          # numpy, mpmath
-python results/verify/verify_all.py      # 78/78 PASS, deterministic, no network, CI-gated
+python results/verify/verify_all.py      # 81/81 PASS, deterministic, no network, CI-gated
 ```
 
 Everything load-bearing has a script; the foundation numbers are re-derived in-repo; no claim exceeds its
 tier; no number is fabricated; settled-negatives are kept. Depth (scipy/sympy provenance, FreeFEM eigensolves,
 HPC handoffs): [`REPRODUCE.md`](REPRODUCE.md). The one honest ceiling: unconditional high-Reynolds driven
-regularity and the LENR *rate* (the B=4 matrix element) need the scoped GPU/HPC runs — named in `handoffs/`,
-not fudged.
+regularity and the LENR *rate* (the entrance-channel assembly corridor / near-BPS `ρ_eff` run) need the
+scoped GPU/HPC runs — named in `handoffs/`, not fudged.
 
 *Citations here are compact; full, tier-tagged bibliography in [`REFERENCES.md`](REFERENCES.md) (§1 credited
 core; §1e–1j corpus-salvage clusters; §1k LENR active-site physics). Vocabulary in [`GLOSSARY.md`](GLOSSARY.md)

@@ -14,8 +14,10 @@ Mechanism. For a velocity-Beltrami field `∇×u = λu`:
   - the advection term `u·∇u = (∇×u)×u + ∇(½|u|²) = λ(u×u) + ∇(½|u|²) = ∇(½|u|²)` is a PURE GRADIENT,
     absorbed into pressure. The Navier-Stokes nonlinearity is therefore inert on the Beltrami state.
   - Since a Beltrami field is a Helmholtz/Stokes eigenfunction (`Δu = −λ²u`), `u(t) = e^{−νλ²t} u_0`
-    is an EXACT solution: enstrophy `Z(t) = Z_0 e^{−2νλ²t}` decays monotonically, so `∫₀^∞‖ω‖∞ dt < ∞`
-    (Beale-Kato-Majda) -- NO blow-up. Global regularity is not merely bounded; it is explicit.
+    is an EXACT solution [credited: this exact-solution class is CLASSICAL -- Trkalian flows, Trkal 1919;
+    ABC-field exactness is standard. The in-repo verification and the coherence-IS-regularity reading are
+    ours; the exact solution itself is not]: enstrophy `Z(t) = Z_0 e^{−2νλ²t}` decays monotonically, so
+    `∫₀^∞‖ω‖∞ dt < ∞` (Beale-Kato-Majda) -- NO blow-up. Global regularity is not merely bounded; it is explicit.
 
   TEST 1 -- Lamb vector `u×ω = 0` pointwise on the Beltrami state (machine zero).
   TEST 2 -- the advection `u·∇u` is a PURE GRADIENT: `∇×(u·∇u) = 0` (machine zero) -> nonlinearity

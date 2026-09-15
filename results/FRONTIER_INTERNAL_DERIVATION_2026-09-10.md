@@ -36,7 +36,10 @@ minimal: a naive soliton with an *independent* circulating charge gives `g = 1`
 condition**: the `U(1)` charge winding (`π₁`) must **lock** to the Hopf spin (`π₃`). FTGB's `π₁` and `π₃`
 are *separately* conserved (`MATH_TOOLKIT_BASE.md` §9d: a phase slip changes `Δw` but not the Hopf
 number), so the lock is a genuine condition — **realized by the elementary lepton (g=2), broken by
-composites** (proton `g = 5.59`, whose `π₁/π₃` are decoupled by substructure). This is what g=2 *is*
+composites** (proton `g = 5.59`, whose `π₁/π₃` are decoupled by substructure). Honestly put: the
+lock's *realization* is inferred FROM the measured g-values (a classification of the data, diagnostic
+rather than predictive — the lock is not independently established; an independent test would be a
+computed `π₁`–`π₃` coupling on the eigenmode itself). This is what g=2 *is*
 inside the theory: the signature of `π₁/π₃` locking, i.e. of being *effectively elementary*.
 
 *Tier.* `[V]` for the internal Dirac algebra (TESTS 1–3, reproduced); `[credited]` for FPT/Weinberg and

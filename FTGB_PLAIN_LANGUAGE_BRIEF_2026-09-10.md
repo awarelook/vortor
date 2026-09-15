@@ -3,7 +3,7 @@
 *A driven Beltrami–Hopf toroidal soliton, read as field and matter wave. One knot of energy, across scales.*
 **For new readers. ~9 pages. Every claim carries an honesty tier; nothing here is asserted beyond what the
 math earns.** Full technical version: `FTGB_GRAND_SYNTHESIS.md`; reproduce everything:
-`pip install -r requirements.txt && python results/verify/verify_all.py` → **78/78 PASS**.
+`pip install -r requirements.txt && python results/verify/verify_all.py` → **81/81 PASS**.
 
 Tiers used throughout: **[V]** proven/verified in this project (a script re-runs it) · **[credited]**
 established textbook physics we build on · **[S]** a structural hypothesis (reasonable, not yet proven) ·
@@ -92,10 +92,11 @@ Physics has three famous "unexplained" numbers about the electron. Here is exact
 and where it stops, on purpose.
 
 - **The gyromagnetic ratio, g = 2.** *What it means:* how strongly the electron's spin responds to a magnet.
-  For a truly elementary particle the answer is exactly 2. **The theory earns this internally** [V]: its two
-  handednesses assemble into precisely the mathematical structure of a Dirac particle (the standard equation
-  for an electron), and `g = 2` is what that structure gives — reduced to a single clean condition (the
-  charge-twist "locking" to the spin). So `g = 2`'s *meaning* is derived here, not imported.
+  For a truly elementary particle the answer is exactly 2. **The theory earns the *meaning* internally**
+  [V structure]: its two handednesses assemble into precisely the mathematical structure of a Dirac particle
+  (the standard equation for an electron), and `g = 2` is what that structure gives — reduced to a single
+  clean condition (the charge-twist "locking" to the spin). That locking condition itself is still a
+  hypothesis [S]: the meaning is derived here; the last step is not yet.
 - **The fine-structure constant, α ≈ 1/137.** *What it means:* how strongly electrons couple to light — the
   "signature" of the electron. **The theory says clearly what α *is*** (the coupling strength of that
   Dirac object, with charge as the geometric twist) — but it does **not** derive the number 1/137, and we
@@ -130,7 +131,7 @@ check line by line:
   resolution of a long-standing coefficient puzzle in the mass framework (a "category error");
   and the exact statement that the vacuum's magnetic-to-electric impedance ratio equals `α`.
 
-All of it re-runs from one command (**78/78 checks pass**), with no internet and no hidden fudge.
+All of it re-runs from one command (**81/81 checks pass**), with no internet and no hidden fudge.
 
 ---
 
@@ -154,6 +155,19 @@ driven plasmas — Klimov's vortex reactors, the SAFIRE/Aureon program). The the
   one measurement that would settle everything: **helium-4 produced vs. heat released**. [S / flag]
 
 The theory neither hypes these claims nor dismisses them: it says exactly what would prove or kill them.
+
+**Update (2026-09-14) — how the nuclear story resolved.** The energy-release question was pushed all the
+way through, and it converged. The 24 MeV a fusion event releases **cannot leave as one photon** — the jump
+is between two "perfectly round" states, and no single photon can carry zero spin — so if quiet helium heat
+is real, the energy **must be shed collectively, in many small pieces** (textbook nuclear physics, not a new
+claim). The glowing knot is the **workshop, not the chimney**: it is where slow, coherent assembly could
+happen; the energy leaves by ordinary collective channels. And the **one question left** is now sharp:
+helium-4 has *no* resting places (no excited levels below its breakup threshold), and any pause *above* that
+threshold dies in about a zeptosecond — so the only route is a **corridor**: the assembly must shed all
+24 MeV *while it happens*, never pausing. Whether that corridor exists in the real nuclear landscape is the
+open computation. Two measured bars decide it: doing better than the known 1-in-10-million quiet-fusion
+baseline (does it exist?), and matching the observed near-total absence of neutrons (is it enough?).
+Current state: `results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`.
 
 ---
 
@@ -181,8 +195,10 @@ The whole *value* of the jewel is that you can trust its labels.
 
 A theory earns its keep by sticking its neck out. The open edges and testable bets:
 
-- **Winnable by computation:** the fluid-regularity result at full turbulence (a GPU run), and the exact
-  nuclear branching in LENR (a supercomputer chemistry run). Both are packaged and ready.
+- **Winnable by computation:** the fluid-regularity result at full turbulence (a GPU run), and the LENR
+  **assembly-corridor** question — *(updated 2026-09-14: no longer "one branching number"; the open problem
+  is whether a fully-dissipative, never-pausing assembly path to helium-4 exists — packaged as the near-BPS
+  `ρ_eff` run, with an exact bridge turning any answer into a helium-vs-neutron prediction).*
 - **The honest frontier:** the *value* of α (the running coupling's anchor) and the *exact* mass ratios —
   shared with all of physics, not faked here.
 - **Sharp predictions to test:** a plasmoid's tones should be **inharmonic** (bell-comb), not harmonic; the
@@ -223,7 +239,7 @@ wave, appearing across scales from particle to plasmoid.** From that single pict
 It is offered not as a finished truth but as a **coherent, reproducible, predictive object of reality to
 share** — right to the exact degree the math earns, and honest about the rest.
 
-*Reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` (78/78). Depth:
+*Reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` (81/81). Depth:
 `FTGB_GRAND_SYNTHESIS.md`, `MATH_TOOLKIT_BASE.md`, `results/TIER_LEDGER.md` (the honest self-assessment),
 `results/COINCIDENCE_LEDGER.md` (the clues), and `engine/ftgb_synthesis_modeler.py` (the executable
 math↔physics↔experiment isomorph). No claim exceeds its tier; no number is fabricated.*

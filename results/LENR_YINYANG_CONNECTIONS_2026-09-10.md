@@ -96,6 +96,9 @@ sphalerons; but it lives at seesaw/GUT scales and needs CP violation not compute
   measured**; the aneutronic *selector* is O_h/E0/isospin, not chirality. The physics of *how* is positive and
   nearly complete: nuclear-defect energy + measured screening + coherent single-chirality scaffold + Δ (the one
   computation). No hedge — a nuclear source with one matrix element left to compute.
+  **[UPDATED by the later disposal chain — see `LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md` §6.2: the
+  "one matrix element" framing was refuted; the open problem is the entrance-channel assembly corridor
+  (one geometric question, two data bars), with `Δ = 23.85 MeV × ρ_eff` its LZ-bridge reduction.]**
 
 *Provenance: `results/verify/{lenr_cop_nuclear_positive, delta_detuning_beat_check, plasmoid_helicity_coherence_check,
 chirality_helicity_check, charge_conjugation_check, majorana_selfdual_check, lenr_energy_ledger}.py`;

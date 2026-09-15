@@ -164,7 +164,26 @@ Computed cluster — `results/CHIRALITY_DUALITY_ASSESSMENT_2026-09-10.md`
   `d_i‖B‖∞ ≲ η` (Lundquist, not Prandtl). **Removes the `Pm = 1` restriction**; unconditional large-data
   `Pm ≠ 1` stays the open 3-D Hall-MHD problem. `[V] conditional` (`R3_PM_NE_1_COUPLED_LYAPUNOV_2026-09-10`,
   `hallmhd_coupled_lyapunov_check.py`)
-- **Δ (B=4 branching amplitude)** — the open LENR branching gap (Landau–Zener), HPC-only. `open`
+- **Δ (B=4 branching amplitude)** — the LENR Landau–Zener adiabaticity gap; reduced (2026-09-14) to
+  `Δ = 23.85 MeV × ρ_eff` with `ρ_eff ∈ [0,1]` (Cauchy–Schwarz); its value is the near-BPS run. The full
+  open problem is the **entrance-channel assembly corridor**, of which Δ is the LZ-bridge reduction. `open`
+- **`ρ_eff` (crossing overlap)** — the one dimensionless unknown of the LENR frontier: the effective
+  fractional overlap of the 2×(B=2) and compact-B=4 configurations at the crossing, `Δ = 23.85 MeV × ρ_eff`
+  (`delta_nearbps_scale_bound_check.py`). Bounded in `[0,1]` by Cauchy–Schwarz; needs the external near-BPS
+  run. `open`
+- **near-BPS Skyrme regime** — the almost-saturating-the-topological-bound corner of the Skyrme model
+  (BPS submodel + small perturbation; Adam–Sánchez-Guillén–Wereszczyński 2010) where physical binding is
+  small; the repo's Stage-C result: the ~9× rational-map overbinding is FIXED near-BPS, so the production
+  Δ lives there. `[V]-staged / open value`
+- **E0 (electric monopole) transition** — the `0⁺→0⁺` nuclear transition class: no single real photon can
+  mediate it (no `L=0` photon; Church–Weneser 1956); it sheds by internal `e⁺e⁻` pair or collectively.
+  The **settled disposal operator** of the γ-quiet ⁴He channel (2026-09-14) — the anapole toroidal *dipole*
+  is double-forbidden between `J=0` states. `[credited]` · `disposal_e0_pair_fork_check.py`
+- **Entrance-channel assembly corridor** — the one open LENR problem (2026-09-14, sharpened): ⁴He has no
+  bound excited states and supra-threshold dwell dies in zeptoseconds, so an aneutronic channel requires a
+  **dissipative sub-breakup corridor** shedding the full 23.85 MeV during assembly. Two data bars:
+  existence `>1e-7` (Wilkinson–Cecil 1985), sufficiency `n/⁴He ≤ 1e-9`. `open` ·
+  `entrance_corridor_survival_check.py`
 - **`U_s` screening energy** — the host-lattice-inherited LENR rate input (≈ 300–800 eV), not FTGB-derived.
   `[credited/inherited]`
 
@@ -197,8 +216,10 @@ named tier. Citations: `REFERENCES.md`.*
   object's eigenmode carries the photon's index). `[V]/[credited]` · `topology_invariants_check.py`.
 - **Anapole (toroidal dipole)** — Zel'dovich's confined-field configuration where the ordinary radiating
   dipole cancels (to `~1e-16`) → **nonradiating**. The theory's actual EM object; its multipole is
-  fractal-invariant, its strength ladders `~N^p` per cascade level. `[V]/[credited: Kaelberer 2010; Papasimakis
-  2016]` · `oam_toroidal_resonator_resolution_check.py`.
+  fractal-invariant, its strength ladders `~N^p` per cascade level. **Role fence (2026-09-14): the anapole
+  is the ACTIVE SITE (slow confinement/coherence at assembly), NOT the 24-MeV disposal operator — a toroidal
+  dipole is double-forbidden for `0⁺→0⁺` (Wigner–Eckart zero AND parity); disposal is E0/collective.**
+  `[V]/[credited: Kaelberer 2010; Papasimakis 2016]` · `oam_toroidal_resonator_resolution_check.py`.
 - **Cascade base `N` / `N^L`** — the self-similar fractal ladder of nested tori: `λ_L = λ_0 N^L`, anapole
   `T_L/T_{L+1} = N⁴`, continuous helicity `~N^{−4L}` while the integer winding is exactly conserved. `[V]` (M14).
 - **Null of self-interaction / "coherence is regularity"** — at the exact Beltrami state the Lamb vector

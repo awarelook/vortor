@@ -2,7 +2,7 @@
 
 **FTGB × the anomaly landscape — what the theory explains, predicts, and leaves open, tiered.**
 Author: Nathaniel Hanks · 2026-09-14 · a synthesis/index over already-committed, already-verified material
-(`verify_all.py` **78/78**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
+(`verify_all.py` **81/81**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
 tier or explicitly tagged `[S]`/open. Built and adversarially audited by a 24-agent workflow (novelty checked
 against Hagelstein / Preparata / Widom–Larsen / Storms / Takahashi / Kim; discipline pass certified the
 committed corpus clean of fabricated COP / rate / cross-section / branching).
@@ -36,7 +36,7 @@ aneutronic **selector**) are `[S]` with the **rate and the gap Δ open**.
 |---|---|---|---|---|---|
 | **Heat/helium & aneutronic γ-quietness** (Miles ~24 MeV/⁴He, 18/21 runs; neutron dearth; `d+d→⁴He+γ` hindered ~`1e-7`) | The mass-defect ledger `[V]` fixes 23.847 MeV/⁴He (matches Miles' most specific correlation); the `E0` rule `[credited]` (no `L=0` photon mediates `0⁺→0⁺`) **forces** any γ-quiet ⁴He heat channel to shed **collectively** — a structural *why* for the γ-quietness, not a resemblance. | skeleton `[V]`+`[credited]`; active-site & selector `[S]`; Δ, rate **open** | **CONFIRMED-NOVEL (narrow synthesis).** Ingredients credited (nuclear LZ; Manton B=4 moduli; the branching puzzle). Collective disposal is **shared** prior art (Hagelstein/Preparata/Takahashi). NOT Widom–Larsen. | **Neutron yield ∝ heat kills the aneutronic channel outright** (band-independent — the robust kill). `He-4/heat ≠ 24 MeV/⁴He` kills the ledger reading. | The **rate** (direct phonon coupling dead ~66 OOM); the sink's *existence* is `[S]` and faces the Byrnes causality wall; Δ needs the HPC run. |
 | **Aneutronic branching selector** (d+d channels) | Aneutronic-vs-neutron branch = a **Landau–Zener adiabaticity gap Δ** on the Skyrme B=4 moduli space (large Δ → adiabatic → ⁴He; small → diabatic → breakup/neutrons), with an exact Δ↔⁴He/neutron bridge. | LZ formula `[credited]` math / d+d-as-crossing `[S]` / Δ value **open** | **CONFIRMED-NOVEL synthesis** (not in the six named theorists). | ⁴He/neutron ratio → invert via the LZ bridge → effective Δ (the *robust* kill is again neutron∝heat, not the soft "no Δ fits"). | The Δ value (HPC). Standard nuclear physics pins the ~`1e-7` γ-suppression to the **E1/isospin-forbidden radiative channel**, not to an adiabaticity Γ — the d+d-as-crossing identification is `[S]`. |
-| **Transmutation / heavy elements / thorium** (Iwamura Cs→Pr, Sr→Mo; Miley/Mizuno four-humped spectrum; Adamenko heavy-A; Savvatimova/AUREON Th–U) | Baryon-**conserving** ΔA=4n hops on a Skyrme/Nielsen baryon lattice reproduce the assigned Q-values as exact conserved arithmetic (`[V]`-arithmetic: Cs-133+4D→Pr-141 = 50.493 MeV). The four-humped spectrum reads as charged-drop **Rayleigh self-fissility** (X≈3/2) with a falsifiable `N_crit`. | Q-values `[V]`-arithmetic (**not** in the 78/78 harness — only 23.847 MeV is); mechanism `[S]`; rate **open** | **CONFIRMED-NOVEL** in its soliton *mathematics*; the concept "a coherent charge cluster is the transmutation site" is the **EVO/Shoulders tradition** (credit it). ΔA=4n is **non-discriminating** (any ⁴He-transfer gives it). | **¹⁶³Dy→¹⁶³Ho** ionization-gated bound-state β⁻, by X-ray charge-state spectroscopy vs zero natural Ho (kill: Ho with no ionization dependence). `N_crit≈1.7–3e11` fissility threshold. | Rate; whether ΔA-reach attains Adamenko A~481 (a ~25× shortfall at the *asserted* ΔA≈14/site ceiling — **estimated, not derived**). Baryon-conserving kept strictly distinct from decay. |
+| **Transmutation / heavy elements / thorium** (Iwamura Cs→Pr, Sr→Mo; Miley/Mizuno four-humped spectrum; Adamenko heavy-A; Savvatimova/AUREON Th–U) | Baryon-**conserving** ΔA=4n hops on a Skyrme/Nielsen baryon lattice reproduce the assigned Q-values as exact conserved arithmetic (`[V]`-arithmetic: Cs-133+4D→Pr-141 = 50.493 MeV). The four-humped spectrum reads as charged-drop **Rayleigh self-fissility** (X≈3/2) with a falsifiable `N_crit`. | Q-values `[V]`-arith — **now harnessed** (`transmutation_qvalue_arithmetic_check.py`, 2026-09-14: Cs→Pr 50.493 and Sr→Mo 53.412 MeV from vendored AME2020, conservation asserted); mechanism `[S]`; rate **open** | **CONFIRMED-NOVEL** in its soliton *mathematics*; the concept "a coherent charge cluster is the transmutation site" is the **EVO/Shoulders tradition** (credit it). ΔA=4n is **non-discriminating** (any ⁴He-transfer gives it). | **¹⁶³Dy→¹⁶³Ho** ionization-gated bound-state β⁻, by X-ray charge-state spectroscopy vs zero natural Ho (kill: Ho with no ionization dependence). `N_crit≈1.7–3e11` fissility threshold. | Rate; whether ΔA-reach attains Adamenko A~481 (a ~25× shortfall at the *asserted* ΔA≈14/site ceiling — **estimated, not derived**). Baryon-conserving kept strictly distinct from decay. |
 | **SAFIRE self-organized plasma** (Childs/Aureon; Klimov swirl-vs-straight COP 2–10 vs 0.5–0.7) | Re-describes the anode shells as a **driven single-λ Beltrami/Woltjer–Taylor attractor** — FTGB's strongest original `[V]` object (exact driven steady state **and** stable attractor swept Re≈126→628) — and recasts the "active site" as a computed nonradiating anapole (Hopf `Q_H=1`, Chern `C=±2`). | `[V]` object, **`[S]` at the data interface** (weakest-evidenced cluster) | **RE-DESCRIPTION** at the core (self-organization = Woltjer–Taylor/**Taylor 1974**; Beltrami-solves-forced-NS is classical). Narrow add-ons: the CK-comb fingerprint and the anapole/Hopf–Chern reframing. | Measured field **multi-λ / not force-free**, OR shell spacing **harmonic 1:2:3** rather than CK-inharmonic 1:1.719:2.427 → Beltrami reading falsified. | SAFIRE's peer-reviewed mechanism (**Morgan–Childs 2015**) is **electrostatic** — in *mild tension* with a magnetic-Beltrami reading, not merely untested. No helicity diagnostic exists to run the kill. Klimov COP is honestly deflated as ordinary plasma-chemistry. |
 | **Direct heat-to-electricity** (LEC Gordon–Whitehouse 525 mV; Mizuno 2025 EMF+heat+neutron; Aureon) | Reads the reactive EMF as nuclear energy coupling into a **coherent collective EM mode** instead of thermalizing — a nonradiating anapole near-field with a beat/drive-dependent `V = ω_b·ΔΦ`. | `[S]`/**open** | **OVERLAPS-PRIOR-ART** (Preparata/Del Giudice coherent-domain; adjacent Widom–Larsen). The one distinctive thread — nonradiating anapole with Hopf/Chern invariants — is CONFIRMED-NOVEL-but-`[S]`. | Reactive EMF **scales with drive/beat** on the collective mode (kill: no drive dependence, or no correlation with the heat/neutron channel). | `V = ω_b·ΔΦ ~ 0.1–1 V` needs a derivation (an untagged `[S]` order-of-magnitude). COP inherited, not derived. |
 | **Spectral discriminators** (cross-cutting) | Two falsifiable signatures no static LENR model predicts: the **CK inharmonic comb** 1:1.719:2.427 `[V]` and the **beat-locked yield step** `f_b(L)=N^L` `[S]`. | CK comb `[V]`; beat-law `[S]` | CK ratios are textbook (Chandrasekhar–Kendall 1957) — novel as an *application/diagnostic*. Beat-step **class** overlaps **Hagelstein–Letts–Cravens 2010**; the exact geometric `N^L` form is the untested-novel residue. | Inharmonic triplet 1:1.719:2.427 confirms; harmonic 1:2:3 kills. Geometric `N^L` yield steps confirm; smooth/non-geometric response kills. | **Both currently have ZERO experimental convergence — live targets.** The one existing beat-sweep dataset (HLC 2010, THz steps 8.2/15.1/20.8) does **not** fit `N^L` (`beat_ladder_nonmatch_check.py`, logged). |
@@ -70,7 +70,9 @@ aneutronic **selector**) are `[S]` with the **rate and the gap Δ open**.
 ## 3. Original predictions & their kill conditions (novelty-audited)
 
 Each checked against the six named theorists; the nearest prior art is credited, and the logged non-match
-where one exists is recorded — so nothing is claimed as new that is someone else's.
+where one exists is recorded — so nothing is claimed as new that is someone else's. (*Method scope:*
+**CONFIRMED-NOVEL** = no match found against the six audited traditions
+(Hagelstein / Preparata / Widom–Larsen / Storms / Takahashi / Kim) — **not** a field-exhaustive claim.)
 
 1. **LZ B=4 adiabaticity branching selector** (⁴He/neutron ↔ Δ). **CONFIRMED-NOVEL synthesis.**
    *Kill:* neutron yield ∝ heat (band-independent) kills the aneutronic/large-Δ channel outright.
@@ -113,6 +115,13 @@ where one exists is recorded — so nothing is claimed as new that is someone el
 - **The anapole active site is self-walled** — `r_nf≈8 fm` is inside the nucleus, so it does **not** hide a 24 MeV γ
   (`lenr_disposal_channel_check` TEST 6); it must dispose collectively, not smuggle a suppressed gamma.
 - **Ponderomotive / phase-conjugation / α-from-winding** ruled out as levers — keeping the rate honestly open.
+- **TSC-class `4D→2α` exits are `(α,n)`-EXCLUDED `[V]`-arith** (`aneutronic_disposal_fork_check`) — a *named
+  prior-art confrontation*, not just an internal fork closure: Takahashi's TSC exit channel makes secondary
+  `(α,n)` neutrons `~10⁻⁶–10⁻⁴/⁴He`, **3–8 OOM above** the observed dearth, and its `⁸Be*` sits ~29 MeV over
+  the neutron threshold. One of the program's most publishable standalone settled-negatives.
+- **No sub-threshold on-shell rung in A=4** (`entrance_corridor_survival_check` TEST 1) — ⁴He has zero bound
+  excited states, so *no state-ladder disposal* exists below breakup; shedding must ride the moving assembly
+  trajectory. Forces the corridor formulation of the open problem.
 
 ---
 
@@ -186,6 +195,19 @@ kill conditions and a single computable unknown — not a claimed result.**
    the measured ~10⁻⁷ baseline?** — that alone is the B=4/B=8 moduli-space geodesic / HPC run. (The E0-pair
    e⁺e⁻ discriminator is discharged by kinematics but was only ever *secondary*; the strong-particle/neutron
    flux is the primary falsifier and stands.)
+   **[SHARPENED 2026-09-14, second pass (jewel audit → two new checks).]** (i) **Two bars, not one**: beating
+   `~10⁻⁷` is only the *existence* bar; *explaining the data* (the observed dearth `n/⁴He ≤ 10⁻⁹`) requires
+   `Γ_LZ ≥ ln(10⁹)/2π = 3.30` — `Δ_suff = 5.47 × Δ_dominance` — and with the Cauchy–Schwarz ceiling
+   `Δ ≤ 23.85 MeV` this **derives a new fence on the crossing**: `β·|dF| ≤ 0.874 MeV/fm` (the data forces the
+   slow/soft corner; `delta_b4_landau_zener_bridge_check` TEST 2b). (ii) **The "≥3 open objects" collapse to
+   ONE corridor question** (`entrance_corridor_survival_check`): ⁴He has **no bound excited states** (first
+   excited 0⁺₂ at 20.21 MeV sits *above* p+t at 19.815 — no sub-threshold rung exists to pause on), and any
+   supra-threshold dwell dies at `τ½ ≈ 9×10⁻²² s` — so the only aneutronic route is a **dissipative
+   sub-breakup corridor** shedding the full 23.85 MeV *during* assembly, never dwelling above p+t. "Slow
+   coherent assembly" survives strictly in the *sub-threshold* sense. The corridor's existence on the
+   near-BPS B=4 adiabatic surface = the `ρ_eff` run — unchanged in difficulty, but now one named geometric
+   question with two computable bars, and a win either way (corridor excluded → the aneutronic reading falls,
+   a decisive settled-negative).
 3. **The lab confrontations that would decide it** — none of which have the required diagnostics in the
    current candidate-system record: neutron-yield-vs-heat (the band-independent kill); `He-4/heat = 24 MeV/⁴He`
    to `<×2` with the ×5 scatter beaten down; an inharmonic CK triplet vs harmonic; geometric `N^L` yield
@@ -195,8 +217,10 @@ kill conditions and a single computable unknown — not a claimed result.**
 
 ## 7. Provenance & prior-art hygiene
 
-**Keep-out (discipline pass, verified `git grep` = 0 hits in the committed repo):** a phantom
-`BLUE_SKY_ANNEX` citation and the τ/threshold numbers hung on it, `[V]`-mislabeled transmutation Q-values, and
+**Keep-out (discipline pass; the phantom citation itself appears nowhere in the committed repo — the only
+tracked mention is this keep-out note, its token broken so the grep invariant holds):** a phantom
+"BLUE-SKY-annex"-style citation and the τ/threshold numbers hung on it, `[V]`-mislabeled transmutation Q-values
+(*those Q-values are now legitimately harnessed: `transmutation_qvalue_arithmetic_check.py`, 2026-09-14*), and
 an "SU(2) baryon-firewall theorem" exist **only in an uncommitted agent-report layer** — never promote them
 into the jewel without stripping the fabricated anchor and re-sourcing the (correct textbook) kinematics. The
 committed synthesis is clean and uses only the real `τ_bk≈2.4e-21 s` (Bacca 2015).

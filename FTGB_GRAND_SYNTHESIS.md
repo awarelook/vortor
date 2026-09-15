@@ -52,8 +52,8 @@ detuning gap) and an inherited, literature-measured electron screening. The ener
 source (a per-event quantum ~`1e4-1e5x` the eV-scale trigger, as in fission or fusion), not over-unity,
 which would be a category error; the inherited `COP ~ 1.3-1.4` is field positioning, not a derived excess.
 
-Everything traces to four measured anchors `{B, n_i, m_i, R}` with **zero free structural
-parameters**. The work is presented as a tiered SYNTHESIS HYPOTHESIS, with its load-bearing
+Everything traces to four measured anchors `{B, n_i, m_i, R}` plus **one `[S]` geometric selection
+(`eps = a/R = 1/phi`), with zero *fitted* structural parameters**. The work is presented as a tiered SYNTHESIS HYPOTHESIS, with its load-bearing
 machinery credited to established, peer-reviewed physics and its open frontiers reduced to named
 external computations -- not as a claimed-proven grand unification.
 
@@ -696,8 +696,8 @@ operational dictionary (Reed/M8: mass = whirl-energy, charge = torsion-holonomy)
 
 **Topology.** The *idealized closed-fibre reference field* carries integer Hopf invariant
 `Q_H = 1` (a credited property of the base Hopf map, used here only as an idealization
-label); the *actual CK object* carries a *real* helicity `H = 0.088` [V] (grid-convergent,
-sign-definite), NOT an integer Hopf charge -- the CK field is not closed-fibre (the
+label); the *actual CK object* carries a *real* helicity `H = 0.088` [V-external
+(grid-convergent in the parent corpus; in-repo capture backlog), sign-definite], NOT an integer Hopf charge -- the CK field is not closed-fibre (the
 Whitehead pull-back is 54% non-solenoidal; `j_1(lambda R) = 0` does not compactify). So
 `Q_H = 1` is only the idealized-reference label, not the object's integer, and
 `Q_H = B^2`-type identifications are excluded. Consistently, the object's *computed* continuous
@@ -927,7 +927,8 @@ family -- a bounded torus-with-a-hole with a positive largest Lyapunov exponent.
   lambda_max = 0.107  [1/time]         |  sign(lambda_max) > 0  =>  chaotic
   (literature/toolkit band 0.10-0.124) |  (the load-bearing claim is the SIGN)
   -------------------------------------|--------------------------------------
-  tier: [V] positive-exponent detection (Benettin et al. 1980);
+  tier: [V] positive-exponent detection (Benettin et al. 1980; in-repo capture 2026-09-14:
+        multibody_sync_capture_check.py, lambda_max = 0.094 computed, sign robust);
         Aizawa/Langford forced-Hopf normal form [credited]; FTGB reading [analogy].
 ```
 
@@ -954,7 +955,8 @@ parameter.
                     = 1.596*sigma (Gaussian) |     (r ~ 0.04 -> 0.38 -> 0.71)
   -------------------------------------------|--------------------------------------
   Pi-group / tier: order parameter r = |<exp(i theta)>|; threshold [credited: Kuramoto
-  1975/1984, Strogatz 2000]; numerical onset [V]; FTGB identification [S].
+  1975/1984, Strogatz 2000]; numerical onset [V] (in-repo capture 2026-09-14:
+  multibody_sync_capture_check.py -- P = 1.20 at grid, r(2 K_c) = 0.69); FTGB identification [S].
 ```
 
 Applied to the three FTGB sub-populations, the single control `P = K/K_c` gives a modest, explicitly
@@ -972,7 +974,9 @@ heartbeat does**: the whirl / Compton clock at `omega_C = 7.76e20 rad/s` (the zi
 macroscopic collective whirl locks, closing a striking internal-consistency identity,
 
 ```
-  omega_EVO (macroscopic whirl)  =  2*pi * f_1(121 kHz)  =  7.603e5 rad/s   (0.035%)   [V]
+  omega_EVO (macroscopic whirl)  =  2*pi * f_1(121 kHz)  =  7.603e5 rad/s   (0.035%)
+  [flag -- logged in COINCIDENCE_LEDGER 2026-09-14: the 2*pi*f_1 arithmetic is trivial, but the
+   comparison target omega_EVO is not vendored (provenance-incomplete), so no [V] until sourced]
 ```
 
 -- the family-axis whirl and the carrier-comb *fundamental* are the same clock (private fast clock,
@@ -1009,8 +1013,9 @@ assumed flat.
 
 Three multiplicative factors set `k_h` relative to the fundamental: the perturbative order of the `h`-th
 temporal overtone (`eps^{h-1}`, credited weakly-nonlinear expansion); a geometric CK-Bessel triad factor
-`<C> = |V_111| = 2.30` [V, from the actual CK eigenmode overlaps]; and an inharmonic off-resonance factor
-`<D> ~ 0.86` [V] that *extra*-suppresses high overtones because integer multiples of the fundamental miss
+`<C> = |V_111| = 2.30` [V-external: parent-corpus CK eigenmode overlaps -- in-repo capture backlog,
+no repo script computes the overlap integrals yet]; and an inharmonic off-resonance factor
+`<D> ~ 0.86` [V-external, same backlog] that *extra*-suppresses high overtones because integer multiples of the fundamental miss
 every CK eigenfrequency. Combined,
 
 ```
@@ -1109,7 +1114,10 @@ hold for the full 4-current to close:
 - **Density leg** -- does `rho ~ K^0 = A . B` hold as a profile identity?
 - **Current leg** -- does the *flux* also match, `rho v ~ K^i`, so the full 4-current closes?
 
-**Density leg = [V].** In the Beltrami gauge `A = B/lambda`, the helicity density is `K^0 = A . B =
+**Density leg = [V-consistency, given the London ansatz].** The London relation `curl v = -(q/m) B` is
+the load-bearing POSTULATE here: given it (plus the gauge identity `A.B = |B|^2/lambda`), the perfect
+correlation below is *entailed*, so this leg verifies the internal consistency of the postulate, not an
+independent derivation. In the Beltrami gauge `A = B/lambda`, the helicity density is `K^0 = A . B =
 |B|^2/lambda >= 0` (sign-definite, verified to `3e-15`). With the London relation `curl v = -(q/m) B` (a
 cold-condensate flow locked to the field, verified to `7e-15`), the matter-density profile tracks `|B|^2`
 with correlation `corr(rho, A.B) = 1.0000` -- an exact dimensionless PROFILE identity. Crucially, `K^0`
@@ -1390,7 +1398,8 @@ re-reading and an extension of tested physics at four specific joints, and it le
                 |                                            | closure (Frenet) holonomy defect.        | '137-turn re-sync' is a suggestive analogy,
                 |                                            |                                          | computed winding iota ~ 1 (Hopf ring), not 137.
   --------------|--------------------------------------------|------------------------------------------|-------------------------------------------
-  WAVEFUNCTION  | Born rule: psi a probability amplitude;    | Madelung flow: psi = sqrt(rho)exp(iS/h)  | continuity residual ~5e-16 [V] -- the two
+  WAVEFUNCTION  | Born rule: psi a probability amplitude;    | Madelung flow: psi = sqrt(rho)exp(iS/h)  | continuity residual ~5e-16 [V-external;
+                |                                            |                                          | in-repo capture backlog] -- the two
                 | ubiquitously confirmed.                    | read as a real compressible fluid; the   | are mathematically identical; the flow
                 |                                            | Bohm potential lets the wave stand.      | reading is what makes the object a soliton
                 |                                            |                                          | rather than a spreading packet.
@@ -1503,7 +1512,15 @@ state (Battye & Sutcliffe 1997). Helicity `K^0 = A.B` -- a real number `H ~ 0.08
 conserved independently by `d_mu B^mu = 0` [credited]. Baryon number is conserved throughout this
 section.
 
-**Disposal character [S].** The 23.847 MeV released leaves by a mechanical fissility / ejecta
+> **[UPDATED 2026-09-14 by the disposal chain -- current-true: `results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md` §6.]**
+> The disposal OPERATOR is settled as `E0` (monopole) / collective `[credited-required]` -- the anapole
+> toroidal dipole is double-forbidden for `0+ -> 0+` (Wigner-Eckart zero AND parity), so the anapole is the
+> ACTIVE SITE (slow confinement/coherence at assembly), not the energy-disposal antenna. The one open
+> problem is the entrance-channel assembly corridor (one geometric question, two data bars --
+> `entrance_corridor_survival_check.py`), NOT "one matrix element." The paragraph below is the pre-09-14
+> framing, kept for the record.
+
+**Disposal character [S, superseded as above].** The 23.847 MeV released leaves by a mechanical fissility / ejecta
 continuum -- the near-BPS `B = 4` configuration sheds energy into a kinetic ejecta continuum that
 does possess states near 20 MeV, so the classic "no 20 MeV mode" objection does not apply to the
 continuum channel. Aneutronicity is dynamical (the cold trajectory selects the He-4 sheet while the
@@ -1552,7 +1569,9 @@ survives as an inherited input rather than an object-derived one (see E.2.6).
 
 **The decoupling: the desert is a red herring for the resolution.** The decisive move is not another
 bridge but a *decoupling.* The one genuinely open kernel number is `Delta = M_fi(theta)`, a **static
-nuclear-structure matrix element**, and the theory's accepted formation mechanism is cold and
+nuclear-structure matrix element** *(2026-09-14 update: refined to the entrance-channel assembly
+corridor with `Delta = 23.85 MeV x rho_eff` as its LZ-bridge reduction -- "one matrix element" alone
+was refuted as the full open problem; see the resolution map §6.2)*, and the theory's accepted formation mechanism is cold and
 structural (compression + screening + cold Landau-Zener branching), not a heated frequency cascade.
 Two disciplined shortcuts confirm the decoupling by refutation: the internal-clock (Compton/whirl)
 degeneracy between identical deuterons is a pure global c-number phase that cancels in any transition
@@ -1606,7 +1625,8 @@ The branching amplitude factorizes cleanly by channel `alpha` (partial-wave / mu
   ab-initio NCSMC / RGM piece, the deciding number.
 
 A from-scratch `O_h` character table (self-checked against Tinkham / Koster) settled `C_alpha` and
-`A_alpha` [V]: the reaction is confined to the gerade sector, odd-parity octupole (breakup-ward) modes
+`A_alpha` [V-external: parent-corpus calc; the in-repo `octahedral_oam_ladder_check.py` covers the
+SO(3)->O subduction leg only -- full O_h gerade/parity capture is on the backlog]: the reaction is confined to the gerade sector, odd-parity octupole (breakup-ward) modes
 are parity-forbidden from the `0+` s-wave entrance, and the `0+ -> 0+` gamma is E0-suppressed. But the
 `n+3He` and `p+t` exits are symmetry-allowed, so the symmetry factor is at most `~O(10)` -- seven to
 nine orders short of the `~1e8 .. 1e9` needed. Two independent derivations (a desk refutation and the
@@ -1739,7 +1759,9 @@ contradiction; each reduces to a *specific, named, external* computation or ingr
 which is the honest shape of the theory's present boundary.
 
 - **The LENR branching amplitude `Delta`** (off-diagonal `B=4` two-diabatic-surface
-  Landau-Zener gap) is `[S]`/open. It is a static nuclear-structure matrix element,
+  Landau-Zener gap) is `[S]`/open *(2026-09-14: the open problem is the entrance-channel
+  assembly corridor -- one geometric question, two data bars; `Delta = 23.85 MeV x rho_eff`
+  is its LZ-bridge reduction, not a lone matrix element -- resolution map §6.2)*. It is
   decoupled from the frequency desert; its computation is a named external task -- a
   topology-preserving, pion-massive, fine-grid Skyrme relaxation (the reduced ansaetze
   provably fail in the crossing region; the blocker is diagnosed and priced, not

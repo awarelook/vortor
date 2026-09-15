@@ -35,6 +35,6 @@
   "outputs": [
     "m16_ck_comb_fingerprint.png"
   ],
-  "note": "a harmonic 1:2:3 comb would FALSIFY the Beltrami-carrier reading -- the sharpest fingerprint.",
+  "note": "a harmonic 1:2:3 comb would FALSIFY the Beltrami-carrier reading -- the sharpest fingerprint, in the linear/low-drive limit (M16: under hard drive the ratios pull anharmonically; Duffing pull separable from Arnold lock)",
   "provenance": "FTGB jewel -- github.com/awarelook/vortor; numbers backed by results/verify/"
 }

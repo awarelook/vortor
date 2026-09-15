@@ -72,7 +72,7 @@ Source: `frontier_calcs/ws5_hbar_b_eff_reduction_to_medium.py` (re-run 2026-08-1
 `σ₀/R=0.362`, GL `κ≈6.8`, the **beat ratio `f_b/f_c`** (anchor-immune — ★ DERIVED FROM GEOMETRY
 2026-08-27 [T1], `frontier_calcs/tae_beat_from_geometry.py`: a rigorous FreeFEM `H(curl)` eigensolve at
 ε=0.697 gives the convention-independent splitting `Δλ=0.2806`, i.e. `f_b/f_c ≈7%`, band 6–8%; a 14-point
-small-ε scan (`frontier_calcs/beat_smalleps_scan.edp`) SETTLES the scaling: the **raw gap Δλ is LINEAR in
+small-ε scan (`freefem/beat_smalleps_scan.edp`) SETTLES the scaling: the **raw gap Δλ is LINEAR in
 ε** — first-order toroidicity, `Δλ=0.208·ε = ε/(2j₀₁)`; the earlier `∝ε²` was a carrier-normalization
 artifact. **Report the invariant Δλ, not a scaling label.**), the octahedral fold, the entire mass/gauge
 tower, `sin²θ_W`. So the STRUCTURE and RATIOS are robust; only ABSOLUTE fields/frequencies carry the

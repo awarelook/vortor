@@ -2585,12 +2585,17 @@ universal process: a **matter-wave beat** whose transition amplitude factorizes 
 skeleton* times an *open radial overlap* (Δ), on a *discrete knot lattice*, with energy–mass conserved as a
 matter-wave frequency ledger. The LENR anomalies are what this kernel predicts **structurally**, and the
 excess heat is affirmatively **nuclear** (`d+d → ⁴He`, an energy-conserving **23.847 MeV** mass-defect
-release) — a nuclear *source*, not over-unity. The rate reduces to **one computable matrix element (Δ), with
-`U_s` measured** — named, not fabricated (positive-core capstone: `LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
+release) — a nuclear *source*, not over-unity. *(2026-09-14 supersession — current-true:
+`results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`. The "one computable matrix element" framing was
+REFUTED by the disposal chain: the disposal operator is `E0`/collective `[credited-required]`, the anapole is
+the ACTIVE SITE, and the one open problem is the entrance-channel assembly corridor — one geometric question,
+two data bars — with `Δ = 23.85 MeV × ρ_eff` its LZ-bridge reduction and `U_s` measured.)* The historical
+2026-09-10 statement, kept for the record: the rate reduces to one computable matrix element (Δ), with
+`U_s` measured — named, not fabricated (positive-core capstone: `LENR_YINYANG_CONNECTIONS_2026-09-10.md`).
 
 **Tier.** `[S] synthesis` throughout, with `[V]` for the conservation arithmetic (the nuclear energy itself),
 `[credited]` for the established nuclear/plasma physics **and the measured screening `U_s`**, and `[open]`
-for the **one** remaining rate input Δ. **COP>1 is a nuclear *source* — the ~10⁴–10⁵/event nuclear-to-chemical
+for the rate input (per the 09-14 supersession above: the assembly corridor / `ρ_eff`, not a lone Δ). **COP>1 is a nuclear *source* — the ~10⁴–10⁵/event nuclear-to-chemical
 energy ratio of an energy-conserving `d+d → ⁴He` release — not over-unity (a category error);** no absolute
 rate or cross-section is derived; the `e^(-2/3)` factor stays excised.
 
@@ -3453,7 +3458,8 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
 - Hagelstein, P.L. (2018), "Phonon-mediated Nuclear Excitation Transfer," *J. Condensed Matter Nucl. Sci.*
   27, 97–142 (MIT) — off-resonant, M1, phonon-coupled nuclear excitation transfer with cooperative (Dicke)
   enhancements and up/down-conversion; explicitly treats the `D₂/⁴He` transition shedding a large nuclear
-  quantum *without prompt γ*. The named academic precedent for the FTGB **open-Δ disposal channel** (the
+  quantum *without prompt γ*. The named academic precedent for the FTGB collective-disposal channel
+  *(2026-09-14: operator settled as `E0`/collective; "open-Δ disposal" superseded — resolution map §6)* (the
   23.847 MeV of `d+d→⁴He` partitioned into the coherent collective/lattice-phonon mode rather than fast
   neutrons or hard γ; `results/LENR_MATTERWAVE_INTERACTION_MODEL_2026-09-09.md` §4). Cited as prior-art
   **mechanism only** — Hagelstein states the effect as computed is "insufficient to account for" his lab's

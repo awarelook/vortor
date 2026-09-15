@@ -25,6 +25,11 @@ fabricated; the model is exact, the inputs carry an honest nuclear-scale band.
   TEST 2 -- the mechanism's requirement, made precise: aneutronic dominance (f > 1/2) requires
             Delta >= sqrt( hbar c * beta * |dF| * ln2 / (2 pi) ) -- a computable threshold GIVEN the crossing
             inputs. The target band 1.4-1.9 MeV corresponds to a specific, testable branching regime.
+  TEST 2b - THE TWO-BAR CORRECTION (jewel audit 2026-09-14): f > 1/2 is only DOMINANCE; the OBSERVED bar is
+            the dearth n/4He <= 1e-9  =>  Gamma >= ln(1e9)/2pi = 3.30 (30x dominance), Delta_suff = 5.47 x
+            Delta_dom. With the Cauchy-Schwarz ceiling Delta <= 23.85 MeV this DERIVES a new fence on the
+            crossing: beta*|dF| <= 0.874 MeV/fm -- the data forces the slow/soft corner (converges with
+            entrance_corridor_survival_check independently).
   TEST 3 -- FALSIFIABILITY (the payoff): a future ab-initio Delta (near-BPS/HPC), plugged into this bridge,
             PREDICTS the 4He/neutron ratio -> compare to experiment. And the converse: measuring the observed
             ratio INVERTS to the effective Delta the data requires. Either way the open number is now
@@ -103,6 +108,34 @@ check("aneutronic dominance requires a computable threshold Delta (given the cro
       1.0 < Dd0 < 20.0, "central inputs -> Delta_dom = %.1f MeV; the 1.4-1.9 MeV band is a specific, testable regime" % Dd0)
 print("   -> hot fusion (weak effective coupling / fast crossing) sits at the diabatic/NEUTRON end (4He ~1e-7);")
 print("      the aneutronic LENR channel REQUIRES the adiabatic/large-Delta end -- a precise, falsifiable demand.")
+
+banner("TEST 2b -- THE TWO-BAR CORRECTION (jewel audit 2026-09-14): dominance is NOT the observed bar")
+# The observed dearth is n/4He <= 1e-9 (disposal_coherence_volume_nogo TEST 1), not f > 1/2.
+# (1-f)/f <= 1e-9  =>  exp(-2 pi Gamma) <= ~1e-9  =>  Gamma >= ln(1e9)/(2 pi) -- vs ln2/(2 pi) for dominance.
+R_OBS = 1e9
+G_suff, G_dom = np.log(R_OBS) / (2 * np.pi), np.log(2) / (2 * np.pi)
+ratio_bars = np.sqrt(np.log(R_OBS) / np.log(2))
+print("   EXISTENCE bar  (beat the measured ~1e-7 baseline): the milestone.")
+print("   SUFFICIENCY bar (explain the dearth n/4He <= 1e-9): Gamma >= ln(1e9)/2pi = %.2f  (vs %.3f dominance)" % (G_suff, G_dom))
+print("   -> Delta_suff / Delta_dom = sqrt(ln 1e9 / ln 2) = %.2f x" % ratio_bars)
+D_MAX = 23.847                      # Cauchy-Schwarz ceiling: Delta = 23.85 MeV x rho_eff, rho_eff <= 1
+bdF_fence = 2 * np.pi * D_MAX ** 2 / (HBAR_C * np.log(R_OBS))
+print("   grid of the SUFFICIENCY Delta and its rho_eff = Delta/23.85:")
+feas, infeas = 0, 0
+for beta, dF in [(0.03, 10.0), (0.1, 20.0), (0.3, 50.0)]:
+    Ds = np.sqrt(HBAR_C * beta * dF * np.log(R_OBS) / (2 * np.pi))
+    rho = Ds / D_MAX
+    tag = "feasible (rho_eff <= 1)" if rho <= 1 else "INFEASIBLE (needs rho_eff > 1)"
+    feas += rho <= 1; infeas += rho > 1
+    print("     beta=%.2f, |dF|=%2.0f -> Delta_suff = %5.1f MeV, rho_eff = %.2f  [%s]" % (beta, dF, Ds, rho, tag))
+print("   DERIVED FENCE: sufficiency within rho_eff <= 1 REQUIRES beta*|dF| <= 2pi*23.85^2/(hbar_c*ln 1e9)")
+print("                  = %.3f MeV/fm -- the observed dearth FORCES the slow/soft crossing corner," % bdF_fence)
+print("                  converging independently with entrance_corridor_survival_check (slowness only sub-threshold).")
+check("bar ratio Delta_suff/Delta_dom = 5.47 (exact arithmetic)", abs(ratio_bars - 5.468) < 0.01, "%.3f" % ratio_bars)
+check("the sufficiency bar has teeth: feasible AND infeasible corners exist in the honest input band",
+      feas >= 1 and infeas >= 1, "%d feasible / %d infeasible of 3 grid points" % (feas, infeas))
+check("derived feasibility fence beta*|dF| <= %.2f MeV/fm" % bdF_fence, abs(bdF_fence - 0.874) < 0.01,
+      "a NEW computed constraint on the crossing, from the dearth + the Cauchy-Schwarz ceiling alone")
 
 banner("TEST 3 -- FALSIFIABILITY: the open number is now testable both ways  [the payoff]")
 # forward: a hypothetical ab-initio Delta -> predicted observable (illustrative, NOT a computed Delta)

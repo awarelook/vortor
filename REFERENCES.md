@@ -37,7 +37,11 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   coordinate); Battye & Sutcliffe (1997); Barnes, Baskerville & Turok (1997), *PRL* 79,
   367 (B=4 mode spectrum); Houghton, Manton & Sutcliffe (1998); Feist, Lau & Manton (2013), *PRD* 87, 085034;
   Gudnason & Halcrow (2018), *PRD* 98, 125010; Halcrow (2016), *Nucl. Phys. B* 904, 106; Adam, Sánchez-Guillén
-  & Wereszczyński (2010) — BPS/near-BPS Skyrme. Eto & Nitta (2025), *PRL* — knot solitons.
+  & Wereszczyński (2010) — BPS/near-BPS Skyrme. Eto & Nitta (2025), *PRL* — knot solitons
+  `[incomplete: vol/page missing — complete before external use]`.
+  *(Audit note 2026-09-14: the PRL 79, 367 attribution for the B=4 mode spectrum was CHALLENGED by an
+  audit pass (proposing a swap with the B=2 deuteron paper) and VERIFIED CORRECT against the original —
+  hep-th/9704012 "Normal Modes of the B=4 Skyrme Soliton" IS PRL 79, 367 (1997). Kept; challenge logged.)*
 - Braaten, E., Townsend, S. & Carson, L. (1990), *Phys. Lett. B* 235, 147 — the minimal-energy `B=4`
   Skyrmion has **cubic (octahedral, O_h) symmetry**; rigid-body (Finkelstein–Rubinstein) quantization forces
   its collective angular momentum to step by the point-group order (ground `J=0`, first excited `J=4`). This
@@ -73,7 +77,6 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   the **Reeb field of a contact structure**; the correct geometric frame for the toroidal resonator (already
   `[credited]` in the synthesis §A). Spectral-geometry side: the CK spectrum + cascade `λ_L = λ_0 N^L`
   (§3, M14) and the `S³` curl spectral zeta / Ray-Singer torsion (M13, `curl_spectral_zeta_pi_power_check.py`).
-- Ab-initio: Hupin, Quaglioni & Navratil (2019), *Nat. Commun.* 10, 351; Quaglioni & Navratil (2008).
 - Ab-initio: Hupin, Quaglioni & Navratil (2019), *Nat. Commun.* 10, 351; Quaglioni & Navratil (2008).
 
 **LENR disposal-channel mechanism (phonon-nuclear prior art, contested field).**
@@ -288,6 +291,10 @@ adversarial prior-art pass. The mechanism is `[S]`; the energy accounting `[V]`;
 - **The E0 selection rule** (the crux): Church, E.L. & Weneser, J. (1956), *Phys. Rev.* **103**, 1035 — a
   single real photon cannot mediate a `0⁺→0⁺` transition (no `L=0` photon) — the credited nuclear-structure
   reason an aneutronic ⁴He channel must shed its 23.85 MeV **collectively**. `[credited]`.
+- **The measured ~1e-7 aneutronic baseline** (the bar the open problem is defined against): Wilkinson, F.J.
+  III & Cecil, F.E. (1985), *Phys. Rev. C* **31**, 2036 — `D(d,γ)⁴He` at low energy: the radiative-capture
+  branch is ~seven orders of magnitude below the nucleon channels. `[credited — resolves the vendored
+  ledger's "verify vol/page at lock" flag, 2026-09-14]`.
 - **Ponderomotive (Miller) force**: Gaponov, A.V. & Miller, M.A. (1958), *Sov. Phys. JETP* **7**, 168
   (*ZhETF* **34**, 242) — `U_p = q²⟨E²⟩/4mω²`; real, but `∝1/m` (electron-mediated) and the non-relativistic
   form fails at `a₀~1` (Quesnel & Mora (1998), *Phys. Rev. E* **58**, 3719). Tajima, T. & Dawson, J.M.
@@ -324,8 +331,9 @@ the fenced settled-negative.*
   envelope is not a linear Fourier line; the difference frequency appears in a quadratic (energy/intensity)
   observable. `[credited]`.
 - **Parametric resonance & the anharmonic oscillator**: Landau, L.D. & Lifshitz, E.M., *Mechanics* (3rd ed.,
-  Pergamon 1976), §27 (parametric resonance, principal tongue `Ω=2ω₀`, threshold), §29 (the anharmonic
-  oscillator, amplitude-dependent frequency / backbone `ω(a)=ω₀+(3β/8ω₀)a²`); Mathieu, É. (1868), *J. Math.
+  Pergamon 1976), §27 (parametric resonance, principal tongue `Ω=2ω₀`, threshold), §§28–29 (anharmonic
+  oscillations & resonance in nonlinear oscillations — the amplitude-dependent frequency / backbone
+  `ω(a)=ω₀+(3β/8ω₀)a²`; cited jointly since the 3rd-edition section split is edition-sensitive); Mathieu, É. (1868), *J. Math.
   Pures Appl.* **13**, 137 (the Mathieu equation); Nayfeh, A.H. & Mook, D.T. (1979), *Nonlinear Oscillations*
   (Wiley), ch.3–5 (multiple-scales, Duffing backbone, jump/hysteresis, odd harmonics). `[credited]`.
 - **Entrainment / phase-locking**: Adler, R. (1946), *Proc. IRE* **34**, 351 (`dψ/dt=Δω−K sin ψ`, lock iff
@@ -404,7 +412,9 @@ that thread). Disentangle before citing any "Reed" item externally; QWM claims a
 
 **Nielsen — TUFT (Topological Unified Field Theory)** — `[S]`/`[credited on the topological core]`.
 - Nielsen, J.L., "The Topological Unified Field Theory on the Complex Hopf Fibration `S¹→S⁹→CP⁴`," Center for
-  Topological Physics (**peer-reviewed / accepted (multiple TUFT papers), Int. J. Topology** (lineage 2019 → 2025)). SM gauge
+  Topological Physics (**peer-reviewed / accepted (multiple TUFT papers), Int. J. Topology** (lineage 2019 → 2025);
+  *audit note 2026-09-14: this acceptance status rests on the project's own reconciliation — add the specific
+  paper titles/DOIs/acceptance dates when available so it is externally checkable rather than asserted*). SM gauge
   groups + gravity + mass spectrum from the Hopf bundle; knot eigenmodes of the 9D curl operator; Beltrami–
   Higgs on `S³`. In-repo primary: `TUFT Jenny Nielsen.pdf` (180 pp.). Used where its topology is load-bearing;
   its full unification claims are carried at preprint tier, not asserted as established. **On the neutrino,**

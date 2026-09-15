@@ -31,7 +31,8 @@ fissility or Ohmic loss. The *substrate* (1–4) is `[V]`/`[credited]`; the *nuc
 
 A single real photon **cannot** carry away a `0⁺→0⁺` transition (no `L=0` photon; the ⁴He 0⁺ state at
 20.21 MeV decays by E0 internal-pair, not γ — Church–Weneser 1956 `[credited]`), and the hot `d+d→⁴He+γ`
-branch is measured at `~1e-7`. **So an aneutronic, γ-quiet ⁴He heat channel MUST shed 23.85 MeV
+branch is measured at `~1e-7` [Wilkinson & Cecil, *Phys. Rev. C* **31**, 2036 (1985) — primary resolved
+2026-09-14]. **So an aneutronic, γ-quiet ⁴He heat channel MUST shed 23.85 MeV
 collectively** — to a coherent lattice/EM mode, not a single quantum (`lenr_disposal_channel_check.py`
 TEST 1). This is exactly the coherence the anapole resonator supplies "for free" (phase-locked, not
 thermal). The mechanism's job is to make that collective sink real.

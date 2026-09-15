@@ -7,7 +7,7 @@ validate and emits, for each scene, a poster PNG (+ looping GIF where defined) a
 that names the scene's honesty tier and its verify script(s). The tier travels with the pixel.
 
 IT IS NOT PART OF THE VERIFIED CORE OR CI: verify_all.py globs only results/verify/*.py + three named engine
-files, so this driver and engine/viz/ never change the 78/78 count. Rendering needs the quarantined viz deps:
+files, so this driver and engine/viz/ never change the harness count (81/81). Rendering needs the quarantined viz deps:
 
     pip install -r requirements-viz.txt
     python render_all.py                 # -> outputs/renders/*.png, *.gif, *.meta.json

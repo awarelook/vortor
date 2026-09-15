@@ -54,7 +54,8 @@ def _tier_color(tier):
 
 
 def _check_links(checks):
-    return " ".join("<a href='%s%s.py' target='_blank' rel='noopener'>%s</a>" % (BLOB, c, c) for c in checks)
+    names = [c[:-3] if c.endswith(".py") else c for c in checks]
+    return " ".join("<a href='%s%s.py' target='_blank' rel='noopener'>%s</a>" % (BLOB, n, n) for n in names)
 
 
 def _render_card(meta, renders_dir):
@@ -152,7 +153,7 @@ def build_gallery(renders_dir="outputs/renders", out_html="gallery.html"):
         "Every artifact below is generated from a verified model &mdash; the pipeline is "
         "<b style='color:#9fb0c3'>verified numbers &rarr; captioned artifacts &rarr; interactives</b>, "
         "and the honesty <b style='color:#9fb0c3'>tier travels with the pixel</b>.</p>"
-        "<p>Reproduce the whole model: <code style='color:#e879b9'>python results/verify/verify_all.py</code> &rarr; 78/78.</p>"
+        "<p>Reproduce the whole model: <code style='color:#e879b9'>python results/verify/verify_all.py</code> &rarr; 81/81.</p>"
         "<div class='legend'>" + legend + "</div></header>"
         "<h2>Rendered artifacts (backed by a re-runnable check)</h2>"
         "<div class='grid'>" + (render_cards or "<p>run <code>python render_all.py</code> to generate posters</p>") + "</div>"

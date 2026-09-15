@@ -114,3 +114,10 @@ coincidences being silently dismissed *or* silently promoted, (b) keeps the near
 record of clues, and (c) makes the excision decisions auditable. New coincidences get **computed and
 appended here**, never hand-waved. *No number promoted; the genuinely-close ones are flagged and kept,
 the derivations that back-fit are named, the closed forms are separated. ASCII apart from math symbols.*
+
+## Appended 2026-09-14 (jewel audit -- the forgotten-batch sweep)
+
+| Coincidence | value | target | dev | verdict |
+|---|---|---|---|---|
+| `omega_EVO` vs `2*pi*f_1` (121 kHz) | `7.603e5 rad/s` | `omega_EVO` (unvendored) | quoted 0.035% | **PROVENANCE-INCOMPLETE** `[flag]` -- the `2*pi*f_1` arithmetic is trivial; the *comparison target* `omega_EVO` (the macroscopic EVO whirl rate the synthesis matches against) has no vendored source in the repo, so the claimed 0.035% match cannot be recomputed. `[V]` stripped in `FTGB_GRAND_SYNTHESIS.md` D.1.4 pending a source; kept as a flag, not promoted. |
+| `T_shed`-class near-misses (soft-cascade time vs beat period) | -- | -- | -- | **NOT LOGGED as a match** -- rates at different energy scales are different kinds of number (the coherence-volume lesson); no cross-scale identity is claimed. |

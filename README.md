@@ -5,7 +5,7 @@
 **Author:** Nathaniel Hanks · **A self-contained package:** one interactive modeler + the two
 manuscripts + the method toolkit + two execute-ready hand-off packages.
 
-*Reproducibility gate: every push runs the full model (`verify_all.py`, **78/78** checks) on a clean
+*Reproducibility gate: every push runs the full model (`verify_all.py`, **81/81** checks) on a clean
 Ubuntu + Python 3.12 runner via GitHub Actions — a green badge means the entire model reproduces from
 scratch, deterministically, with no network. Tested stack: `numpy==2.4.6`, `mpmath==1.3.0`.*
 
@@ -66,7 +66,7 @@ given when they were published).
 | `engine/` | **`ftgb_engine.py`** — the theory as one executable model: anchors {B,n,m_i,R} → static structure + dynamics + theorem verification, all tiered (`python engine/ftgb_engine.py`) · **`ftgb_resonator_sim.py`** — the theory as **running simulation**: full nonlinear pseudo-spectral NS evolution of the eternal Beltrami state (tracks `e^{−νλ²t}u₀` to ~5e-16; Taylor–Green contrast departs), the CK comb + kHz beat, the driven Lorentzian, and the de Broglie matter-wave packet (`v_g·v_p=c²` measured) |
 | `handoffs/` | precise, execute-ready problem packages for the two hard open computations — incl. the **R2 numerical run** now scoped to a runnable reference solver (`r2_reference_solver.py`) + spec that a collaborator scales to GPU |
 | `results/` | executed advances: R2 near-Beltrami enstrophy theorem, R3 Hall-MHD canonical lift, the matter-wave LENR interaction model, the electron torsion-defect explanation, the **α resolution** (the winding derivation settled-**negative**, `ι≈1` not 137; α correctly-typed by several lenses — g−2 beat, impedance — but not derived, value open), the **chirality / charge-conjugation / Majorana** cluster (all computed: chirality = `sign(λ)`, antiparticle = `−λ` = C, neutrino = self-dual `θ_χ=45°`), the 2026-09-10 **experimental confrontation** (each fingerprint vs the published record), + **`verify/`** — the reproducible math model: every load-bearing `[V]` claim has a script (map in `results/verify/README.md`) |
-| `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: **78/78** checks (75 theory scripts + the engine + the synthesis modeler + the resonator simulation), exit 0 iff every one passes |
+| `requirements.txt` | Python deps (mpmath, numpy) — **`pip install -r requirements.txt && python results/verify/verify_all.py`** re-runs the whole model: **81/81** checks (75 theory scripts + the engine + the synthesis modeler + the resonator simulation), exit 0 iff every one passes |
 
 ## Where this credibly stands — the practical, positive value
 
@@ -92,10 +92,11 @@ is a set of concrete, field-useful deliverables, each at a stated tier:
 4. **An honest LENR position for the field.** Scaffold-not-reaction: the *environment* is
    verified (the plasmoid-formation recipe — cold-seed condensation, the comb, the coherent
    collective mode), the experimental anomalies (aneutronic excess heat, He-4/heat, COP≈1.3–1.4)
-   are structurally accounted for, and the *rate* reduces to exactly two named inputs — a
-   branching amplitude Δ (FTGB-internal, open) and a screening energy U_s (host-lattice,
-   inherited). No over-unity is claimed; FTGB derives no COP. This tells the CMNS field what
-   is settled, what is inherited, and what one calculation would close.
+   are structurally accounted for, and the one open problem is the **entrance-channel assembly
+   corridor** (one geometric question with two data bars — existence `>1e-7`, sufficiency
+   `n/⁴He ≤ 1e-9`), with `Δ = 23.85 MeV × ρ_eff` its Landau–Zener-bridge reduction and the
+   screening `U_s` inherited (host-lattice, measured). No over-unity is claimed; FTGB derives
+   no COP. This tells the CMNS field what is settled, what is inherited, and what remains open.
 
 The open problems are stated as **named external computations**, not internal cracks — the
 `handoffs/` packages make them execute-ready for a PDE/analysis collaborator (R2 regularity)
@@ -124,15 +125,19 @@ naive soliton gives `g = 1`; the Hopf topology earns spin-½ `[credited]`). R2 i
 upgrade to the `[V]` core (execution-limited, scoped). The whole frontier is synthesized in the capstone
 [`results/OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md`](results/OPEN_QUESTIONS_PRINCIPLED_RESOLUTION_2026-09-10.md).
 
-**LENR — the positive nuclear core (2026-09-10).** COP > 1 is **not** over-unity — it is a **nuclear** energy
+**LENR — the positive nuclear core (updated 2026-09-14).** COP > 1 is **not** over-unity — it is a **nuclear** energy
 release (`d+d → ⁴He` = 23.847 MeV mass defect, **energy-conserving**), a nuclear source with a per-event gain
 ~10⁴–10⁵. The barrier is lowered by **measured** electron screening (`U_s ≈ 300–800 eV`; Raiola/Huke/Czerski),
-and the He-4/heat = 24 MeV signature (Miles) confirms the heat is nuclear. The rate reduces to **one computable
-matrix element** — Δ, read in the toroidal-beat model as the **spectral detuning** `Δλ = λ₂−λ₁` (which sets the
-`{121,208,294}` kHz comb beats and is structurally the nuclear Landau–Zener gap) — with `U_s` measured. And the
+and the He-4/heat = 24 MeV signature (Miles) confirms the heat is nuclear. The **disposal chain is converged**:
+the disposal operator is `E0` (monopole) / collective `[credited]` — no single photon mediates the `0⁺→0⁺` jump —
+and the anapole knot is the **active site** (slow confinement at assembly), not the energy antenna. The **one
+open problem** is the entrance-channel **assembly corridor**: can coherent *sub-threshold* assembly beat the
+measured `~1e-7` bound-⁴He baseline (Wilkinson–Cecil 1985) — and reach the observed dearth `n/⁴He ≤ 1e-9`
+(`entrance_corridor_survival_check.py`, `delta_b4_landau_zener_bridge_check.py`)? The kHz beat is a macroscopic
+**rate-gate, never a pump** (the kHz=MeV identity is settled-negative, dead by 16.8 orders of magnitude). The
 scaffold's coherence **is** its helicity = its chirality: the same self-dual `±λ` object that carries the
 electron/positron/Majorana chirality gives the plasmoid its Woltjer–Taylor force-free coherence `[credited]`.
-Synthesis + citations: [`results/LENR_YINYANG_CONNECTIONS_2026-09-10.md`](results/LENR_YINYANG_CONNECTIONS_2026-09-10.md).
+Current-true map: [`results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`](results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md).
 
 ## Honest tier legend
 
@@ -141,23 +146,7 @@ contingent-open · `open` a named external problem. Load-bearing claims rest on 
 physics; the Nielsen TUFT preprint and quantum-wave-mechanics readings are marked tiered and
 are not presented as established.
 
-## Publishing to GitHub (run these yourself, when ready)
+## Releases
 
-This bundle is structured to drop straight into a repository. From the bundle folder:
-
-```bash
-git init
-git add .
-git commit -m "FTGB coherent-object modeler + tiered synthesis bundle"
-git branch -M main
-git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO>.git
-git push -u origin main
-# for a PR from a feature branch instead:
-#   git checkout -b ftgb-synthesis && git push -u origin ftgb-synthesis
-#   then open the PR on GitHub, or:  gh pr create --fill
-```
-
-Replace `<YOUR-USERNAME>/<YOUR-REPO>` with **your** repository. (Note: `LuanRT/BgUtils` is a
-third party's unrelated JavaScript library — not a destination for this content.) These
-steps need your GitHub credentials and are an outward-facing publish, so they are left for
-you to run and authorize.
+Published at [github.com/awarelook/vortor](https://github.com/awarelook/vortor) (CI badge above runs the
+full harness on every push). Tags and the DOI checklist: [`RELEASE.md`](RELEASE.md).

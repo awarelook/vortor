@@ -114,7 +114,7 @@ check("subdividing the cascade does NOT change the (virtual) suppression -> co-v
 
 # ---------------------------------------------------------------- TEST 5: the wall relocates to selection
 banner("TEST 5 -- the wall RELOCATES to channel SELECTION: the >=1e7 aneutronic branching swing is the open rate")
-gamma_branch = 1e-7                     # hot d+d -> 4He+gamma, relative to the strong 2-body channels
+gamma_branch = 1e-7                     # hot d+d -> 4He+gamma, rel. to strong channels [Wilkinson-Cecil PRC 31, 2036 (1985)]
 neutron_dearth = 1e-9                  # observed neutron/4He upper end (to 1e-12)
 swing = 1.0/gamma_branch               # how far the aneutronic channel must beat the strong exits
 print("   hot 4He+gamma branch ~%.0e of the strong 2-body exits (n+3He, p+t) ;  observed neutron/4He <= %.0e" % (gamma_branch, neutron_dearth))
