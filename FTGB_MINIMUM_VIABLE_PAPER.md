@@ -1,7 +1,7 @@
 # The Coherent Object — a minimum viable, reproducible theory
 
 **FTGB (Fractal-Toroidal-Beat):** one driven Beltrami–Hopf toroidal soliton, read at once as a plasma field
-and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**81/81**,
+and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**82/82**,
 CI-gated, no network). Full map: [`INDEX.md`](INDEX.md) · terms: [`GLOSSARY.md`](GLOSSARY.md) · citations:
 [`REFERENCES.md`](REFERENCES.md) · honest self-assessment: [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md).
 
@@ -42,7 +42,7 @@ identity (Schrödinger ⇔ a fluid) [Madelung 1927], as a **matter wave**. One o
 | **Driven / sustained** | forcing `f=νλ²u_B` makes it an **exact steady solution** (self-sustaining) and a **stable attractor** — perturbations decay, enstrophy stays bounded, **swept across Re ≈ 126 → 628** (32³, confirmed 48³) with the attraction not weakening; a Taylor–Green base drifts | `[V]`@Re≤628 `r2_driven_beltrami_attractor_check`, `r2_reynolds_sweep_check` |
 | **Heartbeat, not flywheel** | fixed-helicity energy minimization over N modes is a **linear program** whose minimum is the single lowest mode → a beat-carrying object is *never* static; it must be **driven** | `[V]` `nmode_woltjer_lp_check` |
 | **Topology** | idealized-reference Hopf charge `Q_H=1` (Gauss linking of the closed-fibre reference pair) and wave-mode Chern `C=±2` (the photon helicity index), both reproduced in-repo; the *actual CK object* carries real helicity `H≈0.088`, not an integer charge (Grand Synthesis C.2) | `[V]` `topology_invariants_check` |
-| **Current-leg trilogy** | static closure `ρv ~ K^i` ⇔ `\|B\\|=const` — impossible for nontrivial force-free fields; the driven closure is externally-driven, not emergent (the flagship structural theorem) | `[V]` `currentleg_trilogy_check` |
+| **Current-leg trilogy** | static closure `ρv ~ K^i` ⇔ `\|B\|=const` — impossible for nontrivial force-free fields; the driven closure is externally-driven, not emergent (the flagship structural theorem) | `[V]` `currentleg_trilogy_check` |
 | **S³ curl spectral zeta** | exact closed form `ζ_B(s)=ζ(s−2)−ζ(s)` ⇒ `ζ′(−2)=−ζ(3)/4π²` (verified to 1e-25; resolves the π-power anomaly) | `[V]` `curl_spectral_zeta_pi_power_check` |
 | **Reeb / contact** | the Beltrami field is a **Reeb field**; Weinstein–Taubes guarantees a closed field-line loop [Etnyre–Ghrist 2000; Taubes 2007] | `[credited]` `reeb_spectral_geometry_check` |
 | **Anapole (nonradiating)** | the ordinary dipole cancels (`~1e-16`); a Zel'dovich toroidal-dipole resonator holds energy without radiating [Afanasiev–Stepanovsky 1995; Papasimakis 2016] | `[V]`/`[credited]` `oam_toroidal_resonator_resolution_check` |
@@ -121,14 +121,17 @@ null].
 6. **`0νββ` null** [KamLAND-Zen / LEGEND] — kills the Majorana-neutrino prediction.
 7. **Beat-locked yield steps** as drive sweeps the cascade `f_b(L)=N^L f_b(0)` — the sharpest theory-specific
    discriminator (no static LENR model predicts it; the one existing dataset, HLC 2010, fits neither N^L nor
-   CK — but it is a Pd-D lattice, the wrong object).
+   CK — but it is a Pd-D lattice, the wrong object). **Control protocol** (salvaged from the June-2026
+   campaign's beat-dominance suite, 2026-09-15): a claimed step must survive ±10% drive perturbation
+   (<30% variation) **and die under phase scrambling** — a step that persists with scrambled phase is an
+   artifact, not a coherent beat property.
 8. **FWM sidebands** at `1.517 f₁`, `1.820 f₁` — decide the phase-conjugation role.
 
 ## 6. Reproduce & trust
 
 ```bash
 pip install -r requirements.txt          # numpy, mpmath
-python results/verify/verify_all.py      # 81/81 PASS, deterministic, no network, CI-gated
+python results/verify/verify_all.py      # 82/82 PASS, deterministic, no network, CI-gated
 ```
 
 Everything load-bearing has a script; the foundation numbers are re-derived in-repo; no claim exceeds its

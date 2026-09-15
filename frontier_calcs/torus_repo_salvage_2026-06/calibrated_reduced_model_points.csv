@@ -1,0 +1,6 @@
+model_name,model_description,fd_hz,fbeat_hz,E_neck_v_per_m,f_drive_norm,f_beat_norm,coupling_fraction,A0_amplitude_default,damping_factor,max_modes,strong_coupling,rho_target_bar,xi_target,envelope_order,pressure_ratio,hbar_omega_ev
+galerkin_v7,Multimode FEM-inspired Galerkin expansion,9999999999999.996,11126542795.87553,18238772.49494881,1.0,0.0011126542795875534,0.0011126542795875534,1.0,0.01,5.0,yes,,,,,
+rho_xi_plasmoid,Toroidal plasmoid with rho-xi coupled equations,9999999999999.996,11126542795.87553,18238772.49494881,1.0,0.0011126542795875534,0.0011126542795875534,0.5,0.02,,yes,1.0,0.1,,,
+extended_beat_envelope,Envelope dynamics around two-frequency beat,9999999999999.996,11126542795.87553,18238772.49494881,1.0,0.0011126542795875534,0.0011126542795875534,0.8,0.005,,yes,,,2.0,,
+pressure_breathing,Toroidal hoop stress + internal pressure coupling,9999999999999.996,11126542795.87553,18238772.49494881,1.0,0.0011126542795875534,0.0011126542795875534,0.3,0.015,,yes,,,,0.5,
+qho_reduced,Two-level quantum system with beat modulation,9999999999999.996,11126542795.87553,18238772.49494881,1.0,0.0011126542795875534,0.0011126542795875534,0.023338331586713595,0.001,,yes,,,,,0.041

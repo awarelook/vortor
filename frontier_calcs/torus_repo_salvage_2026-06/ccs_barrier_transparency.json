@@ -1,0 +1,14 @@
+{
+  "method": "Vysotskii (beat-modulated WKB)",
+  "f_beat_hz": 11127000000.0,
+  "f_beat_ghz": 11.127,
+  "coulomb_barrier_ev": 240.0,
+  "classical_radius_fm": 66.23836920075807,
+  "penetration_width_fm": 9.93575538011371,
+  "wkb_exponent": 12.000564553798899,
+  "transmission_bare_wkb": 6.14074459386339e-06,
+  "coherence_gain": 1.33381,
+  "transmission_ccs_enhanced": 8.190586546740927e-06,
+  "log10_transmission": -5.086684996299203,
+  "notes": "Beat modulation provides coherent frequency lock, enhancing CCS barrier penetration"
+}

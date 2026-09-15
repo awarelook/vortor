@@ -552,7 +552,7 @@ stated, not an identity); **[VOCAB/CAUTION]** = shared words only, or an importe
 
 | # | FTGB structure | Framework element | Citation |
 |---|---|---|---|
-| I1 | driven heartbeat `dw/dt = (mu + i omega)w - beta|w|^2 w`, `mu=1, beta=1/2 -> r* = sqrt(2) = 1.414214` [V] | Stuart-Landau normal form (canonical supercritical-Hopf) | Stuart 1960 / Landau 1944 |
+| I1 | driven heartbeat `dw/dt = (mu + i omega)w - beta\|w\|^2 w`, `mu=1, beta=1/2 -> r* = sqrt(2) = 1.414214` [V] | Stuart-Landau normal form (canonical supercritical-Hopf) | Stuart 1960 / Landau 1944 |
 | I2 | multibody beat-rhythm organization of N family members | Kuramoto `theta_i' = omega_i + (K/N) sum sin(theta_j - theta_i)`, `K_c = 2/(pi g(0))` | Kuramoto 1975/1984; Strogatz 2000 |
 | I3 | two-body locking of any FTGB pair | Adler `phi' = d(omega) - K sin phi` | Adler 1946 |
 | I4 | inharmonic CK-comb `1:1.72:2.43` resists locking -> KAM 3-torus | Arnold tongues `p:q` mode-locking, width `~K^q` | Arnold 1961 |

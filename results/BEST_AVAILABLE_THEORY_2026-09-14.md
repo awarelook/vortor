@@ -3,7 +3,7 @@
 **Author:** Nathaniel Hanks · **Date:** 2026-09-14 · **Provenance:** a six-dimension jewel audit
 (completeness / coherence / derivation depth / explanation quality / sourcing / theoretical advancement),
 each dimension run as an independent adversarial pass, findings verified line-by-line against the files,
-then folded. Harness after the fold: `verify_all.py` → **81/81**.
+then folded. Harness after the fold: `verify_all.py` → **82/82** (the 82nd added 2026-09-15 by the torus_project_repo expedition).
 
 This document does three things: (1) states the **real working theory** — what the jewel actually is when
 every claim is held at its earned tier; (2) records the **audit outcome** including the forgotten-batch
@@ -83,7 +83,7 @@ is nothing.
 
 ## 3. The forgotten batch — captured, retagged, or backlogged
 
-**Captured (new/extended checks, 78 → 81):**
+**Captured (new/extended checks, 78 → 81; → 82 on 09-15):**
 - `multibody_sync_capture_check.py` — the Grand Synthesis Part-D orphan `[V]`s recomputed: Kuramoto N=800
   Lorentzian onset **P = 1.20** (the synthesis's quoted ~1.2 reproduced), r(2K_c) = 0.69 (mean-field 0.71);
   Aizawa **λ_max = 0.094 > 0** (Benettin; literature band 0.10–0.124).
@@ -176,7 +176,7 @@ currently with ZERO experimental convergence, live targets). The kHz beat is a *
 
 ## 6. Reproduce & falsify
 
-`pip install -r requirements.txt && python results/verify/verify_all.py` → **81/81**, deterministic, no
+`pip install -r requirements.txt && python results/verify/verify_all.py` → **82/82**, deterministic, no
 network, CI-gated. The falsifier set: `FTGB_MINIMUM_VIABLE_PAPER.md` §5 (comb linear-limit; neutron∝heat
 primary; E0-pair secondary; `N^L` beat-lock; 0νββ; the parameter-free scalars). The tier ledger:
 `results/TIER_LEDGER.md`. The LENR map: `results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`.

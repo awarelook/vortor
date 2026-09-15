@@ -11,7 +11,7 @@ the honest boundary is this project's most valuable feature.
 
 | I want to… | Go to |
 |---|---|
-| **Reproduce it from scratch** (81 checks, no network) | `pip install -r requirements.txt && python results/verify/verify_all.py` → exit 0. Map: [`results/verify/README.md`](results/verify/README.md). CI runs this on every push (badge above). **Full run-access for *every* derivation (incl. scipy/sympy provenance, FreeFEM torus eigensolves, HPC handoffs, doc build): [`REPRODUCE.md`](REPRODUCE.md).** |
+| **Reproduce it from scratch** (82 checks, no network) | `pip install -r requirements.txt && python results/verify/verify_all.py` → exit 0. Map: [`results/verify/README.md`](results/verify/README.md). CI runs this on every push (badge above). **Full run-access for *every* derivation (incl. scipy/sympy provenance, FreeFEM torus eigensolves, HPC handoffs, doc build): [`REPRODUCE.md`](REPRODUCE.md).** |
 | **Read the whole theory in one page** | [`FTGB_MINIMUM_VIABLE_PAPER.md`](FTGB_MINIMUM_VIABLE_PAPER.md) — the capstone: apex summary + proven core + hypothesis-to-test + LENR significance + falsifiers, tight and citable. |
 | **See what FTGB explains vs leaves open across the LENR anomaly landscape** | [`results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`](results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md) — the tiered map (heat-helium, branching, transmutation, SAFIRE/EVO/Aureon), convergence ranking, novelty audit, and the disposal chain converging the one open problem to the entrance-channel assembly geodesic. The breakthrough stated honestly: a falsifiable *program*, not a proof. |
 | **Understand it in ~9 pages** | [`FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md`](FTGB_PLAIN_LANGUAGE_BRIEF_2026-09-10.md) (also PDF) — general-audience, honestly tiered. |
@@ -63,7 +63,7 @@ A theory worth trusting says how to break it. These would:
 
 ```
 pip install -r requirements.txt
-python results/verify/verify_all.py      # 81/81 PASS, deterministic, no network
+python results/verify/verify_all.py      # 82/82 PASS, deterministic, no network
 ```
 
 Everything load-bearing has a script; the foundation numbers are re-derived in-repo

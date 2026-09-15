@@ -24,7 +24,7 @@ Every symbol used across the FTGB jewel, with its meaning, dimension/value, and 
 | `c_CK` | Beat-Law prefactor | `c_CK(ε→0) = 1/(2 j₀,₁) = 0.20792` `[V]`; `c_CK(1/φ)=0.2234` `[V,FE]` |
 | `ε` | torus aspect ratio `a/R` | `ε = 1/φ` (golden) the design point |
 | `N`, `N^L` | fractal cascade base / ladder | `λ_L = λ_0 N^L`; anapole `T_L/T_{L+1}=N⁴` `[V]` (M14) |
-| `f_b` | beat frequency | `f_b = (v_A/2πR)|Δλ|` `[V]`; absolute (carries band) |
+| `f_b` | beat frequency | `f_b = (v_A/2πR)\|Δλ\|` `[V]`; absolute (carries band) |
 | `{121, 208, 294} kHz` | the carrier comb | absolute — **carries the v_A band** |
 | `ζ_B(s)`, `ζ′(−2)` | `S³` curl spectral zeta; mass-tower coeff | `ζ_B(s)=ζ(s−2)−ζ(s)`, `ζ′(−2)=−ζ(3)/4π²` `[V]` |
 
@@ -32,7 +32,7 @@ Every symbol used across the FTGB jewel, with its meaning, dimension/value, and 
 | Symbol | Meaning | Value / tier |
 |---|---|---|
 | `Q_H` | Hopf charge (Whitehead / fibre-linking) | `Q_H = 1` `[V]` |
-| `C` | wave-mode Chern number (spin-1 photon helicity) | `C = ±2 = 2s`; `|C|=2Q_H` `[V]/[credited]` |
+| `C` | wave-mode Chern number (spin-1 photon helicity) | `C = ±2 = 2s`; `\|C\|=2Q_H` `[V]/[credited]` |
 | `Lk = Tw + Wr` | linking = twist + writhe (Călugăreanu) | integer `Lk` conserved across the cascade |
 | `π₁`, `π₃` | fundamental / third homotopy (charge winding / Hopf spin) | the `g=2` lock is `π₁↔π₃` `[S]` |
 | `T` | toroidal (anapole) dipole moment | ordinary dipole `~1e-16` ⇒ nonradiating `[V]` |

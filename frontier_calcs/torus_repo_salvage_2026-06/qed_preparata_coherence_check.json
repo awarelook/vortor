@@ -1,0 +1,18 @@
+{
+  "method": "Preparata QED + Tight-doublet cavity",
+  "em_frequency_hz": 10000000000000.0,
+  "em_frequency_thz": 10.0,
+  "em_wavelength_um": 29.979245799999998,
+  "preparata_coherence_length_um": 89.93773739999999,
+  "coherence_wavelength_ratio_L_over_lambda": 3.0,
+  "cavity_dimension_mm": 6.0,
+  "coherence_regime": "macroscopic_qed_accessible",
+  "peak_field_v_per_m": 18000000.0,
+  "field_energy_density_j_per_m3": 1434.3784256736,
+  "atomic_binding_density_j_per_m3": 2381036530134.932,
+  "field_density_ratio": 6.02417647742815e-10,
+  "photon_energy_ev": 0.04135667694389856,
+  "neck_volume_m3": 7.43300821839345e-09,
+  "total_field_energy_ev": 66545388317766.016,
+  "conclusion": "Coherence length >> EM wavelength; field density sufficient for QED processes"
+}
