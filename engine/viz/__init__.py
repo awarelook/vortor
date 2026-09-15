@@ -10,7 +10,9 @@ imported by verify_all.py; the 78-check core and CI stay numpy+mpmath and offlin
 """
 try:
     from .render import render_scene, render_scenes          # noqa: F401 (needs viz deps)
-    from .scenes_m16 import SCENES                           # noqa: F401
+    from .scenes_m16 import SCENES as SCENES_M16             # noqa: F401
+    from .scenes_core import SCENES_CORE                     # noqa: F401
+    SCENES = SCENES_CORE + SCENES_M16                        # core [V] flagships first, then M16 rhythm
     _HAS_VIZ = True
 except Exception as _e:                                       # pragma: no cover
     _HAS_VIZ = False

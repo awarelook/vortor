@@ -1,0 +1,37 @@
+{
+  "model": "the coherent object: CK two-mode standing wave on the toroidal resonator",
+  "tier": "[viz]",
+  "tier_meaning": "artistic / illustrative presentation only (no evidentiary weight)",
+  "verify_scripts": [
+    "ck_eigenvalues_check.py",
+    "beat_law_across_scales_check.py"
+  ],
+  "equations": [
+    "torus: x=(R+r cos v)cos u, y=(R+r cos v)sin u, z=r sin v",
+    "Psi = A1 cos(m1 u + n1 v - w1 t) + A2 cos(m2 u + n2 v - w2 t)",
+    "mode-frequency ratio w2/w1 = 1.719 (the [V] CK comb, ck_eigenvalues_check)"
+  ],
+  "params": {
+    "R": 1.0,
+    "r": 0.38,
+    "ratio_w2_w1": 1.7192405698394844,
+    "modes": [
+      [
+        3,
+        1
+      ],
+      [
+        5,
+        2
+      ]
+    ]
+  },
+  "time_transform": "carrier compressed; rotating view -- ILLUSTRATIVE two-mode field, NOT the computed eigenfunction",
+  "outputs": [
+    "core_beltrami_torus.png",
+    "core_beltrami_torus.gif",
+    "core_beltrami_torus.mp4"
+  ],
+  "note": "the torus geometry + the CK frequency ratio are [V]; the painted surface field is [viz] illustration.",
+  "provenance": "FTGB jewel -- github.com/awarelook/vortor; numbers backed by results/verify/"
+}

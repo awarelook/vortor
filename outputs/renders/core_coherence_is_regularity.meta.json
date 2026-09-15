@@ -1,0 +1,26 @@
+{
+  "model": "coherence IS regularity: the Lamb vector u x omega null at the Beltrami state",
+  "tier": "[V]",
+  "tier_meaning": "verified in-repo by a named check (a reader can re-run it)",
+  "verify_scripts": [
+    "exact_beltrami_regularity_check.py",
+    "r2_identity_check.py"
+  ],
+  "equations": [
+    "Beltrami: curl u = u  ->  u x omega = u x u = 0 pointwise (advection is a pure gradient)",
+    "so u(t) = exp(-nu lambda^2 t) u0 is an exact eternal smooth solution -> BKM never triggers",
+    "contrast: Taylor-Green is not Beltrami -> u x omega != 0 (the blow-up term is live)"
+  ],
+  "params": {
+    "grid": "24^3 finite-difference curl (as engine/ftgb_resonator_sim SIM 1-2)",
+    "|uxomega|_max ABC": 2.0392213316685854e-14,
+    "|uxomega|_max TaylorGreen": 1.0000000000000044,
+    "ratio_TG_over_ABC": 49038325780054.39
+  },
+  "time_transform": "static field slices (no time axis)",
+  "outputs": [
+    "core_coherence_is_regularity.png"
+  ],
+  "note": "the self-interaction that makes fluids blow up is NULL at coherence -- the deepest [V] fact.",
+  "provenance": "FTGB jewel -- github.com/awarelook/vortor; numbers backed by results/verify/"
+}
