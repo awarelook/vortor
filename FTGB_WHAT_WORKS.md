@@ -34,8 +34,11 @@ nuclear *source*, never over-unity. *Established `[V]`.*
 helium-4, near-absent neutrons, near-absent gamma rays, elemental transmutation — are, taken together, a
 decades-old puzzle. The theory converts them into a single, pointed, falsifiable research program: one
 geometric question (the entrance-channel assembly corridor), a constraint on it *derived from the data itself*
-(`β·|dF| ≤ 0.874 MeV/fm`), and a new experimental knob (polarization-steered aneutronic yield). What was a mess
-is now a program with a decision procedure. *A resolution `[V]`/`[S]`, honestly tiered.*
+(`β·|dF| ≤ 0.874 MeV/fm`), and a new experimental knob (polarization-steered aneutronic yield). That geometric
+question, once an unbounded external unknown, is now **bounded in-environment**: its rate factor `f_dyn` is
+rigorously in `(0,1]` and O(1) (bracket `[0.2,1.0]`), with the moduli-metric bottleneck *excluded* by an exact
+transport computation — leaving a single external number (the near-BPS relative-orientation average). What was a
+mess is now a program with a decision procedure and one clearly-named computation left. *A resolution `[V]`/`[S]`, honestly tiered.*
 
 ---
 

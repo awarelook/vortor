@@ -1,0 +1,44 @@
+{
+  "model": "f_dyn, the last O(1) unknown of the nuclear rate: rigorously (0,1], O(1) bracket, metric-checked",
+  "tier": "[S]",
+  "tier_meaning": "structural hypothesis -- falsifiable, NOT proven",
+  "verify_scripts": [
+    "delta_b4_fdyn_bracket_check.py",
+    "delta_b4_stageG_moduli_metric_check.py",
+    "delta_b4_stageE_rho_eff_semianalytic_check.py"
+  ],
+  "equations": [
+    "rho_eff = f_orient(1/9-1/3, rigorous singlet) x f_density([0.55,0.96]) x f_dyn",
+    "f_dyn RIGOROUS: <=1 (Cauchy-Schwarz on the positive V-metric); >0 (O_h A_1g-allowed)",
+    "f_dyn O(1) BRACKET [0.2,1.0]: O_h Gram floor 1/sqrt(3)=0.577 (s>=0); Franck-Condon ~0.30",
+    "L_2 boundary log-divergence CANCELS in the normalized amplitude [S] (edge-universality ansatz)",
+    "Stage G: merger inertia M(t)=INT b|grad phi|^2 HOMOGENEOUS (ratio 1.48) => concentration EXCLUDED"
+  ],
+  "params": {
+    "bracket_lo": 0.2,
+    "bracket_hi": 1.0,
+    "oh_floor": 0.5773502691896258,
+    "fc_central": 0.3,
+    "density_proxy_band": [
+      0.55,
+      0.96
+    ],
+    "stageG_M_of_t": [
+      0.49,
+      0.43,
+      0.41,
+      0.41,
+      0.42,
+      0.45,
+      0.5,
+      0.61
+    ],
+    "stageG_maxmin_ratio": 1.48
+  },
+  "time_transform": "static bracket + the Stage-G M(t) merger profile (t = reaction coordinate, not physical time)",
+  "outputs": [
+    "lenr_fdyn_bracket.png"
+  ],
+  "note": "the 12-agent creative-hat attack + Stage G. Two endpoints are RIGOROUS (0,1]; the O(1) value is a cross-validated bracket [0.2,1.0] anchored by two density-proxy-FREE numbers; metric concentration is EXCLUDED. The ONE external number left is the near-BPS relative-orientation VPDiff average. An auditor demoted an initial 'cutoff-robust [V]' to [S] -- folded.",
+  "provenance": "FTGB jewel -- github.com/awarelook/vortor; numbers backed by results/verify/"
+}

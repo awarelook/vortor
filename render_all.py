@@ -2,12 +2,12 @@
 """
 render_all.py -- render the FTGB models into tier-captioned, shareable artifacts (PNG/GIF/MP4).
 
-This is the PUBLICATION layer, downstream of the verified [V] core. It consumes the SAME numbers the 78 checks
+This is the PUBLICATION layer, downstream of the verified [V] core. It consumes the SAME numbers the 91 checks
 validate and emits, for each scene, a poster PNG (+ looping GIF where defined) alongside a `.meta.json` sidecar
 that names the scene's honesty tier and its verify script(s). The tier travels with the pixel.
 
 IT IS NOT PART OF THE VERIFIED CORE OR CI: verify_all.py globs only results/verify/*.py + three named engine
-files, so this driver and engine/viz/ never change the harness count (89/89). Rendering needs the quarantined viz deps:
+files, so this driver and engine/viz/ never change the harness count (91/91). Rendering needs the quarantined viz deps:
 
     pip install -r requirements-viz.txt
     python render_all.py                 # -> outputs/renders/*.png, *.gif, *.meta.json

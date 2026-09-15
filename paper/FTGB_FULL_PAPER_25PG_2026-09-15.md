@@ -25,9 +25,13 @@ on S³; and a conserved nuclear energy ledger. Thirteen computed refutations are
 open nuclear problem is converged — by a chain of adversarially verified computations — to a single geometric
 question, the **entrance-channel assembly corridor**, carrying two data bars, a derived constraint on the
 crossing (`β·|dF| ≤ 0.874 MeV/fm`, under the structural hypothesis that d+d→⁴He-vs-breakup is an adiabatic
-Landau–Zener crossing), a computed *exclusion* of density geometry as the source of that selectivity (leaving
-orientation/phase structure, the moduli metric, and the boundary physics as the live candidates), and a new
-experimentally accessible falsifier: **polarization-steered aneutronic yield**. The theory proves no
+Landau–Zener crossing), and a new experimentally accessible falsifier: **polarization-steered aneutronic
+yield**. Density geometry is computed *out* as the source of the selectivity, and the three candidates it
+leaves — orientation/phase structure, the moduli metric, and the boundary physics — are then each resolved
+in-environment (orientation made rigorous by angular momentum; the moduli metric shown *not* to concentrate by
+an exact transport computation; the boundary divergence shown to cancel in the normalized amplitude), reducing
+the rate factor `f_dyn` to a bounded, O(1) quantity (rigorously in `(0,1]`, cross-validated bracket `[0.2,1.0]`)
+and leaving a *single* external number, the near-BPS relative-orientation average. The theory proves no
 LENR, derives no COP, demonstrates no new nuclear mechanism, and fabricates no number: its contribution is
 the conversion of a scattered anomaly landscape into one tiered, falsifiable, reproducible program.
 
@@ -425,8 +429,9 @@ results (`delta_b4_stageD_bps_overlap_check`):
    geometry **cannot** produce it (floor 0.55). The suppression — if the aneutronic reading is right —
    must therefore live in **what the density proxy omits** — three co-equal candidates the check does not
    rank: the relative orientation / Finkelstein–Rubinstein phase structure of the crossing, the moduli-space
-   metric, and the regularized-boundary (L₂) physics. Of these, the orientation/phase structure is the one the
-   spin gate (§8.6) next makes computable, so the external run is *pointed*: resolve orientation space first.
+   metric, and the regularized-boundary (L₂) physics. Each of these three is then computed in §§8.6–8.6c (the
+   gate; Stages E–G) — orientation becomes rigorous, the metric is shown not to concentrate, and the L₂
+   divergence cancels in the normalized amplitude — leaving one external number.
 
 **8.6 The gate — the quantum arithmetic of that space [credited]/[S].** The orientation space's quantum
 version is exactly solvable (`spin_channel_gate_check`, spin-1 pair algebra built from operators):
@@ -446,10 +451,37 @@ version is exactly solvable (`spin_channel_gate_check`, spin-1 pair algebra buil
   density proxy, the LZ band) meeting at one decade. Coincidence-class, logged in the ledger with the
   wide-band caution, because the proxy has named omissions and the band's own provenance is flagged.
 
+**8.6c Stages E–G — the three omitted candidates, each resolved.** Stage D named three places `ρ_eff`'s
+smallness could hide (orientation/FR-phase, the moduli metric, the regularized L₂-boundary). None is an
+unbounded external unknown any longer:
+
+- **Orientation — RIGOROUS** (Stage E, `delta_b4_stageE_rho_eff_semianalytic_check`). The orientation factor is
+  *not* external: ⁴He(0⁺) forces the singlet by angular momentum, and Finkelstein–Rubinstein quantization makes
+  the singlet the cube-forming orientation — it *is* the gate (§8.6). So `ρ_eff = f_orient(1/9–1/3, rigorous
+  selection) × f_density([0.55,0.96]) × f_dyn = [0.06, 0.32] × f_dyn`.
+- **The dynamical factor `f_dyn` — BOUNDED** (Stage F, `delta_b4_fdyn_bracket_check`; a 12-agent adversarial
+  attack, six angles + verification). `f_dyn` is **rigorously in `(0,1]`** — `≤ 1` exact by Cauchy–Schwarz on
+  the positive near-BPS `V`-metric, `> 0` by O_h A₁g-allowedness — and **O(1) by a cross-validated bracket
+  `[0.2, 1.0]`, central ~0.5–0.8**, anchored by two density-proxy-*free* numbers computed in the check: the O_h
+  Wigner–Eckart Gram floor `1/√3 = 0.577` (conditional on inter-config overlap `s ≥ 0`) and the vibrational
+  Franck–Condon central `~0.30`. The third candidate — the **L₂ boundary divergence** — is shown to *cancel* in
+  the *normalized* amplitude (exact algebra, but tiered `[S]` under an edge-universality ansatz; an auditor
+  correction that demoted an initial `[V]` claim — the discipline is symmetric).
+- **The moduli metric — CONCENTRATION EXCLUDED** (Stage G, `delta_b4_stageG_moduli_metric_check`). The
+  Speight/Arnold density-weighted metric's collective inertia `M(t) = ∫ b|∇φ|²` along the merger — the exact
+  Benamou–Brenier transport energy, a pure-numpy cylindrical elliptic solve validated by the identity
+  `∫ b|∇φ|² = ∫ φ ∂_t b` to `1e-16`, grid- and ε-robust — is **homogeneous** (a shallow bowl, max/min ratio
+  **1.48**, no bottleneck). So the moduli metric does not concentrate at the merger and does not move `f_dyn`
+  out of the O(1) bracket.
+
+Net: `ρ_eff` = the 23.85-MeV-calibrated `Δ / dE` = **O(1) × the singlet gate**, reaching the observed ~0.07;
+all three Stage-D candidates are bounded in-environment, and exactly one external number remains.
+
 **8.7 The chain, and what remains.** *Corridor* (where) → *fence* (how fast) → *gate* (what selects) →
-*seed* (what prepares) → *knob* (how to test, §10 #9). Open, exactly: (i) the orientation-resolved
-near-BPS crossing computation (external, now pointed, with the regularization requirement stated); (ii) the
-laboratory polarization test. Everything else in the landscape is decided in-environment and tiered.
+*seed* (what prepares) → *knob* (how to test, §10 #9). Open, exactly: (i) the **full relative-orientation
+VPDiff average** on the near-BPS surface — now the *single* free number, with the two `f_dyn` endpoints rigorous
+(§8.6c) and metric concentration excluded; (ii) the laboratory polarization test. Everything else in the
+landscape is decided in-environment and tiered.
 
 ---
 
@@ -630,4 +662,4 @@ Kulsrud, Furth, Valeo & Goldhaber, PRL **49**, 1248 (1982) · Landau (1932); Zen
 Shoulders (EVO); each credited at its point of contact, none used as authority.
 
 *No claim exceeds its tier; no number is fabricated; settled-negatives are kept as wins; the discipline is
-symmetric. Everything above re-runs from one command: `python results/verify/verify_all.py` → 85/85.*
+symmetric. Everything above re-runs from one command: `python results/verify/verify_all.py` → 91/91.*

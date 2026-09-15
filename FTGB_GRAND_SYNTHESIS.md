@@ -1980,7 +1980,18 @@ backed by a named check (harness now **91/91**):
    polarization (~1e-6) cannot; the cold Bose seed's job is **channel preparation**
    (`spin_channel_gate_check`). Consistency `1/9 x [0.55,0.96] = [0.061,0.107] ~` target band: logged
    coincidence-class, never promoted. **New falsifier: polarization-steered aneutronic yield.**
-5. **The forgotten-batch capture + salvage.** Part-D orphan `[V]`s recomputed in-repo (Kuramoto P=1.20;
+5. **Stages E–G — the three candidates resolved.** Stage D's three places the smallness could hide are each
+   now computed. *Orientation* is rigorous — ⁴He(0⁺) forces the singlet, which FR quantization makes the
+   cube-forming orientation (= the gate), so `rho_eff = f_orient(1/9–1/3) x f_density([0.55,0.96]) x f_dyn`
+   (`delta_b4_stageE_rho_eff_semianalytic_check`). *f_dyn* is bounded by a 12-agent adversarial attack:
+   rigorously `(0,1]` (≤1 Cauchy–Schwarz, >0 O_h-allowed) and O(1), bracket `[0.2,1.0]`, anchored by two
+   density-proxy-free numbers (O_h Gram floor `1/√3=0.577`, Franck–Condon `~0.30`); the L2 boundary divergence
+   **cancels** in the normalized amplitude (`[S]`, an auditor `[V]`→`[S]` demotion, folded)
+   (`delta_b4_fdyn_bracket_check`). *The moduli metric* does not concentrate — Stage G's Benamou–Brenier
+   collective inertia `M(t)=∫b|∇φ|²` along the merger is **homogeneous** (ratio 1.48, elliptic solve validated
+   to 1e-16), excluding a metric bottleneck (`delta_b4_stageG_moduli_metric_check`). So the nuclear rate is
+   **O(1) × the singlet gate**; the one external number left is the near-BPS relative-orientation VPDiff average.
+6. **The forgotten-batch capture + salvage.** Part-D orphan `[V]`s recomputed in-repo (Kuramoto P=1.20;
    Aizawa λ_max=0.094); transmutation Q-values harnessed; the pre-jewel THz campaign surveyed, its
    beat-modulated-tunneling claim fence-killed, its phase-scrambled control protocol salvaged into the
    `N^L` falsifier (`multibody_sync_capture_check`, `transmutation_qvalue_arithmetic_check`,

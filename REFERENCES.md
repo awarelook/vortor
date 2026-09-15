@@ -37,8 +37,15 @@ in `GLOSSARY.md` / `TOOLKIT_HANDBOOK.md`. No load-bearing claim rests on a frame
   coordinate); Battye & Sutcliffe (1997); Barnes, Baskerville & Turok (1997), *PRL* 79,
   367 (B=4 mode spectrum); Houghton, Manton & Sutcliffe (1998); Feist, Lau & Manton (2013), *PRD* 87, 085034;
   Gudnason & Halcrow (2018), *PRD* 98, 125010; Halcrow (2016), *Nucl. Phys. B* 904, 106; Adam, Sánchez-Guillén
-  & Wereszczyński (2010) — BPS/near-BPS Skyrme. Eto & Nitta (2025), *PRL* — knot solitons
+  & Wereszczyński (2010), *Phys. Lett. B* **691**, 105 [arXiv:1007.1396 / 1001.4544] — the BPS Skyrme submodel
+  and its compactons (the `cos(ξ/2)=r/R` profile used in Stages D–G); Adam, Naya, Sánchez-Guillén &
+  Wereszczyński (2013), *PRL* **111**, 232501 — near-BPS nuclear binding to ~1%. Eto & Nitta (2025), *PRL* — knot solitons
   `[incomplete: vol/page missing — complete before external use]`.
+- **Moduli-space geometry (Stage G).** Speight, J.M. (2014/15), *J. Geom. Phys.* **92**, 30 [arXiv:1406.0966]
+  — the analytic L² metric on the BPS-Skyrme moduli space (volume-preserving diffeomorphisms; the
+  density-weighted / Arnold ideal-fluid metric `g(v,v)=∫b|v|²`). Benamou, J.-D. & Brenier, Y. (2000),
+  *Numer. Math.* **84**, 375 — the dynamic (kinetic-energy) formulation of optimal transport used to compute
+  the merger collective inertia `M(t)=∫b|∇φ|²` in `delta_b4_stageG_moduli_metric_check`.
   *(Audit note 2026-09-14: the PRL 79, 367 attribution for the B=4 mode spectrum was CHALLENGED by an
   audit pass (proposing a swap with the B=2 deuteron paper) and VERIFIED CORRECT against the original —
   hep-th/9704012 "Normal Modes of the B=4 Skyrme Soliton" IS PRL 79, 367 (1997). Kept; challenge logged.)*

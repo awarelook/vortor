@@ -66,7 +66,7 @@
       "<div>tier: <span style='color:#ffcf5a'>" + (P.tier || "[V]") + "</span></div>" +
       "<div style='margin-top:8px'>reproduced by:</div>" +
       "<ul>" + (checksHtml || "<li>(no check named)</li>") + "</ul>" +
-      "<div>reproduce all: <code>python results/verify/verify_all.py</code> &rarr; 89/89</div>" +
+      "<div>reproduce all: <code>python results/verify/verify_all.py</code> &rarr; 91/91</div>" +
       "<div class='leg'>" + legHtml + "</div>" +
       (P.note ? "<div class='note'>" + P.note + "</div>" : "") +
       "<div class='note' style='color:#5b6b82'><a href='" + REPO + "' target='_blank' rel='noopener'>github.com/awarelook/vortor</a> &middot; the tier travels with the artifact</div>" +

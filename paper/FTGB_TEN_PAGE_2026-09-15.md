@@ -138,9 +138,24 @@ jewel's standing `[S]` condition) a mechanism-shaped job: **channel preparation*
 Logged as coincidence-class, never promoted: `1/9 × [0.55, 0.96] = [0.061, 0.107]`, overlapping the
 `ρ_eff ~ 0.06–0.08` target band — three independently-sourced pieces meeting at one decade.
 
+**Stages E–G (Stage D's three candidates, each now computed).** Stage D named three places the smallness could
+hide — orientation/phase, the moduli metric, and the L₂-boundary physics. Each has since been resolved
+in-environment. **Orientation is rigorous** (`delta_b4_stageE_…`): ⁴He(0⁺) forces the singlet, which FR
+quantization makes the cube-forming orientation (= the gate), so `ρ_eff = f_orient(1/9–1/3) × f_density([0.55,0.96])
+× f_dyn`. The **dynamical factor `f_dyn` is bounded** (`delta_b4_fdyn_bracket_check`, a 12-agent adversarial
+attack): rigorously in `(0,1]` — `≤1` by Cauchy–Schwarz, `>0` by O_h A₁g-allowedness — and O(1), cross-validated
+bracket **`[0.2,1.0]`**, anchored by two density-proxy-*free* numbers (the O_h Gram floor `1/√3=0.577`, the
+Franck–Condon central `~0.30`); the **L₂ divergence cancels** in the *normalized* amplitude (`[S]`, an
+edge-universality ansatz — an auditor demotion from `[V]`, folded). And the **moduli metric does not concentrate**
+(`delta_b4_stageG_moduli_metric_check`): its Benamou–Brenier collective inertia `M(t)=∫b|∇φ|²` along the merger
+(pure-numpy elliptic solve, validated to 1e-16) is **homogeneous** (ratio 1.48) — excluding a metric bottleneck.
+So the nuclear rate is now **O(1) × the singlet gate**, with a single external number left: the full
+relative-orientation VPDiff average.
+
 **The chain, end to end:** *corridor* (where) → *β·|dF| fence* (how fast) → *orientation gate* (what selects)
 → *coherent seed* (what prepares) → *polarization knob* (how to test). What remains open is exactly two
-things: the orientation-resolved near-BPS run (external, now pointed), and the laboratory knob below.
+things: the near-BPS relative-orientation VPDiff average (external — now the *only* free number, with the two
+endpoints rigorous and metric concentration excluded), and the laboratory knob below.
 
 ## 6. Falsifiers — how to kill it
 

@@ -152,4 +152,86 @@ class SpinGateScene:
         return fig
 
 
-SCENES_LENR = [CorridorScene(), SpinGateScene()]
+# ============================================================ Scene F/G: the f_dyn bracket + metric check
+class FdynBracketScene:
+    name = "lenr_fdyn_bracket"
+
+    BRACKET = (0.2, 1.0)          # cross-validated in-env bracket (delta_b4_fdyn_bracket_check)
+    OH_FLOOR = 1.0 / np.sqrt(3)   # O_h Wigner-Eckart Gram floor, conditional on s>=0
+    FC_CENTRAL = 0.30             # vibrational Franck-Condon central (BBT 20 MeV breather + 23.85 MeV displ.)
+    DENS_BAND = (0.55, 0.96)      # Stage-D density proxy (reuses f_density -- circular, flagged)
+    TS = [0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85]           # Stage-G merger coordinate
+    MT = [0.49, 0.43, 0.41, 0.41, 0.42, 0.45, 0.50, 0.61]          # M(t)=INT b|grad phi|^2 (homogeneous)
+    RATIO = 1.48
+
+    def metadata(self):
+        return make_metadata(
+            model="f_dyn, the last O(1) unknown of the nuclear rate: rigorously (0,1], O(1) bracket, metric-checked",
+            tier="[S]",   # the load-bearing frontier claim is the O(1) BRACKET [S]; the rigorous (0,1] endpoints
+                          # are [V] (stated in the equations) -- never badge [S] content up, per the poster discipline
+            verify_scripts=["delta_b4_fdyn_bracket_check.py", "delta_b4_stageG_moduli_metric_check.py",
+                            "delta_b4_stageE_rho_eff_semianalytic_check.py"],
+            equations=["rho_eff = f_orient(1/9-1/3, rigorous singlet) x f_density([0.55,0.96]) x f_dyn",
+                       "f_dyn RIGOROUS: <=1 (Cauchy-Schwarz on the positive V-metric); >0 (O_h A_1g-allowed)",
+                       "f_dyn O(1) BRACKET [0.2,1.0]: O_h Gram floor 1/sqrt(3)=0.577 (s>=0); Franck-Condon ~0.30",
+                       "L_2 boundary log-divergence CANCELS in the normalized amplitude [S] (edge-universality ansatz)",
+                       "Stage G: merger inertia M(t)=INT b|grad phi|^2 HOMOGENEOUS (ratio 1.48) => concentration EXCLUDED"],
+            params={"bracket_lo": self.BRACKET[0], "bracket_hi": self.BRACKET[1], "oh_floor": self.OH_FLOOR,
+                    "fc_central": self.FC_CENTRAL, "density_proxy_band": list(self.DENS_BAND),
+                    "stageG_M_of_t": self.MT, "stageG_maxmin_ratio": self.RATIO},
+            time_transform="static bracket + the Stage-G M(t) merger profile (t = reaction coordinate, not physical time)",
+            outputs=[],
+            note="the 12-agent creative-hat attack + Stage G. Two endpoints are RIGOROUS (0,1]; the O(1) value is "
+                 "a cross-validated bracket [0.2,1.0] anchored by two density-proxy-FREE numbers; metric "
+                 "concentration is EXCLUDED. The ONE external number left is the near-BPS relative-orientation "
+                 "VPDiff average. An auditor demoted an initial 'cutoff-robust [V]' to [S] -- folded.",
+        )
+
+    def figure_static(self):
+        import matplotlib.pyplot as plt
+        fig, (ax, ax2) = plt.subplots(1, 2, figsize=(10.2, 5.2), width_ratios=[1.15, 1.0])
+        fig.subplots_adjust(left=0.055, right=0.975, bottom=0.16, top=0.84, wspace=0.26)
+        fig.suptitle("$f_{dyn}$ -- the last O(1) unknown of the nuclear rate: bounded, bracketed, metric-checked",
+                     color="#e6e6e6")
+
+        # ---- left: the f_dyn bracket on [0,1]
+        lo, hi = self.BRACKET
+        ax.set_xlim(-0.03, 1.09); ax.set_ylim(0, 1)
+        ax.axvspan(lo, hi, color=CY, alpha=0.12)
+        ax.text((lo + hi) / 2, 0.94, "cross-validated bracket [0.2, 1.0]", color=CY, ha="center", fontsize=9)
+        ax.axvline(1.0, color=MG, lw=2.0)
+        ax.text(1.005, 0.5, "  $\\leq 1$\n  Cauchy-\n  Schwarz", color=MG, fontsize=8, va="center")
+        ax.axvline(0.0, color=MG, lw=1.3, ls="--")
+        ax.text(0.012, 0.08, "$>0$\n(O$_h$ allowed)", color=MG, fontsize=8, va="bottom")
+        ax.hlines(0.30, self.DENS_BAND[0], self.DENS_BAND[1], color=GRY, lw=8, alpha=0.5)
+        ax.text(np.mean(self.DENS_BAND), 0.235, "density proxy [0.55, 0.96]\n(reuses $f_{density}$ -- circular)",
+                color=GRY, ha="center", fontsize=7.4, va="top")
+        ax.plot([self.OH_FLOOR], [0.62], "v", color=GR, ms=11)
+        ax.text(self.OH_FLOOR, 0.68, "O$_h$ floor\n$1/\\sqrt{3}$=0.577\n($s\\geq0$)", color=GR, ha="center", fontsize=7.8, va="bottom")
+        ax.plot([self.FC_CENTRAL], [0.62], "v", color=YE, ms=11)
+        ax.text(self.FC_CENTRAL, 0.68, "Franck-\nCondon\n~0.30", color=YE, ha="center", fontsize=7.8, va="bottom")
+        ax.text(0.55, 0.015, "the two density-proxy-FREE anchors (load-bearing)", color="#cfd8e3", ha="center", fontsize=7.4)
+        ax.set_yticks([]); ax.set_xlabel("$f_{dyn}$  (normalized dynamical factor of $\\rho_{eff}$)")
+        ax.set_title("rigorously $(0,1]$; O(1) by six angles", fontsize=10.3)
+        for s in ("top", "right", "left"):
+            ax.spines[s].set_visible(False)
+
+        # ---- right: Stage-G metric homogeneity M(t)
+        t, M = np.array(self.TS), np.array(self.MT)
+        ax2.plot(t, M, "-o", color=CY, lw=2.0, ms=6)
+        ax2.axhline(M.min(), color=GRY, ls=":", lw=0.8); ax2.axhline(M.max(), color=GRY, ls=":", lw=0.8)
+        ax2.annotate("", xy=(0.9, M.max()), xytext=(0.9, M.min()), arrowprops=dict(arrowstyle="<->", color=GR, lw=1.4))
+        ax2.text(0.915, (M.min() + M.max()) / 2, "max/min\n= %.2f" % self.RATIO, color=GR, fontsize=9, va="center")
+        tp = np.linspace(0.12, 0.88, 80); peak = M.min() + 1.35 * np.exp(-((tp - 0.5) / 0.07) ** 2)
+        ax2.plot(tp, peak, color=MG, ls="--", lw=1.1, alpha=0.5)
+        ax2.text(0.5, M.min() + 1.45, "a bottleneck would\nlook like this\n(NOT found)", color=MG, ha="center", fontsize=7.2, alpha=0.85)
+        ax2.set_xlim(0.08, 0.98); ax2.set_ylim(0, 2.15)
+        ax2.set_xlabel("reaction coordinate  $t$   (2$\\times$B=2 dumbbell $\\to$ $^4$He ball)")
+        ax2.set_ylabel("merger inertia  $M(t)=\\int b\\,|\\nabla\\phi|^2$")
+        ax2.set_title("Stage G: metric HOMOGENEOUS $\\Rightarrow$ concentration excluded", fontsize=10.0)
+        for s in ("top", "right"):
+            ax2.spines[s].set_visible(False)
+        return fig
+
+
+SCENES_LENR = [CorridorScene(), SpinGateScene(), FdynBracketScene()]
