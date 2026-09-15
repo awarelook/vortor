@@ -1,0 +1,31 @@
+{
+  "model": "two-mode beat + quadratic torque mixing (M16)",
+  "tier": "[V]",
+  "tier_meaning": "verified in-repo by a named check (a reader can re-run it)",
+  "verify_scripts": [
+    "delta_detuning_beat_check.py",
+    "rhythm_parametric_resonance_check.py"
+  ],
+  "equations": [
+    "q_i = A_i cos(2 pi f_i t)",
+    "sum = 2A cos(pi df t) cos(2 pi f_c t)  [envelope beats at f_b=|f2-f1|]",
+    "tau = K q1 q2 = (K A1 A2/2)[cos(2pi f_b t)+cos(2pi f_Sigma t)]"
+  ],
+  "params": {
+    "f1_Hz": 121200.0,
+    "f2_Hz": 124920.0,
+    "f_beat_Hz": 3720.0,
+    "f_sum_Hz": 246120.0,
+    "A1": 1.0,
+    "A2": 0.9,
+    "K": 1.0
+  },
+  "time_transform": "carrier ~121-125 kHz REAL; one beat period (269 us) shown; GIF playback time-compressed (a GIF second is not a physical second)",
+  "outputs": [
+    "m16_beat_torque.png",
+    "m16_beat_torque.gif",
+    "m16_beat_torque.mp4"
+  ],
+  "note": "the beat is a nonlinear/energy (torque) line at f_b, not a linear field line -- see rhythm TEST 1.",
+  "provenance": "FTGB jewel -- github.com/awarelook/vortor; numbers backed by results/verify/"
+}

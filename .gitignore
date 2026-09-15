@@ -20,3 +20,9 @@ Thumbs.db
 # quarantine / backup tooling outputs (these live in F:\_QUARANTINE, never in the jewel)
 _QUARANTINE/
 *.bak
+
+# Rendered artifacts (regenerable via render_all.py) -- keep PNG posters + .meta.json, ignore heavy loops
+outputs/renders/*.gif
+outputs/renders/*.mp4
+__pycache__/
+engine/viz/__pycache__/

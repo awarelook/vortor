@@ -1,0 +1,40 @@
+{
+  "model": "CK inharmonic carrier comb (the FTGB spectral fingerprint)",
+  "tier": "[V]",
+  "tier_meaning": "verified in-repo by a named check (a reader can re-run it)",
+  "verify_scripts": [
+    "ck_eigenvalues_check.py",
+    "beat_law_across_scales_check.py"
+  ],
+  "equations": [
+    "boundary quantization tan x = x -> roots {4.4934, 7.7253, 10.9041}",
+    "comb ratios 1 : 1.719 : 2.427  (vs harmonic 1:2:3)",
+    "SI carrier f_n = v_A x_n / (2 pi R) -> {121, 208, 294} kHz",
+    "ratio is SCALE-INVARIANT: same comb from lab kHz to space mHz"
+  ],
+  "params": {
+    "ck_roots": [
+      4.4934,
+      7.7253,
+      10.9041
+    ],
+    "ratios": [
+      1.0,
+      1.7192,
+      2.4267
+    ],
+    "comb_kHz": [
+      121.2,
+      208.3,
+      294.0
+    ],
+    "v_A": 20330.0,
+    "R": 0.12
+  },
+  "time_transform": "static spectrum (no time axis)",
+  "outputs": [
+    "m16_ck_comb_fingerprint.png"
+  ],
+  "note": "a harmonic 1:2:3 comb would FALSIFY the Beltrami-carrier reading -- the sharpest fingerprint.",
+  "provenance": "FTGB jewel -- github.com/awarelook/vortor; numbers backed by results/verify/"
+}

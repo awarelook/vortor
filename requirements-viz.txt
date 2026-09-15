@@ -1,0 +1,21 @@
+# FTGB visualization / publication layer -- DEPS QUARANTINED FROM THE VERIFIED CORE.
+#
+# These libraries are HEAVY and NON-DETERMINISTIC. They are NOT part of the reproducible
+# model: verify_all.py imports ONLY numpy + mpmath (see requirements.txt) and never touches
+# engine/viz/ or render_all.py, so CI stays green and offline. Install this file ONLY when
+# you want to RENDER the (already-verified) models into shareable artifacts:
+#
+#     pip install -r requirements-viz.txt
+#     python render_all.py
+#
+# The rendering layer consumes the SAME numbers the 78 checks validate; every artifact carries
+# a tier-captioned metadata sidecar naming its verify script. Rendering is downstream of [V],
+# never inside it.
+
+matplotlib>=3.7        # 2D scenes, animation (PillowWriter -> GIF; ffmpeg -> MP4)
+pillow>=9.0            # GIF encoder (ships with matplotlib); also static image I/O
+
+# --- optional, add when a scene needs it (not required for the first slice) ---
+# imageio>=2.31        # alternative GIF/MP4 writer
+# imageio-ffmpeg>=0.4  # MP4 encoder backend (needs ffmpeg)
+# pyvista>=0.43        # 3D field rendering (streamlines, isosurfaces, torus slices)
