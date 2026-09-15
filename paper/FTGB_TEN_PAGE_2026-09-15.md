@@ -1,7 +1,7 @@
 # The Coherent Object: a driven Beltrami–Hopf toroidal soliton read as field and matter wave
 
 **A reproducible, tiered theory — the ten-page presentation.**
-Nathaniel Hanks · 2026-09-15 · reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` → **87/87**, deterministic, no network, CI-gated.
+Nathaniel Hanks · 2026-09-15 · reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` → **88/88**, deterministic, no network, CI-gated.
 Complete 25-page version: `paper/FTGB_FULL_PAPER_25PG_2026-09-15.md` · longform: `FTGB_GRAND_SYNTHESIS.md` · per-claim ledger: `results/TIER_LEDGER.md` · visuals: `gallery.html`.
 
 ---
@@ -171,7 +171,7 @@ kept strictly distinct from baryon decay.
 
 ## 8. Reproducibility & provenance
 
-One command reproduces the entire model (87 checks: 84 theory scripts + 3 engine runs), deterministic and
+One command reproduces the entire model (88 checks: 85 theory scripts + 3 engine runs), deterministic and
 offline, gated by CI on every push. Canonical numbers are re-derived in-repo from cited anchors; external data
 (AME2020 masses, TUNL levels, measured screening) is vendored with named provenance; the absolute-magnitude
 caveat (`v_A` band) is quarantined by proof (dimensionless observables invariant to 1e-16). Confronted

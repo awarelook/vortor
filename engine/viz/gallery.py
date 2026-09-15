@@ -153,7 +153,7 @@ def build_gallery(renders_dir="outputs/renders", out_html="gallery.html"):
         "Every artifact below is generated from a verified model &mdash; the pipeline is "
         "<b style='color:#9fb0c3'>verified numbers &rarr; captioned artifacts &rarr; interactives</b>, "
         "and the honesty <b style='color:#9fb0c3'>tier travels with the pixel</b>.</p>"
-        "<p>Reproduce the whole model: <code style='color:#e879b9'>python results/verify/verify_all.py</code> &rarr; 87/87.</p>"
+        "<p>Reproduce the whole model: <code style='color:#e879b9'>python results/verify/verify_all.py</code> &rarr; 88/88.</p>"
         "<div class='legend'>" + legend + "</div></header>"
         "<h2>Rendered artifacts (backed by a re-runnable check)</h2>"
         "<div class='grid'>" + (render_cards or "<p>run <code>python render_all.py</code> to generate posters</p>") + "</div>"

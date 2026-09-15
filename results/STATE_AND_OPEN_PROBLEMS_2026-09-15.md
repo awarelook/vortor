@@ -1,8 +1,8 @@
 # State of the theory & the open problems — current-true
 
-**Author:** Nathaniel Hanks · **Date:** 2026-09-15 · **Harness:** `verify_all.py` → **87/87**.
+**Author:** Nathaniel Hanks · **Date:** 2026-09-15 · **Harness:** `verify_all.py` → **88/88**.
 The honest "where does it stand, and what is left" report, current after this week's advancements
-(78 → 87 checks; the corridor sharpening; Stage D; the spin gate; the PV-gravity fence; the negative-program
+(78 → 88 checks; the corridor sharpening; Stage D; the spin gate; the PV-gravity fence; the negative-program
 salvage; the beat→spin magnetic-resonance resolution; and the result-first presentation reframe). Companion
 views: the positive core `FTGB_WHAT_WORKS.md`; the per-item status `TIER_LEDGER.md`; the crystallization
 `BEST_AVAILABLE_THEORY_2026-09-14.md`; the kept negatives `NEGATIVE_PROGRAM_LOG_2026-09-15.md`.
@@ -14,7 +14,7 @@ views: the positive core `FTGB_WHAT_WORKS.md`; the per-item status `TIER_LEDGER.
 **The verified core is done and stable.** Coherence *is* regularity; the driven self-sustaining attractor
 (Re 126→628); the CK inharmonic comb; the heartbeat theorem; the topology / chirality / Majorana cluster;
 the exact spectral zeta; the anapole; the conserved nuclear ledger; the rhythm layer. All `[V]`, all
-re-runnable, all presented (WHAT_WORKS → 10-page → 25-page → Grand Synthesis → ledger → 87 scripts) with the
+re-runnable, all presented (WHAT_WORKS → 10-page → 25-page → Grand Synthesis → ledger → 88 scripts) with the
 same tiers and numbers at every rung.
 
 **The negative program is clean.** A 12-agent adversarial reassessment (grade A−) found the 33 negatives are
@@ -38,10 +38,19 @@ Everything nuclear reduces to a single computation, now pointed as sharply as in
 - **Constrained by the data:** the sufficiency bar derives `β·|dF| ≤ 0.874 MeV/fm` (the slow/soft crossing
   corner is forced).
 - **Localized by Stage D:** density geometry *cannot* supply `ρ_eff ~ 0.07` (its overlap floor is 0.55) — the
-  smallness must live in the orientation / Finkelstein–Rubinstein phase structure, the moduli metric, and the
-  regularized boundary. **What remains external:** the orientation-resolved near-BPS crossing overlap, *with*
-  the L₂ boundary-layer regularization (the first-order L₂ energy log-diverges on the exact compacton — not
-  plain quadrature). This is the production ρ_eff — a specific, credible near-BPS run, not a one-script closure.
+  smallness must live in orientation space.
+- **Reduced by Stage E (2026-09-15):** the orientation factor is *not* external — it is fixed by **angular
+  momentum**. The ⁴He ground state is 0⁺, so forming it from two spin-1 deuterons in s-wave requires the
+  **singlet** (S=0); via Finkelstein–Rubinstein quantization (deuteron = B=2 Skyrmion, spin = orientation) the
+  singlet *is* the cube-forming orientation — i.e. exactly the spin gate. So `ρ_eff = f_orient × f_density ×
+  f_dyn` factorizes with **two factors now computed in-env**: `f_orient` = the singlet weight (rigorous
+  selection; value 1/9–1/3 by convention), `f_density` = Stage-D's `[0.55, 0.96]`. This gives
+  `ρ_eff = [0.06, 0.32] × f_dyn`, hitting the observed ~0.07 for a dynamical factor `f_dyn` of **O(1)** — exactly
+  what a first-order near-BPS matrix element gives (`delta_b4_stageE_rho_eff_semianalytic_check`). **The open
+  problem shrinks from "compute an unbounded ρ_eff ∈ [0,1]" to "confirm the one dynamical factor f_dyn is O(1)."**
+- **What remains external (now one number):** `f_dyn` — the moduli-metric-weighted, L₂-boundary-regularized
+  first-order amplitude (the L₂ energy log-diverges on the exact compacton — not plain quadrature), expected
+  O(1) but unproven. That single O(1) check is the production run's remaining job, not an open-ended computation.
 - **Sub-piece now with a mechanism (not open):** the beat→deuteron-spin *coupling* is magnetic resonance
   (`beat_spin_magnetic_resonance_check`); its *strength* (`Ω_R = γ_d·b₁ vs 1/T₂`) still needs the transverse-δB
   amplitude and the coherence time T₂ — the external polarized-target beat-sweep quantities.
@@ -131,7 +140,7 @@ not the repo.*
 ## 7. Outward-facing / publish housekeeping
 
 - **GitHub Release + Zenodo DOI** — still need the author (an outward-facing publish; the repo is
-  release-ready, CI-green, tagged v1.2.0). A v1.3.0 tag would mark this week's state (87/87; the papers;
+  release-ready, CI-green, tagged v1.2.0). A v1.3.0 tag would mark this week's state (88/88; the papers;
   WHAT_WORKS; the salvage + magnetic-resonance resolution).
 - The presentation stack is complete and coherent; no documentation gap remains.
 
@@ -147,4 +156,4 @@ run** (unconditional high-Re), and — the real bottleneck — **the experimenta
 bench, not a repo. Nothing is fabricated; every open item is named at its tier with the specific work that
 would close it. The jewel does not overclaim what is left; it maps it.
 
-*Reproduce the whole: `python results/verify/verify_all.py` → 87/87.*
+*Reproduce the whole: `python results/verify/verify_all.py` → 88/88.*

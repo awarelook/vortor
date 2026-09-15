@@ -2,7 +2,7 @@
 
 **FTGB × the anomaly landscape — what the theory explains, predicts, and leaves open, tiered.**
 Author: Nathaniel Hanks · 2026-09-14 · a synthesis/index over already-committed, already-verified material
-(`verify_all.py` **87/87**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
+(`verify_all.py` **88/88**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
 tier or explicitly tagged `[S]`/open. Built and adversarially audited by a 24-agent workflow (novelty checked
 against Hagelstein / Preparata / Widom–Larsen / Storms / Takahashi / Kim; discipline pass certified the
 committed corpus clean of fabricated COP / rate / cross-section / branching).
@@ -216,6 +216,17 @@ kill conditions and a single computable unknown — not a claimed result.**
    suppression, if real, lives in the **relative orientation / Finkelstein–Rubinstein phase structure** of
    the crossing (+ the moduli metric + the regularized boundary). The external run should resolve the
    orientation-space structure of the crossing *first* — the open problem is now pointed, not just named.
+   **[STAGE E, same day (`delta_b4_stageE_rho_eff_semianalytic_check`).]** The orientation factor is *not*
+   external: the ⁴He 0⁺ channel requires the **singlet** (S=0) by angular momentum, and via Finkelstein–
+   Rubinstein quantization (deuteron = B=2 Skyrmion, spin = orientation) the singlet *is* the cube-forming
+   orientation — i.e. the spin gate. So `ρ_eff = f_orient(1/9–1/3, rigorous) × f_density([0.55,0.96], Stage D)
+   × f_dyn = [0.06, 0.32] × f_dyn`, hitting the observed ~0.07 for a dynamical factor **f_dyn ~ O(1)** — exactly
+   what a first-order near-BPS matrix element gives. **The open problem shrinks from "compute an unbounded
+   ρ_eff ∈ [0,1]" to "confirm the one dynamical factor f_dyn is O(1)"**; two of three factors are now in-env.
+   This elevates the logged coincidence (1/9 × density ∋ target) to a structured semi-analytic estimate — the
+   1/9 is the required selection, not a coincidence — and ρ_eff inherits the polarization knob (m=0 → ×3,
+   m=±1 → 0). Semi-analytic, not the production number; f_dyn (moduli-metric-weighted, L₂-regularized) stays
+   the named external residual.
    **[THE GATE, same day (`spin_channel_gate_check`).]** The quantum arithmetic of that orientation space:
    the s-wave door to ⁴He(0⁺) is the **singlet alone** — statistical gate `1/9` `[credited]` — and the gate
    is **steerable by coherent preparation**: a single-mode condensate pair `|1,m⟩⊗|1,m⟩` has singlet
