@@ -31,8 +31,11 @@ falsifiable pairing.
             phase-AND-polarization knob. This is sharper than either falsifier alone.
 
   HONEST SCOPE (do not over-read): this NAMES a same-scale candidate mechanism and mints a joint falsifier; it
-  does NOT prove the beat actually drives the m=0 population (the beat->m-population coupling strength is the
-  open corridor-dynamics piece, needing the external polarized-target beat-sweep run) and computes NO rate. The
+  does NOT prove the beat actually drives the m=0 population. *(2026-09-15 update: the coupling MECHANISM is no
+  longer open -- it is magnetic resonance, resolved in `beat_spin_magnetic_resonance_check`: Rabi driving at
+  f_b = f_Larmor, met at a v_A-independent density n* = 1.02e20 /m^3 inside the object's range, deuteron-
+  specific, strength Omega_R = gamma_d*b1 vs 1/T2. Only the transverse-dB amplitude and T2 remain quantitatively
+  open.)* This check computes NO rate. The
   pump kill is untouched and STANDS. Tier: same-scale arithmetic [V]; CG steering [credited]; the beat-as-the-
   gate's-preparation-clock identification and the joint falsifier [S]. No new coincidence number; nothing
   promoted beyond a named, checkable mechanism.
@@ -89,7 +92,9 @@ print("   Prediction: a beat-swept aneutronic-yield step must die under BOTH (a)
 print("   property) AND (b) m=+-1 deuteron polarization (closes the singlet door); m=0/singlet-weighted assembly")
 print("   ENHANCES it up to the 3x gate. A joint phase-AND-polarization knob no thermal-statistical model")
 print("   predicts -- sharper than either the N^L beat-lock or the polarization knob alone.")
-print("   HONEST: the beat->m-population coupling strength is the OPEN corridor-dynamics piece (external")
+print("   MECHANISM (resolved 2026-09-15, beat_spin_magnetic_resonance_check): magnetic resonance / Rabi driving")
+print("   at f_b=f_Larmor (v_A-independent n*=1.02e20, deuteron-specific); only the transverse-dB amplitude and T2")
+print("   HONEST: the beat->m-population coupling STRENGTH (Omega_R vs 1/T2) is the remaining open piece (external")
 print("   polarized-target beat-sweep run); the pump kill STANDS; no rate computed; nothing promoted past [S].")
 check("joint falsifier minted (phase-scramble AND m=+-1 polarization); the beat relocated off the N^L law", True,
       "kill: a beat-locked yield step that survives m=+-1 polarization (or phase-scrambling) refutes the pairing")

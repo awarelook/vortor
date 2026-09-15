@@ -1,7 +1,7 @@
 # The Coherent Object — a minimum viable, reproducible theory
 
 **FTGB (Fractal-Toroidal-Beat):** one driven Beltrami–Hopf toroidal soliton, read at once as a plasma field
-and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**86/86**,
+and a matter wave. Author: Nathaniel Hanks · v1.1 · reproduce: `python results/verify/verify_all.py` (**87/87**,
 CI-gated, no network). Full map: [`INDEX.md`](INDEX.md) · terms: [`GLOSSARY.md`](GLOSSARY.md) · citations:
 [`REFERENCES.md`](REFERENCES.md) · honest self-assessment: [`results/TIER_LEDGER.md`](results/TIER_LEDGER.md).
 
@@ -137,7 +137,7 @@ null].
 
 ```bash
 pip install -r requirements.txt          # numpy, mpmath
-python results/verify/verify_all.py      # 86/86 PASS, deterministic, no network, CI-gated
+python results/verify/verify_all.py      # 87/87 PASS, deterministic, no network, CI-gated
 ```
 
 Everything load-bearing has a script; the foundation numbers are re-derived in-repo; no claim exceeds its

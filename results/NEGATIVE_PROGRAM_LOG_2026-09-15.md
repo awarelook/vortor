@@ -77,8 +77,22 @@ the m=0 preparation actually occurs." The entrance deuterons (I=1) have a Larmor
 dynamics, not a MeV energy transfer (and is distinct from the `cross_scale` TEST 5 "empty-bridge" caveat,
 which was about the I=0 *product*). This names the gate's open preparation mechanism, relocates the beat off
 the once-refuted `N^L` law, and mints a **joint falsifier**: a beat-swept yield step must die under *both*
-phase-scrambling *and* m=±1 deuteron polarization. Transfers zero new coincidence number; tiered [S]; the
-beat→m-population coupling strength remains the open corridor-dynamics piece.
+phase-scrambling *and* m=±1 deuteron polarization. Transfers zero new coincidence number; tiered [S].
+
+**Follow-on (the same day): the coupling was a *false-closed negative* — its mechanism is magnetic resonance.**
+The pairing left the beat→m-population coupling *strength* as a bare "open," as if no mechanism existed. A
+reassessment (prompted by "possible false closed negative — need mechanism in principle") reopened it and found
+the mechanism is textbook (`beat_spin_magnetic_resonance_check`): the beat provides an oscillating δB at f_b, and
+when f_b = the deuteron Larmor it resonantly **Rabi-drives** the entrance-deuteron spin — ordinary nuclear
+magnetic resonance. Three results: (i) the resonance condition is **v_A-independent** (both f_b and B scale with
+v_A), so it reduces to a geometry+density condition met at **n\* = 1.02×10²⁰ /m³ — inside the object's own cited
+SSPX range** (10¹⁹–1.3×10²⁰); no external field needed. (ii) It is **deuteron-specific** (protons sit 6.5×
+off-resonance — the "a control also hits" concern of `cross_scale` TEST 5 *is* the discriminator). (iii) The
+coupling strength is now a **formula**, Ω_R = γ_d·b₁ vs 1/T₂, not a mystery — only the transverse-δB fraction
+and the coherence time T₂ remain quantitatively open. `cross_scale` TEST 5's "empty-bridge" negative correctly
+killed the *evidence* reading (the I=0 product) but obscured this *mechanism* reading — a genuine false-close,
+now reopened. The falsifier sharpens to a **four-way discriminator**: coherent × deuteron-specific ×
+density/field-tuned × polarization-sensitive.
 
 **Rejected salvages (the kill stands — recorded as verified):** the "detuning-gap analogy" as a reusable
 schema (already-salvaged, adds nothing); the Majorana-crossing framing (no new content); the **K_PV(ω)
