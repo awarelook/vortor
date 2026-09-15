@@ -1,7 +1,7 @@
 # The Coherent Object: a driven Beltrami–Hopf toroidal soliton read as field and matter wave
 
 **A reproducible, tiered theory — the ten-page presentation.**
-Nathaniel Hanks · 2026-09-15 · reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` → **84/84**, deterministic, no network, CI-gated.
+Nathaniel Hanks · 2026-09-15 · reproduce: `pip install -r requirements.txt && python results/verify/verify_all.py` → **85/85**, deterministic, no network, CI-gated.
 Complete 25-page version: `paper/FTGB_FULL_PAPER_25PG_2026-09-15.md` · longform: `FTGB_GRAND_SYNTHESIS.md` · per-claim ledger: `results/TIER_LEDGER.md` · visuals: `gallery.html`.
 
 ---
@@ -32,7 +32,7 @@ much it has earned, and every labeled claim can be re-run by a stranger with one
 
 Claims are tiered **[V]** / **[credited]** / **[S]** / **[flag]** / **settled-negative**, and the tier travels
 with the claim into every document, interactive, and rendered figure. Three practices distinguish the project:
-(i) **settled-negatives are wins** — a computed refutation is kept, cited, and celebrated (a dozen — fully enumerated in the 25-page paper §9);
+(i) **settled-negatives are wins** — a computed refutation is kept, cited, and celebrated (thirteen — fully enumerated in the 25-page paper §9);
 (ii) **coincidences are computed and logged, never promoted** (`results/COINCIDENCE_LEDGER.md`); (iii) **the
 discipline is symmetric** — under-claiming is policed as hard as over-claiming, and this week's record includes
 corrections in both directions, including two of the project's own audit findings refuted by computation.
@@ -77,7 +77,7 @@ by 16.8 orders; the pump reading doubly closed); direct phonon-nuclear coupling 
 catalysis; GHz/THz beat-modulated tunneling (the pre-jewel campaign's claim, fence-killed with its artifact's
 internal inconsistency caught); TSC-class 4d→2α exits ((α,n)-excluded — a named confrontation with prior art);
 supra-threshold slow dwell (zeptosecond survival); sub-threshold state ladders (⁴He has no bound excited
-states); neutrino disposal; coherence-volume enhancement at the hard rung.
+states); neutrino disposal; coherence-volume enhancement at the hard rung; and PV-gravity levitation (the polarizable-vacuum reading is GR-equivalent, so a levitating well needs negative mass — no propulsion/over-unity).
 
 ## 4. The matter-wave reading `[S]`
 
@@ -171,7 +171,7 @@ kept strictly distinct from baryon decay.
 
 ## 8. Reproducibility & provenance
 
-One command reproduces the entire model (84 checks: 81 theory scripts + 3 engine runs), deterministic and
+One command reproduces the entire model (85 checks: 82 theory scripts + 3 engine runs), deterministic and
 offline, gated by CI on every push. Canonical numbers are re-derived in-repo from cited anchors; external data
 (AME2020 masses, TUNL levels, measured screening) is vendored with named provenance; the absolute-magnitude
 caveat (`v_A` band) is quarantined by proof (dimensionless observables invariant to 1e-16). Confronted

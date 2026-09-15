@@ -89,4 +89,4 @@ is therefore the realistic path for those five — not vendoring.
 | f_beat(R₁) necked-scan scatter | caution datum for f_b(R) falsifier design | `[log]` vendored |
 | The five [V-external] orphans + MVVC + phantom layer | **confirmed absent** from this store | recompute route stands |
 
-*Harness after fold: 84/84 (with Stage D + the gate). The store's designation moves from SCRATCH to surveyed-and-quarantinable.*
+*Harness after fold: 85/85 (with Stage D + the gate). The store's designation moves from SCRATCH to surveyed-and-quarantinable.*

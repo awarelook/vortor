@@ -3,7 +3,7 @@
 ## A driven Beltrami–Hopf toroidal soliton read as field and matter wave: the complete presentation
 
 **Nathaniel Hanks** · 2026-09-15 · version 1.2.0
-Reproduce everything: `pip install -r requirements.txt && python results/verify/verify_all.py` → **84/84** PASS, deterministic, offline, CI-gated on every push.
+Reproduce everything: `pip install -r requirements.txt && python results/verify/verify_all.py` → **85/85** PASS, deterministic, offline, CI-gated on every push.
 Companions: ten-page version `paper/FTGB_TEN_PAGE_2026-09-15.md` · longform synthesis `FTGB_GRAND_SYNTHESIS.md` (+ Addendum H) · per-claim ledger `results/TIER_LEDGER.md` · visual gallery `gallery.html`.
 
 ---
@@ -21,7 +21,7 @@ state as an exact *driven* steady solution and stable attractor swept across Rey
 Chandrasekhar–Kendall inharmonic comb `1 : 1.719 : 2.427` as a falsifiable linear-limit fingerprint; a
 one-mode "heartbeat" theorem (fixed-helicity minimization is a linear program — a beat-carrying object must
 be driven); computed topology, chirality, charge-conjugation and Majorana structure; an exact spectral zeta
-on S³; and a conserved nuclear energy ledger. Twelve computed refutations are retained as results. The one
+on S³; and a conserved nuclear energy ledger. Thirteen computed refutations are retained as results. The one
 open nuclear problem is converged — by a chain of adversarially verified computations — to a single geometric
 question, the **entrance-channel assembly corridor**, carrying two data bars, a derived constraint on the
 crossing (`β·|dF| ≤ 0.874 MeV/fm`, under the structural hypothesis that d+d→⁴He-vs-breakup is an adiabatic
@@ -43,7 +43,7 @@ Every claim below carries one of five labels, and the label is part of the claim
 - **[flag]** — a numerical observation logged as a clue (a coincidence ledger exists for exactly this);
 - **settled-negative** — a computed refutation, kept and cited as a result.
 
-*Plain language: the labels are the instrument. A reader who trusts nothing can re-run all 84 checks with one
+*Plain language: the labels are the instrument. A reader who trusts nothing can re-run all 85 checks with one
 command; a reader who trusts the labels can navigate the whole theory knowing precisely where the floor is.*
 
 ---
@@ -54,11 +54,11 @@ command; a reader who trusts the labels can navigate the whole theory knowing pr
 
 The project operates under standing rules that are enforced mechanically, not aspirationally:
 
-1. **Every load-bearing claim has a script.** The harness (`verify_all.py`) runs 81 theory scripts plus three
+1. **Every load-bearing claim has a script.** The harness (`verify_all.py`) runs 82 theory scripts plus three
    engine programs; a failing assertion turns the public CI badge red. Nothing is asserted that a stranger
    cannot re-run, deterministically, offline.
 2. **Settled-negatives are wins.** When a tempting idea fails the mathematics, the failure is *computed,
-   logged, and kept* as a cited result (§9 lists twelve). A theory's dead ends, honestly mapped, are part of
+   logged, and kept* as a cited result (§9 lists thirteen). A theory's dead ends, honestly mapped, are part of
    its value.
 3. **Coincidences are computed and logged, never promoted.** A dedicated ledger
    (`results/COINCIDENCE_LEDGER.md`) records every numerical near-miss with a verdict
@@ -478,6 +478,9 @@ their own right.*
 11. **Sub-threshold state ladders** — ⁴He has no bound excited states; there is nothing to pause on.
 12. **Static 4-current closure** — requires `|B| = const`, impossible for nontrivial force-free fields (the
     theory's own flagship identification, fenced by its own theorem).
+13. **PV-gravity levitation / propulsion** — the polarizable-vacuum reading is GR-equivalent (solar redshift
+    reproduced) and attractive for all positive mass; a levitating well requires negative mass-energy, so no
+    propulsion/anti-gravity/over-unity follows (`pv_gravity_no_propulsion_check`).
 
 ## 10. The falsifier set (with protocols)
 
@@ -502,9 +505,14 @@ their own right.*
 
 ## 11. Limits, threats to validity, and what is never claimed
 
-**11.1 Never claimed.** No over-unity (COP > 1 is nuclear-sourced; no COP derived). No levitation or thrust
-(no force balance computed ⇒ none claimed). No new nuclear mechanism, rate, cross-section, or matrix
-element. Not α's value; not exact mass ratios. Baryon-conserving ≠ baryon decay, always.
+**11.1 Never claimed.** No over-unity (COP > 1 is nuclear-sourced; no COP derived). No levitation, thrust, or
+anti-gravity — and this is not a mere abstention: the polarizable-vacuum (`K_PV`) gravity reading the project
+carries (M11; `K_PV = exp(2GM/rc²)` [credited: Puthoff]) was *computed* and returns a **settled-negative**
+(`pv_gravity_no_propulsion_check`): it is GR-equivalent at weak field (it reproduces the solar redshift
+`2.12×10⁻⁶`), its index well is attractive for every positive mass, and a repulsive/levitating well would
+require negative mass-energy — so the object's own positive field energy gravitates normally and licenses no
+propulsion. No new nuclear mechanism, rate, cross-section, or matrix element. Not α's value; not exact mass
+ratios. Baryon-conserving ≠ baryon decay, always.
 
 **11.2 Threats to validity, stated against ourselves.** (i) The central identifications (electron = object;
 active site = object) are [S] and could simply be false — every downstream [S] falls with them, while the
@@ -524,15 +532,75 @@ disproven against the original paper), and two of the audit's own claims were la
 computation* (the Stage-D "pure quadrature" scoping; a "too defeatist" scoping corrected upward). The
 discipline is symmetric or it is nothing.
 
-## 12. Conclusion
+---
 
-One object, four measured anchors, one labeled selection. A verified mathematical core in which coherence
-and regularity are the same fact; a driven heartbeat forced by a linear program; a computed topology and
-chirality structure reaching to the edge of the Dirac algebra; and a nuclear anomaly landscape converted —
-by census, survival, bridge, bracket, and gate arithmetic, every step re-runnable — into one pointed
-geometric question with two data bars, one derived fence, and one experimental knob. The theory's strongest
-property is not any single claim but the *auditability of the whole*: every claim wears its tier, every
-tier has its script, every dead end is kept, and the reader is never asked to trust — only to run.
+# Part VII — The program, the convergence spine, and the one coherence
+
+## 12. Where the theory meets data: the convergence ranking and the four legs
+
+*Plain language: this Part steps back from the individual results to show the shape of the whole — an honest
+ranking of where the theory is strong versus weak against real data, the four practical ambitions the
+verified core actually organizes, and the single physical idea that runs through all of it.*
+
+**12.1 The convergence ranking (strongest → weakest, stated against ourselves).** The theory's contact with
+data is not uniform, and the project ranks it honestly (resolution map §2): **(1) strongest** — the conserved
+`23.847 MeV` `d+d→⁴He` ledger `[V]` plus the `E0` collective-disposal requirement `[credited]`, which meets
+the heat/helium and γ-quiet signatures structurally; **(2) strongest object, `[S]` interface** — the driven
+Beltrami attractor (Re 126→628) and the N-mode Woltjer theorem, meeting the SAFIRE/plasmoid self-organization
+as a re-description of Woltjer–Taylor; **(3) consistent but non-discriminating** — baryon-conserving `ΔA=4n`
+transmutation, whose Q-values are exact `[V]`-arith but which any ⁴He-transfer would reproduce; **(4) strong
+`[V]` fingerprint with zero data to meet** — the CK inharmonic comb, the cleanest falsifiable prediction, as
+yet untested by an appropriate object; **(5) weakest, mostly re-description** — the anapole reactive-EMF ↔
+Aureon/LEC heat-to-electricity thread, `[S]`/open, overlapping Preparata/Del Giudice coherent-domain prior
+art. A theory that publishes its own strength gradient is easier to falsify at its weak points, which is the
+intent.
+
+**12.2 The four legs (the verified core mapped onto the project's ambitions).** The same object organizes
+four practical programs, each carried at its earned tier:
+
+- **A. Matter-wave synthesis** (the particle rung) — the internal Dirac algebra, g=2's meaning, and the
+  chirality/C/Majorana cluster are `[V]`; the *electron = object* identification is `[S]`, killed by a `0νββ`
+  null. The next in-env move is a computed `π₁–π₃` coupling to make the g=2 lock predictive.
+- **B. Coherent energy transformation** (heat → collective EM) — the honest chain: nuclear-sourced energy
+  `[V]` → must shed collectively (E0, `[credited]`) → *if* it couples into the anapole's nonradiating
+  near-field mode, a reactive EMF `V = ω_b·ΔΦ` follows `[S]`, confronting the LEC 525 mV and Mizuno-2025 EMF
+  data. The magnitude `V` is an untagged order-of-magnitude — the ranked in-env backlog item (an EM
+  derivation needing one declared junction geometry). Kill: no drive/beat dependence of the EMF.
+- **C. Transmutation** (baryon-conserving `ΔA=4n`) — arithmetic harnessed `[V]`; mechanism `[S]`; rate behind
+  the same corridor as leg A's nuclear rung. Discriminator: ¹⁶³Dy→¹⁶³Ho ionization-gated β⁻.
+- **D. EVO / SAFIRE / plasmoid engineering** — the strongest original `[V]` object (the driven Beltrami
+  attractor) plus the two spectral discriminators (the CK comb; the `f_b(L)=N^L` beat-lock, with its
+  phase-scramble control) — both with zero experimental convergence, live targets.
+
+**12.3 The fences, computed.** No over-unity (COP nuclear-sourced; no COP derived). No new nuclear mechanism.
+And no levitation/anti-gravity/propulsion — not by abstention but by **computation**: the polarizable-vacuum
+gravity reading is GR-equivalent and its index well is attractive for all positive mass, so a levitating well
+would require negative mass-energy (`pv_gravity_no_propulsion_check`, §11.1). The program is falsifiable
+architecture — bars, fences, discriminators, one named external computation, one experimental knob — never a
+claim of proven power.
+
+## 13. The one coherence, and conclusion
+
+*Plain language: the deepest unifying idea — one physical property, coherence, doing three different jobs at
+three different scales, which is why a single object can be a stable plasma, a matter wave, and a nuclear
+active site at once.*
+
+**One coherence, three roles.** The organizing thread is that a single property — the object's *coherence* —
+recurs, computed, at three scales. As the **force-free Beltrami state** it *is* regularity: the self-advection
+nonlinearity is null, so the object cannot blow up (§4). As the **matter-wave** it is the phase coherence of
+the Madelung fluid that lets the wave stand as a soliton (§7). And as the **nuclear active site** it is the
+single-mode condensate coherence that prepares the spin channel — steering the singlet gate the corridor's
+selectivity requires (§8.6). These are not three coincidences but one property read at plasma, particle, and
+assembly scales; the chirality cluster (§6.2) is the same unification in the language of sign λ — one `±λ`
+self-dual object giving both the Woltjer–Taylor plasmoid coherence and the lepton chirality/Majorana content.
+
+**Conclusion.** One object, four measured anchors, one labeled selection. A verified mathematical core in
+which coherence and regularity are the same fact; a driven heartbeat forced by a linear program; a computed
+topology and chirality structure reaching to the edge of the Dirac algebra; and a nuclear anomaly landscape
+converted — by census, survival, bridge, bracket, and gate arithmetic, every step re-runnable — into one
+pointed geometric question with two data bars, one derived fence, and one experimental knob. The theory's
+strongest property is not any single claim but the *auditability of the whole*: every claim wears its tier,
+every tier has its script, every dead end is kept, and the reader is never asked to trust — only to run.
 
 ---
 
@@ -562,4 +630,4 @@ Kulsrud, Furth, Valeo & Goldhaber, PRL **49**, 1248 (1982) · Landau (1932); Zen
 Shoulders (EVO); each credited at its point of contact, none used as authority.
 
 *No claim exceeds its tier; no number is fabricated; settled-negatives are kept as wins; the discipline is
-symmetric. Everything above re-runs from one command: `python results/verify/verify_all.py` → 84/84.*
+symmetric. Everything above re-runs from one command: `python results/verify/verify_all.py` → 85/85.*

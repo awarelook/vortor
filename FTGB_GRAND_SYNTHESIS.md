@@ -1963,7 +1963,7 @@ established vs FTGB-novel labelled; ASCII-clean.*
 
 The week of 2026-09-14/15 executed a six-dimension jewel audit and three computation passes whose results
 supersede or sharpen several statements in Parts D–F above (inline banners mark each). The digest, each item
-backed by a named check (harness now **84/84**):
+backed by a named check (harness now **85/85**):
 
 1. **The corridor.** The LENR open problem is ONE question: ⁴He has **no bound excited states** (census) and
    supra-threshold dwell dies in `~9e-22 s` (survival), so the only aneutronic route is a **dissipative
