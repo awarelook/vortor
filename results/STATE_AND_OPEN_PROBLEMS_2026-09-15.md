@@ -1,8 +1,8 @@
 # State of the theory & the open problems — current-true
 
-**Author:** Nathaniel Hanks · **Date:** 2026-09-15 · **Harness:** `verify_all.py` → **89/89**.
+**Author:** Nathaniel Hanks · **Date:** 2026-09-15 · **Harness:** `verify_all.py` → **90/90**.
 The honest "where does it stand, and what is left" report, current after this week's advancements
-(78 → 89 checks; the corridor sharpening; Stage D; the spin gate; the PV-gravity fence; the negative-program
+(78 → 90 checks; the corridor sharpening; Stage D; the spin gate; Stage F's f_dyn bracket; the PV-gravity fence; the negative-program
 salvage; the beat→spin magnetic-resonance resolution; and the result-first presentation reframe). Companion
 views: the positive core `FTGB_WHAT_WORKS.md`; the per-item status `TIER_LEDGER.md`; the crystallization
 `BEST_AVAILABLE_THEORY_2026-09-14.md`; the kept negatives `NEGATIVE_PROGRAM_LOG_2026-09-15.md`.
@@ -14,7 +14,7 @@ views: the positive core `FTGB_WHAT_WORKS.md`; the per-item status `TIER_LEDGER.
 **The verified core is done and stable.** Coherence *is* regularity; the driven self-sustaining attractor
 (Re 126→628); the CK inharmonic comb; the heartbeat theorem; the topology / chirality / Majorana cluster;
 the exact spectral zeta; the anapole; the conserved nuclear ledger; the rhythm layer. All `[V]`, all
-re-runnable, all presented (WHAT_WORKS → 10-page → 25-page → Grand Synthesis → ledger → 89 scripts) with the
+re-runnable, all presented (WHAT_WORKS → 10-page → 25-page → Grand Synthesis → ledger → 90 scripts) with the
 same tiers and numbers at every rung.
 
 **The negative program is clean.** A 12-agent adversarial reassessment (grade A−) found the 33 negatives are
@@ -48,9 +48,21 @@ Everything nuclear reduces to a single computation, now pointed as sharply as in
   `ρ_eff = [0.06, 0.32] × f_dyn`, hitting the observed ~0.07 for a dynamical factor `f_dyn` of **O(1)** — exactly
   what a first-order near-BPS matrix element gives (`delta_b4_stageE_rho_eff_semianalytic_check`). **The open
   problem shrinks from "compute an unbounded ρ_eff ∈ [0,1]" to "confirm the one dynamical factor f_dyn is O(1)."**
-- **What remains external (now one number):** `f_dyn` — the moduli-metric-weighted, L₂-boundary-regularized
-  first-order amplitude (the L₂ energy log-diverges on the exact compacton — not plain quadrature), expected
-  O(1) but unproven. That single O(1) check is the production run's remaining job, not an open-ended computation.
+- **Bracketed in-env now (Stage F + the 12-agent creative-hat attack, `delta_b4_fdyn_bracket_check`):** `f_dyn`
+  is no longer "expected O(1) but unproven." It is **rigorously in `(0,1]`** — `≤1` exact (Cauchy–Schwarz on
+  the positive near-BPS `V`-metric), `>0` by O_h allowedness (the singlet→A₁g-cube first-order channel is not
+  selection-forbidden) — and **O(1) by a cross-validated bracket `[0.2, 1.0]`, central ~0.5–0.8**, from six
+  angles anchored by **two density-proxy-*free* numbers**: the O_h Wigner–Eckart floor `1/√3 = 0.577`
+  (conditional on inter-config overlap `s≥0`) and the vibrational Franck–Condon central `~0.30` (BBT 20 MeV
+  breather + 23.85 MeV displacement — the low dissenter). The Stage-D L₂ **log-divergence is shown to cancel**
+  in the *normalized* amplitude (it afflicts the energy, not the ratio) — exact algebra, but conditional on an
+  edge-universality ansatz, so tiered `[S]` (an auditor correction, folded). *Honest caveat:* the high-side
+  angles reuse the Stage-D density band (partly circular); the two anchors are the load-bearing evidence.
+- **What remains external (now a bounded number, not open-ended):** the precise value is `g`, the
+  moduli-metric-weighted orientation overlap in `[0,1]`. The strongest in-env route to pin it is the
+  **Speight-metric homogeneity check (Stage G, not yet built)** — does the crossing measure `√det g` stay
+  homogeneous (→ f_dyn = the O(1) geometric overlap) or concentrate (enhancement/suppression)? The full
+  relative-orientation VPDiff average is the external near-BPS run.
 - **Can f_dyn be resolved by literature or data now? — checked (`delta_b4_data_confrontation_check`):** *no* by
   either existing route, but both routes are now explicit. **Literature:** the near-BPS model and B=4 interactions
   are published, but the specific B=2+B=2→B=4 *non-radiative fusion* matrix element is uncomputed → the theory
@@ -139,7 +151,15 @@ not the repo.*
   ckfreefem parent is not on the local drive; the 2026-09-15 expedition confirmed this). **In-env move:
   recompute each** (small quadratures / a coarse H integral), converting `[V-external]` → `[V]`.
 - **StageD ρ_eff bracket** — the *density* factor is computed `[0.55, 0.96]`; the **orientation-resolved** factor
-  is the external run (§2).
+  is now bracketed in-env (Stage F, `f_dyn ∈ [0.2,1.0]`, §2), with the precise value external.
+- **The f_dyn next-checks (ranked by the 12-agent attack, highest-leverage first)** — the creative-hat pass named
+  four buildable in-env checks that would tighten `f_dyn` further: **(1, strongest) `delta_b4_stageG_moduli_metric`**
+  — the Speight-metric homogeneity test (the one ingredient the proxies omit: does `√det g` concentrate at the
+  crossing?); **(2) `delta_b4_fdyn_oh_selection`** — the rigorous O_h Wigner–Eckart floor `1/√n` as a standalone
+  (the `s≥0` conditional made explicit); **(3) `delta_b4_fdyn_vibrational_fc`** — the independent Franck–Condon
+  corroborator that breaks the density-proxy circularity; **(4) `delta_b4_fdyn_boundary_layer`** — the
+  cutoff-controlled overlap `f_dyn(δ)`. The two anchors are already *computed inside* `delta_b4_fdyn_bracket`;
+  these would promote them to standalone checks. None is the full pin (that is the external near-BPS run).
 - **Absolute magnitudes** — carry the `v_A` residual band; only ratios are load-bearing (proven). The
   `ω_EVO = 2πf₁` coincidence stays provenance-incomplete pending a vendored source.
 
@@ -148,7 +168,7 @@ not the repo.*
 ## 7. Outward-facing / publish housekeeping
 
 - **GitHub Release + Zenodo DOI** — still need the author (an outward-facing publish; the repo is
-  release-ready, CI-green, tagged v1.2.0). A v1.3.0 tag would mark this week's state (89/89; the papers;
+  release-ready, CI-green, tagged v1.2.0). A v1.3.0 tag would mark this week's state (90/90; the papers;
   WHAT_WORKS; the salvage + magnetic-resonance resolution; Stage E + the data-confrontation).
 - The presentation stack is complete and coherent; no documentation gap remains.
 
@@ -164,4 +184,4 @@ run** (unconditional high-Re), and — the real bottleneck — **the experimenta
 bench, not a repo. Nothing is fabricated; every open item is named at its tier with the specific work that
 would close it. The jewel does not overclaim what is left; it maps it.
 
-*Reproduce the whole: `python results/verify/verify_all.py` → 88/88.*
+*Reproduce the whole: `python results/verify/verify_all.py` → 90/90.*

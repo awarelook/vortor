@@ -2,7 +2,7 @@
 
 **FTGB × the anomaly landscape — what the theory explains, predicts, and leaves open, tiered.**
 Author: Nathaniel Hanks · 2026-09-14 · a synthesis/index over already-committed, already-verified material
-(`verify_all.py` **89/89**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
+(`verify_all.py` **90/90**). It asserts no number that is not traceable to an existing `[V]`/`[credited]`
 tier or explicitly tagged `[S]`/open. Built and adversarially audited by a 24-agent workflow (novelty checked
 against Hagelstein / Preparata / Widom–Larsen / Storms / Takahashi / Kim; discipline pass certified the
 committed corpus clean of fabricated COP / rate / cross-section / branching).
@@ -231,6 +231,14 @@ kill conditions and a single computable unknown — not a claimed result.**
    1/9 is the required selection, not a coincidence — and ρ_eff inherits the polarization knob (m=0 → ×3,
    m=±1 → 0). Semi-analytic, not the production number; f_dyn (moduli-metric-weighted, L₂-regularized) stays
    the named external residual.
+   **[STAGE F, same day (`delta_b4_fdyn_bracket_check`; a 12-agent adversarial creative-hat attack + fold).]**
+   f_dyn is no longer "expected O(1) but unproven": it is **rigorously `(0,1]`** — `≤1` exact (Cauchy–Schwarz),
+   `>0` by O_h A₁g-allowedness — and **O(1) by a cross-validated bracket `[0.2,1.0]`, central ~0.5–0.8**,
+   anchored by two density-proxy-*free* numbers (the O_h Gram floor `1/√3=0.577` cond. `s≥0`, and the
+   Franck–Condon central `~0.30`). The Stage-D L₂ log-divergence is shown to **cancel in the normalized
+   amplitude** (exact algebra, tiered `[S]` under an edge-universality ansatz — an auditor demotion from `[V]`,
+   folded). The precise value = `g` (moduli-metric orientation overlap) stays external; strongest next in-env
+   move = the Stage-G Speight-metric homogeneity check. Density-proxy circularity of the high-side angles flagged.
    **[THE GATE, same day (`spin_channel_gate_check`).]** The quantum arithmetic of that orientation space:
    the s-wave door to ⁴He(0⁺) is the **singlet alone** — statistical gate `1/9` `[credited]` — and the gate
    is **steerable by coherent preparation**: a single-mode condensate pair `|1,m⟩⊗|1,m⟩` has singlet
