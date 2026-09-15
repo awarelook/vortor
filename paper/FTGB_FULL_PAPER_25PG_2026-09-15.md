@@ -326,9 +326,10 @@ of the charge magnitude — the same "why is the electron elementary?" question 
 `results/ALPHA_RESOLUTION_ASSESSMENT_2026-09-10.md`).
 
 **7.4 Mass and the neutrino.** The credited TUFT analytic-torsion dressing carries the mass hierarchy's
-*order*; its ζ-value coefficients are exact and reproduced ([V]-arith), the quark tower closes 6/6 masses to
-<1% as parameter-free *ratio* predictions from a single scale — while the knot↔generation identification
-map stays a framework hypothesis, stated as such (`tuft_mass_tower_check`, `nielsen_mass_completion_check`).
+*order*; its ζ-value coefficients are exact and reproduced ([V]-arith). Fixing the single scale from the up
+quark alone, the remaining **five quark masses come out as parameter-free *ratio* predictions**, 5/5 within
+~1% of PDG (all within 0.5% of Nielsen's table) — while the knot↔generation identification map stays a
+framework hypothesis, stated as such (`tuft_mass_tower_check`, `nielsen_mass_completion_check`).
 The neutrino: the self-dual `θ_χ = 45°` state predicts **Majorana** — in *disagreement* with the credited
 TUFT preprint's Dirac reading; `0νββ` experiments decide between them. A theory that names an internal
 disagreement and its judge is doing its job.

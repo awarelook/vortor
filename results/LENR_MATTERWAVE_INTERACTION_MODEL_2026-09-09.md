@@ -1,6 +1,11 @@
 # The matter-wave interaction model — a universal kernel for coherent-object interactions, transmutation, and the LENR anomalies
 
 **Author:** Nathaniel Hanks · **Date:** 2026-09-09
+> **[SUPERSEDED IN PART, 2026-09-14 — current-true: `results/LENR_EXPLANATORY_RESOLUTION_MAP_2026-09-14.md`.]**
+> The "rate reduces to one computable matrix element" framing below was **refuted** by the disposal chain: the
+> disposal operator is `E0`/collective `[credited]`, the anapole is the ACTIVE SITE (not the antenna), and the
+> one open problem is the entrance-channel **assembly corridor** (`Δ = 23.85 MeV × ρ_eff` is its LZ-bridge
+> reduction, not a lone matrix element). The energy ledger and the conserved arithmetic below stand unchanged.
 **Provenance:** bridges `FTGB_CURRENTLEG_TRILOGY` (the object) + `handoffs/HANDOFF_DELTA_B4_SKYRME_RELAXATION`
 (the Δ branching) + M8-2 (matter-wave `m = ħω/c²`) + M11/M12 (vacuum) + Nielsen TUFT (the lattice).
 **Verification:** `results/verify/lenr_energy_ledger.py` (exact conservation arithmetic; no fabricated rate);
